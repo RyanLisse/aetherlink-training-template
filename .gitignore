@@ -1,0 +1,12 @@
+# Local scratch notes and generated exports
+*.local.md
+.scratch/
+*.tmp
+
+# Local configuration and secrets
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
