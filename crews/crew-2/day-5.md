@@ -27,9 +27,9 @@ Read the [payment scenario](../../scenarios/payment-reconciliation/README.md),
 | 10:35–11:00 | 25 | Individual attempt | Personal scope and copy check |
 | 11:00–11:20 | 20 | Review | Peer readback of boundary |
 | 11:20–11:30 | 10 | Break | — |
-| 11:30–12:10 | 40 | Practice | Independent local recalculation |
-| 12:10–12:30 | 20 | Check | Human data-integrity gate |
-| 12:30–13:15 | 45 | Lunch | — |
+| 11:30–12:00 | 30 | Practice | Independent local recalculation |
+| 12:00–13:00 | 60 | Lunch | — |
+| 13:00–13:15 | 15 | Check | Human data-integrity gate |
 | 13:15–14:00 | 45 | Practice | Exception and cutoff comparison |
 | 14:00–14:10 | 10 | Break | — |
 | 14:10–15:00 | 50 | Transfer | Fresh reader reproduces variation |
@@ -101,7 +101,7 @@ that exactly one input changed and every expected sample is labelled.
 **Human acceptance:** Peer identifies the one allowed change and one forbidden
 change without oral coaching.
 
-### 4. Independent practice — 11:30–12:10
+### 4. Independent practice — 11:30–12:00
 
 **Task card:** Recalculate due-date status at cutoff `2026-09-13` using the
 copied data and record actual output in a local worksheet.
@@ -118,7 +118,7 @@ copied data and record actual output in a local worksheet.
 **Human acceptance:** Learner shows the new cutoff in the calculation and
 marks any unavailable check `OPEN`.
 
-### 5. Check — 12:10–12:30
+### 5. Check — 13:00–13:15
 
 **Task card:** Human gate data integrity and the changed classification.
 Compare against the baseline only as a labelled reference.

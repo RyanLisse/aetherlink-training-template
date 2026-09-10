@@ -12,7 +12,7 @@ It does not create a Jira issue, change a remote system, or prove runtime setup.
 | Inputs | [FIN-003 ticket](tickets/FIN-003.md); [data/](data/) with internal-ledger.csv, psp-settlements.csv, and bank-credits.csv; cutoff 2026-09-10 12:00 Europe/Amsterdam. |
 | Literal steps | Read FIN-003; locate TX-NS-1003, SET-1003-A/B, BANK-0909-01; write behavior; pass the same statement to the developer; add behavior tests; record source IDs, commands, decision, and open questions. |
 | Output | lab-notes/day-2/FIN-003-ticket-packet.md containing analyst, developer, technical-addition, tester, and handoff sections. |
-| Timebox | Guided first 90 minutes; analyst 40; developer 40; tester 40; review/handoff 60, with breaks and lunch in [Day 2](../../days/day-2.md). |
+| Timebox | Guided first 90 minutes; analyst 40; developer 40; tester 40; review/handoff 60, with lunch fixed at 12:00–13:00 in [Day 2](../../days/day-2.md). |
 | Exclusions | No Jira/GitLab/Confluence writes, credentials, network, production data, deployment, recovery claim, payout approval, or all-five-case reconciliation. Never delete either duplicate row or count it twice. |
 
 Run this preflight from the repository root before the role pass:

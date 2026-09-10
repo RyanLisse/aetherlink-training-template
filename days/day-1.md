@@ -51,17 +51,17 @@ the outcome and boundaries, while a task is one bounded piece of work.
 |---|---:|---|
 | 10:00–10:15 | 15 | Opening, working agreement, fixture boundary |
 | 10:15–10:40 | 25 | Concept recap and trainer demo: agent context, intent, SDLC, MOB |
-| 10:40–11:20 | 40 | Exercise 1: interview and draft intent |
-| 11:20–11:30 | 10 | Break |
-| 11:30–12:10 | 40 | Exercise 2: shape the reconciliation specification |
-| 12:10–12:30 | 20 | Trainer demo and coaching: source IDs and evidence |
-| 12:30–13:15 | 45 | Lunch |
-| 13:15–14:00 | 45 | Exercise 3: plan the smallest slice |
-| 14:00–14:10 | 10 | Break |
-| 14:10–15:00 | 50 | Exercise 4: read-only reconciliation and evidence |
-| 15:00–15:10 | 10 | Break |
-| 15:10–15:40 | 30 | Exercise 5: handoff and feedback loop |
-| 15:40–16:00 | 20 | Individual check-in and MOB reflection |
+| 10:40–11:15 | 35 | Exercise 1: interview and draft intent |
+| 11:15–11:25 | 10 | Break |
+| 11:25–12:00 | 35 | Exercise 2: shape the reconciliation specification |
+| 12:00–13:00 | 60 | Lunch |
+| 13:00–13:20 | 20 | Trainer demo and coaching: source IDs and evidence |
+| 13:20–14:05 | 45 | Exercise 3: plan the smallest slice |
+| 14:05–14:15 | 10 | Break |
+| 14:15–15:05 | 50 | Exercise 4: read-only reconciliation and evidence |
+| 15:05–15:15 | 10 | Break |
+| 15:15–15:45 | 30 | Exercise 5: handoff and feedback loop |
+| 15:45–16:00 | 15 | Individual check-in and MOB reflection |
 
 Total: **360 minutes**.
 
@@ -69,7 +69,7 @@ Opening Kahoot/wordcloud prompt: “Which reconciliation step takes most time?�
 Keep answers generic and fictional. Ask: “What evidence would make this a
 safe first slice?” Record blockers as questions, not solutions.
 
-## Exercise 1 — Interview the intent (40 minutes)
+## Exercise 1 — Interview the intent (35 minutes)
 
 Trainer explains the difference between a problem, outcome, constraint, and
 open question, then demos an agent receiving only the repository root and
@@ -91,7 +91,7 @@ Output: `lab-notes/payment-intent.md`, naming comparison of ledger, PSP, and
 bank records and five documented case targets. Human gate: facilitator accepts
 the boundary or marks it `needs revision`; no spec work before that decision.
 
-## Exercise 2 — Specify the contract (40 minutes)
+## Exercise 2 — Specify the contract (35 minutes)
 
 Trainer explains schemas, join keys, and why a duplicate stays visible, then
 demos turning one intent sentence into an acceptance example. MOB: rotate

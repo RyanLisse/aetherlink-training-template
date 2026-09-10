@@ -9,17 +9,17 @@ the trainer coaches the method, while each learner owns a repeatable runbook.
 |---|---:|---|
 | 10:00–10:15 | 15 | Opening and transfer from Day 3 |
 | 10:15–10:40 | 25 | Concept recap: repeatability and evidence |
-| 10:40–11:20 | 40 | Exercise 1: run the checklist |
-| 11:20–11:30 | 10 | Break |
-| 11:30–12:10 | 40 | Exercise 2: write the runbook |
-| 12:10–12:30 | 20 | Optional coaching on request |
-| 12:30–13:15 | 45 | Lunch |
-| 13:15–14:00 | 45 | Exercise 3: peer reproduce and challenge |
-| 14:00–14:10 | 10 | Break |
-| 14:10–15:00 | 50 | Exercise 4: improve the handoff |
-| 15:00–15:10 | 10 | Break |
-| 15:10–15:40 | 30 | Exercise 5: knowledge teach-back |
-| 15:40–16:00 | 20 | Individual check-in and MOB reflection |
+| 10:40–11:15 | 35 | Exercise 1: run the checklist |
+| 11:15–11:25 | 10 | Break |
+| 11:25–12:00 | 35 | Exercise 2: write the runbook |
+| 12:00–13:00 | 60 | Lunch |
+| 13:00–13:20 | 20 | Optional coaching on request |
+| 13:20–14:05 | 45 | Exercise 3: peer reproduce and challenge |
+| 14:05–14:15 | 10 | Break |
+| 14:15–15:05 | 50 | Exercise 4: improve the handoff |
+| 15:05–15:15 | 10 | Break |
+| 15:15–15:45 | 30 | Exercise 5: knowledge teach-back |
+| 15:45–16:00 | 15 | Individual check-in and MOB reflection |
 
 Total: **360 minutes**.
 

@@ -18,17 +18,17 @@ worksheet recalculation and record its actual output.
 |---|---:|---|
 | 10:00–10:15 | 15 | Opening, scope, and variation declaration |
 | 10:15–10:40 | 25 | Clarification and checkpoint: independent evidence |
-| 10:40–11:20 | 40 | Exercise 1: inspect and frame the new case |
-| 11:20–11:30 | 10 | Break |
-| 11:30–12:10 | 40 | Exercise 2: plan the run |
-| 12:10–12:30 | 20 | Checkpoint clinic on request |
-| 12:30–13:15 | 45 | Lunch |
-| 13:15–14:00 | 45 | Exercise 3: execute independently |
-| 14:00–14:10 | 10 | Break |
-| 14:10–15:00 | 50 | Exercise 4: independent review and gate |
-| 15:00–15:10 | 10 | Break |
-| 15:10–15:40 | 30 | Exercise 5: final handoff and teach-back |
-| 15:40–16:00 | 20 | Individual check-in and MOB reflection |
+| 10:40–11:15 | 35 | Exercise 1: inspect and frame the new case |
+| 11:15–11:25 | 10 | Break |
+| 11:25–12:00 | 35 | Exercise 2: plan the run |
+| 12:00–13:00 | 60 | Lunch |
+| 13:00–13:20 | 20 | Checkpoint clinic on request |
+| 13:20–14:05 | 45 | Exercise 3: execute independently |
+| 14:05–14:15 | 10 | Break |
+| 14:15–15:05 | 50 | Exercise 4: independent review and gate |
+| 15:05–15:15 | 10 | Break |
+| 15:15–15:45 | 30 | Exercise 5: final handoff and teach-back |
+| 15:45–16:00 | 15 | Individual check-in and MOB reflection |
 
 Total: **360 minutes**.
 

@@ -25,9 +25,9 @@ Use the three CSVs in `scenarios/payment-reconciliation/data/`.
 | 10:35–11:00 | 25 | Individual attempt | Learner's first card |
 | 11:00–11:20 | 20 | Review | Source-row readback |
 | 11:20–11:30 | 10 | Break | — |
-| 11:30–12:10 | 40 | Practice | Groups of 3–4, one navigator |
-| 12:10–12:30 | 20 | Check | Human acceptance |
-| 12:30–13:15 | 45 | Lunch | — |
+| 11:30–12:00 | 30 | Practice | Groups of 3–4, one navigator |
+| 12:00–13:00 | 60 | Lunch | — |
+| 13:00–13:15 | 15 | Check | Human acceptance |
 | 13:15–14:00 | 45 | Practice | Recheck one nearby row |
 | 14:00–14:10 | 10 | Break | — |
 | 14:10–15:00 | 50 | Transfer | Fresh-reader reproduction |
@@ -101,7 +101,7 @@ arithmetic, cutoff context, and whether the card says what was actually read.
 **Human acceptance:** Reviewer records a named role (no invented person) and
 one concrete correction or `PASS`.
 
-### 4. Group practice — 11:30–12:10
+### 4. Group practice — 11:30–12:00
 
 **Task card:** In groups of 3–4, reconcile the same row and compare cards.
 One navigator directs the human driver; rotate driver and navigator every
@@ -118,7 +118,7 @@ One navigator directs the human driver; rotate driver and navigator every
 **Human acceptance:** Facilitator sees that every number has a source or
 calculation and that no one silently overwrote a learner's attempt.
 
-### 5. Check — 12:10–12:30
+### 5. Check — 13:00–13:15
 
 **Task card:** Submit the group card for a human gate. Check that a fee
 mismatch remains a fee mismatch even if net values appear close.

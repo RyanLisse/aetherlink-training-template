@@ -40,15 +40,15 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:20 exercise 1 · 11:20–11:30 break"
+            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:15 exercise 1 · 11:15–11:25 break"
           },
           {
             "title": "Midday",
-            "body": "11:30–12:10 exercise 2 · 12:10–12:30 demo/coaching · 12:30–13:15 lunch"
+            "body": "11:25–12:00 exercise 2 · 12:00–13:00 lunch · 13:00–13:20 demo/coaching"
           },
           {
             "title": "Afternoon",
-            "body": "13:15–14:00 exercise 3 · 14:00–14:10 break · 14:10–15:00 exercise 4 · 15:00–15:10 break · 15:10–15:40 exercise 5 · 15:40–16:00 reflection"
+            "body": "13:20–14:05 exercise 3 · 14:05–14:15 break · 14:15–15:05 exercise 4 · 15:05–15:15 break · 15:15–15:45 exercise 5 · 15:45–16:00 reflection"
           }
         ],
         "prompt": "Read the schedule aloud. For the next block, name its artifact and its human acceptance check.",
@@ -182,7 +182,7 @@
       },
       {
         "title": "Exercise 1 · capture intent",
-        "kicker": "10:40–11:20 · 40 MIN",
+        "kicker": "10:40–11:15 · 35 MIN",
         "subtitle": "Name the problem before designing a solution",
         "cards": [
           {
@@ -212,7 +212,7 @@
       },
       {
         "title": "Exercise 2 · design the spec",
-        "kicker": "11:30–12:10 · 40 MIN",
+        "kicker": "11:25–12:00 · 35 MIN",
         "subtitle": "Turn the intent into a readable reconciliation contract",
         "cards": [
           {
@@ -242,7 +242,7 @@
       },
       {
         "title": "Trainer demo · plan and proof",
-        "kicker": "12:10–12:30 · 20 MIN",
+        "kicker": "13:00–13:20 · 20 MIN",
         "subtitle": "Preview the smallest worksheet and its checks",
         "cards": [
           {
@@ -272,7 +272,7 @@
       },
       {
         "title": "Exercise 3 · plan the slice",
-        "kicker": "13:15–14:00 · 45 MIN",
+        "kicker": "13:20–14:05 · 45 MIN",
         "subtitle": "Choose the smallest useful evidence table",
         "cards": [
           {
@@ -302,7 +302,7 @@
       },
       {
         "title": "Exercise 4 · reconcile and test",
-        "kicker": "14:10–15:00 · 50 MIN",
+        "kicker": "14:15–15:05 · 50 MIN",
         "subtitle": "Build a local evidence log from unchanged fixtures",
         "cards": [
           {
@@ -332,7 +332,7 @@
       },
       {
         "title": "Exercise 5 · hand off the work",
-        "kicker": "15:10–15:40 · 30 MIN",
+        "kicker": "15:15–15:45 · 30 MIN",
         "subtitle": "Make tomorrow’s receiver independent of today’s memory",
         "cards": [
           {
@@ -362,7 +362,7 @@
       },
       {
         "title": "Reflection and transfer",
-        "kicker": "15:40–16:00 · 20 MIN",
+        "kicker": "15:45–16:00 · 15 MIN",
         "subtitle": "Name what you can repeat alone",
         "cards": [
           {
@@ -436,11 +436,11 @@
           },
           {
             "title": "Role passes",
-            "body": "11:30–11:40 break · 11:40–12:20 analyst · 12:20–13:00 developer · 13:00–13:45 lunch · 13:45–14:25 tester"
+            "body": "11:30–11:40 break · 11:40–12:00 analyst (part 1) · 12:00–13:00 lunch · 13:00–13:20 analyst (part 2) · 13:20–14:00 developer · 14:00–14:40 tester"
           },
           {
             "title": "Review and close",
-            "body": "14:25–14:35 break · 14:35–15:15 cross-role review · 15:15–15:25 break · 15:25–15:45 handoff/optional context · 15:45–16:00 close"
+            "body": "14:40–14:50 break · 14:50–15:30 cross-role review · 15:30–15:40 break · 15:40–16:00 handoff, optional context, and close"
           }
         ],
         "prompt": "Read the Day 2 schedule aloud. Keep one FIN-003 packet across every role pass; name the artifact and human gate for each block.",
@@ -665,7 +665,7 @@
       },
       {
         "title": "Analyst pass · facts and acceptance",
-        "kicker": "11:40–12:20 · ANALYST",
+        "kicker": "11:40–12:00 + 13:00–13:20 · ANALYST",
         "subtitle": "Turn the source read into an accepted requirement",
         "cards": [
           {
@@ -682,7 +682,7 @@
           }
         ],
         "prompt": "Act as the FIN-003 analyst. Read the ticket and only the cited local rows. Append facts, one user-visible functional requirement, source-backed acceptance checks, calculations, and open policy questions to lab-notes/day-2/FIN-003-ticket-packet.md. Do not write code or remote records.",
-        "notes": "De analyst beslist over gedrag en bewijs; de developer krijgt dezelfde packet.",
+        "notes": "De analyst beslist over gedrag en bewijs; de developer krijgt dezelfde packet. Lunch is 12:00–13:00. Resume the analyst pass at 13:00; finish at 13:20.",
         "dark": false,
         "steps": [
           "Read the ticket.",
@@ -695,7 +695,7 @@
       },
       {
         "title": "Developer pass · proposal and additions",
-        "kicker": "12:20–13:00 · DEVELOPER",
+        "kicker": "13:20–14:00 · DEVELOPER",
         "subtitle": "Propose the smallest local change without changing behavior",
         "cards": [
           {
@@ -725,7 +725,7 @@
       },
       {
         "title": "Tester pass · behavior checks",
-        "kicker": "13:45–14:25 · TESTER",
+        "kicker": "14:00–14:40 · TESTER",
         "subtitle": "Check the preserved requirement with positive and negative tests",
         "cards": [
           {
@@ -755,7 +755,7 @@
       },
       {
         "title": "Cross-role review · same packet",
-        "kicker": "14:35–15:15 · REVIEW",
+        "kicker": "14:50–15:30 · REVIEW",
         "subtitle": "Check that each role preserved the functional requirement",
         "cards": [
           {
@@ -785,7 +785,7 @@
       },
       {
         "title": "Handoff · optional context",
-        "kicker": "15:25–15:45 · HANDOFF",
+        "kicker": "15:40–16:00 · HANDOFF + CLOSE",
         "subtitle": "Leave a fresh reader a local packet and clear limits",
         "cards": [
           {
@@ -815,7 +815,7 @@
       },
       {
         "title": "Close · made, learned, can do",
-        "kicker": "15:45–16:00 · CLOSE",
+        "kicker": "15:40–16:00 · HANDOFF + CLOSE",
         "subtitle": "Measure independence and carry the feedback loop forward",
         "cards": [
           {
@@ -886,18 +886,18 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:10 recap/end example/Kahoot + wordcloud · 10:10–10:20 demo · 10:20–10:45 individual own-laptop run · 10:45–10:55 review · 10:55–11:10 one-instruction rerun · 11:10–11:25 second-ticket transfer · 11:25–11:30 progress"
+            "body": "10:00–10:10 agent recap · 10:10–10:15 ticket-coach demo · 10:15–10:40 individual own-laptop run · 10:40–10:50 review · 10:50–11:05 one-instruction rerun · 11:05–11:20 second-ticket transfer · 11:20–11:30 progress"
           },
           {
             "title": "Midday",
-            "body": "11:30–11:40 break · 11:40–12:20 missing case · 12:20–12:30 check · 12:30–13:15 lunch · 13:15–14:00 duplicate case · 14:00–14:10 break"
+            "body": "11:30–11:40 break · 11:40–12:00 missing case · 12:00–13:00 lunch · 13:00–13:10 check · 13:10–13:50 duplicate case · 13:50–14:00 break"
           },
           {
             "title": "Afternoon",
-            "body": "14:10–15:00 peer review/evidence · 15:00–15:10 break · 15:10–15:40 handoff · 15:40–16:00 close"
+            "body": "14:00–14:50 peer review/evidence · 14:50–15:00 break · 15:00–15:35 handoff · 15:35–16:00 close"
           }
         ],
-        "prompt": "Read the exact timebox aloud. Point to the named artifact and human check for each block; the 10:20–10:45 run is individual on every participant’s own laptop, with no driver rotation.",
+        "prompt": "Read the exact timebox aloud. Point to the named artifact and human check for each block; the 10:15–10:40 run is individual on every participant’s own laptop, with no driver rotation.",
         "notes": "Bewaar deze tijden letterlijk. Dit is individuele agentpraktijk; plan geen MOB-driverrotatie in het eerste blok.",
         "dark": false,
         "steps": [
@@ -908,6 +908,99 @@
         ],
         "expected": "Participants can navigate the day and know when individual practice ends.",
         "check": "Every listed block and break matches the guide."
+      },
+      {
+        "title": "What is an agent?",
+        "kicker": "THEORY · BEFORE THE BUILD",
+        "subtitle": "A system that pursues a goal with a model, context, tools, and feedback",
+        "cards": [
+          {
+            "title": "Agent",
+            "body": "Uses a model, selected context, tools, and feedback to pursue a bounded goal"
+          },
+          {
+            "title": "Human",
+            "body": "Owns the outcome, scope, interpretation, and acceptance gate"
+          },
+          {
+            "title": "Build",
+            "body": "Name inputs, allowed tools, output contract, and stop rule before invoking"
+          }
+        ],
+        "prompt": "State the goal and context for the ticket-coach. Name what the human decides and what the agent may inspect. Keep the build local and preview-only.",
+        "notes": "Leg uit dat een agent meer is dan een chatantwoord: het gebruikt context, tools en feedback binnen een doel en grens.",
+        "dark": true,
+        "steps": [
+          "Name the goal.",
+          "Name the context.",
+          "Name tools and stop rule.",
+          "Name the human gate."
+        ],
+        "expected": "Participants can describe the agent as a goal-directed, tool-using system with human accountability.",
+        "check": "The input, tool allow-list, output, and stop rule are explicit."
+      },
+      {
+        "title": "The agent loop",
+        "kicker": "THEORY · BEFORE THE BUILD",
+        "subtitle": "Goal/context → observe → decide → tool action → inspect result → repeat or stop",
+        "cards": [
+          {
+            "title": "Start",
+            "body": "Goal + context"
+          },
+          {
+            "title": "Act",
+            "body": "Observe → decide → tool action"
+          },
+          {
+            "title": "Inspect",
+            "body": "Read the result; repeat or stop at a human gate"
+          }
+        ],
+        "prompt": "Walk the loop aloud: goal/context, observe, decide, tool action, inspect result, then repeat or stop at the human gate. Apply it to the read-only ticket-coach preview.",
+        "notes": "Gebruik deze eenvoudige keten op het scherm. Een toolactie is pas nuttig wanneer het resultaat wordt geïnspecteerd.",
+        "dark": false,
+        "steps": [
+          "Goal + context",
+          "Observe",
+          "Decide",
+          "Tool action",
+          "Inspect result",
+          "Repeat or stop / human gate"
+        ],
+        "expected": "Participants can point to the loop stages before the first invocation.",
+        "check": "The loop includes the human gate and no implied autonomous approval."
+      },
+      {
+        "title": "Model, chat, agent, subagent",
+        "kicker": "THEORY · BEFORE THE BUILD",
+        "subtitle": "Keep the terms separate",
+        "cards": [
+          {
+            "title": "Model",
+            "body": "The prediction engine that generates a response"
+          },
+          {
+            "title": "Chat",
+            "body": "A conversation interface around a model"
+          },
+          {
+            "title": "Agent / subagent",
+            "body": "A goal-directed tool-using system / a smaller delegated agent for one bounded task"
+          }
+        ],
+        "prompt": "Explain the four terms in plain language. Then say: we build the ticket-coach agent and invoke it as a subagent for one ticket; it cannot approve or publish anything.",
+        "notes": "Houd model, chat, agent en subagent apart. De subagent is een kleine gedelegeerde taak, geen extra menselijke beslisser.",
+        "dark": false,
+        "steps": [
+          "Define model.",
+          "Define chat.",
+          "Define agent.",
+          "Define subagent.",
+          "State the human gate."
+        ],
+        "expected": "Participants can use the terms without treating a model or chat as an agent.",
+        "check": "The ticket-coach is identified as the bounded subagent for the first run."
       },
       {
         "title": "File roles and control surfaces",
@@ -941,7 +1034,7 @@
       },
       {
         "title": "Trainer demo · bounded preview",
-        "kicker": "DEMO · 10:10–10:20",
+        "kicker": "DEMO · 10:10–10:15",
         "subtitle": "Preview the work surface without changing it",
         "cards": [
           {
@@ -971,7 +1064,7 @@
       },
       {
         "title": "Individual · ticket 1",
-        "kicker": "PRACTICE · 10:20–10:45 · 25 MIN",
+        "kicker": "PRACTICE · 10:15–10:40 · 25 MIN",
         "subtitle": "Everyone runs the same bounded method on their own laptop",
         "cards": [
           {
@@ -1001,7 +1094,7 @@
       },
       {
         "title": "Review · first result",
-        "kicker": "REVIEW · 10:45–10:55",
+        "kicker": "REVIEW · 10:40–10:50",
         "subtitle": "Check the first preview independently before changing the instruction",
         "cards": [
           {
@@ -1031,7 +1124,7 @@
       },
       {
         "title": "Edit one instruction · rerun",
-        "kicker": "CONTROLLED CHANGE · 10:55–11:10",
+        "kicker": "CONTROLLED CHANGE · 10:50–11:05",
         "subtitle": "Learn from one variable while holding the run constant",
         "cards": [
           {
@@ -1061,7 +1154,7 @@
       },
       {
         "title": "Transfer · ticket 2",
-        "kicker": "TRANSFER · 11:10–11:25",
+        "kicker": "TRANSFER · 11:05–11:20",
         "subtitle": "Carry the method to a second ticket without adding infrastructure",
         "cards": [
           {
@@ -1091,7 +1184,7 @@
       },
       {
         "title": "Progress checkpoint",
-        "kicker": "CHECKPOINT · 11:25–11:30",
+        "kicker": "CHECKPOINT · 11:20–11:30",
         "subtitle": "Make the state and the next support mode visible",
         "cards": [
           {
@@ -1120,7 +1213,7 @@
       },
       {
         "title": "Missing case",
-        "kicker": "CASE · 11:40–12:20",
+        "kicker": "CASE · 11:40–12:00",
         "subtitle": "Inspect a missing-payment ticket and preserve the evidence chain",
         "cards": [
           {
@@ -1150,7 +1243,7 @@
       },
       {
         "title": "Check · reproduce one finding",
-        "kicker": "CHECK · 12:20–12:30",
+        "kicker": "CHECK · 13:00–13:10",
         "subtitle": "A fresh reader validates the missing-case evidence",
         "cards": [
           {
@@ -1179,7 +1272,7 @@
       },
       {
         "title": "Duplicate case",
-        "kicker": "CASE · 13:15–14:00",
+        "kicker": "CASE · 13:10–13:50",
         "subtitle": "Keep conflicting inputs visible while testing the checklist",
         "cards": [
           {
@@ -1209,7 +1302,7 @@
       },
       {
         "title": "Peer review · evidence",
-        "kicker": "REVIEW · 14:10–15:00",
+        "kicker": "REVIEW · 14:00–14:50",
         "subtitle": "Independently challenge the missing and duplicate findings",
         "cards": [
           {
@@ -1239,7 +1332,7 @@
       },
       {
         "title": "Handoff",
-        "kicker": "HANDOFF · 15:10–15:40",
+        "kicker": "HANDOFF · 15:00–15:35",
         "subtitle": "Make the next action findable from the evidence packet",
         "cards": [
           {
@@ -1269,7 +1362,7 @@
       },
       {
         "title": "Close · before, after, next",
-        "kicker": "CLOSE · 15:40–16:00",
+        "kicker": "CLOSE · 15:35–16:00",
         "subtitle": "Finish with evidence, independence, and a useful next practice",
         "cards": [
           {
@@ -1340,15 +1433,15 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:20 exercise 1 · 11:20–11:30 break"
+            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:15 exercise 1 · 11:15–11:25 break"
           },
           {
             "title": "Midday",
-            "body": "11:30–12:10 exercise 2 · 12:10–12:30 demo/coaching · 12:30–13:15 lunch"
+            "body": "11:25–12:00 exercise 2 · 12:00–13:00 lunch · 13:00–13:20 demo/coaching"
           },
           {
             "title": "Afternoon",
-            "body": "13:15–14:00 exercise 3 · 14:00–14:10 break · 14:10–15:00 exercise 4 · 15:00–15:10 break · 15:10–15:40 exercise 5 · 15:40–16:00 reflection"
+            "body": "13:20–14:05 exercise 3 · 14:05–14:15 break · 14:15–15:05 exercise 4 · 15:05–15:15 break · 15:15–15:45 exercise 5 · 15:45–16:00 reflection"
           }
         ],
         "prompt": "Read the fixed schedule and name the next handoff artifact.",
@@ -1393,7 +1486,7 @@
       },
       {
         "title": "Exercise 1 · run the checklist",
-        "kicker": "10:40–11:20 · 40 MIN",
+        "kicker": "10:40–11:15 · 35 MIN",
         "subtitle": "Make every input and evidence field explicit",
         "cards": [
           {
@@ -1423,7 +1516,7 @@
       },
       {
         "title": "Exercise 2 · write the runbook",
-        "kicker": "11:30–12:10 · 40 MIN",
+        "kicker": "11:25–12:00 · 35 MIN",
         "subtitle": "Turn the checklist into a one-page procedure",
         "cards": [
           {
@@ -1453,7 +1546,7 @@
       },
       {
         "title": "Optional coaching · handoff readback",
-        "kicker": "12:10–12:30 · 20 MIN",
+        "kicker": "13:00–13:20 · 20 MIN",
         "subtitle": "A receiver should know the next command and signal",
         "cards": [
           {
@@ -1483,7 +1576,7 @@
       },
       {
         "title": "Exercise 3 · peer reproduce and challenge",
-        "kicker": "13:15–14:00 · 45 MIN",
+        "kicker": "13:20–14:05 · 45 MIN",
         "subtitle": "Give the runbook to a new reader without explanation",
         "cards": [
           {
@@ -1513,7 +1606,7 @@
       },
       {
         "title": "Exercise 4 · challenge and repair",
-        "kicker": "14:10–15:00 · 50 MIN",
+        "kicker": "14:15–15:05 · 50 MIN",
         "subtitle": "Make the smallest wording fix that preserves scope",
         "cards": [
           {
@@ -1543,7 +1636,7 @@
       },
       {
         "title": "Exercise 5 · knowledge teach-back",
-        "kicker": "15:10–15:40 · 30 MIN",
+        "kicker": "15:15–15:45 · 30 MIN",
         "subtitle": "Prepare the next receiver and Day 5 transfer",
         "cards": [
           {
@@ -1573,7 +1666,7 @@
       },
       {
         "title": "Reflection",
-        "kicker": "15:40–16:00 · 20 MIN",
+        "kicker": "15:45–16:00 · 15 MIN",
         "subtitle": "Hand off the habit, not just the files",
         "cards": [
           {
@@ -1643,15 +1736,15 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:20 exercise 1 · 11:20–11:30 break"
+            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:15 exercise 1 · 11:15–11:25 break"
           },
           {
             "title": "Midday",
-            "body": "11:30–12:10 exercise 2 · 12:10–12:30 demo/coaching · 12:30–13:15 lunch"
+            "body": "11:25–12:00 exercise 2 · 12:00–13:00 lunch · 13:00–13:20 demo/coaching"
           },
           {
             "title": "Afternoon",
-            "body": "13:15–14:00 exercise 3 · 14:00–14:10 break · 14:10–15:00 exercise 4 · 15:00–15:10 break · 15:10–15:40 exercise 5 · 15:40–16:00 reflection"
+            "body": "13:20–14:05 exercise 3 · 14:05–14:15 break · 14:15–15:05 exercise 4 · 15:05–15:15 break · 15:15–15:45 exercise 5 · 15:45–16:00 reflection"
           }
         ],
         "prompt": "Read the fixed schedule. Decide who owns each artifact and what evidence will be shown at the final report.",
@@ -1697,7 +1790,7 @@
       },
       {
         "title": "Exercise 1 · frame the variation",
-        "kicker": "10:40–11:20 · 40 MIN",
+        "kicker": "10:40–11:15 · 35 MIN",
         "subtitle": "Start with intent and an observable discrepancy",
         "cards": [
           {
@@ -1727,7 +1820,7 @@
       },
       {
         "title": "Exercise 2 · plan the run",
-        "kicker": "11:30–12:10 · 40 MIN",
+        "kicker": "11:25–12:00 · 35 MIN",
         "subtitle": "Use the runbook for a reversible transfer plan",
         "cards": [
           {
@@ -1757,7 +1850,7 @@
       },
       {
         "title": "Checkpoint clarification · on request",
-        "kicker": "12:10–12:30 · 20 MIN",
+        "kicker": "13:00–13:20 · 20 MIN",
         "subtitle": "Ask for one clarification without giving the solution",
         "cards": [
           {
@@ -1787,7 +1880,7 @@
       },
       {
         "title": "Exercise 3 · execute independently",
-        "kicker": "13:15–14:00 · 45 MIN",
+        "kicker": "13:20–14:05 · 45 MIN",
         "subtitle": "Run the declared variation and record actual output",
         "cards": [
           {
@@ -1817,7 +1910,7 @@
       },
       {
         "title": "Exercise 4 · independent review and gate",
-        "kicker": "14:10–15:00 · 50 MIN",
+        "kicker": "14:15–15:05 · 50 MIN",
         "subtitle": "A fresh context tests the author’s evidence",
         "cards": [
           {
@@ -1847,7 +1940,7 @@
       },
       {
         "title": "Exercise 5 · final handoff and teach-back",
-        "kicker": "15:10–15:40 · 30 MIN",
+        "kicker": "15:15–15:45 · 30 MIN",
         "subtitle": "Transfer the method with limitations intact",
         "cards": [
           {
@@ -1877,7 +1970,7 @@
       },
       {
         "title": "Final reflection",
-        "kicker": "15:40–16:00 · 20 MIN",
+        "kicker": "15:45–16:00 · 15 MIN",
         "subtitle": "Name the habit you will carry forward",
         "cards": [
           {

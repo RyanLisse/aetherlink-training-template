@@ -27,7 +27,8 @@ acceptance evidence.
 
 ## Five sessions
 
-Each session is 10:00–16:00 (360 minutes) with the same agenda. Every learner
+Each session is 10:00–16:00 (360 minutes) with a shared lunch window at
+12:00–13:00 and day-specific agendas. Every learner
 gets at least 25 minutes of individual attempt time, including the MOB days.
 After the individual block, groups of 3–4 may work together with one navigator
 directing the human driver; rotate the navigator and driver every 5–7 minutes.
@@ -58,9 +59,9 @@ policy.
 | 10:35–11:00 | 25 | Individual attempt | Every learner works alone on the literal task card |
 | 11:00–11:20 | 20 | Review | Pair or facilitator readback; record `PASS`, `FAIL`, or `OPEN` |
 | 11:20–11:30 | 10 | Break | — |
-| 11:30–12:10 | 40 | Practice | Small group, one navigator after individual work |
-| 12:10–12:30 | 20 | Check | Human acceptance against sources and the task card |
-| 12:30–13:15 | 45 | Lunch | — |
+| 11:30–12:00 | 30 | Practice | Small group, one navigator after individual work |
+| 12:00–13:00 | 60 | Lunch | — |
+| 13:00–13:15 | 15 | Check | Human acceptance against sources and the task card |
 | 13:15–14:00 | 45 | Practice | Apply the morning result to the day's second case |
 | 14:00–14:10 | 10 | Break | — |
 | 14:10–15:00 | 50 | Transfer | Reproduce, teach back, or hand to a fresh reader |

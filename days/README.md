@@ -2,7 +2,7 @@
 
 This public-safe programme adapts the AI-native SDLC playbook to a fictional
 payment reconciliation exercise. It runs five sessions, each with its own
-10:00–16:00 agenda. Follow the current guide for the timing; Day 2 includes a
+10:00–16:00 agenda with lunch fixed at 12:00–13:00. Follow the current guide for the timing; Day 2 includes a
 revised first-90-minute guided reset and Day 3 starts with a guided individual
 opening before coached MOB practice. Videos and audio were not watched or
 listened to; source URLs are preserved in the first two guides.

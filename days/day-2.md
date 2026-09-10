@@ -49,15 +49,15 @@ through analyst, developer, and tester passes; these are parts of one exercise.
 | 11:10–11:25 | 15 | Individual rewrite and check selection |
 | 11:25–11:30 | 5 | Recap packet and next role |
 | 11:30–11:40 | 10 | Break |
-| 11:40–12:20 | 40 | Analyst pass: facts, scope, acceptance |
-| 12:20–13:00 | 40 | Developer pass: local proposal, technical additions |
-| 13:00–13:45 | 45 | Lunch |
-| 13:45–14:25 | 40 | Tester pass: positive and negative behavior tests |
-| 14:25–14:35 | 10 | Break |
-| 14:35–15:15 | 40 | Cross-role review of the same packet |
-| 15:15–15:25 | 10 | Break |
-| 15:25–15:45 | 20 | Handoff and optional context/skill note |
-| 15:45–16:00 | 15 | Made / learned / can do close |
+| 11:40–12:00 | 20 | Analyst pass: facts, scope, acceptance (part 1) |
+| 12:00–13:00 | 60 | Lunch |
+| 13:00–13:20 | 20 | Analyst pass: facts, scope, acceptance (part 2) |
+| 13:20–14:00 | 40 | Developer pass: local proposal, technical additions |
+| 14:00–14:40 | 40 | Tester pass: positive and negative behavior tests |
+| 14:40–14:50 | 10 | Break |
+| 14:50–15:30 | 40 | Cross-role review of the same packet |
+| 15:30–15:40 | 10 | Break |
+| 15:40–16:00 | 20 | Handoff, close, and optional context/skill note |
 
 Total: **360 minutes**. Work in groups of three or four people on one screen. Rotate
 analyst, developer, tester, reviewer/scribe, driver, and navigator at each pass;

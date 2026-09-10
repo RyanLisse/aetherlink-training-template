@@ -15,8 +15,27 @@ before/after rerun where exactly one instruction changed, and a transfer run on
 the second agreed ticket. The afternoon MOB then reproduces the missing and
 duplicate settlement checks and prepares a receiver-ready handoff.
 
-The only new concept in this session is a **bounded subagent**: a small,
-explicitly scoped helper with named inputs, a target output, and a human check.
+The recap makes the agent model explicit before building. An **agent** is a
+system that pursues a bounded goal by using a model, instructions, selected
+context, tools, and feedback. A model is the prediction engine and a chat is a
+conversation with it; an agent adds a goal, context, actions, and inspection.
+A **subagent** is a smaller delegated agent for one bounded task inside a
+larger run. Use this loop: goal/context → observe → decide → tool action →
+inspect result → repeat or stop at a human gate.
+
+```mermaid
+flowchart LR
+  A[Goal + context] --> B[Observe]
+  B --> C[Decide]
+  C --> D[Tool action]
+  D --> E[Inspect result]
+  E --> F{Repeat or stop?}
+  F -->|repeat| B
+  F -->|human gate| G[Human accepts, parks, or redirects]
+```
+
+The first build is the ticket-coach starter: name its inputs, read-only tools,
+output, and stop rule before invoking it.
 The pack README is the source of truth for its starter, input names, target
 artifacts, handout, and checker. Skills and hooks may be mentioned in the
 glossary as context; implementing them is not a session requirement. A hook or
@@ -52,23 +71,23 @@ concept to this agenda.
 
 | Time | Minutes | Activity |
 |---|---:|---|
-| 10:00–10:10 | 10 | Guided recap, end example, Kahoot, and wordcloud |
-| 10:10–10:20 | 10 | Facilitator demo: create and invoke one bounded subagent |
-| 10:20–10:45 | 25 | Individual practice: create and invoke on each laptop |
-| 10:45–10:55 | 10 | Individual review against the pack checklist |
-| 10:55–11:10 | 15 | Change one instruction; rerun the same input and settings |
-| 11:10–11:25 | 15 | Transfer the unchanged method to the second ticket |
-| 11:25–11:30 | 5 | Individual progress record and access note |
+| 10:00–10:10 | 10 | Agent recap: definition, loop, model/chat/agent/subagent |
+| 10:10–10:15 | 5 | Facilitator demo: build and invoke ticket-coach |
+| 10:15–10:40 | 25 | Individual practice: create and invoke on each laptop |
+| 10:40–10:50 | 10 | Individual review against the pack checklist |
+| 10:50–11:05 | 15 | Change one instruction; rerun the same input and settings |
+| 11:05–11:20 | 15 | Transfer the unchanged method to the second ticket |
+| 11:20–11:30 | 10 | Individual progress record and access note |
 | 11:30–11:40 | 10 | Break |
-| 11:40–12:20 | 40 | Coached MOB: reproduce the missing settlement |
-| 12:20–12:30 | 10 | Check and human gate |
-| 12:30–13:15 | 45 | Lunch |
-| 13:15–14:00 | 45 | Coached MOB: reproduce the duplicate settlement |
-| 14:00–14:10 | 10 | Break |
-| 14:10–15:00 | 50 | MOB peer review and evidence readback |
-| 15:00–15:10 | 10 | Break |
-| 15:10–15:40 | 30 | MOB handoff and receiver check |
-| 15:40–16:00 | 20 | Close: made, learned, can do, and next session |
+| 11:40–12:00 | 20 | Coached MOB: reproduce the missing settlement |
+| 12:00–13:00 | 60 | Lunch |
+| 13:00–13:10 | 10 | Check and human gate |
+| 13:10–13:50 | 40 | Coached MOB: reproduce the duplicate settlement |
+| 13:50–14:00 | 10 | Break |
+| 14:00–14:50 | 50 | MOB peer review and evidence readback |
+| 14:50–15:00 | 10 | Break |
+| 15:00–15:35 | 35 | MOB handoff and receiver check |
+| 15:35–16:00 | 25 | Close: made, learned, can do, and next session |
 
 Total: **360 minutes**. The first 90 minutes are individual work; do not
 turn them into a driver rotation. In the afternoon, use MOBs of three to four
@@ -78,7 +97,7 @@ driver operates the agent; humans decide scope, interpretation, and gates.
 
 ## First 90 minutes — literal instructions
 
-### 10:00–10:10 — recap, end example, Kahoot, wordcloud
+### 10:00–10:10 — agent recap: definition, loop, and distinctions
 
 Read the Day 2 handoff and ask each participant to state the prior result in
 one sentence. Show the pack's completed end example and point to its input,
@@ -90,7 +109,7 @@ blocker to revisit at the close. If either tool is unavailable, collect the
 same answers on the shared board. Do not record a participant as successful
 because they answered the question.
 
-### 10:10–10:20 — one bounded demo
+### 10:10–10:15 — build and invoke the ticket-coach demo
 
 Open the [ticket-agent pack README](../scenarios/ticket-agent/README.md) and
 name the exact starter, `ticket-inputs.md`, `ticket-template.md`,
@@ -107,7 +126,7 @@ Use this copy-ready invocation prompt for the demo and the first learner run:
 Use the ticket-coach subagent. Read scenarios/ticket-agent/ticket-inputs.md and use the TICKET-OPS-101 input. Return a draft that follows scenarios/ticket-agent/ticket-template.md. Preview the complete draft in chat; do not write files or use remote tools.
 ```
 
-### 10:20–10:45 — every participant creates and invokes
+### 10:15–10:40 — every participant creates and invokes
 
 Each participant works on their own laptop and follows the pack starter:
 
@@ -128,7 +147,7 @@ fallback with the same inputs and target, record `BLOCKED — access` and the
 exact observed limitation, and continue to the review. This is a truthful
 partial run, not evidence that the subagent was created.
 
-### 10:45–10:55 — review the first result
+### 10:40–10:50 — review the first result
 
 Use `check_ticket.py` from the pack. Verify that `TICKET-OPS-101` is identified,
 both protected sections are present, the four required headings are present,
@@ -137,7 +156,7 @@ ticket fact was invented. Each participant writes one finding and one `OPEN`
 question. The reviewer checks the artifact itself, not the participant's
 description.
 
-### 10:55–11:10 — one controlled change
+### 10:50–11:05 — one controlled change
 
 Change **exactly one instruction** in the bounded subagent. Keep the input,
 settings, and checker unchanged. Record the original instruction, the changed
@@ -147,7 +166,7 @@ model, mode, input, tool access, or ticket at the same time. If the first run
 was blocked, record the blocked comparison and do not claim a before/after
 result.
 
-### 11:10–11:25 — second-ticket transfer
+### 11:05–11:20 — second-ticket transfer
 
 Reuse the same bounded subagent and the same single changed instruction. Use
 `TICKET-OPS-102` from `ticket-inputs.md` as the only input change. Produce the
@@ -161,7 +180,7 @@ Use this copy-ready transfer prompt:
 Use the ticket-coach subagent. Read scenarios/ticket-agent/ticket-inputs.md and use the TICKET-OPS-102 input. Return a draft that follows scenarios/ticket-agent/ticket-template.md. Preview the complete draft in chat; do not write files or use remote tools.
 ```
 
-### 11:25–11:30 — progress record
+### 11:20–11:30 — progress record
 
 Each participant records one status: `independent`, `with help`, or
 `BLOCKED — access`/`needs practice`; the exact artifact path; the before/after
@@ -171,7 +190,7 @@ outcome is inferred from attendance or discussion.
 
 ## Afternoon coached practice
 
-### 11:40–12:20 — missing settlement (`FIN-002`, `EX-001`)
+### 11:40–12:00 — missing settlement (`FIN-002`, `EX-001`)
 
 In a MOB of three to four, read `TX-NS-1007`, its due date, and the absence of
 the PSP row from the three CSVs. Use this literal prompt:
@@ -186,13 +205,13 @@ status, next evidence request, and `OPEN` owner. Check: a fresh MOB member can
 reproduce the row from the cited files. Gate: the facilitator accepts the
 overdue classification or records the exact unresolved question.
 
-### 12:20–12:30 — check
+### 13:00–13:10 — check
 
 The reviewer reads the evidence row without the operator's explanation. Check
 the due-date rule, source IDs, and absence claim. Record PASS or BLOCKED and the
 missing proof. Keep the ticket fictional and do not claim payment recovery.
 
-### 13:15–14:00 — duplicate settlement (`FIN-003`, `EX-002`)
+### 13:10–13:50 — duplicate settlement (`FIN-003`, `EX-002`)
 
 Read `SET-1003-A` and `SET-1003-B` beside the ledger and bank rows. Use this
 literal prompt:
@@ -225,7 +244,7 @@ The receiver must find the next action and reproduce one missing or duplicate
 check in two minutes. The handoff is a training artifact, not a production
 control or a claim that a financial issue was resolved.
 
-## Close and covered/next map — 15:40–16:00
+## Close and covered/next map — 15:35–16:00
 
 Each person answers: **Made:** what artifact or comparison exists? **Learned:**
 which single instruction or source check changed the result? **Can do:** which

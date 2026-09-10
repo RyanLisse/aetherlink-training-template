@@ -26,9 +26,9 @@ Read [the team workflow](../../scenarios/payment-reconciliation/workflow.md),
 | 10:35–11:00 | 25 | Individual attempt | Personal runbook outline |
 | 11:00–11:20 | 20 | Review | Peer usability readback |
 | 11:20–11:30 | 10 | Break | — |
-| 11:30–12:10 | 40 | Practice | Groups of 3–4, one navigator |
-| 12:10–12:30 | 20 | Check | Human scope gate |
-| 12:30–13:15 | 45 | Lunch | — |
+| 11:30–12:00 | 30 | Practice | Groups of 3–4, one navigator |
+| 12:00–13:00 | 60 | Lunch | — |
+| 13:00–13:15 | 15 | Check | Human scope gate |
 | 13:15–14:00 | 45 | Practice | Shared-skill and mock workflow fields |
 | 14:00–14:10 | 10 | Break | — |
 | 14:10–15:00 | 50 | Transfer | Fresh reader runs the runbook |
@@ -98,7 +98,7 @@ marks missing information. Do not rewrite it for the author.
 
 **Human acceptance:** Peer finds a next action without oral explanation.
 
-### 4. Group practice — 11:30–12:10
+### 4. Group practice — 11:30–12:00
 
 **Task card:** Combine the best runbook details in groups of 3–4. Navigator
 directs the driver; scribe maintains an evidence table; skeptic tests scope.
@@ -115,7 +115,7 @@ directs the driver; scribe maintains an evidence table; skeptic tests scope.
 **Human acceptance:** Facilitator confirms every completed-looking item has an
 actual command/output or is marked `OPEN`.
 
-### 5. Check — 12:10–12:30
+### 5. Check — 13:00–13:15
 
 **Task card:** Human gate the runbook before extracting a reusable skill.
 Check source fidelity, stop rules, and the distinction between documentation

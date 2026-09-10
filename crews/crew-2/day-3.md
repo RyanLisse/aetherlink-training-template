@@ -26,9 +26,9 @@ the [scenario README](../../scenarios/payment-reconciliation/README.md), and
 | 10:35–11:00 | 25 | Individual attempt | Personal analyst statement |
 | 11:00–11:20 | 20 | Review | Behavior and source readback |
 | 11:20–11:30 | 10 | Break | — |
-| 11:30–12:10 | 40 | Practice | Analyst pass in groups of 3–4 |
-| 12:10–12:30 | 20 | Check | Analyst human gate |
-| 12:30–13:15 | 45 | Lunch | — |
+| 11:30–12:00 | 30 | Practice | Analyst pass in groups of 3–4 |
+| 12:00–13:00 | 60 | Lunch | — |
+| 13:00–13:15 | 15 | Check | Analyst human gate |
 | 13:15–14:00 | 45 | Practice | Developer and tester passes |
 | 14:00–14:10 | 10 | Break | — |
 | 14:10–15:00 | 50 | Transfer | Fresh tester reproduces checks |
@@ -98,7 +98,7 @@ behavior. Separate facts, calculations, and policy questions.
 **Human acceptance:** Facilitator accepts the wording before the developer
 pass starts.
 
-### 4. Analyst group practice — 11:30–12:10
+### 4. Analyst group practice — 11:30–12:00
 
 **Task card:** Groups of 3–4 consolidate analyst statements. Navigator directs
 the driver; scribe records source IDs; skeptic pauses on unstated policy.
@@ -114,7 +114,7 @@ the driver; scribe records source IDs; skeptic pauses on unstated policy.
 **Human acceptance:** Facilitator signs the analyst gate by role and records
 any open confirmation question.
 
-### 5. Check — 12:10–12:30
+### 5. Check — 13:00–13:15
 
 **Task card:** Pass the accepted analyst section to the developer. The human
 reviewer confirms no behavior was changed during transfer.
