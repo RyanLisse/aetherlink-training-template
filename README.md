@@ -19,6 +19,8 @@ Keep the root `intent.md` for the training outcome; exercise artifacts live in `
 
 Use the [Northstar Demo Support Desk scenario](scenarios/status-desk/README.md) to give the day exercises a shared story. It includes synthetic records, support requests, a monitoring fixture, role cards and a sequenced ticket backlog. Keep the original `training-lab/records.json` unchanged; the larger scenario dataset lives separately.
 
+For payment operations teams, use the [daily payment reconciliation scenario](scenarios/payment-reconciliation/README.md). Compare a transaction ledger, PSP settlements, and bank credits; investigate exceptions and hand over an evidence-backed action list. This is a fictional training model, not a description of Worldline systems or policies.
+
 ## Quickstart
 
 1. Read [intent.md](intent.md) and agree on the outcome, today's boundary, owners, and evidence checks.

@@ -29,6 +29,10 @@ All commands in the guides run from the repository root. Use local Git checkpoin
 
 Use [Northstar Demo Support Desk](../scenarios/status-desk/README.md) for the mock requests, role cards and ticket sequence. Follow its day-to-ticket mapping alongside these timeboxes; it adds context to the exercises rather than a third training day.
 
+## Payment operations alternative
+
+For a FinOps cohort working on payments and reconciliation, choose the [payment reconciliation scenario](../scenarios/payment-reconciliation/README.md). Keep the 09:00–16:00 timeboxes and opening/closing routines. Use its exercise mapping in place of the support-desk domain tasks; the Python status-lab commands belong to the original track. Agree on one track before starting.
+
 ## Source map
 
 The guides map all 14 lessons: Introduction; Capture as intent.md; Requirements and design; Plan mode; CLAUDE.md; Skills as institutional knowledge; Parallel sessions and subagents; Feedback loop; Continuous evals in CI; AI in the PR review loop; Hooks as approval gates; CI/CD integration and deployment; Closing the loop on metrics; and Closing thoughts and resources. The first four are practiced directly; later deployment, eval, and hook material is marked as applied or advanced overview where the lab does not implement it. See each guide for canonical links.
