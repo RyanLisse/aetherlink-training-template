@@ -1,0 +1,62 @@
+[
+  {
+    "reference": "TX-100",
+    "status": "pending",
+    "internal_note": "Synthetic Northstar fixture: awaiting review"
+  },
+  {
+    "reference": "TX-101",
+    "status": "settled",
+    "internal_note": "Synthetic Northstar fixture: reconciliation complete"
+  },
+  {
+    "reference": "TX-102",
+    "status": "failed",
+    "internal_note": "Synthetic Northstar fixture: retry is exercise-only"
+  },
+  {
+    "reference": "TX-103",
+    "status": "pending",
+    "internal_note": "Synthetic Northstar fixture: queued for review"
+  },
+  {
+    "reference": "TX-104",
+    "status": "settled",
+    "internal_note": "Synthetic Northstar fixture: matched in mock ledger"
+  },
+  {
+    "reference": "TX-105",
+    "status": "failed",
+    "internal_note": "Synthetic Northstar fixture: rejected in simulation"
+  },
+  {
+    "reference": "TX-106",
+    "status": "pending",
+    "internal_note": "Synthetic Northstar fixture: manual check pending"
+  },
+  {
+    "reference": "TX-107",
+    "status": "settled",
+    "internal_note": "Synthetic Northstar fixture: closed in mock run"
+  },
+  {
+    "reference": "TX-108",
+    "status": "failed",
+    "internal_note": "Synthetic Northstar fixture: failure is not a live alert"
+  },
+  {
+    "reference": "TX-109",
+    "status": "pending",
+    "internal_note": "Synthetic Northstar fixture: awaiting a fictional reviewer"
+  },
+  {
+    "reference": "TX-110",
+    "status": "settled",
+    "internal_note": "Synthetic Northstar fixture: settled in local data"
+  },
+  {
+    "reference": "TX-111",
+    "status": "failed",
+    "internal_note": "Synthetic Northstar fixture: no external retry performed"
+  }
+]

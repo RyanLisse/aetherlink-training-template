@@ -1,0 +1,17 @@
+{
+  "fixture_label": "[TRAINING] Northstar fictional monitoring fixture; simulation only",
+  "metric": "error_rate_percent",
+  "threshold_percent": 5.0,
+  "baseline": {
+    "errors": 80,
+    "total": 2000,
+    "rate_percent": 4.0
+  },
+  "window": {
+    "errors": 160,
+    "total": 2000,
+    "rate_percent": 8.0
+  },
+  "expected_breach": true,
+  "interpretation": "Exercise prompt only; not production telemetry, an incident, or a statistical significance claim."
+}

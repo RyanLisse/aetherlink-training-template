@@ -1,0 +1,62 @@
+[
+  {
+    "id": "REQ-001",
+    "title": "[TRAINING] fictional lookup for a pending reference",
+    "operation": "lookup",
+    "reference": "TX-100",
+    "expected": {
+      "reference": "TX-100",
+      "status": "pending"
+    },
+    "expected_error": null,
+    "public_fields": ["reference", "status"]
+  },
+  {
+    "id": "REQ-002",
+    "title": "[TRAINING] fictional lookup for an unknown reference",
+    "operation": "lookup",
+    "reference": "TX-999",
+    "expected": null,
+    "expected_error": null,
+    "public_fields": ["reference", "status"]
+  },
+  {
+    "id": "REQ-003",
+    "title": "[TRAINING] fictional settled queue filter",
+    "operation": "filter",
+    "status": "settled",
+    "expected": [
+      {"reference": "TX-101", "status": "settled"},
+      {"reference": "TX-104", "status": "settled"},
+      {"reference": "TX-107", "status": "settled"},
+      {"reference": "TX-110", "status": "settled"}
+    ],
+    "expected_error": null,
+    "public_fields": ["reference", "status"]
+  },
+  {
+    "id": "REQ-004",
+    "title": "[TRAINING] fictional cancelled filter is invalid",
+    "operation": "filter",
+    "status": "cancelled",
+    "expected": null,
+    "expected_error": "ValueError",
+    "public_fields": ["reference", "status"]
+  },
+  {
+    "id": "REQ-005",
+    "title": "[TRAINING] fictional response must redact internal note",
+    "operation": "lookup",
+    "reference": "TX-102",
+    "expected": {
+      "reference": "TX-102",
+      "status": "failed"
+    },
+    "expected_error": null,
+    "public_fields": ["reference", "status"],
+    "redaction_negative_control": {
+      "input_contains_internal_note": true,
+      "expected_output_excludes": ["internal_note"]
+    }
+  }
+]

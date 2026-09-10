@@ -15,6 +15,10 @@ Presentation access is managed separately through ChatGPT sign-in. The workbooks
 
 Keep the root `intent.md` for the training outcome; exercise artifacts live in `lab-notes/`. Leave supplied tests intact and implement the exercise in your own template copy. The SDLC is a loop: return to an earlier phase whenever evidence changes the plan.
 
+## Scenario and training tickets
+
+Use the [Northstar Demo Support Desk scenario](scenarios/status-desk/README.md) to give the day exercises a shared story. It includes synthetic records, support requests, a monitoring fixture, role cards and a sequenced ticket backlog. Keep the original `training-lab/records.json` unchanged; the larger scenario dataset lives separately.
+
 ## Quickstart
 
 1. Read [intent.md](intent.md) and agree on the outcome, today's boundary, owners, and evidence checks.

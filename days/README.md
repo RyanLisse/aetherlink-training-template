@@ -25,6 +25,10 @@ All commands in the guides run from the repository root. Use local Git checkpoin
 - [Day 1 — From intent to a tested first change](day-1.md)
 - [Day 2 — Institutionalise, review, and close the loop](day-2.md)
 
+## Shared scenario
+
+Use [Northstar Demo Support Desk](../scenarios/status-desk/README.md) for the mock requests, role cards and ticket sequence. Follow its day-to-ticket mapping alongside these timeboxes; it adds context to the exercises rather than a third training day.
+
 ## Source map
 
 The guides map all 14 lessons: Introduction; Capture as intent.md; Requirements and design; Plan mode; CLAUDE.md; Skills as institutional knowledge; Parallel sessions and subagents; Feedback loop; Continuous evals in CI; AI in the PR review loop; Hooks as approval gates; CI/CD integration and deployment; Closing the loop on metrics; and Closing thoughts and resources. The first four are practiced directly; later deployment, eval, and hook material is marked as applied or advanced overview where the lab does not implement it. See each guide for canonical links.
