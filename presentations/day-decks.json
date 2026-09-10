@@ -40,15 +40,15 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 open · 10:15–10:40 concept/demo · 10:40–11:20 ex1 · 11:20–11:30 break"
+            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:20 exercise 1 · 11:20–11:30 break"
           },
           {
             "title": "Midday",
-            "body": "11:30–12:10 ex2 · 12:10–12:30 demo/coaching · 12:30–13:15 lunch"
+            "body": "11:30–12:10 exercise 2 · 12:10–12:30 demo/coaching · 12:30–13:15 lunch"
           },
           {
             "title": "Afternoon",
-            "body": "13:15–14:00 ex3 · 14:00–14:10 break · 14:10–15:00 ex4 · 15:00–15:10 break · 15:10–15:40 ex5 · 15:40–16:00 reflection"
+            "body": "13:15–14:00 exercise 3 · 14:00–14:10 break · 14:10–15:00 exercise 4 · 15:00–15:10 break · 15:10–15:40 exercise 5 · 15:40–16:00 reflection"
           }
         ],
         "prompt": "Read the schedule aloud. For the next block, name its artifact and its human acceptance check.",
@@ -98,7 +98,7 @@
         "cards": [
           {
             "title": "Group",
-            "body": "3–5 people navigate one shared task"
+            "body": "3–4 people navigate one shared task"
           },
           {
             "title": "Driver",
@@ -109,8 +109,8 @@
             "body": "The tool suggests; humans direct, pause, and decide"
           }
         ],
-        "prompt": "Demonstrate a two-minute mob: facilitator states the task, navigator reads the CSV rule, driver opens the file, skeptic asks for source IDs, and scribe records the decision. Rotate the driver once.",
-        "notes": "Doe de demo letterlijk. Iedereen mag ‘pause’ zeggen; de AI is geen bestuurder.",
+        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, others route observations through the navigator, skeptic asks for source IDs, and scribe records the decision. Rotate the driver once.",
+        "notes": "Doe de demo letterlijk. Eén navigator stuurt de driver; iedereen mag ‘pause’ zeggen. Bij vijf minuten drift grijpt de facilitator kort in.",
         "dark": true,
         "steps": [
           "State one task.",
@@ -392,363 +392,456 @@
     ]
   },
   "day2": {
-    "title": "Day 2 — Guided full cycle: context to local release",
+    "title": "Day 2 — FIN-003 feedback loop",
     "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/days/day-2.md",
     "slides": [
       {
-        "title": "Guided full cycle",
+        "title": "One ticket, one feedback loop",
         "kicker": "DAY 2 · 10:00–16:00",
-        "subtitle": "Reproduce, institutionalise, review, and rehearse a local release",
+        "subtitle": "Carry one functional requirement from analyst to developer to tester",
         "cards": [
           {
-            "title": "Start",
-            "body": "Re-run yesterday’s evidence from the handoff"
+            "title": "Goal",
+            "body": "Keep FIN-003 duplicate rows visible and UNRESOLVED"
           },
           {
-            "title": "Extend",
-            "body": "Turn repeated lessons into context and skills"
+            "title": "Boundary",
+            "body": "Local fictional CSVs; no remote workflow or payout"
           },
           {
-            "title": "Close",
-            "body": "Review, gate, local release rehearsal, new intent"
+            "title": "Output",
+            "body": "One packet with requirement, proposal, tests, and handoff"
           }
         ],
-        "prompt": "Open the Day 2 guide. Start with Kahoot or wordcloud, capture blockers, then use yesterday’s handoff to name one claim to reproduce and one human gate.",
-        "notes": "Begin met Kahoot/wordcloud en blockers; gisteren is geen bewijs voor vandaag.",
+        "prompt": "Open days/day-2.md and the guided FIN-003 exercise. Run one Kahoot question and one blocker wordcloud, then name the goal, boundary, and packet output; capture blockers and a human gate. Do not begin with all concepts.",
+        "notes": "Houd de opening kort: doel, ticket, boundary en blocker; technische context volgt pas na het zichtbare resultaat.",
         "dark": true,
         "steps": [
-          "Run Kahoot/wordcloud.",
+          "State the goal.",
+          "Name the boundary.",
           "Capture blockers.",
-          "Choose a claim.",
           "Name today’s gate."
         ],
-        "expected": "A reproduction target, blockers list, and human gate.",
-        "check": "No one treats yesterday’s status as current proof."
+        "expected": "A FIN-003 target, blockers list, and human gate.",
+        "check": "The group can state the ticket behavior without adding policy."
       },
       {
-        "title": "The same rhythm every day",
+        "title": "Today’s route",
         "kicker": "FIXED SCHEDULE",
-        "subtitle": "Timeboxes are shared; the exercise changes",
+        "subtitle": "Day 2 has a guided first 90 minutes and one narrow ticket all day",
         "cards": [
           {
-            "title": "Morning",
-            "body": "10:00–10:15 open · 10:15–10:40 concept/demo · 10:40–11:20 ex1 · 11:20–11:30 break"
+            "title": "First 90",
+            "body": "10:00–10:05 goal · 10:05–10:15 demo · 10:15–10:35 guided read · 10:35–10:55 group statement · 10:55–11:10 review · 11:10–11:25 individual · 11:25–11:30 recap"
           },
           {
-            "title": "Midday",
-            "body": "11:30–12:10 ex2 · 12:10–12:30 demo/coaching · 12:30–13:15 lunch"
+            "title": "Role passes",
+            "body": "11:30–11:40 break · 11:40–12:20 analyst · 12:20–13:00 developer · 13:00–13:45 lunch · 13:45–14:25 tester"
           },
           {
-            "title": "Afternoon",
-            "body": "13:15–14:00 ex3 · 14:00–14:10 break · 14:10–15:00 ex4 · 15:00–15:10 break · 15:10–15:40 ex5 · 15:40–16:00 reflection"
+            "title": "Review and close",
+            "body": "14:25–14:35 break · 14:35–15:15 cross-role review · 15:15–15:25 break · 15:25–15:45 handoff/optional context · 15:45–16:00 close"
           }
         ],
-        "prompt": "Read the schedule aloud. For the next block, name its artifact and its human acceptance check.",
-        "notes": "Gebruik exact dezelfde tijden als Day 1 en alle volgende dagen.",
+        "prompt": "Read the Day 2 schedule aloud. Keep one FIN-003 packet across every role pass; name the artifact and human gate for each block.",
+        "notes": "De eerste 90 minuten zijn doel, demo, guided read, group, review, individual en recap; if the group drifts for five minutes, the facilitator intervenes briefly and parks longer questions.",
         "dark": false,
         "steps": [
           "Read the timebox.",
-          "Name its artifact.",
-          "Name its acceptance check."
+          "Name the packet section.",
+          "Name its human gate."
         ],
-        "expected": "Participants can navigate the day.",
-        "check": "Schedule contains every required break and lunch."
+        "expected": "Participants can navigate the full FIN-003 relay.",
+        "check": "Schedule totals 360 minutes and includes every stated break and lunch."
       },
       {
-        "title": "MOB roles and the full loop",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "A small group can move quickly when the human gate stays visible",
+        "title": "Goal · narrow ticket behavior",
+        "kicker": "10:00–10:05 · GOAL",
+        "subtitle": "Keep the FIN-003 requirement stable across three roles",
         "cards": [
           {
-            "title": "Rotate",
-            "body": "Driver changes every 5–7 minutes"
+            "title": "Ticket",
+            "body": "FIN-003 · duplicate settlement quarantine"
           },
           {
-            "title": "Navigate",
-            "body": "Group reads context and asks for evidence"
+            "title": "Behavior",
+            "body": "Both rows visible; status UNRESOLVED"
           },
           {
-            "title": "Gate",
-            "body": "Human accepts context, review, and release"
+            "title": "Packet",
+            "body": "Requirement · proposal · tests · handoff"
           }
         ],
-        "prompt": "Trainer demonstrates one role rotation while reading the Day 1 handoff. Ask the group to identify who directs the AI, who challenges evidence, and who records the decision.",
-        "notes": "Herhaal: één taak, één scherm, drie tot vijf mensen; iedereen kan pauzeren.",
+        "prompt": "State the FIN-003 goal in one sentence. Name the two duplicate settlement IDs, the UNRESOLVED status, and the local packet that carries the requirement.",
+        "notes": "Werk in groepen van drie of vier; de facilitator bewaakt de vijf-minuten interventieregel.",
         "dark": true,
         "steps": [
-          "Assign roles.",
-          "Rotate the driver.",
-          "Pause on doubt.",
-          "Record the gate."
+          "Name the ticket.",
+          "State the behavior.",
+          "Name the packet.",
+          "State the gate."
         ],
-        "expected": "Roles are active rather than decorative.",
-        "check": "AI tool is never described as the driver."
+        "expected": "A shared goal and visible human gate.",
+        "check": "The goal preserves visible rows, UNRESOLVED, and no payout approval."
       },
       {
-        "title": "New concepts, plain language",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "Context guides work; tests and evals answer different questions",
+        "title": "Trainer demo · requirement to check",
+        "kicker": "10:05–10:15 · LITERAL DEMO",
+        "subtitle": "Show one source row becoming a requirement and behavior test",
         "cards": [
           {
-            "title": "CLAUDE.md",
-            "body": "Repository context: commands, conventions, boundaries"
+            "title": "Read",
+            "body": "FIN-003 and the cited local source rows"
           },
           {
-            "title": "Skill",
-            "body": "Reusable advice triggered by a work pattern"
+            "title": "State",
+            "body": "Visible duplicates, raw 43,610, unique 24,010"
           },
           {
-            "title": "Eval",
-            "body": "A curated task set measured over time"
+            "title": "Check",
+            "body": "Positive behavior plus a negative deletion test"
           }
         ],
-        "prompt": "Explain CLAUDE.md, a skill, a unit test, and an eval to a newcomer. Ask learners to classify one Northstar check under each label and state the human limitation.",
-        "notes": "Geen voorkennis aannemen. Een skill is adviserend totdat iets het afdwingt.",
+        "prompt": "Trainer demo: read FIN-003 and the relevant CSV rows. Write one user-visible requirement, derive a positive check and a negative silent-deletion check, and mark unrun evidence OPEN.",
+        "notes": "Laat de keten zien: bronrij → gedrag → check. Geen brede concepten vóór de ticket-uitkomst.",
         "dark": false,
         "steps": [
-          "Define each term.",
-          "Give one example.",
-          "Name the limitation."
+          "Read the source row.",
+          "State the behavior.",
+          "Derive two checks."
         ],
-        "expected": "Correct distinctions without inflated claims.",
-        "check": "Unit tests are not called continuous evals."
+        "expected": "A literal requirement and two bounded checks.",
+        "check": "The demo labels unrun checks OPEN and makes no runtime claim."
       },
       {
-        "title": "Trainer demo · context to skill",
-        "kicker": "LITERAL DEMO · 10:15",
-        "subtitle": "Show a small CLAUDE.md and a triggered skill",
+        "title": "Guided read · source slice",
+        "kicker": "10:15–10:35 · GUIDED",
+        "subtitle": "Read only the rows needed for FIN-003",
         "cards": [
           {
-            "title": "Context",
-            "body": "Commands, local-only safety, evidence minimum"
+            "title": "Ledger",
+            "body": "TX-NS-1003 · expected net 19,600"
           },
           {
-            "title": "Skill",
-            "body": "Triggers on reconciliation review or rule changes"
+            "title": "PSP",
+            "body": "SET-1003-A and SET-1003-B remain visible"
           },
           {
-            "title": "Human",
-            "body": "Reviews wording; checks advisory limits"
+            "title": "Bank",
+            "body": "BANK-0909-01 · credit 24,010"
           }
         ],
-        "prompt": "Trainer demo: draft CLAUDE.md with local commands, integer EUR rule, fixture-only boundary, and tests-before-claims. Draft .claude/skills/reconciliation-review/SKILL.md with a clear trigger and evidence checklist. Explain what remains unenforced.",
-        "notes": "Laat de tekst zien en zeg expliciet: prompttekst is geen controle-uitkomst.",
+        "prompt": "Read FIN-003 and only the cited rows in the ledger, PSP, and bank CSVs. Record source IDs, batch B-20260909-01, cutoff 2026-09-10 12:00 Europe/Amsterdam, raw 43,610, and provisional unique 24,010.",
+        "notes": "De bronrijen zijn de navigatie; de groep maakt daarna de eigen packet-evidence.",
         "dark": true,
         "steps": [
-          "Write the context.",
-          "Write the trigger.",
-          "Read the limitation.",
-          "Ask for human review."
+          "Open FIN-003.",
+          "Locate cited rows.",
+          "Record IDs and totals.",
+          "Ask for a wording gate."
         ],
-        "expected": "Learners see both artifacts created literally.",
-        "check": "No claim of automatic enforcement."
+        "expected": "A bounded source readback for one ticket.",
+        "check": "No other FIN ticket or all-five-case classification is introduced."
       },
       {
-        "title": "Exercise 1 · reusable context",
-        "kicker": "10:40–11:20 · 40 MIN",
-        "subtitle": "Put current rules where a new operator can find them",
+        "title": "Group · analyst statement",
+        "kicker": "10:35–10:55 · GROUP",
+        "subtitle": "Write the user-visible behavior before implementation",
         "cards": [
           {
-            "title": "Context",
-            "body": "Cutoff, inputs, scope, commands, evidence minimum"
+            "title": "Requirement",
+            "body": "Keep both duplicate PSP rows visible"
           },
           {
-            "title": "Skill",
-            "body": "Local procedure for reconciliation work"
+            "title": "Calculation",
+            "body": "Raw 43,610; provisional unique 24,010"
           },
           {
-            "title": "Gate",
-            "body": "Facilitator approves current, scoped wording"
+            "title": "Status",
+            "body": "UNRESOLVED pending human source confirmation"
           }
         ],
-        "prompt": "Read the accepted Day 1 intent, spec, plan, and handoff. Draft a minimal local CLAUDE.md section and lab-notes/payment-reconciliation-skill.md with context, inputs, cutoff, duplicate rule, exact validation command, evidence minimum, and human gates. Do not edit CSVs or add secrets.",
-        "notes": "Laat zien wat vaste repositorycontext is en wat in een procedure hoort.",
+        "prompt": "As a group, draft the analyst section of lab-notes/day-2/FIN-003-ticket-packet.md. State the visible duplicate behavior, source IDs, raw and provisional unique totals, UNRESOLVED status, acceptance checks, and open policy questions. Do not write code or remote records.",
+        "notes": "De groep schrijft eerst gedrag; technische ideeën wachten op de developer-pass.",
         "dark": false,
         "steps": [
-          "Read Day 1 artifacts.",
-          "Draft context and skill.",
-          "Explain each placement.",
+          "Read the ticket.",
+          "State behavior.",
+          "Cite source IDs.",
           "Get facilitator approval."
         ],
-        "expected": "Context and skill drafts a new operator can use.",
-        "check": "Every instruction is current, scoped, and reproducible."
+        "expected": "A shared analyst statement for FIN-003.",
+        "check": "The statement preserves rows, arithmetic, UNRESOLVED, and human confirmation."
       },
       {
-        "title": "Exercise 2 · independent review and tests versus evals",
-        "kicker": "11:30–12:10 · 40 MIN",
-        "subtitle": "Two read-only reviews answer different questions",
+        "title": "Review · wording and checks",
+        "kicker": "10:55–11:10 · REVIEW",
+        "subtitle": "Test the group statement before passing it onward",
         "cards": [
           {
-            "title": "Review A",
-            "body": "Identifiers, fee/net arithmetic, duplicates, batch totals"
+            "title": "Source",
+            "body": "Every expected value has a cited local row"
           },
           {
-            "title": "Review B",
-            "body": "Cutoff, five cases, scope, reproducibility"
+            "title": "Behavior",
+            "body": "No deletion, hidden row, or double count"
           },
-          {
-            "title": "Classify",
-            "body": "Contract tests versus workflow evaluations"
-          }
-        ],
-        "prompt": "Review the Day 1 evidence independently in read-only mode. Review A checks identifiers, fee/net arithmetic, duplicate quarantine, and batch totals. Review B checks cutoff semantics, exactly five case IDs, fixture-only scope, and reproducibility. Submit separate PASS or BLOCKED findings with source IDs and explain tests versus evaluations.",
-        "notes": "Twee schone contexten, geen review lezen vóór indienen; beslisser vergelijkt daarna.",
-        "dark": false,
-        "steps": [
-          "Assign two scopes.",
-          "Review without editing.",
-          "Submit separately.",
-          "Classify test or eval."
-        ],
-        "expected": "Two independent findings with a clear test/eval distinction.",
-        "check": "Neither review relies on the other."
-      },
-      {
-        "title": "Trainer demo · tests versus evals",
-        "kicker": "12:10–12:30 · 20 MIN",
-        "subtitle": "One passing check answers one narrow question",
-        "cards": [
-          {
-            "title": "Test",
-            "body": "Deterministic fixture assertion for this change"
-          },
-          {
-            "title": "Eval",
-            "body": "Representative tasks repeated over time"
-          },
-          {
-            "title": "Evidence",
-            "body": "Record which one actually ran"
-          }
-        ],
-        "prompt": "Trainer demonstrates classifying three artifacts: a single batch assertion is a test; a planned set of representative reconciliation tasks is an eval seed; neither proves a production outcome. Ask learners to write the missing evidence.",
-        "notes": "Gebruik ‘eval seed’ zolang er geen echte continue suite is.",
-        "dark": true,
-        "steps": [
-          "Classify the artifact.",
-          "Name its question.",
-          "State missing evidence."
-        ],
-        "expected": "The test/eval boundary is clear.",
-        "check": "No continuous-eval claim without a suite."
-      },
-      {
-        "title": "Exercise 3 · peer handoff in team tools",
-        "kicker": "13:15–14:00 · 45 MIN",
-        "subtitle": "Trace one case from source row to owner",
-        "cards": [
-          {
-            "title": "GitLab",
-            "body": "Local MR title, branch, revision, evidence"
-          },
-          {
-            "title": "Jira",
-            "body": "FIN reference, owner, status, next action"
-          },
-          {
-            "title": "Confluence",
-            "body": "Intent, spec, runbook, recap, knowledge, handoff"
-          }
-        ],
-        "prompt": "Prepare local drafts from Day 1 evidence and independent reviews: a GitLab MR title/body, Jira fields for FIN-001 and FIN-002–FIN-006, and Confluence headings. Use OPEN for unknown keys, URLs, approvals, and statuses. Do not call remote services or claim publication.",
-        "notes": "GitHub distribueert materiaal; teamrecord blijft GitLab, Jira en Confluence.",
-        "dark": false,
-        "steps": [
-          "Draft three local records.",
-          "Trace one case.",
-          "Mark unknowns OPEN.",
-          "Check owners and links."
-        ],
-        "expected": "A local, safe team-tool handoff draft.",
-        "check": "Receiver can trace one case to an owner."
-      },
-      {
-        "title": "Exercise 4 · gates and local release",
-        "kicker": "14:10–15:00 · 50 MIN",
-        "subtitle": "Rehearse a release package without deploying",
-        "cards": [
           {
             "title": "Gate",
-            "body": "Sources unchanged; checks pass; five cases present"
-          },
-          {
-            "title": "Package",
-            "body": "Evidence, reviews, knowledge note, handoff"
-          },
-          {
-            "title": "Release",
-            "body": "Local rehearsal only; GitLab MR intended, not published"
+            "body": "Facilitator accepts or parks the question"
           }
         ],
-        "prompt": "Design and rehearse a local-only approval gate. State checks run, conceptual checks, named human reviewer, intended GitLab MR, Jira status, Confluence page, and rollback. Keep unavailable destinations OPEN; do not deploy or publish.",
-        "notes": "Deploy wordt hier als concept en lokale handoff geoefend.",
+        "prompt": "Review the group analyst statement in read-only mode. Check source IDs, raw 43610, provisional unique 24010, visible duplicate rows, UNRESOLVED status, and no payout approval. Return PASS or BLOCKED with one exact missing proof; park policy questions.",
+        "notes": "De reviewer controleert gedrag en bewijs; skills en CLAUDE.md zijn optionele follow-up.",
         "dark": false,
         "steps": [
-          "List gate criteria.",
-          "Assemble local package.",
-          "Name reviewer.",
-          "Write rollback."
+          "Check source IDs.",
+          "Check behavior.",
+          "Record one gap.",
+          "Accept or park."
         ],
-        "expected": "A reviewable local release rehearsal.",
-        "check": "No external publication is claimed."
+        "expected": "A reviewable analyst statement with a gate.",
+        "check": "No technical addition silently changes functional behavior."
       },
       {
-        "title": "Exercise 5 · metric to new intent",
-        "kicker": "15:10–15:40 · 30 MIN",
-        "subtitle": "Maintenance turns an observation into the next question",
+        "title": "Individual · rewrite and checks",
+        "kicker": "11:10–11:25 · INDIVIDUAL",
+        "subtitle": "Restate the accepted behavior and choose proof",
         "cards": [
           {
-            "title": "Metric",
-            "body": "Count cases with source IDs in this evidence log"
+            "title": "Rewrite",
+            "body": "One sentence in your own words"
           },
           {
-            "title": "Teach back",
-            "body": "Intent → spec → plan → evidence → review → handoff"
+            "title": "Positive",
+            "body": "Both duplicate IDs visible; unique net 24,010"
           },
           {
-            "title": "Next intent",
-            "body": "Improve reproducibility; leave thresholds OPEN"
+            "title": "Negative",
+            "body": "Fail deletion, hiding, double count, or payout"
           }
         ],
-        "prompt": "Choose a synthetic leading metric such as cases with source IDs. Count only what the local evidence log shows. Draft a next intent for improving repeatability, then teach back the full loop. Do not invent production thresholds.",
-        "notes": "Vraag naar waargenomen aantallen; geen KPI’s verzinnen.",
-        "dark": false,
-        "steps": [
-          "Count observed evidence.",
-          "Draft the next intent.",
-          "Teach back the loop."
-        ],
-        "expected": "A measured local observation and next intent.",
-        "check": "Metric is labelled fixture evidence."
-      },
-      {
-        "title": "Reflection and transfer",
-        "kicker": "15:40–16:00 · 20 MIN",
-        "subtitle": "Carry the loop into a new harmless work item",
-        "cards": [
-          {
-            "title": "Individual",
-            "body": "Name one context rule and one deterministic check"
-          },
-          {
-            "title": "MOB",
-            "body": "Share where a human gate changed direction"
-          },
-          {
-            "title": "Close",
-            "body": "Record recap, blockers, and one future eval seed"
-          }
-        ],
-        "prompt": "Write a four-line fictional non-payment intent, its next spec and plan, one deterministic test, and one future eval seed. Complete the daily recap, blockers, individual check-in, and mob reflection. Keep planned evidence OPEN.",
-        "notes": "Sluit af met recap, blockers en individuele reflectie vóór de groepsronde.",
+        "prompt": "Individually rewrite the accepted FIN-003 behavior in one sentence. Select one positive and one negative behavior check, cite the source IDs they need, and mark unrun checks OPEN. Keep technical additions separate.",
+        "notes": "Iedereen maakt een eigen checkkeuze; OPEN blijft eerlijk wanneer niets is uitgevoerd.",
         "dark": true,
         "steps": [
-          "Draft the transfer.",
-          "Complete recap/check-in.",
-          "Share one lesson."
+          "Rewrite the behavior.",
+          "Choose positive proof.",
+          "Choose negative proof.",
+          "Mark unrun OPEN."
         ],
-        "expected": "A safe transfer draft, recap, and reflection.",
-        "check": "Future eval is not presented as running."
+        "expected": "An individual requirement rewrite and check pair.",
+        "check": "Checks are behavior-based and tied to cited source rows."
+      },
+      {
+        "title": "Recap · packet and next role",
+        "kicker": "11:25–11:30 · RECAP",
+        "subtitle": "Freeze the analyst wording before the role relay",
+        "cards": [
+          {
+            "title": "Packet",
+            "body": "Save the analyst statement and source IDs"
+          },
+          {
+            "title": "Next",
+            "body": "Pass the same statement to the analyst role"
+          },
+          {
+            "title": "Pause",
+            "body": "Park policy questions; keep scope fixed"
+          }
+        ],
+        "prompt": "Recap the first 90 minutes in the shared packet. Record the accepted analyst wording, cited source IDs, one positive check, one negative check, and the exact question parked for the analyst pass.",
+        "notes": "Dezelfde packet gaat door; geen herschreven ticket bij elke rol.",
+        "dark": false,
+        "steps": [
+          "Save the wording.",
+          "Record checks.",
+          "Park open questions.",
+          "Pass the packet."
+        ],
+        "expected": "A frozen analyst section ready for relay.",
+        "check": "The packet has one stable requirement and no remote record."
+      },
+      {
+        "title": "Analyst pass · facts and acceptance",
+        "kicker": "11:40–12:20 · ANALYST",
+        "subtitle": "Turn the source read into an accepted requirement",
+        "cards": [
+          {
+            "title": "Facts",
+            "body": "Cite FIN-003 rows and cutoff"
+          },
+          {
+            "title": "Acceptance",
+            "body": "Visible duplicates; raw and unique totals"
+          },
+          {
+            "title": "Open",
+            "body": "Human source confirmation remains OPEN"
+          }
+        ],
+        "prompt": "Act as the FIN-003 analyst. Read the ticket and only the cited local rows. Append facts, one user-visible functional requirement, source-backed acceptance checks, calculations, and open policy questions to lab-notes/day-2/FIN-003-ticket-packet.md. Do not write code or remote records.",
+        "notes": "De analyst beslist over gedrag en bewijs; de developer krijgt dezelfde packet.",
+        "dark": false,
+        "steps": [
+          "Read the ticket.",
+          "Cite the rows.",
+          "Write acceptance.",
+          "Park policy."
+        ],
+        "expected": "An analyst section another role can verify.",
+        "check": "Both duplicate IDs, 43610, 24010, and UNRESOLVED are explicit."
+      },
+      {
+        "title": "Developer pass · proposal and additions",
+        "kicker": "12:20–13:00 · DEVELOPER",
+        "subtitle": "Propose the smallest local change without changing behavior",
+        "cards": [
+          {
+            "title": "Preserve",
+            "body": "Rows, arithmetic, status, human confirmation"
+          },
+          {
+            "title": "Proposal",
+            "body": "Local duplicate grouping and quarantine sketch"
+          },
+          {
+            "title": "Label",
+            "body": "Technical additions stay visibly separate"
+          }
+        ],
+        "prompt": "Act as the FIN-003 developer. Read the original ticket, analyst section, and cited rows. Append the smallest local implementation sketch; put field names, grouping keys, ordering, storage, and logging under “Technical addition — proposal”. Do not call services or claim runtime testing.",
+        "notes": "De developer mag techniek toevoegen, maar geen functionele eis vervangen.",
+        "dark": false,
+        "steps": [
+          "Read analyst behavior.",
+          "Sketch the change.",
+          "Label additions.",
+          "Preserve the gate."
+        ],
+        "expected": "A bounded developer proposal for the same ticket.",
+        "check": "Technical additions do not alter visible rows, arithmetic, or status."
+      },
+      {
+        "title": "Tester pass · behavior checks",
+        "kicker": "13:45–14:25 · TESTER",
+        "subtitle": "Check the preserved requirement with positive and negative tests",
+        "cards": [
+          {
+            "title": "Positive",
+            "body": "Both rows visible; raw 43,610; unique 24,010"
+          },
+          {
+            "title": "Negative",
+            "body": "Fail deletion, hiding, double count, or payout"
+          },
+          {
+            "title": "Result",
+            "body": "Record PASS, FAIL, or OPEN with exact evidence"
+          }
+        ],
+        "prompt": "Act as the FIN-003 tester. Read the original ticket, analyst requirement, developer proposal, and cited rows. Append at least one positive and two negative behavior tests. Record only exact local commands/results or OPEN; keep source facts, behavior, and technical additions separate.",
+        "notes": "De tester controleert het contract; OPEN is correct als een check niet is uitgevoerd.",
+        "dark": true,
+        "steps": [
+          "Write one positive test.",
+          "Write two negative tests.",
+          "Run or mark OPEN.",
+          "Record the evidence."
+        ],
+        "expected": "A tester section tied to the functional requirement.",
+        "check": "Negative tests reject hidden rows, double count, and payout approval."
+      },
+      {
+        "title": "Cross-role review · same packet",
+        "kicker": "14:35–15:15 · REVIEW",
+        "subtitle": "Check that each role preserved the functional requirement",
+        "cards": [
+          {
+            "title": "Analyst",
+            "body": "Behavior and source facts are explicit"
+          },
+          {
+            "title": "Developer",
+            "body": "Technical additions are labelled proposals"
+          },
+          {
+            "title": "Tester",
+            "body": "PASS, FAIL, or OPEN has exact evidence"
+          }
+        ],
+        "prompt": "Review the same FIN-003 packet across all three role sections. Ask whether behavior stayed intact, technical additions are separate, and each test has a result or OPEN. Record one human decision and one open question.",
+        "notes": "De reviewer vergelijkt de relay; herschrijf geen eerdere rol zonder het verschil te registreren.",
+        "dark": false,
+        "steps": [
+          "Trace the requirement.",
+          "Check additions.",
+          "Check test results.",
+          "Record the decision."
+        ],
+        "expected": "A cross-role review with a named human decision.",
+        "check": "No role silently changes visible rows, arithmetic, status, or confirmation."
+      },
+      {
+        "title": "Handoff · optional context",
+        "kicker": "15:25–15:45 · HANDOFF",
+        "subtitle": "Leave a fresh reader a local packet and clear limits",
+        "cards": [
+          {
+            "title": "Packet",
+            "body": "Analyst, developer, tester, source IDs, commands"
+          },
+          {
+            "title": "Optional",
+            "body": "CLAUDE.md or skill note follows visible result"
+          },
+          {
+            "title": "Limits",
+            "body": "Unknown links and unrun checks stay OPEN"
+          }
+        ],
+        "prompt": "Assemble lab-notes/day-2/FIN-003-ticket-packet.md for a fresh receiver. Include the accepted requirement, proposal, technical additions, tester results, source IDs, exact commands, reviewer, and open questions. Add optional CLAUDE.md or skill notes only after the visible ticket result.",
+        "notes": "Intent en progress zijn repositoryconventies via CLAUDE.md; een skill is optionele follow-up, geen bewijs.",
+        "dark": false,
+        "steps": [
+          "Assemble the packet.",
+          "Name the receiver.",
+          "Mark OPEN items.",
+          "Add optional context last."
+        ],
+        "expected": "A fresh-reader handoff with explicit limits.",
+        "check": "No remote publication, runtime, or payout result is claimed."
+      },
+      {
+        "title": "Close · made, learned, can do",
+        "kicker": "15:45–16:00 · CLOSE",
+        "subtitle": "Measure independence and carry the feedback loop forward",
+        "cards": [
+          {
+            "title": "Made",
+            "body": "Name the packet section or check added"
+          },
+          {
+            "title": "Learned",
+            "body": "Name the assumption a handoff caught"
+          },
+          {
+            "title": "Can do",
+            "body": "Rate next step: independent, with help, needs practice"
+          }
+        ],
+        "prompt": "Close individually: write Made, Learned, and Can do for the FIN-003 relay. Rate analyst, developer, and tester work as independent, with help, or needs practice. Add one MOB reflection on how the navigator, driver, or reviewer changed the result. Complete the daily recap and record only agreed group learning.",
+        "notes": "Laat iedereen een independence rating en MOB-reflectie geven; persoonlijke feedback blijft buiten de repository.",
+        "dark": true,
+        "steps": [
+          "Write Made.",
+          "Write Learned.",
+          "Rate Can do.",
+          "Complete the recap."
+        ],
+        "expected": "A concise close with an independence rating and recap.",
+        "check": "The close names the next reproducible step and keeps unproven claims OPEN."
       }
     ]
   },
@@ -793,15 +886,15 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 open · 10:15–10:40 recap/clarification · 10:40–11:20 ex1 · 11:20–11:30 break"
+            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:20 exercise 1 · 11:20–11:30 break"
           },
           {
             "title": "Midday",
-            "body": "11:30–12:10 ex2 · 12:10–12:30 coaching on request · 12:30–13:15 lunch"
+            "body": "11:30–12:10 exercise 2 · 12:10–12:30 demo/coaching · 12:30–13:15 lunch"
           },
           {
             "title": "Afternoon",
-            "body": "13:15–14:00 ex3 · 14:00–14:10 break · 14:10–15:00 ex4 · 15:00–15:10 break · 15:10–15:40 ex5 · 15:40–16:00 reflection"
+            "body": "13:15–14:00 exercise 3 · 14:00–14:10 break · 14:10–15:00 exercise 4 · 15:00–15:10 break · 15:10–15:40 exercise 5 · 15:40–16:00 reflection"
           }
         ],
         "prompt": "Read the fixed schedule and name the next case artifact.",
@@ -1097,15 +1190,15 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 open · 10:15–10:40 recap/clarification · 10:40–11:20 ex1 · 11:20–11:30 break"
+            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:20 exercise 1 · 11:20–11:30 break"
           },
           {
             "title": "Midday",
-            "body": "11:30–12:10 ex2 · 12:10–12:30 coaching on request · 12:30–13:15 lunch"
+            "body": "11:30–12:10 exercise 2 · 12:10–12:30 demo/coaching · 12:30–13:15 lunch"
           },
           {
             "title": "Afternoon",
-            "body": "13:15–14:00 ex3 · 14:00–14:10 break · 14:10–15:00 ex4 · 15:00–15:10 break · 15:10–15:40 ex5 · 15:40–16:00 reflection"
+            "body": "13:15–14:00 exercise 3 · 14:00–14:10 break · 14:10–15:00 exercise 4 · 15:00–15:10 break · 15:10–15:40 exercise 5 · 15:40–16:00 reflection"
           }
         ],
         "prompt": "Read the fixed schedule and name the next handoff artifact.",
@@ -1400,15 +1493,15 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 open · 10:15–10:40 recap/clarification · 10:40–11:20 ex1 · 11:20–11:30 break"
+            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:20 exercise 1 · 11:20–11:30 break"
           },
           {
             "title": "Midday",
-            "body": "11:30–12:10 ex2 · 12:10–12:30 checkpoint on request · 12:30–13:15 lunch"
+            "body": "11:30–12:10 exercise 2 · 12:10–12:30 demo/coaching · 12:30–13:15 lunch"
           },
           {
             "title": "Afternoon",
-            "body": "13:15–14:00 ex3 · 14:00–14:10 break · 14:10–15:00 ex4 · 15:00–15:10 break · 15:10–15:40 ex5 · 15:40–16:00 reflection"
+            "body": "13:15–14:00 exercise 3 · 14:00–14:10 break · 14:10–15:00 exercise 4 · 15:00–15:10 break · 15:10–15:40 exercise 5 · 15:40–16:00 reflection"
           }
         ],
         "prompt": "Read the fixed schedule. Decide who owns each artifact and what evidence will be shown at the final report.",

@@ -14,9 +14,9 @@ The shared six-hour schedule and guided exercises live in:
 
 1. [Day 1 — frame the change](../../days/day-1.md): ledger, PSP settlements,
    bank credits, intent, spec, plan, MOB programming, and the AI-native SDLC.
-2. [Day 2 — make it repeatable](../../days/day-2.md): `CLAUDE.md`, skills,
-   handoffs, independent review, tests versus evaluations, team tools, and
-   conceptual release controls.
+2. [Day 2 — one ticket through the team](../../days/day-2.md): guided FIN-003
+   analyst → developer → tester relay, behavior checks, and individual practice.
+   Context and skills are optional after the reviewed result.
 3. [Day 3 — coached exceptions](../../days/day-3.md): missing and duplicate
    settlement cases with close trainer support.
 4. [Day 4 — reliable repetition](../../days/day-4.md): runbook practice and
@@ -25,13 +25,23 @@ The shared six-hour schedule and guided exercises live in:
    synthetic working-copy variation; baseline IDs are labelled transfer, not
    unseen.
 
-Every session is 10:00–16:00 and totals 360 minutes. Days 1 and 2 are guided:
-the trainer explains and demos each exercise before MOB practice. Day 3 is
-coached on request, Day 4 is peer-led with clarification on request, and Day 5
-starts with individual work before peer review and the final MOB reflection.
-MOBs use 3–5 people on one screen, rotate driver/navigator every 5–7 minutes,
-and end with an observable check and human gate. The driver operates the agent;
-humans make decisions. Use the respectful pause rule.
+## First 90-minute guided reset
+
+For the first visible result in the next session after Day 1, use the [guided
+ticket exercise](guided-ticket-exercise.md) with the [Day 2 guide](../../days/day-2.md).
+Keep the literal task card visible and let the facilitator intervene after five
+minutes of blockage or drift by restating the task, pointing to the source, or
+stopping at the gate. Day 1 is future reusable framing curriculum; this reset
+continues from its concepts without asking the cohort to redo that session.
+
+Each guide has its own 10:00–16:00 agenda; check the current guide for the
+timing. Days 1 and 2 are guided: the trainer explains and demos each exercise
+before MOB practice. Day 3 is coached on request, Day 4 is peer-led with
+clarification on request, and Day 5 starts with individual work before peer
+review and the final MOB reflection. MOBs use 3–4 people on one screen,
+rotate driver/navigator every 5–7 minutes, and end with an observable check and
+human gate. The driver operates the agent; humans make decisions. Use the
+respectful pause rule.
 
 ## Scenario rules
 

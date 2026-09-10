@@ -7,6 +7,14 @@ for its training record; GitHub is not a required workflow. Project keys, URLs,
 custom fields, and account names are deliberately unknown and must be filled
 by the team. This scenario performs no remote operations.
 
+For the first visible result in the next session after Day 1, start with the
+[guided ticket exercise](guided-ticket-exercise.md) and the [Day 2 guide](../../days/day-2.md)
+as a first-90-minute guided reset. Keep the literal task card visible; if the
+group is blocked or drifting for five minutes, the facilitator intervenes by
+restating the task, pointing to the source, or stopping at the gate. Day 1
+remains future reusable framing curriculum; this reset continues from its
+concepts without asking the cohort to redo that session.
+
 Before the exercise, the facilitator records the approved training repository,
 Jira project, Confluence space, and access owner. Never import these files into
 a default production repository or space. If the approved spaces are not

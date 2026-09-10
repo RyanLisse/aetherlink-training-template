@@ -33,10 +33,13 @@ worksheet recalculation and record its actual output.
 Total: **360 minutes**.
 
 Learners work independently first, then use peer review and the final MOB
-reflection. The trainer clarifies only when requested. MOBs remain 3–5 people,
+reflection. The trainer clarifies only when requested. MOBs remain 3–4 people,
 one screen, facilitator/timekeeper, and driver/navigator rotating every 5–7
-minutes; the driver operates the agent. Use the pause rule. The learner owns
-the run; the human gate accepts the evidence. Observable checks are below.
+minutes; the driver operates the agent. Keep the literal task card visible; if
+the group is blocked or drifting for five minutes, the facilitator intervenes by
+restating the task, pointing to the source, or stopping at the gate. Use the
+pause rule. The learner owns the run; the human gate accepts the evidence.
+Observable checks are below.
 
 ## Exercises
 

@@ -1,190 +1,153 @@
-# Day 2 — Make the process repeatable and reviewable
+# Day 2 — Move one ticket through a feedback loop
 
 Guided participant guide. Continue the fictional payment reconciliation from
-[Day 1](day-1.md). Work from the repository root with local fixture files. The
-team's existing GitLab, Jira, and Confluence workflow is the destination model;
-remote actions remain outside this exercise.
+[Day 1](day-1.md), using one narrow ticket:
+[FIN-003 — quarantine duplicate settlement](../scenarios/payment-reconciliation/tickets/FIN-003.md).
+Everything today is a local draft. Do not create or update Jira, GitLab,
+Confluence, or any other remote record.
 
-## Outcome and concepts
+## Outcome and boundary
 
-By 16:00, the cohort has made its context reusable, performed independent
-review, distinguished tests from evaluations, and rehearsed a conceptual
-release gate and handoff. Hooks, CI/CD, and deployment are overview topics.
+By 16:00, each participant can carry one functional requirement from analyst
+statement through developer proposal and tester checks. The group leaves one
+reviewed local packet with source IDs, separate technical additions, and
+positive and negative behavior tests.
 
-The facilitator introduces `CLAUDE.md` as durable repository context, a skill
-as a repeatable procedure, and a handoff as a fresh receiver's starting point.
-An independent review is produced without reading another review. A test asks
-whether a known contract passes; an evaluation asks whether a workflow is
-useful and safe across a defined sample. Neither alone proves production
-readiness. GitLab stores branch/MR evidence, Jira tracks fictional FIN tasks,
-and Confluence stores shared procedure and recap.
+Today's single concept is a feedback loop: each role makes the next role's work
+easier to verify without silently changing behavior. Today's single exercise is
+the [guided FIN-003 ticket relay](../scenarios/payment-reconciliation/guided-ticket-exercise.md).
+The other payment cases are background only; do not classify all five cases.
 
-Use the Day 1 MOB protocol: groups of three to five, one shared task and one
-screen, facilitator/timekeeper, driver and navigator rotating every 5–7
-minutes, agent operator separate from human decision makers, and a respectful
-“pause” rule. Every exercise below includes a human gate and observable check.
+Use only the three local CSV files and the FIN-003 template. No credentials,
+network calls, production data, deployment, recovery claim, payout approval,
+or runtime setup test is in scope. Optional CLAUDE.md or skill drafting starts
+only after the visible ticket result exists.
 
-Plain-language glossary: `CLAUDE.md` is repository context read before work; a
-skill is a reusable procedure; a handoff gives a fresh receiver the current
-state and proof. A merge request (MR) carries reviewed file changes, while a
-resolved financial case still needs source confirmation. Jira tracks work and
-Confluence shares procedures and recaps. A test checks a known contract; an
-evaluation checks usefulness across a defined sample.
+## Phase scope
+
+| Phase | Status and reason |
+|---|---|
+| Plan | IN SCOPE — state the ticket goal, inputs, and exclusions |
+| Design | IN SCOPE — define behavior and separate technical proposals |
+| Build | PROPOSAL ONLY — no product source is changed |
+| Test | IN SCOPE — write local Given/When/Then behavior checks |
+| Deploy | NOT IN SCOPE — this is a fictional local draft |
+| Maintain | NOT IN SCOPE — no runtime or production control is exercised |
 
 ## Schedule — 10:00–16:00 (360 minutes)
 
+The first 90 minutes are guided. The afternoon continues the same packet
+through analyst, developer, and tester passes; these are parts of one exercise.
+
 | Time | Minutes | Activity |
 |---|---:|---|
-| 10:00–10:15 | 15 | Opening, Day 1 handoff readback |
-| 10:15–10:40 | 25 | Concept recap/demo: context, skills, handoffs, review |
-| 10:40–11:20 | 40 | Exercise 1: make context reusable |
-| 11:20–11:30 | 10 | Break |
-| 11:30–12:10 | 40 | Exercise 2: independent review and tests versus evals |
-| 12:10–12:30 | 20 | Trainer demo and coaching: evidence and release controls |
-| 12:30–13:15 | 45 | Lunch |
-| 13:15–14:00 | 45 | Exercise 3: peer handoff through team tools |
-| 14:00–14:10 | 10 | Break |
-| 14:10–15:00 | 50 | Exercise 4: conceptual release gate and rollback |
-| 15:00–15:10 | 10 | Break |
-| 15:10–15:40 | 30 | Exercise 5: recap, metric, and teach-back |
-| 15:40–16:00 | 20 | Individual check-in and MOB reflection |
+| 10:00–10:05 | 5 | State goal and inspect worked example |
+| 10:05–10:15 | 10 | Trainer demo: requirement → evidence → check |
+| 10:15–10:35 | 20 | Guided FIN-003 read |
+| 10:35–10:55 | 20 | Group analyst acceptance statement |
+| 10:55–11:10 | 15 | Review source IDs and wording |
+| 11:10–11:25 | 15 | Individual rewrite and check selection |
+| 11:25–11:30 | 5 | Recap packet and next role |
+| 11:30–11:40 | 10 | Break |
+| 11:40–12:20 | 40 | Analyst pass: facts, scope, acceptance |
+| 12:20–13:00 | 40 | Developer pass: local proposal, technical additions |
+| 13:00–13:45 | 45 | Lunch |
+| 13:45–14:25 | 40 | Tester pass: positive and negative behavior tests |
+| 14:25–14:35 | 10 | Break |
+| 14:35–15:15 | 40 | Cross-role review of the same packet |
+| 15:15–15:25 | 10 | Break |
+| 15:25–15:45 | 20 | Handoff and optional context/skill note |
+| 15:45–16:00 | 15 | Made / learned / can do close |
 
-Total: **360 minutes**.
+Total: **360 minutes**. Work in groups of three or four people on one screen. Rotate
+analyst, developer, tester, reviewer/scribe, driver, and navigator at each pass;
+with three people the facilitator/timekeeper also holds review notes. Rotate
+driver and navigator every 5–7 minutes. The driver operates the agent; people
+make decisions together.
 
-Opening Kahoot/wordcloud prompt: “Which claim from Day 1 can you reproduce,
-and what is still OPEN?” Ask each group to name one missing source or human
-decision and one blocker, without proposing a production solution.
+Only the navigator gives the driver the next instruction. Other participants
+share observations with the navigator; the driver repeats the instruction
+before acting. Anyone can call a pause.
 
-## Exercise 1 — Reusable context (40 minutes)
+## First 90 minutes
 
-Trainer explains what belongs in repository context versus a one-off prompt,
-then demos a minimal `CLAUDE.md` and skill outline. MOB: rotate
-driver/navigator twice; remove secrets, client claims, and stale answers.
-Observable check: a new operator can find cutoff, scope, commands, and evidence
-rule in under two minutes.
+Read the assignment card in the [exercise guide](../scenarios/payment-reconciliation/guided-ticket-exercise.md).
+The trainer shows its worked example and demonstrates one source row becoming
+an acceptance statement and then a behavior check. This is the only concept
+explanation before group work.
 
-```text
-Read the accepted Day 1 intent, spec, plan, and handoff. Draft a minimal local
-CLAUDE.md section and lab-notes/payment-reconciliation-skill.md for this
-fictional fixture. State context, inputs, cutoff, duplicate rule, exact
-scenario-directory validation command, evidence minimum, and human gates.
-Keep team URLs OPEN, add no secrets or production policy, and do not edit CSVs.
-Explain why each item belongs in context or in the procedure.
-```
+In the 10:00–10:05 goal block, ask the Kahoot question “What must remain true
+when a payment row is duplicated?” and collect one word-cloud blocker. If those
+tools are unavailable, capture the same two answers on the shared board.
 
-Output: context and skill drafts. Human gate: facilitator approves each
-instruction as current, scoped, and reproducible before reuse.
+The group drafts only the analyst section before 11:30. Check:
 
-## Exercise 2 — Independent review and tests versus evaluations (40 minutes)
+1. SET-1003-A and SET-1003-B are both cited and remain visible.
+2. The wording preserves UNRESOLVED and does not approve a payout.
+3. A tester can derive one passing and one failing behavior.
 
-Trainer explains the difference with one arithmetic test and one usefulness
-evaluation, then demos two clean read-only review contexts. MOB: split into
-arithmetic and scope reviewers, rotate driver/navigator within each, and submit
-findings separately. Observable check: both reviews cite source IDs and neither
-relies on the other review.
+The facilitator accepts the wording or records an exact open question before
+the developer pass. An individual may restate the requirement in their own
+words; an answer key is not evidence of a learner run.
 
-```text
-Review the Day 1 evidence independently in read-only mode. Review A checks
-identifiers, fee/net arithmetic, duplicate quarantine, and batch totals. Review
-B checks cutoff semantics, exactly five case IDs, fixture-only scope, and
-reproducibility. Do not read another review before writing yours. Return PASS
-or BLOCKED with source IDs and exact steps. Explain which checks are contract
-tests and which are workflow evaluations.
-```
+## One exercise: FIN-003 ticket relay
 
-Output: `lab-notes/review-arithmetic.md` and `lab-notes/review-scope.md`.
-Human gate: a named reviewer compares them and records disagreements without
-silently rewriting evidence.
+Use the assignment card, worked example, literal prompts, and tests in the
+[guided ticket exercise](../scenarios/payment-reconciliation/guided-ticket-exercise.md).
+Append to one local packet rather than rewriting the ticket at each handoff.
 
-## Exercise 3 — Peer handoff in team tools (45 minutes)
+| Pass | Preserve | Add | Human gate |
+|---|---|---|---|
+| Analyst | User-visible duplicate behavior, source IDs, status | Acceptance wording and open policy questions | Facilitator accepts scope |
+| Developer | Every accepted analyst behavior | Small local implementation sketch and technical additions | Analyst confirms behavior is intact |
+| Tester | Requirement and source facts | Positive/negative behavior tests and result state | Tester marks PASS, FAIL, or OPEN |
 
-Trainer explains the GitLab → Jira → Confluence relationship and demos a local
-MR body, Jira field set, and Confluence outline with `OPEN` links. MOB: rotate
-driver/navigator twice; simulate a receiver opening each artifact. Observable
-check: the receiver traces one case from source row to finding and owner.
+Label field names, grouping keys, storage/API choices, ordering, and logging as
+Technical addition — proposal after the functional requirement. A technical
+choice cannot change visible rows, status, arithmetic, or human confirmation.
+If it would change behavior, park it as a policy question.
 
-```text
-Prepare local drafts only from the Day 1 evidence and independent reviews:
-(1) a GitLab MR title/body with branch, revision, output, source IDs, and
-reviewer slots; (2) Jira fields for FIN-001 and relevant FIN-002–FIN-006; and
-(3) Confluence Intent, Spec, Runbook, Recap, Knowledge, and Handoff headings.
-Use OPEN for unknown keys, URLs, approvals, and statuses. Do not call remote
-services or claim publication.
-```
+The positive test expects both duplicate IDs visible, provisional unique net
+24,010, raw net 43,610, and batch status UNRESOLVED. Negative tests fail
+silent deletion, hidden rows, double counting, or payout approval. A single
+normal settlement can be a boundary check; no other FIN ticket is required.
 
-Output: `lab-notes/team-handoff-day-2.md` containing three local drafts. Human
-gate: evidence owner checks every link, status, and owner against local files.
+## Five-minute intervention and parking rule
 
-## Exercise 4 — Conceptual release control (50 minutes)
+The facilitator may spend up to five minutes clarifying source, wording, or
+role boundaries. If a question needs longer, introduces policy, or expands the
+ticket, write it under Open questions / parked and continue. Return to it in
+cross-role review. Do not guess, and do not publish private learner feedback.
 
-Trainer explains approval gates, hooks, CI/CD, and rollback as concepts, then
-demos a gate decision table. MOB: rotate driver/navigator every 5–7 minutes;
-test the gate against a deliberate missing-source-ID case. Observable check:
-participants can explain why a local rehearsal is not deployment evidence.
+## Handoff and close
 
-```text
-Design a conceptual gate for this local package. Require unchanged CSVs,
-passing identifier/arithmetic checks, visible duplicate quarantine, exactly
-five documented cases, two independent reviews, and named human acceptance.
-Include a BLOCKED example, exact missing evidence, and rollback: discard the
-local package and restore the prior worksheet. Label hooks, CI/CD, deployment,
-and enforcement as conceptual; do not deploy or publish.
-```
+At 15:25, assemble lab-notes/day-2/FIN-003-ticket-packet.md with the
+assignment, analyst statement, developer proposal, separate technical
+additions, tester checks/results, source IDs, exact commands actually run,
+reviewer placeholder, and open questions. Use OPEN for unknown links,
+decisions, and unrun checks. The optional context/skill note follows the
+visible result and is not required for today's gate.
 
-Output: `lab-notes/release-gate-day-2.md` and local handoff package. Human gate:
-release owner accepts or blocks the rehearsal with reasons and revision.
+Close with one sentence each:
 
-## Exercise 5 — Metrics, recap, and teach-back (30 minutes)
+- **Made:** what changed in the FIN-003 packet.
+- **Learned:** which handoff or source check caught an assumption.
+- **Can do:** the next ticket step that can be reproduced independently.
 
-Trainer explains leading versus lagging metrics and demos one tied to the
-evidence log. MOB: rotate driver/navigator once; check that counts come from
-observed rows, not invented thresholds. Observable check: a colleague retells
-intent → spec → plan → evidence → review → handoff and names the next gate.
+Each person also rates the next step as **independent**, **with help**, or
+**needs practice**, and names the evidence for that rating. In the MOB
+reflection, revisit the opening blocker and state which role rotation or prompt
+change helped. Record only agreed group learning in a local recap; keep personal
+feedback private. Carry the reviewed packet into Day 3.
 
-```text
-Using only observed local evidence, draft lab-notes/day-2-recap.md and a
-follow-up intent. Define one leading metric, give its count only if supported,
-list five case IDs, reviewer decision, open actions, next human gate, and a
-two-minute teach-back. Do not claim production monitoring, recovery, or
-publication.
-```
+## Source map and facilitator notes
 
-Output: recap, follow-up intent, and teach-back notes. Human gate: facilitator
-accepts the recap or records OPEN items for Day 3.
+Use [Feedback loop](https://academy.claude.com/courses/ai-native-sdlc-playbook/give-claude-a-feedback-loop)
+for the concept and [AI in the PR review loop](https://academy.claude.com/courses/ai-native-sdlc-playbook/ai-in-the-pr-review-loop)
+for handoff discussion. CLAUDE.md and skills are optional follow-up reading.
 
-## Check-in and reflection
-
-Individually answer: “Which instruction made the work repeatable, and which
-decision still requires a human?” Name one test, one evaluation, and one
-release control that remains conceptual. Carry the open case and evidence chain
-into Day 3. Closing check-in prompt: “Which finding can your colleague
-reproduce, and what remains uncertain?”
-
-## Day 2 source map
-
-Canonical URLs retained from the existing guide. Text was checked; no video or
-audio is claimed as watched.
-
-| Lesson | Use |
-|---|---|
-| [CLAUDE.md](https://academy.claude.com/courses/ai-native-sdlc-playbook/claude-md) | Exercise 1 |
-| [Skills as institutional knowledge](https://academy.claude.com/courses/ai-native-sdlc-playbook/skills-as-institutional-knowledge) | Exercise 1 |
-| [Parallel sessions and subagents](https://academy.claude.com/courses/ai-native-sdlc-playbook/parallel-sessions-and-subagents) | Exercise 2 overview |
-| [Feedback loop](https://academy.claude.com/courses/ai-native-sdlc-playbook/give-claude-a-feedback-loop) | Exercise 2 |
-| [Continuous evals in CI](https://academy.claude.com/courses/ai-native-sdlc-playbook/continuous-evals-in-ci) | Exercise 2 |
-| [AI in the PR review loop](https://academy.claude.com/courses/ai-native-sdlc-playbook/ai-in-the-pr-review-loop) | Exercise 2/3 |
-| [Hooks as approval gates](https://academy.claude.com/courses/ai-native-sdlc-playbook/hooks-as-approval-gates) | Exercise 4 conceptual |
-| [CI/CD integration and deployment](https://academy.claude.com/courses/ai-native-sdlc-playbook/ci-cd-integration-and-deployment) | Exercise 4 conceptual |
-| [Closing the loop on metrics](https://academy.claude.com/courses/ai-native-sdlc-playbook/closing-the-loop-on-metrics) | Exercise 5 |
-| [Closing thoughts and resources](https://academy.claude.com/courses/ai-native-sdlc-playbook/closing-thoughts-and-resources) | Close |
-
-Further reading remains the [course overview](https://academy.claude.com/courses/ai-native-sdlc-playbook).
-
-## Facilitator notes (Nederlands)
-
-Laat eerst het Day 1-handoff opnieuw bewijzen. Houd `CLAUDE.md`, skills en
-handoffs klein en praktisch; leg uit dat een MR-documentatie kan dragen zonder
-dat een financieel geval opgelost is. Laat onafhankelijke reviews echt apart
-ontstaan. Benoem dat tests en evaluaties verschillende vragen beantwoorden en
-dat hooks, CI/CD en deployment vandaag conceptueel blijven. Gebruik “pauze” om
-claims terug te brengen naar bron, commando en menselijke beslissing.
+Facilitator: houd de groep bij FIN-003; laat analyst, developer en tester
+hetzelfde ticket doorgeven; label technische ideeën apart; roteer rollen in
+groepen van drie of vier mensen; parkeer langere vragen na vijf minuten; sluit af met
+gemaakt, geleerd, kan nu. Do not claim runtime setup or external workflow
+testing.

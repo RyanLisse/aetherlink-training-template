@@ -2,6 +2,17 @@
 
 This small repository helps a cohort run a repeatable human-agent learning loop. It is a reusable template: files with `TEMPLATE` in the title contain prompts and empty fields, while files under `examples/` are explicitly fictional worked examples. Do not copy an example as evidence for a live session.
 
+## Start with the first visible result
+
+For the next session after Day 1, use the [guided ticket exercise](scenarios/payment-reconciliation/guided-ticket-exercise.md)
+and the revised [Day 2 guide](days/day-2.md). Together they provide a guided
+first-90-minute reset that ends in a reviewable local result. Keep the literal
+task card visible; if the group is blocked or drifting for five minutes, the
+facilitator intervenes by restating the task, pointing to the source, or
+stopping at the gate. [Day 1](days/day-1.md) remains future reusable curriculum
+for framing; this reset continues from its concepts without asking the cohort
+to redo that session.
+
 ## Guided training sessions · 10:00–16:00
 
 Start with the [five-session programme](days/README.md). Each session is six
@@ -11,20 +22,23 @@ instructions, copy-ready prompts, expected outputs, human gates, and reflection.
 | Day | Focus | Participant workbook | Interactive presentation |
 | --- | --- | --- | --- |
 | 1 | Guided: intent, spec, plan, MOB, AI-native SDLC | [Day 1](days/day-1.md) | [Present day 1](https://aetherlink-training.ryanlisse.chatgpt.site/?day=1#1) |
-| 2 | Guided: context, skills, review, team workflow, release concepts | [Day 2](days/day-2.md) | [Present day 2](https://aetherlink-training.ryanlisse.chatgpt.site/?day=2#1) |
+| 2 | Guided: one FIN-003 ticket, role relay, behavior checks, individual practice | [Day 2](days/day-2.md) | [Present day 2](https://aetherlink-training.ryanlisse.chatgpt.site/?day=2#1) |
 | 3 | Coached: missing and duplicate cases | [Day 3](days/day-3.md) | [Present day 3](https://aetherlink-training.ryanlisse.chatgpt.site/?day=3#1) |
 | 4 | Peer-led: repeatable runbook and knowledge handoff | [Day 4](days/day-4.md) | [Present day 4](https://aetherlink-training.ryanlisse.chatgpt.site/?day=4#1) |
 | 5 | Independent transfer: declared synthetic variation | [Day 5](days/day-5.md) | [Present day 5](https://aetherlink-training.ryanlisse.chatgpt.site/?day=5#1) |
 
 Presentation access is managed separately through ChatGPT sign-in. The workbooks and [fictional Python training lab](training-lab/README.md) are available in this public repository. Releases and monitoring in the lab are local rehearsals with synthetic data, not production operations.
 
-Keep the root `intent.md` for the training outcome; exercise artifacts live in `lab-notes/`. Leave supplied tests intact and implement the exercise in your own template copy. The SDLC is a loop: return to an earlier phase whenever evidence changes the plan.
+Keep the root `CLAUDE.md` imports and the root `intent.md` for the training
+outcome; exercise artifacts live in `lab-notes/`. Leave supplied tests intact
+and implement the exercise in your own template copy. The SDLC is a loop:
+return to an earlier phase whenever evidence changes the plan.
 
 ## Scenario and training tickets
 
 The optional [Northstar Demo Support Desk scenario](scenarios/status-desk/README.md) remains available for a support cohort. The primary payment operations track uses the payment scenario below; do not mix tracks during a run.
 
-For payment operations teams, use the [payment reconciliation scenario](scenarios/payment-reconciliation/README.md) across all five sessions. Compare a transaction ledger, PSP settlements, and bank credits; investigate exceptions and hand over an evidence-backed action list. This is a fictional training model, not a description of Worldline systems or policies.
+For payment operations teams, use the [payment reconciliation scenario](scenarios/payment-reconciliation/README.md) across the reusable session sequence. Compare a transaction ledger, PSP settlements, and bank credits; investigate exceptions and hand over an evidence-backed action list. This is a fictional training model, not a description of Worldline systems or policies.
 
 The payment operations track uses the team's existing **GitLab, Jira, and Confluence** workflow. GitLab holds versioned files and merge-request review, Jira tracks investigations, and Confluence holds shared procedures and recaps. See the [team workflow](scenarios/payment-reconciliation/workflow.md). This public GitHub repository distributes the template; it does not require the team to move to GitHub.
 
@@ -64,6 +78,7 @@ Reserve five minutes for a teach-back or demo of the lesson. Name the audience a
 
 | Path | Use |
 | --- | --- |
+| [CLAUDE.md](CLAUDE.md) | Explicit imports for project context and contribution rules |
 | [AGENTS.md](AGENTS.md) | Lean operating instructions for contributors and agents |
 | [LICENSE](LICENSE) | Public MIT license for the original template content |
 | [intent.md](intent.md) | Series outcome, today's boundaries, owners, and evidence contract |

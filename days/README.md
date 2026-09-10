@@ -1,34 +1,42 @@
 # Five session guides
 
 This public-safe programme adapts the AI-native SDLC playbook to a fictional
-payment reconciliation exercise. It runs five sessions, each 10:00–16:00,
-with the same exact 360-minute schedule. Videos and audio were not watched or
+payment reconciliation exercise. It runs five sessions, each with its own
+10:00–16:00 agenda. Follow the current guide for the timing; Day 2 includes a
+revised first-90-minute guided reset. Videos and audio were not watched or
 listened to; source URLs are preserved in the first two guides.
 
 ## Progression
 
 1. [Day 1](day-1.md) — guided framing: ledger/PSP/bank concepts, agent
    context, intent, spec, plan, MOB programming, SDLC loop, and evidence.
-2. [Day 2](day-2.md) — guided repeatability: `CLAUDE.md`, skills, handoffs,
-   independent review, tests versus evaluations, GitLab/Jira/Confluence, and
-   conceptual release controls.
+2. [Day 2](day-2.md) — guided FIN-003 ticket relay: one visible result,
+   analyst → developer → tester, behavior checks, and individual practice.
+   Context and skills are optional after the reviewed result.
 3. [Day 3](day-3.md) — coached missing and duplicate settlement cases.
 4. [Day 4](day-4.md) — peer-led repeatable runbook and knowledge handoff.
 5. [Day 5](day-5.md) — independent transfer to a declared synthetic variation.
 
-Days 1 and 2 explain all concepts needed for the practice. Later sessions use
-the same vocabulary and rules with graduated support; no new concepts are
-required. The primary scenario is [payment reconciliation](../scenarios/payment-reconciliation/README.md).
+For the first visible result in the next session after Day 1, use the [guided
+ticket exercise](../scenarios/payment-reconciliation/guided-ticket-exercise.md)
+with the [Day 2 guide](day-2.md) as a first-90-minute guided reset. Day 1 is
+future reusable framing curriculum; this reset continues from its concepts
+without asking the cohort to redo that session. Later sessions use the same
+vocabulary and rules with graduated support; follow each guide's current
+agenda. The primary scenario is [payment reconciliation](../scenarios/payment-reconciliation/README.md).
 
 ## Shared MOB and evidence rule
 
-Work in groups of three to five on one screen and one shared task. Name a
-facilitator/timekeeper and reviewer. Rotate driver and navigator every 5–7
-minutes. The driver operates the agent, while humans decide scope and gates.
-Anyone may say “pause” to restate the source, assumption, or decision. Every
-exercise has a trainer explanation or clarification, a literal prompt, an
-observable check, and a human gate. Record actual commands, source IDs,
-revision, and open questions; use `OPEN` for unavailable team links.
+Work in groups of three to four on one screen and one shared task. Keep the
+literal task card visible. Name a facilitator/timekeeper and reviewer. Rotate
+driver and navigator every 5–7 minutes. If the group is blocked or drifting for
+five minutes, the facilitator intervenes by restating the task, pointing to the
+source, or stopping at the gate. The driver operates the agent, while humans
+decide scope and gates. Anyone may say “pause” to restate the source,
+assumption, or decision. Every exercise has a trainer explanation or
+clarification, a literal prompt, an observable check, and a human gate. Record
+actual commands, source IDs, revision, and open questions; use `OPEN` for
+unavailable team links.
 
 ## Setup
 

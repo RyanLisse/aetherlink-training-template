@@ -24,10 +24,13 @@ session increases practice while introducing no new concepts.
 Total: **360 minutes**.
 
 For every exercise, the trainer gives a short clarification and demonstrates a
-small step only when requested. MOBs have 3–5 people, one screen,
-facilitator/timekeeper, and driver/navigator rotating every 5–7 minutes. The
-driver operates the agent; the group remains accountable. Use the respectful
-pause rule. Each check is observable and has a human gate.
+small step only when requested. MOBs have 3–4 people, one screen,
+facilitator/timekeeper, and driver/navigator rotating every 5–7 minutes. Keep
+the literal task card visible; if the group is blocked or drifting for five
+minutes, the facilitator intervenes by restating the task, pointing to the
+source, or stopping at the gate. The driver operates the agent; the group
+remains accountable. Use the respectful pause rule. Each check is observable
+and has a human gate.
 
 ## Exercises
 

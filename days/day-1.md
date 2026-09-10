@@ -30,10 +30,13 @@ decisions. `intent.md` states why and what success means, a spec states the
 contract, and a plan states the smallest ordered change and its proof.
 
 MOB programming means one shared task, one screen, and a small group of three
-to five. The facilitator is timekeeper and pause point; rotate driver and
-navigator every 5–7 minutes, with a reviewer/scribe as needed. The agent is
-never the human driver: one participant operates the agent, while the group
-thinks aloud. Anyone may say “pause” to restate the question, source, or gate.
+to four. Keep the literal task card visible. The facilitator is timekeeper and
+pause point; if the group is blocked or drifting for five minutes, intervene by
+restating the task, pointing to the source, or stopping at the gate. Rotate
+driver and navigator every 5–7 minutes, with a reviewer/scribe as needed. The
+agent is never the human driver: one participant operates the agent, while the
+group thinks aloud. Anyone may say “pause” to restate the question, source, or
+gate.
 
 Plain-language glossary: the ledger is the merchant's expected transaction
 record; a PSP settlement is the payment-provider payout row; a bank credit is

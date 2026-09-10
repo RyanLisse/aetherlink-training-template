@@ -24,10 +24,12 @@ the trainer coaches the method, while each learner owns a repeatable runbook.
 Total: **360 minutes**.
 
 The trainer gives a clarification or short demo only when requested; exercises
-are peer-led. MOBs are 3–5 people on one screen; facilitator/timekeeper and
+are peer-led. MOBs are 3–4 people on one screen; facilitator/timekeeper and
 reviewer are named, driver/navigator rotate every 5–7 minutes, and the driver
-operates the agent. Pause to surface an assumption. Each check is observable
-and has a human gate.
+operates the agent. Keep the literal task card visible; if the group is blocked
+or drifting for five minutes, the facilitator intervenes by restating the task,
+pointing to the source, or stopping at the gate. Pause to surface an
+assumption. Each check is observable and has a human gate.
 
 ## Exercises
 
