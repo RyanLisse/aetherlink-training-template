@@ -3,8 +3,8 @@
 This public-safe programme adapts the AI-native SDLC playbook to a fictional
 payment reconciliation exercise. It runs five sessions, each with its own
 10:00–16:00 agenda with lunch fixed at 12:00–13:00. Follow the current guide for the timing; Day 2 includes a
-revised first-90-minute guided reset and Day 3 starts with a guided individual
-opening before coached MOB practice. Videos and audio were not watched or
+revised n8n-first morning and Claude Code rebuild after lunch. Day 3 uses the
+same sequence with a guided individual opening before comparison. Videos and audio were not watched or
 listened to; source URLs are preserved in the first two guides.
 
 ## Delivery tracks
@@ -22,8 +22,8 @@ is available. No crew 2 outcome or access is implied by crew 1 material.
 2. [Day 2](day-2.md) — guided FIN-003 ticket relay: one visible result,
    analyst → developer → tester, behavior checks, and individual practice.
    Context and skills are optional after the reviewed result.
-3. [Day 3](day-3.md) — guided individual bounded-subagent practice, then
-   coached missing and duplicate settlement cases.
+3. [Day 3](day-3.md) — build the same bounded agent in n8n, then Claude Code;
+   compare `TICKET-OPS-101` and transfer to `102` after the human gate.
 4. [Day 4](day-4.md) — peer-led repeatable runbook and knowledge handoff.
 5. [Day 5](day-5.md) — independent transfer to a declared synthetic variation.
 
@@ -34,7 +34,8 @@ future reusable framing curriculum; this reset continues from its concepts
 without asking the cohort to redo that session. Later sessions use the same
 vocabulary and rules with graduated support; follow each guide's current
 agenda. The primary scenario is [payment reconciliation](../scenarios/payment-reconciliation/README.md).
-Day 3's starter, `ticket-inputs.md`, `ticket-template.md` handout,
+Day 3's participant workspace is the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab).
+The trainer workbook's starter, `ticket-inputs.md`, `ticket-template.md` handout,
 `target-examples.md`, and `check_ticket.py` are defined in the [ticket-agent
 pack](../scenarios/ticket-agent/README.md). Its two input/target pairs are
 `TICKET-OPS-101`/Worked target A and `TICKET-OPS-102`/Worked target B. Treat

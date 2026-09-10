@@ -28,11 +28,11 @@ gates, and reflection. For crew 2, use its separate plan linked above.
 | --- | --- | --- | --- |
 | 1 | Guided: intent, spec, plan, MOB, AI-native SDLC | [Day 1](days/day-1.md) | [Present day 1](https://aetherlink-training.ryanlisse.chatgpt.site/?day=1#1) |
 | 2 | Guided: one FIN-003 ticket, role relay, behavior checks, individual practice | [Day 2](days/day-2.md) | [Present day 2](https://aetherlink-training.ryanlisse.chatgpt.site/?day=2#1) |
-| 3 | Guided individual bounded-agent practice, then coached missing and duplicate cases | [Day 3](days/day-3.md) | [Present day 3](https://aetherlink-training.ryanlisse.chatgpt.site/?day=3#1) |
+| 3 | Guided: build the same bounded agent in n8n, then Claude Code; compare `TICKET-OPS-101`, transfer `102` after the gate | [Day 3](days/day-3.md) | [Present day 3](https://aetherlink-training.ryanlisse.chatgpt.site/?day=3#1) |
 | 4 | Peer-led: repeatable runbook and knowledge handoff | [Day 4](days/day-4.md) | [Present day 4](https://aetherlink-training.ryanlisse.chatgpt.site/?day=4#1) |
 | 5 | Independent transfer: declared synthetic variation | [Day 5](days/day-5.md) | [Present day 5](https://aetherlink-training.ryanlisse.chatgpt.site/?day=5#1) |
 
-Presentation access is managed separately through ChatGPT sign-in. The workbooks and [fictional Python training lab](training-lab/README.md) are available in this public repository. Releases and monitoring in the lab are local rehearsals with synthetic data, not production operations.
+The interactive presentation site is public. The workbooks and [fictional Python training lab](training-lab/README.md) are available in this public repository. Releases and monitoring in the lab are local rehearsals with synthetic data, not production operations.
 
 Keep the root `CLAUDE.md` imports and the root `intent.md` for the training
 outcome; exercise artifacts live in `lab-notes/`. Leave supplied tests intact
@@ -47,7 +47,8 @@ For payment operations teams, use the [payment reconciliation scenario](scenario
 
 The payment operations track uses the team's existing **GitLab, Jira, and Confluence** workflow. GitLab holds versioned files and merge-request review, Jira tracks investigations, and Confluence holds shared procedures and recaps. See the [team workflow](scenarios/payment-reconciliation/workflow.md). This public GitHub repository distributes the template; it does not require the team to move to GitHub.
 
-Day 3's bounded-agent starter, two inputs, target artifacts, handout, and
+Day 3's participant workspace is the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab).
+The course's bounded-agent starter, two inputs, target artifacts, handout, and
 checker are defined in the [ticket-agent pack](scenarios/ticket-agent/README.md).
 Run its preflight in the same environment and rights as participants before
 describing the exercise as available. Its two input/target pairs are

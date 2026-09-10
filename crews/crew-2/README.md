@@ -8,9 +8,11 @@ This directory is a new five-day track for a later crew. It starts after crew
 existing guides remain crew 1 source material; they are not learner results,
 approval, or evidence that a team ran the sessions.
 
-Crew 2 uses the fictional Northstar payment reconciliation scenario and the
-new [ticket-coach exercise](../../scenarios/ticket-agent/README.md). The
-scenario is local, synthetic, and read-only. Do not add real payment data,
+Crew 2 participants use the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab)
+root repository for the n8n-first and Claude Code rebuild exercises. Trainers
+use the fictional Northstar payment reconciliation scenario and the
+[ticket-coach workbook](../../scenarios/ticket-agent/README.md), which remains
+course reference material. The scenario is local, synthetic, and read-only. Do not add real payment data,
 credentials, customer details, production claims, or remote tickets. The
 team's real GitLab, Jira, and Confluence destinations, access, and ticket IDs
 must be supplied and approved by the team before any workflow rehearsal is
@@ -39,7 +41,7 @@ questions as `OPEN`.
 | Day | Mode | New focus | Visible learner artifact |
 | --- | --- | --- | --- |
 | 1 | Fully guided | One small result on each learner's own laptop | One-row evidence card for a payment case |
-| 2 | Fully guided | A bounded ticket-coach agent and one instruction edit | Two ticket-coach runs with the edit visible |
+| 2 | Fully guided | Same bounded agent in n8n then Claude Code; compare `TICKET-OPS-101` before `102` transfer | Two same-input previews and gated transfer |
 | 3 | Coached | Analyst → developer → tester relay on the same FIN-003 ticket | One role-preserving ticket packet |
 | 4 | Peer-led | Runbook and shared-skill handoff in mock GitLab/Jira/Confluence workflow | Peer-runnable runbook and handoff drafts |
 | 5 | Independent | Transfer with unchanged copied data and cutoff `2026-09-13` | Recalculated cutoff-only variation and acceptance note |
@@ -97,7 +99,8 @@ policy.
 The presentation data lives in [presentations.json](presentations.json). The
 JSON is intentionally separate from the existing crew 1
 [day-decks.json](../../presentations/day-decks.json); the old deck is
-preserved unchanged.
+preserved as trainer material. Both decks point learners to the lab root and
+keep workbook links for trainers.
 
 ## Preflight before a future run
 

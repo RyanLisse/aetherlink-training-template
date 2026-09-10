@@ -268,8 +268,9 @@
     ]
   },
   "day2": {
-    "title": "Crew 2 Day 2 — bounded ticket-coach agent",
+    "title": "Crew 2 Day 2 — same agent in n8n, then Claude Code",
     "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-2.md",
+    "participantRepo": "https://github.com/RyanLisse/aetherlink-agent-lab",
     "slides": [
       {
         "title": "What is an agent?",
@@ -368,11 +369,11 @@
       {
         "title": "Bound the coach",
         "kicker": "DAY OUTCOME · BEFORE THE DEMO",
-        "subtitle": "First preview one ticket; after lunch edit one instruction and rerun",
+        "subtitle": "Build n8n first; rebuild the same agent in Claude Code after lunch",
         "cards": [
           {
             "title": "Outcome",
-            "body": "Two same-input TICKET-OPS-101 previews"
+            "body": "Same TICKET-OPS-101 agent built in n8n and Claude Code"
           },
           {
             "title": "Mode",
@@ -380,19 +381,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Starter Read, Glob, Grep only; no writes or network"
+            "body": "Same functional prompt and output contract; no business-system writes"
           }
         ],
-        "prompt": "Open the ticket-agent guide and Day 2. Run Kahoot and wordcloud, copy the actual starter agent, state the allow-list, and capture blockers or missing guide access as OPEN.",
-        "notes": "If the new guide is not present, keep the exercise OPEN and dry-run the task card. This slide describes the day outcome, not the 10:10 demo task. Demo is 10:10–10:15; edit and rerun is 13:20–14:05.",
+        "prompt": "Open the participant lab root README and trainer workbook. Run Kahoot and wordcloud, state the shared input/output contract, and capture n8n or Claude Code access blockers as OPEN.",
+        "notes": "This slide describes the day outcome. n8n runs first in the morning; Claude Code rebuilds the same agent in the afternoon.",
         "dark": true,
         "steps": [
           "Run Kahoot + wordcloud.",
-          "Read the allow-list.",
+          "Read the shared contract.",
           "Record OPEN dependencies."
         ],
         "expected": "A shared preview-only boundary.",
-        "check": "No remote ticket or agent approval is implied."
+        "check": "No business-system write or agent approval is implied."
       },
       {
         "title": "Day 2 route",
@@ -401,19 +402,19 @@
         "cards": [
           {
             "title": "Theory + build",
-            "body": "10:00–10:10 agent recap · 10:10–10:15 demo · 10:15–10:40 individual 25 · 10:40–11:00 review · 11:00–11:10 break"
+            "body": "10:00–10:10 theory · 10:10–10:20 n8n demo · 10:20–10:45 individual n8n 25 · 10:45–11:00 review · 11:00–11:10 break"
           },
           {
             "title": "Midday",
-            "body": "11:10–12:00 group practice · 12:00–13:00 lunch · 13:00–13:20 check · 13:20–14:05 edit/rerun"
+            "body": "11:10–11:45 n8n evidence · 11:45–12:00 gate · 12:00–13:00 lunch · 13:00–13:10 Claude Code demo · 13:10–13:35 individual Claude Code 25 · 13:35–13:50 review"
           },
           {
             "title": "Afternoon",
-            "body": "14:05–14:15 break · 14:15–15:05 transfer · 15:05–15:15 break · 15:15–15:45 handoff · 15:45–16 close"
+            "body": "13:50–14:00 break · 14:00–14:30 same-input comparison · 14:30–14:45 gated 102 transfer · 14:45–15:00 break · 15:00–15:40 handoff · 15:40–16:00 close"
           }
         ],
-        "prompt": "Read every timebox aloud: 10:00–10:10 theory; 10:10–10:15 demo; 10:15–10:40 individual; 10:40–11:00 review; 11:00–11:10 break; 11:10–12:00 practice; 12:00–13:00 lunch; 13:00–13:20 check; 13:20–14:05 edit/rerun; 14:05–14:15 break; 14:15–15:05 transfer; 15:05–15:15 break; 15:15–15:45 handoff; 15:45–16:00 close.",
-        "notes": "Keep this agenda visible. Every learner gets the 25-minute individual attempt before group work.",
+        "prompt": "Read every timebox aloud: theory before either build; n8n demo and 25-minute individual run in the morning; lunch 12:00–13:00; Claude Code rebuild and 25-minute individual run in the afternoon; same-input comparison before any TICKET-OPS-102 transfer.",
+        "notes": "Keep this agenda visible. Both platform runs get individual own-laptop time and use the same functional prompt and contract.",
         "dark": false,
         "steps": [
           "Read the blocks.",
@@ -424,199 +425,289 @@
         "check": "The agenda includes all four breaks or meal boundaries and every required block."
       },
       {
-        "title": "Preview-only demo",
-        "kicker": "DEMO · 10:10–10:15",
-        "subtitle": "The coach reads and reports",
+        "title": "n8n demo · bounded preview",
+        "kicker": "DEMO · 10:10–10:20",
+        "subtitle": "Build with approved workflow access and the shared contract",
         "cards": [
           {
             "title": "Input",
-            "body": "TICKET-OPS-101 from ticket-inputs.md"
+            "body": "Supplied TICKET-OPS-101 input from the participant lab"
           },
           {
             "title": "Return",
-            "body": "Template draft, evidence, questions, next action"
+            "body": "Shared ticket output contract, citations, OPENs, human gate"
           },
           {
             "title": "Stop",
-            "body": "Read + Glob + Grep; no writes or remote calls"
+            "body": "Approved login; no business-system writes or financial approval"
           }
         ],
-        "prompt": "Copy and invoke the actual ticket-coach starter. Read ticket-inputs.md and use TICKET-OPS-101; preview the complete ticket-template draft in chat.",
-        "notes": "Introduce bounded agent and the three configured tools before the first run.",
+        "prompt": "In n8n, use the approved login and supplied TICKET-OPS-101 input. Return a preview under the shared ticket output contract, cite sources, preserve Current and Desired, and mark unsupported details OPEN. Make no business-system write or financial approval.",
+        "notes": "Introduce the n8n boundary and separate credential preflight before the first run.",
         "dark": false,
         "steps": [
-          "Show input paths.",
-          "Run preview.",
+          "Show supplied input.",
+          "Run with approved login.",
           "Gate output."
         ],
         "expected": "A trainer transcript with allowed paths.",
-        "check": "The transcript has no mutation or remote side effect."
+        "check": "The preview has no business-system mutation or financial approval."
       },
       {
-        "title": "Run one ticket",
-        "kicker": "INDIVIDUAL · 10:15–10:40",
-        "subtitle": "Record the first observed transcript",
+        "title": "Individual · n8n ticket 101",
+        "kicker": "INDIVIDUAL · 10:20–10:45 · 25 MIN",
+        "subtitle": "Run the bounded workflow alone on your own laptop",
         "cards": [
           {
             "title": "File",
-            "body": "lab-notes/crew-2/day-2-run-1.md"
+            "body": "Lab evidence record for the n8n baseline"
           },
           {
             "title": "Ticket",
-            "body": "TICKET-OPS-101 input"
+            "body": "Supplied TICKET-OPS-101 input"
           },
           {
             "title": "Evidence",
-            "body": "Model, access, prompt, paths, output, decision"
+            "body": "Workflow version, access, prompt, output, decision"
           }
         ],
-        "prompt": "Complete the pack preflight, then use the actual ticket-coach subagent on TICKET-OPS-101. Preview the complete draft; record model, access, zoom, prompt, paths, output, and OPEN checks.",
-        "notes": "Protect 25 minutes of individual work before the navigator starts. Keep model, access, zoom, and prompt fixed.",
+        "prompt": "On your own laptop, open the participant lab root README and use supplied TICKET-OPS-101 input. Run the bounded n8n workflow with the approved login and exact shared prompt; capture settings, output, citations, protected sections, and OPEN checks.",
+        "notes": "Protect 25 minutes of individual n8n work. Credential or login gaps are OPEN, not evidence of a run.",
         "dark": true,
         "steps": [
           "Run bounded prompt.",
           "Capture transcript.",
           "Mark evidence gaps."
         ],
-        "expected": "One observed run record.",
-        "check": "Learner can list every file the agent read."
+        "expected": "One observed n8n baseline record.",
+        "check": "Learner can list input, settings, output contract, and evidence gaps."
       },
       {
-        "title": "Review the boundary",
-        "kicker": "REVIEW + PRACTICE",
-        "subtitle": "Compare request with actual behavior",
+        "title": "Review the n8n baseline",
+        "kicker": "REVIEW · 10:45–11:00",
+        "subtitle": "Check the first preview against the shared contract",
         "cards": [
           {
             "title": "Review",
-            "body": "Allowed reads and no writes"
+            "body": "Input, contract, citations, and no business-system writes"
           },
           {
             "title": "Group",
-            "body": "3–4 people; one navigator"
+            "body": "Human reviewer records PASS, FAIL, or OPEN"
           },
           {
             "title": "Pause",
-            "body": "Stop on disallowed operation"
+            "body": "Keep credential or evidence gaps OPEN"
           }
         ],
-        "prompt": "Mark PASS, FAIL, or OPEN for Read, Glob, Grep, no writes, no network, protected sections, source citations, and human acceptance. Re-run the same 101 prompt in a rotating group.",
-        "notes": "Scribe captures the transcript; skeptic challenges invented URLs, assignees, or approvals.",
+        "prompt": "Review the n8n TICKET-OPS-101 preview against the shared input/output contract. Check protected sections, source citations, assumptions, and OPEN labels. Return PASS, FAIL, or OPEN with one observed line; do not rerun before the baseline gate.",
+        "notes": "De reviewer controleert eerst zelfstandig. Credentialproblemen worden OPEN vastgelegd.",
         "dark": false,
         "steps": [
-          "Review run 1.",
-          "Rotate navigator/driver.",
-          "Capture one boundary question."
+          "Review the n8n baseline.",
+          "Check the contract.",
+          "Capture one OPEN or decision."
         ],
-        "expected": "A group run record and boundary readback.",
-        "check": "The facilitator sees a clean stop on a disallowed action."
+        "expected": "An independent n8n baseline review.",
+        "check": "The review cites a source or exact missing check."
       },
       {
-        "title": "Gate before editing",
-        "kicker": "CHECK · 13:00",
-        "subtitle": "Preserve the original instruction",
+        "title": "Evidence capture",
+        "kicker": "EVIDENCE · 11:10–12:00",
+        "subtitle": "Freeze the n8n baseline before lunch",
         "cards": [
           {
-            "title": "Keep",
-            "body": "Original prompt and transcript"
+            "title": "Read",
+            "body": "Save the n8n TICKET-OPS-101 preview and settings"
           },
           {
-            "title": "Decide",
-            "body": "Accept, correct, or OPEN"
+            "title": "Reason",
+            "body": "Check source citations and protected sections"
           },
           {
-            "title": "Change",
-            "body": "Exactly one instruction next"
+            "title": "Gate",
+            "body": "Gate the baseline as PASS, FAIL, or OPEN"
           }
         ],
-        "prompt": "As human reviewer, accept, correct, or park run 1. State why the next run stays bounded and which one instruction may change.",
-        "notes": "The human owns the gate; the coach does not approve its own run.",
-        "dark": true,
-        "steps": [
-          "Read original.",
-          "Record decision.",
-          "Name one edit."
-        ],
-        "expected": "A dated local run-1 decision field.",
-        "check": "No ticket state or workflow approval is claimed."
-      },
-      {
-        "title": "Edit one instruction",
-        "kicker": "PRACTICE · 13:20–14:05",
-        "subtitle": "Rerun the same 101, then transfer to 102",
-        "cards": [
-          {
-            "title": "Edit",
-            "body": "One source-evidence sentence"
-          },
-          {
-            "title": "Experiment",
-            "body": "Same TICKET-OPS-101, settings, prompt"
-          },
-          {
-            "title": "Transfer",
-            "body": "TICKET-OPS-102 only after comparison"
-          }
-        ],
-        "prompt": "Add exactly the source-evidence sentence from the guide to the agent body. Keep model, access, zoom, prompt, input, and tools unchanged; rerun TICKET-OPS-101, then preview TICKET-OPS-102 as a separate transfer.",
-        "notes": "Keep all permissions and the allow-list unchanged. Label output as observed or OPEN.",
+        "prompt": "Finish the n8n TICKET-OPS-101 baseline. Save the preview, workflow/access settings, source citations, protected Current/Desired sections, and OPEN items. A human reviewer records PASS, FAIL, or OPEN before lunch; do not infer a run from missing access.",
+        "notes": "Bevries de n8n-baseline voor lunch. Credential- of loginproblemen blijven OPEN.",
         "dark": false,
         "steps": [
-          "Show before.",
-          "Edit one line.",
-          "Rerun TICKET-OPS-101.",
-          "Transfer to TICKET-OPS-102."
+          "Save the n8n preview.",
+          "Record settings.",
+          "Check citations.",
+          "Human gate PASS / FAIL / OPEN."
         ],
-        "expected": "Two 101 transcripts plus a separate 102 transfer note.",
-        "check": "Exactly one instruction changed and both 101 runs use the same settings."
+        "expected": "An n8n baseline with source-backed output and an explicit human decision.",
+        "check": "A reviewer can find the input, settings, output contract, and decision."
       },
       {
-        "title": "Compare as a receiver",
-        "kicker": "TRANSFER · 14:15–15:05",
-        "subtitle": "Find the edit without coaching",
+        "title": "Claude Code demo · rebuild the same agent",
+        "kicker": "DEMO · 13:00–13:10",
+        "subtitle": "Rebuild the n8n agent with the same instructions and contract",
+        "cards": [
+          {
+            "title": "Same instruction",
+            "body": "Reuse the exact prompt used in n8n"
+          },
+          {
+            "title": "Same input",
+            "body": "Use TICKET-OPS-101 and the shared output contract"
+          },
+          {
+            "title": "Capture",
+            "body": "Record Claude Code settings, output, and human gate"
+          }
+        ],
+        "prompt": "Rebuild the bounded agent in Claude Code. Use the identical TICKET-OPS-101 prompt, input, and shared output contract from n8n. Capture model/mode and access, preview the output, and apply the same checklist and human gate. Mark missing access or evidence OPEN.",
+        "notes": "Herbouw in Claude Code met dezelfde functionele instructies en contract. Leg platforminstellingen vast; maak geen business-systeem-write.",
+        "dark": false,
+        "steps": [
+          "Open the participant lab README.",
+          "Copy the ticket-coach starter.",
+          "Show the shared functional prompt and platform adapter.",
+          "Preview TICKET-OPS-101."
+        ],
+        "expected": "A Claude Code preview that uses the same input/output contract as n8n.",
+        "check": "The prompt, TICKET-OPS-101 input, and contract match the n8n baseline."
+      },
+      {
+        "title": "Individual · Claude Code ticket 101",
+        "kicker": "INDIVIDUAL · 13:10–13:35 · 25 MIN",
+        "subtitle": "On your own laptop, rebuild and run the same ticket-coach",
+        "cards": [
+          {
+            "title": "Same instruction",
+            "body": "Reuse the exact prompt used in n8n"
+          },
+          {
+            "title": "Same input",
+            "body": "Use TICKET-OPS-101 and the shared output contract"
+          },
+          {
+            "title": "Capture",
+            "body": "Record Claude Code settings, output, and human gate"
+          }
+        ],
+        "prompt": "Rebuild the bounded agent in Claude Code. Use the identical TICKET-OPS-101 prompt, input, and shared output contract from n8n. Capture model/mode and access, preview the output, and apply the same checklist and human gate. Mark missing access or evidence OPEN.",
+        "notes": "Herbouw in Claude Code met dezelfde functionele instructies en contract. Leg platforminstellingen vast; maak geen business-systeem-write.",
+        "dark": false,
+        "steps": [
+          "Follow the lab Claude Code setup.",
+          "Invoke ticket-coach on TICKET-OPS-101.",
+          "Preserve the shared functional instruction; record the tool adapter.",
+          "Capture your output and settings."
+        ],
+        "expected": "A Claude Code preview that uses the same input/output contract as n8n.",
+        "check": "The prompt, TICKET-OPS-101 input, and contract match the n8n baseline."
+      },
+      {
+        "title": "Claude Code review",
+        "kicker": "REVIEW · 13:35–13:50",
+        "subtitle": "A fresh reader checks the rebuilt preview against the same contract",
+        "cards": [
+          {
+            "title": "Receiver",
+            "body": "Fresh reader starts from the same TICKET-OPS-101 input"
+          },
+          {
+            "title": "Reproduce",
+            "body": "Check the Claude Code preview with the shared checklist"
+          },
+          {
+            "title": "Gate",
+            "body": "PASS only when contract and evidence are findable"
+          }
+        ],
+        "prompt": "Give the Claude Code TICKET-OPS-101 preview to a fresh reader with the n8n baseline, exact prompt, settings, and shared contract. Ask them to return PASS, FAIL, or OPEN with one observed difference and one unchanged boundary. Keep missing evidence OPEN.",
+        "notes": "De ontvanger leest beide previews zelfstandig. Platformverschillen worden waarnemingen; causaliteit blijft OPEN.",
+        "dark": false,
+        "steps": [
+          "Give both 101 previews.",
+          "Check the shared contract.",
+          "Return PASS / FAIL / OPEN."
+        ],
+        "expected": "An independent Claude Code review with a clear gate decision.",
+        "check": "The receiver names one observation and one unchanged boundary."
+      },
+      {
+        "title": "Compare the same input",
+        "kicker": "COMPARISON · 14:00–14:30",
+        "subtitle": "Describe platform observations without causal conclusions",
+        "cards": [
+          {
+            "title": "Same prompt",
+            "body": "Identical functional instructions in both runs"
+          },
+          {
+            "title": "Compare",
+            "body": "Place n8n and Claude Code previews side by side"
+          },
+          {
+            "title": "Boundary",
+            "body": "Platform differences are observations, not causes"
+          }
+        ],
+        "prompt": "Give a fresh reviewer the n8n and Claude Code TICKET-OPS-101 previews, exact functional prompt, settings, and shared contract. Identify one output difference or OPEN — no observed difference, one unchanged boundary, and missing evidence. Describe platform differences as observations; do not claim causality.",
+        "notes": "Vergelijk dezelfde input en functionele instructies. Deze vergelijking bewijst geen causale platformconclusie.",
+        "dark": false,
+        "steps": [
+          "Give both 101 previews.",
+          "Check the exact prompt.",
+          "Record one observation.",
+          "Keep causality OPEN."
+        ],
+        "expected": "A same-input comparison with one platform observation.",
+        "check": "Both 101 runs use identical functional instructions and no causal claim."
+      },
+      {
+        "title": "Transfer · ticket 102",
+        "kicker": "TRANSFER · 14:30–14:45",
+        "subtitle": "Use the accepted method only after the 101 comparison",
         "cards": [
           {
             "title": "Reader",
-            "body": "Fresh reviewer receives both 101 runs"
+            "body": "Human accepts the same-input comparison first"
           },
           {
             "title": "Find",
-            "body": "One edit and one output difference or OPEN"
+            "body": "Change only the supplied ticket input to 102"
           },
           {
             "title": "Transfer",
-            "body": "Inspect 102 as a separate input"
+            "body": "Record 102 as transfer evidence, not comparison evidence"
           }
         ],
-        "prompt": "Give both TICKET-OPS-101 previews and the TICKET-OPS-102 transfer to a fresh reader. Ask them to identify the single edit, one difference or OPEN, and one unchanged permission.",
-        "notes": "Missing runtime proof remains OPEN; do not explain the intended answer.",
+        "prompt": "After the human accepts the TICKET-OPS-101 comparison, reuse the same agent instructions and output contract with TICKET-OPS-102 as the only input change. Record the preview as a transfer and leave missing evidence OPEN.",
+        "notes": "Open 102 pas na de vergelijkingsgate. De transfer is een aparte toepassing.",
         "dark": true,
         "steps": [
-          "Hand over both runs.",
-          "Locate one edit.",
-          "Check unchanged boundary."
+          "Confirm the 101 gate.",
+          "Change only the input.",
+          "Capture the 102 transfer."
         ],
-        "expected": "A fresh-reader comparison.",
-        "check": "The receiver can repeat the permission check."
+        "expected": "A separate 102 transfer after the accepted comparison.",
+        "check": "The 102 run is clearly labelled transfer, not comparison."
       },
       {
         "title": "Handoff the coach",
-        "kicker": "HANDOFF + CLOSE · 15:15–16:00",
-        "subtitle": "Make the next bounded run reproducible",
+        "kicker": "HANDOFF · 15:00–15:40",
+        "subtitle": "Make both platform runs and the gated transfer reproducible",
         "cards": [
           {
             "title": "Store",
-            "body": "Starter, settings, prompts, paths, transcripts"
+            "body": "Lab root, settings, prompt, contract, and transcripts"
           },
           {
             "title": "Rate",
-            "body": "Independent, with help, needs practice"
+            "body": "Human decisions, comparison, transfer, and OPEN items"
           },
           {
             "title": "Recap",
-            "body": "Kahoot/wordcloud delta + MOB lesson"
+            "body": "Rating, Kahoot/wordcloud delta, and next practice"
           }
         ],
-        "prompt": "Draft the Day 2 handoff with starter copy, settings, two TICKET-OPS-101 runs, TICKET-OPS-102 transfer, one edit, actual checks, reviewer, and OPEN items. Repeat Kahoot and wordcloud.",
+        "prompt": "Draft the Day 2 handoff with the lab root, exact functional prompt, shared contract, n8n and Claude Code settings, two TICKET-OPS-101 previews, comparison, later TICKET-OPS-102 transfer, human decisions, and OPEN items. Repeat Kahoot and wordcloud.",
         "notes": "Keep individual ratings private; record only agreed group learning.",
         "dark": false,
         "steps": [
@@ -625,7 +716,37 @@
           "Rate and recap."
         ],
         "expected": "A receiver can rerun the bounded exercise.",
-        "check": "No remote operation is represented as completed."
+        "check": "No business-system write or financial approval is represented as completed."
+      },
+      {
+        "title": "Close · evidence, next",
+        "kicker": "CLOSE · 15:40–16:00",
+        "subtitle": "Finish with two runs, one comparison, and a useful next practice",
+        "cards": [
+          {
+            "title": "Before / after",
+            "body": "What did n8n and Claude Code show under identical instructions?"
+          },
+          {
+            "title": "Independence",
+            "body": "Which check can you reproduce without the author?"
+          },
+          {
+            "title": "Help / practice",
+            "body": "What support or practice will make the next run stronger?"
+          }
+        ],
+        "prompt": "Complete the recap and individual check-in. Each person states one observed n8n/Claude Code difference or no difference, one unchanged boundary, one remaining OPEN item, and whether the next step is help or practice. Revisit the opening blocker and record the next owner.",
+        "notes": "Sluit af met platformobservaties en een concrete volgende oefenstap. Leg geen causale conclusie of financiële recovery vast.",
+        "dark": true,
+        "steps": [
+          "State one platform observation.",
+          "Name one unchanged boundary.",
+          "Choose help or practice.",
+          "Revisit the blocker."
+        ],
+        "expected": "A truthful close with recap, open actions, and a next practice choice.",
+        "check": "No unsupported success claim remains; every uncertainty is sourced or OPEN."
       }
     ]
   },
