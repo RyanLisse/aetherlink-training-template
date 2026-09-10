@@ -10,3 +10,8 @@
 !.env.example
 *.pem
 *.key
+
+# Python and local training artifacts
+__pycache__/
+*.pyc
+lab-output/

@@ -1,0 +1,17 @@
+[
+  {
+    "reference": "TX-100",
+    "status": "pending",
+    "internal_note": "Synthetic training record: awaiting review"
+  },
+  {
+    "reference": "TX-101",
+    "status": "settled",
+    "internal_note": "Synthetic training record: reconciliation complete"
+  },
+  {
+    "reference": "TX-102",
+    "status": "failed",
+    "internal_note": "Synthetic training record: retry in exercise only"
+  }
+]

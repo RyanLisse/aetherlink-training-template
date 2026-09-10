@@ -2,6 +2,19 @@
 
 This small repository helps a cohort run a repeatable human-agent learning loop. It is a reusable template: files with `TEMPLATE` in the title contain prompts and empty fields, while files under `examples/` are explicitly fictional worked examples. Do not copy an example as evidence for a live session.
 
+## Guided training days · 09:00–16:00
+
+Start with the [two-day programme](days/README.md). Each day includes a timed agenda, literal participant instructions, copy-ready prompts, expected outputs, checkpoints, and facilitator guidance.
+
+| Day | Focus | Participant workbook | Interactive presentation |
+| --- | --- | --- | --- |
+| 1 | Intent → spec → plan → first working slice | [Day 1](days/day-1.md) | [Present day 1](https://aetherlink-training.ryanlisse.chatgpt.site/?day=1#1) |
+| 2 | Feedback → review → release rehearsal → next intent | [Day 2](days/day-2.md) | [Present day 2](https://aetherlink-training.ryanlisse.chatgpt.site/?day=2#1) |
+
+Presentation access is managed separately through ChatGPT sign-in. The workbooks and [fictional Python training lab](training-lab/README.md) are available in this public repository. Releases and monitoring in the lab are local rehearsals with synthetic data, not production operations.
+
+Keep the root `intent.md` for the training outcome; exercise artifacts live in `lab-notes/`. Leave supplied tests intact and implement the exercise in your own template copy. The SDLC is a loop: return to an earlier phase whenever evidence changes the plan.
+
 ## Quickstart
 
 1. Read [intent.md](intent.md) and agree on the outcome, today's boundary, owners, and evidence checks.

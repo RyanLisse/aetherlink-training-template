@@ -1,0 +1,6 @@
+{
+  "fixture_label": "synthetic training fixture; simulation only",
+  "metric": "error_rate_percent",
+  "baseline_percent": 4.0,
+  "window_percent": 8.0
+}
