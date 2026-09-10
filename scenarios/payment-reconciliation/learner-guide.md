@@ -5,12 +5,19 @@ the fixed cutoff **2026-09-10 12:00 Europe/Amsterdam**. Amounts are integer EUR
 minor units (`100` = EUR 1.00). No coding is required; a spreadsheet, written
 worksheet, or optional agent-assisted one-off script is enough.
 
+The team record uses GitLab for branch/MR evidence, Jira for the `FIN-001`
+epic and five child tasks, and Confluence for intent/spec/runbook/recap/
+knowledge/handoff pages. Project keys and URLs are supplied by the team; use
+`OPEN` placeholders until then. See [workflow.md](workflow.md) for the team
+flow, the FIN-003 example, and offline fallback.
+
 ## Roles and evidence rule
 
 Work in pairs and rotate: operator (reads the files), reviewer (challenges the
 classification), scribe (keeps the evidence log), and facilitator (human gate).
 Every conclusion must name a source file, row identifier, calculation, and
-status (`OPEN` until a person reruns the check). Do not create remote tickets.
+status (`OPEN` until a person reruns the check). Remote publication is outside
+the local exercise; team-system references may remain `OPEN`.
 
 The fee policy for this exercise is fixed: expected fee is `round_half_up(2%
 × gross_minor)` and expected net is gross less that fee. A duplicate PSP row is
@@ -45,7 +52,9 @@ Act as an intent interviewer for a fictional local payment reconciliation exerci
 ```
 
 Output: `lab-notes/payment-intent.md` (or the cohort's equivalent) with a
-human acceptance decision and one evidence target.
+human acceptance decision, one evidence target, and intended Confluence Intent
+page plus Jira `FIN-001` references. GitLab branch/MR references may remain
+`OPEN` until the team creates them.
 
 ### Exercise 2 — Design: write the reconciliation specification (60 minutes)
 
@@ -64,7 +73,7 @@ Read scenarios/payment-reconciliation/README.md and all three CSV headers. Draft
 ```
 
 Output: a reviewed spec with a clear “expected sample versus observed run”
-boundary.
+boundary and intended Confluence Spec page and Jira crosslink.
 
 ### Exercise 3 — Plan: choose the smallest working slice (70 minutes)
 
@@ -81,8 +90,9 @@ Copyable prompt:
 In read-only plan mode, inspect the payment reconciliation README and CSVs. Propose the smallest no-code worksheet or optional one-off Python check that validates identifiers, fee/net arithmetic, duplicate quarantine, due dates, and batch-to-bank totals. Name the files you will read, the exact proof commands, risks, and rollback (discard the local worksheet). Ask the human reviewer to accept the plan before any edits. Do not access a network or create tickets.
 ```
 
-Output: a plan and a blank evidence log. If using an agent, keep the command
-local and show it to the reviewer before running it.
+Output: a plan and a blank evidence log, including the intended GitLab branch
+and MR title, Jira task, and Confluence evidence page. If using an agent, keep
+the command local and show it to the reviewer before running it.
 
 ### Exercise 4 — Build/Test: reconcile and record evidence (60 minutes)
 
@@ -120,7 +130,8 @@ Act as a fresh verifier. Read the three CSVs and my reconciliation evidence log.
 ```
 
 Output: `lab-notes/payment-handoff-day-1.md`, including a receiver, evidence
-paths, open questions, and a next-check command.
+paths, open questions, next-check command, and GitLab/Jira/Confluence links or
+`OPEN` placeholders.
 
 ## Day 2 — reproduce, review, rehearse, and close the loop (09:00–16:00)
 
@@ -169,7 +180,8 @@ Turn the verified fixture procedure into a concise reusable knowledge note for a
    path; neither reads the other review before submitting it.
 3. A human decision maker compares both reviews, then converts accepted
    follow-up needs into the six local FIN ticket templates; leave every
-   acceptance checkbox unchecked.
+   acceptance checkbox unchecked. The team may later copy them into Jira and
+   crosslink GitLab MRs and Confluence pages using [the workflow](workflow.md).
 
 Copyable prompt:
 
@@ -182,7 +194,8 @@ Use two independent read-only contexts or human peers. Review A checks identifie
 1. Design a conceptual gate: source files unchanged, identifier/arithmetic
    check passes, five cases present, and human reviewer signs the handoff.
 2. Rehearse a local-only handoff package containing the evidence log, review,
-   and knowledge note. There is no deployment or remote issue creation.
+   and knowledge note. Record intended GitLab MR, Jira statuses, and
+   Confluence pages, or `OPEN` when team spaces are unavailable.
 3. Write the rollback as “discard the local package and restore the prior
    worksheet”; record any failed check as an incident with exact output.
 
@@ -201,6 +214,8 @@ Design a conceptual approval gate for this local exercise: all three CSVs are un
    chain: intent → spec → plan → evidence → review → handoff.
 3. Complete the daily recap and knowledge output using the repository
    templates, linking only actual local evidence and leaving open actions.
+   Add real GitLab MR, Jira status, and Confluence links when available;
+   otherwise retain `OPEN` placeholders.
 
 Copyable prompt:
 

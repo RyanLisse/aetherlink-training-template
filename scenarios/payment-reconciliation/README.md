@@ -130,3 +130,7 @@ Read [`tickets/README.md`](tickets/README.md) for the local FIN-001 epic and
 five task templates. Acceptance boxes intentionally remain unchecked. These
 templates are not published remote issues; a cohort may copy them into its
 chosen tracker later with the fictional labels preserved.
+
+## Team tools
+
+Follow the [GitLab, Jira, and Confluence workflow](workflow.md) for the training repository, task mapping, page outlines, and the worked FIN-003 handoff. GitHub distributes this template; participants use their existing team tools.

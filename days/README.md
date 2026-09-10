@@ -4,6 +4,8 @@ These guides are a public-safe adaptation of the AI-Native SDLC playbook for a t
 
 ## Participant setup
 
+For the Worldline payment operations track, start with the [GitLab, Jira, and Confluence setup](../scenarios/payment-reconciliation/workflow.md) instead of the GitHub setup below. Use the remaining daily timeboxes with the scenario-specific exercises.
+
 1. On GitHub, choose **Use this template** for RyanLisse/aetherlink-training-template and create your own repository.
 2. Clone the created repository:
 
@@ -32,6 +34,8 @@ Use [Northstar Demo Support Desk](../scenarios/status-desk/README.md) for the mo
 ## Payment operations alternative
 
 For a FinOps cohort working on payments and reconciliation, choose the [payment reconciliation scenario](../scenarios/payment-reconciliation/README.md). Keep the 09:00–16:00 timeboxes and opening/closing routines. Use its exercise mapping in place of the support-desk domain tasks; the Python status-lab commands belong to the original track. Agree on one track before starting.
+
+For this track, follow the [GitLab, Jira, and Confluence workflow](../scenarios/payment-reconciliation/workflow.md). Use an approved training repository, Jira project, and Confluence space. If these are unavailable, keep the same artifacts locally and record destination links as `OPEN`.
 
 ## Source map
 

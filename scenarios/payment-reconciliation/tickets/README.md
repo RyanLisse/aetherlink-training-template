@@ -10,3 +10,5 @@ unchecked until a human runs and reviews the stated evidence.
 4. [FIN-004 — fee mismatch](FIN-004.md)
 5. [FIN-005 — bank payout mismatch](FIN-005.md)
 6. [FIN-006 — not-yet-due timing monitor](FIN-006.md)
+
+Use the [GitLab, Jira, and Confluence workflow](../workflow.md) to copy these templates into the approved training Jira project. FIN identifiers are scenario references, not Jira-assigned keys. Link each created task to its evidence MR and Confluence page; keep unknown links `OPEN`.

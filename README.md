@@ -21,6 +21,8 @@ Use the [Northstar Demo Support Desk scenario](scenarios/status-desk/README.md) 
 
 For payment operations teams, use the [daily payment reconciliation scenario](scenarios/payment-reconciliation/README.md). Compare a transaction ledger, PSP settlements, and bank credits; investigate exceptions and hand over an evidence-backed action list. This is a fictional training model, not a description of Worldline systems or policies.
 
+The payment operations track uses the team's existing **GitLab, Jira, and Confluence** workflow. GitLab holds versioned files and merge-request review, Jira tracks investigations, and Confluence holds shared procedures and recaps. See the [team workflow](scenarios/payment-reconciliation/workflow.md). This public GitHub repository distributes the template; it does not require the team to move to GitHub.
+
 ## Quickstart
 
 1. Read [intent.md](intent.md) and agree on the outcome, today's boundary, owners, and evidence checks.
