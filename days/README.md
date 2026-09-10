@@ -3,8 +3,17 @@
 This public-safe programme adapts the AI-native SDLC playbook to a fictional
 payment reconciliation exercise. It runs five sessions, each with its own
 10:00–16:00 agenda. Follow the current guide for the timing; Day 2 includes a
-revised first-90-minute guided reset. Videos and audio were not watched or
+revised first-90-minute guided reset and Day 3 starts with a guided individual
+opening before coached MOB practice. Videos and audio were not watched or
 listened to; source URLs are preserved in the first two guides.
+
+## Delivery tracks
+
+**Wave 2 crew 1** has completed Days 1–2 and has three sessions remaining:
+Days 3–5. Use [Day 3](day-3.md) as its continuation; do not rewrite its prior
+handoff as a new five-session start. **Crew 2** is a later, fresh five-session
+run; its crew-specific plan is [here](../crews/crew-2/README.md) when that pack
+is available. No crew 2 outcome or access is implied by crew 1 material.
 
 ## Progression
 
@@ -13,7 +22,8 @@ listened to; source URLs are preserved in the first two guides.
 2. [Day 2](day-2.md) — guided FIN-003 ticket relay: one visible result,
    analyst → developer → tester, behavior checks, and individual practice.
    Context and skills are optional after the reviewed result.
-3. [Day 3](day-3.md) — coached missing and duplicate settlement cases.
+3. [Day 3](day-3.md) — guided individual bounded-subagent practice, then
+   coached missing and duplicate settlement cases.
 4. [Day 4](day-4.md) — peer-led repeatable runbook and knowledge handoff.
 5. [Day 5](day-5.md) — independent transfer to a declared synthetic variation.
 
@@ -24,6 +34,12 @@ future reusable framing curriculum; this reset continues from its concepts
 without asking the cohort to redo that session. Later sessions use the same
 vocabulary and rules with graduated support; follow each guide's current
 agenda. The primary scenario is [payment reconciliation](../scenarios/payment-reconciliation/README.md).
+Day 3's starter, `ticket-inputs.md`, `ticket-template.md` handout,
+`target-examples.md`, and `check_ticket.py` are defined in the [ticket-agent
+pack](../scenarios/ticket-agent/README.md). Its two input/target pairs are
+`TICKET-OPS-101`/Worked target A and `TICKET-OPS-102`/Worked target B. Treat
+the pack README as authoritative for preflight steps; both pairs remain `OPEN`
+until team signoff.
 
 ## Shared MOB and evidence rule
 
@@ -54,4 +70,11 @@ README. Do not push or publish as part of these exercises.
 
 ## Daily opening and close
 
-At 10:00, run a short Kahoot retrieval question and wordcloud: "Which step blocks you today?" Cluster the answers and choose one blocker to revisit at the close. At 15:40, each participant names one reproduced result, one uncertainty, and a next action. Finish with the mob reflection and a dated recap; record a reusable knowledge note only when its evidence has been reviewed.
+At 10:00, run the opening specified by the current day guide. On Day 3 this is
+a recap, end example, Kahoot, and wordcloud before the individual bounded-agent
+practice; the MOB starts only in the afternoon. At 15:40, each participant
+names one made artifact, one uncertainty, and a next action. Finish with the
+mob reflection and a dated recap; record a reusable knowledge note only when
+its evidence has been reviewed. Every close records what was **covered** and
+what is **next** from the current guide. Never infer participant success or
+tool access from attendance or discussion.

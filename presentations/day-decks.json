@@ -846,306 +846,456 @@
     ]
   },
   "day3": {
-    "title": "Day 3 — Coached investigation",
+    "title": "Day 3 — Individual agent practice: inspect, edit once, transfer",
     "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/days/day-3.md",
     "slides": [
       {
-        "title": "Coached investigation",
-        "kicker": "DAY 3 · 10:00–16:00",
-        "subtitle": "Trace exceptions from source rows to an owned next action",
+        "title": "Recap and end example",
+        "kicker": "WAVE 2 · CREW 1 · DAY 3 · 10:00–10:10",
+        "subtitle": "Reconnect yesterday’s result to today’s controlled practice",
         "cards": [
           {
             "title": "Outcome",
-            "body": "Five cases investigated with reproducible reasoning"
+            "body": "Run two ticket previews and explain one controlled change"
           },
           {
-            "title": "Coach",
-            "body": "Facilitator supplies questions, not conclusions"
+            "title": "Opening",
+            "body": "Recap the prior result, then show the end example"
           },
           {
-            "title": "Boundary",
-            "body": "Synthetic local data; team links remain OPEN"
+            "title": "Pulse",
+            "body": "Kahoot + wordcloud: what still blocks you?"
           }
         ],
-        "prompt": "Open the Day 3 guide. Start with Kahoot or wordcloud, capture blockers, then choose one investigation question and state what source row would prove it.",
-        "notes": "Begin met Kahoot/wordcloud en blockers; vandaag coacht de facilitator vooral met vragen.",
+        "prompt": "Open the Day 3 guide and scenarios/ticket-agent/README.md. Recap the prior evidence, show the end example, run the Kahoot question, and cluster the wordcloud blockers. Name what today must prove.",
+        "notes": "Start met recap, eindvoorbeeld, Kahoot en wordcloud. Leg vast welke blocker later opnieuw wordt bekeken; verzin geen voortgang.",
         "dark": true,
         "steps": [
-          "Run Kahoot/wordcloud.",
-          "Capture blockers.",
-          "Choose one case.",
-          "State its proof."
+          "Read the prior result.",
+          "Show the end example.",
+          "Run Kahoot + wordcloud.",
+          "Name today’s proof."
         ],
-        "expected": "A bounded investigation target and blockers list.",
-        "check": "No operational recovery is claimed."
+        "expected": "A shared starting point, one named blocker, and a visible proof target.",
+        "check": "Everyone can state the day 3 acceptance check."
       },
       {
-        "title": "The same rhythm every day",
-        "kicker": "FIXED SCHEDULE",
-        "subtitle": "Timeboxes are shared; the exercise changes",
+        "title": "Day 3 route",
+        "kicker": "SCHEDULE · 10:00–16:00",
+        "subtitle": "A precise Wave 2 crew 1 schedule with individual practice first",
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:20 exercise 1 · 11:20–11:30 break"
+            "body": "10:00–10:10 recap/end example/Kahoot + wordcloud · 10:10–10:20 demo · 10:20–10:45 individual own-laptop run · 10:45–10:55 review · 10:55–11:10 one-instruction rerun · 11:10–11:25 second-ticket transfer · 11:25–11:30 progress"
           },
           {
             "title": "Midday",
-            "body": "11:30–12:10 exercise 2 · 12:10–12:30 demo/coaching · 12:30–13:15 lunch"
+            "body": "11:30–11:40 break · 11:40–12:20 missing case · 12:20–12:30 check · 12:30–13:15 lunch · 13:15–14:00 duplicate case · 14:00–14:10 break"
           },
           {
             "title": "Afternoon",
-            "body": "13:15–14:00 exercise 3 · 14:00–14:10 break · 14:10–15:00 exercise 4 · 15:00–15:10 break · 15:10–15:40 exercise 5 · 15:40–16:00 reflection"
+            "body": "14:10–15:00 peer review/evidence · 15:00–15:10 break · 15:10–15:40 handoff · 15:40–16:00 close"
           }
         ],
-        "prompt": "Read the fixed schedule and name the next case artifact.",
-        "notes": "Bewaar dezelfde cadans en alle pauzes.",
+        "prompt": "Read the exact timebox aloud. Point to the named artifact and human check for each block; the 10:20–10:45 run is individual on every participant’s own laptop, with no driver rotation.",
+        "notes": "Bewaar deze tijden letterlijk. Dit is individuele agentpraktijk; plan geen MOB-driverrotatie in het eerste blok.",
         "dark": false,
         "steps": [
-          "Read the block.",
-          "Name the artifact.",
-          "Name the gate."
+          "Read each timebox.",
+          "Name its artifact.",
+          "Name its human check.",
+          "Protect every break."
         ],
-        "expected": "Shared timebox awareness.",
-        "check": "All required blocks appear."
+        "expected": "Participants can navigate the day and know when individual practice ends.",
+        "check": "Every listed block and break matches the guide."
       },
       {
-        "title": "Investigation pattern",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "Observe → isolate → classify → act → verify",
+        "title": "File roles and control surfaces",
+        "kicker": "RULES · BEFORE THE DEMO",
+        "subtitle": "Know what each file does before asking an agent to inspect it",
         "cards": [
           {
-            "title": "Observe",
-            "body": "Read source IDs and current evidence"
+            "title": "Template",
+            "body": "ticket-template.md: output contract/checklist; Current and Desired sections are protected"
           },
           {
-            "title": "Isolate",
-            "body": "Change one hypothesis at a time"
+            "title": "Input / target",
+            "body": "ticket-inputs.md supplies two tickets; target-examples.md shows shape, never an oracle"
           },
           {
-            "title": "Act",
-            "body": "Assign next action and reproduction path"
+            "title": "Agent",
+            "body": "starter ticket-coach agent is bounded; requirements/checklist lead over target wording"
           }
         ],
-        "prompt": "Coach a worked example without giving the answer: ask which source row is observed, what hypothesis is isolated, which case label fits, and what check another person can repeat.",
-        "notes": "Laat stilte toe; goede vragen zijn vandaag de interventie.",
+        "prompt": "Open scenarios/ticket-agent/README.md. Point to the template, input, target, and agent roles. Treat requirements and the checklist as authoritative over a target request. Do not overwrite Current or Desired; record any conflict as OPEN.",
+        "notes": "Laat de deelnemers de vier rollen aanwijzen. Current en Desired zijn beschermd; onduidelijkheid of tegenstrijdigheid wordt OPEN.",
         "dark": false,
         "steps": [
-          "Read the rows.",
-          "State one hypothesis.",
-          "Choose one check.",
-          "Assign an action."
+          "Open the pack README.",
+          "Point to four file roles.",
+          "Protect Current / Desired.",
+          "Mark conflicts OPEN."
         ],
-        "expected": "A repeatable investigation pattern.",
-        "check": "Observation and hypothesis are separated."
+        "expected": "A participant can explain template, input, target, and agent without conflating them.",
+        "check": "Requirements/checklist precedence and the OPEN rule are stated."
       },
       {
-        "title": "Exercise 1 · missing settlement",
-        "kicker": "10:40–11:20 · 40 MIN",
-        "subtitle": "Investigate overdue versus not-yet-due",
+        "title": "Trainer demo · bounded preview",
+        "kicker": "DEMO · 10:10–10:20",
+        "subtitle": "Preview the work surface without changing it",
         "cards": [
           {
-            "title": "Case",
-            "body": "Compare ledger due date with fixed cutoff"
+            "title": "Allowed",
+            "body": "Claude Code subagent uses Read, Glob, and Grep only"
           },
           {
-            "title": "Evidence",
-            "body": "Cite transaction and settlement IDs"
-          },
-          {
-            "title": "Status",
-            "body": "FIN-002 or FIN-006; do not conflate"
-          }
-        ],
-        "prompt": "Investigate missing-settlement cases using local CSVs. Compare each due date with 2026-09-10 12:00 Europe/Amsterdam, cite rows, classify overdue versus timing, and draft the next owner action. Do not escalate a timing item.",
-        "notes": "Vraag: welke datum maakt dit verschil? Laat de groep zelf lezen.",
-        "dark": false,
-        "steps": [
-          "Read cited rows.",
-          "Compare dates.",
-          "Classify the case.",
-          "Name next owner."
-        ],
-        "expected": "Correct due-date classifications with evidence.",
-        "check": "A due-today or future row is not called overdue."
-      },
-      {
-        "title": "Exercise 2 · duplicate settlement",
-        "kicker": "11:30–12:10 · 40 MIN",
-        "subtitle": "Keep conflicting rows visible while narrowing the question",
-        "cards": [
-          {
-            "title": "Rows",
-            "body": "SET-1003-A and SET-1003-B remain visible"
-          },
-          {
-            "title": "Arithmetic",
-            "body": "Expected 24,010; raw PSP 43,610"
-          },
-          {
-            "title": "Status",
-            "body": "UNRESOLVED until source confirmation"
-          }
-        ],
-        "prompt": "Read the ledger, both PSP rows, and bank row for batch B-20260909-01. Recalculate expected, raw, unique, and bank net. Draft the FIN-003 evidence note with quarantine and an OPEN confirmation action; do not delete or count twice.",
-        "notes": "Dit is het letterlijke duplicatevoorbeeld; houd beide rows in beeld.",
-        "dark": false,
-        "steps": [
-          "Read all four IDs.",
-          "Recalculate totals.",
-          "Mark UNRESOLVED.",
-          "Assign confirmation."
-        ],
-        "expected": "An evidence-backed duplicate investigation.",
-        "check": "No recovery or approval claim."
-      },
-      {
-        "title": "Optional coaching · isolate one hypothesis",
-        "kicker": "12:10–12:30 · 20 MIN",
-        "subtitle": "A good question narrows the next readback",
-        "cards": [
-          {
-            "title": "Question",
-            "body": "Is the mismatch duplicate, fee, or bank timing?"
-          },
-          {
-            "title": "Readback",
-            "body": "Name exact row IDs before calculating"
-          },
-          {
-            "title": "Pause",
-            "body": "Stop when sources disagree"
-          }
-        ],
-        "prompt": "Only if learners request help: Coach demo: choose one mismatch, write three competing hypotheses, then read only the rows needed to eliminate one. Say what remains unknown and which human owner decides it.",
-        "notes": "Demonstreer hypothesen, geen snelle conclusie.",
-        "dark": true,
-        "steps": [
-          "List hypotheses.",
-          "Choose a readback.",
-          "Eliminate one.",
-          "Record unknowns."
-        ],
-        "expected": "Learners see disciplined narrowing.",
-        "check": "Hypothesis is labelled, not fact."
-      },
-      {
-        "title": "Exercise 3 · independent findings",
-        "kicker": "13:15–14:00 · 45 MIN",
-        "subtitle": "Two separate read-only reviews of the first cases",
-        "cards": [
-          {
-            "title": "Review A",
-            "body": "Missing settlement and due-date reasoning"
-          },
-          {
-            "title": "Review B",
-            "body": "Duplicate rows and quarantine wording"
-          },
-          {
-            "title": "Decision",
-            "body": "Compare findings only after submission"
-          }
-        ],
-        "prompt": "Two independent reviewers separately review Exercises 1–2 in read-only mode. Return PASS or BLOCKED with source IDs and reproduction steps; do not read the other review. Save two findings and let a human resolve disagreement or record it OPEN.",
-        "notes": "Geen samengevoegde mob; houd de twee bevindingen onafhankelijk.",
-        "dark": false,
-        "steps": [
-          "Assign two reviewers.",
-          "Read without editing.",
-          "Submit separate findings.",
-          "Resolve as human."
-        ],
-        "expected": "Two comparable independent findings.",
-        "check": "Neither finding relies on the other review."
-      },
-      {
-        "title": "Exercise 4 · complete evidence table",
-        "kicker": "14:10–15:00 · 50 MIN",
-        "subtitle": "Use observed rows and keep sample facts separate",
-        "cards": [
-          {
-            "title": "Table",
-            "body": "Exactly five cases with source IDs"
+            "title": "Show",
+            "body": "Candidate files, requirements/checklist, and target interpretation"
           },
           {
             "title": "Boundary",
-            "body": "Observed run versus expected sample"
-          },
-          {
-            "title": "Gate",
-            "body": "Evidence owner signs the readback"
+            "body": "No file edits, Jira writes, API calls, or new infrastructure"
           }
         ],
-        "prompt": "Complete the five-case table from source files and cite calculations. Use only observed rows; separate expected sample facts from this run. Save lab-notes/day-3-evidence.md. A receiver must reproduce one missing and one duplicate case.",
-        "notes": "Laat de evidence owner de tabel tegen de bronbestanden lezen.",
-        "dark": false,
-        "steps": [
-          "Complete five rows.",
-          "Cite calculations.",
-          "Separate sample facts.",
-          "Ask receiver to reproduce."
-        ],
-        "expected": "A signed, source-backed evidence table.",
-        "check": "Receiver reproduces both target cases."
-      },
-      {
-        "title": "Exercise 5 · coached handoff",
-        "kicker": "15:10–15:40 · 30 MIN",
-        "subtitle": "Make the next action findable in two minutes",
-        "cards": [
-          {
-            "title": "Handoff",
-            "body": "Cutoff, revision, checked cases, open decisions"
-          },
-          {
-            "title": "Owner",
-            "body": "Next action and exact command"
-          },
-          {
-            "title": "Gate",
-            "body": "Facilitator accepts PASS or BLOCKED"
-          }
-        ],
-        "prompt": "Draft lab-notes/handoff-day-3.md with cutoff, revision, checked cases, unresolved decisions, next owner, and exact command. Give it to a fresh reader; they should find the next action in two minutes. Keep team links OPEN unless supplied.",
-        "notes": "Coach alleen op vraag; laat de ontvanger eerst zelfstandig zoeken.",
-        "dark": false,
-        "steps": [
-          "Draft the handoff.",
-          "Give it to receiver.",
-          "Time the readback.",
-          "Accept or block."
-        ],
-        "expected": "A receiver-ready coached handoff.",
-        "check": "Next action is findable without conversation."
-      },
-      {
-        "title": "Reflection",
-        "kicker": "15:40–16:00 · 20 MIN",
-        "subtitle": "What did coaching help you notice?",
-        "cards": [
-          {
-            "title": "Individual",
-            "body": "Write one question that narrowed an investigation"
-          },
-          {
-            "title": "MOB",
-            "body": "Share one useful role rotation"
-          },
-          {
-            "title": "Close",
-            "body": "Complete recap, blockers, and Day 4 gap"
-          }
-        ],
-        "prompt": "Write one observation, hypothesis, check, and owner from today. Complete the recap and individual check-in, then share which coach question changed your path and what a Day 4 receiver will need.",
-        "notes": "Laat deelnemers coachvragen verzamelen als herbruikbare kennis; sluit af met recap en blockers.",
+        "prompt": "Run a bounded Claude Code subagent against scenarios/ticket-agent/README.md using only Read, Glob, and Grep. Ask it to preview candidate files and map requirements/checklist to the target. Show the proposed reading; make no edits and perform no Jira write.",
+        "notes": "Demonstreer alleen lezen en zoeken. Geen Jira-write, geen codewijziging en geen nieuwe infrastructuur; laat zien hoe een conflict OPEN blijft.",
         "dark": true,
         "steps": [
-          "Write the chain.",
-          "Complete recap/check-in.",
-          "Share one question."
+          "Start the bounded subagent.",
+          "Preview with Read / Glob / Grep.",
+          "Show the mapping.",
+          "Stop before any write."
         ],
-        "expected": "A personal investigation lesson, recap, and reflection.",
-        "check": "Observation is backed by a source or marked OPEN."
+        "expected": "A visible read-only preview with its input, settings, target, and open questions.",
+        "check": "The agent used only the allowed preview tools and made no external write."
+      },
+      {
+        "title": "Individual · ticket 1",
+        "kicker": "PRACTICE · 10:20–10:45 · 25 MIN",
+        "subtitle": "Everyone runs the same bounded method on their own laptop",
+        "cards": [
+          {
+            "title": "Input",
+            "body": "Open the assigned ticket and fixture named by the pack"
+          },
+          {
+            "title": "Run",
+            "body": "Use the bounded Read / Glob / Grep preview"
+          },
+          {
+            "title": "Capture",
+            "body": "Record before evidence: input, settings, target, checklist, and OPENs"
+          }
+        ],
+        "prompt": "On your own laptop, open scenarios/ticket-agent/README.md and choose TICKET-OPS-101 from ticket-inputs.md. Run the bounded agent with Read, Glob, and Grep only. Capture the before result, input and settings, requirements/checklist, protected Current/Desired sections, target interpretation, and every conflict as OPEN. Do not write to Jira or modify files.",
+        "notes": "Iedereen werkt 25 minuten zelfstandig op de eigen laptop. Geen driverrotatie; helpvragen worden genoteerd en pas volgens de afgesproken grens behandeld.",
+        "dark": false,
+        "steps": [
+          "Open the assigned input.",
+          "Run the bounded preview.",
+          "Capture before evidence.",
+          "Record help or OPENs."
+        ],
+        "expected": "A before packet that another person can inspect without relying on memory.",
+        "check": "All participants have named input/settings and no write occurred."
+      },
+      {
+        "title": "Review · first result",
+        "kicker": "REVIEW · 10:45–10:55",
+        "subtitle": "Check the first preview independently before changing the instruction",
+        "cards": [
+          {
+            "title": "Evidence",
+            "body": "Can a reviewer find the input, settings, and source files?"
+          },
+          {
+            "title": "Controls",
+            "body": "Are Current / Desired protected and conflicts OPEN?"
+          },
+          {
+            "title": "Feedback",
+            "body": "Return PASS or BLOCKED with one precise help request"
+          }
+        ],
+        "prompt": "Exchange the first preview with a partner. Review it independently against the pack requirements and checklist. Do not edit the result; return PASS or BLOCKED, cite the missing evidence, and write one precise help request if needed.",
+        "notes": "Laat de reviewer eerst zelf controleren. Verbeter de output nog niet; scheid bevinding, hulpvraag en besluit.",
+        "dark": false,
+        "steps": [
+          "Read the partner’s packet.",
+          "Check requirements and checklist.",
+          "Check protected sections.",
+          "Return PASS / BLOCKED."
+        ],
+        "expected": "An independent review with evidence-based feedback and a bounded help request.",
+        "check": "The review cites a source, setting, or exact missing check."
+      },
+      {
+        "title": "Edit one instruction · rerun",
+        "kicker": "CONTROLLED CHANGE · 10:55–11:10",
+        "subtitle": "Learn from one variable while holding the run constant",
+        "cards": [
+          {
+            "title": "One change",
+            "body": "Edit exactly ONE instruction sentence"
+          },
+          {
+            "title": "Same run",
+            "body": "Reuse the same input and settings"
+          },
+          {
+            "title": "Compare",
+            "body": "Place before and after evidence side by side"
+          }
+        ],
+        "prompt": "Copy the original instruction. Edit exactly one instruction sentence, then rerun with the same input and settings. Compare before and after evidence, state the observed effect, and leave any unresolved conflict OPEN. Do not change the target, checklist, fixture, or tools.",
+        "notes": "Bewaak de experimentele grens: één instructie, dezelfde input en settings. Geen extra tool of targetwijziging om een mooier resultaat te krijgen.",
+        "dark": false,
+        "steps": [
+          "Copy the original instruction.",
+          "Edit one sentence.",
+          "Rerun same input + settings.",
+          "Compare before / after."
+        ],
+        "expected": "A reproducible before/after comparison tied to one instruction change.",
+        "check": "The recorded diff shows one instruction change and unchanged input/settings."
+      },
+      {
+        "title": "Transfer · ticket 2",
+        "kicker": "TRANSFER · 11:10–11:25",
+        "subtitle": "Carry the method to a second ticket without adding infrastructure",
+        "cards": [
+          {
+            "title": "Reuse",
+            "body": "Keep the instruction and settings from the controlled rerun"
+          },
+          {
+            "title": "Transfer",
+            "body": "Apply them to the second ticket input"
+          },
+          {
+            "title": "Observe",
+            "body": "Separate ticket-specific facts from reusable checks"
+          }
+        ],
+        "prompt": "Use the same instruction and settings on TICKET-OPS-102 from scenarios/ticket-agent/README.md and ticket-inputs.md. Capture the preview, apply the requirements/checklist, protect Current/Desired, and mark conflicts OPEN. Do not rotate drivers, call Jira, or add a new skill, hook, or infrastructure.",
+        "notes": "Laat de deelnemer de methode overdragen, niet de eerste conclusie kopiëren. Een glossary-skill of hook blijft optioneel en verandert de grens niet.",
+        "dark": false,
+        "steps": [
+          "Open the second ticket.",
+          "Reuse instruction + settings.",
+          "Capture the transfer result.",
+          "Separate facts from method."
+        ],
+        "expected": "A second-ticket result that shows what transferred and what remained ticket-specific.",
+        "check": "The participant can name one reusable check and one ticket-specific fact."
+      },
+      {
+        "title": "Progress checkpoint",
+        "kicker": "CHECKPOINT · 11:25–11:30",
+        "subtitle": "Make the state and the next support mode visible",
+        "cards": [
+          {
+            "title": "Before / after",
+            "body": "Record the controlled change and observed effect"
+          },
+          {
+            "title": "Next mode",
+            "body": "Choose independent, help, or practice"
+          },
+          {
+            "title": "Open",
+            "body": "Keep blocked claims and conflicts visible as OPEN"
+          }
+        ],
+        "prompt": "Write one progress line: what the before/after evidence shows, what remains OPEN, and whether your next step is independent work, help, or practice. Do not report a result you did not reproduce.",
+        "notes": "Korte statusronde. Gebruik alleen waargenomen bewijs; hulp en oefening zijn geldige volgende stappen.",
+        "dark": false,
+        "steps": [
+          "State before / after.",
+          "List OPEN items.",
+          "Choose independent / help / practice."
+        ],
+        "expected": "A truthful progress marker with a named next support mode.",
+        "check": "Every claimed result has a source or reproduction path."
+      },
+      {
+        "title": "Missing case",
+        "kicker": "CASE · 11:40–12:20",
+        "subtitle": "Inspect a missing-payment ticket and preserve the evidence chain",
+        "cards": [
+          {
+            "title": "Read",
+            "body": "Use the missing-case input and fixture named by the pack"
+          },
+          {
+            "title": "Reason",
+            "body": "Follow requirements/checklist before accepting the target"
+          },
+          {
+            "title": "Gate",
+            "body": "Classify from evidence or leave the conflict OPEN"
+          }
+        ],
+        "prompt": "Read the missing-case ticket and fixture in scenarios/ticket-agent/README.md. Run the bounded preview, cite the input and relevant source files, compare requirements/checklist with the target, and protect Current/Desired. Record the classification and next action; mark uncertainty OPEN and make no Jira write.",
+        "notes": "Stuur met vragen naar de bron en het checklist-item. Neem geen status over uit een target als de requirements iets anders zeggen.",
+        "dark": false,
+        "steps": [
+          "Read the missing case.",
+          "Run the bounded preview.",
+          "Cite source files.",
+          "Classify or mark OPEN."
+        ],
+        "expected": "A missing-case note with source-backed reasoning and an owned next action.",
+        "check": "A reviewer can reproduce the classification or sees the explicit OPEN conflict."
+      },
+      {
+        "title": "Check · reproduce one finding",
+        "kicker": "CHECK · 12:20–12:30",
+        "subtitle": "A fresh reader validates the missing-case evidence",
+        "cards": [
+          {
+            "title": "Receiver",
+            "body": "Fresh reader starts from the named input"
+          },
+          {
+            "title": "Reproduce",
+            "body": "Repeat the check with the recorded settings"
+          },
+          {
+            "title": "Gate",
+            "body": "PASS only when the evidence is findable"
+          }
+        ],
+        "prompt": "Give the missing-case note to a fresh reader. Ask them to reproduce one finding from the named input and settings, then return PASS or BLOCKED with the exact missing evidence. Keep unresolved items OPEN.",
+        "notes": "De ontvanger leest eerst zelfstandig. Help pas nadat de ontbrekende bron of stap is benoemd.",
+        "dark": false,
+        "steps": [
+          "Give the note to a receiver.",
+          "Reproduce one finding.",
+          "Return PASS / BLOCKED."
+        ],
+        "expected": "An independent reproduction result with a clear gate decision.",
+        "check": "The receiver names the same source and outcome, or records why it is BLOCKED."
+      },
+      {
+        "title": "Duplicate case",
+        "kicker": "CASE · 13:15–14:00",
+        "subtitle": "Keep conflicting inputs visible while testing the checklist",
+        "cards": [
+          {
+            "title": "Read",
+            "body": "Use the duplicate ticket and both source rows from the pack"
+          },
+          {
+            "title": "Protect",
+            "body": "Do not delete, merge, or silently count a row twice"
+          },
+          {
+            "title": "Status",
+            "body": "Requirements/checklist lead; unresolved conflicts stay OPEN"
+          }
+        ],
+        "prompt": "Read the duplicate case in scenarios/ticket-agent/README.md. Run the bounded preview and show both source rows. Compare the requirements/checklist with the target, calculate only what the supplied inputs support, preserve Current/Desired, and record any disagreement as OPEN. Do not delete data or write to Jira.",
+        "notes": "Houd beide rijen zichtbaar. Een target is geen toestemming om data te verwijderen; bij conflict blijft de status OPEN.",
+        "dark": false,
+        "steps": [
+          "Read both source rows.",
+          "Run the bounded preview.",
+          "Apply the checklist.",
+          "Record OPEN conflicts."
+        ],
+        "expected": "A duplicate-case note that is transparent about evidence, uncertainty, and next ownership.",
+        "check": "No row was deleted, merged, or counted twice without evidence."
+      },
+      {
+        "title": "Peer review · evidence",
+        "kicker": "REVIEW · 14:10–15:00",
+        "subtitle": "Independently challenge the missing and duplicate findings",
+        "cards": [
+          {
+            "title": "Independent",
+            "body": "Review without reading the author’s explanation first"
+          },
+          {
+            "title": "Evidence",
+            "body": "Reproduce one missing and one duplicate check"
+          },
+          {
+            "title": "Decision",
+            "body": "PASS, BLOCKED, or OPEN with a named reason"
+          }
+        ],
+        "prompt": "Exchange the missing-case and duplicate-case notes. Review independently from the named inputs and settings, reproduce one check for each, and compare the result with the requirements/checklist. Return PASS or BLOCKED; record disagreements as OPEN.",
+        "notes": "Geen consensus door volume. Laat bewijs en checklist leiden; noteer hulpvragen en conflicten apart van de beoordeling.",
+        "dark": false,
+        "steps": [
+          "Read only the evidence.",
+          "Reproduce two checks.",
+          "Compare with checklist.",
+          "Record PASS / BLOCKED / OPEN."
+        ],
+        "expected": "Two independent review findings and an evidence packet ready for handoff.",
+        "check": "A reviewer can find both reproduction paths without the author narrating them."
+      },
+      {
+        "title": "Handoff",
+        "kicker": "HANDOFF · 15:10–15:40",
+        "subtitle": "Make the next action findable from the evidence packet",
+        "cards": [
+          {
+            "title": "State",
+            "body": "Before/after evidence, input, settings, target, and revision"
+          },
+          {
+            "title": "Controls",
+            "body": "Requirements/checklist, protected Current/Desired, OPEN conflicts"
+          },
+          {
+            "title": "Receiver",
+            "body": "Next owner, exact reproduction step, and acceptance gate"
+          }
+        ],
+        "prompt": "Draft a receiver-ready handoff from today’s packet. Include before/after evidence, input and settings, target, requirements/checklist, protected Current/Desired sections, unresolved conflicts as OPEN, next owner, and the exact reproduction step. Do not create or update a Jira ticket.",
+        "notes": "De ontvanger moet zonder mondelinge context kunnen starten. Teamlinks blijven OPEN als ze niet zijn aangeleverd.",
+        "dark": false,
+        "steps": [
+          "Assemble the evidence.",
+          "State controls and OPENs.",
+          "Name next owner.",
+          "Give the reproduction step."
+        ],
+        "expected": "A handoff another person can execute and review from the supplied files.",
+        "check": "A fresh reader finds the next action and gate within two minutes."
+      },
+      {
+        "title": "Close · before, after, next",
+        "kicker": "CLOSE · 15:40–16:00",
+        "subtitle": "Finish with evidence, independence, and a useful next practice",
+        "cards": [
+          {
+            "title": "Before / after",
+            "body": "What changed after one instruction, and what stayed constant?"
+          },
+          {
+            "title": "Independence",
+            "body": "Which check can you reproduce without the author?"
+          },
+          {
+            "title": "Help / practice",
+            "body": "What support or practice will make the next run stronger?"
+          }
+        ],
+        "prompt": "Complete the recap and individual check-in. Each person states the before/after evidence, one independently reproducible check, one remaining OPEN item, and whether the next step is help or practice. Revisit the opening blocker and record the next owner.",
+        "notes": "Sluit af met bewijs en een concrete volgende oefenstap. Leg geen fictieve ticketuitkomst of financiële recovery vast.",
+        "dark": true,
+        "steps": [
+          "State before / after.",
+          "Name an independent check.",
+          "Choose help or practice.",
+          "Revisit the blocker."
+        ],
+        "expected": "A truthful close with recap, open actions, and a next practice choice.",
+        "check": "No unsupported success claim remains; every uncertainty is sourced or OPEN."
       }
     ]
   },
