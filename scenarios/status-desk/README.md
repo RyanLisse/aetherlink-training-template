@@ -135,3 +135,17 @@ Acceptance checkboxes in tickets are intentionally unchecked. A participant
 or reviewer must run the stated command and record the actual output before
 marking one complete. If a command cannot run, record `OPEN` with the exact
 failure. Do not convert an expected sample into a claim.
+
+## Published GitHub training backlog
+
+| Scenario ticket | GitHub issue | Type |
+| --- | --- | --- |
+| SCN-001 | [#1](https://github.com/RyanLisse/aetherlink-training-template/issues/1) | Epic |
+| SCN-002 | [#2](https://github.com/RyanLisse/aetherlink-training-template/issues/2) | Story |
+| SCN-003 | [#3](https://github.com/RyanLisse/aetherlink-training-template/issues/3) | Story |
+| SCN-004 | [#4](https://github.com/RyanLisse/aetherlink-training-template/issues/4) | Story |
+| SCN-005 | [#5](https://github.com/RyanLisse/aetherlink-training-template/issues/5) | Bug |
+| SCN-006 | [#6](https://github.com/RyanLisse/aetherlink-training-template/issues/6) | Task |
+| SCN-007 | [#7](https://github.com/RyanLisse/aetherlink-training-template/issues/7) | Task |
+
+These issues are the shared training backlog. **Use this template copies files, not GitHub Issues.** For a new cohort, create tickets in its own repository from [tickets.json](tickets.json) or the [Markdown tickets](tickets/README.md). Record that cohort’s new URLs separately. Jira field mapping is available in [jira-mapping.md](jira-mapping.md); no Jira issues have been created.
