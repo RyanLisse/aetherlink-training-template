@@ -7,14 +7,16 @@ Worldline systems, contracts, SLAs, controls, or operating procedures.
 
 ## Outcome and boundary
 
-By the end of Day 2, a learner can compare the internal transaction ledger,
+Across five sessions, a learner learns to compare the internal transaction ledger,
 the PSP settlement file, and the bank credit file; classify five deliberately
 documented cases; calculate the expected batch net; and hand over an evidence-
 backed action list. The work is a local, read-only exercise. Learners may use
 an agent to draft a worksheet or a one-off script, but no coding is required.
 
 In scope: the three CSV fixtures in [`data/`](data/), the reconciliation rules,
-the learner guide, the answer key, and local ticket templates. Out of scope:
+the learner guide, the answer key, and local ticket templates.
+Sessions 1 and 2 are guided; sessions 3 to 5 build independent practice.
+Every session runs from 10:00 to 16:00. Out of scope:
 real payment or customer data, production access, credentials, network calls,
 FX, refunds, chargebacks, tax, scheme rules, automatic ticket creation, and
 any claim about a real merchant or PSP process.
@@ -34,7 +36,7 @@ is not an error.
 | [`data/psp-settlements.csv`](data/psp-settlements.csv) | Fictional PSP settlement rows | `settlement_id`, `transaction_id`, `psp_reference` |
 | [`data/bank-credits.csv`](data/bank-credits.csv) | Fictional bank credits by settlement batch | `bank_credit_id`, `batch_id`, `bank_reference` |
 | [`trainer-answer-key.md`](trainer-answer-key.md) | Facilitator-only worked arithmetic and case classifications | `EX-001`–`EX-005` |
-| [`learner-guide.md`](learner-guide.md) | Literal Day 1/Day 2 exercises and copyable prompts | `FIN-001`–`FIN-006` |
+| [`learner-guide.md`](learner-guide.md) | Five-session guides and copyable prompts | `FIN-001`–`FIN-006` |
 | [`tickets/`](tickets/) | Six local Markdown ticket templates | unchecked acceptance |
 
 All amounts are integer EUR minor units. For example, `12500` means EUR

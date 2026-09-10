@@ -2,14 +2,19 @@
 
 This small repository helps a cohort run a repeatable human-agent learning loop. It is a reusable template: files with `TEMPLATE` in the title contain prompts and empty fields, while files under `examples/` are explicitly fictional worked examples. Do not copy an example as evidence for a live session.
 
-## Guided training days · 09:00–16:00
+## Guided training sessions · 10:00–16:00
 
-Start with the [two-day programme](days/README.md). Each day includes a timed agenda, literal participant instructions, copy-ready prompts, expected outputs, checkpoints, and facilitator guidance.
+Start with the [five-session programme](days/README.md). Each session is six
+hours (360 minutes) and includes a timed agenda, literal participant
+instructions, copy-ready prompts, expected outputs, human gates, and reflection.
 
 | Day | Focus | Participant workbook | Interactive presentation |
 | --- | --- | --- | --- |
-| 1 | Intent → spec → plan → first working slice | [Day 1](days/day-1.md) | [Present day 1](https://aetherlink-training.ryanlisse.chatgpt.site/?day=1#1) |
-| 2 | Feedback → review → release rehearsal → next intent | [Day 2](days/day-2.md) | [Present day 2](https://aetherlink-training.ryanlisse.chatgpt.site/?day=2#1) |
+| 1 | Guided: intent, spec, plan, MOB, AI-native SDLC | [Day 1](days/day-1.md) | [Present day 1](https://aetherlink-training.ryanlisse.chatgpt.site/?day=1#1) |
+| 2 | Guided: context, skills, review, team workflow, release concepts | [Day 2](days/day-2.md) | [Present day 2](https://aetherlink-training.ryanlisse.chatgpt.site/?day=2#1) |
+| 3 | Coached: missing and duplicate cases | [Day 3](days/day-3.md) | [Present day 3](https://aetherlink-training.ryanlisse.chatgpt.site/?day=3#1) |
+| 4 | Peer-led: repeatable runbook and knowledge handoff | [Day 4](days/day-4.md) | [Present day 4](https://aetherlink-training.ryanlisse.chatgpt.site/?day=4#1) |
+| 5 | Independent transfer: declared synthetic variation | [Day 5](days/day-5.md) | [Present day 5](https://aetherlink-training.ryanlisse.chatgpt.site/?day=5#1) |
 
 Presentation access is managed separately through ChatGPT sign-in. The workbooks and [fictional Python training lab](training-lab/README.md) are available in this public repository. Releases and monitoring in the lab are local rehearsals with synthetic data, not production operations.
 
@@ -17,9 +22,9 @@ Keep the root `intent.md` for the training outcome; exercise artifacts live in `
 
 ## Scenario and training tickets
 
-Use the [Northstar Demo Support Desk scenario](scenarios/status-desk/README.md) to give the day exercises a shared story. It includes synthetic records, support requests, a monitoring fixture, role cards and a sequenced ticket backlog. Keep the original `training-lab/records.json` unchanged; the larger scenario dataset lives separately.
+The optional [Northstar Demo Support Desk scenario](scenarios/status-desk/README.md) remains available for a support cohort. The primary payment operations track uses the payment scenario below; do not mix tracks during a run.
 
-For payment operations teams, use the [daily payment reconciliation scenario](scenarios/payment-reconciliation/README.md). Compare a transaction ledger, PSP settlements, and bank credits; investigate exceptions and hand over an evidence-backed action list. This is a fictional training model, not a description of Worldline systems or policies.
+For payment operations teams, use the [payment reconciliation scenario](scenarios/payment-reconciliation/README.md) across all five sessions. Compare a transaction ledger, PSP settlements, and bank credits; investigate exceptions and hand over an evidence-backed action list. This is a fictional training model, not a description of Worldline systems or policies.
 
 The payment operations track uses the team's existing **GitLab, Jira, and Confluence** workflow. GitLab holds versioned files and merge-request review, Jira tracks investigations, and Confluence holds shared procedures and recaps. See the [team workflow](scenarios/payment-reconciliation/workflow.md). This public GitHub repository distributes the template; it does not require the team to move to GitHub.
 

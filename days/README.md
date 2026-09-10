@@ -1,42 +1,49 @@
-# Daily guides
+# Five session guides
 
-These guides are a public-safe adaptation of the AI-Native SDLC playbook for a two-day AetherLink training lab. They are not official course material. The course pages and lesson text were publicly read for mapping; videos and audio were not watched or listened to.
+This public-safe programme adapts the AI-native SDLC playbook to a fictional
+payment reconciliation exercise. It runs five sessions, each 10:00–16:00,
+with the same exact 360-minute schedule. Videos and audio were not watched or
+listened to; source URLs are preserved in the first two guides.
 
-## Participant setup
+## Progression
 
-For the Worldline payment operations track, start with the [GitLab, Jira, and Confluence setup](../scenarios/payment-reconciliation/workflow.md) instead of the GitHub setup below. Use the remaining daily timeboxes with the scenario-specific exercises.
+1. [Day 1](day-1.md) — guided framing: ledger/PSP/bank concepts, agent
+   context, intent, spec, plan, MOB programming, SDLC loop, and evidence.
+2. [Day 2](day-2.md) — guided repeatability: `CLAUDE.md`, skills, handoffs,
+   independent review, tests versus evaluations, GitLab/Jira/Confluence, and
+   conceptual release controls.
+3. [Day 3](day-3.md) — coached missing and duplicate settlement cases.
+4. [Day 4](day-4.md) — peer-led repeatable runbook and knowledge handoff.
+5. [Day 5](day-5.md) — independent transfer to a declared synthetic variation.
 
-1. On GitHub, choose **Use this template** for RyanLisse/aetherlink-training-template and create your own repository.
-2. Clone the created repository:
+Days 1 and 2 explain all concepts needed for the practice. Later sessions use
+the same vocabulary and rules with graduated support; no new concepts are
+required. The primary scenario is [payment reconciliation](../scenarios/payment-reconciliation/README.md).
 
-       git clone <url-of-your-created-repository>
+## Shared MOB and evidence rule
 
-3. Change into the actual cloned repository, then verify Python and create notes:
+Work in groups of three to five on one screen and one shared task. Name a
+facilitator/timekeeper and reviewer. Rotate driver and navigator every 5–7
+minutes. The driver operates the agent, while humans decide scope and gates.
+Anyone may say “pause” to restate the source, assumption, or decision. Every
+exercise has a trainer explanation or clarification, a literal prompt, an
+observable check, and a human gate. Record actual commands, source IDs,
+revision, and open questions; use `OPEN` for unavailable team links.
 
-       cd <actual-cloned-repository>
-       python3 --version
-       mkdir -p lab-notes
+## Setup
 
-4. Open the repository root as the agent context. Read intent.md, progress.md, the applicable day guide, and training-lab/README.md.
-5. Keep the shared training intent at root. Day exercise artifacts belong in lab-notes/intent.md, lab-notes/spec.md, and lab-notes/plan.md.
+From the repository root:
 
-All commands in the guides run from the repository root. Use local Git checkpoints after the named human gate; do not push as part of the exercise. A local release rehearsal is not deployment evidence.
+```sh
+python3 --version
+mkdir -p lab-notes
+```
 
-## Guides
+Read `intent.md`, `progress.md`, the applicable day guide, and the payment
+scenario README. For the scenario validator, change into
+`scenarios/payment-reconciliation` first and paste the exact command from its
+README. Do not push or publish as part of these exercises.
 
-- [Day 1 — From intent to a tested first change](day-1.md)
-- [Day 2 — Institutionalise, review, and close the loop](day-2.md)
+## Daily opening and close
 
-## Shared scenario
-
-Use [Northstar Demo Support Desk](../scenarios/status-desk/README.md) for the mock requests, role cards and ticket sequence. Follow its day-to-ticket mapping alongside these timeboxes; it adds context to the exercises rather than a third training day.
-
-## Payment operations alternative
-
-For a FinOps cohort working on payments and reconciliation, choose the [payment reconciliation scenario](../scenarios/payment-reconciliation/README.md). Keep the 09:00–16:00 timeboxes and opening/closing routines. Use its exercise mapping in place of the support-desk domain tasks; the Python status-lab commands belong to the original track. Agree on one track before starting.
-
-For this track, follow the [GitLab, Jira, and Confluence workflow](../scenarios/payment-reconciliation/workflow.md). Use an approved training repository, Jira project, and Confluence space. If these are unavailable, keep the same artifacts locally and record destination links as `OPEN`.
-
-## Source map
-
-The guides map all 14 lessons: Introduction; Capture as intent.md; Requirements and design; Plan mode; CLAUDE.md; Skills as institutional knowledge; Parallel sessions and subagents; Feedback loop; Continuous evals in CI; AI in the PR review loop; Hooks as approval gates; CI/CD integration and deployment; Closing the loop on metrics; and Closing thoughts and resources. The first four are practiced directly; later deployment, eval, and hook material is marked as applied or advanced overview where the lab does not implement it. See each guide for canonical links.
+At 10:00, run a short Kahoot retrieval question and wordcloud: "Which step blocks you today?" Cluster the answers and choose one blocker to revisit at the close. At 15:40, each participant names one reproduced result, one uncertainty, and a next action. Finish with the mob reflection and a dated recap; record a reusable knowledge note only when its evidence has been reviewed.
