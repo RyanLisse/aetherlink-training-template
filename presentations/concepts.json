@@ -503,6 +503,138 @@
         "expected": "A decision per participant with a quoted reason.",
         "check": "No decision claims an unobserved run."
       }
+    },
+    "hooks": {
+      "name": "Hooks",
+      "definition": {
+        "title": "What is a hook?",
+        "subtitle": "A skill is an advisory control; a hook is the deterministic layer behind it.",
+        "cards": [
+          {
+            "title": "SKILL VS HOOK",
+            "body": "The ticket-refinement skill you built on days 1–2 advises. A hook runs on every matching action and holds without exception."
+          },
+          {
+            "title": "WHERE IT FIRES",
+            "body": "Most of Claude's actions are file edits and shell commands during the build, so build-phase hooks fire most often. Keep them fast and scoped to the file that changed."
+          },
+          {
+            "title": "WHAT IT DOES",
+            "body": "Block edits to protected paths, run the formatter and linter after an edit, keep credentials out of the diff."
+          }
+        ],
+        "prompt": "Read the definition. Ask: which rule in our ticket-refinement skill must hold without exception? That rule is a hook, the rest stays advisory.",
+        "steps": [
+          "Name one rule from your skill that must never be skipped."
+        ],
+        "expected": "The room can separate advisory from deterministic.",
+        "check": "Everyone can say why that rule is a hook and not a skill."
+      },
+      "visual": {
+        "title": "Hooks · see the guardrail",
+        "subtitle": "Every matching action passes through the hook: block, fix or allow.",
+        "image": "hooks-guardrails.svg",
+        "imageAlt": "A skill feeds a hook box; each action leaves as block, fix or allow. Below, build, commit/PR and deploy show where hooks, the test suite and human approval live.",
+        "imageCaption": "Hooks live in the build. The full test suite belongs at the commit or PR. Human approval belongs at the deploy gate, because a prompt during the build stalls every parallel session.",
+        "prompt": "Trace one file edit through the hook. Then point at where the full test suite lives and where the human approval lives, and say why neither belongs in the build loop.",
+        "steps": [
+          "Trace one file edit through the diagram."
+        ],
+        "expected": "Everyone can place block, fix and allow.",
+        "check": "Nobody puts a human approval prompt inside the build loop."
+      },
+      "usage": {
+        "title": "Hooks · how we use it",
+        "subtitle": "One policy from your skill becomes a hook; everything heavy moves to a later gate.",
+        "cards": [
+          {
+            "title": "IN THE LAB",
+            "body": "The read-only ticket-coach: a hook blocks any Write outside participant-output/. The run log shows the block."
+          },
+          {
+            "title": "IN YOUR REPO",
+            "body": "Formatter and linter after each edit, protected generated classes, a secret scan on the diff. Checked into git so every session gets them."
+          },
+          {
+            "title": "NOT A HOOK",
+            "body": "The full test suite runs at the commit or PR. A human approval prompt belongs at the deploy gate."
+          }
+        ],
+        "prompt": "Let everyone pick one rule from the skill they built, decide hook or skill, and name the stage where it runs. Collect the hooks on the board.",
+        "steps": [
+          "Pick one rule from your skill.",
+          "Decide: hook or skill.",
+          "Name the stage where it runs."
+        ],
+        "expected": "Every participant has one rule classified as hook or skill, with a stage.",
+        "check": "No hook on the board runs the full test suite or asks a human for approval."
+      }
+    },
+    "subagents": {
+      "name": "Subagents",
+      "definition": {
+        "title": "What are parallel sessions and subagents?",
+        "subtitle": "One engineer drives several streams of work at once.",
+        "cards": [
+          {
+            "title": "PARALLEL SESSION",
+            "body": "Another full Claude Code instance on a separate task in its own git worktree. Sessions know nothing about each other; the engineer is the only thing they share."
+          },
+          {
+            "title": "SUBAGENT",
+            "body": "A scoped helper inside one session with its own context window and tool limits. Suits jobs that recur across tasks, such as verifying the app runs."
+          },
+          {
+            "title": "THE ENGINEER'S JOB",
+            "body": "Steering and reviewing all of them. The ceiling is how many streams one person can review properly."
+          }
+        ],
+        "prompt": "Say one sentence per card. Ask: where does the ticket-coach subagent from the lab fit, and what would a second session work on?",
+        "steps": [
+          "Say session versus subagent in one sentence each."
+        ],
+        "expected": "The room can tell a session from a subagent.",
+        "check": "Everyone can say the difference between a parallel session and a subagent in one sentence."
+      },
+      "visual": {
+        "title": "Subagents · see the streams",
+        "subtitle": "Sessions in their own worktrees; subagents inside a session; governance from the repo.",
+        "image": "parallel-sessions-subagents.svg",
+        "imageAlt": "An engineer steers three sessions, each in its own worktree; one session delegates to verifier, researcher and simplifier subagents; a governance bar names CLAUDE.md, hooks and permissions.",
+        "imageCaption": "Traditional: one engineer, one task, waiting on builds. AI-native: several sessions in flight, repeated jobs as subagents, the engineer orchestrating.",
+        "prompt": "Point at the engineer, one session, one subagent and the governance bar. Ask: what does every session read first? (CLAUDE.md.) What do sessions never share? (Each other's context.)",
+        "steps": [
+          "Point at what every session shares."
+        ],
+        "expected": "Everyone can point at the shared layer.",
+        "check": "Everyone can name what every session reads first and what sessions never share."
+      },
+      "usage": {
+        "title": "Subagents · how we use it",
+        "subtitle": "Split by files, one worktree per task, repeated jobs as checked-in subagents.",
+        "cards": [
+          {
+            "title": "SPLIT THE WORK",
+            "body": "Tasks that touch different files get their own worktree: claude --worktree feature-auth. Tasks that share files run in one session, one after another. Start with two or three."
+          },
+          {
+            "title": "TURN REPEATS INTO SUBAGENTS",
+            "body": "A markdown file in .claude/agents/ with a name, when to use it, and the tools it may touch: verifier, researcher, simplifier. Check them into git."
+          },
+          {
+            "title": "GOVERN FROM THE REPO",
+            "body": "CLAUDE.md, hooks and permission settings apply to every session; output is logged and attributed. Measure sessions per engineer while review quality holds, and merged changes against rework."
+          }
+        ],
+        "prompt": "Open .claude/agents/ticket-coach.md in the lab: name, description, tools. Show the verifier example: 'Start the app, exercise the changed behaviour and the two nearest flows, report what you ran and saw, do not fix anything.' Ask each participant which repeated job they would make a subagent and which task they would run in a second worktree.",
+        "steps": [
+          "Open the ticket-coach subagent definition.",
+          "Name one repeated job for a subagent and its tools.",
+          "Name one task for a second worktree."
+        ],
+        "expected": "Every participant has one subagent idea with its tools and one parallel task.",
+        "check": "No subagent on the board has more tools than its job needs."
+      }
     }
   },
   "placements": {
@@ -531,18 +663,6 @@
         {
           "after": "Welcome back · AI-native SDLC",
           "concept": "sdlc"
-        },
-        {
-          "after": "The same rhythm every day",
-          "concept": "agentic-loop"
-        },
-        {
-          "after": "Scenario and evidence rule",
-          "concept": "evidence-rule"
-        },
-        {
-          "after": "Evidence rule · how we use it",
-          "concept": "mob"
         }
       ],
       "day4": [
@@ -562,11 +682,15 @@
       "day5": [
         {
           "after": "Day 5 route",
-          "concept": "agentic-loop"
+          "concept": "one-contract"
         },
         {
-          "after": "The agentic loop · how we use it",
-          "concept": "one-contract"
+          "after": "One contract · how we use it",
+          "concept": "hooks"
+        },
+        {
+          "after": "Hooks · how we use it",
+          "concept": "subagents"
         }
       ]
     },
@@ -597,6 +721,14 @@
         {
           "after": "Claude Code harness",
           "concept": "one-contract"
+        },
+        {
+          "after": "One contract · how we use it",
+          "concept": "hooks"
+        },
+        {
+          "after": "Hooks · how we use it",
+          "concept": "subagents"
         }
       ],
       "day5": [
@@ -697,6 +829,33 @@
         "title": "Individual · rewrite and checks",
         "set": {
           "kicker": "11:10–11:25 · INDIVIDUAL · 15 MIN"
+        }
+      },
+      {
+        "day": "day3",
+        "title": "Welcome back · AI-native SDLC",
+        "set": {
+          "subtitle": "Days 1–2 you built a ticket-refinement skill. Today we name the loop it lives in, before we build an agent."
+        }
+      },
+      {
+        "day": "day5",
+        "title": "Welcome back · Claude Code agent",
+        "set": {
+          "cards": [
+            {
+              "title": "Yesterday",
+              "body": "n8n baseline, checked output and human gate"
+            },
+            {
+              "title": "Today",
+              "body": "Claude Code build, hooks as guardrails, subagents, evaluator and reproducible handoff"
+            },
+            {
+              "title": "Boundary",
+              "body": "Read-only tools; optional E2E only after the core gate"
+            }
+          ]
         }
       }
     ]

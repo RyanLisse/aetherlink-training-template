@@ -1128,7 +1128,7 @@
       {
         "title": "Welcome back · AI-native SDLC",
         "kicker": "WAVE 2 · SQUAD 1 · DAY 3 · 10:00–10:15",
-        "subtitle": "Today we make the route visible before we build an agent",
+        "subtitle": "Days 1–2 you built a ticket-refinement skill. Today we name the loop it lives in, before we build an agent.",
         "cards": [
           {
             "title": "Outcome",
@@ -1311,96 +1311,6 @@
         "check": "The opening, lunch, both breaks, and close match the Day 3 guide."
       },
       {
-        "title": "What is an agent?",
-        "kicker": "CONCEPT DEFINITION · AGENTIC LOOP",
-        "subtitle": "A model in a loop with a goal, tools, feedback, authority and memory. The model matters; the loop turns language into work.",
-        "cards": [],
-        "prompt": "Say one sentence per pillar. A model predicts text. Give it a goal, tools, feedback and a boundary and it becomes an agent. A subagent is an agent another agent delegates to, with its own context.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Say model, chat, agent, subagent in one sentence each."
-        ],
-        "expected": "The room can say model, chat, agent, subagent in one sentence each.",
-        "check": "Nobody calls the model itself the agent.",
-        "layout": "pillars",
-        "items": [
-          {
-            "label": "Model",
-            "caption": "reasons and predicts"
-          },
-          {
-            "label": "Goal",
-            "caption": "the contract"
-          },
-          {
-            "label": "Tools",
-            "caption": "read, act, check"
-          },
-          {
-            "label": "Feedback",
-            "caption": "tool results feed the next step"
-          },
-          {
-            "label": "Authority",
-            "caption": "what it may not do"
-          },
-          {
-            "label": "Memory",
-            "caption": "CLAUDE.md, run log"
-          }
-        ],
-        "tagline": "DEBUG THE SYSTEM — NOT THE MYTH"
-      },
-      {
-        "title": "The agentic loop · see the loop",
-        "kicker": "VISUAL · AGENTIC LOOP",
-        "subtitle": "Gather context → take action → verify results, repeat until done, interrupt at any point.",
-        "cards": [],
-        "prompt": "Point at the three phases, the repeat arrow and the human interrupt. Map each phase to this morning's ticket-coach: read the ticket, draft the packet, check against the contract.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Point at the three phases and the human interrupt."
-        ],
-        "expected": "Everyone can point at gather, act, verify and the interrupt.",
-        "check": "Everyone can point at the three phases, the repeat and the human interrupt.",
-        "layout": "image",
-        "image": "agentic-loop.svg",
-        "imageAlt": "Your prompt enters a loop of gather, act and verify that repeats until done; a human box can interrupt, steer or add context at any point.",
-        "imageCaption": "Models reason, tools act, the harness holds the loop. The loop ends at a human gate, never at \"done\" by itself."
-      },
-      {
-        "title": "The agentic loop · how we use it",
-        "kicker": "HOW WE USE IT · AGENTIC LOOP",
-        "subtitle": "Read the trace, not the prose: each loop turn leaves a tool call you can check.",
-        "cards": [
-          {
-            "title": "BOUND THE TASK",
-            "body": "One ticket, one contract, one boundary in the prompt. The agent must be able to stop."
-          },
-          {
-            "title": "WATCH THE LOOP",
-            "body": "n8n shows execution steps; Claude Code shows tool calls. A Calculator or Read call is an action. Reasoning alone is not."
-          },
-          {
-            "title": "INTERRUPT ON PURPOSE",
-            "body": "Steer, add context or stop when the loop drifts. The loop ends at a human gate."
-          }
-        ],
-        "prompt": "Open the demo trace. Let everyone point at one real tool call, name the boundary in the prompt, and say where they would interrupt.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Point at one real tool call in the demo trace.",
-          "Name the boundary in the prompt.",
-          "Say where you would interrupt."
-        ],
-        "expected": "Everyone can find one tool call in a trace.",
-        "check": "No one claims a result the trace does not show.",
-        "layout": "cards"
-      },
-      {
         "title": "Scenario and evidence rule",
         "kicker": "CONTEXT",
         "subtitle": "Compare three fictional sources at one named cutoff",
@@ -1428,159 +1338,6 @@
         ],
         "expected": "Source roles and cutoff are understood.",
         "check": "Fictional and local boundaries are explicit."
-      },
-      {
-        "title": "What is the evidence rule?",
-        "kicker": "CONCEPT DEFINITION · EVIDENCE RULE",
-        "subtitle": "A claim counts only with a source, a reproduced check and a reviewer.",
-        "cards": [
-          {
-            "title": "CLAIM",
-            "body": "What you say happened, in one sentence."
-          },
-          {
-            "title": "SOURCE + CHECK",
-            "body": "A row id or file at the cutoff, and the command, calculation or sheet that reproduces it."
-          },
-          {
-            "title": "REVIEWER",
-            "body": "Someone else reran it. Without all three it is a hypothesis and stays OPEN."
-          }
-        ],
-        "prompt": "Read the rule out loud. Ask: what is the difference between a claim and a hypothesis? Ask: why is \"it looked right\" not evidence?",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Name the three parts of evidence."
-        ],
-        "expected": "The room can separate a claim from evidence.",
-        "check": "Everyone can say why \"it looked right\" is not evidence.",
-        "layout": "cards"
-      },
-      {
-        "title": "Evidence rule · see the ladder",
-        "kicker": "VISUAL · EVIDENCE RULE",
-        "subtitle": "A claim only counts with a source, a reproduced check and a reviewer.",
-        "cards": [],
-        "prompt": "Walk the four steps left to right. Ask: which step is usually skipped? Let one participant place a claim from the demo on the ladder.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Place one claim from today on the ladder."
-        ],
-        "expected": "Everyone can place a claim on the right step.",
-        "check": "Everyone can place a claim from today on the right step of the ladder.",
-        "layout": "image",
-        "image": "evidence-rule.svg",
-        "imageAlt": "Four steps: claim, source, reproduced check, reviewer; a dashed hypothesis box below; a cutoff stamp.",
-        "imageCaption": "Claim → source → reproduced check → reviewer. Anything short of that stays a hypothesis and is marked OPEN."
-      },
-      {
-        "title": "Evidence rule · how we use it",
-        "kicker": "HOW WE USE IT · EVIDENCE RULE",
-        "subtitle": "Every result today carries its evidence line or the word OPEN.",
-        "cards": [
-          {
-            "title": "IN THE EVIDENCE LOG",
-            "body": "One line per result: claim · source id · command or sheet · reviewer · PASS / FAIL / OPEN."
-          },
-          {
-            "title": "IN THE AGENT'S OUTPUT",
-            "body": "Ask for source ids and the check in the answer. No source, no claim."
-          },
-          {
-            "title": "AT THE HUMAN GATE",
-            "body": "The reviewer reruns one check before accepting. Unrun checks stay OPEN, never \"probably fine\"."
-          }
-        ],
-        "prompt": "Open the evidence log template. Write one evidence line for the demo result together, then let everyone mark one thing OPEN on purpose.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Open the evidence log template.",
-          "Write one evidence line for the demo result.",
-          "Mark one thing OPEN on purpose."
-        ],
-        "expected": "Everyone has written one complete evidence line.",
-        "check": "No evidence line is missing a source or a reviewer.",
-        "layout": "cards"
-      },
-      {
-        "title": "What is MOB programming?",
-        "kicker": "CONCEPT DEFINITION · MOB PROGRAMMING",
-        "subtitle": "One task, one screen, one human driver; the group navigates and rotates.",
-        "cards": [
-          {
-            "title": "GROUP",
-            "body": "3–4 people on one shared task and one screen."
-          },
-          {
-            "title": "ROLES",
-            "body": "Driver types, navigator directs, skeptic asks for source ids, scribe records the decision. Rotate every 5–7 minutes."
-          },
-          {
-            "title": "AI IN THE MOB",
-            "body": "The tool suggests. Humans direct, say \"pause\" on uncertainty, and decide."
-          }
-        ],
-        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, the skeptic asks for source ids, the scribe records the decision. Rotate the driver once.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Name the four roles.",
-          "Say the pause rule."
-        ],
-        "expected": "The room can name the roles and the pause rule.",
-        "check": "Participants can name driver, navigator, skeptic and scribe.",
-        "layout": "cards"
-      },
-      {
-        "title": "MOB programming · see the roles",
-        "kicker": "VISUAL · MOB PROGRAMMING",
-        "subtitle": "One laptop, one screen, everyone in a role; rotate every five to seven minutes.",
-        "cards": [],
-        "prompt": "Point at each role. Ask: who is driver first, who calls the rotation, and who says \"pause\" first?",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Name your first driver and navigator."
-        ],
-        "expected": "Every group can point at its four roles.",
-        "check": "Everyone can say who asks for source ids and who records the decision.",
-        "layout": "image",
-        "image": "mob-programming.svg",
-        "imageAlt": "Four roles on one chain: driver, navigator, skeptic, scribe, with a rotate-every-5-to-7-minutes callout and one shared laptop.",
-        "imageCaption": "Driver types what the navigator says. Skeptic asks for source ids, scribe records the decision. A human decides at every gate."
-      },
-      {
-        "title": "MOB programming · how we use it",
-        "kicker": "HOW WE USE IT · MOB PROGRAMMING",
-        "subtitle": "Every guided exercise today runs as a mob with a visible timer.",
-        "cards": [
-          {
-            "title": "START",
-            "body": "Facilitator states one task. First driver and navigator are named before the timer starts."
-          },
-          {
-            "title": "ROTATE",
-            "body": "Every 5–7 minutes the driver changes. Remote participants rotate too; the navigator reads chat aloud."
-          },
-          {
-            "title": "PAUSE",
-            "body": "Anyone says \"pause\" when a source, assumption or claim is unclear. The scribe records the decision."
-          }
-        ],
-        "prompt": "Let each group name its first driver and navigator, set the rotation timer, and agree who says \"pause\" first. Do not start the exercise before that.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Name your first driver and navigator.",
-          "Set the rotation timer.",
-          "Agree who says \"pause\" first."
-        ],
-        "expected": "Every group has named roles before the first exercise.",
-        "check": "No group starts an exercise without a named driver and a running timer.",
-        "layout": "cards"
       },
       {
         "title": "Trainer demo · intent to plan",
@@ -2369,6 +2126,128 @@
         "tagline": "A BLOCKED CREDENTIAL IS AN ACCESS RESULT — NOT AN AGENT RUN"
       },
       {
+        "title": "Individual · improve one instruction",
+        "kicker": "PRACTICE · 13:00–13:20 · 20 MIN",
+        "subtitle": "One change, two runs, the difference recorded",
+        "cards": [
+          {
+            "title": "Goal",
+            "body": "One change, two runs, the difference recorded"
+          },
+          {
+            "title": "Input",
+            "body": "Your morning run · the contract · the run log"
+          },
+          {
+            "title": "Result",
+            "body": "Two traces and outputs with exactly one instruction changed"
+          }
+        ],
+        "prompt": "Change one instruction in the n8n AI Agent system message, rerun TICKET-OPS-101, and compare traces. Record the change and the observed difference; unrun checks stay OPEN.",
+        "notes": "Timebox zichtbaar houden; OPEN noteren voor checks die niet gedraaid zijn.",
+        "dark": false,
+        "steps": [
+          "Improve exactly one instruction in the system message.",
+          "Rerun on TICKET-OPS-101.",
+          "Compare the two traces and outputs.",
+          "Record what changed."
+        ],
+        "expected": "Two runs with one difference, both recorded.",
+        "check": "Only one instruction changed between run one and run two.",
+        "layout": "exercise"
+      },
+      {
+        "title": "Individual · evidence for the run",
+        "kicker": "PRACTICE · 13:20–14:00 · 40 MIN",
+        "subtitle": "An evidence line per run, OPEN where a check did not run",
+        "cards": [
+          {
+            "title": "Goal",
+            "body": "An evidence line per run, OPEN where a check did not run"
+          },
+          {
+            "title": "Input",
+            "body": "Both runs · the ticket contract · the evidence log template"
+          },
+          {
+            "title": "Result",
+            "body": "Evidence lines with source, check and reviewer"
+          }
+        ],
+        "prompt": "Check the output against the ticket contract: identity, protected sections, citations, scenarios, assumptions. Write one evidence line per run: claim, source id, command or sheet, reviewer, PASS / FAIL / OPEN.",
+        "notes": "Timebox zichtbaar houden; OPEN noteren voor checks die niet gedraaid zijn.",
+        "dark": false,
+        "steps": [
+          "Check ticket identity and the protected Current/Desired sections.",
+          "Check source citations and at least two positive and two negative scenarios.",
+          "Mark assumptions and OPEN labels.",
+          "Write the evidence line: claim, source, check, reviewer."
+        ],
+        "expected": "An evidence line per run with OPEN where a check did not run.",
+        "check": "No evidence line claims a check that was not run.",
+        "layout": "exercise"
+      },
+      {
+        "title": "Individual · handoff and rerun",
+        "kicker": "PRACTICE · 14:15–15:05 · 50 MIN",
+        "subtitle": "A handoff a neighbour reproduces without asking you",
+        "cards": [
+          {
+            "title": "Goal",
+            "body": "A handoff a neighbour reproduces without asking you"
+          },
+          {
+            "title": "Input",
+            "body": "templates/handoff.md · your best run · a neighbour"
+          },
+          {
+            "title": "Result",
+            "body": "A reproduced run or every difference on the board"
+          }
+        ],
+        "prompt": "Complete templates/handoff.md with exact prompt, settings, command, output path, checker result and trace. Swap with a neighbour who reruns it from the handoff alone; record every difference.",
+        "notes": "Timebox zichtbaar houden; OPEN noteren voor checks die niet gedraaid zijn.",
+        "dark": false,
+        "steps": [
+          "Complete templates/handoff.md: prompt, settings, command, output path, checker line, trace.",
+          "Swap with a neighbour.",
+          "The neighbour reruns from the handoff alone.",
+          "Record the differences as OPEN or PASS."
+        ],
+        "expected": "A handoff a neighbour reproduced without asking you.",
+        "check": "The neighbour's rerun matches, or every difference is on the board.",
+        "layout": "exercise"
+      },
+      {
+        "title": "MOB transfer · what would we automate next?",
+        "kicker": "TRANSFER · 15:05–15:25 · 20 MIN",
+        "subtitle": "From today's runs to tomorrow's rebuild in Claude Code",
+        "cards": [
+          {
+            "title": "Repeat",
+            "body": "One job you did more than once today"
+          },
+          {
+            "title": "Guard",
+            "body": "One rule that must hold without exception"
+          },
+          {
+            "title": "Tomorrow",
+            "body": "The same functional contract, rebuilt in Claude Code"
+          }
+        ],
+        "prompt": "As a mob: name one repeated job from today, one rule that must hold without exception, and what tomorrow rebuilds in Claude Code. Park anything else as OPEN.",
+        "notes": "Timebox zichtbaar houden; OPEN noteren voor checks die niet gedraaid zijn.",
+        "dark": false,
+        "steps": [
+          "Name one repeated job from today.",
+          "Name one rule that must hold without exception.",
+          "Say what tomorrow rebuilds in Claude Code."
+        ],
+        "expected": "Three sentences on the board: repeat, guard, tomorrow.",
+        "check": "The guard sentence names a rule, not a wish."
+      },
+      {
         "title": "Recap",
         "kicker": "RECAP · 15:25–15:40",
         "subtitle": "One sentence per concept, from the room",
@@ -2451,7 +2330,7 @@
           },
           {
             "title": "Today",
-            "body": "Claude Code build, evaluator and reproducible handoff"
+            "body": "Claude Code build, hooks as guardrails, subagents, evaluator and reproducible handoff"
           },
           {
             "title": "Boundary",
@@ -2544,96 +2423,6 @@
         "tagline": "SAME RHYTHM · INDIVIDUAL FIRST · GROUPS AFTER"
       },
       {
-        "title": "What is an agent?",
-        "kicker": "CONCEPT DEFINITION · AGENTIC LOOP",
-        "subtitle": "A model in a loop with a goal, tools, feedback, authority and memory. The model matters; the loop turns language into work.",
-        "cards": [],
-        "prompt": "Say one sentence per pillar. A model predicts text. Give it a goal, tools, feedback and a boundary and it becomes an agent. A subagent is an agent another agent delegates to, with its own context.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Say model, chat, agent, subagent in one sentence each."
-        ],
-        "expected": "The room can say model, chat, agent, subagent in one sentence each.",
-        "check": "Nobody calls the model itself the agent.",
-        "layout": "pillars",
-        "items": [
-          {
-            "label": "Model",
-            "caption": "reasons and predicts"
-          },
-          {
-            "label": "Goal",
-            "caption": "the contract"
-          },
-          {
-            "label": "Tools",
-            "caption": "read, act, check"
-          },
-          {
-            "label": "Feedback",
-            "caption": "tool results feed the next step"
-          },
-          {
-            "label": "Authority",
-            "caption": "what it may not do"
-          },
-          {
-            "label": "Memory",
-            "caption": "CLAUDE.md, run log"
-          }
-        ],
-        "tagline": "DEBUG THE SYSTEM — NOT THE MYTH"
-      },
-      {
-        "title": "The agentic loop · see the loop",
-        "kicker": "VISUAL · AGENTIC LOOP",
-        "subtitle": "Gather context → take action → verify results, repeat until done, interrupt at any point.",
-        "cards": [],
-        "prompt": "Point at the three phases, the repeat arrow and the human interrupt. Map each phase to this morning's ticket-coach: read the ticket, draft the packet, check against the contract.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Point at the three phases and the human interrupt."
-        ],
-        "expected": "Everyone can point at gather, act, verify and the interrupt.",
-        "check": "Everyone can point at the three phases, the repeat and the human interrupt.",
-        "layout": "image",
-        "image": "agentic-loop.svg",
-        "imageAlt": "Your prompt enters a loop of gather, act and verify that repeats until done; a human box can interrupt, steer or add context at any point.",
-        "imageCaption": "Models reason, tools act, the harness holds the loop. The loop ends at a human gate, never at \"done\" by itself."
-      },
-      {
-        "title": "The agentic loop · how we use it",
-        "kicker": "HOW WE USE IT · AGENTIC LOOP",
-        "subtitle": "Read the trace, not the prose: each loop turn leaves a tool call you can check.",
-        "cards": [
-          {
-            "title": "BOUND THE TASK",
-            "body": "One ticket, one contract, one boundary in the prompt. The agent must be able to stop."
-          },
-          {
-            "title": "WATCH THE LOOP",
-            "body": "n8n shows execution steps; Claude Code shows tool calls. A Calculator or Read call is an action. Reasoning alone is not."
-          },
-          {
-            "title": "INTERRUPT ON PURPOSE",
-            "body": "Steer, add context or stop when the loop drifts. The loop ends at a human gate."
-          }
-        ],
-        "prompt": "Open the demo trace. Let everyone point at one real tool call, name the boundary in the prompt, and say where they would interrupt.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Point at one real tool call in the demo trace.",
-          "Name the boundary in the prompt.",
-          "Say where you would interrupt."
-        ],
-        "expected": "Everyone can find one tool call in a trace.",
-        "check": "No one claims a result the trace does not show.",
-        "layout": "cards"
-      },
-      {
         "title": "What is \"one contract, two platforms\"?",
         "kicker": "CONCEPT DEFINITION · ONE CONTRACT, TWO PLATFORMS",
         "subtitle": "Same functional contract and input on n8n and Claude Code; only the harness and its adapter differ.",
@@ -2719,6 +2508,158 @@
             "foot": "Terminal harness"
           }
         ]
+      },
+      {
+        "title": "What is a hook?",
+        "kicker": "CONCEPT DEFINITION · HOOKS",
+        "subtitle": "A skill is an advisory control; a hook is the deterministic layer behind it.",
+        "cards": [
+          {
+            "title": "SKILL VS HOOK",
+            "body": "The ticket-refinement skill you built on days 1–2 advises. A hook runs on every matching action and holds without exception."
+          },
+          {
+            "title": "WHERE IT FIRES",
+            "body": "Most of Claude's actions are file edits and shell commands during the build, so build-phase hooks fire most often. Keep them fast and scoped to the file that changed."
+          },
+          {
+            "title": "WHAT IT DOES",
+            "body": "Block edits to protected paths, run the formatter and linter after an edit, keep credentials out of the diff."
+          }
+        ],
+        "prompt": "Read the definition. Ask: which rule in our ticket-refinement skill must hold without exception? That rule is a hook, the rest stays advisory.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name one rule from your skill that must never be skipped."
+        ],
+        "expected": "The room can separate advisory from deterministic.",
+        "check": "Everyone can say why that rule is a hook and not a skill.",
+        "layout": "cards"
+      },
+      {
+        "title": "Hooks · see the guardrail",
+        "kicker": "VISUAL · HOOKS",
+        "subtitle": "Every matching action passes through the hook: block, fix or allow.",
+        "cards": [],
+        "prompt": "Trace one file edit through the hook. Then point at where the full test suite lives and where the human approval lives, and say why neither belongs in the build loop.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Trace one file edit through the diagram."
+        ],
+        "expected": "Everyone can place block, fix and allow.",
+        "check": "Nobody puts a human approval prompt inside the build loop.",
+        "layout": "image",
+        "image": "hooks-guardrails.svg",
+        "imageAlt": "A skill feeds a hook box; each action leaves as block, fix or allow. Below, build, commit/PR and deploy show where hooks, the test suite and human approval live.",
+        "imageCaption": "Hooks live in the build. The full test suite belongs at the commit or PR. Human approval belongs at the deploy gate, because a prompt during the build stalls every parallel session."
+      },
+      {
+        "title": "Hooks · how we use it",
+        "kicker": "HOW WE USE IT · HOOKS",
+        "subtitle": "One policy from your skill becomes a hook; everything heavy moves to a later gate.",
+        "cards": [
+          {
+            "title": "IN THE LAB",
+            "body": "The read-only ticket-coach: a hook blocks any Write outside participant-output/. The run log shows the block."
+          },
+          {
+            "title": "IN YOUR REPO",
+            "body": "Formatter and linter after each edit, protected generated classes, a secret scan on the diff. Checked into git so every session gets them."
+          },
+          {
+            "title": "NOT A HOOK",
+            "body": "The full test suite runs at the commit or PR. A human approval prompt belongs at the deploy gate."
+          }
+        ],
+        "prompt": "Let everyone pick one rule from the skill they built, decide hook or skill, and name the stage where it runs. Collect the hooks on the board.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Pick one rule from your skill.",
+          "Decide: hook or skill.",
+          "Name the stage where it runs."
+        ],
+        "expected": "Every participant has one rule classified as hook or skill, with a stage.",
+        "check": "No hook on the board runs the full test suite or asks a human for approval.",
+        "layout": "cards"
+      },
+      {
+        "title": "What are parallel sessions and subagents?",
+        "kicker": "CONCEPT DEFINITION · SUBAGENTS",
+        "subtitle": "One engineer drives several streams of work at once.",
+        "cards": [
+          {
+            "title": "PARALLEL SESSION",
+            "body": "Another full Claude Code instance on a separate task in its own git worktree. Sessions know nothing about each other; the engineer is the only thing they share."
+          },
+          {
+            "title": "SUBAGENT",
+            "body": "A scoped helper inside one session with its own context window and tool limits. Suits jobs that recur across tasks, such as verifying the app runs."
+          },
+          {
+            "title": "THE ENGINEER'S JOB",
+            "body": "Steering and reviewing all of them. The ceiling is how many streams one person can review properly."
+          }
+        ],
+        "prompt": "Say one sentence per card. Ask: where does the ticket-coach subagent from the lab fit, and what would a second session work on?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Say session versus subagent in one sentence each."
+        ],
+        "expected": "The room can tell a session from a subagent.",
+        "check": "Everyone can say the difference between a parallel session and a subagent in one sentence.",
+        "layout": "cards"
+      },
+      {
+        "title": "Subagents · see the streams",
+        "kicker": "VISUAL · SUBAGENTS",
+        "subtitle": "Sessions in their own worktrees; subagents inside a session; governance from the repo.",
+        "cards": [],
+        "prompt": "Point at the engineer, one session, one subagent and the governance bar. Ask: what does every session read first? (CLAUDE.md.) What do sessions never share? (Each other's context.)",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Point at what every session shares."
+        ],
+        "expected": "Everyone can point at the shared layer.",
+        "check": "Everyone can name what every session reads first and what sessions never share.",
+        "layout": "image",
+        "image": "parallel-sessions-subagents.svg",
+        "imageAlt": "An engineer steers three sessions, each in its own worktree; one session delegates to verifier, researcher and simplifier subagents; a governance bar names CLAUDE.md, hooks and permissions.",
+        "imageCaption": "Traditional: one engineer, one task, waiting on builds. AI-native: several sessions in flight, repeated jobs as subagents, the engineer orchestrating."
+      },
+      {
+        "title": "Subagents · how we use it",
+        "kicker": "HOW WE USE IT · SUBAGENTS",
+        "subtitle": "Split by files, one worktree per task, repeated jobs as checked-in subagents.",
+        "cards": [
+          {
+            "title": "SPLIT THE WORK",
+            "body": "Tasks that touch different files get their own worktree: claude --worktree feature-auth. Tasks that share files run in one session, one after another. Start with two or three."
+          },
+          {
+            "title": "TURN REPEATS INTO SUBAGENTS",
+            "body": "A markdown file in .claude/agents/ with a name, when to use it, and the tools it may touch: verifier, researcher, simplifier. Check them into git."
+          },
+          {
+            "title": "GOVERN FROM THE REPO",
+            "body": "CLAUDE.md, hooks and permission settings apply to every session; output is logged and attributed. Measure sessions per engineer while review quality holds, and merged changes against rework."
+          }
+        ],
+        "prompt": "Open .claude/agents/ticket-coach.md in the lab: name, description, tools. Show the verifier example: 'Start the app, exercise the changed behaviour and the two nearest flows, report what you ran and saw, do not fix anything.' Ask each participant which repeated job they would make a subagent and which task they would run in a second worktree.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Open the ticket-coach subagent definition.",
+          "Name one repeated job for a subagent and its tools.",
+          "Name one task for a second worktree."
+        ],
+        "expected": "Every participant has one subagent idea with its tools and one parallel task.",
+        "check": "No subagent on the board has more tools than its job needs.",
+        "layout": "cards"
       },
       {
         "title": "Claude Code demo · rebuild the same agent",
@@ -2974,6 +2915,35 @@
         "check": "Hesitations are fixed in the file, not explained aloud.",
         "layout": "cards",
         "tagline": "GROUPS OF 3–4 · ONE NAVIGATOR · AFTER THE INDIVIDUAL BLOCK"
+      },
+      {
+        "title": "Human gate · accept the core result",
+        "kicker": "GATE · 15:20–15:40 · 20 MIN",
+        "subtitle": "Accept, return or leave OPEN before the optional E2E issue",
+        "cards": [
+          {
+            "title": "Record",
+            "body": "Trace, checker line, handoff per person"
+          },
+          {
+            "title": "Decide",
+            "body": "PASS / FAIL / OPEN with one quoted line"
+          },
+          {
+            "title": "Then",
+            "body": "Optional team E2E issue only after PASS"
+          }
+        ],
+        "prompt": "Each person records trace, checker line and handoff, then decides PASS / FAIL / OPEN with one quoted line. The optional end-to-end issue starts only after a PASS.",
+        "notes": "Timebox zichtbaar houden; OPEN noteren voor checks die niet gedraaid zijn.",
+        "dark": false,
+        "steps": [
+          "Record trace, checker line and handoff.",
+          "Decide with one quoted line.",
+          "Only after PASS: pick the optional E2E issue."
+        ],
+        "expected": "A decision per participant with a quoted reason.",
+        "check": "No accepted result lacks a trace and a checker line."
       },
       {
         "title": "Check-out and reflection",

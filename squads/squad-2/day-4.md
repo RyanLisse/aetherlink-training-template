@@ -10,6 +10,8 @@ Rebuild the Day 3 review agent in Claude Code using the same functional contract
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
 - **One contract, two platforms** · What is "one contract, two platforms"? [3] → One contract · see the split [4] → One contract · how we use it [5]
+- **Hooks** · What is a hook? [6] → Hooks · see the guardrail [7] → Hooks · how we use it [8]
+- **Subagents** · What are parallel sessions and subagents? [9] → Subagents · see the streams [10] → Subagents · how we use it [11]
 <!-- concepts:end -->
 
 ## Schedule
