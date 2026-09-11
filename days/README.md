@@ -24,8 +24,8 @@ is available. No crew 2 outcome or access is implied by crew 1 material.
    Context and skills are optional after the reviewed result.
 3. [Day 3](day-3.md) — build the same bounded agent in n8n, then Claude Code;
    compare `TICKET-OPS-101` and transfer to `102` after the human gate.
-4. [Day 4](day-4.md) — peer-led repeatable runbook and knowledge handoff.
-5. [Day 5](day-5.md) — independent transfer to a declared synthetic variation.
+4. [Day 4](day-4.md) — choose one of three Claude Code agents, build it with a readable trace.
+5. [Day 5](day-5.md) — harden the chosen agent: evaluator-optimizer, trace comparison, handoff.
 
 For the first visible result in the next session after Day 1, use the [guided
 ticket exercise](../scenarios/payment-reconciliation/guided-ticket-exercise.md)

@@ -29,8 +29,8 @@ gates, and reflection. For crew 2, use its separate plan linked above.
 | 1 | Guided: intent, spec, plan, MOB, AI-native SDLC | [Day 1](days/day-1.md) | [Present day 1](https://aetherlink-training.ryanlisse.chatgpt.site/?day=1#1) |
 | 2 | Guided: one FIN-003 ticket, role relay, behavior checks, individual practice | [Day 2](days/day-2.md) | [Present day 2](https://aetherlink-training.ryanlisse.chatgpt.site/?day=2#1) |
 | 3 | Guided: build the same bounded agent in n8n, then Claude Code; compare `TICKET-OPS-101`, transfer `102` after the gate | [Day 3](days/day-3.md) | [Present day 3](https://aetherlink-training.ryanlisse.chatgpt.site/?day=3#1) |
-| 4 | Peer-led: repeatable runbook and knowledge handoff | [Day 4](days/day-4.md) | [Present day 4](https://aetherlink-training.ryanlisse.chatgpt.site/?day=4#1) |
-| 5 | Independent transfer: declared synthetic variation | [Day 5](days/day-5.md) | [Present day 5](https://aetherlink-training.ryanlisse.chatgpt.site/?day=5#1) |
+| 4 | Choose one of three agents; build it with a trace | [Day 4](days/day-4.md) | [Present day 4](https://aetherlink-training.ryanlisse.chatgpt.site/?day=4#1) |
+| 5 | Harden it: evaluator, trace comparison, handoff | [Day 5](days/day-5.md) | [Present day 5](https://aetherlink-training.ryanlisse.chatgpt.site/?day=5#1) |
 
 The interactive presentation site is public. The workbooks and [fictional Python training lab](training-lab/README.md) are available in this public repository. Releases and monitoring in the lab are local rehearsals with synthetic data, not production operations.
 

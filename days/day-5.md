@@ -1,102 +1,147 @@
-# Day 5 — Independent transfer to a synthetic variation
+# Day 5 — Harden your agent: evaluator, trace comparison, handoff
 
-This is the final practice session. All baseline IDs have been taught, so the
-facilitator declares a transfer variation before work begins. Use a working
-copy, never the source CSVs: from the repository root copy
-`scenarios/payment-reconciliation/data/` to
-`lab-notes/day-5-variation/data/`, change the working cutoff to
-`2026-09-13 12:00 Europe/Amsterdam`, and recalculate due-date status. Under
-that variation, `TX-NS-1008` is overdue rather than a timing item; keep the
-duplicate case unresolved. Label results synthetic and transfer-based, not
-unseen. The baseline README validator is fixed to 2026-09-10 and exactly five
-baseline cases; do not claim its PASS proves the variation. Use a separate
-worksheet recalculation and record its actual output.
+Final session for **Wave 2 crew 1**. Everyone keeps the agent they chose on
+Day 4 and makes it trustworthy enough to hand over: an `evaluator` subagent
+judges the output against the written contract (the evaluator-optimizer
+pattern), the participant applies only the evaluator's instructions, compares
+the two traces, and writes a handoff that a fresh reader reproduces without
+help. Pattern reference:
+<https://platform.claude.com/cookbook/patterns-agents-evaluator-optimizer>.
+
+## Session outcome and boundary
+
+By 16:00 every participant has: an evaluator verdict on their Day 4 output,
+at most two optimizer rounds with traces, a trace comparison written in the
+run log, a handoff that another participant reproduced, and a personal
+statement of what transfers to Jira, GitLab, and Confluence work next week.
+
+Same boundary as Days 3–4: fictional local inputs, read-only tools, preview
+only, human saves. The evaluator judges; it never rewrites. No hosting,
+schedules, or business-system writes. Anything not observed is `OPEN`.
+
+```mermaid
+flowchart LR
+  O[Day 4 output] --> E[evaluator: PASS or REVISE + numbered instructions]
+  E -->|REVISE| P[optimizer: re-prompt your agent with ONLY those instructions]
+  P --> T2[(trace 2)]
+  P --> E
+  E -->|PASS, or 2 rounds| H[Human gate → handoff]
+```
+
+## Facilitator preflight
+
+1. On the trainer laptop, run the `evaluator` prompt from an option README on
+   a saved Day 4 output. Confirm the verdict shape passes
+   `check_menu_output.py --agent evaluator`. Record version and model shown.
+2. Have one deliberately weak output ready (for example a triage report with
+   an invented owner) so the demo shows a `REVISE` with instructions.
+3. Board: the evaluator's five criteria (shape, grounding, no invented facts,
+   OPEN discipline, boundary) and the rule "maximum two rounds".
+4. Prepare Kahoot: opener "The evaluator says PASS. What do you still need
+   before handing over? (a) nothing (b) a trace (c) a human review (d) b and c";
+   wordcloud "Which step blocks you today?"; closing question "Which agent will
+   you run on a real ticket next week, with a buddy?".
 
 ## Schedule — 10:00–16:00 (360 minutes)
 
 | Time | Minutes | Activity |
 |---|---:|---|
-| 10:00–10:15 | 15 | Opening, scope, and variation declaration |
-| 10:15–10:40 | 25 | Clarification and checkpoint: independent evidence |
-| 10:40–11:15 | 35 | Exercise 1: inspect and frame the new case |
-| 11:15–11:25 | 10 | Break |
-| 11:25–12:00 | 35 | Exercise 2: plan the run |
+| 10:00–10:15 | 15 | Open: Kahoot + wordcloud, Day 4 recap, blockers |
+| 10:15–10:35 | 20 | Theory: evaluator-optimizer; what a trace proves and does not |
+| 10:35–10:45 | 10 | Demo: evaluator on a weak output → `REVISE` with instructions |
+| 10:45–11:10 | 25 | **Individual** Card 1: evaluator round 1 on your Day 4 output |
+| 11:10–11:20 | 10 | Break |
+| 11:20–11:45 | 25 | **Individual** Card 2: optimizer step, trace 2 |
+| 11:45–12:00 | 15 | Human gate: verdicts and round count recorded |
 | 12:00–13:00 | 60 | Lunch |
-| 13:00–13:20 | 20 | Checkpoint clinic on request |
-| 13:20–14:05 | 45 | Exercise 3: execute independently |
-| 14:05–14:15 | 10 | Break |
-| 14:15–15:05 | 50 | Exercise 4: independent review and gate |
-| 15:05–15:15 | 10 | Break |
-| 15:15–15:45 | 30 | Exercise 5: final handoff and teach-back |
-| 15:45–16:00 | 15 | Individual check-in and MOB reflection |
+| 13:00–13:10 | 10 | Demo: comparing trace 1 and trace 2 side by side |
+| 13:10–13:30 | 20 | Groups of 3–4, Card 3: trace swap |
+| 13:30–13:40 | 10 | Break |
+| 13:40–14:20 | 40 | **Individual** Card 4: write the handoff |
+| 14:20–14:35 | 15 | Break |
+| 14:35–15:15 | 40 | Groups of 3–4, Card 5: fresh-reader reproduction |
+| 15:15–15:40 | 25 | Course recap: five days, evidence wall, what transfers to Jira/GitLab/Confluence |
+| 15:40–16:00 | 20 | Individual check-out, MOB reflection, Kahoot close |
 
-Total: **360 minutes**.
+Total: **360 minutes**. Three individual blocks (25, 25, 40 min) precede the
+group work that uses them.
 
-Learners work independently first, then use peer review and the final MOB
-reflection. The trainer clarifies only when requested. MOBs remain 3–4 people,
-one screen, facilitator/timekeeper, and driver/navigator rotating every 5–7
-minutes; the driver operates the agent. Keep the literal task card visible; if
-the group is blocked or drifting for five minutes, the facilitator intervenes by
-restating the task, pointing to the source, or stopping at the gate. Use the
-pause rule. The learner owns the run; the human gate accepts the evidence.
-Observable checks are below.
+## Theory block — 10:15–10:35
 
-## Exercises
+1. **Evaluator-optimizer.** One agent produces, a second judges against a
+   written contract and returns PASS or REVISE with numbered instructions; the
+   producer applies only those. Two roles, one contract, bounded rounds.
+2. **Why a separate evaluator.** It cannot see the producer's reasoning, only
+   the output and the sources — the same position a colleague is in.
+3. **What a trace proves.** Which files were read, in which order, whether a
+   subagent ran, whether anything was written. **What it cannot prove:**
+   correctness, arithmetic, understanding. Say `OPEN` for those.
+4. **Handoff test.** Not "I explained it" but "someone reproduced it from the
+   text in ten minutes".
 
-The facilitator records the per-person support result: **independent** (no
-hint), **one hint** (one clarification), or **coached** (several prompts).
-Independent transfer is the target; a coached result is evidence of what to
-practise next.
+## Literal task cards
 
-1. **Frame.** Facilitator declares the variation above. Individually create
-   `lab-notes/day-5-variation/data/` by copying the three source CSVs, and write
-   `lab-notes/day-5-scope.md`. Prompt: “State outcome, changed cutoff, source
-   files, and success evidence. Do not edit the source CSVs.” Check: working
-   copy and source checksums are recorded. From the repository root, run
-   `mkdir -p lab-notes/day-5-variation/data && cp scenarios/payment-reconciliation/data/*.csv lab-notes/day-5-variation/data/`.
-   Gate: facilitator accepts.
-2. **Plan.** Prompt: “Write a root-relative, read-only plan using the Day 4
-   runbook. Use `lab-notes/day-5-variation/data/`, cutoff 2026-09-13, and a
-   separate worksheet recalculation. Name risks, evidence columns, and
-   rollback. Mark this as transfer variation, not unseen data.” Output
-   `lab-notes/day-5-plan.md`.
-   Check: another learner can execute it. Gate: human accepts before running.
-3. **Execute.** Individually run the declared variation, cite rows, calculate
-   totals, and record actual worksheet output. Prompt: “Use only the copied
-   synthetic inputs; separate observed results, baseline examples, and
-   hypotheses. Do not use the fixed README validator as variation proof.”
-   Output `lab-notes/day-5-evidence.md`. Check: source files are unchanged and
-   `TX-NS-1008` is recalculated against the new cutoff. Gate: reviewer accepts
-   or blocks.
-4. **Review.** A fresh context reads the plan and evidence without the author's
-   conversation. Prompt: “Check arithmetic, duplicate/due-date treatment,
-   scope, and reproducibility. Return PASS or BLOCKED with exact missing proof.”
-   Output independent review. Check: reviewer finds a deliberate evidence gap
-   if present. Gate: facilitator records decision and open action.
-5. **Handoff.** Prompt: “Draft a concise final handoff with variation label,
-   revision, source IDs, commands, results, limitations, owner, and next gate.
-   Keep GitLab/Jira/Confluence links OPEN unless supplied.” Output
-   `lab-notes/handoff-day-5.md` and a two-minute teach-back. Check: receiver
-   reproduces the declared case. Gate: named human accepts the series outcome.
+### Card 1 — evaluator round 1 (individual, 10:45–11:10, 25 min)
 
-## Reflection
+- **Goal:** a verdict in the contract shape on your Day 4 output.
+- **Input:** `participant-output/<option>.md`, your option README, the evaluator prompt in that README.
+- **Steps:**
+  1. Start Claude Code in the checkout root (starter already installed).
+  2. Type the option's evaluator prompt unchanged.
+  3. Save the verdict yourself to `participant-output/evaluation.md`.
+  4. `python3 scenarios/agent-menu/tools/check_menu_output.py --agent evaluator --output participant-output/evaluation.md`
+  5. Record verdict and every FAIL criterion in the run log's Day 5 section.
+- **Result:** evaluation saved, checker line, run log updated.
+- **Time limit:** 25 min.
 
-Write what transferred from the five sessions, which concept still needs
-practice, and what evidence would be required before any real operational use.
+### Card 2 — optimizer step (individual, 11:20–11:45, 25 min)
 
-## Daily opening and closing instructions
+- **Goal:** the revise instructions applied, nothing else changed.
+- **Steps:** if `REVISE`, re-run your agent's first prompt plus "Apply these instructions:" and the numbered list verbatim; new trace; save as `participant-output/<option>-v2.md`; run the option checker; run the evaluator once more (round 2 is the last). If `PASS` in round 1, run the agent once more with the same prompt and compare traces anyway — repeatability is evidence too.
+- **Result:** v2 output, trace 2, round count, second verdict.
+- **Time limit:** 25 min.
 
-At 10:00, the facilitator runs a Kahoot question: "Does the baseline validator prove a changed-cutoff result?"
-Expected explanation: No. Recalculate the declared variation and record separate evidence.
-Then use the wordcloud prompt: "Which step blocks you today?" Cluster the
-answers, choose one blocker, and record it in the day's notes. If Kahoot is
-unavailable, collect the same answers on the shared board.
+### Card 3 — trace swap (groups of 3–4, 13:10–13:30, 20 min)
 
-At 15:40, each person answers: "What did I verify, what remains uncertain,
-and what will I do next?" In the mob reflection, revisit the opening blocker
-and name one helpful role change or prompt correction. Copy
-[the daily recap template](../templates/daily-recap.md) to a dated file under
-`recaps/` for session 5; record actual evidence, open actions, and owners,
-and link it from `recaps/README.md`. Update `progress.md` with observed training
-results. Add a reviewed knowledge note and index link, or record
-`NONE — no reusable learning yet`. Do not record fictional financial recovery.
+- **Goal:** state the difference between trace 1 and trace 2 of a neighbour without seeing their outputs.
+- **Steps:** follow the reading exercise in the lab's `observability.md`; each reader names files added or dropped between runs and whether any write appeared; compare with the author's run log.
+- **Result:** one observed trace difference per person on the board, or "none observed".
+- **Time limit:** 20 min.
+
+### Card 4 — handoff (individual, 13:40–14:20, 40 min)
+
+- **Goal:** a handoff a stranger can execute.
+- **Steps:** complete `templates/handoff.md`: option, exact prompts, Claude Code version and model shown, files read (from the trace), checker and evaluator lines, both trace file names, what remains `OPEN`, and the one command to reproduce; save as `lab-notes/handoff-day-5.md`.
+- **Result:** the handoff file.
+- **Time limit:** 40 min.
+
+### Card 5 — fresh-reader reproduction (groups of 3–4, 14:35–15:15, 40 min)
+
+- **Goal:** a neighbour reproduces your run from the handoff alone in ten minutes.
+- **Steps:** rotate handoffs one seat; the reader follows the text on their own laptop, silently noting each hesitation; at ten minutes they report reproduced / partially / blocked and their hesitations; the author fixes wording only, not scope.
+- **Result:** reproduction status per handoff on the board; hesitations fixed in the file.
+- **Time limit:** 40 min.
+
+## Course recap — 15:15–15:40
+
+Walk the evidence wall day by day: intent and plan (Day 1), guided ticket
+relay (Day 2), one agent twice (Day 3), chosen agent with a trace (Day 4),
+evaluator and handoff (Day 5). Ask each group: which of A, B, C would you run
+first on a real Jira ticket, GitLab MR, or Confluence page — and which
+approval, access, or data decision is `OPEN` before you may? Record the
+answers as the crew's next-step list, not as commitments.
+
+## Close — 15:40–16:00
+
+Individual check-out: **Made**, **Learned**, **Can do**, plus one agent I will
+run with a buddy next week. MOB reflection: revisit the Day 5 opening blocker
+and the Day 1 baseline Kahoot; record the delta. Complete the
+[daily recap](../templates/daily-recap.md), link it from `recaps/README.md`,
+update `progress.md`. Record only observed artifacts; personal ratings stay
+private.
+
+## Phase lens
+
+`Plan`, `Design`, `Build`, bounded local `Test`, and a local `Review` gate are
+in scope. `Deploy` and `Maintain` are `NOT IN SCOPE — no hosting, schedule, or
+business-system write`.

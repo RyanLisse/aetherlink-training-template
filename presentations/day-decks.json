@@ -1364,609 +1364,857 @@
     ]
   },
   "day4": {
-    "title": "Day 4 — Repeatability & handoff",
+    "title": "Day 4 — Choose one agent and build it, with a trace",
     "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/days/day-4.md",
+    "participantRepo": "https://github.com/RyanLisse/aetherlink-agent-lab",
     "slides": [
       {
-        "title": "Repeatability & handoff",
-        "kicker": "DAY 4 · 10:00–16:00",
-        "subtitle": "Package knowledge so a new person can reproduce the work",
+        "title": "Recap and choice",
+        "kicker": "WAVE 2 · CREW 1 · DAY 4 · 10:00–10:15",
+        "subtitle": "From one shared agent to one chosen agent",
         "cards": [
           {
             "title": "Outcome",
-            "body": "Runbook, knowledge note, and handoff packet"
+            "body": "Build one of three Claude Code agents with a trace you can read"
           },
           {
-            "title": "Receiver",
-            "body": "Works from sources and revision, not memory"
+            "title": "Yesterday",
+            "body": "Same ticket-coach in n8n and Claude Code; comparison recorded"
           },
           {
-            "title": "Boundary",
-            "body": "Team-system links may remain OPEN"
+            "title": "Pulse",
+            "body": "Kahoot + wordcloud: which step blocks you today?"
           }
         ],
-        "prompt": "Open the Day 4 guide. Start with Kahoot or wordcloud, capture blockers, then use the Day 3 action register to name the receiver and one check they must reproduce.",
-        "notes": "Begin met Kahoot/wordcloud en blockers; vandaag is de ontvanger het uitgangspunt.",
+        "prompt": "Open the participant lab agent menu. Recap the Day 3 comparison, run the Kahoot question and wordcloud, and name today’s proof: one chosen agent, two runs, a trace summary, a checker line, and a run log.",
+        "notes": "Start met recap, Kahoot en wordcloud. Noteer de blocker die om 15:40 terugkomt. Beloof geen resultaat dat nog niet is gezien.",
         "dark": true,
         "steps": [
-          "Run Kahoot/wordcloud.",
-          "Capture blockers.",
-          "Name receiver.",
-          "Choose one check."
+          "Recap Day 3.",
+          "Run Kahoot + wordcloud.",
+          "Record the blocker.",
+          "Name today’s proof."
         ],
-        "expected": "A receiver-focused target and blockers list.",
-        "check": "Packet has a fresh verification path."
+        "expected": "A shared starting point, one named blocker, a visible proof target.",
+        "check": "Everyone can say what evidence ends today."
       },
       {
-        "title": "The same rhythm every day",
-        "kicker": "FIXED SCHEDULE",
-        "subtitle": "Timeboxes are shared; the exercise changes",
+        "title": "Day 4 route",
+        "kicker": "SCHEDULE · 10:00–16:00",
+        "subtitle": "Theory, choose, build alone, review in groups of 3–4",
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:15 exercise 1 · 11:15–11:25 break"
+            "body": "10:15 theory · 10:35 menu + install · 10:50–11:15 individual run · 11:25 groups · 11:45 gate"
           },
           {
             "title": "Midday",
-            "body": "11:25–12:00 exercise 2 · 12:00–13:00 lunch · 13:00–13:20 demo/coaching"
+            "body": "12:00–13:00 lunch · 13:00 trace demo · 13:15–13:40 individual second run"
           },
           {
             "title": "Afternoon",
-            "body": "13:20–14:05 exercise 3 · 14:05–14:15 break · 14:15–15:05 exercise 4 · 15:05–15:15 break · 15:15–15:45 exercise 5 · 15:45–16:00 reflection"
+            "body": "13:50 groups: explain from the trace · 14:45–15:25 individual evidence · 15:25 recap · 15:40 close"
           }
         ],
-        "prompt": "Read the fixed schedule and name the next handoff artifact.",
-        "notes": "Zelfde tijden, dezelfde energie, andere vaardigheid.",
+        "prompt": "Read the timetable aloud. Point to the three individual blocks and the two group blocks. Say that lunch is 12:00–13:00 and that group work never replaces the individual block.",
+        "notes": "Lunch is 12:00–13:00. Individuele blokken zijn eigen laptop, geen driverrotatie.",
         "dark": false,
         "steps": [
-          "Read the block.",
-          "Name the artifact.",
-          "Name the gate."
+          "Name the individual blocks.",
+          "Name the group blocks.",
+          "Confirm lunch.",
+          "Point to the close."
         ],
-        "expected": "Shared schedule awareness.",
-        "check": "All break blocks remain visible."
+        "expected": "Everyone knows when they work alone and when in a group.",
+        "check": "The timetable on the board matches the guide."
       },
       {
-        "title": "A handoff is a runnable promise",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "State, proof, risk, rollback, and next owner",
+        "title": "Contract, adapter, trace",
+        "kicker": "THEORY · 10:15–10:35",
+        "subtitle": "Three ideas that make a menu of agents share one loop",
         "cards": [
           {
-            "title": "State",
-            "body": "Revision, cutoff, artifacts, current status"
+            "title": "Contract",
+            "body": "The option README defines the output shape; the checker verifies it"
           },
           {
-            "title": "Proof",
-            "body": "Exact command, source rows, expected signal"
+            "title": "Adapter",
+            "body": "Read / Glob / Grep are the adapter; the subagent file is the instruction"
           },
           {
-            "title": "Receiver",
-            "body": "Freshly runs the check and records result"
+            "title": "Trace",
+            "body": "A hook writes one line per tool call to trace/<session>.jsonl"
           }
         ],
-        "prompt": "Compare a weak summary with a strong handoff. Ask learners which one a receiver can verify without the sender and why OPEN is more useful than invented certainty.",
-        "notes": "Gebruik het bekende handoff-template, maar laat de groep de ontbrekende velden vinden.",
+        "prompt": "Explain contract, adapter and trace in that order, each with one example from the ticket-coach. End with the four trace questions: what was asked, read, delegated, written.",
+        "notes": "Zelfde loop als dag 3 met één toevoeging: de trace. Een trace bewijst wat er draaide, niet of het klopt.",
         "dark": false,
         "steps": [
-          "Read both examples.",
-          "Find missing proof.",
-          "Add receiver steps."
+          "Contract before agent.",
+          "Adapter versus instruction.",
+          "Trace = observability.",
+          "Human gate stays last."
         ],
-        "expected": "A shared definition of repeatable handoff.",
-        "check": "Historical output is not presented as fresh evidence."
+        "expected": "Participants can name the three ideas and the four trace questions.",
+        "check": "Nobody describes the trace as proof of correctness."
       },
       {
-        "title": "Exercise 1 · run the checklist",
-        "kicker": "10:40–11:15 · 35 MIN",
-        "subtitle": "Make every input and evidence field explicit",
+        "title": "The loop with a trace",
+        "kicker": "THEORY · 10:15–10:35",
+        "subtitle": "Goal/context → observe → decide → tool action → inspect preview + trace → repeat or stop",
         "cards": [
           {
-            "title": "Inputs",
-            "body": "Cutoff, identifiers, fee/net, three source files"
+            "title": "Start",
+            "body": "Goal + contract"
           },
           {
-            "title": "Cases",
-            "body": "Duplicates, due dates, batch totals"
+            "title": "Act",
+            "body": "Observe → decide → tool action (each call traced)"
           },
           {
-            "title": "Gate",
-            "body": "Peer ticks each item from source paths"
+            "title": "Inspect",
+            "body": "Preview and trace together; repeat or stop at the human gate"
           }
         ],
-        "prompt": "Use a local checklist covering inputs, cutoff, identifiers, fee/net, duplicates, due dates, batch totals, and evidence columns. Complete it from source paths; mark missing proof OPEN. Ask a peer to tick each item.",
-        "notes": "Een checklist is een controlehulp, geen bewijs dat alles al is uitgevoerd.",
+        "prompt": "Walk the loop aloud and show where the trace line is written: at every tool action. Ask what the trace cannot show.",
+        "notes": "Wijs de trace aan bij de toolactie. Herhaal: de mens beslist aan de gate.",
         "dark": false,
         "steps": [
-          "List every check.",
-          "Tick from sources.",
-          "Mark gaps OPEN.",
-          "Get facilitator review."
+          "Goal + contract",
+          "Observe",
+          "Decide",
+          "Tool action → trace line",
+          "Inspect preview + trace",
+          "Repeat or stop / human gate"
         ],
-        "expected": "A completed, peer-checked checklist.",
-        "check": "Each tick names a source path."
+        "expected": "Everyone can point to where the trace is written.",
+        "check": "The loop still ends at a human gate."
       },
       {
-        "title": "Exercise 2 · write the runbook",
-        "kicker": "11:25–12:00 · 35 MIN",
-        "subtitle": "Turn the checklist into a one-page procedure",
+        "title": "The menu",
+        "kicker": "CHOOSE · 10:35–10:50",
+        "subtitle": "Pick by the work you want to be faster at next week",
         "cards": [
           {
-            "title": "Command",
-            "body": "Run from scenarios/payment-reconciliation"
+            "title": "A · ticket-triage",
+            "body": "Six FIN tickets → Jira-shaped triage lines · queue grooming"
           },
           {
-            "title": "Rules",
-            "body": "Expected outputs and duplicate handling"
+            "title": "B · runbook-writer",
+            "body": "One reviewed run log → Confluence-shaped runbook · done ticket → procedure"
           },
           {
-            "title": "Handoff",
-            "body": "Fields a receiver must receive"
+            "title": "C · repo-reviewer",
+            "body": "This repository → findings with file evidence · MR consistency review"
           }
         ],
-        "prompt": "Write lab-notes/payment-runbook-day-4.md as a one-page procedure for the fictional fixture. Include commands from scenarios/payment-reconciliation, expected outputs, duplicate handling, handoff fields, validated facts, policy questions, and no invented policy.",
-        "notes": "De policy owner controleert scope en formuleringen.",
+        "prompt": "Present the three options and the stretch retro-writer. Each participant chooses one and says it aloud. Then everyone installs the starter: cp -Rn scenarios/agent-menu/starter/.claude .claude and restarts Claude Code in the checkout root.",
+        "notes": "Stretch retro-writer alleen na A, B of C met checker PASS. Installatie: één cp-commando, daarna Claude Code opnieuw starten in de repo-root.",
         "dark": false,
         "steps": [
-          "Use the checklist.",
-          "Write the procedure.",
-          "Separate facts and policy.",
-          "Ask human review."
+          "Present A, B, C and stretch.",
+          "Everyone chooses aloud.",
+          "Install the starter.",
+          "Confirm .claude/settings.json exists."
         ],
-        "expected": "A scoped, reusable runbook.",
-        "check": "No production control is implied."
+        "expected": "Every participant has a chosen option and the starter installed.",
+        "check": "ls .claude/agents shows five files on every laptop."
       },
       {
-        "title": "Optional coaching · handoff readback",
-        "kicker": "13:00–13:20 · 20 MIN",
-        "subtitle": "A receiver should know the next command and signal",
+        "title": "Individual · first run",
+        "kicker": "PRACTICE · 10:50–11:15 · 25 MIN",
+        "subtitle": "Card 1 — run your agent, read your trace, run the checker",
         "cards": [
           {
-            "title": "Read",
-            "body": "Revision, files, cutoff, current status"
+            "title": "Input",
+            "body": "Your option README: contract and exact first prompt"
           },
           {
             "title": "Run",
-            "body": "One normal case and one exception"
+            "body": "Type the prompt unchanged; watch which files open"
           },
           {
-            "title": "Report",
-            "body": "PASS, BLOCKED, or OPEN with reason"
+            "title": "Capture",
+            "body": "trace_summary.py → four answers; save accepted preview; checker"
           }
         ],
-        "prompt": "Only if learners request help: Coach demo: hand a packet to a fresh receiver. Ask them to find the revision, run one check, compare the expected signal, and write a verdict. Correct the packet only after hearing the receiver’s confusion.",
-        "notes": "Laat de ontvanger eerst zelf navigeren; help pas na de poging.",
-        "dark": true,
-        "steps": [
-          "Give the packet.",
-          "Let receiver navigate.",
-          "Compare the signal.",
-          "Record verdict."
-        ],
-        "expected": "A receiver-led readback.",
-        "check": "Sender memory is not required."
-      },
-      {
-        "title": "Exercise 3 · peer reproduce and challenge",
-        "kicker": "13:20–14:05 · 45 MIN",
-        "subtitle": "Give the runbook to a new reader without explanation",
-        "cards": [
-          {
-            "title": "Reader",
-            "body": "Runs one normal and one exception case"
-          },
-          {
-            "title": "Evidence",
-            "body": "Records source IDs and actual output"
-          },
-          {
-            "title": "Gate",
-            "body": "Evidence owner compares reproduction notes"
-          }
-        ],
-        "prompt": "Give the runbook to a new reader without explanation. Ask them to reproduce one normal and one exception case and write source IDs plus actual output. Compare notes as evidence owner; keep differences OPEN until reviewed.",
-        "notes": "De auteur legt niets uit tijdens de eerste poging van de nieuwe lezer.",
+        "prompt": "Work alone for 25 minutes. Fill the run-log header, type your option’s first prompt unchanged, run python3 scenarios/agent-menu/tools/trace_summary.py, save the preview you accept to participant-output/<option>.md, and run check_menu_output.py --agent <name>. Record PASS, FAIL or OPEN.",
+        "notes": "25 minuten alleen. Geen hulp geven tenzij de tool niet start; dat is OPEN, geen falen.",
         "dark": false,
         "steps": [
-          "Hand over the runbook.",
-          "Let reader run.",
-          "Capture actual output.",
-          "Compare notes."
+          "Fill the run-log header.",
+          "Type the first prompt.",
+          "Run trace_summary.py.",
+          "Save, then run the checker."
         ],
-        "expected": "A receiver reproduction note.",
-        "check": "Both a normal and exception case are reproduced."
+        "expected": "A preview, a trace summary, a checker line and a run log per person.",
+        "check": "Nobody wrote a file through the agent; every write was a human save."
       },
       {
-        "title": "Exercise 4 · challenge and repair",
-        "kicker": "14:15–15:05 · 50 MIN",
-        "subtitle": "Make the smallest wording fix that preserves scope",
+        "title": "Groups · trace versus citations",
+        "kicker": "REVIEW · 11:25–11:45 · 20 MIN",
+        "subtitle": "Card 2 — did it read what it cites?",
         "cards": [
           {
-            "title": "Find",
-            "body": "One ambiguity or missing evidence"
+            "title": "Compare",
+            "body": "Sources read (trace) versus Source / [source: …] lines (output)"
           },
           {
-            "title": "Repair",
-            "body": "Small wording change with stated effect"
+            "title": "Check",
+            "body": "One number by hand against the file"
           },
           {
-            "title": "Gate",
-            "body": "Facilitator accepts or keeps the gap OPEN"
+            "title": "Agree",
+            "body": "One correction as a single added sentence, or an OPEN"
           }
         ],
-        "prompt": "Find one ambiguity or missing evidence in the runbook or reproduction note. Propose the smallest wording repair and explain its effect. Save a reviewed diff or note; preserve fixture-only scope and leave unresolved gaps OPEN.",
-        "notes": "Kies één concrete reparatie, geen brede herschrijving.",
+        "prompt": "In groups of 3–4, compare each trace summary with the output’s citations. Find one file cited but never read, or read but never cited. Check one number by hand. Agree one correction phrased as one sentence to add to the prompt.",
+        "notes": "Groepen van 3–4 pas nu. Eén correctie per groep op het bord, geformuleerd als promptzin of OPEN.",
         "dark": false,
         "steps": [
-          "Find one gap.",
-          "Propose smallest repair.",
-          "Explain the effect.",
-          "Get facilitator decision."
+          "Compare trace and citations.",
+          "Check one number.",
+          "Agree one sentence.",
+          "Write it on the board."
         ],
-        "expected": "A scoped repair with rationale.",
-        "check": "Repair preserves the original boundary."
+        "expected": "One agreed correction per group.",
+        "check": "The correction is testable in the second run."
       },
       {
-        "title": "Exercise 5 · knowledge teach-back",
-        "kicker": "15:15–15:45 · 30 MIN",
-        "subtitle": "Prepare the next receiver and Day 5 transfer",
+        "title": "Human gate · baseline",
+        "kicker": "GATE · 11:45–12:00",
+        "subtitle": "Freeze the Day 4 baseline before lunch",
         "cards": [
           {
-            "title": "Teach-back",
-            "body": "Explain the process in two minutes"
+            "title": "Checker",
+            "body": "PASS / FAIL line recorded per person"
+          },
+          {
+            "title": "Trace",
+            "body": "Four questions answered in the run log"
+          },
+          {
+            "title": "Decision",
+            "body": "Human: PASS, REVISE or OPEN with one quoted line"
+          }
+        ],
+        "prompt": "Each person records the checker result, the four trace answers and a human decision with one quoted line from the output. Unrun checks are OPEN. Then lunch 12:00–13:00.",
+        "notes": "Baseline vastzetten vóór de lunch. Wat niet gezien is, is OPEN.",
+        "dark": false,
+        "steps": [
+          "Record the checker line.",
+          "Record the trace answers.",
+          "Record the human decision.",
+          "Lunch 12:00–13:00."
+        ],
+        "expected": "A frozen baseline per participant.",
+        "check": "No baseline claims a run that was not observed."
+      },
+      {
+        "title": "Demo · reading a trace aloud",
+        "kicker": "DEMO · 13:00–13:15",
+        "subtitle": "One participant’s trace, read by the trainer",
+        "cards": [
+          {
+            "title": "Asked",
+            "body": "The prompt line — was it the README prompt unchanged?"
+          },
+          {
+            "title": "Read",
+            "body": "Files in order — README first, then inputs? anything unexpected?"
+          },
+          {
+            "title": "Delegated / wrote",
+            "body": "Subagent stop present? writes: none recorded?"
+          }
+        ],
+        "prompt": "Take one volunteer’s trace file and read the summary aloud in the four-question order. Ask the room what they would expect next and whether the output cites everything that was read.",
+        "notes": "Lees de trace van een vrijwilliger voor. Laat de zaal voorspellen wat het volgende bestand is.",
+        "dark": false,
+        "steps": [
+          "Read the prompt line.",
+          "Read the sources in order.",
+          "Point to the subagent stop.",
+          "Confirm no writes."
+        ],
+        "expected": "Everyone has heard a full trace read as a story.",
+        "check": "The room can state the four questions unprompted."
+      },
+      {
+        "title": "Individual · second run",
+        "kicker": "PRACTICE · 13:15–13:40 · 25 MIN",
+        "subtitle": "Card 3 — apply the agreed correction only",
+        "cards": [
+          {
+            "title": "Prompt",
+            "body": "Same first prompt + the agreed sentence"
+          },
+          {
+            "title": "Trace",
+            "body": "New trace; compare files read"
+          },
+          {
+            "title": "Checker",
+            "body": "Run again; note the difference in the run log"
+          }
+        ],
+        "prompt": "Work alone for 25 minutes. Re-run your agent with the first prompt plus the agreed sentence. Run trace_summary.py again, run the checker, and write one sentence on what the agent read differently.",
+        "notes": "Alleen de afgesproken zin toevoegen. Verschil in gelezen bestanden vastleggen.",
+        "dark": false,
+        "steps": [
+          "Add the agreed sentence.",
+          "Run again.",
+          "Compare the traces.",
+          "Write one difference sentence."
+        ],
+        "expected": "Two traces and two checker lines per person.",
+        "check": "The contract still passes after the correction."
+      },
+      {
+        "title": "Groups · explain from the trace",
+        "kicker": "EXCHANGE · 13:50–14:30 · 40 MIN",
+        "subtitle": "Card 4 — describe a neighbour’s run from their trace alone",
+        "cards": [
+          {
+            "title": "Swap",
+            "body": "Trace summaries only, not outputs; prefer a different option"
+          },
+          {
+            "title": "Tell",
+            "body": "What was asked, first file read, subagent yes/no, writes yes/no"
+          },
+          {
+            "title": "Check",
+            "body": "Compare with the output; record one mismatch or none observed"
+          }
+        ],
+        "prompt": "In groups of 3–4 mixing options, swap trace summaries. The reader describes the run; then compare with the output’s citations. Record one mismatch or ‘none observed’ and one prompt-wording lesson per group.",
+        "notes": "Mix opties in de groep. Eén mismatch of ‘geen’ en één promptles per groep.",
+        "dark": false,
+        "steps": [
+          "Swap summaries.",
+          "Describe the run.",
+          "Compare with citations.",
+          "Record mismatch + lesson."
+        ],
+        "expected": "Each group has a mismatch or none observed, and one lesson.",
+        "check": "Lessons are about prompt wording or citations, not about people."
+      },
+      {
+        "title": "Individual · evidence and handoff draft",
+        "kicker": "PRACTICE · 14:45–15:25 · 40 MIN",
+        "subtitle": "Card 5 — a run log a stranger can follow",
+        "cards": [
+          {
+            "title": "Run log",
+            "body": "Every field of templates/run-log.md; Day 5 section left empty"
+          },
+          {
+            "title": "Output",
+            "body": "Accepted preview saved by you under participant-output/"
           },
           {
             "title": "Handoff",
-            "body": "Known IDs, allowed variation, open questions"
-          },
-          {
-            "title": "Gate",
-            "body": "Recipient repeats without answer key"
+            "body": "templates/handoff.md started: option, prompt, settings, checker, trace file, OPEN"
           }
         ],
-        "prompt": "Prepare a two-minute teach-back and lab-notes/handoff-day-4.md for Day 5. List known fixture IDs, allowed variation, open questions, next gate, and receiver steps. Give it to a recipient; they repeat the process without the answer key.",
-        "notes": "De recipient tekent PASS/BLOCKED; geen productiecontrole claimen.",
+        "prompt": "Work alone for 40 minutes. Complete the run log, save the accepted output, and start the handoff with option, exact prompts, model shown, checker line, trace file name and OPEN items.",
+        "notes": "Alleen geobserveerde feiten. Niet gelopen checks blijven OPEN.",
         "dark": false,
         "steps": [
-          "Draft the handoff.",
-          "Teach back in two minutes.",
-          "Let recipient repeat.",
-          "Record PASS or BLOCKED."
+          "Complete the run log.",
+          "Save the accepted output.",
+          "Start the handoff.",
+          "List OPEN items."
         ],
-        "expected": "A receiver-verified knowledge handoff.",
-        "check": "Recipient can repeat the process without answers."
+        "expected": "lab-notes/day-4-run-log.md and a handoff draft per person.",
+        "check": "No field says done for a step that was not observed."
       },
       {
-        "title": "Reflection",
-        "kicker": "15:45–16:00 · 15 MIN",
-        "subtitle": "Hand off the habit, not just the files",
+        "title": "Recap · what each option taught",
+        "kicker": "RECAP · 15:25–15:40",
+        "subtitle": "One sentence per option, from the people who built it",
+        "cards": [
+          {
+            "title": "A",
+            "body": "Contract across six items, not depth on one"
+          },
+          {
+            "title": "B",
+            "body": "One observed run is not a rule; OPEN keeps it honest"
+          },
+          {
+            "title": "C",
+            "body": "Checking beats producing when you must trust the output"
+          }
+        ],
+        "prompt": "Ask each option group for one sentence: ‘Option A taught us…’. Write them on the board next to the Day 3 comparison. Point to tomorrow: evaluator, trace comparison, handoff.",
+        "notes": "Eén zin per optie. Morgen: evaluator-optimizer en overdracht.",
+        "dark": false,
+        "steps": [
+          "Ask A.",
+          "Ask B.",
+          "Ask C (and stretch).",
+          "Preview Day 5."
+        ],
+        "expected": "Three sentences on the board.",
+        "check": "Each sentence points at evidence, not at a feeling."
+      },
+      {
+        "title": "Close · check-out and reflection",
+        "kicker": "CLOSE · 15:40–16:00",
+        "subtitle": "Made, learned, can do — then the MOB reflection",
         "cards": [
           {
             "title": "Individual",
-            "body": "Write the first three receiver steps"
+            "body": "Made / Learned / Can do, one line each"
           },
           {
             "title": "MOB",
-            "body": "Share one handoff field you now require"
+            "body": "Revisit the opening blocker; one prompt correction that worked"
           },
           {
-            "title": "Close",
-            "body": "Record recap, blockers, and transfer gap"
+            "title": "Delta",
+            "body": "Repeat the Kahoot question; record the wordcloud delta"
           }
         ],
-        "prompt": "Write the first three actions a receiver would take from your packet. Complete the daily recap and blockers, then share one field you will always require and one uncertainty you will keep OPEN.",
-        "notes": "Sluit af met recap, blockers, individuele check en mob-reflectie.",
+        "prompt": "Each person writes Made, Learned, Can do. Then the MOB reflection: revisit the opening blocker and name one correction that worked. Repeat the Kahoot question and record the delta. Complete the daily recap and update progress.md with observed results only.",
+        "notes": "Persoonlijke scores blijven privé. Geen fictieve financiële recovery vastleggen.",
         "dark": true,
         "steps": [
-          "Write receiver steps.",
-          "Complete recap/check-in.",
-          "Name one OPEN item."
+          "Made / Learned / Can do.",
+          "Revisit the blocker.",
+          "Repeat Kahoot.",
+          "Recap and progress.md."
         ],
-        "expected": "A personal handoff checklist and recap.",
-        "check": "The checklist names a proof signal."
+        "expected": "A truthful close with recap and a Day 5 pointer.",
+        "check": "Every uncertainty is sourced or OPEN."
       }
     ]
   },
   "day5": {
-    "title": "Day 5 — Independent transfer",
+    "title": "Day 5 — Harden your agent: evaluator, trace comparison, handoff",
     "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/days/day-5.md",
+    "participantRepo": "https://github.com/RyanLisse/aetherlink-agent-lab",
     "slides": [
       {
-        "title": "Independent transfer",
-        "kicker": "DAY 5 · 10:00–16:00",
-        "subtitle": "Apply the loop to a labelled synthetic variation",
+        "title": "Recap and today’s proof",
+        "kicker": "WAVE 2 · CREW 1 · DAY 5 · 10:00–10:15",
+        "subtitle": "Make the agent you chose trustworthy enough to hand over",
         "cards": [
           {
             "title": "Outcome",
-            "body": "Independently frame, reconcile, review, and report a variation"
+            "body": "Evaluator verdict, at most two optimizer rounds, trace comparison, reproduced handoff"
           },
           {
-            "title": "Transfer",
-            "body": "Working copy changes only the cutoff"
+            "title": "Yesterday",
+            "body": "One chosen agent, two runs, a trace summary and a run log"
           },
           {
-            "title": "Boundary",
-            "body": "Source fixtures stay unchanged; no production release"
+            "title": "Pulse",
+            "body": "Kahoot + wordcloud: which step blocks you today?"
           }
         ],
-        "prompt": "Open the Day 5 guide. Start with Kahoot or wordcloud, capture blockers, then state the transfer variation, its boundary, and the evidence needed to report it.",
-        "notes": "Begin met Kahoot/wordcloud en blockers; de learner neemt het stuur en de facilitator bewaakt gates.",
+        "prompt": "Recap Day 4 in one sentence per option. Run the Kahoot question and wordcloud, record the blocker, and name today’s proof: a verdict, a second trace, and a handoff that someone else reproduced.",
+        "notes": "Laatste dag. Kahoot-baseline van dag 1 komt om 15:40 terug.",
         "dark": true,
         "steps": [
-          "Run Kahoot/wordcloud.",
-          "Capture blockers.",
-          "State the boundary.",
-          "Name proof."
+          "Recap Day 4.",
+          "Run Kahoot + wordcloud.",
+          "Record the blocker.",
+          "Name today’s proof."
         ],
-        "expected": "An independent transfer target and blockers list.",
-        "check": "Variation is labelled synthetic."
+        "expected": "A shared start and a visible proof target.",
+        "check": "Everyone can say what evidence ends the course."
       },
       {
-        "title": "The same rhythm every day",
-        "kicker": "FIXED SCHEDULE",
-        "subtitle": "Timeboxes are shared; today the learners lead",
+        "title": "Day 5 route",
+        "kicker": "SCHEDULE · 10:00–16:00",
+        "subtitle": "Evaluate alone, optimize alone, then hand over in groups of 3–4",
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:15 exercise 1 · 11:15–11:25 break"
+            "body": "10:15 theory · 10:35 demo · 10:45–11:10 evaluator round · 11:20–11:45 optimizer round · 11:45 gate"
           },
           {
             "title": "Midday",
-            "body": "11:25–12:00 exercise 2 · 12:00–13:00 lunch · 13:00–13:20 demo/coaching"
+            "body": "12:00–13:00 lunch · 13:00 trace comparison demo · 13:10 groups: trace swap"
           },
           {
             "title": "Afternoon",
-            "body": "13:20–14:05 exercise 3 · 14:05–14:15 break · 14:15–15:05 exercise 4 · 15:05–15:15 break · 15:15–15:45 exercise 5 · 15:45–16:00 reflection"
+            "body": "13:40–14:20 individual handoff · 14:35 groups: fresh-reader test · 15:15 course recap · 15:40 close"
           }
         ],
-        "prompt": "Read the fixed schedule. Decide who owns each artifact and what evidence will be shown at the final report.",
-        "notes": "Laat de learner zelf timebox en rollen bewaken.",
+        "prompt": "Read the timetable aloud. Three individual blocks, two group blocks, lunch 12:00–13:00, course recap at 15:15.",
+        "notes": "Lunch 12:00–13:00. Individuele blokken eerst, dan pas groepen.",
         "dark": false,
         "steps": [
-          "Assign artifacts.",
-          "Assign evidence owner.",
-          "Name final proof."
+          "Name the individual blocks.",
+          "Name the group blocks.",
+          "Confirm lunch.",
+          "Point to the course recap."
         ],
-        "expected": "A learner-led schedule and role map.",
-        "check": "All five exercises fit the shared cadence."
+        "expected": "Everyone knows the rhythm of the last day.",
+        "check": "Board matches the guide."
       },
       {
-        "title": "Transfer variation · synthetic only",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "Change the working copy, preserve the source of truth",
+        "title": "Evaluator-optimizer",
+        "kicker": "THEORY · 10:15–10:35",
+        "subtitle": "One agent produces, a second judges against the written contract",
         "cards": [
           {
-            "title": "Copy",
-            "body": "Copy all three scenario CSVs to lab-notes/day-5-variation/data/"
+            "title": "Evaluator",
+            "body": "Reads output + contract + sources; returns PASS or REVISE with numbered instructions; never rewrites"
           },
           {
-            "title": "Change",
-            "body": "Set cutoff to 2026-09-13; TX-NS-1008 becomes overdue"
+            "title": "Optimizer",
+            "body": "Your agent, re-prompted with ONLY those instructions"
           },
           {
-            "title": "Label",
-            "body": "TRANSFER VARIATION · separate worksheet; sources untouched"
+            "title": "Bound",
+            "body": "Maximum two rounds, then the human gate"
           }
         ],
-        "prompt": "Copy all three CSVs from scenarios/payment-reconciliation/data/ to lab-notes/day-5-variation/data/. Use a separate local worksheet. Recalculate with cutoff 2026-09-13 12:00 Europe/Amsterdam so TX-NS-1008 is overdue. Keep original CSVs unchanged and label every result TRANSFER VARIATION. The original README checker does not prove this changed cutoff.",
-        "notes": "Benadruk dat de standaard checker de nieuwe cutoff niet controleert; gebruik een aparte herberekening.",
-        "dark": true,
-        "steps": [
-          "Copy without editing sources.",
-          "Apply the new cutoff.",
-          "Recalculate separately.",
-          "Label every result."
-        ],
-        "expected": "A clearly labelled transfer worksheet.",
-        "check": "Original data diff remains empty."
-      },
-      {
-        "title": "Exercise 1 · frame the variation",
-        "kicker": "10:40–11:15 · 35 MIN",
-        "subtitle": "Start with intent and an observable discrepancy",
-        "cards": [
-          {
-            "title": "Problem",
-            "body": "A synthetic cutoff changes one due-date classification"
-          },
-          {
-            "title": "Outcome",
-            "body": "Explain TX-NS-1008 with source-backed arithmetic"
-          },
-          {
-            "title": "Guard",
-            "body": "No payout, recovery, or production claim"
-          }
-        ],
-        "prompt": "Draft lab-notes/payment-intent-transfer.md for the labelled transfer variation. State problem, observable outcome, roles, cutoff 2026-09-13 12:00 Europe/Amsterdam, constraints, open questions, and human acceptance. Do not alter sources.",
-        "notes": "Laat deelnemers zelf het verschil tussen de twee cutoffs formuleren.",
+        "prompt": "Explain the pattern with the five criteria on the board: shape, grounding, no invented facts, OPEN discipline, boundary. Stress that the evaluator sees what a colleague sees — output and sources, not reasoning. Reference the Claude cookbook pattern.",
+        "notes": "Bron: platform.claude.com/cookbook/patterns-agents-evaluator-optimizer. Evaluator beoordeelt, herschrijft niet.",
         "dark": false,
         "steps": [
-          "Compare both cutoffs.",
-          "Draft intent.",
-          "Name evidence.",
-          "Get acceptance."
+          "Two roles, one contract.",
+          "Five criteria.",
+          "Numbered instructions only.",
+          "Two rounds, then human."
         ],
-        "expected": "An accepted transfer intent.",
-        "check": "TX-NS-1008’s overdue status is tied to the new cutoff."
+        "expected": "Participants can name the five criteria.",
+        "check": "Nobody expects the evaluator to fix the output."
       },
       {
-        "title": "Exercise 2 · plan the run",
-        "kicker": "11:25–12:00 · 35 MIN",
-        "subtitle": "Use the runbook for a reversible transfer plan",
+        "title": "What a trace proves",
+        "kicker": "THEORY · 10:15–10:35",
+        "subtitle": "Which files, which order, which subagent, any writes — and nothing more",
         "cards": [
           {
-            "title": "Inputs",
-            "body": "Copied CSVs in lab-notes/day-5-variation/data/"
+            "title": "Proves",
+            "body": "Files read in order; subagent ran; writes: none or which"
           },
           {
-            "title": "Cutoff",
-            "body": "2026-09-13; separate worksheet recalculation"
+            "title": "Cannot prove",
+            "body": "Correctness, arithmetic, understanding"
           },
           {
-            "title": "Rollback",
-            "body": "Discard the local variation package"
+            "title": "Therefore",
+            "body": "Trace + checker + human review = evidence; any one alone is not"
           }
         ],
-        "prompt": "Write lab-notes/day-5-plan.md using the Day 4 runbook. Use lab-notes/day-5-variation/data/, cutoff 2026-09-13, and a separate worksheet recalculation. Name risks, evidence columns, and rollback. Mark this TRANSFER VARIATION, not unseen data. Get human acceptance before running.",
-        "notes": "De learner maakt zelfstandig het plan en laat het door een peer lezen.",
+        "prompt": "Ask the room to sort statements into ‘trace proves’ and ‘trace cannot prove’. Close with the evidence triangle: trace, checker, human review.",
+        "notes": "Herhaal de driehoek: trace, checker, mens. Wat niet bewezen is, blijft OPEN.",
         "dark": false,
         "steps": [
-          "Use the Day 4 runbook.",
-          "Name files and risks.",
-          "Define proof columns.",
-          "Get human acceptance."
+          "Sort the statements.",
+          "Name the triangle.",
+          "Say OPEN for the rest."
         ],
-        "expected": "Another learner can execute the plan.",
-        "check": "The plan records the checker limitation."
+        "expected": "The room sorts the statements correctly.",
+        "check": "No one calls a trace proof of correctness."
       },
       {
-        "title": "Checkpoint clarification · on request",
-        "kicker": "13:00–13:20 · 20 MIN",
-        "subtitle": "Ask for one clarification without giving the solution",
+        "title": "Demo · evaluator on a weak output",
+        "kicker": "DEMO · 10:35–10:45",
+        "subtitle": "See a REVISE verdict with instructions you could apply",
+        "cards": [
+          {
+            "title": "Input",
+            "body": "A prepared triage report with an invented owner"
+          },
+          {
+            "title": "Run",
+            "body": "The option’s evaluator prompt, unchanged"
+          },
+          {
+            "title": "Read",
+            "body": "Verdict, failing criterion, quoted evidence, numbered instructions"
+          }
+        ],
+        "prompt": "Run the evaluator on the prepared weak output. Read the verdict shape aloud: which criterion failed, what evidence it quoted, and the numbered instructions. Run check_menu_output.py --agent evaluator on the saved verdict.",
+        "notes": "Gebruik de voorbereide zwakke output. Laat zien dat instructies genummerd en toetsbaar zijn.",
+        "dark": false,
+        "steps": [
+          "Run the evaluator.",
+          "Read the FAIL criterion.",
+          "Read the instructions.",
+          "Run the checker."
+        ],
+        "expected": "Everyone has seen a REVISE with testable instructions.",
+        "check": "The verdict passes the evaluator checker."
+      },
+      {
+        "title": "Individual · evaluator round 1",
+        "kicker": "PRACTICE · 10:45–11:10 · 25 MIN",
+        "subtitle": "Card 1 — judge your own Day 4 output",
+        "cards": [
+          {
+            "title": "Input",
+            "body": "participant-output/<option>.md + your option README"
+          },
+          {
+            "title": "Run",
+            "body": "The option’s evaluator prompt, unchanged"
+          },
+          {
+            "title": "Capture",
+            "body": "Save verdict; checker --agent evaluator; run-log Day 5 section"
+          }
+        ],
+        "prompt": "Work alone for 25 minutes. Type your option’s evaluator prompt unchanged, save the verdict to participant-output/evaluation.md, run the evaluator checker, and record the verdict and every FAIL criterion in the run log.",
+        "notes": "25 minuten alleen. Verdict opslaan doet de mens, niet de agent.",
+        "dark": false,
+        "steps": [
+          "Type the evaluator prompt.",
+          "Save the verdict.",
+          "Run the checker.",
+          "Record FAIL criteria."
+        ],
+        "expected": "A verdict in contract shape per person.",
+        "check": "Every FAIL has quoted evidence."
+      },
+      {
+        "title": "Individual · optimizer step",
+        "kicker": "PRACTICE · 11:20–11:45 · 25 MIN",
+        "subtitle": "Card 2 — apply only the numbered instructions",
+        "cards": [
+          {
+            "title": "REVISE",
+            "body": "First prompt + ‘Apply these instructions:’ + the list verbatim → v2 + trace 2"
+          },
+          {
+            "title": "PASS",
+            "body": "Run once more unchanged; compare traces — repeatability is evidence"
+          },
+          {
+            "title": "Bound",
+            "body": "Round 2 is the last; then the human gate"
+          }
+        ],
+        "prompt": "Work alone for 25 minutes. If REVISE, re-run your agent with the numbered instructions verbatim, save v2, run the option checker and the evaluator once more. If PASS, re-run unchanged and compare traces. Record the round count.",
+        "notes": "Maximaal twee rondes. Bij PASS toch herhalen: herhaalbaarheid is bewijs.",
+        "dark": false,
+        "steps": [
+          "Apply the instructions.",
+          "Save v2 and trace 2.",
+          "Run both checkers.",
+          "Record the round count."
+        ],
+        "expected": "A v2 output, trace 2 and a second verdict or a repeat run.",
+        "check": "Nothing but the instructions changed the prompt."
+      },
+      {
+        "title": "Human gate · verdicts",
+        "kicker": "GATE · 11:45–12:00",
+        "subtitle": "Record verdicts and round count before lunch",
+        "cards": [
+          {
+            "title": "Verdicts",
+            "body": "Round 1 and round 2, with FAIL criteria"
+          },
+          {
+            "title": "Traces",
+            "body": "Two trace file names in the run log"
+          },
+          {
+            "title": "Decision",
+            "body": "Human: accept, park or redirect; then lunch 12:00–13:00"
+          }
+        ],
+        "prompt": "Each person records both verdicts, the round count, the two trace file names and the human decision. Lunch 12:00–13:00.",
+        "notes": "Gate vóór de lunch. Wat niet is gedraaid is OPEN.",
+        "dark": false,
+        "steps": [
+          "Record verdicts.",
+          "Record trace names.",
+          "Record the decision.",
+          "Lunch."
+        ],
+        "expected": "A recorded gate per participant.",
+        "check": "No verdict is claimed for an unrun round."
+      },
+      {
+        "title": "Demo · two traces side by side",
+        "kicker": "DEMO · 13:00–13:10",
+        "subtitle": "What changed between run 1 and run 2?",
+        "cards": [
+          {
+            "title": "Added",
+            "body": "Files read in trace 2 but not trace 1"
+          },
+          {
+            "title": "Dropped",
+            "body": "Files read in trace 1 but not trace 2"
+          },
+          {
+            "title": "Writes",
+            "body": "Still none recorded?"
+          }
+        ],
+        "prompt": "Show one volunteer’s two trace summaries next to each other. Name added and dropped files and confirm no writes. Ask what in the instructions explains the change.",
+        "notes": "Verschil benoemen in bestanden, niet in gevoel.",
+        "dark": false,
+        "steps": [
+          "Show both summaries.",
+          "Name added files.",
+          "Name dropped files.",
+          "Confirm no writes."
+        ],
+        "expected": "The room can read a trace diff.",
+        "check": "Explanations point at instructions, not guesses."
+      },
+      {
+        "title": "Groups · trace swap",
+        "kicker": "REVIEW · 13:10–13:30 · 20 MIN",
+        "subtitle": "Card 3 — state a neighbour’s trace difference without seeing their outputs",
         "cards": [
           {
             "title": "Read",
-            "body": "Intent, plan, source, and separate worksheet"
+            "body": "Their two trace summaries only"
           },
           {
-            "title": "Clarify",
-            "body": "One question about scope, cutoff, or evidence"
+            "title": "Tell",
+            "body": "Files added or dropped; any write"
           },
           {
-            "title": "Gate",
-            "body": "Learner decides whether the plan is sufficient"
+            "title": "Check",
+            "body": "Compare with their run log; record one observed difference or none"
           }
         ],
-        "prompt": "Checkpoint on request only: if stuck, ask one clarification about proving TX-NS-1008 overdue at the new cutoff. The facilitator may point to the relevant file or rule, but does not write the plan or solve the case. Record the clarification and continue independently.",
-        "notes": "Geen verplichte demo; help alleen na expliciet verzoek en noteer de supportcategorie.",
-        "dark": true,
+        "prompt": "In groups of 3–4, follow the reading exercise in the lab’s observability.md. Each reader states the difference between a neighbour’s trace 1 and trace 2, then compares with the run log.",
+        "notes": "Zie observability.md in het lab. Eén geobserveerd verschil per persoon op het bord.",
+        "dark": false,
         "steps": [
-          "Ask one question if stuck.",
-          "Receive one pointer.",
-          "Record the clarification.",
-          "Continue independently."
+          "Swap traces.",
+          "State the difference.",
+          "Compare with the run log.",
+          "Record it."
         ],
-        "expected": "A learner-owned proof plan after optional clarification.",
-        "check": "Facilitator does not solve the case."
+        "expected": "One observed trace difference per person.",
+        "check": "Differences are named as files, not opinions."
       },
       {
-        "title": "Exercise 3 · execute independently",
-        "kicker": "13:20–14:05 · 45 MIN",
-        "subtitle": "Run the declared variation and record actual output",
+        "title": "Individual · handoff",
+        "kicker": "PRACTICE · 13:40–14:20 · 40 MIN",
+        "subtitle": "Card 4 — a handoff a stranger can execute",
         "cards": [
           {
-            "title": "Inputs",
-            "body": "Use only copied synthetic files"
+            "title": "Facts",
+            "body": "Option, exact prompts, Claude Code version, model shown"
           },
           {
             "title": "Evidence",
-            "body": "Cite rows, totals, cutoff, and worksheet output"
+            "body": "Files read (trace), checker and evaluator lines, both trace names"
           },
           {
-            "title": "Guard",
-            "body": "Do not use the fixed validator as variation proof"
+            "title": "OPEN + reproduce",
+            "body": "What remains OPEN and the one command to reproduce"
           }
         ],
-        "prompt": "Individually run the declared variation using only lab-notes/day-5-variation/data/. Cite rows, calculate totals, and record actual worksheet output in lab-notes/day-5-evidence.md. Separate observed results, baseline examples, and hypotheses. Confirm sources are unchanged and TX-NS-1008 is recalculated.",
-        "notes": "De facilitator helpt niet inhoudelijk; noteer per persoon independent, one hint of coached.",
+        "prompt": "Work alone for 40 minutes. Complete templates/handoff.md with option, exact prompts, version and model, files read from the trace, checker and evaluator lines, both trace file names, OPEN items and the one command to reproduce. Save as lab-notes/handoff-day-5.md.",
+        "notes": "Overdracht is pas klaar als iemand anders het kan nadoen.",
         "dark": false,
         "steps": [
-          "Run the declared plan.",
-          "Capture actual output.",
-          "Separate facts and hypotheses.",
-          "Check source integrity."
+          "Fill the facts.",
+          "Fill the evidence.",
+          "List OPEN items.",
+          "Write the reproduce command."
         ],
-        "expected": "An independently produced transfer evidence note.",
-        "check": "TX-NS-1008 is recalculated at the new cutoff."
+        "expected": "lab-notes/handoff-day-5.md per person.",
+        "check": "The handoff names files and commands, not memories."
       },
       {
-        "title": "Exercise 4 · independent review and gate",
-        "kicker": "14:15–15:05 · 50 MIN",
-        "subtitle": "A fresh context tests the author’s evidence",
+        "title": "Groups · fresh-reader reproduction",
+        "kicker": "TEST · 14:35–15:15 · 40 MIN",
+        "subtitle": "Card 5 — a neighbour reproduces your run from the handoff in ten minutes",
         "cards": [
           {
-            "title": "Review",
-            "body": "Arithmetic, duplicate, due date, scope"
+            "title": "Rotate",
+            "body": "Handoffs move one seat; the reader follows the text silently"
           },
           {
-            "title": "Verdict",
-            "body": "PASS or BLOCKED with exact missing proof"
+            "title": "Report",
+            "body": "Reproduced / partially / blocked, plus every hesitation"
           },
           {
-            "title": "Gate",
-            "body": "Facilitator records decision and open action"
+            "title": "Fix",
+            "body": "Author fixes wording only, never scope"
           }
         ],
-        "prompt": "Give the plan and evidence to a fresh context without the author’s conversation. Check arithmetic, duplicate/due-date treatment, scope, and reproducibility. Return PASS or BLOCKED with exact missing proof. Record the facilitator decision and open action.",
-        "notes": "De reviewer ziet de oorspronkelijke redenering niet vóór de eigen bevinding.",
+        "prompt": "Rotate handoffs one seat in groups of 3–4. Readers follow the text on their own laptop for ten minutes, then report status and hesitations. Authors fix wording in the file.",
+        "notes": "Lezer volgt letterlijk. Auteur mag alleen bewoording aanpassen.",
         "dark": false,
         "steps": [
-          "Give plan and evidence.",
-          "Review independently.",
-          "Return PASS or BLOCKED.",
-          "Record the gate."
+          "Rotate handoffs.",
+          "Reproduce for 10 minutes.",
+          "Report status + hesitations.",
+          "Fix wording."
         ],
-        "expected": "An independent review and human gate.",
-        "check": "Reviewer can identify a deliberate evidence gap if present."
+        "expected": "Reproduction status per handoff on the board.",
+        "check": "Hesitations are fixed in the file, not explained aloud."
       },
       {
-        "title": "Exercise 5 · final handoff and teach-back",
-        "kicker": "15:15–15:45 · 30 MIN",
-        "subtitle": "Transfer the method with limitations intact",
+        "title": "Course recap · five days",
+        "kicker": "RECAP · 15:15–15:40",
+        "subtitle": "Intent → relay → one agent twice → chosen agent + trace → evaluator + handoff",
         "cards": [
           {
-            "title": "Handoff",
-            "body": "Variation label, revision, IDs, commands, results"
+            "title": "Evidence wall",
+            "body": "One artifact per day, pointed at, not described"
           },
           {
-            "title": "Limitations",
-            "body": "Source scope, checker limitation, OPEN links"
+            "title": "Transfer",
+            "body": "Which of A, B, C would you run first on a real Jira ticket, GitLab MR or Confluence page?"
           },
           {
-            "title": "Receiver",
-            "body": "Reproduces the declared case"
+            "title": "Still OPEN",
+            "body": "Which approval, access or data decision comes first?"
           }
         ],
-        "prompt": "Draft lab-notes/handoff-day-5.md and a two-minute teach-back. Include variation label, revision, source IDs, commands, results, limitations, owner, next gate, and GitLab/Jira/Confluence links as OPEN unless supplied. Ask a receiver to reproduce the declared case.",
-        "notes": "Laat de receiver de eindcontrole doen; maak geen serie-uitkomst zonder menselijk oordeel.",
+        "prompt": "Walk the evidence wall day by day. Ask each group which option they would run first on real work and which approval, access or data decision is OPEN before they may. Record the answers as a next-step list, not as commitments.",
+        "notes": "Volgorde: intent, relay, twee platforms, gekozen agent met trace, evaluator en overdracht. Geen toezeggingen vastleggen.",
         "dark": false,
         "steps": [
-          "Draft the final handoff.",
-          "Teach back in two minutes.",
-          "Let receiver reproduce.",
-          "Get named acceptance."
+          "Walk the wall.",
+          "Ask the transfer question.",
+          "Record OPEN decisions.",
+          "Keep it a list."
         ],
-        "expected": "A receiver-verified final handoff.",
-        "check": "Declared case is reproducible from the packet."
+        "expected": "A next-step list per group with OPEN decisions.",
+        "check": "Nothing on the list implies a production run."
       },
       {
-        "title": "Final reflection",
-        "kicker": "15:45–16:00 · 15 MIN",
-        "subtitle": "Name the habit you will carry forward",
+        "title": "Close · check-out and reflection",
+        "kicker": "CLOSE · 15:40–16:00",
+        "subtitle": "Made, learned, can do, and one agent to run with a buddy",
         "cards": [
           {
             "title": "Individual",
-            "body": "Write one independent next action"
+            "body": "Made / Learned / Can do / one agent, one buddy, next week"
           },
           {
-            "title": "Reflection",
-            "body": "Share one human gate that protected quality"
+            "title": "MOB",
+            "body": "Revisit today’s blocker and the Day 1 baseline Kahoot; record the delta"
           },
           {
-            "title": "Close",
-            "body": "Record recap, blockers, and evidence needed next"
+            "title": "Recap",
+            "body": "Daily recap linked; progress.md updated with observed results only"
           }
         ],
-        "prompt": "Write one practice you can apply independently, one evidence check you will require, and one situation where you will pause and ask a human. Complete the daily recap and blockers, then share the final lesson with the group.",
-        "notes": "Sluit af met recap, blockers en individuele reflectie; verzin geen trainingsresultaten.",
+        "prompt": "Each person writes Made, Learned, Can do and one agent they will run with a buddy next week. MOB reflection against the Day 1 Kahoot baseline. Complete the daily recap and progress.md. Ratings stay private.",
+        "notes": "Sluit af met de delta ten opzichte van dag 1. Persoonlijke scores blijven privé.",
         "dark": true,
         "steps": [
-          "Write one practice.",
-          "Complete recap/check-in.",
-          "Share one lesson."
+          "Made / Learned / Can do.",
+          "Name agent + buddy.",
+          "Record the Kahoot delta.",
+          "Recap and progress.md."
         ],
-        "expected": "A personal continuation plan and recap.",
-        "check": "Every claim names a future evidence path."
+        "expected": "A truthful close and a next-week list.",
+        "check": "Every uncertainty is sourced or OPEN."
       }
     ]
   }
