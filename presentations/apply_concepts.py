@@ -43,9 +43,32 @@ def slide(concept, kind, spec_override=None):
     return out
 
 
+def recap_slide(concept):
+    spec = REG["concepts"][concept]
+    d, v, u = spec["definition"], spec["visual"], spec["usage"]
+    return {
+        "title": f"{spec['name']} · recap",
+        "kicker": f"RECAP · {spec['name'].upper()}",
+        "subtitle": d["subtitle"],
+        "cards": d.get("cards", []),
+        "prompt": "One-minute recap: read the definition cards, point at the picture, then ask the room to say it in one sentence before the exercise.",
+        "notes": REG["notes_default"],
+        "dark": False,
+        "steps": ["Say the definition in one sentence."] + u["steps"][:1],
+        "expected": d["expected"],
+        "check": d["check"],
+        "layout": "image",
+        "keepCards": True,
+        "image": v["image"],
+        "imageAlt": v["imageAlt"],
+        "imageCaption": v["imageCaption"],
+    }
+
+
 def concept_titles():
     titles = {spec[k]["title"] for spec in REG["concepts"].values() for k in ("definition", "visual", "usage")}
     titles |= {v["title"] for spec in REG["concepts"].values() for v in spec.get("extra_visuals", [])}
+    titles |= {f"{spec['name']} · recap" for spec in REG["concepts"].values()}
     return titles
 
 
@@ -63,9 +86,12 @@ def apply(deck_path, placements, removals, patches):
         for p in placements.get(day, []):
             idx = next(i for i, s in enumerate(deck["slides"]) if s["title"] == p["after"])
             spec = REG["concepts"][p["concept"]]
-            triplet = [slide(p["concept"], "definition"), slide(p["concept"], "visual")]
-            triplet += [slide(p["concept"], "visual", v) for v in spec.get("extra_visuals", [])]
-            triplet.append(slide(p["concept"], "usage"))
+            if p.get("mode") == "recap":
+                triplet = [recap_slide(p["concept"])]
+            else:
+                triplet = [slide(p["concept"], "definition"), slide(p["concept"], "visual")]
+                triplet += [slide(p["concept"], "visual", v) for v in spec.get("extra_visuals", [])]
+                triplet.append(slide(p["concept"], "usage"))
             deck["slides"][idx + 1:idx + 1] = triplet
     return decks
 
@@ -78,6 +104,9 @@ def workbook_section(deck, placements):
     titles = [s["title"] for s in deck["slides"]]
     for p in placements:
         spec = REG["concepts"][p["concept"]]
+        if p.get("mode") == "recap":
+            lines.append(f"- **{spec['name']}** · recap in one slide [{titles.index(spec['name'] + ' · recap') + 1}]")
+            continue
         nums = [titles.index(spec[k]["title"]) + 1 for k in ("definition", "visual", "usage")]
         lines.append(f"- **{spec['name']}** · {spec['definition']['title']} [{nums[0]}] → {spec['visual']['title']} [{nums[1]}] → {spec['usage']['title']} [{nums[2]}]")
     return "\n".join([START, *lines, END])

@@ -684,8 +684,8 @@
         "check": "The goal preserves visible rows, UNRESOLVED, and no payout approval."
       },
       {
-        "title": "What is the evidence rule?",
-        "kicker": "CONCEPT DEFINITION · EVIDENCE RULE",
+        "title": "Evidence rule · recap",
+        "kicker": "RECAP · EVIDENCE RULE",
         "subtitle": "A claim counts only with a source, a reproduced check and a reviewer.",
         "cards": [
           {
@@ -701,63 +701,20 @@
             "body": "Someone else reran it. Without all three it is a hypothesis and stays OPEN."
           }
         ],
-        "prompt": "Read the rule out loud. Ask: what is the difference between a claim and a hypothesis? Ask: why is \"it looked right\" not evidence?",
+        "prompt": "One-minute recap: read the definition cards, point at the picture, then ask the room to say it in one sentence before the exercise.",
         "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
-          "Name the three parts of evidence."
+          "Say the definition in one sentence.",
+          "Open the evidence log template."
         ],
         "expected": "The room can separate a claim from evidence.",
         "check": "Everyone can say why \"it looked right\" is not evidence.",
-        "layout": "cards"
-      },
-      {
-        "title": "Evidence rule · see the ladder",
-        "kicker": "VISUAL · EVIDENCE RULE",
-        "subtitle": "A claim only counts with a source, a reproduced check and a reviewer.",
-        "cards": [],
-        "prompt": "Walk the four steps left to right. Ask: which step is usually skipped? Let one participant place a claim from the demo on the ladder.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Place one claim from today on the ladder."
-        ],
-        "expected": "Everyone can place a claim on the right step.",
-        "check": "Everyone can place a claim from today on the right step of the ladder.",
         "layout": "image",
+        "keepCards": true,
         "image": "evidence-rule.svg",
         "imageAlt": "Four steps: claim, source, reproduced check, reviewer; a dashed hypothesis box below; a cutoff stamp.",
         "imageCaption": "Claim → source → reproduced check → reviewer. Anything short of that stays a hypothesis and is marked OPEN."
-      },
-      {
-        "title": "Evidence rule · how we use it",
-        "kicker": "HOW WE USE IT · EVIDENCE RULE",
-        "subtitle": "Every result today carries its evidence line or the word OPEN.",
-        "cards": [
-          {
-            "title": "IN THE EVIDENCE LOG",
-            "body": "One line per result: claim · source id · command or sheet · reviewer · PASS / FAIL / OPEN."
-          },
-          {
-            "title": "IN THE AGENT'S OUTPUT",
-            "body": "Ask for source ids and the check in the answer. No source, no claim."
-          },
-          {
-            "title": "AT THE HUMAN GATE",
-            "body": "The reviewer reruns one check before accepting. Unrun checks stay OPEN, never \"probably fine\"."
-          }
-        ],
-        "prompt": "Open the evidence log template. Write one evidence line for the demo result together, then let everyone mark one thing OPEN on purpose.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Open the evidence log template.",
-          "Write one evidence line for the demo result.",
-          "Mark one thing OPEN on purpose."
-        ],
-        "expected": "Everyone has written one complete evidence line.",
-        "check": "No evidence line is missing a source or a reviewer.",
-        "layout": "cards"
       },
       {
         "title": "Trainer demo · requirement to check",
@@ -1676,42 +1633,6 @@
         ]
       },
       {
-        "title": "Glossary · what do we mean?",
-        "kicker": "REFERENCE · OPEN ANYTIME",
-        "subtitle": "The same words, used consistently across every session",
-        "cards": [
-          {
-            "title": "Model",
-            "body": "Predicts language; it is not the agent."
-          },
-          {
-            "title": "Agent",
-            "body": "A model in a loop with a goal, tools, feedback and a boundary."
-          },
-          {
-            "title": "Human gate",
-            "body": "A person accepts, revises, parks or redirects the work."
-          },
-          {
-            "title": "Trace · Hook · Evaluator",
-            "body": "Evidence, deterministic control, and independent review."
-          }
-        ],
-        "prompt": "Pause and define the words aloud. Ask: what is an agent? Answer: a model in a loop with a goal, tools, feedback and a boundary. Open the top-bar Glossary for the full list.",
-        "notes": "Definitions are a shared reference, not a promise that every tool is available today.",
-        "dark": false,
-        "steps": [
-          "Define model.",
-          "Define agent.",
-          "Name the human gate.",
-          "Return to the glossary anytime."
-        ],
-        "expected": "Everyone can explain what an agent is in plain language.",
-        "check": "No one equates the model with the agent.",
-        "layout": "cards",
-        "tagline": "SHARED LANGUAGE · LOWER COGNITIVE LOAD"
-      },
-      {
         "title": "Day 4 route",
         "kicker": "SCHEDULE · 10:00–16:00",
         "subtitle": "Theory → demo → setup → first run → review → improve → gate → handoff",
@@ -2356,42 +2277,6 @@
         ]
       },
       {
-        "title": "Glossary · what do we mean?",
-        "kicker": "REFERENCE · OPEN ANYTIME",
-        "subtitle": "The same words, used consistently across every session",
-        "cards": [
-          {
-            "title": "Model",
-            "body": "Predicts language; it is not the agent."
-          },
-          {
-            "title": "Agent",
-            "body": "A model in a loop with a goal, tools, feedback and a boundary."
-          },
-          {
-            "title": "Human gate",
-            "body": "A person accepts, revises, parks or redirects the work."
-          },
-          {
-            "title": "Trace · Hook · Evaluator",
-            "body": "Evidence, deterministic control, and independent review."
-          }
-        ],
-        "prompt": "Pause and define the words aloud. Ask: what is an agent? Answer: a model in a loop with a goal, tools, feedback and a boundary. Open the top-bar Glossary for the full list.",
-        "notes": "Definitions are a shared reference, not a promise that every tool is available today.",
-        "dark": false,
-        "steps": [
-          "Define model.",
-          "Define agent.",
-          "Name the human gate.",
-          "Return to the glossary anytime."
-        ],
-        "expected": "Everyone can explain what an agent is in plain language.",
-        "check": "No one equates the model with the agent.",
-        "layout": "cards",
-        "tagline": "SHARED LANGUAGE · LOWER COGNITIVE LOAD"
-      },
-      {
         "title": "Day 5 route",
         "kicker": "SCHEDULE · 10:00–16:00",
         "subtitle": "Theory → demo → setup → first run → review → evaluator → gate → handoff → optional E2E",
@@ -2423,8 +2308,8 @@
         "tagline": "SAME RHYTHM · INDIVIDUAL FIRST · GROUPS AFTER"
       },
       {
-        "title": "What is \"one contract, two platforms\"?",
-        "kicker": "CONCEPT DEFINITION · ONE CONTRACT, TWO PLATFORMS",
+        "title": "One contract, two platforms · recap",
+        "kicker": "RECAP · ONE CONTRACT, TWO PLATFORMS",
         "subtitle": "Same functional contract and input on n8n and Claude Code; only the platform and its adapter differ.",
         "cards": [
           {
@@ -2440,74 +2325,20 @@
             "body": "Both outputs go through the same checker. Differences are observations; one pair of runs proves no cause."
           }
         ],
-        "prompt": "Show shared-prompt.md and TICKET-OPS-101. In n8n the contract is the AI Agent system message and the ticket is the user message, with Calculator as the tool adapter. In Claude Code it is the ticket-coach subagent body with read-only Read, Glob and Grep plus the typed invocation.",
+        "prompt": "One-minute recap: read the definition cards, point at the picture, then ask the room to say it in one sentence before the exercise.",
         "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
-          "Say where the instruction lives on each platform."
+          "Say the definition in one sentence.",
+          "Copy the adapter settings table."
         ],
         "expected": "Everyone knows where the instruction lives on each platform.",
         "check": "Everyone can name the contract and one adapter setting per platform.",
-        "layout": "cards"
-      },
-      {
-        "title": "One contract · see the split",
-        "kicker": "VISUAL · ONE CONTRACT, TWO PLATFORMS",
-        "subtitle": "Same contract and input; only the platform and its adapter differ.",
-        "cards": [],
-        "prompt": "Point at the contract, then at both adapters, then at the checker. Ask: what is shared, what is recorded separately?",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Name the adapter settings you will record."
-        ],
-        "expected": "Everyone can say what is shared and what differs.",
-        "check": "Everyone can point at what is shared and what is recorded separately.",
         "layout": "image",
+        "keepCards": true,
         "image": "one-contract-two-platforms.svg",
         "imageAlt": "One contract box feeding n8n and Claude Code boxes, both feeding the same checker.",
         "imageCaption": "One contract feeds two platforms; both outputs go through the same checker. One pair of runs proves no cause."
-      },
-      {
-        "title": "One contract · how we use it",
-        "kicker": "HOW WE USE IT · ONE CONTRACT, TWO PLATFORMS",
-        "subtitle": "Morning n8n, afternoon Claude Code, same ticket, same checker, settings recorded.",
-        "cards": [],
-        "prompt": "Record each platform's adapter instructions, model, mode, access and tools; the board prompt is a summary, not a third instruction. Only after the human gate move to ticket 102: the contract travels, the adapter is rebuilt.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Copy the adapter settings table.",
-          "Fill it for the platform you are on.",
-          "Mark unrun checks OPEN."
-        ],
-        "expected": "Every participant has a filled adapter settings line for one platform.",
-        "check": "No comparison sentence claims a cause from one pair of runs.",
-        "layout": "compare",
-        "columns": [
-          {
-            "title": "n8n · morning",
-            "items": [
-              "Manual trigger → Set node with the ticket",
-              "AI Agent: system message = shared functional contract",
-              "Anthropic Chat Model (Claude Sonnet 5)",
-              "Calculator via ai_tool",
-              "Execution view shows intermediate steps"
-            ],
-            "foot": "Visual builder"
-          },
-          {
-            "title": "Claude Code · afternoon",
-            "items": [
-              "ticket-coach subagent = shared functional contract",
-              "Read / Glob / Grep read-only tools on the same files",
-              "Typed invocation from the lab README",
-              "Preview in chat, checker after",
-              "Transcript shows logged successful tool calls"
-            ],
-            "foot": "Terminal platform"
-          }
-        ]
       },
       {
         "title": "What is a hook?",

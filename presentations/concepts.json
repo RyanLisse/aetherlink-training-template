@@ -791,7 +791,8 @@
       "day2": [
         {
           "after": "Goal · narrow ticket behavior",
-          "concept": "evidence-rule"
+          "concept": "evidence-rule",
+          "mode": "recap"
         }
       ],
       "day3": [
@@ -817,10 +818,11 @@
       "day5": [
         {
           "after": "Day 5 route",
-          "concept": "one-contract"
+          "concept": "one-contract",
+          "mode": "recap"
         },
         {
-          "after": "One contract · how we use it",
+          "after": "One contract, two platforms · recap",
           "concept": "hooks"
         },
         {
@@ -911,12 +913,14 @@
         "Harness · see the layers",
         "Interactive · the agentic loop",
         "One contract, two platforms",
-        "What is a harness?"
+        "What is a harness?",
+        "Glossary · what do we mean?"
       ],
       "day5": [
         "Interactive · the agentic loop",
         "An agent is a system, not a chatty model",
-        "One contract, two platforms"
+        "One contract, two platforms",
+        "Glossary · what do we mean?"
       ]
     },
     "../squads/squad-2/presentations.json": {
