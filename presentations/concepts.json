@@ -675,7 +675,7 @@
           "concept": "one-contract"
         },
         {
-          "after": "Groups · n8n output against the contract",
+          "after": "Individual · improve one instruction",
           "concept": "human-gate"
         }
       ],
@@ -689,7 +689,7 @@
           "concept": "hooks"
         },
         {
-          "after": "Hooks · how we use it",
+          "after": "Individual · handoff and reproduction",
           "concept": "subagents"
         }
       ]

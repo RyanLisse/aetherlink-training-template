@@ -15,7 +15,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 
 - **Agentic loop** · What is an agent? [4] → The agentic loop · see the loop [5] → The agentic loop · how we use it [6]
 - **One contract, two platforms** · What is "one contract, two platforms"? [7] → One contract · see the split [8] → One contract · how we use it [9]
-- **Human gate** · What is a human gate? [13] → Human gate · see the decision [14] → Human gate · how we use it [15]
+- **Human gate** · What is a human gate? [15] → Human gate · see the decision [16] → Human gate · how we use it [17]
 <!-- concepts:end -->
 
 ## Schedule

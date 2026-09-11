@@ -12,7 +12,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 
 - **One contract, two platforms** · What is "one contract, two platforms"? [4] → One contract · see the split [5] → One contract · how we use it [6]
 - **Hooks** · What is a hook? [7] → Hooks · see the guardrail [8] → Hooks · how we use it [9]
-- **Subagents** · What are parallel sessions and subagents? [10] → Subagents · see the streams [11] → Subagents · how we use it [12]
+- **Subagents** · What are parallel sessions and subagents? [19] → Subagents · see the streams [20] → Subagents · how we use it [21]
 <!-- concepts:end -->
 
 ## Schedule
