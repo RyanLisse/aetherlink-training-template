@@ -7,7 +7,7 @@ network calls, production data, or remote publication are used.
 
 ## Concept definition — intent.md
 
-**Intent.md = wat we willen · waarom het telt · binnen welke grenzen.**
+**Intent.md = what we want · why it matters · within which boundaries.**
 It is the short human starting brief before design or build.
 
 ## Outcome and setup
