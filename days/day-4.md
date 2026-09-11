@@ -1,157 +1,173 @@
-# Day 4 — Choose one agent and build it, with a trace you can read
+# Day 4 — Agents in the AI-native SDLC, and your first hook
 
-This is the fourth session for **Wave 2 crew 1**. Day 3 gave everyone the same
-`ticket-coach` in n8n and Claude Code. Today each participant **chooses one of
-three agents** from the participant lab's
-[agent menu](https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/scenarios/agent-menu/README.md)
-and builds it in Claude Code, step by step, with a local trace that shows what
-the agent did. Day 5 hardens the same agent.
+Fourth session for **Wave 2 crew 1**. Two concepts today:
 
-| Option | Agent | Closest real task |
-|---|---|---|
-| A | `ticket-triage` — six FIN tickets → Jira-shaped triage lines | grooming the queue before stand-up |
-| B | `runbook-writer` — one reviewed run log → Confluence-shaped runbook | turning a done ticket into a procedure |
-| C | `repo-reviewer` — this repository → findings with file evidence | reviewing a merge request for consistency |
-| Stretch | `retro-writer` — fictional Jira sprint export → retro draft | only after A, B, or C passed the checker |
+1. **Agents in the AI-native SDLC.** The line becomes a loop; build runs at
+   agent speed while requirements, review and release stay human. You choose
+   **one agent** from the lab menu and build it where it sits in that loop.
+2. **Hooks: see the loop, then set a rule on it.** A trace hook shows what the
+   agent did; your own `PreToolUse` hook decides what it may not do.
+
+| Option | Agent | SDLC stage it serves | Closest real task |
+|---|---|---|---|
+| A | `ticket-triage` — six FIN tickets → Jira-shaped triage lines | Plan | grooming the queue before stand-up |
+| B | `runbook-writer` — one reviewed run log → Confluence-shaped runbook | Maintain | turning a done ticket into a procedure |
+| C | `repo-reviewer` — this repository → findings with file evidence | Deploy (review) | reviewing a merge request for consistency |
+| Stretch | `retro-writer` — fictional Jira sprint export → retro draft | Maintain | only after A, B, or C passed the checker |
+
+Lab: [agent menu](https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/scenarios/agent-menu/README.md) ·
+[first hook](https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/scenarios/agent-menu/first-hook/README.md) ·
+[observability](https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/scenarios/agent-menu/observability.md).
 
 ## Session outcome and boundary
 
-By 16:00 every participant has: one chosen agent installed from the lab
-starter, two runs of it on their own laptop, a trace summary that answers
-*what did it ask, read, delegate, and write*, a checker result, a completed
-run log, and one accepted output saved by themselves under
-`participant-output/`. Groups of 3–4 form only after the individual block.
+By 16:00 every participant has: one chosen agent installed and run twice on
+their own laptop, a trace summary answering *what did it ask, read, delegate,
+write*, a working `PreToolUse` hook they edited themselves, a checker result,
+a completed run log, and one accepted output saved under `participant-output/`.
 
-All inputs are fictional and local. Agents use `Read`, `Glob`, `Grep` only and
-preview in chat; the human saves what they accept. No Jira, GitLab,
-Confluence, PSP, or bank record is created, changed, or implied; no SDK
-deployment or hosting is in scope. A missing model or login is `OPEN`, not a
-run.
+Fictional local inputs; agents use `Read`, `Glob`, `Grep` and preview in
+chat; the only permitted agent write is the hook test under
+`participant-output/`. No Jira, GitLab, Confluence, PSP or bank record; no
+SDK deployment or hosting. Missing model or login is `OPEN`.
 
-The loop is the Day 3 loop with one addition — the trace:
+## Concept 1 — agents in the AI-native SDLC (10:15–10:35)
 
-```mermaid
-flowchart LR
-  A[Goal + contract] --> B[Observe sources]
-  B --> C[Decide bounded step]
-  C --> D[Tool action]
-  D --> T[(trace/session.jsonl)]
-  D --> E[Inspect preview + trace]
-  E --> F{Repeat or stop?}
-  F -->|repeat| B
-  F -->|human gate| G[Human accepts, parks, or redirects]
-```
+Sources: *The AI-native SDLC playbook* (claude.com blog and Claude Academy
+course). Use the interactive SDLC slide (line vs loop, Before/After agents,
+click a stage).
+
+1. **The line versus the loop.** Traditional: Plan → Design → Build → Test →
+   Deploy → Maintain; one loop back is a new release cycle. AI-native: the
+   same six stages as a loop that turns in hours, with humans *above* the
+   loop instigating, directing and governing.
+2. **What actually speeds up.** Build runs at agent speed. Requirements
+   (Plan/Design), review (Test) and release (Deploy) stay human — that is
+   where the reclaimed cycle time goes.
+3. **Start anywhere, adopt in order.** From the playbook's adoption map:
+   capture intent, `CLAUDE.md`, skills, a feedback loop, hooks and plan mode
+   have no prerequisites; subagents and evals build on them; PR review, CI/CD
+   and closing the loop come last. This course walked that map: intent (Day 1),
+   contract (Day 2), subagent (Day 3), hooks (today), evaluator (Day 5).
+4. **Choose your agent by stage.** Point at the table above; each option is
+   a bounded agent at one stage. Pick the work you want faster next week.
+
+## Concept 2 — hooks: see the loop, then set a rule (13:00–13:20)
+
+Source: Claude Code docs, *Automate actions with hooks* and the hooks
+reference. Hooks are shell commands Claude Code runs at fixed points of the
+agentic loop; they are **deterministic** — the rule runs whatever the model
+decides.
+
+1. **See.** The starter's trace hook listens on `UserPromptSubmit`,
+   `PostToolUse`, `SubagentStop`, `Stop` and writes one line per event to
+   `trace/<session>.jsonl`. Read one participant's trace aloud in the
+   four-question order; show `/hooks`.
+2. **Set a rule.** A `PreToolUse` hook on `Write|Edit` can block a write
+   before it happens: exit code 2, message on stderr goes back to Claude as
+   feedback. Demo the lab's `protect_output.py`: root write blocked, write
+   under `participant-output/` allowed, trace shows one `Write`.
+3. **What hooks cannot do.** They do not make the model understand the rule;
+   they hold the boundary. `PostToolUse` cannot undo. Put the rule in
+   `intent.md`/`CLAUDE.md` too, so agent and hook agree.
+4. **Reference only:** Anthropic's `claude-agent-sdk-demos/hello-world`
+   registers the same kind of `PreToolUse` block in TypeScript via the Agent
+   SDK. Needs an API key — not part of the exercise.
 
 ## Facilitator preflight
 
-1. Pull the lab and read `scenarios/agent-menu/README.md` and
+1. Pull the lab; read `scenarios/agent-menu/README.md`, `first-hook/README.md`,
    `observability.md`; open each option README once.
-2. On the trainer laptop, install the starter (`cp -Rn scenarios/agent-menu/starter/.claude .claude`),
-   start Claude Code in the checkout root, run Option A's first prompt, and
-   confirm `trace/<session>.jsonl` exists and
-   `python3 scenarios/agent-menu/tools/trace_summary.py` prints four sections.
-   Record Claude Code version and the model shown. If anything fails, the
-   demo shows the intended steps as `OPEN`.
-3. Confirm Claude Code access for every participant was working on Day 3;
-   unresolved logins are `OPEN` on the board before 10:15.
-4. Put the menu table and the four trace questions on the board.
-5. Prepare Kahoot: opener "Which of these does a trace prove? (a) the answer
-   is correct (b) which files were read (c) the model understood the ticket";
+2. On the trainer laptop: install the starter, run Option A's first prompt,
+   confirm `trace/<session>.jsonl` and `trace_summary.py` output. Then add the
+   `PreToolUse` hook per the first-hook README and run its test prompt; confirm
+   block + allow. Record Claude Code version and model shown.
+3. Ask who is on Windows; have the PowerShell and `python` variants from the
+   first-hook README ready. Test one PowerShell command in a PowerShell window
+   if a Windows laptop is available.
+4. Board: the menu table, the four trace questions, the five hook events used.
+5. Kahoot opener: "Which of these does a trace prove? (a) the answer is
+   correct (b) which files were read (c) the model understood the ticket";
    wordcloud "Which step blocks you today?".
 
 ## Schedule — 10:00–16:00 (360 minutes)
 
 | Time | Minutes | Activity |
 |---|---:|---|
-| 10:00–10:15 | 15 | Open: Kahoot + wordcloud, Day 3 recap, blockers on the board |
-| 10:15–10:35 | 20 | Theory: contract, adapter, trace — why a menu of agents shares one loop |
-| 10:35–10:50 | 15 | Menu walk-through, choice, starter install |
-| 10:50–11:15 | 25 | **Individual** Card 1: first run of the chosen agent |
+| 10:00–10:15 | 15 | Welcome back: Kahoot + wordcloud, Day 3 recap, today's two concepts |
+| 10:15–10:35 | 20 | Concept 1: agents in the AI-native SDLC (interactive slide) |
+| 10:35–10:50 | 15 | Menu choice and starter install |
+| 10:50–11:15 | 25 | **Individual** Card 1: first run of the chosen agent, trace, checker |
 | 11:15–11:25 | 10 | Break |
 | 11:25–11:45 | 20 | Groups of 3–4, Card 2: trace versus citations |
-| 11:45–12:00 | 15 | Human gate: checker result and run log frozen |
+| 11:45–12:00 | 15 | Human gate: baseline frozen |
 | 12:00–13:00 | 60 | Lunch |
-| 13:00–13:15 | 15 | Demo: reading one participant's trace aloud |
-| 13:15–13:40 | 25 | **Individual** Card 3: second run with the agreed correction |
-| 13:40–13:50 | 10 | Break |
-| 13:50–14:30 | 40 | Groups of 3–4, Card 4: explain your agent using only its trace |
-| 14:30–14:45 | 15 | Break |
-| 14:45–15:25 | 40 | **Individual** Card 5: complete run log, save accepted output, draft handoff |
-| 15:25–15:40 | 15 | Recap: what each option taught, one sentence per option |
-| 15:40–16:00 | 20 | Individual check-out, MOB reflection, Kahoot/wordcloud delta |
+| 13:00–13:20 | 20 | Concept 2 + demo: hooks — see the loop, set a rule |
+| 13:20–13:45 | 25 | **Individual** Card 3: build your first hook |
+| 13:45–13:55 | 10 | Break |
+| 13:55–14:10 | 15 | Groups of 3–4, Card 4: compare rules |
+| 14:10–14:35 | 25 | **Individual** Card 5: second agent run with your hook active |
+| 14:35–14:50 | 15 | Break |
+| 14:50–15:25 | 35 | **Individual** Card 6: run log and handoff draft |
+| 15:25–15:40 | 15 | Recap: the two concepts, one sentence each |
+| 15:40–16:00 | 20 | Check-out, MOB reflection, Kahoot/wordcloud delta |
 
-Total: **360 minutes**. Two individual blocks of 25 minutes and one of 40;
-group work never replaces them.
-
-## Theory block — 10:15–10:35 (say it in this order)
-
-1. **Contract before agent.** Each option README defines the output shape the
-   checker verifies. Same rule as `ticket-template.md` on Day 3.
-2. **Adapter versus instruction.** The subagent file is the instruction; the
-   tools (`Read`, `Glob`, `Grep`) are the adapter. Swapping the option swaps
-   the instruction, not the loop.
-3. **Trace = observability.** A hook writes one line per tool call to
-   `trace/<session>.jsonl`. It proves *what ran*, never *what is correct*.
-   Show the four questions: asked, read, delegated, wrote.
-4. **Human gate is still the last step.** Checker PASS + trace + your review
-   = evidence. Any one alone is not.
+Total: **360 minutes**. Four individual blocks (25, 25, 25, 35) before or
+between short group blocks.
 
 ## Literal task cards
 
 ### Card 1 — first run (individual, 10:50–11:15, 25 min)
 
-- **Goal:** a complete preview from your chosen agent plus its trace summary.
-- **Input:** your option README (contract + exact prompt); the files it names.
-- **Steps:**
-  1. `cp -Rn scenarios/agent-menu/starter/.claude .claude`; start Claude Code in the checkout root.
-  2. Fill the header of `templates/run-log.md` (option, model shown, tools).
-  3. Type the option's first prompt **unchanged**. Watch the files it opens.
-  4. `python3 scenarios/agent-menu/tools/trace_summary.py` — copy the four answers into the run log.
-  5. Read the preview. Save it yourself to `participant-output/<option>.md` only if you accept it as a draft.
-  6. `python3 scenarios/agent-menu/tools/check_menu_output.py --agent <name> --output participant-output/<option>.md`
+- **Goal:** a complete preview from your chosen agent plus its trace summary and checker line.
+- **Input:** your option README (contract + exact first prompt); the files it names.
+- **Steps:** `cp -Rn scenarios/agent-menu/starter/.claude .claude` and start Claude Code in the checkout root; fill the `templates/run-log.md` header; type the option's first prompt unchanged; `python3 scenarios/agent-menu/tools/trace_summary.py` → four answers into the run log; save the accepted preview to `participant-output/<option>.md`; `python3 scenarios/agent-menu/tools/check_menu_output.py --agent <name> --output participant-output/<option>.md`.
 - **Result:** preview, trace summary, checker line, run log with PASS/FAIL/OPEN.
-- **Time limit:** 25 min. Unfinished = where you stopped, as `OPEN`.
+- **Time limit:** 25 min.
 
 ### Card 2 — trace versus citations (groups of 3–4, 11:25–11:45, 20 min)
 
-- **Goal:** one source the agent cited but never read, or one it read but never cited.
-- **Input:** each member's trace summary and preview.
-- **Steps:** compare "Sources read" with the output's `Source:` / `[source: …]` lines; check one number by hand against the file; agree one correction phrased as a single added sentence to the prompt, or as an `OPEN`.
+- **Goal:** one source cited but never read, or read but never cited.
+- **Steps:** compare "Sources read" with the output's `Source:`/`[source: …]` lines; check one number by hand; agree one correction as a single added prompt sentence, or an `OPEN`.
 - **Result:** one agreed correction per group on the board.
-- **Time limit:** 20 min.
 
-### Card 3 — second run (individual, 13:15–13:40, 25 min)
+### Card 3 — your first hook (individual, 13:20–13:45, 25 min)
 
-- **Goal:** the correction applied without breaking the contract.
-- **Steps:** same prompt + the agreed sentence; new trace; checker; write in the run log what the agent read differently.
-- **Result:** two traces, two checker lines, one sentence on the difference.
-- **Time limit:** 25 min.
+Follow the lab's `first-hook/README.md` card exactly: copy the script for your
+OS into `.claude/hooks/`, add `PreToolUse` as a sibling event in
+`.claude/settings.json`, restart Claude Code, verify with `/hooks`, run the
+test prompt (root write blocked, `participant-output/` write allowed), read the
+trace, then make the rule yours (folder, second pattern, or message).
 
-### Card 4 — explain your agent from its trace (groups of 3–4, 13:50–14:30, 40 min)
+- **Result:** `/hooks` shows your hook; one blocked and one allowed attempt in the run log; your edited rule.
+- **Time limit:** 25 min. Not working = exact error as `OPEN`; never disable the trace hook to fix it.
 
-- **Goal:** a neighbour who chose a different option describes your run correctly from your trace alone.
-- **Steps:** swap trace summaries, not outputs; the reader states what was asked, the first file read, whether a subagent ran, and whether anything was written; then compare with the output; each group records one mismatch or "none observed" and one prompt-wording lesson.
-- **Result:** the mismatch and lesson on the board; groups mixing two options report first.
-- **Time limit:** 40 min.
+### Card 4 — compare rules (groups of 3–4, 13:55–14:10, 15 min)
 
-### Card 5 — evidence and handoff draft (individual, 14:45–15:25, 40 min)
+- **Goal:** one sentence per group: the first rule you would want on a real repository, and the event it needs (`PreToolUse` prevent, `PostToolUse` react, `Stop` summarise).
 
-- **Goal:** a run log a fresh reader can follow and the accepted output saved.
-- **Steps:** complete every field of `templates/run-log.md`; save the accepted preview; start `templates/handoff.md` with option, prompt, settings, checker line, trace file name, and `OPEN` items; leave the Day 5 evaluator section empty.
-- **Result:** `lab-notes/day-4-run-log.md`, `participant-output/<option>.md`, handoff draft.
-- **Time limit:** 40 min.
+### Card 5 — second run with the hook active (individual, 14:10–14:35, 25 min)
+
+- **Goal:** the Card 2 correction applied; the contract still passes; your hook stayed silent because the agent previewed only.
+- **Steps:** same first prompt plus the agreed sentence; new trace; checker; one sentence in the run log on what the agent read differently and whether the hook fired.
+- **Result:** two traces, two checker lines, hook observation.
+
+### Card 6 — run log and handoff draft (individual, 14:50–15:25, 35 min)
+
+- **Goal:** a run log a fresh reader can follow, the accepted output saved, the handoff started.
+- **Steps:** complete every field of `templates/run-log.md` (Day 5 section empty); start `templates/handoff.md` with option, prompts, settings, checker line, trace file, hook rule, `OPEN` items; save as `lab-notes/day-4-run-log.md`.
 
 ## Recap and close — 15:25–16:00
 
-Recap: one sentence per option from the group that chose it ("A taught us…").
-Then each person answers **Made**, **Learned**, **Can do** individually,
-followed by the MOB reflection: revisit the opening wordcloud blocker and name
-one prompt correction that worked. Repeat the Kahoot question and record the
-delta. Complete the [daily recap](../templates/daily-recap.md), link it from
-`recaps/README.md`, and update `progress.md` with observed results only. Do
-not record unobserved agent success or fictional financial recovery.
+Recap slide: "In the AI-native loop my agent sits at…" and "A hook is…", one
+sentence each from the room. Then individual check-out (**Made**, **Learned**,
+**Can do**), MOB reflection on the opening blocker and one correction that
+worked, Kahoot and wordcloud repeated with the delta. Complete the
+[daily recap](../templates/daily-recap.md), link it from `recaps/README.md`,
+update `progress.md` with observed results only.
 
 ## Phase lens
 
-`Plan`, `Design`, `Build`, and bounded local `Test` are in scope. `Deploy` and
-`Maintain` are `NOT IN SCOPE — no hosting, schedule, or business-system write`.
+`Plan`, `Design`, `Build`, bounded local `Test`, and a local `Deploy` gate
+(the hook) are in scope. `Maintain` and any hosting, schedule or
+business-system write are `NOT IN SCOPE`.

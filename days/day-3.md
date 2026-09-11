@@ -1,179 +1,161 @@
-# Day 3 — Build one bounded agent twice: n8n, then Claude Code
+# Day 3 — What an agent is, and one agent built twice (n8n, then Claude Code)
 
-This is the next session for **Wave 2 crew 1**, continuing from its completed
-Days 1–2. Participants use the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab)
-repository as their learner workspace. The course [ticket-agent pack](../scenarios/ticket-agent/README.md)
-remains the trainer workbook and source of the ticket contract; it is not the
-participant starting path.
+Third session for **Wave 2 crew 1**. Two concepts today, nothing more:
+
+1. **What an agent is — the agentic loop.** Gather context → take action →
+   verify results, repeated, with you able to interrupt at any point.
+2. **One contract, two platforms.** The same `ticket-coach` built in n8n in
+   the morning and rebuilt in Claude Code after lunch, on the same
+   `TICKET-OPS-101` input and output contract.
+
+Participants use the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab)
+repository as their learner workspace. The course
+[ticket-agent pack](../scenarios/ticket-agent/README.md) is the trainer
+workbook, not the participant starting path.
 
 ## Session outcome and boundary
 
-By the close, each participant has built the same bounded ticket agent first in
-n8n and then in Claude Code. Both runs use the identical `TICKET-OPS-101`
-input, instruction text, and output contract: a preview following
-`ticket-template.md`, with source-backed fields, protected Current/Desired
-sections, and unsupported facts marked `OPEN`. The learner records the actual
-settings, output, and human decision for each platform, compares observations
-under identical instructions, and only then transfers the method to
-`TICKET-OPS-102`.
+By 16:00 each participant has run the same bounded agent on both platforms
+with identical instruction, input and contract, recorded settings and output
+for each, compared the two observations with a fresh reader, and transferred
+the unchanged method to `TICKET-OPS-102` only after that comparison.
 
-n8n credentials and workflow access are selected and checked separately during
-facilitator preflight. A learner must be logged in with approved access to run
-the workflow; an unavailable credential or login is `OPEN`, not evidence that
-the workflow ran. No business-system record is created or changed, and no SDK lesson is
-in scope.
+n8n credentials and access are preflighted separately; an unavailable login
+is `OPEN`, not a run. Agents preview in chat and write nothing. No
+business-system record is created or changed; no SDK lesson is in scope.
 
-Use the agent loop before either build: goal/context → observe → decide → tool
-action → inspect result → repeat or stop at a human gate. The human owns the
-scope, interpretation, and acceptance decision.
+## Concept 1 — the agentic loop (10:15–10:35)
+
+Source: Claude Code docs, *How Claude Code works → The agentic loop*. Use the
+interactive loop slide (Step / Play / You interrupt) and say it in this order:
+
+1. **Three phases that blend together.** *Gather context* (read files,
+   search), *take action* (edit, draft, calculate), *verify results* (run the
+   check, compare with the contract). Tools are used throughout.
+2. **The loop adapts.** A question may need one pass of context gathering; a
+   fix cycles all three phases many times. The agent decides the next step
+   from what the previous step returned.
+3. **You are in the loop.** Interrupt, steer, add context, or accept at the
+   human gate. Autonomous, but responsive to you.
+4. **Models reason, tools act.** Claude Code is the *harness* around the
+   model: tools, context management, execution environment. n8n is another
+   harness around a model. Same loop, different harness.
+5. **Model · chat · agent · subagent**, one sentence each: a model predicts
+   text; a chat is a model with a conversation; an agent is a model in a loop
+   with tools and a goal; a subagent is an agent another agent delegates to,
+   with its own context.
 
 ```mermaid
 flowchart LR
-  A[Goal + context] --> B[Observe sources]
-  B --> C[Decide bounded step]
-  C --> D[Tool action]
-  D --> E[Inspect output]
-  E --> F{Repeat or stop?}
-  F -->|repeat| B
-  F -->|human gate| G[Human accepts, parks, or redirects]
+  P[Your prompt] --> G[Gather context]
+  G --> A[Take action]
+  A --> V[Verify results]
+  V -->|repeat| G
+  V --> D[Done]
+  H[You: interrupt, steer, add context] -.-> G
+  H -.-> A
+  H -.-> V
 ```
 
-## Facilitator preflight
+## Concept 2 — one contract, two platforms (10:35–10:45, then all day)
 
-1. Open the participant lab root README and the trainer ticket-agent pack.
-2. Confirm the exact `TICKET-OPS-101` input and `ticket-template.md` output
-   contract, including the four required headings, protected sections, source
-   citations, and `OPEN` handling. Keep `TICKET-OPS-102` for transfer only.
-3. Choose the n8n workflow credentials and access mode separately. Test the
-   selected credential in the agreed training environment and record the
-   observed result. Do not put credentials in this repository.
-4. Confirm the Claude Code account/mode and the local lab copy. Record model,
-   access, zoom, revision, and timestamp where visible. Use `OPEN` for an
-   unrun check or missing access.
-5. Put the identical prompt below on the board. The only permitted input change
-   is `TICKET-OPS-101` to `TICKET-OPS-102`, and that happens after the comparison
-   gate.
+The functional instruction is `scenarios/ticket-agent/shared-prompt.md` in
+the lab. In n8n it is the AI Agent **system message** and the ticket text is
+the user message — nothing is typed at run time. In Claude Code it is the body
+of the `ticket-coach` subagent and the learner types the invocation from the
+lab's ticket-agent README. Same instruction, same input, same contract; only
+the harness differs. That is what makes the afternoon comparison meaningful —
+and why one pair of runs still proves no causal superiority.
 
-## Schedule — 10:00–16:00 (360 minutes)
-
-| Time | Minutes | Activity |
-|---|---:|---|
-| 10:00–10:10 | 10 | Theory: agent definition and loop, before either build |
-| 10:10–10:20 | 10 | n8n demo: build and preview the bounded agent |
-| 10:20–10:45 | 25 | Individual n8n run on each participant’s own laptop |
-| 10:45–11:00 | 15 | n8n output review against the shared contract |
-| 11:00–11:10 | 10 | Break |
-| 11:10–11:45 | 35 | Finish n8n run, capture settings and evidence |
-| 11:45–12:00 | 15 | Human gate and baseline record for `TICKET-OPS-101` |
-| 12:00–13:00 | 60 | Lunch |
-| 13:00–13:10 | 10 | Claude Code rebuild demo using the same contract |
-| 13:10–13:35 | 25 | Individual Claude Code run on the same `TICKET-OPS-101` |
-| 13:35–13:50 | 15 | Claude Code output review against the same contract |
-| 13:50–14:00 | 10 | Break |
-| 14:00–14:30 | 30 | Compare n8n and Claude Code with identical instructions |
-| 14:30–14:45 | 15 | Human gate, then transfer unchanged method to `TICKET-OPS-102` |
-| 14:45–15:00 | 15 | Break |
-| 15:00–15:40 | 40 | Evidence readback and receiver-ready handoff |
-| 15:40–16:00 | 20 | Close: made, learned, can do, and next action |
-
-Total: **360 minutes**. The first n8n individual block is 25 minutes on each
-participant’s own laptop. Do not replace it with a group demonstration. Group
-review may begin only after that block; driver rotation is optional during the
-review and does not change the two controlled runs.
-
-## Literal task cards
-
-### 1. Theory and n8n demo — 10:00–10:20
-
-State the agent goal, input, allowed context/tools, output contract, and stop
-rule before touching either platform. Explain model, chat, agent, and
-subagent in one sentence each. Demonstrate the n8n workflow with the selected
-credential and login. If preflight did not confirm access, show the intended
-steps as `OPEN` and do not imply a run.
-
-Use this exact functional prompt with the supplied ticket input and contract
-in the demo and both `TICKET-OPS-101` runs:
+Board prompt (human-readable summary of the contract, not a third instruction):
 
 ```text
 Read the supplied TICKET-OPS-101 input and return a preview that follows the shared ticket output contract. Cite the exact source sections for every factual field, preserve Current and Desired as protected sections, separate facts from assumptions, and label unsupported details OPEN. Do not write files, create or change business-system records, or approve financial status.
 ```
 
-How the instruction is layered on the two platforms (record this, it is part
-of the settings evidence): the shared functional instruction is
-`scenarios/ticket-agent/shared-prompt.md` in the lab. In n8n it is embedded as
-the AI Agent **system message** and the ticket text is the user message, so
-nothing is typed at run time. In Claude Code it is the body of the
-`ticket-coach` subagent, and the learner types the invocation from the lab's
-ticket-agent README (`Use the ticket-coach subagent. Read … TICKET-OPS-101 …`).
-The board prompt above is the human-readable summary of that contract, not a
-third instruction; do not paste it into n8n or add it as hidden context.
+## Facilitator preflight
 
-The trainer maps the lab’s README and files to the course pack’s
-`ticket-inputs.md` and `ticket-template.md`. Keep those links separate: the
-lab is the learner path and the pack is the trainer workbook.
+1. Open the lab root README and the trainer ticket-agent pack; confirm the
+   `TICKET-OPS-101` input and `ticket-template.md` contract. Keep `102` closed.
+2. Test the n8n credential (Anthropic Chat Model by default; provider swap
+   documented in the lab) in the agreed environment. Record the result.
+3. Confirm Claude Code access and the local lab copy; record version, model
+   shown, timestamp. Unrun = `OPEN`.
+4. Open the Site deck for crew 1 day 3 and test the loop widget (Step, Play,
+   You interrupt) on the room's screen.
+5. Kahoot opener: "An agent is… (a) a smarter chat (b) a model in a loop with
+   tools and a goal (c) a workflow"; wordcloud "Which step blocks you today?".
 
-### 2. Individual n8n run — 10:20–10:45
+## Schedule — 10:00–16:00 (360 minutes)
 
-Each participant works alone:
+| Time | Minutes | Activity |
+|---|---:|---|
+| 10:00–10:15 | 15 | Welcome back: Kahoot + wordcloud, Day 1–2 recap, today's two concepts |
+| 10:15–10:35 | 20 | Concept 1: what an agent is — the agentic loop (interactive slide) |
+| 10:35–10:45 | 10 | Concept 2 + n8n demo: one contract, two platforms |
+| 10:45–11:10 | 25 | **Individual** n8n run on `TICKET-OPS-101` |
+| 11:10–11:20 | 10 | Break |
+| 11:20–11:45 | 25 | Groups of 3–4: n8n output against the contract |
+| 11:45–12:00 | 15 | Human gate: n8n baseline frozen |
+| 12:00–13:00 | 60 | Lunch |
+| 13:00–13:10 | 10 | Claude Code demo: rebuild the same agent |
+| 13:10–13:35 | 25 | **Individual** Claude Code run on the same `TICKET-OPS-101` |
+| 13:35–13:45 | 10 | Break |
+| 13:45–14:15 | 30 | Groups of 3–4: same-input comparison with a fresh reader |
+| 14:15–14:30 | 15 | Human gate, then transfer unchanged to `TICKET-OPS-102` |
+| 14:30–14:45 | 15 | Break |
+| 14:45–15:25 | 40 | **Individual** evidence readback and handoff |
+| 15:25–15:40 | 15 | Recap: the two concepts, one sentence each |
+| 15:40–16:00 | 20 | Check-out, MOB reflection, Kahoot/wordcloud delta |
 
-1. Open the lab root README and locate the ticket input and output contract.
-2. Run the bounded n8n workflow with the approved, preflighted credential.
-3. Use the exact functional prompt above with the supplied `TICKET-OPS-101`
-   input; do not add hidden context.
-4. Save the transcript or exported preview and record workflow version,
-   credential/access mode, model if visible, timestamp, paths, and result.
-5. Mark login, credential, or workflow checks `OPEN` when they were not
-   observed. Do not fill missing facts from the course target or memory.
+Total: **360 minutes**. Two 25-minute individual blocks, one per platform,
+before any group work.
 
-### 3. n8n review and baseline gate — 10:45–12:00
+## Literal task cards
 
-Check the preview against the shared contract: ticket identity, required
-headings, protected sections, source citations, assumptions, and `OPEN`
-labels. The human reviewer records `PASS`, `FAIL`, or `OPEN`, quotes one
-observed line, and freezes the n8n baseline before lunch. A blocked credential
-is an access result, not a successful agent run.
+### Card 1 — individual n8n run (10:45–11:10, 25 min)
 
-### 4. Claude Code rebuild and run — 13:00–13:50
+- **Goal:** one n8n baseline on `TICKET-OPS-101` with settings recorded.
+- **Input:** lab `n8n/README.md`, `n8n/workflows/ticket-coach.json`, preflighted credential.
+- **Steps:** import the workflow; select the credential in the UI; confirm Calculator is connected to the AI Agent's tool input; execute once; inspect the output and the intermediate steps for the Calculator call; record workflow version, model, access mode, execution time, output.
+- **Result:** output + settings in your run log; login or credential problems as `OPEN`.
+- **Time limit:** 25 min.
 
-Rebuild the same bounded agent in Claude Code from the lab instructions. Keep
-the functional prompt, supplied `TICKET-OPS-101` input, output contract, and
-evidence fields the same as n8n. Record Claude Code model/mode and access, then
-preview the output without writing files or business-system records. Review it with the same checklist
-and human gate. If the lab or account is unavailable, record `OPEN` and keep
-the comparison bounded to the evidence that exists.
+### Card 2 — groups of 3–4: n8n review (11:20–11:45, 25 min)
 
-### 5. Same-input comparison — 14:00–14:30
+- **Goal:** each output checked against the contract by someone who did not run it.
+- **Steps:** ticket identity, four headings, protected sections verbatim, Given/When/Then counts (≥2 positive, ≥2 negative), source citations, `OPEN` labels; quote one observed line; PASS / FAIL / OPEN.
+- **Result:** a review line per person on the board; baseline frozen at the 11:45 gate.
 
-Give a fresh reviewer the n8n and Claude Code records, the exact prompt, the
-two settings records, and the shared contract. Ask them to identify one output
-difference or `OPEN — no observed difference`, one unchanged boundary, and
-any missing evidence. Describe platform differences as observations of these
-runs. Do not claim that n8n or Claude Code caused a difference from this pair;
-the comparison does not establish causality.
+### Card 3 — individual Claude Code run (13:10–13:35, 25 min)
 
-### 6. Transfer only after comparison — 14:30–14:45
+- **Goal:** the same contract, same input, in Claude Code.
+- **Steps:** from the lab root `cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/`; start Claude Code; type the README invocation unchanged; preview; run `check_ticket.py`; record model/mode, output, checker line.
+- **Result:** Claude Code baseline in the run log.
+- **Time limit:** 25 min.
 
-After the human accepts the `TICKET-OPS-101` comparison, reuse the same agent
-instructions and output contract with `TICKET-OPS-102` as the only input
-change. Record it as a transfer, not a third comparison run. Do not open
-`TICKET-OPS-102` before the same-input comparison is recorded.
+### Card 4 — groups of 3–4: same-input comparison (13:45–14:15, 30 min)
 
-### 7. Handoff and close — 15:00–16:00
+- **Goal:** one observed difference (or `OPEN — no observed difference`), one unchanged boundary, and any missing evidence, from a reader who saw neither run.
+- **Steps:** hand over both records, prompt, settings, contract; the reader reports; describe differences as observations of these two runs, never as one platform causing them.
+- **Result:** a comparison note per group; then the 14:15 gate and the `102` transfer with the method unchanged.
 
-Store the lab URL, exact prompt, input/output contract, n8n and Claude Code
-settings, both previews, human decisions, comparison, the later `102`
-transfer, access gaps, and next action in `lab-notes/day-3-evidence.md` and
-`lab-notes/handoff-day-3.md` or the lab’s equivalent. A fresh receiver must
-find the two `101` runs and explain what remains `OPEN` in two minutes.
+### Card 5 — individual evidence and handoff (14:45–15:25, 40 min)
 
-Each person answers **Made**, **Learned**, and **Can do**, then records one
-reproducible next step. Keep participant ratings private and report only
-observed artifacts and access results. Complete the [daily recap](../templates/daily-recap.md)
-and update the relevant [recap index](../recaps/README.md); do not record
-fictional financial recovery or unobserved platform success.
+- **Goal:** a fresh receiver finds both `101` runs and the `OPEN` items in two minutes.
+- **Steps:** store lab URL, exact prompts, both settings, both outputs, checker lines, comparison, `102` transfer, access gaps, next action in `lab-notes/day-3-evidence.md` and `lab-notes/handoff-day-3.md`.
+- **Result:** the two files.
+
+## Recap and close — 15:25–16:00
+
+Recap slide: one sentence per concept from the room — "An agent is…", "The
+same contract on two platforms showed…". Then individual check-out (**Made**,
+**Learned**, **Can do**), MOB reflection on the opening blocker, Kahoot and
+wordcloud repeated with the delta recorded. Complete the
+[daily recap](../templates/daily-recap.md), link it from `recaps/README.md`,
+update `progress.md` with observed results only.
 
 ## Phase lens
 
-`Plan`, `Design`, `Build`, and bounded local `Test` are in scope. `Deploy` and
-`Maintain` are `NOT IN SCOPE — no workflow publication or business-system write,
-or production operation is performed`.
+`Plan`, `Design`, `Build`, bounded local `Test`. `Deploy` and `Maintain` are
+`NOT IN SCOPE — no workflow publication or business-system write`.

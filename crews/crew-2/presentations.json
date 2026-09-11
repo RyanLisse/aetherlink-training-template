@@ -306,7 +306,7 @@
       {
         "title": "The agent loop",
         "kicker": "THEORY · 10:05–10:10",
-        "subtitle": "Goal/context → observe → decide → tool action → inspect result → repeat or stop",
+        "subtitle": "Gather context → take action → verify results — repeat, and you can interrupt at any point",
         "cards": [
           {
             "title": "Observe",
@@ -321,19 +321,18 @@
             "body": "Inspect the result; repeat or stop for human acceptance"
           }
         ],
-        "prompt": "Walk the loop aloud before the demo: goal/context, observe, decide, tool action, inspect result, repeat or stop at the human gate.",
+        "prompt": "Step through the interactive loop: gather context, take action, verify results, repeat; press You interrupt to show the human in the loop. Apply it to the read-only ticket-coach preview.",
         "notes": "De loop maakt duidelijk waarom een toolactie altijd gevolgd wordt door inspectie en een stopregel.",
         "dark": false,
         "steps": [
-          "Goal + context",
-          "Observe",
-          "Decide",
-          "Tool action",
-          "Inspect result",
+          "Gather context",
+          "Take action",
+          "Verify results",
           "Repeat or stop / human gate"
         ],
         "expected": "Participants can name every stage of the loop.",
-        "check": "No autonomous approval or unbounded action is implied."
+        "check": "No autonomous approval or unbounded action is implied.",
+        "widget": "agentic-loop"
       },
       {
         "title": "Model, chat, agent, subagent",

@@ -23,9 +23,9 @@ learner must be logged in with approved access; missing login or credentials is
 create or change business-system records, or approve financial status. No
 SDK lesson is in scope.
 
-Use the agent loop before either build: goal/context → observe → decide → tool
-action → inspect result → repeat or stop at a human gate. The human owns scope,
-interpretation, and acceptance.
+Use the agent loop before either build: gather context → take action → verify
+results, repeated, with the human able to interrupt at any point and owning
+scope, interpretation, and acceptance (Claude Code docs, *The agentic loop*).
 
 ```mermaid
 flowchart LR
