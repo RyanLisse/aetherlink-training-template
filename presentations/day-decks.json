@@ -1288,18 +1288,18 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:15 exercise 1 · 11:15–11:30 break"
+            "body": "10:00–10:20 opening · 10:20–10:50 theory · 10:50–11:15 demo · 11:15–11:30 break"
           },
           {
             "title": "Midday",
-            "body": "11:30–12:00 exercise 2 · 12:00–13:00 lunch · 13:00–13:20 demo/coaching"
+            "body": "11:30–12:00 individual plan · 12:00–13:00 lunch · 13:00–13:25 group handoff · 13:25–13:50 revision · 13:50–14:00 human gate"
           },
           {
             "title": "Afternoon",
-            "body": "13:20–14:05 exercise 3 · 14:05–14:20 break · 14:20–15:10 exercise 4 · 15:10–15:45 exercise 5 · 15:45–16:00 reflection"
+            "body": "14:00–14:15 break · 14:15–15:00 evidence pack · 15:00–15:25 MOB review · 15:25–15:40 transfer · 15:40–16:00 reflection"
           }
         ],
-        "prompt": "Read the schedule aloud. For the next block, name its artifact and its human acceptance check.",
+        "prompt": "Read the Day 3 route aloud. For the next block, name its artifact and its human acceptance check. Keep the lunch and two breaks fixed.",
         "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
         "dark": false,
         "steps": [
@@ -1308,7 +1308,7 @@
           "Name its acceptance check."
         ],
         "expected": "Participants can navigate the day.",
-        "check": "Opening begins at the required time."
+        "check": "The opening, lunch, both breaks, and close match the Day 3 guide."
       },
       {
         "title": "What is an agent?",
@@ -1583,68 +1583,41 @@
         "layout": "cards"
       },
       {
-        "title": "AI-native SDLC loop",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "Plan → Design → Build → Test → Deploy → Maintain, then learn",
+        "title": "Trainer demo · intent to plan",
+        "kicker": "DEMO · 10:50–11:15 · 25 MIN",
+        "subtitle": "Show one complete route before participants try it",
         "cards": [
           {
-            "title": "Early",
-            "body": "Intent and spec make the outcome observable"
+            "title": "INPUT",
+            "body": "intent.md, progress.md, and the local TICKET-OPS-101 input"
           },
           {
-            "title": "Middle",
-            "body": "Plan, build, and test create inspectable evidence"
+            "title": "DRAFT",
+            "body": "Goal, six phases, positive and negative checks, evidence, and OPEN questions"
           },
           {
-            "title": "Later",
-            "body": "Local release and maintenance feed the next intent"
+            "title": "HUMAN GATE",
+            "body": "Facilitator confirms scope and accepts or revises the plan"
           }
         ],
-        "prompt": "Explain the loop to a newcomer using the Fictional Reconciliation exercise. Ask which artifact proves each phase and where a human gate can stop the work.",
-        "notes": "Leg elk nieuw begrip uit vóór je het gebruikt. Deploy betekent vandaag lokaal oefenen.",
-        "dark": false,
-        "steps": [
-          "Name each phase.",
-          "Attach one artifact.",
-          "Mark a human gate."
-        ],
-        "expected": "Participants can trace the loop.",
-        "check": "Deploy is described as local rehearsal, never production."
-      },
-      {
-        "title": "Trainer demo · context to intent",
-        "kicker": "LITERAL DEMO · 10:15",
-        "subtitle": "Show the first conversation before participants try",
-        "cards": [
-          {
-            "title": "Trainer says",
-            "body": "‘Read only the scenario README and CSV headers. Ask one question at a time.’"
-          },
-          {
-            "title": "Agent returns",
-            "body": "Problem, outcome, roles, cutoff, constraints, open questions"
-          },
-          {
-            "title": "Human gate",
-            "body": "Facilitator corrects scope and accepts the intent"
-          }
-        ],
-        "prompt": "Trainer demo: ‘Act as an intent interviewer for fictional Fictional Reconciliation reconciliation. Ask one question at a time. Use only local CSVs. Draft lab-notes/payment-intent.md; do not code, publish, or invent policy.’ Then show the human correction and acceptance line.",
+        "prompt": "Trainer demo: read intent.md and the local ticket, draft the smallest plan, add two positive and two negative Given/When/Then checks, and show the human gate. Do not code, publish, or invent policy.",
         "notes": "Laat exact zien wat de trainer typt, wat de agent vraagt en waar de mens beslist.",
         "dark": true,
         "steps": [
-          "Paste the prompt.",
-          "Answer one question.",
-          "Correct scope.",
-          "Accept or revise."
+          "Read the input.",
+          "Draft the plan.",
+          "Add positive and negative checks.",
+          "Ask for human acceptance."
         ],
-        "expected": "A visible intent draft with a human decision.",
-        "check": "The demo creates no remote ticket or code."
+        "expected": "A visible plan with acceptance checks and a stop condition.",
+        "check": "The demo names its source files, evidence, human gate, and OPEN questions.",
+        "timer": 25,
+        "mascot": true
       },
       {
         "title": "Exercise 1 · capture intent",
-        "kicker": "10:40–11:15 · 35 MIN",
-        "subtitle": "Name the problem before designing a solution",
+        "kicker": "INDIVIDUAL · 11:30–12:00 · 30 MIN",
+        "subtitle": "Turn the agreed context into your own route",
         "cards": [
           {
             "title": "Problem",
@@ -1659,106 +1632,248 @@
             "body": "Policy questions stay visible and OPEN"
           }
         ],
-        "prompt": "Act as an intent interviewer. Ask one question at a time, then draft lab-notes/payment-intent.md with problem, observable outcome, roles, cutoff/timezone, fixture-only constraints, open questions, and human acceptance. Do not code or create tickets.",
+        "prompt": "Read intent.md, progress.md, and the local TICKET-OPS-101 input. Create lab-notes/day-3-plan.md with the goal, current and desired state, six SDLC phases, two positive and two negative Given/When/Then checks, evidence needed, human gates, and OPEN questions. Do not edit business records.",
         "notes": "Laat de originator antwoorden; de scribe bewaart open vragen.",
         "dark": false,
         "steps": [
-          "Interview the originator.",
-          "Draft the intent note.",
-          "Review the boundary.",
-          "Record acceptance."
+          "Read the task card.",
+          "Write the route.",
+          "Add four behavior checks.",
+          "Mark unknowns OPEN."
         ],
-        "expected": "A concise accepted intent note.",
-        "check": "Cutoff, roles, and five-case outcome are explicit."
+        "expected": "A small reviewable route from intent to evidence.",
+        "check": "A fresh reader can name the next action, proof, and stop condition in two minutes.",
+        "timer": 30,
+        "mascot": true
       },
       {
-        "title": "Trainer demo · plan and proof",
-        "kicker": "13:00–13:20 · 20 MIN",
-        "subtitle": "Preview the smallest worksheet and its checks",
+        "title": "Groups · analyst → developer → tester handoff",
+        "kicker": "GROUP REVIEW · 13:00–13:25 · 25 MIN",
+        "subtitle": "Pass the same plan through three roles",
         "cards": [
           {
-            "title": "Plan",
-            "body": "Read sources → validate → reconcile → classify → hand off"
+            "title": "ANALYST",
+            "body": "States the facts, desired outcome, and what remains OPEN."
           },
           {
-            "title": "Proof",
-            "body": "Exact command or sheet reference plus source IDs"
+            "title": "DEVELOPER",
+            "body": "Names one technical consequence without changing the functional intent."
           },
           {
-            "title": "Pause",
-            "body": "Stop when duplicate or cutoff policy is unclear"
+            "title": "TESTER",
+            "body": "Checks one positive and one negative scenario against the contract."
           }
         ],
-        "prompt": "Trainer demo in read-only plan mode: inspect the scenario and propose files, order, risks, proof command, and rollback for a local worksheet. Ask the human to accept the plan before any edit or agent run.",
-        "notes": "Toon het verschil tussen een planvoorstel en een uitgevoerd resultaat.",
-        "dark": true,
-        "steps": [
-          "Inspect read-only.",
-          "Name risks.",
-          "Show proof.",
-          "Ask for acceptance."
-        ],
-        "expected": "Participants see a plan before work.",
-        "check": "No source CSV is edited."
-      },
-      {
-        "title": "Exercise 3 · plan the slice",
-        "kicker": "13:20–14:05 · 45 MIN",
-        "subtitle": "Choose the smallest useful evidence table",
-        "cards": [
-          {
-            "title": "Columns",
-            "body": "Case ID · source IDs · calculation · owner · next action"
-          },
-          {
-            "title": "Order",
-            "body": "Validate identifiers, arithmetic, batches, then cases"
-          },
-          {
-            "title": "Rollback",
-            "body": "Discard only the local worksheet or note"
-          }
-        ],
-        "prompt": "In read-only plan mode, inspect the scenario. Draft lab-notes/payment-plan.md for the smallest worksheet or optional one-off check. Name files, proof commands, risks, evidence columns, and rollback. Get a human acceptance before running anything.",
-        "notes": "Laat een skeptic specifiek vragen naar duplicaten en datumgrenzen.",
+        "prompt": "In groups of 3–4, use the same plan. The analyst reads the intent, the developer adds one technical consequence, and the tester checks one positive and one negative scenario. The scribe records the evidence and one OPEN question.",
+        "notes": "Roteer de rollen na de individuele oefening. Parkeer architectuurvragen tot de eerste handoff klaar is.",
         "dark": false,
         "steps": [
-          "Name files and order.",
-          "Identify two risks.",
-          "Define proof.",
-          "Get acceptance."
+          "Read the intent.",
+          "Add one consequence.",
+          "Check two scenarios.",
+          "Record evidence and OPEN."
         ],
-        "expected": "An accepted, reversible plan.",
-        "check": "Plan names a source-row readback."
+        "expected": "One shared plan with role-specific feedback.",
+        "check": "The group can point to the exact line changed and the evidence behind it.",
+        "layout": "cards",
+        "timer": 25,
+        "mascot": true
+      },
+      {
+        "title": "Exercise 2 · revise with feedback",
+        "kicker": "INDIVIDUAL · 13:25–13:50 · 25 MIN",
+        "subtitle": "Apply only the feedback the group can support",
+        "cards": [
+          {
+            "title": "KEEP",
+            "body": "Preserve the functional intent and the protected ticket wording."
+          },
+          {
+            "title": "ADD",
+            "body": "Add one supported technical consequence or test clarification."
+          },
+          {
+            "title": "OPEN",
+            "body": "Leave unsupported policy or access questions visible."
+          }
+        ],
+        "prompt": "Revise lab-notes/day-3-plan.md using only the group feedback that has a source or explicit reason. Keep the functional intent unchanged. Add the reviewer name, evidence line, and any remaining OPEN questions.",
+        "notes": "Individueel werk na de overdracht. De groep mag niet stilzwijgend de scope veranderen.",
+        "dark": false,
+        "steps": [
+          "Review feedback.",
+          "Keep the contract.",
+          "Revise the plan.",
+          "Record the reviewer."
+        ],
+        "expected": "A revised plan with traceable feedback.",
+        "check": "Every change has a source, reviewer, or OPEN label.",
+        "layout": "exercise",
+        "timer": 25,
+        "mascot": true
+      },
+      {
+        "title": "Human gate · freeze the plan",
+        "kicker": "HUMAN GATE · 13:50–14:00 · 10 MIN",
+        "subtitle": "Accept, revise, or park the plan before evidence work",
+        "cards": [
+          {
+            "title": "PASS",
+            "body": "The route, checks, evidence, and stop condition are clear."
+          },
+          {
+            "title": "REVISE",
+            "body": "Name the exact missing line and owner before continuing."
+          },
+          {
+            "title": "OPEN",
+            "body": "Park unavailable access or policy decisions with an owner."
+          }
+        ],
+        "prompt": "Ask the human reviewer to choose PASS, REVISE, or OPEN. Record the decision, owner, and next step in the plan. Do not start the evidence pack until the gate is explicit.",
+        "notes": "De menselijke beslissing sluit de scope. Een demo of checker is geen akkoord.",
+        "dark": true,
+        "steps": [
+          "Read the plan.",
+          "Choose PASS, REVISE, or OPEN.",
+          "Record owner and next step."
+        ],
+        "expected": "An explicit human decision before the next exercise.",
+        "check": "The plan has one visible gate decision and owner.",
+        "layout": "cards",
+        "timer": 10,
+        "mascot": true
+      },
+      {
+        "title": "Exercise 3 · evidence pack",
+        "kicker": "INDIVIDUAL · 14:15–15:00 · 45 MIN",
+        "subtitle": "Make the result reproducible for a fresh reader",
+        "cards": [
+          {
+            "title": "SOURCES",
+            "body": "Cite the local files and source row IDs used."
+          },
+          {
+            "title": "CHECKS",
+            "body": "Write the command or calculation that reproduces each result."
+          },
+          {
+            "title": "HANDOFF",
+            "body": "Link the plan, evidence log, checker, and OPEN items."
+          }
+        ],
+        "prompt": "Add source citations, expected output shape, checker command, and lab-notes/handoff-day-3.md. Use OPEN for unavailable access or unrun tools. Do not execute n8n or Claude Code today.",
+        "notes": "Laat deelnemers individueel bewijs schrijven. Alleen werkelijk uitgevoerde checks krijgen een resultaat; de rest blijft OPEN.",
+        "dark": false,
+        "steps": [
+          "Cite source files and rows.",
+          "Add the proof command.",
+          "Write the handoff.",
+          "Mark unrun checks OPEN."
+        ],
+        "expected": "An evidence pack another person can inspect.",
+        "check": "Every result has a source, a reproduced check, and a reviewer or OPEN.",
+        "layout": "exercise",
+        "timer": 45,
+        "mascot": true
+      },
+      {
+        "title": "Groups · MOB review",
+        "kicker": "MOB REVIEW · 15:00–15:25 · 25 MIN",
+        "subtitle": "Review the evidence pack with fixed roles",
+        "cards": [
+          {
+            "title": "DRIVER",
+            "body": "Opens the plan and evidence pack."
+          },
+          {
+            "title": "NAVIGATOR",
+            "body": "Checks that the handoff follows the written route."
+          },
+          {
+            "title": "SKEPTIC + SCRIBE",
+            "body": "Requests source IDs, marks OPEN, and records the decision."
+          }
+        ],
+        "prompt": "Run a short MOB review in groups of 3–4. The navigator follows the handoff, the skeptic asks for evidence, and the scribe records one useful correction and one OPEN item. Rotate once.",
+        "notes": "Gebruik de MOB om bruikbaarheid te beoordelen, niet om extra architectuur te ontwerpen.",
+        "dark": false,
+        "steps": [
+          "Assign roles.",
+          "Follow the handoff.",
+          "Ask for evidence.",
+          "Record one correction and one OPEN."
+        ],
+        "expected": "A reviewed evidence pack with one concrete improvement.",
+        "check": "The scribe can show the correction and its source.",
+        "layout": "cards",
+        "timer": 25,
+        "mascot": true
+      },
+      {
+        "title": "Transfer · tomorrow in n8n",
+        "kicker": "TRANSFER · 15:25–15:40 · 15 MIN",
+        "subtitle": "Carry the frozen contract into tomorrow’s build",
+        "cards": [
+          {
+            "title": "INPUT",
+            "body": "TICKET-OPS-101 and the accepted functional contract."
+          },
+          {
+            "title": "ADAPTER",
+            "body": "Tomorrow starts in n8n; record model, tools, mode, and access separately."
+          },
+          {
+            "title": "STOP",
+            "body": "No credential, source, or policy assumption is silently filled in."
+          }
+        ],
+        "prompt": "Write the one sentence that tomorrow’s n8n agent must preserve. Name the first tool call, the human gate, and the OPEN condition that stops the run.",
+        "notes": "De transfer is een korte individuele check voor de volgende dag.",
+        "dark": false,
+        "steps": [
+          "Name the preserved contract.",
+          "Name the first tool call.",
+          "Name the stop condition."
+        ],
+        "expected": "A clear starting instruction for tomorrow.",
+        "check": "The transfer sentence preserves the contract and names a human gate.",
+        "layout": "cards",
+        "timer": 15,
+        "mascot": true
       },
       {
         "title": "Reflection and transfer",
-        "kicker": "15:45–16:00 · 15 MIN",
-        "subtitle": "Name what you can repeat alone",
+        "kicker": "CLOSE · 15:40–16:00 · 20 MIN",
+        "subtitle": "Name what you made, learned, and can repeat",
         "cards": [
           {
-            "title": "Individual",
-            "body": "Write one safe intent and one observable check"
+            "title": "MADE",
+            "body": "The plan, evidence pack, and handoff you can show."
           },
           {
-            "title": "MOB",
-            "body": "Share one pause, rotation, or evidence lesson"
+            "title": "LEARNED",
+            "body": "One concept or role that changed your route."
           },
           {
-            "title": "Close",
-            "body": "Record recap, blockers, and tomorrow’s question"
+            "title": "CAN DO",
+            "body": "One safe next action in tomorrow’s n8n exercise."
           }
         ],
-        "prompt": "Individually draft a harmless fictional intent with one measurable success and one constraint. Then complete the daily recap, blockers, individual check-in, and mob reflection: what did the driver, skeptic, or scribe change?",
-        "notes": "Laat iedereen eerst schrijven; rond af met recap, blockers en mob-reflectie zonder echte klantvoorbeelden.",
+        "prompt": "Individually write Made, Learned, Can do, and one blocker. Then complete the daily recap and MOB reflection. Compare the blocker wordcloud with the opening and leave unresolved items OPEN with an owner.",
+        "notes": "Sluit af met individuele check-in en groepsreflectie. Gebruik de delta in de wordcloud voor de volgende dag.",
         "dark": true,
         "steps": [
-          "Write one intent.",
-          "Complete recap/check-in.",
-          "Share one mob lesson."
+          "Write Made.",
+          "Write Learned.",
+          "Write Can do.",
+          "Share one blocker and owner."
         ],
-        "expected": "A personal transfer note, recap, and reflection.",
-        "check": "Success is observable and fictional."
+        "expected": "A truthful recap and next-day handoff.",
+        "check": "Every participant names one repeatable action and one owner for remaining uncertainty.",
+        "layout": "cards",
+        "timer": 20,
+        "mascot": true
       }
     ]
   },
