@@ -23,3 +23,5 @@ the top bar; it is available from every slide.
 | Adapter | The platform-specific way a contract is wired in: system message, model, mode, access and tools in n8n or Claude Code. Recorded per platform, never part of the contract. |
 | Subagent | An agent another agent delegates to, with its own context and a narrower task. |
 | Checkpoint | The observable condition on a slide that must be true before the group moves on. Marked passed by a human, never assumed. |
+| Holdout scenario | An end-to-end user story kept outside the codebase agents work in, never shown to them, scored as the fraction of runs that satisfied the user. |
+| Constant | What stays fixed between two runs (prompt, sequence, harness) so that one change can be measured; without it no run is comparable. |

@@ -831,6 +831,82 @@
         "check": "A fresh reader can reproduce the stated result."
       },
       {
+        "title": "What is a harness?",
+        "kicker": "CONCEPT DEFINITION · HARNESS",
+        "subtitle": "The model is 20 percent. The harness, everything around it, is 80 percent.",
+        "cards": [
+          {
+            "title": "MODEL",
+            "body": "Reasons and predicts. On its own it answers a question and stops."
+          },
+          {
+            "title": "HARNESS",
+            "body": "The loop and its state, the tools (MCP), the skills, the sandbox and the production layer: subagents, approvals, observability, evals."
+          },
+          {
+            "title": "WHY IT MATTERS",
+            "body": "Swap the model and little changes. Swap the harness and everything does. 'We use ChatGPT' and 'we run agents' are not the same thing."
+          }
+        ],
+        "prompt": "Say the 20/80 sentence and let it land. Ask: which of the five layers did you touch yesterday without naming it? (Skills on days 1–2, the loop today.)",
+        "notes": "Open de agent-dag met deze slide. Bron: Ryan's Obsidian-notities 'Agentic Engineering Stack' en 'StrongDM Software Factory'.",
+        "dark": false,
+        "steps": [
+          "Name the five layers of the harness."
+        ],
+        "expected": "The room can say why the harness matters more than the model.",
+        "check": "Everyone can name at least three of the five layers.",
+        "layout": "cards"
+      },
+      {
+        "title": "Harness · see the layers",
+        "kicker": "VISUAL · HARNESS",
+        "subtitle": "One bar: 20 percent model, 80 percent harness in five layers.",
+        "cards": [],
+        "prompt": "Point at each layer and map it to something they have seen: the ticket-refinement skill (skills), the Calculator tool (MCP/tools), the read-only subagent (sandbox), the human gate (production layer).",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Map one thing you built to one layer."
+        ],
+        "expected": "Everyone can place their own work on a layer.",
+        "check": "Everyone can point at the layer their ticket-refinement skill lives in.",
+        "layout": "image",
+        "image": "harness-layers.svg",
+        "imageAlt": "A bar split into model 20 percent and harness 80 percent; the harness lists loop and state, MCP tools, skills, sandbox and production layer.",
+        "imageCaption": "Loop and state, tools, skills, sandbox, production layer. n8n and Claude Code are two harnesses around the same kind of model."
+      },
+      {
+        "title": "Harness · how we use it",
+        "kicker": "HOW WE USE IT · HARNESS",
+        "subtitle": "When something goes wrong, debug the layer, not the model.",
+        "cards": [
+          {
+            "title": "BEFORE BLAMING THE MODEL",
+            "body": "Ask which layer failed: missing context, a tool that lied, a skill not loaded, a sandbox too wide, no gate."
+          },
+          {
+            "title": "IN THIS TRAINING",
+            "body": "n8n and Claude Code are two harnesses around the same contract. The comparison on day 4 and 5 is a harness comparison."
+          },
+          {
+            "title": "IN YOUR REPO",
+            "body": "Prompts, skills and hook configs are source code: diff them, review them, roll them back like any other change."
+          }
+        ],
+        "prompt": "Take one failure from yesterday and walk the five layers with the room until one of them owns it. Do not accept 'the model was dumb' as the answer.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Take one failure from yesterday.",
+          "Name the layer that owns it.",
+          "Say what you would change in that layer."
+        ],
+        "expected": "Every failure named today has a layer, not a mood.",
+        "check": "Nobody blames the model without naming a layer first.",
+        "layout": "cards"
+      },
+      {
         "title": "What is an agent?",
         "kicker": "CONCEPT DEFINITION · AGENTIC LOOP",
         "subtitle": "A model in a loop with a goal, tools, feedback, authority and memory. The model matters; the loop turns language into work.",
@@ -1341,7 +1417,7 @@
           },
           {
             "title": "IN YOUR REPO",
-            "body": "Formatter and linter after each edit, protected generated classes, a secret scan on the diff. Checked into git so every session gets them."
+            "body": "Every invariant a human enforces in review is a smell: promote it to a lint, a CI failure or a hook. Formatter after each edit, protected paths, a secret scan on the diff."
           },
           {
             "title": "NOT A HOOK",
@@ -1434,7 +1510,8 @@
         ],
         "expected": "Every participant has one subagent idea with its tools and one parallel task.",
         "check": "No subagent on the board has more tools than its job needs.",
-        "layout": "cards"
+        "layout": "cards",
+        "tagline": "SHORT PROMPTS → EIGHT AGENTS → SHORT PROMPTS AGAIN · THE ELITE RETURN TO SIMPLE"
       },
       {
         "title": "Your individual run",
@@ -1864,6 +1941,158 @@
         ],
         "expected": "A decision per participant with a quoted reason.",
         "check": "No decision claims an unobserved run.",
+        "layout": "cards"
+      },
+      {
+        "title": "What are holdout scenarios?",
+        "kicker": "CONCEPT DEFINITION · HOLDOUT SCENARIOS",
+        "subtitle": "If agents write the code and the tests, what stops 'assert true'? Scenarios the agents never see.",
+        "cards": [
+          {
+            "title": "THE PROBLEM",
+            "body": "Tests written next to the code drift toward the code. Both stay green while the behaviour drifts."
+          },
+          {
+            "title": "THE HOLDOUT",
+            "body": "End-to-end user stories stored outside the codebase, read-only for agents, like a holdout set in machine learning."
+          },
+          {
+            "title": "THE SCORE",
+            "body": "Not pass or fail. Of all observed runs, what fraction satisfied the user? Track that number over time."
+          }
+        ],
+        "prompt": "Ask the room: who checks the checker? Read the definition. Ask: which of our tests would 'assert true' pass today?",
+        "notes": "Bron: Ryan's Obsidian-notities 'Agentic Engineering Stack' en 'StrongDM Software Factory'.",
+        "dark": false,
+        "steps": [
+          "Say why a test next to the code is not enough."
+        ],
+        "expected": "The room can explain the holdout idea in one sentence.",
+        "check": "Everyone can say what agents must never see.",
+        "layout": "cards"
+      },
+      {
+        "title": "Holdout scenarios · see the seal",
+        "kicker": "VISUAL · HOLDOUT SCENARIOS",
+        "subtitle": "Agents work inside the codebase; the scenarios stay sealed outside it.",
+        "cards": [],
+        "prompt": "Point at the read-only arrow. Ask: what in our lab plays this role? (The checker script and TICKET-OPS-102, which the agent did not train on.)",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Point at what the agent never sees."
+        ],
+        "expected": "Everyone can point at the sealed box.",
+        "check": "Everyone can name our lab's holdout: the checker and ticket 102.",
+        "layout": "image",
+        "image": "holdout-scenarios.svg",
+        "imageAlt": "A codebase box where an agent writes code and tests and both are green; a sealed orange box outside holds user stories the agents never see, scored as satisfaction.",
+        "imageCaption": "The thing you optimise against is not the thing you measure with. The evidence rule, hardened: the reviewer's check comes from outside the loop."
+      },
+      {
+        "title": "Holdout scenarios · how we use it",
+        "kicker": "HOW WE USE IT · HOLDOUT SCENARIOS",
+        "subtitle": "One sealed scenario per feature, scored by a human or an evaluator that did not write the code.",
+        "cards": [
+          {
+            "title": "IN THE LAB",
+            "body": "check_ticket.py and TICKET-OPS-102 are the holdout: the agent tuned on 101, the checker and 102 judge it."
+          },
+          {
+            "title": "IN YOUR REPO",
+            "body": "Keep two or three end-to-end user stories outside the repo the agents work in. Run them at the PR, not in the build loop."
+          },
+          {
+            "title": "AT THE GATE",
+            "body": "Report the satisfaction fraction next to the evidence line. A green suite with a falling fraction is a FAIL."
+          }
+        ],
+        "prompt": "Let everyone write one user story for their own ticket that an agent must not see, and say who scores it.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Write one holdout user story for your ticket.",
+          "Say who scores it.",
+          "Say where it lives, outside the repo."
+        ],
+        "expected": "Every participant has one sealed scenario with a scorer.",
+        "check": "No holdout story on the board lives inside the agent's repo.",
+        "layout": "cards"
+      },
+      {
+        "title": "What does 'it got better' mean?",
+        "kicker": "CONCEPT DEFINITION · MEASURE THE LOOP",
+        "subtitle": "You cannot say it until two runs are comparable. Same prompt, same sequence, every run.",
+        "cards": [
+          {
+            "title": "THE CONSTANT",
+            "body": "Change the model, the prompt, the harness or a skill and you changed the experiment. Keep everything else fixed, then compare."
+          },
+          {
+            "title": "THREE NUMBERS",
+            "body": "Tokens and tool calls per completed task. Review iterations per pull request. Cost per successful task, not per run."
+          },
+          {
+            "title": "THE PUNCHLINE",
+            "body": "When an agent analysed its own run logs, the best improvement it found was replacing agentic steps with a deterministic script."
+          }
+        ],
+        "prompt": "Ask: how would you know tomorrow's ticket-coach is better than today's? Read the three numbers. Ask which one the team can log next week.",
+        "notes": "Bron: Ryan's Obsidian-notities 'Agentic Engineering Stack' en 'StrongDM Software Factory'.",
+        "dark": false,
+        "steps": [
+          "Name the three numbers."
+        ],
+        "expected": "The room can say what makes two runs comparable.",
+        "check": "Everyone can name the three numbers and why cost is per successful task.",
+        "layout": "cards"
+      },
+      {
+        "title": "Measure the loop · see the constant",
+        "kicker": "VISUAL · MEASURE THE LOOP",
+        "subtitle": "Scattered runs prove nothing; aligned runs show a trend.",
+        "cards": [],
+        "prompt": "Point at the scattered bars and ask what they prove. Nothing. Then the aligned bars. Then the three constants and which one is cheapest to start with.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Point at the cheapest number to start logging."
+        ],
+        "expected": "Everyone can say why the left side proves nothing.",
+        "check": "Everyone names the one number their team logs first.",
+        "layout": "image",
+        "image": "measure-loop.svg",
+        "imageAlt": "Left: six bars of random height labelled different prompts. Right: six aligned bars trending down labelled same prompt, one change per run. Below: three constants.",
+        "imageCaption": "One harness needed 32 tool calls, another 19, for the same answer. The harness often decides more than the model, and only a constant makes that visible."
+      },
+      {
+        "title": "Measure the loop · how we use it",
+        "kicker": "HOW WE USE IT · MEASURE THE LOOP",
+        "subtitle": "Log three numbers per run, change one thing at a time, keep the quality guard.",
+        "cards": [
+          {
+            "title": "IN THE LAB",
+            "body": "Your run log already has model, tools and OPEN items. Add tool calls and the checker line. That is run one."
+          },
+          {
+            "title": "IN YOUR REPO",
+            "body": "Same prompt, same sequence, one change per run. Review iterations per PR and cost per merged change come from the PR history."
+          },
+          {
+            "title": "THE GUARD",
+            "body": "'Minimise cost' is satisfied by doing nothing. Every improvement target needs a quality number next to it, or the agent games it."
+          }
+        ],
+        "prompt": "Let each participant pick the one number they will log next week and the quality guard that sits next to it.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Pick one number to log next week.",
+          "Name the quality guard next to it.",
+          "Say what stays constant between runs."
+        ],
+        "expected": "Every participant has one number and one guard.",
+        "check": "No metric on the board stands without a quality guard.",
         "layout": "cards"
       },
       {
