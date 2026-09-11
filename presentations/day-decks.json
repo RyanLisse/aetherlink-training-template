@@ -1198,9 +1198,9 @@
         "expected": "Everyone has placed a real ticket on one phase.",
         "check": "Everyone can point at the phase their ticket is in and at one human gate.",
         "layout": "image",
-        "image": "ai-native-sdlc-loop.svg",
-        "imageAlt": "Six phase pills on one orange loop: plan, design, build, test, deploy, maintain, with Claude in the centre helping at every point.",
-        "imageCaption": "Six phases on one repeating loop with Claude at every point. Intent, review and release remain human decisions."
+        "image": "ai-native-sdlc-line-and-loop.png",
+        "imageAlt": "Traditional SDLC line on the left and AI-native loop on the right around Claude, with plan, design, build, test, deploy and maintain.",
+        "imageCaption": "Traditional: the line. AI-native: the loop, with Claude helping at every point and humans directing and governing."
       },
       {
         "title": "AI-native SDLC · how we use it",
