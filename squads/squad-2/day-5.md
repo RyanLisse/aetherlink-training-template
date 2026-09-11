@@ -4,6 +4,15 @@ Mode: INDEPENDENT WITH TEAM GATE · 10:00–16:00
 
 Bring one small issue from the team's real work pattern into the local training workspace. Use a fictional or sanitised copy. The team decides whether the final artifact is ready for a real GitLab, Jira, or Confluence workflow. No remote record is created during training.
 
+<!-- concepts:start -->
+## Concept slides
+
+Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
+
+- **MOB programming** · What is MOB programming? [3] → MOB programming · see the roles [4] → MOB programming · how we use it [5]
+- **Human gate** · What is a human gate? [6] → Human gate · see the decision [7] → Human gate · how we use it [8]
+<!-- concepts:end -->
+
 ## Schedule
 
 | Time | Minutes | Block | Result |

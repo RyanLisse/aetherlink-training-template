@@ -4,6 +4,15 @@ Mode: FULLY GUIDED · 10:00–16:00
 
 Study the [Claude Academy course](https://academy.claude.com/courses/ai-native-sdlc-playbook) and [AI-native SDLC playbook](https://claude.com/blog/the-ai-native-sdlc-playbook). The goal is a shared map from intent to maintain.
 
+<!-- concepts:start -->
+## Concept slides
+
+Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
+
+- **AI-native SDLC** · What is an AI-native SDLC? [3] → AI-native SDLC · see the loop [4] → AI-native SDLC · how we use it [5]
+- **intent.md** · What is intent.md? [6] → Intent.md in one picture [7] → intent.md · how we use it [8]
+<!-- concepts:end -->
+
 ## Schedule
 
 | Time | Minutes | Block | Result |

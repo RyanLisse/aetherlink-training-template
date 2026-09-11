@@ -50,6 +50,16 @@ cutoff is the time at which the comparison is made. A prompt is an instruction
 to an agent; context is the files and rules supplied with it. An intent states
 the outcome and boundaries, while a task is one bounded piece of work.
 
+<!-- concepts:start -->
+## Concept slides
+
+Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
+
+- **intent.md** · What is intent.md? [2] → Intent.md in one picture [3] → intent.md · how we use it [4]
+- **Evidence rule** · What is the evidence rule? [7] → Evidence rule · see the ladder [8] → Evidence rule · how we use it [9]
+- **MOB programming** · What is MOB programming? [10] → MOB programming · see the roles [11] → MOB programming · how we use it [12]
+<!-- concepts:end -->
+
 ## Schedule — 10:00–16:00 (360 minutes)
 
 | Time | Minutes | Activity |

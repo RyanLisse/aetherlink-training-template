@@ -4,6 +4,14 @@ Mode: COACHED · 10:00–16:00
 
 Rebuild the Day 3 review agent in Claude Code using the same functional contract. Record the read-only adapter, model, mode, access, and trace.
 
+<!-- concepts:start -->
+## Concept slides
+
+Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
+
+- **One contract, two platforms** · What is "one contract, two platforms"? [3] → One contract · see the split [4] → One contract · how we use it [5]
+<!-- concepts:end -->
+
 ## Schedule
 
 | Time | Minutes | Block | Result |

@@ -4,6 +4,14 @@ Mode: COACHED · 10:00–16:00
 
 Use the Day 2 plan and build one bounded read-only agent in n8n. The issue is a local repository review request. GitLab fields are mock and remain `OPEN`.
 
+<!-- concepts:start -->
+## Concept slides
+
+Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
+
+- **Agentic loop** · What is an agent? [2] → The agentic loop · see the loop [3] → The agentic loop · how we use it [4]
+<!-- concepts:end -->
+
 ## Schedule
 
 | Time | Minutes | Block | Result |

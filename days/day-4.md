@@ -8,6 +8,16 @@ Each participant imports and runs the n8n `ticket-coach` once, records model/too
 ## Cadence
 Theory (agent loop and n8n harness) → facilitator demo → individual build → group review → human gate → individual improvement → MOB transfer.
 
+<!-- concepts:start -->
+## Concept slides
+
+Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
+
+- **Agentic loop** · What is an agent? [4] → The agentic loop · see the loop [5] → The agentic loop · how we use it [6]
+- **One contract, two platforms** · What is "one contract, two platforms"? [8] → One contract · see the split [9] → One contract · how we use it [10]
+- **Human gate** · What is a human gate? [14] → Human gate · see the decision [15] → Human gate · how we use it [16]
+<!-- concepts:end -->
+
 ## Schedule
 | Time | Minutes | Activity |
 |---|---:|---|

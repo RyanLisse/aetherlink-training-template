@@ -5,6 +5,15 @@ Squad 1 · 10:00–16:00. Rebuild the same `ticket-coach` contract from Day 4 in
 ## Outcome
 Each participant has a read-only Claude Code agent, a checked output for `TICKET-OPS-101`, a trace, and a handoff another person can reproduce. If time remains, the team applies the route to one self-selected fictional issue.
 
+<!-- concepts:start -->
+## Concept slides
+
+Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
+
+- **Agentic loop** · What is an agent? [4] → The agentic loop · see the loop [5] → The agentic loop · how we use it [6]
+- **One contract, two platforms** · What is "one contract, two platforms"? [8] → One contract · see the split [9] → One contract · how we use it [10]
+<!-- concepts:end -->
+
 ## Schedule
 | Time | Minutes | Activity |
 |---|---:|---|

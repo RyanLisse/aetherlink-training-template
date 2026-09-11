@@ -262,7 +262,7 @@
       },
       {
         "title": "Your individual intent",
-        "kicker": "REVIEW",
+        "kicker": "REVIEW · 11:00–11:20 · 20 MIN",
         "subtitle": "AI-native SDLC foundations",
         "cards": [
           {
@@ -322,7 +322,7 @@
       },
       {
         "title": "Map one work item",
-        "kicker": "PRACTICE",
+        "kicker": "PRACTICE · 11:35–12:00 · 25 MIN",
         "subtitle": "AI-native SDLC foundations",
         "cards": [
           {
@@ -352,7 +352,7 @@
       },
       {
         "title": "Human gate",
-        "kicker": "HUMAN GATE · 13:00–13:20",
+        "kicker": "HUMAN GATE · 13:00–14:00",
         "subtitle": "AI-native SDLC foundations",
         "cards": [
           {
@@ -382,7 +382,7 @@
       },
       {
         "title": "Fresh-reader transfer",
-        "kicker": "PRACTICE / TRANSFER · 13:20–15:20",
+        "kicker": "TRANSFER · 14:15–15:05 · 50 MIN",
         "subtitle": "AI-native SDLC foundations",
         "cards": [
           {
@@ -412,7 +412,7 @@
       },
       {
         "title": "Close and reflect",
-        "kicker": "CLOSE · 15:40–16:00",
+        "kicker": "CLOSE · 15:40–16:00 · 20 MIN",
         "subtitle": "AI-native SDLC foundations",
         "cards": [
           {
@@ -615,7 +615,7 @@
       },
       {
         "title": "Review evidence",
-        "kicker": "REVIEW",
+        "kicker": "REVIEW · 11:00–11:20 · 20 MIN",
         "subtitle": "AI-native SDLC feedback loop",
         "cards": [
           {
@@ -675,7 +675,7 @@
       },
       {
         "title": "Compare plans",
-        "kicker": "PRACTICE",
+        "kicker": "PRACTICE · 11:35–12:00 · 25 MIN",
         "subtitle": "AI-native SDLC feedback loop",
         "cards": [
           {
@@ -705,7 +705,7 @@
       },
       {
         "title": "Human gate",
-        "kicker": "HUMAN GATE · 13:00–13:20",
+        "kicker": "HUMAN GATE · 13:00–14:00",
         "subtitle": "AI-native SDLC feedback loop",
         "cards": [
           {
@@ -735,7 +735,7 @@
       },
       {
         "title": "Transfer checklist",
-        "kicker": "PRACTICE / TRANSFER · 13:20–15:20",
+        "kicker": "TRANSFER · 14:15–15:05 · 50 MIN",
         "subtitle": "AI-native SDLC feedback loop",
         "cards": [
           {
@@ -765,7 +765,7 @@
       },
       {
         "title": "Close and reflect",
-        "kicker": "CLOSE · 15:40–16:00",
+        "kicker": "CLOSE · 15:40–16:00 · 20 MIN",
         "subtitle": "AI-native SDLC feedback loop",
         "cards": [
           {
@@ -952,7 +952,7 @@
       },
       {
         "title": "Review the output",
-        "kicker": "REVIEW",
+        "kicker": "REVIEW · 11:00–11:20 · 20 MIN",
         "subtitle": "First agent in n8n",
         "cards": [
           {
@@ -1012,7 +1012,7 @@
       },
       {
         "title": "Bound the workflow",
-        "kicker": "PRACTICE",
+        "kicker": "PRACTICE · 11:35–12:00 · 25 MIN",
         "subtitle": "First agent in n8n",
         "cards": [
           {
@@ -1042,7 +1042,7 @@
       },
       {
         "title": "Human gate",
-        "kicker": "HUMAN GATE · 13:00–13:20",
+        "kicker": "HUMAN GATE · 13:00–14:00",
         "subtitle": "First agent in n8n",
         "cards": [
           {
@@ -1072,7 +1072,7 @@
       },
       {
         "title": "Fresh-reader transfer",
-        "kicker": "PRACTICE / TRANSFER · 13:20–15:20",
+        "kicker": "TRANSFER · 14:15–15:05 · 50 MIN",
         "subtitle": "First agent in n8n",
         "cards": [
           {
@@ -1102,7 +1102,7 @@
       },
       {
         "title": "Close and reflect",
-        "kicker": "CLOSE · 15:40–16:00",
+        "kicker": "CLOSE · 15:40–16:00 · 20 MIN",
         "subtitle": "First agent in n8n",
         "cards": [
           {
@@ -1316,7 +1316,7 @@
       },
       {
         "title": "Read the trace",
-        "kicker": "REVIEW",
+        "kicker": "REVIEW · 11:00–11:20 · 20 MIN",
         "subtitle": "First agent in Claude Code",
         "cards": [
           {
@@ -1376,7 +1376,7 @@
       },
       {
         "title": "Add one guardrail",
-        "kicker": "PRACTICE",
+        "kicker": "PRACTICE · 11:35–12:00 · 25 MIN",
         "subtitle": "First agent in Claude Code",
         "cards": [
           {
@@ -1406,7 +1406,7 @@
       },
       {
         "title": "Human gate",
-        "kicker": "HUMAN GATE · 13:00–13:20",
+        "kicker": "HUMAN GATE · 13:00–14:00",
         "subtitle": "First agent in Claude Code",
         "cards": [
           {
@@ -1436,7 +1436,7 @@
       },
       {
         "title": "Fresh-reader transfer",
-        "kicker": "PRACTICE / TRANSFER · 13:20–15:20",
+        "kicker": "TRANSFER · 14:15–15:05 · 50 MIN",
         "subtitle": "First agent in Claude Code",
         "cards": [
           {
@@ -1466,7 +1466,7 @@
       },
       {
         "title": "Close and reflect",
-        "kicker": "CLOSE · 15:40–16:00",
+        "kicker": "CLOSE · 15:40–16:00 · 20 MIN",
         "subtitle": "First agent in Claude Code",
         "cards": [
           {
@@ -1746,7 +1746,7 @@
       },
       {
         "title": "Review scope",
-        "kicker": "REVIEW",
+        "kicker": "REVIEW · 11:00–11:20 · 20 MIN",
         "subtitle": "Own team issue end to end",
         "cards": [
           {
@@ -1806,7 +1806,7 @@
       },
       {
         "title": "Run the team roles",
-        "kicker": "PRACTICE",
+        "kicker": "PRACTICE · 11:35–12:00 · 25 MIN",
         "subtitle": "Own team issue end to end",
         "cards": [
           {
@@ -1836,7 +1836,7 @@
       },
       {
         "title": "Human gate",
-        "kicker": "HUMAN GATE · 13:00–13:20",
+        "kicker": "HUMAN GATE · 13:00–14:00",
         "subtitle": "Own team issue end to end",
         "cards": [
           {
@@ -1866,7 +1866,7 @@
       },
       {
         "title": "Receiver handoff",
-        "kicker": "PRACTICE / TRANSFER · 13:20–15:20",
+        "kicker": "TRANSFER · 14:15–15:05 · 50 MIN",
         "subtitle": "Own team issue end to end",
         "cards": [
           {
@@ -1896,7 +1896,7 @@
       },
       {
         "title": "Close and reflect",
-        "kicker": "CLOSE · 15:40–16:00",
+        "kicker": "CLOSE · 15:40–16:00 · 20 MIN",
         "subtitle": "Own team issue end to end",
         "cards": [
           {

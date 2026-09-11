@@ -16,3 +16,10 @@ the top bar; it is available from every slide.
 | Hook | A deterministic rule at a lifecycle point, such as blocking a Write before it happens. |
 | Evaluator | A separate reviewer that checks output against a written contract and returns PASS or REVISE. |
 | OPEN | Evidence, access or a decision is unavailable or has not been run yet. |
+| intent.md | The human starting brief written before design or build: what we want, why it matters, within which boundaries. Unknowns are marked OPEN, not guessed. |
+| Evidence rule | A claim counts only with a source (row id or file at the cutoff), a reproduced check (command, calculation or sheet) and a reviewer who reran it. Anything less is a hypothesis. |
+| MOB programming | One task, one screen, one human driver. The navigator directs, the skeptic asks for source ids, the scribe records decisions. Rotate every 5–7 minutes; anyone may say "pause". |
+| Contract | The shared functional instruction (shared-prompt.md plus the ticket input): what the agent must produce and must not do, identical on every platform. |
+| Adapter | The platform-specific way a contract is wired in: system message, model, mode, access and tools in n8n or Claude Code. Recorded per platform, never part of the contract. |
+| Subagent | An agent another agent delegates to, with its own context and a narrower task. |
+| Checkpoint | The observable condition on a slide that must be true before the group moves on. Marked passed by a human, never assumed. |

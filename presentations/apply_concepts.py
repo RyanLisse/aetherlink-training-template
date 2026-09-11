@@ -8,6 +8,7 @@ their anchor. Run from the repository root or from presentations/.
   python3 presentations/apply_concepts.py --check    # exit 1 if decks would change
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -59,9 +60,41 @@ def apply(deck_path, placements, removals, patches):
         for patch in patches:
             if patch["day"] in ("*", day):
                 for s in deck["slides"]:
-                    if s["title"] == patch["title"]:
+                    if s["title"] == patch.get("title") or s["kicker"] == patch.get("kicker"):
                         s.update(patch["set"])
     return decks
+
+
+START, END = "<!-- concepts:start -->", "<!-- concepts:end -->"
+
+
+def workbook_section(deck, placements):
+    lines = ["## Concept slides", "", "Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.", ""]
+    titles = [s["title"] for s in deck["slides"]]
+    for p in placements:
+        spec = REG["concepts"][p["concept"]]
+        nums = [titles.index(spec[k]["title"]) + 1 for k in ("definition", "visual", "usage")]
+        lines.append(f"- **{spec['name']}** · {spec['definition']['title']} [{nums[0]}] → {spec['visual']['title']} [{nums[1]}] → {spec['usage']['title']} [{nums[2]}]")
+    return "\n".join([START, *lines, END])
+
+
+def write_workbooks(rel, decks, placements, check):
+    changed = False
+    for day, deck in decks.items():
+        if not placements.get(day):
+            continue
+        path = (HERE / REG["workbooks"][rel].format(n=day[-1])).resolve()
+        text = path.read_text(encoding="utf-8")
+        block = workbook_section(deck, placements[day])
+        if START in text:
+            new = re.sub(re.escape(START) + ".*?" + re.escape(END), lambda _: block, text, flags=re.S)
+        else:
+            new = re.sub(r"^## Schedule", block + "\n\n## Schedule", text, count=1, flags=re.M)
+        if new != text:
+            changed = True
+            if not check:
+                path.write_text(new, encoding="utf-8")
+    return changed
 
 
 def main():
@@ -81,6 +114,7 @@ def main():
             changed = True
             if not check:
                 site.write_text(js, encoding="utf-8")
+        changed = write_workbooks(rel, decks, placements, check) or changed
         for day, deck in decks.items():
             print(f"{path.name} {day}: {len(deck['slides'])} slides")
     if check and changed:

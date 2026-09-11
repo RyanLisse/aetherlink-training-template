@@ -17,6 +17,17 @@ their own ticket on one phase before they write the Day 3 plan.
 ## Theory → instruction → individual → review
 Explain the six stages: **Plan → Design → Build → Test → Deploy → Maintain**. In the AI-native model the loop is shorter, while humans retain intent, review and release authority. Show how `intent.md`, `CLAUDE.md`, a ticket contract and `progress.md` connect the stages. Demonstrate one complete route on `TICKET-OPS-101`, then let each person do the same with a bounded prompt.
 
+<!-- concepts:start -->
+## Concept slides
+
+Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
+
+- **AI-native SDLC** · What is an AI-native SDLC? [2] → AI-native SDLC · see the loop [3] → AI-native SDLC · how we use it [4]
+- **Agentic loop** · What is an agent? [7] → The agentic loop · see the loop [8] → The agentic loop · how we use it [9]
+- **Evidence rule** · What is the evidence rule? [11] → Evidence rule · see the ladder [12] → Evidence rule · how we use it [13]
+- **MOB programming** · What is MOB programming? [14] → MOB programming · see the roles [15] → MOB programming · how we use it [16]
+<!-- concepts:end -->
+
 ## Schedule
 | Time | Minutes | Activity |
 |---|---:|---|

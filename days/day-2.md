@@ -34,6 +34,14 @@ only after the visible ticket result exists.
 | Deploy | NOT IN SCOPE — this is a fictional local draft |
 | Maintain | NOT IN SCOPE — no runtime or production control is exercised |
 
+<!-- concepts:start -->
+## Concept slides
+
+Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
+
+- **Evidence rule** · What is the evidence rule? [4] → Evidence rule · see the ladder [5] → Evidence rule · how we use it [6]
+<!-- concepts:end -->
+
 ## Schedule — 10:00–16:00 (360 minutes)
 
 The first 90 minutes are guided. The afternoon continues the same packet

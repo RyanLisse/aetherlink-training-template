@@ -4,6 +4,14 @@ Mode: FULLY GUIDED · 10:00–16:00
 
 Continue the [Academy course](https://academy.claude.com/courses/ai-native-sdlc-playbook). Turn the lifecycle map into one small, reviewable loop.
 
+<!-- concepts:start -->
+## Concept slides
+
+Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
+
+- **Evidence rule** · What is the evidence rule? [3] → Evidence rule · see the ladder [4] → Evidence rule · how we use it [5]
+<!-- concepts:end -->
+
 ## Schedule
 
 | Time | Minutes | Block | Result |
