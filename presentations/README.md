@@ -42,3 +42,14 @@ The AI-native SDLC concept uses a standalone loop illustration at
 [`assets/ai-native-sdlc-loop.svg`](../assets/ai-native-sdlc-loop.svg). It shows
 the six phases around Claude without the traditional SDLC comparison panel, so
 the facilitator can use the loop as a reusable phase reference.
+
+## Concept slides
+
+Every concept a squad meets is taught as three slides: definition, visual, how
+we use it. They come from [concepts.json](concepts.json); run
+`python3 presentations/apply_concepts.py` after editing it. The script removes
+the old triplets by title, inserts them after their anchors in both
+`day-decks.json` and `../squads/squad-2/presentations.json`, and regenerates the
+site registries when the site checkout sits next to this repository.
+`--check` exits non-zero when the decks are out of date. Diagrams live in
+[`../assets/`](../assets/) and follow the site's design system.

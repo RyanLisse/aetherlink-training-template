@@ -35,8 +35,8 @@
       },
       {
         "title": "What is intent.md?",
-        "kicker": "CONCEPT DEFINITION · DAY 1",
-        "subtitle": "The short starting brief: what do we want, why, and within which boundaries?",
+        "kicker": "CONCEPT DEFINITION · INTENT.MD",
+        "subtitle": "The human starting brief: what we want, why it matters, within which boundaries.",
         "cards": [
           {
             "title": "WHAT",
@@ -48,36 +48,66 @@
           },
           {
             "title": "BOUNDARIES",
-            "body": "Constraints, non-goals and OPEN questions."
+            "body": "Constraints, non-goals and OPEN questions. Unknowns are written down, not guessed."
           }
         ],
-        "prompt": "Explain: intent.md is the human starting brief for the work. Ask: which three words must always be visible?",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "prompt": "Explain: intent.md is the human starting brief for the work, written before design or build. Ask: which three words must always be visible?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
-          "Define what, why and boundaries."
+          "Say the three parts: what, why, boundaries."
         ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
+        "expected": "Everyone can say what intent.md is in one sentence.",
+        "check": "Everyone names the three parts without looking at the slide.",
         "layout": "cards"
       },
       {
         "title": "Intent.md in one picture",
-        "kicker": "VISUAL · CONCEPT",
+        "kicker": "VISUAL · INTENT.MD",
         "subtitle": "From idea to a shared starting point",
         "cards": [],
-        "prompt": "Show the picture. Ask participants to link one sentence to what, why or boundaries.",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "prompt": "Show the picture. Ask participants to link one sentence to what, why or boundaries, and to point at where OPEN questions live.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
           "Link one sentence to the picture."
         ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
+        "expected": "Everyone can link a sentence to the right part of the brief.",
+        "check": "Everyone can point at where OPEN questions live in the brief.",
         "layout": "image",
         "image": "intent-md.svg",
         "imageAlt": "intent.md brief with what, why and boundaries feeding design, build and review, with a revisit loop.",
         "imageCaption": "What, why and boundaries feed design, build and review. Change the brief before you change the plan."
+      },
+      {
+        "title": "intent.md · how we use it",
+        "kicker": "HOW WE USE IT · INTENT.MD",
+        "subtitle": "Written first, read at every gate, changed before the plan changes.",
+        "cards": [
+          {
+            "title": "BEFORE BUILD",
+            "body": "Write it in ten minutes: what, why, boundaries. Mark unknowns OPEN. Do not guess."
+          },
+          {
+            "title": "DURING THE WORK",
+            "body": "The agent reads it first. Every prompt points back to it: \"stay inside intent.md\"."
+          },
+          {
+            "title": "AT REVIEW",
+            "body": "Review against the brief, not against memory. If the brief was wrong, change the brief, then the plan."
+          }
+        ],
+        "prompt": "Walk the three moments. Ask each participant to open their own intent.md and underline one OPEN question before the exercise starts.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Open your intent.md.",
+          "Underline one OPEN question.",
+          "Say which exercise today uses it."
+        ],
+        "expected": "Every participant has an intent.md with at least one OPEN question.",
+        "check": "Nobody starts the exercise without an intent.md on screen.",
+        "layout": "cards"
       },
       {
         "title": "The same rhythm every day",
@@ -138,70 +168,157 @@
         "check": "Fictional and local boundaries are explicit."
       },
       {
+        "title": "What is the evidence rule?",
+        "kicker": "CONCEPT DEFINITION · EVIDENCE RULE",
+        "subtitle": "A claim counts only with a source, a reproduced check and a reviewer.",
+        "cards": [
+          {
+            "title": "CLAIM",
+            "body": "What you say happened, in one sentence."
+          },
+          {
+            "title": "SOURCE + CHECK",
+            "body": "A row id or file at the cutoff, and the command, calculation or sheet that reproduces it."
+          },
+          {
+            "title": "REVIEWER",
+            "body": "Someone else reran it. Without all three it is a hypothesis and stays OPEN."
+          }
+        ],
+        "prompt": "Read the rule out loud. Ask: what is the difference between a claim and a hypothesis? Ask: why is \"it looked right\" not evidence?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name the three parts of evidence."
+        ],
+        "expected": "The room can separate a claim from evidence.",
+        "check": "Everyone can say why \"it looked right\" is not evidence.",
+        "layout": "cards"
+      },
+      {
         "title": "Evidence rule · see the ladder",
-        "kicker": "VISUAL · CONCEPT",
+        "kicker": "VISUAL · EVIDENCE RULE",
         "subtitle": "A claim only counts with a source, a reproduced check and a reviewer.",
         "cards": [],
-        "prompt": "Walk the four steps left to right. Ask: which step is usually skipped?",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "prompt": "Walk the four steps left to right. Ask: which step is usually skipped? Let one participant place a claim from the demo on the ladder.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
           "Place one claim from today on the ladder."
         ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
+        "expected": "Everyone can place a claim on the right step.",
+        "check": "Everyone can place a claim from today on the right step of the ladder.",
         "layout": "image",
         "image": "evidence-rule.svg",
         "imageAlt": "Four steps: claim, source, reproduced check, reviewer; a dashed hypothesis box below; a cutoff stamp.",
         "imageCaption": "Claim → source → reproduced check → reviewer. Anything short of that stays a hypothesis and is marked OPEN."
       },
       {
-        "title": "MOB programming, made concrete",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "One task, one screen, rotating human driver",
+        "title": "Evidence rule · how we use it",
+        "kicker": "HOW WE USE IT · EVIDENCE RULE",
+        "subtitle": "Every result today carries its evidence line or the word OPEN.",
         "cards": [
           {
-            "title": "Group",
-            "body": "3–4 people navigate one shared task"
+            "title": "IN THE EVIDENCE LOG",
+            "body": "One line per result: claim · source id · command or sheet · reviewer · PASS / FAIL / OPEN."
           },
           {
-            "title": "Driver",
-            "body": "One human types; rotate every 5–7 minutes"
+            "title": "IN THE AGENT'S OUTPUT",
+            "body": "Ask for source ids and the check in the answer. No source, no claim."
           },
           {
-            "title": "AI",
-            "body": "The tool suggests; humans direct, pause, and decide"
+            "title": "AT THE HUMAN GATE",
+            "body": "The reviewer reruns one check before accepting. Unrun checks stay OPEN, never \"probably fine\"."
           }
         ],
-        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, others route observations through the navigator, skeptic asks for source IDs, and scribe records the decision. Rotate the driver once.",
-        "notes": "Doe de demo letterlijk. Eén navigator stuurt de driver; iedereen mag ‘pause’ zeggen. Bij vijf minuten drift grijpt de facilitator kort in.",
-        "dark": true,
+        "prompt": "Open the evidence log template. Write one evidence line for the demo result together, then let everyone mark one thing OPEN on purpose.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
         "steps": [
-          "State one task.",
-          "Rotate the human driver.",
-          "Pause on uncertainty.",
-          "Record the decision."
+          "Open the evidence log template.",
+          "Write one evidence line for the demo result.",
+          "Mark one thing OPEN on purpose."
         ],
-        "expected": "The group experiences shared navigation and a pause rule.",
-        "check": "Participants can name driver, navigator, skeptic, and scribe."
+        "expected": "Everyone has written one complete evidence line.",
+        "check": "No evidence line is missing a source or a reviewer.",
+        "layout": "cards"
+      },
+      {
+        "title": "What is MOB programming?",
+        "kicker": "CONCEPT DEFINITION · MOB PROGRAMMING",
+        "subtitle": "One task, one screen, one human driver; the group navigates and rotates.",
+        "cards": [
+          {
+            "title": "GROUP",
+            "body": "3–4 people on one shared task and one screen."
+          },
+          {
+            "title": "ROLES",
+            "body": "Driver types, navigator directs, skeptic asks for source ids, scribe records the decision. Rotate every 5–7 minutes."
+          },
+          {
+            "title": "AI IN THE MOB",
+            "body": "The tool suggests. Humans direct, say \"pause\" on uncertainty, and decide."
+          }
+        ],
+        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, the skeptic asks for source ids, the scribe records the decision. Rotate the driver once.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name the four roles.",
+          "Say the pause rule."
+        ],
+        "expected": "The room can name the roles and the pause rule.",
+        "check": "Participants can name driver, navigator, skeptic and scribe.",
+        "layout": "cards"
       },
       {
         "title": "MOB programming · see the roles",
-        "kicker": "VISUAL · CONCEPT",
+        "kicker": "VISUAL · MOB PROGRAMMING",
         "subtitle": "One laptop, one screen, everyone in a role; rotate every five to seven minutes.",
         "cards": [],
-        "prompt": "Point at each role. Ask: who is driver first, and who calls the rotation?",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "prompt": "Point at each role. Ask: who is driver first, who calls the rotation, and who says \"pause\" first?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
           "Name your first driver and navigator."
         ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
+        "expected": "Every group can point at its four roles.",
+        "check": "Everyone can say who asks for source ids and who records the decision.",
         "layout": "image",
         "image": "mob-programming.svg",
-        "imageAlt": "Ring of four roles around one laptop: driver, navigator, researcher, tester, with a rotate-every-5-to-7-minutes arrow.",
-        "imageCaption": "Driver types what the navigator says. Researcher and tester keep the evidence honest. A human decides at every gate."
+        "imageAlt": "Four roles on one chain: driver, navigator, skeptic, scribe, with a rotate-every-5-to-7-minutes callout and one shared laptop.",
+        "imageCaption": "Driver types what the navigator says. Skeptic asks for source ids, scribe records the decision. A human decides at every gate."
+      },
+      {
+        "title": "MOB programming · how we use it",
+        "kicker": "HOW WE USE IT · MOB PROGRAMMING",
+        "subtitle": "Every guided exercise today runs as a mob with a visible timer.",
+        "cards": [
+          {
+            "title": "START",
+            "body": "Facilitator states one task. First driver and navigator are named before the timer starts."
+          },
+          {
+            "title": "ROTATE",
+            "body": "Every 5–7 minutes the driver changes. Remote participants rotate too; the navigator reads chat aloud."
+          },
+          {
+            "title": "PAUSE",
+            "body": "Anyone says \"pause\" when a source, assumption or claim is unclear. The scribe records the decision."
+          }
+        ],
+        "prompt": "Let each group name its first driver and navigator, set the rotation timer, and agree who says \"pause\" first. Do not start the exercise before that.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name your first driver and navigator.",
+          "Set the rotation timer.",
+          "Agree who says \"pause\" first."
+        ],
+        "expected": "Every group has named roles before the first exercise.",
+        "check": "No group starts an exercise without a named driver and a running timer.",
+        "layout": "cards"
       },
       {
         "title": "AI-native SDLC loop",
@@ -565,6 +682,82 @@
         ],
         "expected": "A shared goal and visible human gate.",
         "check": "The goal preserves visible rows, UNRESOLVED, and no payout approval."
+      },
+      {
+        "title": "What is the evidence rule?",
+        "kicker": "CONCEPT DEFINITION · EVIDENCE RULE",
+        "subtitle": "A claim counts only with a source, a reproduced check and a reviewer.",
+        "cards": [
+          {
+            "title": "CLAIM",
+            "body": "What you say happened, in one sentence."
+          },
+          {
+            "title": "SOURCE + CHECK",
+            "body": "A row id or file at the cutoff, and the command, calculation or sheet that reproduces it."
+          },
+          {
+            "title": "REVIEWER",
+            "body": "Someone else reran it. Without all three it is a hypothesis and stays OPEN."
+          }
+        ],
+        "prompt": "Read the rule out loud. Ask: what is the difference between a claim and a hypothesis? Ask: why is \"it looked right\" not evidence?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name the three parts of evidence."
+        ],
+        "expected": "The room can separate a claim from evidence.",
+        "check": "Everyone can say why \"it looked right\" is not evidence.",
+        "layout": "cards"
+      },
+      {
+        "title": "Evidence rule · see the ladder",
+        "kicker": "VISUAL · EVIDENCE RULE",
+        "subtitle": "A claim only counts with a source, a reproduced check and a reviewer.",
+        "cards": [],
+        "prompt": "Walk the four steps left to right. Ask: which step is usually skipped? Let one participant place a claim from the demo on the ladder.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Place one claim from today on the ladder."
+        ],
+        "expected": "Everyone can place a claim on the right step.",
+        "check": "Everyone can place a claim from today on the right step of the ladder.",
+        "layout": "image",
+        "image": "evidence-rule.svg",
+        "imageAlt": "Four steps: claim, source, reproduced check, reviewer; a dashed hypothesis box below; a cutoff stamp.",
+        "imageCaption": "Claim → source → reproduced check → reviewer. Anything short of that stays a hypothesis and is marked OPEN."
+      },
+      {
+        "title": "Evidence rule · how we use it",
+        "kicker": "HOW WE USE IT · EVIDENCE RULE",
+        "subtitle": "Every result today carries its evidence line or the word OPEN.",
+        "cards": [
+          {
+            "title": "IN THE EVIDENCE LOG",
+            "body": "One line per result: claim · source id · command or sheet · reviewer · PASS / FAIL / OPEN."
+          },
+          {
+            "title": "IN THE AGENT'S OUTPUT",
+            "body": "Ask for source ids and the check in the answer. No source, no claim."
+          },
+          {
+            "title": "AT THE HUMAN GATE",
+            "body": "The reviewer reruns one check before accepting. Unrun checks stay OPEN, never \"probably fine\"."
+          }
+        ],
+        "prompt": "Open the evidence log template. Write one evidence line for the demo result together, then let everyone mark one thing OPEN on purpose.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Open the evidence log template.",
+          "Write one evidence line for the demo result.",
+          "Mark one thing OPEN on purpose."
+        ],
+        "expected": "Everyone has written one complete evidence line.",
+        "check": "No evidence line is missing a source or a reviewer.",
+        "layout": "cards"
       },
       {
         "title": "Trainer demo · requirement to check",
@@ -964,49 +1157,93 @@
       },
       {
         "title": "What is an AI-native SDLC?",
-        "kicker": "CONCEPT DEFINITION · DAY 3",
-        "subtitle": "A software process that keeps control while AI contributes in every phase.",
+        "kicker": "CONCEPT DEFINITION · AI-NATIVE SDLC",
+        "subtitle": "The same control objectives, new enforcement: the line becomes a loop and AI is embedded at every point.",
         "cards": [
           {
             "title": "FROM LINE TO LOOP",
-            "body": "Plan → Design → Build → Test → Deploy → Maintain → learn again."
+            "body": "Plan → Design → Build → Test → Deploy → Maintain, and what production teaches re-enters the plan."
           },
           {
-            "title": "AI EMBEDDED",
-            "body": "AI helps at every step; humans decide intent, review and release."
+            "title": "AI AT EVERY POINT",
+            "body": "AI drafts, generates, reviews first, tests and watches. Humans set intent, judge risk and own the release."
           },
           {
-            "title": "CONTROL STAYS",
-            "body": "Gates, evidence and boundaries make speed safe."
+            "title": "SAME CONTROLS, NEW ENFORCEMENT",
+            "body": "Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline, with automated handover between plays."
           }
         ],
-        "prompt": "Read the definition out loud, word for word. Ask: where does human control stay visible in this loop?",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "prompt": "Read the definition out loud, word for word. Ask: which control objective changed? (None.) Ask: what changed? (The shape, the handover, the enforcement.)",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
-          "Name the six phases. Mark one human gate."
+          "Name the six phases.",
+          "Name one control objective that did not change."
         ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
+        "expected": "The room can say \"same objectives, new enforcement\" and explain it.",
+        "check": "Everyone can name the six phases and one unchanged control objective.",
         "layout": "cards"
       },
       {
         "title": "AI-native SDLC · see the loop",
-        "kicker": "VISUAL · CONCEPT",
+        "kicker": "VISUAL · AI-NATIVE SDLC",
         "subtitle": "The line becomes a repeatable loop with AI at every point.",
         "cards": [],
-        "prompt": "Use the picture to point at the loop. Then let participants place their own ticket on one phase.",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "prompt": "Use the picture to point at the loop. Then let participants place their own ticket on one phase and point at one human gate.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
           "Point at the loop. Place your ticket."
         ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
+        "expected": "Everyone has placed a real ticket on one phase.",
+        "check": "Everyone can point at the phase their ticket is in and at one human gate.",
         "layout": "image",
         "image": "ai-native-sdlc-loop.svg",
         "imageAlt": "Six phase pills on one orange loop: plan, design, build, test, deploy, maintain, with Claude in the centre helping at every point.",
         "imageCaption": "Six phases on one repeating loop with Claude at every point. Intent, review and release remain human decisions."
+      },
+      {
+        "title": "AI-native SDLC · how we use it",
+        "kicker": "HOW WE USE IT · AI-NATIVE SDLC",
+        "subtitle": "Per phase: what the AI does first, what the engineer decides.",
+        "cards": [],
+        "prompt": "Walk the six rows. For each phase, name the AI's first pass and the decision that stays human. Then let everyone map one real ticket to a phase and a human decision.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Pick your ticket's phase.",
+          "Say the AI's first pass for it.",
+          "Say the decision that stays yours."
+        ],
+        "expected": "Every participant has mapped one real ticket to a phase and a human decision.",
+        "check": "Nobody names a phase where the human has no decision.",
+        "layout": "compare",
+        "columns": [
+          {
+            "title": "AI's role",
+            "items": [
+              "Plan · drafts the spec, sizes the work, flags dependencies",
+              "Design · proposes options against the spec",
+              "Build · generates and refactors; first-pass review on every change",
+              "Test · writes, runs and maintains the suite",
+              "Deploy · checks the gates and triggers the release",
+              "Maintain · watches, triages and files the follow-up"
+            ],
+            "foot": "AI does the first pass"
+          },
+          {
+            "title": "The engineer's role",
+            "items": [
+              "Plan · sets intent and priorities",
+              "Design · decides design and risk",
+              "Build · directs, constrains, accepts",
+              "Test · defines what correct means",
+              "Deploy · owns the rollback decision",
+              "Maintain · handles what AI escalates"
+            ],
+            "foot": "Humans decide at every gate"
+          }
+        ]
       },
       {
         "title": "Glossary · what do we mean?",
@@ -1074,34 +1311,94 @@
         "check": "Opening begins at the required time."
       },
       {
-        "title": "Interactive · the agentic loop",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "One task, one screen, rotating human driver",
-        "cards": [
+        "title": "What is an agent?",
+        "kicker": "CONCEPT DEFINITION · AGENTIC LOOP",
+        "subtitle": "A model in a loop with a goal, tools, feedback, authority and memory. The model matters; the loop turns language into work.",
+        "cards": [],
+        "prompt": "Say one sentence per pillar. A model predicts text. Give it a goal, tools, feedback and a boundary and it becomes an agent. A subagent is an agent another agent delegates to, with its own context.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Say model, chat, agent, subagent in one sentence each."
+        ],
+        "expected": "The room can say model, chat, agent, subagent in one sentence each.",
+        "check": "Nobody calls the model itself the agent.",
+        "layout": "pillars",
+        "items": [
           {
-            "title": "Group",
-            "body": "3–4 people navigate one shared task"
+            "label": "Model",
+            "caption": "reasons and predicts"
           },
           {
-            "title": "Driver",
-            "body": "One human types; rotate every 5–7 minutes"
+            "label": "Goal",
+            "caption": "the contract"
           },
           {
-            "title": "AI",
-            "body": "The tool suggests; humans direct, pause, and decide"
+            "label": "Tools",
+            "caption": "read, act, check"
+          },
+          {
+            "label": "Feedback",
+            "caption": "tool results feed the next step"
+          },
+          {
+            "label": "Authority",
+            "caption": "what it may not do"
+          },
+          {
+            "label": "Memory",
+            "caption": "CLAUDE.md, run log"
           }
         ],
-        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, others route observations through the navigator, skeptic asks for source IDs, and scribe records the decision. Rotate the driver once.",
-        "notes": "Doe de demo letterlijk. Eén navigator stuurt de driver; iedereen mag ‘pause’ zeggen. Bij vijf minuten drift grijpt de facilitator kort in.",
-        "dark": true,
+        "tagline": "DEBUG THE SYSTEM — NOT THE MYTH"
+      },
+      {
+        "title": "The agentic loop · see the loop",
+        "kicker": "VISUAL · AGENTIC LOOP",
+        "subtitle": "Gather context → take action → verify results, repeat until done, interrupt at any point.",
+        "cards": [],
+        "prompt": "Point at the three phases, the repeat arrow and the human interrupt. Map each phase to this morning's ticket-coach: read the ticket, draft the packet, check against the contract.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
         "steps": [
-          "State one task.",
-          "Rotate the human driver.",
-          "Pause on uncertainty.",
-          "Record the decision."
+          "Point at the three phases and the human interrupt."
         ],
-        "expected": "The group experiences shared navigation and a pause rule.",
-        "check": "Participants can name driver, navigator, skeptic, and scribe."
+        "expected": "Everyone can point at gather, act, verify and the interrupt.",
+        "check": "Everyone can point at the three phases, the repeat and the human interrupt.",
+        "layout": "image",
+        "image": "agentic-loop.svg",
+        "imageAlt": "Your prompt enters a loop of gather, act and verify that repeats until done; a human box can interrupt, steer or add context at any point.",
+        "imageCaption": "Models reason, tools act, the harness holds the loop. The loop ends at a human gate, never at \"done\" by itself."
+      },
+      {
+        "title": "The agentic loop · how we use it",
+        "kicker": "HOW WE USE IT · AGENTIC LOOP",
+        "subtitle": "Read the trace, not the prose: each loop turn leaves a tool call you can check.",
+        "cards": [
+          {
+            "title": "BOUND THE TASK",
+            "body": "One ticket, one contract, one boundary in the prompt. The agent must be able to stop."
+          },
+          {
+            "title": "WATCH THE LOOP",
+            "body": "n8n shows execution steps; Claude Code shows tool calls. A Calculator or Read call is an action. Reasoning alone is not."
+          },
+          {
+            "title": "INTERRUPT ON PURPOSE",
+            "body": "Steer, add context or stop when the loop drifts. The loop ends at a human gate."
+          }
+        ],
+        "prompt": "Open the demo trace. Let everyone point at one real tool call, name the boundary in the prompt, and say where they would interrupt.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Point at one real tool call in the demo trace.",
+          "Name the boundary in the prompt.",
+          "Say where you would interrupt."
+        ],
+        "expected": "Everyone can find one tool call in a trace.",
+        "check": "No one claims a result the trace does not show.",
+        "layout": "cards"
       },
       {
         "title": "Scenario and evidence rule",
@@ -1133,70 +1430,157 @@
         "check": "Fictional and local boundaries are explicit."
       },
       {
+        "title": "What is the evidence rule?",
+        "kicker": "CONCEPT DEFINITION · EVIDENCE RULE",
+        "subtitle": "A claim counts only with a source, a reproduced check and a reviewer.",
+        "cards": [
+          {
+            "title": "CLAIM",
+            "body": "What you say happened, in one sentence."
+          },
+          {
+            "title": "SOURCE + CHECK",
+            "body": "A row id or file at the cutoff, and the command, calculation or sheet that reproduces it."
+          },
+          {
+            "title": "REVIEWER",
+            "body": "Someone else reran it. Without all three it is a hypothesis and stays OPEN."
+          }
+        ],
+        "prompt": "Read the rule out loud. Ask: what is the difference between a claim and a hypothesis? Ask: why is \"it looked right\" not evidence?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name the three parts of evidence."
+        ],
+        "expected": "The room can separate a claim from evidence.",
+        "check": "Everyone can say why \"it looked right\" is not evidence.",
+        "layout": "cards"
+      },
+      {
         "title": "Evidence rule · see the ladder",
-        "kicker": "VISUAL · CONCEPT",
+        "kicker": "VISUAL · EVIDENCE RULE",
         "subtitle": "A claim only counts with a source, a reproduced check and a reviewer.",
         "cards": [],
-        "prompt": "Walk the four steps left to right. Ask: which step is usually skipped?",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "prompt": "Walk the four steps left to right. Ask: which step is usually skipped? Let one participant place a claim from the demo on the ladder.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
           "Place one claim from today on the ladder."
         ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
+        "expected": "Everyone can place a claim on the right step.",
+        "check": "Everyone can place a claim from today on the right step of the ladder.",
         "layout": "image",
         "image": "evidence-rule.svg",
         "imageAlt": "Four steps: claim, source, reproduced check, reviewer; a dashed hypothesis box below; a cutoff stamp.",
         "imageCaption": "Claim → source → reproduced check → reviewer. Anything short of that stays a hypothesis and is marked OPEN."
       },
       {
-        "title": "MOB programming, made concrete",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "One task, one screen, rotating human driver",
+        "title": "Evidence rule · how we use it",
+        "kicker": "HOW WE USE IT · EVIDENCE RULE",
+        "subtitle": "Every result today carries its evidence line or the word OPEN.",
         "cards": [
           {
-            "title": "Group",
-            "body": "3–4 people navigate one shared task"
+            "title": "IN THE EVIDENCE LOG",
+            "body": "One line per result: claim · source id · command or sheet · reviewer · PASS / FAIL / OPEN."
           },
           {
-            "title": "Driver",
-            "body": "One human types; rotate every 5–7 minutes"
+            "title": "IN THE AGENT'S OUTPUT",
+            "body": "Ask for source ids and the check in the answer. No source, no claim."
           },
           {
-            "title": "AI",
-            "body": "The tool suggests; humans direct, pause, and decide"
+            "title": "AT THE HUMAN GATE",
+            "body": "The reviewer reruns one check before accepting. Unrun checks stay OPEN, never \"probably fine\"."
           }
         ],
-        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, others route observations through the navigator, skeptic asks for source IDs, and scribe records the decision. Rotate the driver once.",
-        "notes": "Doe de demo letterlijk. Eén navigator stuurt de driver; iedereen mag ‘pause’ zeggen. Bij vijf minuten drift grijpt de facilitator kort in.",
-        "dark": true,
+        "prompt": "Open the evidence log template. Write one evidence line for the demo result together, then let everyone mark one thing OPEN on purpose.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
         "steps": [
-          "State one task.",
-          "Rotate the human driver.",
-          "Pause on uncertainty.",
-          "Record the decision."
+          "Open the evidence log template.",
+          "Write one evidence line for the demo result.",
+          "Mark one thing OPEN on purpose."
         ],
-        "expected": "The group experiences shared navigation and a pause rule.",
-        "check": "Participants can name driver, navigator, skeptic, and scribe."
+        "expected": "Everyone has written one complete evidence line.",
+        "check": "No evidence line is missing a source or a reviewer.",
+        "layout": "cards"
+      },
+      {
+        "title": "What is MOB programming?",
+        "kicker": "CONCEPT DEFINITION · MOB PROGRAMMING",
+        "subtitle": "One task, one screen, one human driver; the group navigates and rotates.",
+        "cards": [
+          {
+            "title": "GROUP",
+            "body": "3–4 people on one shared task and one screen."
+          },
+          {
+            "title": "ROLES",
+            "body": "Driver types, navigator directs, skeptic asks for source ids, scribe records the decision. Rotate every 5–7 minutes."
+          },
+          {
+            "title": "AI IN THE MOB",
+            "body": "The tool suggests. Humans direct, say \"pause\" on uncertainty, and decide."
+          }
+        ],
+        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, the skeptic asks for source ids, the scribe records the decision. Rotate the driver once.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name the four roles.",
+          "Say the pause rule."
+        ],
+        "expected": "The room can name the roles and the pause rule.",
+        "check": "Participants can name driver, navigator, skeptic and scribe.",
+        "layout": "cards"
       },
       {
         "title": "MOB programming · see the roles",
-        "kicker": "VISUAL · CONCEPT",
+        "kicker": "VISUAL · MOB PROGRAMMING",
         "subtitle": "One laptop, one screen, everyone in a role; rotate every five to seven minutes.",
         "cards": [],
-        "prompt": "Point at each role. Ask: who is driver first, and who calls the rotation?",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "prompt": "Point at each role. Ask: who is driver first, who calls the rotation, and who says \"pause\" first?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
           "Name your first driver and navigator."
         ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
+        "expected": "Every group can point at its four roles.",
+        "check": "Everyone can say who asks for source ids and who records the decision.",
         "layout": "image",
         "image": "mob-programming.svg",
-        "imageAlt": "Ring of four roles around one laptop: driver, navigator, researcher, tester, with a rotate-every-5-to-7-minutes arrow.",
-        "imageCaption": "Driver types what the navigator says. Researcher and tester keep the evidence honest. A human decides at every gate."
+        "imageAlt": "Four roles on one chain: driver, navigator, skeptic, scribe, with a rotate-every-5-to-7-minutes callout and one shared laptop.",
+        "imageCaption": "Driver types what the navigator says. Skeptic asks for source ids, scribe records the decision. A human decides at every gate."
+      },
+      {
+        "title": "MOB programming · how we use it",
+        "kicker": "HOW WE USE IT · MOB PROGRAMMING",
+        "subtitle": "Every guided exercise today runs as a mob with a visible timer.",
+        "cards": [
+          {
+            "title": "START",
+            "body": "Facilitator states one task. First driver and navigator are named before the timer starts."
+          },
+          {
+            "title": "ROTATE",
+            "body": "Every 5–7 minutes the driver changes. Remote participants rotate too; the navigator reads chat aloud."
+          },
+          {
+            "title": "PAUSE",
+            "body": "Anyone says \"pause\" when a source, assumption or claim is unclear. The scribe records the decision."
+          }
+        ],
+        "prompt": "Let each group name its first driver and navigator, set the rotation timer, and agree who says \"pause\" first. Do not start the exercise before that.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name your first driver and navigator.",
+          "Set the rotation timer.",
+          "Agree who says \"pause\" first."
+        ],
+        "expected": "Every group has named roles before the first exercise.",
+        "check": "No group starts an exercise without a named driver and a running timer.",
+        "layout": "cards"
       },
       {
         "title": "AI-native SDLC loop",
@@ -1487,48 +1871,15 @@
         "tagline": "SAME RHYTHM · INDIVIDUAL FIRST · GROUPS AFTER"
       },
       {
-        "title": "Interactive · the agentic loop",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "One task, one screen, rotating human driver",
-        "cards": [
-          {
-            "title": "Group",
-            "body": "3–4 people navigate one shared task"
-          },
-          {
-            "title": "Driver",
-            "body": "One human types; rotate every 5–7 minutes"
-          },
-          {
-            "title": "AI",
-            "body": "The tool suggests; humans direct, pause, and decide"
-          }
-        ],
-        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, others route observations through the navigator, skeptic asks for source IDs, and scribe records the decision. Rotate the driver once.",
-        "notes": "Doe de demo letterlijk. Eén navigator stuurt de driver; iedereen mag ‘pause’ zeggen. Bij vijf minuten drift grijpt de facilitator kort in.",
-        "dark": true,
-        "steps": [
-          "State one task.",
-          "Rotate the human driver.",
-          "Pause on uncertainty.",
-          "Record the decision."
-        ],
-        "expected": "The group experiences shared navigation and a pause rule.",
-        "check": "Participants can name driver, navigator, skeptic, and scribe."
-      },
-      {
-        "title": "An agent is a system, not a chatty model",
-        "kicker": "CONCEPT 1 · 10:15–10:35",
-        "subtitle": "The model matters. The loop around it turns language into ongoing work.",
+        "title": "What is an agent?",
+        "kicker": "CONCEPT DEFINITION · AGENTIC LOOP",
+        "subtitle": "A model in a loop with a goal, tools, feedback, authority and memory. The model matters; the loop turns language into work.",
         "cards": [],
         "prompt": "Say one sentence per pillar. A model predicts text. Give it a goal, tools, feedback and a boundary and it becomes an agent. A subagent is an agent another agent delegates to, with its own context.",
-        "notes": "Model · chat · agent · subagent in één zin elk. Debug het systeem, niet de mythe.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
-          "Model predicts.",
-          "Chat remembers a conversation.",
-          "Agent loops with tools and a goal.",
-          "Subagent is delegated, own context."
+          "Say model, chat, agent, subagent in one sentence each."
         ],
         "expected": "The room can say model, chat, agent, subagent in one sentence each.",
         "check": "Nobody calls the model itself the agent.",
@@ -1562,6 +1913,54 @@
         "tagline": "DEBUG THE SYSTEM — NOT THE MYTH"
       },
       {
+        "title": "The agentic loop · see the loop",
+        "kicker": "VISUAL · AGENTIC LOOP",
+        "subtitle": "Gather context → take action → verify results, repeat until done, interrupt at any point.",
+        "cards": [],
+        "prompt": "Point at the three phases, the repeat arrow and the human interrupt. Map each phase to this morning's ticket-coach: read the ticket, draft the packet, check against the contract.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Point at the three phases and the human interrupt."
+        ],
+        "expected": "Everyone can point at gather, act, verify and the interrupt.",
+        "check": "Everyone can point at the three phases, the repeat and the human interrupt.",
+        "layout": "image",
+        "image": "agentic-loop.svg",
+        "imageAlt": "Your prompt enters a loop of gather, act and verify that repeats until done; a human box can interrupt, steer or add context at any point.",
+        "imageCaption": "Models reason, tools act, the harness holds the loop. The loop ends at a human gate, never at \"done\" by itself."
+      },
+      {
+        "title": "The agentic loop · how we use it",
+        "kicker": "HOW WE USE IT · AGENTIC LOOP",
+        "subtitle": "Read the trace, not the prose: each loop turn leaves a tool call you can check.",
+        "cards": [
+          {
+            "title": "BOUND THE TASK",
+            "body": "One ticket, one contract, one boundary in the prompt. The agent must be able to stop."
+          },
+          {
+            "title": "WATCH THE LOOP",
+            "body": "n8n shows execution steps; Claude Code shows tool calls. A Calculator or Read call is an action. Reasoning alone is not."
+          },
+          {
+            "title": "INTERRUPT ON PURPOSE",
+            "body": "Steer, add context or stop when the loop drifts. The loop ends at a human gate."
+          }
+        ],
+        "prompt": "Open the demo trace. Let everyone point at one real tool call, name the boundary in the prompt, and say where they would interrupt.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Point at one real tool call in the demo trace.",
+          "Name the boundary in the prompt.",
+          "Say where you would interrupt."
+        ],
+        "expected": "Everyone can find one tool call in a trace.",
+        "check": "No one claims a result the trace does not show.",
+        "layout": "cards"
+      },
+      {
         "title": "The agentic loop",
         "kicker": "CONCEPT 1 · 10:15–10:35",
         "subtitle": "Gather context → take action → verify results — repeat, and you can interrupt at any point",
@@ -1581,21 +1980,66 @@
         "tagline": "MODELS REASON · TOOLS ACT · THE HARNESS HOLDS THE LOOP"
       },
       {
-        "title": "One contract, two platforms",
-        "kicker": "CONCEPT 2 · 10:35–10:45",
-        "subtitle": "Same functional contract and input; platform adapters and settings are recorded",
-        "cards": [],
-        "prompt": "Show the shared functional contract (shared-prompt.md) and TICKET-OPS-101 input. In n8n it is the AI Agent system message and the ticket is the user message, with Calculator as the required tool adapter. In Claude Code it is the ticket-coach subagent body with read-only Read, Glob, and Grep tools plus the typed invocation. Record each platform's adapter instructions, model, mode, access, and tools; the board prompt is a summary, not a third instruction. One pair of runs does not establish causal superiority.",
-        "notes": "shared-prompt.md en dezelfde 101-input vormen de functionele basis. Leg per platform adapter, model, mode, toegang en tools vast; verschillen zijn waarnemingen, geen causaliteit.",
+        "title": "What is \"one contract, two platforms\"?",
+        "kicker": "CONCEPT DEFINITION · ONE CONTRACT, TWO PLATFORMS",
+        "subtitle": "Same functional contract and input on n8n and Claude Code; only the harness and its adapter differ.",
+        "cards": [
+          {
+            "title": "THE CONTRACT",
+            "body": "shared-prompt.md and the ticket input: what the agent must produce and must not do."
+          },
+          {
+            "title": "THE ADAPTERS",
+            "body": "n8n: system message, model, Calculator tool. Claude Code: subagent body, read-only tools, typed invocation. Recorded per platform."
+          },
+          {
+            "title": "THE CHECKER",
+            "body": "Both outputs go through the same checker. Differences are observations; one pair of runs proves no cause."
+          }
+        ],
+        "prompt": "Show shared-prompt.md and TICKET-OPS-101. In n8n the contract is the AI Agent system message and the ticket is the user message, with Calculator as the tool adapter. In Claude Code it is the ticket-coach subagent body with read-only Read, Glob and Grep plus the typed invocation.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
-          "Show shared-prompt.md.",
-          "n8n: system message + ticket.",
-          "Claude Code: subagent + invocation.",
-          "Same contract, same checker."
+          "Say where the instruction lives on each platform."
         ],
         "expected": "Everyone knows where the instruction lives on each platform.",
-        "check": "Nobody pastes the board prompt into n8n.",
+        "check": "Everyone can name the contract and one adapter setting per platform.",
+        "layout": "cards"
+      },
+      {
+        "title": "One contract · see the split",
+        "kicker": "VISUAL · ONE CONTRACT, TWO PLATFORMS",
+        "subtitle": "Same contract and input; only the harness and its adapter differ.",
+        "cards": [],
+        "prompt": "Point at the contract, then at both adapters, then at the checker. Ask: what is shared, what is recorded separately?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name the adapter settings you will record."
+        ],
+        "expected": "Everyone can say what is shared and what differs.",
+        "check": "Everyone can point at what is shared and what is recorded separately.",
+        "layout": "image",
+        "image": "one-contract-two-platforms.svg",
+        "imageAlt": "One contract box feeding n8n and Claude Code boxes, both feeding the same checker.",
+        "imageCaption": "One contract feeds two harnesses; both outputs go through the same checker. One pair of runs proves no cause."
+      },
+      {
+        "title": "One contract · how we use it",
+        "kicker": "HOW WE USE IT · ONE CONTRACT, TWO PLATFORMS",
+        "subtitle": "Morning n8n, afternoon Claude Code, same ticket, same checker, settings recorded.",
+        "cards": [],
+        "prompt": "Record each platform's adapter instructions, model, mode, access and tools; the board prompt is a summary, not a third instruction. Only after the human gate move to ticket 102: the contract travels, the adapter is rebuilt.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Copy the adapter settings table.",
+          "Fill it for the platform you are on.",
+          "Mark unrun checks OPEN."
+        ],
+        "expected": "Every participant has a filled adapter settings line for one platform.",
+        "check": "No comparison sentence claims a cause from one pair of runs.",
         "layout": "compare",
         "columns": [
           {
@@ -1620,26 +2064,7 @@
             ],
             "foot": "Terminal harness"
           }
-        ],
-        "tagline": "ONE CONTRACT · TWO HARNESSES · NO CAUSAL CLAIM FROM ONE PAIR"
-      },
-      {
-        "title": "One contract · see the split",
-        "kicker": "VISUAL · CONCEPT",
-        "subtitle": "Same contract and input; only the harness and its adapter differ.",
-        "cards": [],
-        "prompt": "Point at the contract, then at both adapters. Ask: what is recorded per platform?",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
-        "dark": false,
-        "steps": [
-          "Name the adapter settings you will record."
-        ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
-        "layout": "image",
-        "image": "one-contract-two-platforms.svg",
-        "imageAlt": "One contract box feeding n8n and Claude Code boxes, both feeding the same checker.",
-        "imageCaption": "One contract feeds two harnesses; both outputs go through the same checker. One pair of runs proves no cause."
+        ]
       },
       {
         "title": "Trainer demo · n8n bounded preview",
@@ -1741,22 +2166,80 @@
         "tagline": "GROUPS OF 3–4 · ONE NAVIGATOR · AFTER THE INDIVIDUAL BLOCK"
       },
       {
+        "title": "What is a human gate?",
+        "kicker": "CONCEPT DEFINITION · HUMAN GATE",
+        "subtitle": "The point where the agent's output waits for a human decision: accept, or return with a named reason.",
+        "cards": [
+          {
+            "title": "WHAT WAITS",
+            "body": "A draft, a preview, a trace and its evidence line. Nothing has been written to a business system."
+          },
+          {
+            "title": "WHO DECIDES",
+            "body": "A named human who reruns one check and decides PASS, FAIL or OPEN."
+          },
+          {
+            "title": "WHAT RETURNS",
+            "body": "A returned result names the gap. Nothing is \"probably fine\"."
+          }
+        ],
+        "prompt": "Explain the gate with today's baseline: settings, output, review line, decision. Ask: what would make you return it?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Say what waits at the gate and who decides."
+        ],
+        "expected": "The room can describe a gate in one sentence.",
+        "check": "Everyone can name the three outcomes PASS, FAIL, OPEN and what each requires.",
+        "layout": "cards"
+      },
+      {
         "title": "Human gate · see the decision",
-        "kicker": "VISUAL · CONCEPT",
+        "kicker": "VISUAL · HUMAN GATE",
         "subtitle": "The agent proposes; a human accepts or returns with a named reason.",
         "cards": [],
-        "prompt": "Trace the arrows. Ask: what must the reviewer see before accepting?",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "prompt": "Trace the arrows. Ask: what must the reviewer see before accepting? What travels back on the return arrow?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
           "Say what your gate needs: source, check, reviewer."
         ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
+        "expected": "Everyone can trace accept and return.",
+        "check": "Everyone can trace the return arrow and say what it carries.",
         "layout": "image",
         "image": "human-gate.svg",
         "imageAlt": "Agent output enters a gate where a human reviews the evidence, then accept or return; a dashed arrow returns to the agent.",
         "imageCaption": "Nothing is written to a business system without this decision. Return always names the gap."
+      },
+      {
+        "title": "Human gate · how we use it",
+        "kicker": "HOW WE USE IT · HUMAN GATE",
+        "subtitle": "Every practice block ends at a gate before anything moves on.",
+        "cards": [
+          {
+            "title": "BEFORE THE GATE",
+            "body": "Freeze the baseline: settings, output, review line per person."
+          },
+          {
+            "title": "AT THE GATE",
+            "body": "The reviewer reruns one check and decides with one quoted line as the reason."
+          },
+          {
+            "title": "AFTER THE GATE",
+            "body": "PASS moves to the next ticket, FAIL returns with the gap named, OPEN stays visible on the board."
+          }
+        ],
+        "prompt": "Each person writes a review line and decides PASS / FAIL / OPEN with one quoted line. OPEN items go on the board before anyone moves on.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Write your review line.",
+          "Decide PASS / FAIL / OPEN with one quoted line.",
+          "Put OPEN items on the board."
+        ],
+        "expected": "A decision per participant with a quoted reason.",
+        "check": "No decision claims an unobserved run.",
+        "layout": "cards"
       },
       {
         "title": "Human gate · n8n baseline",
@@ -2068,36 +2551,6 @@
         "tagline": "SHARED LANGUAGE · LOWER COGNITIVE LOAD"
       },
       {
-        "title": "Interactive · the agentic loop",
-        "kicker": "CONCEPT · 10:15",
-        "subtitle": "One task, one screen, rotating human driver",
-        "cards": [
-          {
-            "title": "Group",
-            "body": "3–4 people navigate one shared task"
-          },
-          {
-            "title": "Driver",
-            "body": "One human types; rotate every 5–7 minutes"
-          },
-          {
-            "title": "AI",
-            "body": "The tool suggests; humans direct, pause, and decide"
-          }
-        ],
-        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, others route observations through the navigator, skeptic asks for source IDs, and scribe records the decision. Rotate the driver once.",
-        "notes": "Doe de demo letterlijk. Eén navigator stuurt de driver; iedereen mag ‘pause’ zeggen. Bij vijf minuten drift grijpt de facilitator kort in.",
-        "dark": true,
-        "steps": [
-          "State one task.",
-          "Rotate the human driver.",
-          "Pause on uncertainty.",
-          "Record the decision."
-        ],
-        "expected": "The group experiences shared navigation and a pause rule.",
-        "check": "Participants can name driver, navigator, skeptic, and scribe."
-      },
-      {
         "title": "Day 3 route",
         "kicker": "SCHEDULE · 10:00–16:00",
         "subtitle": "Concept, individual run, group review, gate — twice",
@@ -2129,18 +2582,15 @@
         "tagline": "SAME RHYTHM · INDIVIDUAL FIRST · GROUPS AFTER"
       },
       {
-        "title": "An agent is a system, not a chatty model",
-        "kicker": "CONCEPT 1 · 10:15–10:35",
-        "subtitle": "The model matters. The loop around it turns language into ongoing work.",
+        "title": "What is an agent?",
+        "kicker": "CONCEPT DEFINITION · AGENTIC LOOP",
+        "subtitle": "A model in a loop with a goal, tools, feedback, authority and memory. The model matters; the loop turns language into work.",
         "cards": [],
         "prompt": "Say one sentence per pillar. A model predicts text. Give it a goal, tools, feedback and a boundary and it becomes an agent. A subagent is an agent another agent delegates to, with its own context.",
-        "notes": "Model · chat · agent · subagent in één zin elk. Debug het systeem, niet de mythe.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
-          "Model predicts.",
-          "Chat remembers a conversation.",
-          "Agent loops with tools and a goal.",
-          "Subagent is delegated, own context."
+          "Say model, chat, agent, subagent in one sentence each."
         ],
         "expected": "The room can say model, chat, agent, subagent in one sentence each.",
         "check": "Nobody calls the model itself the agent.",
@@ -2174,6 +2624,54 @@
         "tagline": "DEBUG THE SYSTEM — NOT THE MYTH"
       },
       {
+        "title": "The agentic loop · see the loop",
+        "kicker": "VISUAL · AGENTIC LOOP",
+        "subtitle": "Gather context → take action → verify results, repeat until done, interrupt at any point.",
+        "cards": [],
+        "prompt": "Point at the three phases, the repeat arrow and the human interrupt. Map each phase to this morning's ticket-coach: read the ticket, draft the packet, check against the contract.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Point at the three phases and the human interrupt."
+        ],
+        "expected": "Everyone can point at gather, act, verify and the interrupt.",
+        "check": "Everyone can point at the three phases, the repeat and the human interrupt.",
+        "layout": "image",
+        "image": "agentic-loop.svg",
+        "imageAlt": "Your prompt enters a loop of gather, act and verify that repeats until done; a human box can interrupt, steer or add context at any point.",
+        "imageCaption": "Models reason, tools act, the harness holds the loop. The loop ends at a human gate, never at \"done\" by itself."
+      },
+      {
+        "title": "The agentic loop · how we use it",
+        "kicker": "HOW WE USE IT · AGENTIC LOOP",
+        "subtitle": "Read the trace, not the prose: each loop turn leaves a tool call you can check.",
+        "cards": [
+          {
+            "title": "BOUND THE TASK",
+            "body": "One ticket, one contract, one boundary in the prompt. The agent must be able to stop."
+          },
+          {
+            "title": "WATCH THE LOOP",
+            "body": "n8n shows execution steps; Claude Code shows tool calls. A Calculator or Read call is an action. Reasoning alone is not."
+          },
+          {
+            "title": "INTERRUPT ON PURPOSE",
+            "body": "Steer, add context or stop when the loop drifts. The loop ends at a human gate."
+          }
+        ],
+        "prompt": "Open the demo trace. Let everyone point at one real tool call, name the boundary in the prompt, and say where they would interrupt.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Point at one real tool call in the demo trace.",
+          "Name the boundary in the prompt.",
+          "Say where you would interrupt."
+        ],
+        "expected": "Everyone can find one tool call in a trace.",
+        "check": "No one claims a result the trace does not show.",
+        "layout": "cards"
+      },
+      {
         "title": "The agentic loop",
         "kicker": "CONCEPT 1 · 10:15–10:35",
         "subtitle": "Gather context → take action → verify results — repeat, and you can interrupt at any point",
@@ -2193,21 +2691,66 @@
         "tagline": "MODELS REASON · TOOLS ACT · THE HARNESS HOLDS THE LOOP"
       },
       {
-        "title": "One contract, two platforms",
-        "kicker": "CONCEPT 2 · 10:35–10:45",
-        "subtitle": "Same functional contract and input; platform adapters and settings are recorded",
-        "cards": [],
-        "prompt": "Show the shared functional contract (shared-prompt.md) and TICKET-OPS-101 input. In n8n it is the AI Agent system message and the ticket is the user message, with Calculator as the required tool adapter. In Claude Code it is the ticket-coach subagent body with read-only Read, Glob, and Grep tools plus the typed invocation. Record each platform's adapter instructions, model, mode, access, and tools; the board prompt is a summary, not a third instruction. One pair of runs does not establish causal superiority.",
-        "notes": "shared-prompt.md en dezelfde 101-input vormen de functionele basis. Leg per platform adapter, model, mode, toegang en tools vast; verschillen zijn waarnemingen, geen causaliteit.",
+        "title": "What is \"one contract, two platforms\"?",
+        "kicker": "CONCEPT DEFINITION · ONE CONTRACT, TWO PLATFORMS",
+        "subtitle": "Same functional contract and input on n8n and Claude Code; only the harness and its adapter differ.",
+        "cards": [
+          {
+            "title": "THE CONTRACT",
+            "body": "shared-prompt.md and the ticket input: what the agent must produce and must not do."
+          },
+          {
+            "title": "THE ADAPTERS",
+            "body": "n8n: system message, model, Calculator tool. Claude Code: subagent body, read-only tools, typed invocation. Recorded per platform."
+          },
+          {
+            "title": "THE CHECKER",
+            "body": "Both outputs go through the same checker. Differences are observations; one pair of runs proves no cause."
+          }
+        ],
+        "prompt": "Show shared-prompt.md and TICKET-OPS-101. In n8n the contract is the AI Agent system message and the ticket is the user message, with Calculator as the tool adapter. In Claude Code it is the ticket-coach subagent body with read-only Read, Glob and Grep plus the typed invocation.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
-          "Show shared-prompt.md.",
-          "n8n: system message + ticket.",
-          "Claude Code: subagent + invocation.",
-          "Same contract, same checker."
+          "Say where the instruction lives on each platform."
         ],
         "expected": "Everyone knows where the instruction lives on each platform.",
-        "check": "Nobody pastes the board prompt into n8n.",
+        "check": "Everyone can name the contract and one adapter setting per platform.",
+        "layout": "cards"
+      },
+      {
+        "title": "One contract · see the split",
+        "kicker": "VISUAL · ONE CONTRACT, TWO PLATFORMS",
+        "subtitle": "Same contract and input; only the harness and its adapter differ.",
+        "cards": [],
+        "prompt": "Point at the contract, then at both adapters, then at the checker. Ask: what is shared, what is recorded separately?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name the adapter settings you will record."
+        ],
+        "expected": "Everyone can say what is shared and what differs.",
+        "check": "Everyone can point at what is shared and what is recorded separately.",
+        "layout": "image",
+        "image": "one-contract-two-platforms.svg",
+        "imageAlt": "One contract box feeding n8n and Claude Code boxes, both feeding the same checker.",
+        "imageCaption": "One contract feeds two harnesses; both outputs go through the same checker. One pair of runs proves no cause."
+      },
+      {
+        "title": "One contract · how we use it",
+        "kicker": "HOW WE USE IT · ONE CONTRACT, TWO PLATFORMS",
+        "subtitle": "Morning n8n, afternoon Claude Code, same ticket, same checker, settings recorded.",
+        "cards": [],
+        "prompt": "Record each platform's adapter instructions, model, mode, access and tools; the board prompt is a summary, not a third instruction. Only after the human gate move to ticket 102: the contract travels, the adapter is rebuilt.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Copy the adapter settings table.",
+          "Fill it for the platform you are on.",
+          "Mark unrun checks OPEN."
+        ],
+        "expected": "Every participant has a filled adapter settings line for one platform.",
+        "check": "No comparison sentence claims a cause from one pair of runs.",
         "layout": "compare",
         "columns": [
           {
@@ -2232,26 +2775,7 @@
             ],
             "foot": "Terminal harness"
           }
-        ],
-        "tagline": "ONE CONTRACT · TWO HARNESSES · NO CAUSAL CLAIM FROM ONE PAIR"
-      },
-      {
-        "title": "One contract · see the split",
-        "kicker": "VISUAL · CONCEPT",
-        "subtitle": "Same contract and input; only the harness and its adapter differ.",
-        "cards": [],
-        "prompt": "Point at the contract, then at both adapters. Ask: what is recorded per platform?",
-        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
-        "dark": false,
-        "steps": [
-          "Name the adapter settings you will record."
-        ],
-        "expected": "Everyone can explain the concept in their own words and start the exercise.",
-        "check": "Definition, visual and next action are explicit.",
-        "layout": "image",
-        "image": "one-contract-two-platforms.svg",
-        "imageAlt": "One contract box feeding n8n and Claude Code boxes, both feeding the same checker.",
-        "imageCaption": "One contract feeds two harnesses; both outputs go through the same checker. One pair of runs proves no cause."
+        ]
       },
       {
         "title": "Claude Code demo · rebuild the same agent",

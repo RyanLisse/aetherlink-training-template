@@ -1,0 +1,355 @@
+{
+  "_readme": "One entry per concept. Every concept ships as three slides in this order: definition, visual, how we use it. apply_concepts.py places them; edit here, never in day-decks.json directly.",
+  "notes_default": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+  "concepts": {
+    "intent-md": {
+      "name": "intent.md",
+      "definition": {
+        "title": "What is intent.md?",
+        "subtitle": "The human starting brief: what we want, why it matters, within which boundaries.",
+        "cards": [
+          {"title": "WHAT", "body": "The desired result in plain words."},
+          {"title": "WHY", "body": "The reason, and who is affected."},
+          {"title": "BOUNDARIES", "body": "Constraints, non-goals and OPEN questions. Unknowns are written down, not guessed."}
+        ],
+        "prompt": "Explain: intent.md is the human starting brief for the work, written before design or build. Ask: which three words must always be visible?",
+        "steps": ["Say the three parts: what, why, boundaries."],
+        "expected": "Everyone can say what intent.md is in one sentence.",
+        "check": "Everyone names the three parts without looking at the slide."
+      },
+      "visual": {
+        "title": "Intent.md in one picture",
+        "subtitle": "From idea to a shared starting point",
+        "image": "intent-md.svg",
+        "imageAlt": "intent.md brief with what, why and boundaries feeding design, build and review, with a revisit loop.",
+        "imageCaption": "What, why and boundaries feed design, build and review. Change the brief before you change the plan.",
+        "prompt": "Show the picture. Ask participants to link one sentence to what, why or boundaries, and to point at where OPEN questions live.",
+        "steps": ["Link one sentence to the picture."],
+        "expected": "Everyone can link a sentence to the right part of the brief.",
+        "check": "Everyone can point at where OPEN questions live in the brief."
+      },
+      "usage": {
+        "title": "intent.md · how we use it",
+        "subtitle": "Written first, read at every gate, changed before the plan changes.",
+        "cards": [
+          {"title": "BEFORE BUILD", "body": "Write it in ten minutes: what, why, boundaries. Mark unknowns OPEN. Do not guess."},
+          {"title": "DURING THE WORK", "body": "The agent reads it first. Every prompt points back to it: \"stay inside intent.md\"."},
+          {"title": "AT REVIEW", "body": "Review against the brief, not against memory. If the brief was wrong, change the brief, then the plan."}
+        ],
+        "prompt": "Walk the three moments. Ask each participant to open their own intent.md and underline one OPEN question before the exercise starts.",
+        "steps": ["Open your intent.md.", "Underline one OPEN question.", "Say which exercise today uses it."],
+        "expected": "Every participant has an intent.md with at least one OPEN question.",
+        "check": "Nobody starts the exercise without an intent.md on screen."
+      }
+    },
+    "evidence-rule": {
+      "name": "Evidence rule",
+      "definition": {
+        "title": "What is the evidence rule?",
+        "subtitle": "A claim counts only with a source, a reproduced check and a reviewer.",
+        "cards": [
+          {"title": "CLAIM", "body": "What you say happened, in one sentence."},
+          {"title": "SOURCE + CHECK", "body": "A row id or file at the cutoff, and the command, calculation or sheet that reproduces it."},
+          {"title": "REVIEWER", "body": "Someone else reran it. Without all three it is a hypothesis and stays OPEN."}
+        ],
+        "prompt": "Read the rule out loud. Ask: what is the difference between a claim and a hypothesis? Ask: why is \"it looked right\" not evidence?",
+        "steps": ["Name the three parts of evidence."],
+        "expected": "The room can separate a claim from evidence.",
+        "check": "Everyone can say why \"it looked right\" is not evidence."
+      },
+      "visual": {
+        "title": "Evidence rule · see the ladder",
+        "subtitle": "A claim only counts with a source, a reproduced check and a reviewer.",
+        "image": "evidence-rule.svg",
+        "imageAlt": "Four steps: claim, source, reproduced check, reviewer; a dashed hypothesis box below; a cutoff stamp.",
+        "imageCaption": "Claim → source → reproduced check → reviewer. Anything short of that stays a hypothesis and is marked OPEN.",
+        "prompt": "Walk the four steps left to right. Ask: which step is usually skipped? Let one participant place a claim from the demo on the ladder.",
+        "steps": ["Place one claim from today on the ladder."],
+        "expected": "Everyone can place a claim on the right step.",
+        "check": "Everyone can place a claim from today on the right step of the ladder."
+      },
+      "usage": {
+        "title": "Evidence rule · how we use it",
+        "subtitle": "Every result today carries its evidence line or the word OPEN.",
+        "cards": [
+          {"title": "IN THE EVIDENCE LOG", "body": "One line per result: claim · source id · command or sheet · reviewer · PASS / FAIL / OPEN."},
+          {"title": "IN THE AGENT'S OUTPUT", "body": "Ask for source ids and the check in the answer. No source, no claim."},
+          {"title": "AT THE HUMAN GATE", "body": "The reviewer reruns one check before accepting. Unrun checks stay OPEN, never \"probably fine\"."}
+        ],
+        "prompt": "Open the evidence log template. Write one evidence line for the demo result together, then let everyone mark one thing OPEN on purpose.",
+        "steps": ["Open the evidence log template.", "Write one evidence line for the demo result.", "Mark one thing OPEN on purpose."],
+        "expected": "Everyone has written one complete evidence line.",
+        "check": "No evidence line is missing a source or a reviewer."
+      }
+    },
+    "mob": {
+      "name": "MOB programming",
+      "definition": {
+        "title": "What is MOB programming?",
+        "subtitle": "One task, one screen, one human driver; the group navigates and rotates.",
+        "cards": [
+          {"title": "GROUP", "body": "3–4 people on one shared task and one screen."},
+          {"title": "ROLES", "body": "Driver types, navigator directs, skeptic asks for source ids, scribe records the decision. Rotate every 5–7 minutes."},
+          {"title": "AI IN THE MOB", "body": "The tool suggests. Humans direct, say \"pause\" on uncertainty, and decide."}
+        ],
+        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, the skeptic asks for source ids, the scribe records the decision. Rotate the driver once.",
+        "steps": ["Name the four roles.", "Say the pause rule."],
+        "expected": "The room can name the roles and the pause rule.",
+        "check": "Participants can name driver, navigator, skeptic and scribe."
+      },
+      "visual": {
+        "title": "MOB programming · see the roles",
+        "subtitle": "One laptop, one screen, everyone in a role; rotate every five to seven minutes.",
+        "image": "mob-programming.svg",
+        "imageAlt": "Four roles on one chain: driver, navigator, skeptic, scribe, with a rotate-every-5-to-7-minutes callout and one shared laptop.",
+        "imageCaption": "Driver types what the navigator says. Skeptic asks for source ids, scribe records the decision. A human decides at every gate.",
+        "prompt": "Point at each role. Ask: who is driver first, who calls the rotation, and who says \"pause\" first?",
+        "steps": ["Name your first driver and navigator."],
+        "expected": "Every group can point at its four roles.",
+        "check": "Everyone can say who asks for source ids and who records the decision."
+      },
+      "usage": {
+        "title": "MOB programming · how we use it",
+        "subtitle": "Every guided exercise today runs as a mob with a visible timer.",
+        "cards": [
+          {"title": "START", "body": "Facilitator states one task. First driver and navigator are named before the timer starts."},
+          {"title": "ROTATE", "body": "Every 5–7 minutes the driver changes. Remote participants rotate too; the navigator reads chat aloud."},
+          {"title": "PAUSE", "body": "Anyone says \"pause\" when a source, assumption or claim is unclear. The scribe records the decision."}
+        ],
+        "prompt": "Let each group name its first driver and navigator, set the rotation timer, and agree who says \"pause\" first. Do not start the exercise before that.",
+        "steps": ["Name your first driver and navigator.", "Set the rotation timer.", "Agree who says \"pause\" first."],
+        "expected": "Every group has named roles before the first exercise.",
+        "check": "No group starts an exercise without a named driver and a running timer."
+      }
+    },
+    "sdlc": {
+      "name": "AI-native SDLC",
+      "definition": {
+        "title": "What is an AI-native SDLC?",
+        "subtitle": "The same control objectives, new enforcement: the line becomes a loop and AI is embedded at every point.",
+        "cards": [
+          {"title": "FROM LINE TO LOOP", "body": "Plan → Design → Build → Test → Deploy → Maintain, and what production teaches re-enters the plan."},
+          {"title": "AI AT EVERY POINT", "body": "AI drafts, generates, reviews first, tests and watches. Humans set intent, judge risk and own the release."},
+          {"title": "SAME CONTROLS, NEW ENFORCEMENT", "body": "Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline, with automated handover between plays."}
+        ],
+        "prompt": "Read the definition out loud, word for word. Ask: which control objective changed? (None.) Ask: what changed? (The shape, the handover, the enforcement.)",
+        "steps": ["Name the six phases.", "Name one control objective that did not change."],
+        "expected": "The room can say \"same objectives, new enforcement\" and explain it.",
+        "check": "Everyone can name the six phases and one unchanged control objective."
+      },
+      "visual": {
+        "title": "AI-native SDLC · see the loop",
+        "subtitle": "The line becomes a repeatable loop with AI at every point.",
+        "image": "ai-native-sdlc-loop.svg",
+        "imageAlt": "Six phase pills on one orange loop: plan, design, build, test, deploy, maintain, with Claude in the centre helping at every point.",
+        "imageCaption": "Six phases on one repeating loop with Claude at every point. Intent, review and release remain human decisions.",
+        "prompt": "Use the picture to point at the loop. Then let participants place their own ticket on one phase and point at one human gate.",
+        "steps": ["Point at the loop. Place your ticket."],
+        "expected": "Everyone has placed a real ticket on one phase.",
+        "check": "Everyone can point at the phase their ticket is in and at one human gate."
+      },
+      "usage": {
+        "title": "AI-native SDLC · how we use it",
+        "subtitle": "Per phase: what the AI does first, what the engineer decides.",
+        "layout": "compare",
+        "columns": [
+          {"title": "AI's role", "items": ["Plan · drafts the spec, sizes the work, flags dependencies", "Design · proposes options against the spec", "Build · generates and refactors; first-pass review on every change", "Test · writes, runs and maintains the suite", "Deploy · checks the gates and triggers the release", "Maintain · watches, triages and files the follow-up"], "foot": "AI does the first pass"},
+          {"title": "The engineer's role", "items": ["Plan · sets intent and priorities", "Design · decides design and risk", "Build · directs, constrains, accepts", "Test · defines what correct means", "Deploy · owns the rollback decision", "Maintain · handles what AI escalates"], "foot": "Humans decide at every gate"}
+        ],
+        "prompt": "Walk the six rows. For each phase, name the AI's first pass and the decision that stays human. Then let everyone map one real ticket to a phase and a human decision.",
+        "steps": ["Pick your ticket's phase.", "Say the AI's first pass for it.", "Say the decision that stays yours."],
+        "expected": "Every participant has mapped one real ticket to a phase and a human decision.",
+        "check": "Nobody names a phase where the human has no decision."
+      }
+    },
+    "agentic-loop": {
+      "name": "Agentic loop",
+      "definition": {
+        "title": "What is an agent?",
+        "subtitle": "A model in a loop with a goal, tools, feedback, authority and memory. The model matters; the loop turns language into work.",
+        "layout": "pillars",
+        "items": [
+          {"label": "Model", "caption": "reasons and predicts"},
+          {"label": "Goal", "caption": "the contract"},
+          {"label": "Tools", "caption": "read, act, check"},
+          {"label": "Feedback", "caption": "tool results feed the next step"},
+          {"label": "Authority", "caption": "what it may not do"},
+          {"label": "Memory", "caption": "CLAUDE.md, run log"}
+        ],
+        "tagline": "DEBUG THE SYSTEM — NOT THE MYTH",
+        "prompt": "Say one sentence per pillar. A model predicts text. Give it a goal, tools, feedback and a boundary and it becomes an agent. A subagent is an agent another agent delegates to, with its own context.",
+        "steps": ["Say model, chat, agent, subagent in one sentence each."],
+        "expected": "The room can say model, chat, agent, subagent in one sentence each.",
+        "check": "Nobody calls the model itself the agent."
+      },
+      "visual": {
+        "title": "The agentic loop · see the loop",
+        "subtitle": "Gather context → take action → verify results, repeat until done, interrupt at any point.",
+        "image": "agentic-loop.svg",
+        "imageAlt": "Your prompt enters a loop of gather, act and verify that repeats until done; a human box can interrupt, steer or add context at any point.",
+        "imageCaption": "Models reason, tools act, the harness holds the loop. The loop ends at a human gate, never at \"done\" by itself.",
+        "prompt": "Point at the three phases, the repeat arrow and the human interrupt. Map each phase to this morning's ticket-coach: read the ticket, draft the packet, check against the contract.",
+        "steps": ["Point at the three phases and the human interrupt."],
+        "expected": "Everyone can point at gather, act, verify and the interrupt.",
+        "check": "Everyone can point at the three phases, the repeat and the human interrupt."
+      },
+      "usage": {
+        "title": "The agentic loop · how we use it",
+        "subtitle": "Read the trace, not the prose: each loop turn leaves a tool call you can check.",
+        "cards": [
+          {"title": "BOUND THE TASK", "body": "One ticket, one contract, one boundary in the prompt. The agent must be able to stop."},
+          {"title": "WATCH THE LOOP", "body": "n8n shows execution steps; Claude Code shows tool calls. A Calculator or Read call is an action. Reasoning alone is not."},
+          {"title": "INTERRUPT ON PURPOSE", "body": "Steer, add context or stop when the loop drifts. The loop ends at a human gate."}
+        ],
+        "prompt": "Open the demo trace. Let everyone point at one real tool call, name the boundary in the prompt, and say where they would interrupt.",
+        "steps": ["Point at one real tool call in the demo trace.", "Name the boundary in the prompt.", "Say where you would interrupt."],
+        "expected": "Everyone can find one tool call in a trace.",
+        "check": "No one claims a result the trace does not show."
+      }
+    },
+    "one-contract": {
+      "name": "One contract, two platforms",
+      "definition": {
+        "title": "What is \"one contract, two platforms\"?",
+        "subtitle": "Same functional contract and input on n8n and Claude Code; only the harness and its adapter differ.",
+        "cards": [
+          {"title": "THE CONTRACT", "body": "shared-prompt.md and the ticket input: what the agent must produce and must not do."},
+          {"title": "THE ADAPTERS", "body": "n8n: system message, model, Calculator tool. Claude Code: subagent body, read-only tools, typed invocation. Recorded per platform."},
+          {"title": "THE CHECKER", "body": "Both outputs go through the same checker. Differences are observations; one pair of runs proves no cause."}
+        ],
+        "prompt": "Show shared-prompt.md and TICKET-OPS-101. In n8n the contract is the AI Agent system message and the ticket is the user message, with Calculator as the tool adapter. In Claude Code it is the ticket-coach subagent body with read-only Read, Glob and Grep plus the typed invocation.",
+        "steps": ["Say where the instruction lives on each platform."],
+        "expected": "Everyone knows where the instruction lives on each platform.",
+        "check": "Everyone can name the contract and one adapter setting per platform."
+      },
+      "visual": {
+        "title": "One contract · see the split",
+        "subtitle": "Same contract and input; only the harness and its adapter differ.",
+        "image": "one-contract-two-platforms.svg",
+        "imageAlt": "One contract box feeding n8n and Claude Code boxes, both feeding the same checker.",
+        "imageCaption": "One contract feeds two harnesses; both outputs go through the same checker. One pair of runs proves no cause.",
+        "prompt": "Point at the contract, then at both adapters, then at the checker. Ask: what is shared, what is recorded separately?",
+        "steps": ["Name the adapter settings you will record."],
+        "expected": "Everyone can say what is shared and what differs.",
+        "check": "Everyone can point at what is shared and what is recorded separately."
+      },
+      "usage": {
+        "title": "One contract · how we use it",
+        "subtitle": "Morning n8n, afternoon Claude Code, same ticket, same checker, settings recorded.",
+        "layout": "compare",
+        "columns": [
+          {"title": "n8n · morning", "items": ["Manual trigger → Set node with the ticket", "AI Agent: system message = shared functional contract", "Anthropic Chat Model (Claude Sonnet 5)", "Calculator via ai_tool", "Execution view shows intermediate steps"], "foot": "Visual harness"},
+          {"title": "Claude Code · afternoon", "items": ["ticket-coach subagent = shared functional contract", "Read / Glob / Grep read-only tools on the same files", "Typed invocation from the lab README", "Preview in chat, checker after", "Transcript shows logged successful tool calls"], "foot": "Terminal harness"}
+        ],
+        "prompt": "Record each platform's adapter instructions, model, mode, access and tools; the board prompt is a summary, not a third instruction. Only after the human gate move to ticket 102: the contract travels, the adapter is rebuilt.",
+        "steps": ["Copy the adapter settings table.", "Fill it for the platform you are on.", "Mark unrun checks OPEN."],
+        "expected": "Every participant has a filled adapter settings line for one platform.",
+        "check": "No comparison sentence claims a cause from one pair of runs."
+      }
+    },
+    "human-gate": {
+      "name": "Human gate",
+      "definition": {
+        "title": "What is a human gate?",
+        "subtitle": "The point where the agent's output waits for a human decision: accept, or return with a named reason.",
+        "cards": [
+          {"title": "WHAT WAITS", "body": "A draft, a preview, a trace and its evidence line. Nothing has been written to a business system."},
+          {"title": "WHO DECIDES", "body": "A named human who reruns one check and decides PASS, FAIL or OPEN."},
+          {"title": "WHAT RETURNS", "body": "A returned result names the gap. Nothing is \"probably fine\"."}
+        ],
+        "prompt": "Explain the gate with today's baseline: settings, output, review line, decision. Ask: what would make you return it?",
+        "steps": ["Say what waits at the gate and who decides."],
+        "expected": "The room can describe a gate in one sentence.",
+        "check": "Everyone can name the three outcomes PASS, FAIL, OPEN and what each requires."
+      },
+      "visual": {
+        "title": "Human gate · see the decision",
+        "subtitle": "The agent proposes; a human accepts or returns with a named reason.",
+        "image": "human-gate.svg",
+        "imageAlt": "Agent output enters a gate where a human reviews the evidence, then accept or return; a dashed arrow returns to the agent.",
+        "imageCaption": "Nothing is written to a business system without this decision. Return always names the gap.",
+        "prompt": "Trace the arrows. Ask: what must the reviewer see before accepting? What travels back on the return arrow?",
+        "steps": ["Say what your gate needs: source, check, reviewer."],
+        "expected": "Everyone can trace accept and return.",
+        "check": "Everyone can trace the return arrow and say what it carries."
+      },
+      "usage": {
+        "title": "Human gate · how we use it",
+        "subtitle": "Every practice block ends at a gate before anything moves on.",
+        "cards": [
+          {"title": "BEFORE THE GATE", "body": "Freeze the baseline: settings, output, review line per person."},
+          {"title": "AT THE GATE", "body": "The reviewer reruns one check and decides with one quoted line as the reason."},
+          {"title": "AFTER THE GATE", "body": "PASS moves to the next ticket, FAIL returns with the gap named, OPEN stays visible on the board."}
+        ],
+        "prompt": "Each person writes a review line and decides PASS / FAIL / OPEN with one quoted line. OPEN items go on the board before anyone moves on.",
+        "steps": ["Write your review line.", "Decide PASS / FAIL / OPEN with one quoted line.", "Put OPEN items on the board."],
+        "expected": "A decision per participant with a quoted reason.",
+        "check": "No decision claims an unobserved run."
+      }
+    }
+  },
+  "placements": {
+    "day-decks.json": {
+      "day1": [
+        {"after": "Welcome back · AI-native SDLC", "concept": "intent-md"},
+        {"after": "Scenario and evidence rule", "concept": "evidence-rule"},
+        {"after": "Evidence rule · how we use it", "concept": "mob"}
+      ],
+      "day2": [
+        {"after": "Goal · narrow ticket behavior", "concept": "evidence-rule"}
+      ],
+      "day3": [
+        {"after": "Welcome back · AI-native SDLC", "concept": "sdlc"},
+        {"after": "The same rhythm every day", "concept": "agentic-loop"},
+        {"after": "Scenario and evidence rule", "concept": "evidence-rule"},
+        {"after": "Evidence rule · how we use it", "concept": "mob"}
+      ],
+      "day4": [
+        {"after": "Day 3 route", "concept": "agentic-loop"},
+        {"after": "The agentic loop", "concept": "one-contract"},
+        {"after": "Groups · n8n output against the contract", "concept": "human-gate"}
+      ],
+      "day5": [
+        {"after": "Day 3 route", "concept": "agentic-loop"},
+        {"after": "The agentic loop", "concept": "one-contract"}
+      ]
+    },
+    "../squads/squad-2/presentations.json": {
+      "day1": [
+        {"after": "Playbook map", "concept": "sdlc"},
+        {"after": "AI-native SDLC · how we use it", "concept": "intent-md"}
+      ],
+      "day2": [
+        {"after": "Small change loop", "concept": "evidence-rule"}
+      ],
+      "day3": [
+        {"after": "n8n agent loop", "concept": "agentic-loop"}
+      ],
+      "day4": [
+        {"after": "Claude Code harness", "concept": "one-contract"}
+      ],
+      "day5": [
+        {"after": "End-to-end demo", "concept": "mob"},
+        {"after": "MOB programming · how we use it", "concept": "human-gate"}
+      ]
+    }
+  },
+  "remove": {
+    "day-decks.json": {
+      "day1": ["MOB programming, made concrete"],
+      "day3": ["Interactive · the agentic loop", "MOB programming, made concrete"],
+      "day4": ["Interactive · the agentic loop", "An agent is a system, not a chatty model", "One contract, two platforms"],
+      "day5": ["Interactive · the agentic loop", "An agent is a system, not a chatty model", "One contract, two platforms"]
+    }
+  },
+  "patches": {
+    "../squads/squad-2/presentations.json": [
+      {"day": "day1", "title": "Review the boundary", "set": {"kicker": "REVIEW · 15 MIN"}},
+      {"day": "*", "title": "Human gate", "set": {"kicker": "HUMAN GATE · 13:00–13:20"}},
+      {"day": "*", "title": "Fresh-reader transfer", "set": {"kicker": "PRACTICE / TRANSFER · 13:20–15:20"}},
+      {"day": "*", "title": "Transfer checklist", "set": {"kicker": "PRACTICE / TRANSFER · 13:20–15:20"}},
+      {"day": "*", "title": "Receiver handoff", "set": {"kicker": "PRACTICE / TRANSFER · 13:20–15:20"}},
+      {"day": "*", "title": "Close and reflect", "set": {"kicker": "CLOSE · 15:40–16:00"}}
+    ]
+  }
+}
