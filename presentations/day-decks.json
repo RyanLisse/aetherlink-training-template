@@ -1005,8 +1005,8 @@
         "check": "Definition, visual and next action are explicit.",
         "layout": "image",
         "image": "ai-native-sdlc-loop.svg",
-        "imageAlt": "Standalone AI-native SDLC loop with Plan, Design, Build, Test, Deploy and Maintain around Claude.",
-        "imageCaption": "Standalone view of the right half: six phases around Claude. Intent, review and release remain human decisions."
+        "imageAlt": "Six phase pills on one orange loop: plan, design, build, test, deploy, maintain, with Claude in the centre helping at every point.",
+        "imageCaption": "Six phases on one repeating loop with Claude at every point. Intent, review and release remain human decisions."
       },
       {
         "title": "Glossary · what do we mean?",
