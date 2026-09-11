@@ -1,5 +1,5 @@
 {
-  "fixture_label": "[TRAINING] Northstar fictional monitoring fixture; simulation only",
+  "fixture_label": "[TRAINING] Fictional Reconciliation fictional monitoring fixture; simulation only",
   "metric": "error_rate_percent",
   "threshold_percent": 5.0,
   "baseline": {

@@ -1,5 +1,5 @@
 {
-  "project": "northstar-demo/reconciliation-service",
+  "project": "fictional-reconciliation-demo/reconciliation-service",
   "commit": "abc1234-training",
   "files": [
     {"path": "src/reconcile.py", "line": 42, "text": "return net_amount"},

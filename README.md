@@ -42,7 +42,7 @@ return to an earlier phase whenever evidence changes the plan.
 
 ## Scenario and training tickets
 
-The optional [Northstar Demo Support Desk scenario](scenarios/status-desk/README.md) remains available for a support cohort. The primary payment operations track uses the payment scenario below; do not mix tracks during a run.
+The optional [Fictional Reconciliation Demo Support Desk scenario](scenarios/status-desk/README.md) remains available for a support cohort. The primary payment operations track uses the payment scenario below; do not mix tracks during a run.
 
 For payment operations teams, use the [payment reconciliation scenario](scenarios/payment-reconciliation/README.md) across the reusable session sequence. Compare a transaction ledger, PSP settlements, and bank credits; investigate exceptions and hand over an evidence-backed action list. This is a fictional training model, not a description of Worldline systems or policies.
 

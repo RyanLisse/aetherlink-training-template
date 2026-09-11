@@ -14,7 +14,7 @@
           },
           {
             "title": "Scenario",
-            "body": "Northstar is fictional; ledger, PSP, and bank CSVs are local"
+            "body": "Fictional Reconciliation is fictional; ledger, PSP, and bank CSVs are local"
           },
           {
             "title": "Boundary",
@@ -22,7 +22,7 @@
           }
         ],
         "prompt": "Recap Days 1–2, run Kahoot and wordcloud, then name today’s proof: an accepted route from intent to evidence.",
-        "notes": "Welkom. Start met Kahoot/wordcloud en blockers; zeg expliciet dat Northstar fictief is.",
+        "notes": "Welkom. Start met Kahoot/wordcloud en blockers; zeg expliciet dat Fictional Reconciliation fictief is.",
         "dark": true,
         "steps": [
           "Run Kahoot/wordcloud.",
@@ -139,7 +139,7 @@
             "body": "Local release and maintenance feed the next intent"
           }
         ],
-        "prompt": "Explain the loop to a newcomer using the Northstar exercise. Ask which artifact proves each phase and where a human gate can stop the work.",
+        "prompt": "Explain the loop to a newcomer using the Fictional Reconciliation exercise. Ask which artifact proves each phase and where a human gate can stop the work.",
         "notes": "Leg elk nieuw begrip uit vóór je het gebruikt. Deploy betekent vandaag lokaal oefenen.",
         "dark": false,
         "steps": [
@@ -168,7 +168,7 @@
             "body": "Facilitator corrects scope and accepts the intent"
           }
         ],
-        "prompt": "Trainer demo: ‘Act as an intent interviewer for fictional Northstar reconciliation. Ask one question at a time. Use only local CSVs. Draft lab-notes/payment-intent.md; do not code, publish, or invent policy.’ Then show the human correction and acceptance line.",
+        "prompt": "Trainer demo: ‘Act as an intent interviewer for fictional Fictional Reconciliation reconciliation. Ask one question at a time. Use only local CSVs. Draft lab-notes/payment-intent.md; do not code, publish, or invent policy.’ Then show the human correction and acceptance line.",
         "notes": "Laat exact zien wat de trainer typt, wat de agent vraagt en waar de mens beslist.",
         "dark": true,
         "steps": [
@@ -861,7 +861,7 @@
           },
           {
             "title": "Scenario",
-            "body": "Northstar is fictional; ledger, PSP, and bank CSVs are local"
+            "body": "Fictional Reconciliation is fictional; ledger, PSP, and bank CSVs are local"
           },
           {
             "title": "Boundary",
@@ -869,7 +869,7 @@
           }
         ],
         "prompt": "Recap Days 1–2, run Kahoot and wordcloud, then name today’s proof: an accepted route from intent to evidence.",
-        "notes": "Welkom. Start met Kahoot/wordcloud en blockers; zeg expliciet dat Northstar fictief is.",
+        "notes": "Welkom. Start met Kahoot/wordcloud en blockers; zeg expliciet dat Fictional Reconciliation fictief is.",
         "dark": true,
         "steps": [
           "Run Kahoot/wordcloud.",
@@ -879,6 +879,42 @@
         ],
         "expected": "A shared outcome, blockers list, and safe boundary.",
         "check": "Everyone can state what evidence ends today."
+      },
+      {
+        "title": "Glossary · what do we mean?",
+        "kicker": "REFERENCE · OPEN ANYTIME",
+        "subtitle": "The same words, used consistently across every session",
+        "cards": [
+          {
+            "title": "Model",
+            "body": "Predicts language; it is not the agent."
+          },
+          {
+            "title": "Agent",
+            "body": "A model in a loop with a goal, tools, feedback and a boundary."
+          },
+          {
+            "title": "Human gate",
+            "body": "A person accepts, revises, parks or redirects the work."
+          },
+          {
+            "title": "Trace · Hook · Evaluator",
+            "body": "Evidence, deterministic control, and independent review."
+          }
+        ],
+        "prompt": "Pause and define the words aloud. Ask: what is an agent? Answer: a model in a loop with a goal, tools, feedback and a boundary. Open the top-bar Glossary for the full list.",
+        "notes": "Definitions are a shared reference, not a promise that every tool is available today.",
+        "dark": false,
+        "steps": [
+          "Define model.",
+          "Define agent.",
+          "Name the human gate.",
+          "Return to the glossary anytime."
+        ],
+        "expected": "Everyone can explain what an agent is in plain language.",
+        "check": "No one equates the model with the agent.",
+        "layout": "cards",
+        "tagline": "SHARED LANGUAGE · LOWER COGNITIVE LOAD"
       },
       {
         "title": "The same rhythm every day",
@@ -908,6 +944,36 @@
         ],
         "expected": "Participants can navigate the day.",
         "check": "Opening begins at the required time."
+      },
+      {
+        "title": "Interactive · the agentic loop",
+        "kicker": "CONCEPT · 10:15",
+        "subtitle": "One task, one screen, rotating human driver",
+        "cards": [
+          {
+            "title": "Group",
+            "body": "3–4 people navigate one shared task"
+          },
+          {
+            "title": "Driver",
+            "body": "One human types; rotate every 5–7 minutes"
+          },
+          {
+            "title": "AI",
+            "body": "The tool suggests; humans direct, pause, and decide"
+          }
+        ],
+        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, others route observations through the navigator, skeptic asks for source IDs, and scribe records the decision. Rotate the driver once.",
+        "notes": "Doe de demo letterlijk. Eén navigator stuurt de driver; iedereen mag ‘pause’ zeggen. Bij vijf minuten drift grijpt de facilitator kort in.",
+        "dark": true,
+        "steps": [
+          "State one task.",
+          "Rotate the human driver.",
+          "Pause on uncertainty.",
+          "Record the decision."
+        ],
+        "expected": "The group experiences shared navigation and a pause rule.",
+        "check": "Participants can name driver, navigator, skeptic, and scribe."
       },
       {
         "title": "Scenario and evidence rule",
@@ -986,7 +1052,7 @@
             "body": "Local release and maintenance feed the next intent"
           }
         ],
-        "prompt": "Explain the loop to a newcomer using the Northstar exercise. Ask which artifact proves each phase and where a human gate can stop the work.",
+        "prompt": "Explain the loop to a newcomer using the Fictional Reconciliation exercise. Ask which artifact proves each phase and where a human gate can stop the work.",
         "notes": "Leg elk nieuw begrip uit vóór je het gebruikt. Deploy betekent vandaag lokaal oefenen.",
         "dark": false,
         "steps": [
@@ -1015,7 +1081,7 @@
             "body": "Facilitator corrects scope and accepts the intent"
           }
         ],
-        "prompt": "Trainer demo: ‘Act as an intent interviewer for fictional Northstar reconciliation. Ask one question at a time. Use only local CSVs. Draft lab-notes/payment-intent.md; do not code, publish, or invent policy.’ Then show the human correction and acceptance line.",
+        "prompt": "Trainer demo: ‘Act as an intent interviewer for fictional Fictional Reconciliation reconciliation. Ask one question at a time. Use only local CSVs. Draft lab-notes/payment-intent.md; do not code, publish, or invent policy.’ Then show the human correction and acceptance line.",
         "notes": "Laat exact zien wat de trainer typt, wat de agent vraagt en waar de mens beslist.",
         "dark": true,
         "steps": [
@@ -1164,7 +1230,7 @@
           },
           {
             "title": "Day 2",
-            "body": "Guided ticket relay on the fictional Northstar case"
+            "body": "Guided ticket relay on the fictional Fictional Reconciliation case"
           },
           {
             "title": "Today",
@@ -1188,6 +1254,42 @@
           "What an agent is — the agentic loop",
           "One contract, two platforms"
         ]
+      },
+      {
+        "title": "Glossary · what do we mean?",
+        "kicker": "REFERENCE · OPEN ANYTIME",
+        "subtitle": "The same words, used consistently across every session",
+        "cards": [
+          {
+            "title": "Model",
+            "body": "Predicts language; it is not the agent."
+          },
+          {
+            "title": "Agent",
+            "body": "A model in a loop with a goal, tools, feedback and a boundary."
+          },
+          {
+            "title": "Human gate",
+            "body": "A person accepts, revises, parks or redirects the work."
+          },
+          {
+            "title": "Trace · Hook · Evaluator",
+            "body": "Evidence, deterministic control, and independent review."
+          }
+        ],
+        "prompt": "Pause and define the words aloud. Ask: what is an agent? Answer: a model in a loop with a goal, tools, feedback and a boundary. Open the top-bar Glossary for the full list.",
+        "notes": "Definitions are a shared reference, not a promise that every tool is available today.",
+        "dark": false,
+        "steps": [
+          "Define model.",
+          "Define agent.",
+          "Name the human gate.",
+          "Return to the glossary anytime."
+        ],
+        "expected": "Everyone can explain what an agent is in plain language.",
+        "check": "No one equates the model with the agent.",
+        "layout": "cards",
+        "tagline": "SHARED LANGUAGE · LOWER COGNITIVE LOAD"
       },
       {
         "title": "Day 3 route",
@@ -1219,6 +1321,36 @@
         "check": "Board matches the guide.",
         "layout": "cards",
         "tagline": "SAME RHYTHM · INDIVIDUAL FIRST · GROUPS AFTER"
+      },
+      {
+        "title": "Interactive · the agentic loop",
+        "kicker": "CONCEPT · 10:15",
+        "subtitle": "One task, one screen, rotating human driver",
+        "cards": [
+          {
+            "title": "Group",
+            "body": "3–4 people navigate one shared task"
+          },
+          {
+            "title": "Driver",
+            "body": "One human types; rotate every 5–7 minutes"
+          },
+          {
+            "title": "AI",
+            "body": "The tool suggests; humans direct, pause, and decide"
+          }
+        ],
+        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, others route observations through the navigator, skeptic asks for source IDs, and scribe records the decision. Rotate the driver once.",
+        "notes": "Doe de demo letterlijk. Eén navigator stuurt de driver; iedereen mag ‘pause’ zeggen. Bij vijf minuten drift grijpt de facilitator kort in.",
+        "dark": true,
+        "steps": [
+          "State one task.",
+          "Rotate the human driver.",
+          "Pause on uncertainty.",
+          "Record the decision."
+        ],
+        "expected": "The group experiences shared navigation and a pause rule.",
+        "check": "Participants can name driver, navigator, skeptic, and scribe."
       },
       {
         "title": "An agent is a system, not a chatty model",
@@ -1674,7 +1806,7 @@
           },
           {
             "title": "Day 2",
-            "body": "Guided ticket relay on the fictional Northstar case"
+            "body": "Guided ticket relay on the fictional Fictional Reconciliation case"
           },
           {
             "title": "Today",
@@ -1698,6 +1830,72 @@
           "What an agent is — the agentic loop",
           "One contract, two platforms"
         ]
+      },
+      {
+        "title": "Glossary · what do we mean?",
+        "kicker": "REFERENCE · OPEN ANYTIME",
+        "subtitle": "The same words, used consistently across every session",
+        "cards": [
+          {
+            "title": "Model",
+            "body": "Predicts language; it is not the agent."
+          },
+          {
+            "title": "Agent",
+            "body": "A model in a loop with a goal, tools, feedback and a boundary."
+          },
+          {
+            "title": "Human gate",
+            "body": "A person accepts, revises, parks or redirects the work."
+          },
+          {
+            "title": "Trace · Hook · Evaluator",
+            "body": "Evidence, deterministic control, and independent review."
+          }
+        ],
+        "prompt": "Pause and define the words aloud. Ask: what is an agent? Answer: a model in a loop with a goal, tools, feedback and a boundary. Open the top-bar Glossary for the full list.",
+        "notes": "Definitions are a shared reference, not a promise that every tool is available today.",
+        "dark": false,
+        "steps": [
+          "Define model.",
+          "Define agent.",
+          "Name the human gate.",
+          "Return to the glossary anytime."
+        ],
+        "expected": "Everyone can explain what an agent is in plain language.",
+        "check": "No one equates the model with the agent.",
+        "layout": "cards",
+        "tagline": "SHARED LANGUAGE · LOWER COGNITIVE LOAD"
+      },
+      {
+        "title": "Interactive · the agentic loop",
+        "kicker": "CONCEPT · 10:15",
+        "subtitle": "One task, one screen, rotating human driver",
+        "cards": [
+          {
+            "title": "Group",
+            "body": "3–4 people navigate one shared task"
+          },
+          {
+            "title": "Driver",
+            "body": "One human types; rotate every 5–7 minutes"
+          },
+          {
+            "title": "AI",
+            "body": "The tool suggests; humans direct, pause, and decide"
+          }
+        ],
+        "prompt": "Demonstrate a two-minute mob: facilitator states the task, one navigator directs the human driver, others route observations through the navigator, skeptic asks for source IDs, and scribe records the decision. Rotate the driver once.",
+        "notes": "Doe de demo letterlijk. Eén navigator stuurt de driver; iedereen mag ‘pause’ zeggen. Bij vijf minuten drift grijpt de facilitator kort in.",
+        "dark": true,
+        "steps": [
+          "State one task.",
+          "Rotate the human driver.",
+          "Pause on uncertainty.",
+          "Record the decision."
+        ],
+        "expected": "The group experiences shared navigation and a pause rule.",
+        "check": "Participants can name driver, navigator, skeptic, and scribe."
       },
       {
         "title": "Day 3 route",

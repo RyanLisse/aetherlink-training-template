@@ -1,6 +1,6 @@
-# Northstar daily payment reconciliation — [TRAINING] fictional scenario
+# Fictional Reconciliation daily payment reconciliation — [TRAINING] fictional scenario
 
-Northstar is a fictional merchant used for a practical FinOps reconciliation
+Fictional Reconciliation is a fictional merchant used for a practical FinOps reconciliation
 exercise. Every transaction, settlement, bank credit, ticket, amount, and
 decision here is synthetic training data. This material does not describe
 Worldline systems, contracts, SLAs, controls, or operating procedures.
@@ -32,7 +32,7 @@ is not an error.
 
 | File | Source role | Stable keys |
 | --- | --- | --- |
-| [`data/internal-ledger.csv`](data/internal-ledger.csv) | Northstar's expected transaction and fee record | `transaction_id`, `ledger_reference` |
+| [`data/internal-ledger.csv`](data/internal-ledger.csv) | Fictional Reconciliation's expected transaction and fee record | `transaction_id`, `ledger_reference` |
 | [`data/psp-settlements.csv`](data/psp-settlements.csv) | Fictional PSP settlement rows | `settlement_id`, `transaction_id`, `psp_reference` |
 | [`data/bank-credits.csv`](data/bank-credits.csv) | Fictional bank credits by settlement batch | `bank_credit_id`, `batch_id`, `bank_reference` |
 | [`trainer-answer-key.md`](trainer-answer-key.md) | Facilitator-only worked arithmetic and case classifications | `EX-001`–`EX-005` |

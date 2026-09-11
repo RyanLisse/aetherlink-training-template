@@ -1,14 +1,14 @@
-# Northstar Demo Support Desk — [TRAINING] fictional scenario
+# Fictional Reconciliation Demo Support Desk — [TRAINING] fictional scenario
 
-Northstar Demo Support Desk is a public-safe story wrapper for the existing
-two-day Python status lab. Northstar is fictional. Every record, request,
+Fictional Reconciliation Demo Support Desk is a public-safe story wrapper for the existing
+two-day Python status lab. Fictional Reconciliation is fictional. Every record, request,
 ticket, role, count, and outcome in this directory is synthetic training data;
 there is no real customer, payment, support queue, Worldline system, or
 production monitoring behind it.
 
 ## Scenario narrative
 
-The Northstar demo team is preparing a local support desk walkthrough. A
+The Fictional Reconciliation demo team is preparing a local support desk walkthrough. A
 support learner needs to answer a reference-status question from a small local
 fixture while keeping an internal note out of the public response. On Day 1,
 the team agrees the outcome, writes a small spec and plan, and implements a

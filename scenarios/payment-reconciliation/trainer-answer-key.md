@@ -1,4 +1,4 @@
-# Trainer answer key — Northstar reconciliation
+# Trainer answer key — Fictional Reconciliation reconciliation
 
 This is an expected worked answer for the fictional fixture. It is not
 evidence that a participant or any real payment operation ran these checks.

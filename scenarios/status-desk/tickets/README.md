@@ -1,6 +1,6 @@
 # [TRAINING] fictional ticket index
 
-These seven Markdown files are a local, fictional backlog for the Northstar
+These seven Markdown files are a local, fictional backlog for the Fictional Reconciliation
 Demo Support Desk exercise. Stable ticket metadata and the full Markdown body
 are mirrored in the sibling [`tickets.json`](../tickets.json) for tooling;
 these files are the human-readable source. Tickets are sequenced by ID and

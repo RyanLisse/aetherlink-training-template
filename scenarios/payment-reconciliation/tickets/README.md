@@ -1,4 +1,4 @@
-# Local FIN ticket templates — fictional Northstar exercise
+# Local FIN ticket templates — fictional Fictional Reconciliation exercise
 
 These six Markdown files are planning templates only. They contain no
 assignees, remote IDs, or published issues. Keep all acceptance checkboxes

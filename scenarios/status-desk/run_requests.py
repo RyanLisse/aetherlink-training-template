@@ -1,4 +1,4 @@
-"""Run Northstar's supplemental requests against the existing status API.
+"""Run Fictional Reconciliation's supplemental requests against the existing status API.
 
 This is a read-only learner aid. The starter status module is intentionally
 unimplemented, so a NotImplementedError is reported as a failed request and
@@ -26,7 +26,7 @@ def _load_json(path: Path) -> Any:
 
 
 def _load_status_module():
-    spec = importlib.util.spec_from_file_location("northstar_training_status", STATUS_PATH)
+    spec = importlib.util.spec_from_file_location("fictional-reconciliation_training_status", STATUS_PATH)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"cannot import status module from {STATUS_PATH}")
     module = importlib.util.module_from_spec(spec)
