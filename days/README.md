@@ -3,9 +3,11 @@
 This public-safe programme adapts the AI-native SDLC playbook to a fictional
 payment reconciliation exercise. It runs five sessions, each with its own
 10:00–16:00 agenda with lunch fixed at 12:00–13:00 and two 15-minute breaks,
-one mid-morning and one mid-afternoon. Follow the current guide for the timing; Day 2 includes a
-revised n8n-first morning and Claude Code rebuild after lunch. Day 3 uses the
-same sequence with a guided individual opening before comparison. Videos and audio were not watched or
+one mid-morning and one mid-afternoon. Follow the current guide for the timing;
+the new Squad 2 route uses AI-native SDLC on Days 1–2, n8n on Day 3, Claude
+Code on Day 4, and an own-team issue on Day 5. Squad 1 keeps its existing
+continuation route: AI-native SDLC on Day 3, n8n on Day 4, and Claude Code on
+Day 5. Videos and audio were not watched or
 listened to; source URLs are preserved in the first two guides.
 
 ## Delivery tracks
@@ -23,10 +25,9 @@ is available. No squad 2 outcome or access is implied by squad 1 material.
 2. [Day 2](day-2.md) — guided FIN-003 ticket relay: one visible result,
    analyst → developer → tester, behavior checks, and individual practice.
    Context and skills are optional after the reviewed result.
-3. [Day 3](day-3.md) — build the same bounded agent in n8n, then Claude Code;
-   compare `TICKET-OPS-101` and transfer to `102` after the human gate.
-4. [Day 4](day-4.md) — choose one of three Claude Code agents, build it with a readable trace.
-5. [Day 5](day-5.md) — harden the chosen agent: evaluator-optimizer, trace comparison, handoff.
+3. [Day 3](day-3.md) — AI-native SDLC route from intent to evidence (Squad 1 continuation).
+4. [Day 4](day-4.md) — first bounded agent in n8n (Squad 1 continuation).
+5. [Day 5](day-5.md) — rebuild in Claude Code, then optional E2E transfer (Squad 1 continuation).
 
 For the first visible result in the next session after Day 1, use the [guided
 ticket exercise](../scenarios/payment-reconciliation/guided-ticket-exercise.md)

@@ -11,7 +11,7 @@ Each participant has a read-only Claude Code agent, a checked output for `TICKET
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
 - **Agentic loop** · What is an agent? [4] → The agentic loop · see the loop [5] → The agentic loop · how we use it [6]
-- **One contract, two platforms** · What is "one contract, two platforms"? [8] → One contract · see the split [9] → One contract · how we use it [10]
+- **One contract, two platforms** · What is "one contract, two platforms"? [7] → One contract · see the split [8] → One contract · how we use it [9]
 <!-- concepts:end -->
 
 ## Schedule

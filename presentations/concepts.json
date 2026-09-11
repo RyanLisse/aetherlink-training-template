@@ -547,11 +547,11 @@
       ],
       "day4": [
         {
-          "after": "Day 3 route",
+          "after": "Day 4 route",
           "concept": "agentic-loop"
         },
         {
-          "after": "The agentic loop",
+          "after": "The agentic loop · how we use it",
           "concept": "one-contract"
         },
         {
@@ -561,11 +561,11 @@
       ],
       "day5": [
         {
-          "after": "Day 3 route",
+          "after": "Day 5 route",
           "concept": "agentic-loop"
         },
         {
-          "after": "The agentic loop",
+          "after": "The agentic loop · how we use it",
           "concept": "one-contract"
         }
       ]

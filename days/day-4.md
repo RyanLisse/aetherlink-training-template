@@ -14,8 +14,8 @@ Theory (agent loop and n8n harness) → facilitator demo → individual build �
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
 - **Agentic loop** · What is an agent? [4] → The agentic loop · see the loop [5] → The agentic loop · how we use it [6]
-- **One contract, two platforms** · What is "one contract, two platforms"? [8] → One contract · see the split [9] → One contract · how we use it [10]
-- **Human gate** · What is a human gate? [14] → Human gate · see the decision [15] → Human gate · how we use it [16]
+- **One contract, two platforms** · What is "one contract, two platforms"? [7] → One contract · see the split [8] → One contract · how we use it [9]
+- **Human gate** · What is a human gate? [13] → Human gate · see the decision [14] → Human gate · how we use it [15]
 <!-- concepts:end -->
 
 ## Schedule
