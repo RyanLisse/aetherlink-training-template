@@ -92,6 +92,16 @@ Use this exact prompt for the n8n demo and the two `TICKET-OPS-101` runs:
 Read the supplied TICKET-OPS-101 input and return a preview that follows the shared ticket output contract. Cite the exact source sections for every factual field, preserve Current and Desired as protected sections, separate facts from assumptions, and label unsupported details OPEN. Do not write files, create or change business-system records, or approve financial status.
 ```
 
+How the instruction is layered on the two platforms (record this, it is part
+of the settings evidence): the shared functional instruction is
+`scenarios/ticket-agent/shared-prompt.md` in the lab. In n8n it is embedded as
+the AI Agent **system message** and the ticket text is the user message, so
+nothing is typed at run time. In Claude Code it is the body of the
+`ticket-coach` subagent, and the learner types the invocation from the lab's
+ticket-agent README (`Use the ticket-coach subagent. Read … TICKET-OPS-101 …`).
+The board prompt above is the human-readable summary of that contract, not a
+third instruction; do not paste it into n8n or add it as hidden context.
+
 ### 2. Individual n8n baseline — 10:20–12:00
 
 Open the lab root README, locate the ticket input and contract, run the bounded
