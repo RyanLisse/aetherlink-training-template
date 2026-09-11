@@ -1,23 +1,22 @@
-# Squad 2 Day 2 — build one bounded ticket agent in n8n, then Claude Code
+# Squad 2 Day 2 — build one bounded GitLab review agent in n8n, then Claude Code
 
 Mode: `FULLY GUIDED` · Time: `10:00–16:00` · Status: `FUTURE CURRICULUM`
 
 Participants use the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab)
-root repository as their learner workspace. The course [ticket-agent guide](../../scenarios/ticket-agent/README.md),
-inputs, and template remain the trainer workbook and source of the contract;
-they are kept separate from the participant path.
+root repository as their learner workspace. Read the [GitLab repository-review
+scenario](../../scenarios/gitlab-repository-review/README.md) and
+`GL-REVIEW-001`; they define the local contract for this new squad.
 
 ## Outcome and boundary
 
-Each learner applies the same functional ticket contract first in n8n and then
-in Claude Code. Both runs use the same `TICKET-OPS-101` input and output
-contract: a preview following `ticket-template.md`, exact source citations,
-protected Current/Desired sections, and `OPEN` for unsupported details. The n8n
-Calculator tool adapter and the Claude Code read-only `Read`, `Glob`, and
-`Grep` adapter are platform-specific settings; record each adapter's
+Each learner applies the same functional GitLab review contract first in n8n and
+then in Claude Code. Both runs use the same `GL-REVIEW-001` input and output
+contract: findings with exact source citations, severity as a human field, and
+`OPEN` for unsupported GitLab or CI checks. The n8n Calculator tool adapter and
+the Claude Code read-only `Read`, `Glob`, and `Grep` adapter are platform-specific settings; record each adapter's
 instructions, model, mode, access, and tools. The learner captures settings,
 output, and a human decision for both platforms, compares the two observations,
-and transfers to `TICKET-OPS-102` only after that comparison is accepted. One
+and transfers to a second approved review scope only after that comparison is accepted. One
 pair of runs does not establish causal superiority.
 
 n8n workflow credentials are chosen and checked separately in preflight. A
@@ -45,8 +44,8 @@ flowchart LR
 
 1. Open the lab root README and the trainer workbook. Confirm the participant
    starting instructions before scheduling the run.
-2. Confirm the `TICKET-OPS-101` input and shared output contract in the
-   workbook. Keep `TICKET-OPS-102` closed until the same-input comparison gate.
+2. Confirm the `GL-REVIEW-001` input and shared output contract in the scenario.
+   Keep the second review scope closed until the same-input comparison gate.
 3. Choose the n8n credential and workflow access separately. Test the selected
    credential in the agreed training environment and record the observed
    result. Never store credentials here.

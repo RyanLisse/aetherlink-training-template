@@ -6,17 +6,16 @@ Run all prompts and commands from the repository root.
 
 ## Outcome and boundary
 
-Each learner independently copies the existing payment CSVs unchanged into a
-separate local working directory, applies only cutoff
-`2026-09-13 12:00 Europe/Amsterdam`, and records a fresh reconciliation. The
-learner proves that `TX-NS-1008` changes from a timing item to overdue at the
-new cutoff while source data and all other rules remain unchanged.
+Each learner independently copies the repository fixture unchanged into a
+separate local working directory, changes only the review scope, and records a
+fresh GitLab review note. The learner proves that the baseline mirror remains
+unchanged and records a new finding or `OPEN` when evidence is insufficient.
 
-Read the [payment scenario](../../scenarios/payment-reconciliation/README.md),
-[FIN-006](../../scenarios/payment-reconciliation/tickets/FIN-006.md), and the
+Read the [GitLab repository-review scenario](../../scenarios/gitlab-repository-review/README.md),
+[GL-REVIEW-001](../../scenarios/gitlab-repository-review/tickets/GL-REVIEW-001.md), and the
 [squad 2 Day 4 handoff](day-4.md). Use a separate path such as
 `lab-notes/squad-2/day-5-variation/data/`; do not edit
-`scenarios/payment-reconciliation/data/`.
+`scenarios/gitlab-repository-review/data/`.
 
 ## Fixed agenda
 
@@ -74,7 +73,7 @@ paths, copy method, hashes or byte comparison, cutoff, and rollback.
 
 **Example prompt:**
 
-> Copy all three CSVs from `scenarios/payment-reconciliation/data/` into
+> Copy all three CSVs from `scenarios/gitlab-repository-review/data/` into
 > `lab-notes/squad-2/day-5-variation/data/` without editing them. Record exact
 > commands and a hash or byte comparison. Set cutoff to `2026-09-13` in a
 > separate worksheet; do not modify the baseline files.

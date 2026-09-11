@@ -10,7 +10,7 @@ approval, or evidence that a team ran the sessions.
 
 Squad 2 participants use the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab)
 root repository for the n8n-first and Claude Code rebuild exercises. Trainers
-use the fictional Northstar payment reconciliation scenario and the
+use the fictional Northstar GitLab repository-review scenario and the
 [ticket-coach workbook](../../scenarios/ticket-agent/README.md), which remains
 course reference material. The scenario is local, synthetic, and read-only. Do not add real payment data,
 credentials, customer details, production claims, or remote tickets. The
@@ -40,17 +40,16 @@ questions as `OPEN`.
 
 | Day | Mode | New focus | Visible learner artifact |
 | --- | --- | --- | --- |
-| 1 | Fully guided | One small result on each learner's own laptop | One-row evidence card for a payment case |
-| 2 | Fully guided | Same bounded agent in n8n then Claude Code; compare `TICKET-OPS-101` before `102` transfer | Two same-input previews and gated transfer |
-| 3 | Coached | Analyst → developer → tester relay on the same FIN-003 ticket | One role-preserving ticket packet |
+| 1 | Fully guided | One small result on each learner's own laptop | One source-backed GitLab review note |
+| 2 | Fully guided | Same bounded agent in n8n then Claude Code; compare `GL-REVIEW-001` before a second scope | Two same-input previews and gated transfer |
+| 3 | Coached | Analyst → developer → tester relay on the same GL-REVIEW-001 request | One role-preserving review packet |
 | 4 | Peer-led | Runbook and shared-skill handoff in mock GitLab/Jira/Confluence workflow | Peer-runnable runbook and handoff drafts |
-| 5 | Independent | Transfer with unchanged copied data and cutoff `2026-09-13` | Recalculated cutoff-only variation and acceptance note |
+| 5 | Independent | Transfer with unchanged copied repository data and a changed review scope | Recalculated review note and acceptance record |
 
-The cutoff-only variation uses the existing three CSVs copied into a separate
-learner directory without edits. At cutoff `2026-09-13 12:00
-Europe/Amsterdam`, `TX-NS-1008` is overdue; the learner must show that result
-from a separate recalculation. This is a synthetic exercise, not an operating
-policy.
+The independent variation uses the repository fixture copied into a separate
+learner directory without edits. The learner changes only the review scope,
+records a second finding or `OPEN`, and shows that the baseline mirror remains
+unchanged. This is a synthetic exercise, not an operating policy.
 
 ## Fixed daily agenda
 

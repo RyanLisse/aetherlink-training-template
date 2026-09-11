@@ -6,15 +6,15 @@ Run all prompts and commands from the repository root.
 
 ## Outcome and boundary
 
-Each learner leaves with one local evidence card for `TX-NS-1004`, citing the
-ledger and PSP rows, the expected and observed fee, and a human decision. The
+Each learner leaves with one local GitLab review note for `GL-REVIEW-001`, citing
+repository paths and lines, one finding, and a human decision. The
 trainer demonstrates the smallest safe read-only loop before learners try it.
 No architecture, shared process redesign, code change, remote ticket, network
 call, credential, or production claim is part of this day.
 
-Read [the fictional payment scenario](../../scenarios/payment-reconciliation/README.md)
-and [the local learner guide](../../scenarios/payment-reconciliation/learner-guide.md).
-Use the three CSVs in `scenarios/payment-reconciliation/data/`.
+Read [the fictional GitLab repository-review scenario](../../scenarios/gitlab-repository-review/README.md)
+and the contract in that README.
+Use `scenarios/gitlab-repository-review/data/repository.json`.
 
 ## Fixed agenda
 
@@ -67,17 +67,15 @@ local, and reviewable on the learner's own laptop.
 
 ### 2. Individual attempt — 10:35–11:00
 
-**Task card:** Create `lab-notes/squad-2/day-1-one-row.md` in a learner copy.
-Record transaction ID, ledger reference, PSP reference, gross, expected fee,
-actual fee, expected net, actual net, and an initial classification for
-`TX-NS-1004`.
+**Task card:** Create `lab-notes/squad-2/day-1-review-note.md` in a learner
+copy. Record project, commit, reviewed paths, one finding, severity as a human
+field, and one `OPEN` GitLab or CI check for `GL-REVIEW-001`.
 
 **Example prompt:**
 
-> Inspect only the cited `TX-NS-1004` ledger and PSP rows. Draft one local
-> evidence card with exact source paths and IDs, integer EUR minor units, the
-> 2% round-half-up comparison, and a human decision field. Leave uncertain
-> policy as `OPEN`; do not modify CSVs.
+> Read only the supplied repository snapshot. Draft one local review note with
+> exact paths and lines, one actionable finding, evidence, a human severity
+> field, and `OPEN` for GitLab or CI checks you cannot run. Do not modify files.
 
 **Output:** One independently drafted card, even if incomplete.
 

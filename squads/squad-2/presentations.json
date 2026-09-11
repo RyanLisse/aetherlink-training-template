@@ -756,11 +756,11 @@
       {
         "title": "Keep one ticket intact",
         "kicker": "DAY 3 · 10:00–16:00",
-        "subtitle": "Analyst → developer → tester on FIN-003",
+        "subtitle": "Analyst → developer → tester on GL-REVIEW-001",
         "cards": [
           {
             "title": "Outcome",
-            "body": "One role-preserving FIN-003 packet"
+            "body": "One role-preserving GL-REVIEW-001 packet"
           },
           {
             "title": "Mode",
@@ -777,7 +777,7 @@
         "steps": [
           "Run Kahoot + wordcloud.",
           "Assign role placeholders.",
-          "State FIN-003 boundary."
+          "State GL-REVIEW-001 boundary."
         ],
         "expected": "A shared relay contract.",
         "check": "Everyone can say what must remain unchanged."
@@ -829,7 +829,7 @@
             "body": "Positive and negative checks"
           }
         ],
-        "prompt": "Read FIN-003 and cited rows. Demonstrate all three passes while keeping functional behavior separate from technical additions.",
+        "prompt": "Read GL-REVIEW-001 and cited rows. Demonstrate all three passes while keeping functional behavior separate from technical additions.",
         "notes": "Show the analyst gate before the developer pass and the tester readback after it.",
         "dark": false,
         "steps": [
@@ -859,7 +859,7 @@
             "body": "Raw, unique, and UNRESOLVED"
           }
         ],
-        "prompt": "Draft visible acceptance wording for FIN-003, citing rows, cutoff, totals, duplicate treatment, and human confirmation. Do not propose APIs yet.",
+        "prompt": "Draft visible acceptance wording for GL-REVIEW-001, citing rows, cutoff, totals, duplicate treatment, and human confirmation. Do not propose APIs yet.",
         "notes": "Do not coach during the individual attempt. Incomplete work is a legitimate attempt artifact.",
         "dark": true,
         "steps": [
@@ -1005,7 +1005,7 @@
             "body": "Kahoot/wordcloud delta + relay lesson"
           }
         ],
-        "prompt": "Draft the FIN-003 handoff with actual commands, reviewer, next owner, rollback/stop rule, and OPEN items. Repeat Kahoot and wordcloud.",
+        "prompt": "Draft the GL-REVIEW-001 handoff with actual commands, reviewer, next owner, rollback/stop rule, and OPEN items. Repeat Kahoot and wordcloud.",
         "notes": "Keep the case UNRESOLVED pending human action; record no payout outcome.",
         "dark": false,
         "steps": [
@@ -1098,7 +1098,7 @@
             "body": "Fresh-reader test"
           }
         ],
-        "prompt": "Use the FIN-003 packet and workflow guide to show a local runbook, a shared-skill note, and mock fields marked OPEN.",
+        "prompt": "Use the GL-REVIEW-001 packet and workflow guide to show a local runbook, a shared-skill note, and mock fields marked OPEN.",
         "notes": "Keep team systems out of the demo. Show the difference between drafting and publishing.",
         "dark": false,
         "steps": [
@@ -1127,7 +1127,7 @@
             "body": "Human gate, rollback, OPEN links"
           }
         ],
-        "prompt": "Draft an offline FIN-003 runbook with exact local paths, duplicate rule, commands or OPEN, reviewer, next owner, and mock team links.",
+        "prompt": "Draft an offline GL-REVIEW-001 runbook with exact local paths, duplicate rule, commands or OPEN, reviewer, next owner, and mock team links.",
         "notes": "Protect the 25-minute individual attempt before peer consolidation.",
         "dark": true,
         "steps": [
@@ -1237,7 +1237,7 @@
           },
           {
             "title": "Test",
-            "body": "One FIN-003 source or calculation check"
+            "body": "One GL-REVIEW-001 source or calculation check"
           },
           {
             "title": "Gap",
@@ -1273,7 +1273,7 @@
             "body": "Kahoot/wordcloud delta + peer lesson"
           }
         ],
-        "prompt": "Draft the Day 4 handoff with FIN-003 sources, checks, UNRESOLVED state, mock fields, reviewer, next owner, and OPEN access. Repeat Kahoot and wordcloud.",
+        "prompt": "Draft the Day 4 handoff with GL-REVIEW-001 sources, checks, UNRESOLVED state, mock fields, reviewer, next owner, and OPEN access. Repeat Kahoot and wordcloud.",
         "notes": "Record only agreed learning; keep private ratings private.",
         "dark": false,
         "steps": [

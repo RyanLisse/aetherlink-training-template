@@ -1,0 +1,9 @@
+{
+  "project": "northstar-demo/reconciliation-service",
+  "commit": "abc1234-training",
+  "files": [
+    {"path": "src/reconcile.py", "line": 42, "text": "return net_amount"},
+    {"path": "tests/test_reconcile.py", "line": 18, "text": "assert result == expected"}
+  ],
+  "open_checks": ["GitLab pipeline status", "dependency advisories"]
+}

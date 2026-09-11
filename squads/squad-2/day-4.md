@@ -6,15 +6,15 @@ Run all prompts and commands from the repository root.
 
 ## Outcome and boundary
 
-Peers turn the reviewed FIN-003 packet into a concise local runbook and a
+Peers turn the reviewed GL-REVIEW-001 packet into a concise local runbook and a
 reusable shared-skill handoff. A fresh reader can find inputs, cutoff, source
 IDs, checks, stop rules, and the next owner. GitLab, Jira, and Confluence are
 mock workflow destinations only: no real workspace, ticket, page, merge
 request, access grant, or approval is claimed.
 
-Read [the team workflow](../../scenarios/payment-reconciliation/workflow.md),
-[FIN-003](../../scenarios/payment-reconciliation/tickets/FIN-003.md), the
-[scenario README](../../scenarios/payment-reconciliation/README.md), and
+Read [the team workflow](../../scenarios/gitlab-repository-review/workflow.md),
+[GL-REVIEW-001](../../scenarios/gitlab-repository-review/tickets/GL-REVIEW-001.md), the
+[scenario README](../../scenarios/gitlab-repository-review/README.md), and
 [squad 2 Day 3](day-3.md).
 
 ## Fixed agenda
@@ -55,7 +55,7 @@ procedure with inputs, checks, stop rule, and owner.
 
 **Example prompt:**
 
-> Read the FIN-003 packet and team workflow. Draft a local runbook outline
+> Read the GL-REVIEW-001 packet and team workflow. Draft a local runbook outline
 > with source paths, cutoff, checks, `UNRESOLVED` handling, and a human gate.
 > Add mock GitLab, Jira, and Confluence fields marked `OPEN`; do not contact
 > any team system.
@@ -72,7 +72,7 @@ cutoff, source IDs, sequence, evidence columns, stop rules, and rollback.
 
 **Example prompt:**
 
-> Using FIN-003 and the workflow guide, write a runbook another learner can
+> Using GL-REVIEW-001 and the workflow guide, write a runbook another learner can
 > follow offline. Include exact local paths, the duplicate quarantine rule,
 > commands actually run or `OPEN`, reviewer role, next owner, and mock team
 > links labelled `OPEN`.
@@ -104,7 +104,7 @@ directs the driver; scribe maintains an evidence table; skeptic tests scope.
 
 **Example prompt:**
 
-> Consolidate a local FIN-003 runbook: load, validate, reconcile, quarantine,
+> Consolidate a local GL-REVIEW-001 runbook: load, validate, reconcile, quarantine,
 > classify, review, and hand off. Keep source IDs and `UNRESOLVED` visible.
 > Add mock GitLab/Jira/Confluence destinations as `OPEN`; do not invent URLs,
 > project keys, access, or approvals.
@@ -156,7 +156,7 @@ sequence, reproduce one source check, and report the first missing access.
 
 **Example prompt:**
 
-> Use only this runbook and shared skill. Reproduce one FIN-003 calculation or
+> Use only this runbook and shared skill. Reproduce one GL-REVIEW-001 calculation or
 > source-row readback, then list the next action and the first unavailable
 > GitLab/Jira/Confluence field. Mark it `OPEN`; do not contact a system.
 
@@ -172,7 +172,7 @@ mock links, next owner, and `OPEN` items. Close with rating and MOB recap.
 
 **Example prompt:**
 
-> Draft a receiver-ready handoff with artifact paths, FIN-003 source IDs,
+> Draft a receiver-ready handoff with artifact paths, GL-REVIEW-001 source IDs,
 > checks actually run, `UNRESOLVED` state, rollback, mock workflow fields,
 > next owner, and `OPEN` access. Rate yourself independent, with help, or
 > needs practice, and add one agreed peer lesson.

@@ -6,15 +6,15 @@ Run all prompts and commands from the repository root.
 
 ## Outcome and boundary
 
-Groups pass the same fictional `FIN-003` ticket through analyst, developer,
+Groups pass the same fictional `GL-REVIEW-001` ticket through analyst, developer,
 and tester roles. The analyst states visible behavior, the developer adds a
 small technical proposal without changing that behavior, and the tester
 derives positive and negative checks. The group produces one role-preserving
 packet with source IDs and `UNRESOLVED` duplicate handling.
 
-Read [FIN-003](../../scenarios/payment-reconciliation/tickets/FIN-003.md),
-the [guided ticket exercise](../../scenarios/payment-reconciliation/guided-ticket-exercise.md),
-the [scenario README](../../scenarios/payment-reconciliation/README.md), and
+Read [GL-REVIEW-001](../../scenarios/gitlab-repository-review/tickets/GL-REVIEW-001.md),
+the [guided ticket exercise](../../scenarios/gitlab-repository-review/README.md),
+the [scenario README](../../scenarios/gitlab-repository-review/README.md), and
 [squad 2 Day 2](day-2.md). No code or remote workflow is required.
 
 ## Fixed agenda
@@ -54,7 +54,7 @@ functional requirements and technical additions in separate sections.
 
 **Example prompt:**
 
-> Read FIN-003 and only its cited source rows. As analyst, state the duplicate
+> Read GL-REVIEW-001 and only its cited source rows. As analyst, state the duplicate
 > behavior and evidence. As developer, propose a smallest local change under a
 > labelled technical section. As tester, derive one passing and one failing
 > check. Do not approve a payout or invent team links.
@@ -71,7 +71,7 @@ duplicate behavior, source IDs, cutoff, status, and two acceptance examples.
 
 **Example prompt:**
 
-> Act as a FIN-003 analyst. Read the ticket, scenario README, and cited CSV
+> Act as a GL-REVIEW-001 analyst. Read the ticket, scenario README, and cited CSV
 > rows. Write functional acceptance wording for both duplicate rows, the
 > provisional unique net, raw net, and `UNRESOLVED` state. Keep unknown policy
 > questions `OPEN`; do not propose storage or APIs yet.
@@ -104,7 +104,7 @@ the driver; scribe records source IDs; skeptic pauses on unstated policy.
 
 **Example prompt:**
 
-> Consolidate only the accepted analyst behavior for FIN-003. Keep both source
+> Consolidate only the accepted analyst behavior for GL-REVIEW-001. Keep both source
 > rows, raw 43,610, provisional unique 24,010, bank 24,010, and
 > `UNRESOLVED` visible when observed. Park any missing proof as `OPEN`.
 
@@ -169,12 +169,12 @@ reviewer, open questions, and next action. Close with rating and MOB recap.
 
 **Example prompt:**
 
-> Draft the FIN-003 handoff: analyst behavior, developer proposals, tester
+> Draft the GL-REVIEW-001 handoff: analyst behavior, developer proposals, tester
 > checks/results, source IDs, exact commands run, reviewer role, next owner,
 > rollback or stop rule, and `OPEN` items. Rate yourself and add one agreed
 > relay lesson; exclude private feedback.
 
-**Output:** `lab-notes/squad-2/day-3-FIN-003-packet.md`.
+**Output:** `lab-notes/squad-2/day-3-GL-REVIEW-001-packet.md`.
 
 **Human acceptance:** Facilitator verifies one ticket stayed intact across all
 three passes and the financial case remains `UNRESOLVED` pending human action.
