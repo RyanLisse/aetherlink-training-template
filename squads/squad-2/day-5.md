@@ -1,190 +1,28 @@
-# Squad 2 Day 5 — independent date scope-only transfer
+# Squad 2 Day 5 · Own team issue end to end
 
-Mode: `INDEPENDENT` · Time: `10:00–16:00` · Status: `FUTURE CURRICULUM`
+Mode: INDEPENDENT WITH TEAM GATE · 10:00–16:00
 
-Run all prompts and commands from the repository root.
+Bring one small issue from the team's real work pattern into the local training workspace. Use a fictional or sanitised copy. The team decides whether the final artifact is ready for a real GitLab, Jira, or Confluence workflow. No remote record is created during training.
 
-## Outcome and boundary
+## Schedule
 
-Each learner independently copies the repository fixture unchanged into a
-separate local working directory, changes only the review scope, and records a
-fresh GitLab review note. The learner proves that the baseline mirror remains
-unchanged and records a new finding or `OPEN` when evidence is insufficient.
-
-Read the [GitLab repository-review scenario](../../scenarios/gitlab-repository-review/README.md),
-[GL-REVIEW-001](../../scenarios/gitlab-repository-review/tickets/GL-REVIEW-001.md), and the
-[squad 2 Day 4 handoff](day-4.md). Use a separate path such as
-`lab-notes/squad-2/day-5-variation/data/`; do not edit
-`scenarios/gitlab-repository-review/data/`.
-
-## Fixed agenda
-
-| Time | Minutes | Block | Artifact |
-| --- | ---: | --- | --- |
-| 10:00–10:15 | 15 | Open | Kahoot + wordcloud, independence contract |
-| 10:15–10:35 | 20 | Demo | Hash and date scope comparison |
-| 10:35–11:00 | 25 | Individual attempt | Personal scope and copy check |
-| 11:00–11:20 | 20 | Review | Peer readback of boundary |
+| Time | Minutes | Block | Result |
+|---|---|---|
+| 10:00–10:15 | 15 | Recap + theory | Choose issue, scope, human gate |
+| 10:15–10:35 | 20 | Instruction + demo | End-to-end issue flow |
+| 10:35–11:00 | 25 | Individual | Write issue brief and plan |
+| 11:00–11:20 | 20 | Review | Team checks scope and evidence |
 | 11:20–11:35 | 15 | Break | — |
-| 11:35–12:00 | 25 | Practice | Independent local recalculation |
+| 11:35–12:00 | 25 | Group practice | Analyst, developer, tester roles |
 | 12:00–13:00 | 60 | Lunch | — |
-| 13:00–13:15 | 15 | Check | Human data-integrity gate |
-| 13:15–14:00 | 45 | Practice | Exception and date scope comparison |
+| 13:00–13:15 | 15 | Theory | Review, release, handoff gates |
+| 13:15–14:00 | 45 | Individual + group | Execute local issue flow |
 | 14:00–14:15 | 15 | Break | — |
-| 14:15–15:05 | 50 | Transfer | Fresh reader reproduces variation |
-| 15:05–15:40 | 35 | Handoff | Independent result and rollback |
-| 15:40–16:00 | 20 | Close | Rating and MOB recap |
+| 14:15–15:05 | 50 | Transfer | Fresh reader reproduces outcome |
+| 15:05–15:40 | 35 | Handoff | GitLab/Jira/Confluence draft fields |
+| 15:40–16:00 | 20 | Close | Check-in, Kahoot, wordcloud, MOB reflection |
 
-Total: **360 minutes**. The 25-minute personal attempt is mandatory before
-any peer comparison. Peer groups of 3–4 may review after that block, with one
-navigator and rotating driver only for shared readbacks.
+**Prompt.** Take the approved local issue brief. Ask the agent to inspect only named files, propose the smallest change, run named local checks, and return evidence. Keep functional intent, technical proposal, tests, reviewer, and `OPEN` items separate. Do not publish or merge.
 
-## Phase lens
+**Checkpoint.** The team has one issue brief, implementation or explicit `OPEN`, review evidence, human decision, rollback, and receiver-ready handoff.
 
-`Plan`, `Design`, `Test`, `Maintain`, and local transfer are in scope.
-`Build` and `Deploy` are `NOT IN SCOPE — the copied fixture is recalculated
-locally and never published or deployed`.
-
-## Literal task cards
-
-### 1. Open and demo — 10:00–10:35
-
-**Task card:** Explain the independent contract: copy bytes unchanged, change
-one date scope, prove the changed classification, and preserve a rollback path.
-Introduce “transfer variation” before using it.
-
-**Example prompt:**
-
-> Show the source directory, destination directory, and date scope comparison.
-> State what may change (the date scope input) and what must not change (repository fixture
-> contents, review rule, finding rule, and source IDs). Do not run a production
-> command or claim learner evidence.
-
-**Output:** Trainer's hash and date scope demonstration with expected values clearly
-labelled as examples.
-
-**Human acceptance:** Facilitator confirms the destination is separate and the
-baseline sources remain read-only.
-
-### 2. Individual attempt — 10:35–11:00
-
-**Task card:** Create the variation directory and record source/destination
-paths, copy method, hashes or byte comparison, date scope, and rollback.
-
-**Example prompt:**
-
-> Copy all repository fixture from `scenarios/gitlab-repository-review/data/` into
-> `lab-notes/squad-2/day-5-variation/data/` without editing them. Record exact
-> commands and a hash or byte comparison. Set date scope to `scheduled review` in a
-> separate worksheet; do not modify the baseline files.
-
-**Output:** `lab-notes/squad-2/day-5-scope.md`.
-
-**Human acceptance:** Reviewer confirms copied files match the baseline and
-the learner can remove only the local variation to roll back.
-
-### 3. Review — 11:00–11:20
-
-**Task card:** Peer reviews the scope note before any recalculation. Check
-that exactly one input changed and every expected sample is labelled.
-
-**Example prompt:**
-
-> Read the scope note and inspect source and destination metadata. Mark
-> `PASS`, `FAIL`, or `OPEN` for unchanged repository fixture contents, separate output path,
-> date scope, rollback, and evidence plan. Do not solve the review.
-
-**Output:** Boundary readback.
-
-**Human acceptance:** Peer identifies the one allowed change and one forbidden
-change without oral coaching.
-
-### 4. Independent practice — 11:35–12:00
-
-**Task card:** Recalculate due-date status at date scope `scheduled review` using the
-copied data and record actual output in a local worksheet.
-
-**Example prompt:**
-
-> Using only the copied repository fixtures, recalculate missing-settlement due status at
-> `scheduled review time`. Cite the target file and date scope
-> comparison for `actionable finding`. Record the command/output actually observed;
-> do not alter source rows.
-
-**Output:** Variation worksheet with observed status.
-
-**Human acceptance:** Learner shows the new date scope in the calculation and
-marks any unavailable check `OPEN`.
-
-### 5. Check — 13:00–13:15
-
-**Task card:** Human gate data integrity and the changed classification.
-Compare against the baseline only as a labelled reference.
-
-**Example prompt:**
-
-> Reopen the baseline and copied files. Verify unchanged contents, the new
-> date scope, and the due-date comparison for `actionable finding`. Mark each item
-> `PASS`, `FAIL`, or `OPEN`. Do not call the result a production control.
-
-**Output:** Accepted or parked variation worksheet.
-
-**Human acceptance:** Reviewer confirms only the date scope changed and
-`actionable finding` is actionable at the new date scope.
-
-### 6. Exception comparison — 13:15–14:00
-
-**Task card:** Compare baseline and variation classifications and show that
-fee, finding, and review cases retain their original rules.
-
-**Example prompt:**
-
-> Compare the two local worksheets. Explain which classification changes with
-> date scope and which cases do not. Cite source IDs and calculations. Keep
-> `actionable finding` actionable tied to `scheduled review`; do not edit repository fixtures or infer a new
-> policy.
-
-**Output:** Difference table labelled `TRANSFER VARIATION`.
-
-**Human acceptance:** Facilitator finds one date scope-caused difference and no
-unexplained data difference.
-
-### 7. Transfer — 14:15–15:05
-
-**Task card:** Give the variation to a fresh reader. They reproduce the copy
-check and the `actionable finding` date scope calculation from the artifact alone.
-
-**Example prompt:**
-
-> You are the receiving reviewer. Verify the source and destination contents,
-> rerun the local due-date check, and state why `actionable finding` is actionable at
-> `scheduled review`. If a command or hash is missing, mark it `OPEN`.
-
-**Output:** Fresh-reader reproduction and discrepancy list.
-
-**Human acceptance:** Receiver reproduces the result without changing the
-copied data or asking the author to explain it.
-
-### 8. Handoff and close — 15:05–16:00
-
-**Task card:** Store scope, copy evidence, recalculation, difference table,
-reviewer, rollback, next owner, and `OPEN` items. Close with rating and MOB
-recap.
-
-**Example prompt:**
-
-> Draft the independent transfer handoff: baseline path, copied path, hashes
-> or byte check, date scope, exact commands/output, changed classification,
-> unchanged rules, reviewer, rollback, and `OPEN` items. Rate yourself
-> independent, with help, or needs practice. Add one agreed group lesson.
-
-**Output:** `lab-notes/squad-2/day-5-handoff.md`.
-
-**Human acceptance:** Facilitator confirms the packet is reproducible, the
-baseline files are unchanged, and no remote or production outcome is claimed.
-
-## Close script
-
-Repeat the opening Kahoot and wordcloud. Each learner gives a rating and one
-check they can now run alone. Record the agreed MOB recap and leave team
-approval, access, and any missing runtime evidence as `OPEN`.

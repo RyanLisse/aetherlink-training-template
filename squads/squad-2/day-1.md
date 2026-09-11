@@ -1,187 +1,27 @@
-# Squad 2 Day 1 — one visible result on your own laptop
+# Squad 2 Day 1 · AI-native SDLC foundations
 
-Mode: `FULLY GUIDED` · Time: `10:00–16:00` · Status: `FUTURE CURRICULUM`
+Mode: FULLY GUIDED · 10:00–16:00
 
-Run all prompts and commands from the repository root.
+Study the [Claude Academy course](https://academy.claude.com/courses/ai-native-sdlc-playbook) and [AI-native SDLC playbook](https://claude.com/blog/the-ai-native-sdlc-playbook). The goal is a shared map from intent to maintain.
 
-## Outcome and boundary
+## Schedule
 
-Each learner leaves with one local GitLab review note for `GL-REVIEW-001`, citing
-repository paths and lines, one finding, and a human decision. The
-trainer demonstrates the smallest safe read-only loop before learners try it.
-No architecture, shared process redesign, code change, remote ticket, network
-call, credential, or production claim is part of this day.
-
-Read [the fictional GitLab repository-review scenario](../../scenarios/gitlab-repository-review/README.md)
-and the contract in that README.
-Use `scenarios/gitlab-repository-review/data/repository.json`.
-
-## Fixed agenda
-
-| Time | Minutes | Block | Artifact |
-| --- | ---: | --- | --- |
-| 10:00–10:15 | 15 | Open | Kahoot + wordcloud, roles, blockers |
-| 10:15–10:35 | 20 | Demo | One-row read-only evidence card |
-| 10:35–11:00 | 25 | Individual attempt | Learner's first card |
-| 11:00–11:20 | 20 | Review | Source-row readback |
+| Time | Minutes | Block | Result |
+|---|---|---|
+| 10:00–10:15 | 15 | Theory | What changes in an AI-native SDLC |
+| 10:15–10:35 | 20 | Instruction + demo | Playbook map and human gates |
+| 10:35–11:00 | 25 | Individual | Draft `intent.md` success criteria |
+| 11:00–11:20 | 20 | Review | Readback against the playbook |
 | 11:20–11:35 | 15 | Break | — |
-| 11:35–12:00 | 25 | Practice | Groups of 3–4, one navigator |
+| 11:35–12:00 | 25 | Group practice | Map one local work item |
 | 12:00–13:00 | 60 | Lunch | — |
-| 13:00–13:15 | 15 | Check | Human acceptance |
-| 13:15–14:00 | 45 | Practice | Recheck one nearby row |
+| 13:00–13:15 | 15 | Theory | Plan, Design, Build, Test, Deploy, Maintain |
+| 13:15–14:00 | 45 | Individual + group | Turn intent into a small plan |
 | 14:00–14:15 | 15 | Break | — |
-| 14:15–15:05 | 50 | Transfer | Fresh-reader reproduction |
-| 15:05–15:40 | 35 | Handoff | Store card and next action |
-| 15:40–16:00 | 20 | Close | Rating and MOB recap |
+| 14:15–15:05 | 50 | Transfer | Fresh reader follows the plan |
+| 15:05–15:40 | 35 | Handoff | Store plan and open questions |
+| 15:40–16:00 | 20 | Close | Check-in, Kahoot, wordcloud, MOB reflection |
 
-Total: **360 minutes**. Every learner has the 25-minute individual attempt
-before group work. After basics, one navigator directs the human driver; the
-driver rotates every 5–7 minutes.
+**Prompt.** Read the playbook summary. Draft one observable outcome, one human acceptance gate, one stop rule, and one `OPEN` question in `intent.md`. Do not build or contact a team system.
 
-## Phase lens
-
-`Plan` and `Design` are in scope. `Build`, `Deploy`, and `Maintain` are
-`NOT IN SCOPE — this day produces a read-only evidence card, not an
-implementation or release`.
-
-## Literal task cards
-
-### 1. Open and trainer demo — 10:00–10:35
-
-**Task card:** Name one observable result, the human reviewer, the evidence
-owner, and the stop rule. Introduce `source`, `claim`, `evidence`, and
-`OPEN` only as they are used.
-
-**Example prompt:**
-
-> Read only the scenario README and the headers plus the row for `repository snapshot`.
-> Explain which file is the ledger, which is the PSP, and which values need a
-> human check. Draft a one-row evidence card; do not edit source files or call
-> a remote service.
-
-**Output:** Trainer's visible example with paths, row IDs, arithmetic, and an
-`OPEN` line for anything not checked.
-
-**Human acceptance:** Facilitator confirms the result is one row, fictional,
-local, and reviewable on the learner's own laptop.
-
-### 2. Individual attempt — 10:35–11:00
-
-**Task card:** Create `lab-notes/squad-2/day-1-review-note.md` in a learner
-copy. Record project, commit, reviewed paths, one finding, severity as a human
-field, and one `OPEN` GitLab or CI check for `GL-REVIEW-001`.
-
-**Example prompt:**
-
-> Read only the supplied repository snapshot. Draft one local review note with
-> exact paths and lines, one actionable finding, evidence, a human severity
-> field, and `OPEN` for GitLab or CI checks you cannot run. Do not modify files.
-
-**Output:** One independently drafted card, even if incomplete.
-
-**Human acceptance:** Learner can point to both source rows and distinguish an
-expected example from a value actually read.
-
-### 3. Review — 11:00–11:20
-
-**Task card:** Pair-read the card aloud. The reviewer checks identifiers,
-arithmetic, date scope context, and whether the card says what was actually read.
-
-**Example prompt:**
-
-> Review this card against the two source rows. List one confirmed fact, one
-> calculation you reproduced, and every missing proof as `OPEN`. Do not repair
-> the writer's card silently.
-
-**Output:** Short readback with `PASS`, `FAIL`, or `OPEN` per check.
-
-**Human acceptance:** Reviewer records a named role (no invented person) and
-one concrete correction or `PASS`.
-
-### 4. Group practice — 11:35–12:00
-
-**Task card:** In groups of 3–4, reconcile the same row and compare cards.
-One navigator directs the human driver; rotate driver and navigator every
-5–7 minutes. The skeptic may pause the run.
-
-**Example prompt:**
-
-> As navigator, ask the driver to open the target file first, then the source line.
-> Ask the scribe to record source IDs and the skeptic to challenge any value
-> without a path. Produce one agreed card without changing the fixtures.
-
-**Output:** One group card plus a note of one disagreement.
-
-**Human acceptance:** Facilitator sees that every number has a source or
-calculation and that no one silently overwrote a learner's attempt.
-
-### 5. Check — 13:00–13:15
-
-**Task card:** Submit the group card for a human gate. Check that a fee
-mismatch remains a review finding even if net values appear close.
-
-**Example prompt:**
-
-> Act as the reviewer. Reopen the exact source lines, recompute expected fee and
-> net, and mark each acceptance item `PASS`, `FAIL`, or `OPEN`. Do not approve a
-> payout or infer a policy beyond the scenario README.
-
-**Output:** Accepted, revised, or parked card.
-
-**Human acceptance:** Facilitator accepts only source-backed arithmetic and a
-clear unresolved decision owner.
-
-### 6. Second practice — 13:15–14:00
-
-**Task card:** Apply the same card format to `second repository snapshot`, preserving both
-finding source lines and labeling the batch `UNRESOLVED`.
-
-**Example prompt:**
-
-> Read `second repository snapshot`, `SET-1003-A`, and `SET-1003-B`. Keep both source rows
-> visible. Record raw and provisional unique totals, the finding rule, and
-> the human confirmation needed. Do not delete, count twice, or approve.
-
-**Output:** A second card or a documented `OPEN` if a source check failed.
-
-**Human acceptance:** Reviewer confirms both finding IDs remain visible and
-the status is `UNRESOLVED`.
-
-### 7. Transfer — 14:15–15:05
-
-**Task card:** Give the card to a fresh reader who did not create it. They
-must reproduce one number and identify the next human action in five minutes.
-
-**Example prompt:**
-
-> You are receiving this evidence card cold. Use its paths and source IDs to
-> reproduce one calculation, then write the next action, owner role, and
-> unresolved question. If a link or command is absent, mark it `OPEN`.
-
-**Output:** Fresh-reader readback attached to the card.
-
-**Human acceptance:** Receiver reproduces the stated check without oral help.
-
-### 8. Handoff and close — 15:05–16:00
-
-**Task card:** Store the two cards, exact checks, reviewer role, next action,
-and `OPEN` items. Close with a personal rating and a group MOB recap.
-
-**Example prompt:**
-
-> Draft a concise handoff: made, learned, can do next, source paths, checks
-> actually run, reviewer, next owner, and `OPEN` items. Rate yourself
-> independent, with help, or needs practice. Add one agreed navigator/driver
-> learning; exclude private feedback.
-
-**Output:** `lab-notes/squad-2/day-1-handoff.md` or the team's local equivalent.
-
-**Human acceptance:** Facilitator checks the artifact exists, the receiver can
-find the next action, and the closing Kahoot/wordcloud delta is recorded as a
-learning signal rather than a learner outcome claim.
-
-## Close script
-
-Repeat the opening Kahoot question and wordcloud. Each learner says one
-rating and one source check they can reproduce. The facilitator records
-`OPEN — preflight approval and team access` for any future workflow dependency.
+**Checkpoint.** A fresh reader can state the goal, lifecycle stage, evidence, owner, and next step.
