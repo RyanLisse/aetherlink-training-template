@@ -1,6 +1,6 @@
 # Day 4 — Agents in the AI-native SDLC, and your first hook
 
-Fourth session for **Wave 2 crew 1**. Two concepts today:
+Fourth session for **Wave 2 squad 1**. Two concepts today:
 
 1. **Agents in the AI-native SDLC.** The source's illustrative model shows the
    line becoming a loop, with build at agent speed while requirements, review
@@ -104,17 +104,16 @@ decides.
 | 10:15–10:35 | 20 | Concept 1: agents in the AI-native SDLC (interactive slide) |
 | 10:35–10:50 | 15 | Menu choice and starter install |
 | 10:50–11:15 | 25 | **Individual** Card 1: first run of the chosen agent, trace, checker |
-| 11:15–11:25 | 10 | Break |
-| 11:25–11:45 | 20 | Groups of 3–4, Card 2: trace versus citations |
+| 11:15–11:30 | 15 | Break |
+| 11:30–11:45 | 15 | Groups of 3–4, Card 2: trace versus citations |
 | 11:45–12:00 | 15 | Human gate: baseline frozen |
 | 12:00–13:00 | 60 | Lunch |
 | 13:00–13:20 | 20 | Concept 2 + demo: hooks — see the loop, set a rule |
 | 13:20–13:45 | 25 | **Individual** Card 3: build your first hook |
-| 13:45–13:55 | 10 | Break |
-| 13:55–14:10 | 15 | Groups of 3–4, Card 4: compare rules |
-| 14:10–14:35 | 25 | **Individual** Card 5: second agent run with your hook active |
-| 14:35–14:50 | 15 | Break |
-| 14:50–15:25 | 35 | **Individual** Card 6: run log and handoff draft |
+| 13:45–14:00 | 15 | Groups of 3–4, Card 4: compare rules |
+| 14:00–14:25 | 25 | **Individual** Card 5: second agent run with your hook active |
+| 14:25–14:40 | 15 | Break |
+| 14:40–15:25 | 45 | **Individual** Card 6: run log and handoff draft |
 | 15:25–15:40 | 15 | Recap: the two concepts, one sentence each |
 | 15:40–16:00 | 20 | Check-out, MOB reflection, Kahoot/wordcloud delta |
 
@@ -131,7 +130,7 @@ between short group blocks.
 - **Result:** preview, trace summary, checker line, run log with PASS/FAIL/OPEN.
 - **Time limit:** 25 min.
 
-### Card 2 — trace versus citations (groups of 3–4, 11:25–11:45, 20 min)
+### Card 2 — trace versus citations (groups of 3–4, 11:30–11:45, 15 min)
 
 - **Goal:** one source cited but never read, or read but never cited.
 - **Steps:** compare "Sources read" with the output's `Source:`/`[source: …]` lines; check one number by hand; agree one correction as a single added prompt sentence, or an `OPEN`.
@@ -148,17 +147,17 @@ trace, then make the rule yours (folder, second pattern, or message).
 - **Result:** `/hooks` shows your hook; one blocked and one allowed attempt in the run log; your edited rule.
 - **Time limit:** 25 min. Not working = exact error as `OPEN`; never disable the trace hook to fix it.
 
-### Card 4 — compare rules (groups of 3–4, 13:55–14:10, 15 min)
+### Card 4 — compare rules (groups of 3–4, 13:45–14:00, 15 min)
 
 - **Goal:** one sentence per group: the first rule you would want on a real repository, and the event it needs (`PreToolUse` prevent, `PostToolUse` react, `Stop` summarise).
 
-### Card 5 — second run with the hook active (individual, 14:10–14:35, 25 min)
+### Card 5 — second run with the hook active (individual, 14:00–14:25, 25 min)
 
 - **Goal:** the Card 2 correction applied; the contract still passes; your hook stayed silent because the agent previewed only.
 - **Steps:** same first prompt plus the agreed sentence; new trace; checker; one sentence in the run log on what the agent read differently and whether the hook fired.
 - **Result:** two traces, two checker lines, hook observation.
 
-### Card 6 — run log and handoff draft (individual, 14:50–15:25, 35 min)
+### Card 6 — run log and handoff draft (individual, 14:40–15:25, 45 min)
 
 - **Goal:** a run log a fresh reader can follow, the accepted output saved, the handoff started.
 - **Steps:** complete every field of `templates/run-log.md` (Day 5 section empty); start `templates/handoff.md` with option, prompts, settings, checker line, trace file, hook rule, `OPEN` items; save as `lab-notes/day-4-run-log.md`.

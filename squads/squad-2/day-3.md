@@ -1,4 +1,4 @@
-# Crew 2 Day 3 — same-ticket analyst, developer, tester relay
+# Squad 2 Day 3 — same-ticket analyst, developer, tester relay
 
 Mode: `COACHED` · Time: `10:00–16:00` · Status: `FUTURE CURRICULUM`
 
@@ -15,7 +15,7 @@ packet with source IDs and `UNRESOLVED` duplicate handling.
 Read [FIN-003](../../scenarios/payment-reconciliation/tickets/FIN-003.md),
 the [guided ticket exercise](../../scenarios/payment-reconciliation/guided-ticket-exercise.md),
 the [scenario README](../../scenarios/payment-reconciliation/README.md), and
-[crew 2 Day 2](day-2.md). No code or remote workflow is required.
+[squad 2 Day 2](day-2.md). No code or remote workflow is required.
 
 ## Fixed agenda
 
@@ -25,15 +25,14 @@ the [scenario README](../../scenarios/payment-reconciliation/README.md), and
 | 10:15–10:35 | 20 | Demo | Analyst-to-developer-to-tester pass |
 | 10:35–11:00 | 25 | Individual attempt | Personal analyst statement |
 | 11:00–11:20 | 20 | Review | Behavior and source readback |
-| 11:20–11:30 | 10 | Break | — |
-| 11:30–12:00 | 30 | Practice | Analyst pass in groups of 3–4 |
+| 11:20–11:35 | 15 | Break | — |
+| 11:35–12:00 | 25 | Practice | Analyst pass in groups of 3–4 |
 | 12:00–13:00 | 60 | Lunch | — |
 | 13:00–13:15 | 15 | Check | Analyst human gate |
 | 13:15–14:00 | 45 | Practice | Developer and tester passes |
-| 14:00–14:10 | 10 | Break | — |
-| 14:10–15:00 | 50 | Transfer | Fresh tester reproduces checks |
-| 15:00–15:10 | 10 | Break | — |
-| 15:10–15:40 | 30 | Handoff | Role packet and next owner |
+| 14:00–14:15 | 15 | Break | — |
+| 14:15–15:05 | 50 | Transfer | Fresh tester reproduces checks |
+| 15:05–15:40 | 35 | Handoff | Role packet and next owner |
 | 15:40–16:00 | 20 | Close | Rating and MOB recap |
 
 Total: **360 minutes**. Each learner attempts the analyst task alone for 25
@@ -67,7 +66,7 @@ behavior unchanged.
 
 ### 2. Individual attempt — 10:35–11:00
 
-**Task card:** Draft `lab-notes/crew-2/day-3-analyst.md` alone. State visible
+**Task card:** Draft `lab-notes/squad-2/day-3-analyst.md` alone. State visible
 duplicate behavior, source IDs, cutoff, status, and two acceptance examples.
 
 **Example prompt:**
@@ -98,7 +97,7 @@ behavior. Separate facts, calculations, and policy questions.
 **Human acceptance:** Facilitator accepts the wording before the developer
 pass starts.
 
-### 4. Analyst group practice — 11:30–12:00
+### 4. Analyst group practice — 11:35–12:00
 
 **Task card:** Groups of 3–4 consolidate analyst statements. Navigator directs
 the driver; scribe records source IDs; skeptic pauses on unstated policy.
@@ -147,7 +146,7 @@ visible behavior.
 **Human acceptance:** Analyst confirms no technical proposal changed behavior;
 tester labels checks as `PASS`, `FAIL`, or `OPEN` based on actual runs.
 
-### 7. Transfer — 14:10–15:00
+### 7. Transfer — 14:15–15:05
 
 **Task card:** Give the packet to a fresh tester. They reproduce one arithmetic
 check and one negative behavior check from the packet alone.
@@ -163,7 +162,7 @@ check and one negative behavior check from the packet alone.
 **Human acceptance:** Receiver can name the next owner and any unresolved
 source confirmation without oral coaching.
 
-### 8. Handoff and close — 15:10–16:00
+### 8. Handoff and close — 15:05–16:00
 
 **Task card:** Store the complete relay packet with role boundaries, commands,
 reviewer, open questions, and next action. Close with rating and MOB recap.
@@ -175,7 +174,7 @@ reviewer, open questions, and next action. Close with rating and MOB recap.
 > rollback or stop rule, and `OPEN` items. Rate yourself and add one agreed
 > relay lesson; exclude private feedback.
 
-**Output:** `lab-notes/crew-2/day-3-FIN-003-packet.md`.
+**Output:** `lab-notes/squad-2/day-3-FIN-003-packet.md`.
 
 **Human acceptance:** Facilitator verifies one ticket stayed intact across all
 three passes and the financial case remains `UNRESOLVED` pending human action.

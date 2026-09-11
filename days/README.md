@@ -2,18 +2,19 @@
 
 This public-safe programme adapts the AI-native SDLC playbook to a fictional
 payment reconciliation exercise. It runs five sessions, each with its own
-10:00–16:00 agenda with lunch fixed at 12:00–13:00. Follow the current guide for the timing; Day 2 includes a
+10:00–16:00 agenda with lunch fixed at 12:00–13:00 and two 15-minute breaks,
+one mid-morning and one mid-afternoon. Follow the current guide for the timing; Day 2 includes a
 revised n8n-first morning and Claude Code rebuild after lunch. Day 3 uses the
 same sequence with a guided individual opening before comparison. Videos and audio were not watched or
 listened to; source URLs are preserved in the first two guides.
 
 ## Delivery tracks
 
-**Wave 2 crew 1** has completed Days 1–2 and has three sessions remaining:
+**Wave 2 squad 1** has completed Days 1–2 and has three sessions remaining:
 Days 3–5. Use [Day 3](day-3.md) as its continuation; do not rewrite its prior
-handoff as a new five-session start. **Crew 2** is a later, fresh five-session
-run; its crew-specific plan is [here](../crews/crew-2/README.md) when that pack
-is available. No crew 2 outcome or access is implied by crew 1 material.
+handoff as a new five-session start. **Squad 2** is a later, fresh five-session
+run; its squad-specific plan is [here](../squads/squad-2/README.md) when that pack
+is available. No squad 2 outcome or access is implied by squad 1 material.
 
 ## Progression
 

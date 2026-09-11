@@ -1,6 +1,6 @@
 # Day 3 — What an agent is, and one agent built twice (n8n, then Claude Code)
 
-Third session for **Wave 2 crew 1**. Two concepts today, nothing more:
+Third session for **Wave 2 squad 1**. Two concepts today, nothing more:
 
 1. **What an agent is — the agentic loop.** Gather context → take action →
    verify results, repeated, with you able to interrupt at any point.
@@ -83,7 +83,7 @@ Read the supplied TICKET-OPS-101 input and return a preview that follows the sha
    documented in the lab) in the agreed environment. Record the result.
 3. Confirm Claude Code access and the local lab copy; record version, model
    shown, timestamp. Unrun = `OPEN`.
-4. Open the Site deck for crew 1 day 3 and test the loop widget (Step, Play,
+4. Open the Site deck for squad 1 day 3 and test the loop widget (Step, Play,
    You interrupt) on the room's screen.
 5. Kahoot opener: "An agent is… (a) a smarter chat (b) a model in a loop with
    tools and a goal (c) a workflow"; wordcloud "Which step blocks you today?".
@@ -96,17 +96,16 @@ Read the supplied TICKET-OPS-101 input and return a preview that follows the sha
 | 10:15–10:35 | 20 | Concept 1: what an agent is — the agentic loop (interactive slide) |
 | 10:35–10:45 | 10 | Concept 2 + n8n demo: one contract, two platforms |
 | 10:45–11:10 | 25 | **Individual** n8n run on `TICKET-OPS-101` |
-| 11:10–11:20 | 10 | Break |
-| 11:20–11:45 | 25 | Groups of 3–4: n8n output against the contract |
+| 11:10–11:25 | 15 | Break |
+| 11:25–11:45 | 20 | Groups of 3–4: n8n output against the contract |
 | 11:45–12:00 | 15 | Human gate: n8n baseline frozen |
 | 12:00–13:00 | 60 | Lunch |
 | 13:00–13:10 | 10 | Claude Code demo: rebuild the same agent |
 | 13:10–13:35 | 25 | **Individual** Claude Code run on the same `TICKET-OPS-101` |
-| 13:35–13:45 | 10 | Break |
-| 13:45–14:15 | 30 | Groups of 3–4: same-input comparison with a fresh reader |
-| 14:15–14:30 | 15 | Human gate, then transfer unchanged to `TICKET-OPS-102` |
-| 14:30–14:45 | 15 | Break |
-| 14:45–15:25 | 40 | **Individual** evidence readback and handoff |
+| 13:35–14:05 | 30 | Groups of 3–4: same-input comparison with a fresh reader |
+| 14:05–14:20 | 15 | Human gate, then transfer unchanged to `TICKET-OPS-102` |
+| 14:20–14:35 | 15 | Break |
+| 14:35–15:25 | 50 | **Individual** evidence readback and handoff |
 | 15:25–15:40 | 15 | Recap: the two concepts, one sentence each |
 | 15:40–16:00 | 20 | Check-out, MOB reflection, Kahoot/wordcloud delta |
 
@@ -123,7 +122,7 @@ before any group work.
 - **Result:** output + settings in your run log; login or credential problems as `OPEN`.
 - **Time limit:** 25 min.
 
-### Card 2 — groups of 3–4: n8n review (11:20–11:45, 25 min)
+### Card 2 — groups of 3–4: n8n review (11:25–11:45, 20 min)
 
 - **Goal:** each output checked against the contract by someone who did not run it.
 - **Steps:** ticket identity, four headings, protected sections verbatim, Given/When/Then counts (≥2 positive, ≥2 negative), source citations, `OPEN` labels; quote one observed line; PASS / FAIL / OPEN.
@@ -136,13 +135,13 @@ before any group work.
 - **Result:** Claude Code baseline in the run log.
 - **Time limit:** 25 min.
 
-### Card 4 — groups of 3–4: same-input comparison (13:45–14:15, 30 min)
+### Card 4 — groups of 3–4: same-input comparison (13:35–14:05, 30 min)
 
 - **Goal:** one observed difference (or `OPEN — no observed difference`), one unchanged boundary, and any missing evidence, from a reader who saw neither run.
 - **Steps:** hand over both records, prompt, settings, contract; the reader reports; describe differences as observations of these two runs, never as one platform causing them.
-- **Result:** a comparison note per group; then the 14:15 gate and the `102` transfer with the method unchanged.
+- **Result:** a comparison note per group; then the 14:05 gate and the `102` transfer with the method unchanged.
 
-### Card 5 — individual evidence and handoff (14:45–15:25, 40 min)
+### Card 5 — individual evidence and handoff (14:35–15:25, 50 min)
 
 - **Goal:** a fresh receiver finds both `101` runs and the `OPEN` items in two minutes.
 - **Steps:** store lab URL, exact prompts, both settings, both outputs, checker lines, comparison, `102` transfer, access gaps, next action in `lab-notes/day-3-evidence.md` and `lab-notes/handoff-day-3.md`.

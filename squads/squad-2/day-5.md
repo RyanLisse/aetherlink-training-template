@@ -1,4 +1,4 @@
-# Crew 2 Day 5 — independent cutoff-only transfer
+# Squad 2 Day 5 — independent cutoff-only transfer
 
 Mode: `INDEPENDENT` · Time: `10:00–16:00` · Status: `FUTURE CURRICULUM`
 
@@ -14,8 +14,8 @@ new cutoff while source data and all other rules remain unchanged.
 
 Read the [payment scenario](../../scenarios/payment-reconciliation/README.md),
 [FIN-006](../../scenarios/payment-reconciliation/tickets/FIN-006.md), and the
-[crew 2 Day 4 handoff](day-4.md). Use a separate path such as
-`lab-notes/crew-2/day-5-variation/data/`; do not edit
+[squad 2 Day 4 handoff](day-4.md). Use a separate path such as
+`lab-notes/squad-2/day-5-variation/data/`; do not edit
 `scenarios/payment-reconciliation/data/`.
 
 ## Fixed agenda
@@ -26,15 +26,14 @@ Read the [payment scenario](../../scenarios/payment-reconciliation/README.md),
 | 10:15–10:35 | 20 | Demo | Hash and cutoff comparison |
 | 10:35–11:00 | 25 | Individual attempt | Personal scope and copy check |
 | 11:00–11:20 | 20 | Review | Peer readback of boundary |
-| 11:20–11:30 | 10 | Break | — |
-| 11:30–12:00 | 30 | Practice | Independent local recalculation |
+| 11:20–11:35 | 15 | Break | — |
+| 11:35–12:00 | 25 | Practice | Independent local recalculation |
 | 12:00–13:00 | 60 | Lunch | — |
 | 13:00–13:15 | 15 | Check | Human data-integrity gate |
 | 13:15–14:00 | 45 | Practice | Exception and cutoff comparison |
-| 14:00–14:10 | 10 | Break | — |
-| 14:10–15:00 | 50 | Transfer | Fresh reader reproduces variation |
-| 15:00–15:10 | 10 | Break | — |
-| 15:10–15:40 | 30 | Handoff | Independent result and rollback |
+| 14:00–14:15 | 15 | Break | — |
+| 14:15–15:05 | 50 | Transfer | Fresh reader reproduces variation |
+| 15:05–15:40 | 35 | Handoff | Independent result and rollback |
 | 15:40–16:00 | 20 | Close | Rating and MOB recap |
 
 Total: **360 minutes**. The 25-minute personal attempt is mandatory before
@@ -76,11 +75,11 @@ paths, copy method, hashes or byte comparison, cutoff, and rollback.
 **Example prompt:**
 
 > Copy all three CSVs from `scenarios/payment-reconciliation/data/` into
-> `lab-notes/crew-2/day-5-variation/data/` without editing them. Record exact
+> `lab-notes/squad-2/day-5-variation/data/` without editing them. Record exact
 > commands and a hash or byte comparison. Set cutoff to `2026-09-13` in a
 > separate worksheet; do not modify the baseline files.
 
-**Output:** `lab-notes/crew-2/day-5-scope.md`.
+**Output:** `lab-notes/squad-2/day-5-scope.md`.
 
 **Human acceptance:** Reviewer confirms copied files match the baseline and
 the learner can remove only the local variation to roll back.
@@ -101,7 +100,7 @@ that exactly one input changed and every expected sample is labelled.
 **Human acceptance:** Peer identifies the one allowed change and one forbidden
 change without oral coaching.
 
-### 4. Independent practice — 11:30–12:00
+### 4. Independent practice — 11:35–12:00
 
 **Task card:** Recalculate due-date status at cutoff `2026-09-13` using the
 copied data and record actual output in a local worksheet.
@@ -151,7 +150,7 @@ fee, duplicate, and bank cases retain their original rules.
 **Human acceptance:** Facilitator finds one cutoff-caused difference and no
 unexplained data difference.
 
-### 7. Transfer — 14:10–15:00
+### 7. Transfer — 14:15–15:05
 
 **Task card:** Give the variation to a fresh reader. They reproduce the copy
 check and the `TX-NS-1008` cutoff calculation from the artifact alone.
@@ -167,7 +166,7 @@ check and the `TX-NS-1008` cutoff calculation from the artifact alone.
 **Human acceptance:** Receiver reproduces the result without changing the
 copied data or asking the author to explain it.
 
-### 8. Handoff and close — 15:10–16:00
+### 8. Handoff and close — 15:05–16:00
 
 **Task card:** Store scope, copy evidence, recalculation, difference table,
 reviewer, rollback, next owner, and `OPEN` items. Close with rating and MOB
@@ -180,7 +179,7 @@ recap.
 > unchanged rules, reviewer, rollback, and `OPEN` items. Rate yourself
 > independent, with help, or needs practice. Add one agreed group lesson.
 
-**Output:** `lab-notes/crew-2/day-5-handoff.md`.
+**Output:** `lab-notes/squad-2/day-5-handoff.md`.
 
 **Human acceptance:** Facilitator confirms the packet is reproducible, the
 baseline files are unchanged, and no remote or production outcome is claimed.

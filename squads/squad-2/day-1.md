@@ -1,4 +1,4 @@
-# Crew 2 Day 1 — one visible result on your own laptop
+# Squad 2 Day 1 — one visible result on your own laptop
 
 Mode: `FULLY GUIDED` · Time: `10:00–16:00` · Status: `FUTURE CURRICULUM`
 
@@ -24,15 +24,14 @@ Use the three CSVs in `scenarios/payment-reconciliation/data/`.
 | 10:15–10:35 | 20 | Demo | One-row read-only evidence card |
 | 10:35–11:00 | 25 | Individual attempt | Learner's first card |
 | 11:00–11:20 | 20 | Review | Source-row readback |
-| 11:20–11:30 | 10 | Break | — |
-| 11:30–12:00 | 30 | Practice | Groups of 3–4, one navigator |
+| 11:20–11:35 | 15 | Break | — |
+| 11:35–12:00 | 25 | Practice | Groups of 3–4, one navigator |
 | 12:00–13:00 | 60 | Lunch | — |
 | 13:00–13:15 | 15 | Check | Human acceptance |
 | 13:15–14:00 | 45 | Practice | Recheck one nearby row |
-| 14:00–14:10 | 10 | Break | — |
-| 14:10–15:00 | 50 | Transfer | Fresh-reader reproduction |
-| 15:00–15:10 | 10 | Break | — |
-| 15:10–15:40 | 30 | Handoff | Store card and next action |
+| 14:00–14:15 | 15 | Break | — |
+| 14:15–15:05 | 50 | Transfer | Fresh-reader reproduction |
+| 15:05–15:40 | 35 | Handoff | Store card and next action |
 | 15:40–16:00 | 20 | Close | Rating and MOB recap |
 
 Total: **360 minutes**. Every learner has the 25-minute individual attempt
@@ -68,7 +67,7 @@ local, and reviewable on the learner's own laptop.
 
 ### 2. Individual attempt — 10:35–11:00
 
-**Task card:** Create `lab-notes/crew-2/day-1-one-row.md` in a learner copy.
+**Task card:** Create `lab-notes/squad-2/day-1-one-row.md` in a learner copy.
 Record transaction ID, ledger reference, PSP reference, gross, expected fee,
 actual fee, expected net, actual net, and an initial classification for
 `TX-NS-1004`.
@@ -101,7 +100,7 @@ arithmetic, cutoff context, and whether the card says what was actually read.
 **Human acceptance:** Reviewer records a named role (no invented person) and
 one concrete correction or `PASS`.
 
-### 4. Group practice — 11:30–12:00
+### 4. Group practice — 11:35–12:00
 
 **Task card:** In groups of 3–4, reconcile the same row and compare cards.
 One navigator directs the human driver; rotate driver and navigator every
@@ -150,7 +149,7 @@ duplicate PSP rows and labeling the batch `UNRESOLVED`.
 **Human acceptance:** Reviewer confirms both duplicate IDs remain visible and
 the status is `UNRESOLVED`.
 
-### 7. Transfer — 14:10–15:00
+### 7. Transfer — 14:15–15:05
 
 **Task card:** Give the card to a fresh reader who did not create it. They
 must reproduce one number and identify the next human action in five minutes.
@@ -165,7 +164,7 @@ must reproduce one number and identify the next human action in five minutes.
 
 **Human acceptance:** Receiver reproduces the stated check without oral help.
 
-### 8. Handoff and close — 15:10–16:00
+### 8. Handoff and close — 15:05–16:00
 
 **Task card:** Store the two cards, exact checks, reviewer role, next action,
 and `OPEN` items. Close with a personal rating and a group MOB recap.
@@ -177,7 +176,7 @@ and `OPEN` items. Close with a personal rating and a group MOB recap.
 > independent, with help, or needs practice. Add one agreed navigator/driver
 > learning; exclude private feedback.
 
-**Output:** `lab-notes/crew-2/day-1-handoff.md` or the team's local equivalent.
+**Output:** `lab-notes/squad-2/day-1-handoff.md` or the team's local equivalent.
 
 **Human acceptance:** Facilitator checks the artifact exists, the receiver can
 find the next action, and the closing Kahoot/wordcloud delta is recorded as a

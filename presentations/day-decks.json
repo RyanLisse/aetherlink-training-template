@@ -40,15 +40,15 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:15 exercise 1 · 11:15–11:25 break"
+            "body": "10:00–10:15 opening · 10:15–10:40 concept/demo · 10:40–11:15 exercise 1 · 11:15–11:30 break"
           },
           {
             "title": "Midday",
-            "body": "11:25–12:00 exercise 2 · 12:00–13:00 lunch · 13:00–13:20 demo/coaching"
+            "body": "11:30–12:00 exercise 2 · 12:00–13:00 lunch · 13:00–13:20 demo/coaching"
           },
           {
             "title": "Afternoon",
-            "body": "13:20–14:05 exercise 3 · 14:05–14:15 break · 14:15–15:05 exercise 4 · 15:05–15:15 break · 15:15–15:45 exercise 5 · 15:45–16:00 reflection"
+            "body": "13:20–14:05 exercise 3 · 14:05–14:20 break · 14:20–15:10 exercise 4 · 15:10–15:45 exercise 5 · 15:45–16:00 reflection"
           }
         ],
         "prompt": "Read the schedule aloud. For the next block, name its artifact and its human acceptance check.",
@@ -212,7 +212,7 @@
       },
       {
         "title": "Exercise 2 · design the spec",
-        "kicker": "11:25–12:00 · 35 MIN",
+        "kicker": "11:30–12:00 · 30 MIN",
         "subtitle": "Turn the intent into a readable reconciliation contract",
         "cards": [
           {
@@ -302,7 +302,7 @@
       },
       {
         "title": "Exercise 4 · reconcile and test",
-        "kicker": "14:15–15:05 · 50 MIN",
+        "kicker": "14:20–15:10 · 50 MIN",
         "subtitle": "Build a local evidence log from unchanged fixtures",
         "cards": [
           {
@@ -332,7 +332,7 @@
       },
       {
         "title": "Exercise 5 · hand off the work",
-        "kicker": "15:15–15:45 · 30 MIN",
+        "kicker": "15:10–15:45 · 35 MIN",
         "subtitle": "Make tomorrow’s receiver independent of today’s memory",
         "cards": [
           {
@@ -436,11 +436,11 @@
           },
           {
             "title": "Role passes",
-            "body": "11:30–11:40 break · 11:40–12:00 analyst (part 1) · 12:00–13:00 lunch · 13:00–13:20 analyst (part 2) · 13:20–14:00 developer · 14:00–14:40 tester"
+            "body": "11:30–11:45 break · 11:45–12:00 analyst (part 1) · 12:00–13:00 lunch · 13:00–13:20 analyst (part 2) · 13:20–14:00 developer · 14:00–14:40 tester"
           },
           {
             "title": "Review and close",
-            "body": "14:40–14:50 break · 14:50–15:30 cross-role review · 15:30–15:40 break · 15:40–16:00 handoff, optional context, and close"
+            "body": "14:40–14:55 break · 14:55–15:40 cross-role review · 15:40–16:00 handoff, optional context, and close"
           }
         ],
         "prompt": "Read the Day 2 schedule aloud. Keep one FIN-003 packet across every role pass; name the artifact and human gate for each block.",
@@ -665,7 +665,7 @@
       },
       {
         "title": "Analyst pass · facts and acceptance",
-        "kicker": "11:40–12:00 + 13:00–13:20 · ANALYST",
+        "kicker": "11:45–12:00 + 13:00–13:20 · ANALYST",
         "subtitle": "Turn the source read into an accepted requirement",
         "cards": [
           {
@@ -755,7 +755,7 @@
       },
       {
         "title": "Cross-role review · same packet",
-        "kicker": "14:50–15:30 · REVIEW",
+        "kicker": "14:55–15:40 · REVIEW",
         "subtitle": "Check that each role preserved the functional requirement",
         "cards": [
           {
@@ -852,7 +852,7 @@
     "slides": [
       {
         "title": "Welcome back",
-        "kicker": "WAVE 2 · CREW 1 · DAY 3 · 10:00–10:15",
+        "kicker": "WAVE 2 · SQUAD 1 · DAY 3 · 10:00–10:15",
         "subtitle": "Where we are, and the two concepts for today",
         "cards": [
           {
@@ -893,7 +893,7 @@
         "cards": [
           {
             "title": "Morning · n8n",
-            "body": "10:15 concept 1 · 10:35 concept 2 + demo · 10:45–11:10 individual · 11:20 groups · 11:45 gate"
+            "body": "10:15 concept 1 · 10:35 concept 2 + demo · 10:45–11:10 individual · 11:25 groups · 11:45 gate"
           },
           {
             "title": "Lunch",
@@ -901,7 +901,7 @@
           },
           {
             "title": "Afternoon · Claude Code",
-            "body": "13:00 demo · 13:10–13:35 individual · 13:45 groups compare · 14:15 gate + 102 · 14:45 evidence · 15:25 recap · 15:40 close"
+            "body": "13:00 demo · 13:10–13:35 individual · 13:35 groups compare · 14:05 gate + 102 · 14:35 evidence · 15:25 recap · 15:40 close"
           }
         ],
         "prompt": "Read the timetable aloud. Two 25-minute individual blocks, one per platform, always before the group block. Lunch 12:00–13:00.",
@@ -1133,7 +1133,7 @@
       },
       {
         "title": "Groups · n8n output against the contract",
-        "kicker": "REVIEW · 11:20–11:45 · 25 MIN",
+        "kicker": "REVIEW · 11:25–11:45 · 20 MIN",
         "subtitle": "Someone who did not run it checks it",
         "cards": [
           {
@@ -1263,7 +1263,7 @@
       },
       {
         "title": "Groups · same-input comparison",
-        "kicker": "COMPARISON · 13:45–14:15 · 30 MIN",
+        "kicker": "COMPARISON · 13:35–14:05 · 30 MIN",
         "subtitle": "A fresh reader compares two runs under the same functional contract/input",
         "cards": [
           {
@@ -1295,7 +1295,7 @@
       },
       {
         "title": "Transfer gate · ticket 102",
-        "kicker": "GATE · 14:15–14:30",
+        "kicker": "GATE · 14:05–14:20",
         "subtitle": "Only after the comparison is accepted, and with the method unchanged",
         "cards": [
           {
@@ -1327,7 +1327,7 @@
       },
       {
         "title": "Individual · evidence and handoff",
-        "kicker": "PRACTICE · 14:45–15:25 · 40 MIN",
+        "kicker": "PRACTICE · 14:35–15:25 · 50 MIN",
         "subtitle": "A fresh receiver finds both runs and the OPEN items in two minutes",
         "cards": [
           {
@@ -1434,7 +1434,7 @@
     "slides": [
       {
         "title": "Welcome back",
-        "kicker": "WAVE 2 · CREW 1 · DAY 4 · 10:00–10:15",
+        "kicker": "WAVE 2 · SQUAD 1 · DAY 4 · 10:00–10:15",
         "subtitle": "Where we are, and the two concepts for today",
         "cards": [
           {
@@ -1475,7 +1475,7 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:15 concept 1 · 10:35 menu + install · 10:50–11:15 individual · 11:25 groups · 11:45 gate"
+            "body": "10:15 concept 1 · 10:35 menu + install · 10:50–11:15 individual · 11:30 groups · 11:45 gate"
           },
           {
             "title": "Lunch",
@@ -1483,7 +1483,7 @@
           },
           {
             "title": "Afternoon",
-            "body": "13:00 concept 2 + demo · 13:20–13:45 your first hook · 13:55 groups · 14:10–14:35 second run · 14:50–15:25 evidence · 15:25 recap · 15:40 close"
+            "body": "13:00 concept 2 + demo · 13:20–13:45 your first hook · 13:45 groups · 14:00–14:25 second run · 14:40–15:25 evidence · 15:25 recap · 15:40 close"
           }
         ],
         "prompt": "Read the timetable aloud: four individual blocks, two short group blocks, lunch 12:00–13:00.",
@@ -1644,7 +1644,7 @@
       },
       {
         "title": "Groups · trace versus citations",
-        "kicker": "REVIEW · 11:25–11:45 · 20 MIN",
+        "kicker": "REVIEW · 11:30–11:45 · 15 MIN",
         "subtitle": "Card 2 — did it read what it cites?",
         "cards": [
           {
@@ -1832,7 +1832,7 @@
       },
       {
         "title": "Groups · compare rules",
-        "kicker": "EXCHANGE · 13:55–14:10 · 15 MIN",
+        "kicker": "EXCHANGE · 13:45–14:00 · 15 MIN",
         "subtitle": "Card 4 — which rule first, on a real repository?",
         "cards": [
           {
@@ -1864,7 +1864,7 @@
       },
       {
         "title": "Individual · second run, hook active",
-        "kicker": "PRACTICE · 14:10–14:35 · 25 MIN",
+        "kicker": "PRACTICE · 14:00–14:25 · 25 MIN",
         "subtitle": "Card 5 — apply the agreed correction with your hook in place",
         "cards": [
           {
@@ -1898,7 +1898,7 @@
       },
       {
         "title": "Individual · run log and handoff draft",
-        "kicker": "PRACTICE · 14:50–15:25 · 35 MIN",
+        "kicker": "PRACTICE · 14:40–15:25 · 45 MIN",
         "subtitle": "Card 6 — a run log a stranger can follow",
         "cards": [
           {
@@ -2004,7 +2004,7 @@
     "slides": [
       {
         "title": "Welcome back",
-        "kicker": "WAVE 2 · CREW 1 · DAY 5 · 10:00–10:15",
+        "kicker": "WAVE 2 · SQUAD 1 · DAY 5 · 10:00–10:15",
         "subtitle": "Where we are, and the two concepts for today",
         "cards": [
           {
@@ -2045,7 +2045,7 @@
         "cards": [
           {
             "title": "Morning",
-            "body": "10:15 concept 1 · 10:35 demo · 10:45–11:10 evaluator · 11:20–11:45 optimizer · 11:45 gate"
+            "body": "10:15 concept 1 · 10:35 demo · 10:45–11:10 evaluator · 11:25–11:45 optimizer · 11:45 gate"
           },
           {
             "title": "Lunch",
@@ -2053,7 +2053,7 @@
           },
           {
             "title": "Afternoon",
-            "body": "13:00 concept 2 · 13:15 groups trace swap · 13:45–14:25 handoff · 14:40 groups fresh-reader test · 15:20 course recap · 15:40 close"
+            "body": "13:00 concept 2 · 13:15 groups trace swap · 13:35–14:15 handoff · 14:30 groups fresh-reader test · 15:20 course recap · 15:40 close"
           }
         ],
         "prompt": "Read the timetable aloud. Three individual blocks, two group blocks, lunch 12:00–13:00, course recap at 15:20.",
@@ -2195,7 +2195,7 @@
       },
       {
         "title": "Individual · optimizer step",
-        "kicker": "PRACTICE · 11:20–11:45 · 25 MIN",
+        "kicker": "PRACTICE · 11:25–11:45 · 20 MIN",
         "subtitle": "Card 2 — apply only the numbered instructions",
         "cards": [
           {
@@ -2333,7 +2333,7 @@
       },
       {
         "title": "Individual · handoff",
-        "kicker": "PRACTICE · 13:45–14:25 · 40 MIN",
+        "kicker": "PRACTICE · 13:35–14:15 · 40 MIN",
         "subtitle": "Card 4 — a handoff a stranger can execute",
         "cards": [
           {
@@ -2367,7 +2367,7 @@
       },
       {
         "title": "Groups · fresh-reader reproduction",
-        "kicker": "TEST · 14:40–15:20 · 40 MIN",
+        "kicker": "TEST · 14:30–15:20 · 50 MIN",
         "subtitle": "Card 5 — a neighbour reproduces your run from the handoff in ten minutes",
         "cards": [
           {

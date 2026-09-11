@@ -1,14 +1,14 @@
-# Crew 2 — new five-day human-agent training track
+# Squad 2 — new five-day human-agent training track
 
 Status: `FUTURE CURRICULUM — PREFLIGHT APPROVAL: OPEN`
 
-This directory is a new five-day track for a later crew. It starts after crew
+This directory is a new five-day track for a later squad. It starts after squad
 1 finishes the existing [Day 3](../../days/day-3.md),
 [Day 4](../../days/day-4.md), and [Day 5](../../days/day-5.md) material. The
-existing guides remain crew 1 source material; they are not learner results,
+existing guides remain squad 1 source material; they are not learner results,
 approval, or evidence that a team ran the sessions.
 
-Crew 2 participants use the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab)
+Squad 2 participants use the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab)
 root repository for the n8n-first and Claude Code rebuild exercises. Trainers
 use the fictional Northstar payment reconciliation scenario and the
 [ticket-coach workbook](../../scenarios/ticket-agent/README.md), which remains
@@ -60,15 +60,14 @@ policy.
 | 10:15–10:35 | 20 | Demo | Trainer introduces only the concept used in the next task |
 | 10:35–11:00 | 25 | Individual attempt | Every learner works alone on the literal task card |
 | 11:00–11:20 | 20 | Review | Pair or facilitator readback; record `PASS`, `FAIL`, or `OPEN` |
-| 11:20–11:30 | 10 | Break | — |
-| 11:30–12:00 | 30 | Practice | Small group, one navigator after individual work |
+| 11:20–11:35 | 15 | Break | — |
+| 11:35–12:00 | 25 | Practice | Small group, one navigator after individual work |
 | 12:00–13:00 | 60 | Lunch | — |
 | 13:00–13:15 | 15 | Check | Human acceptance against sources and the task card |
 | 13:15–14:00 | 45 | Practice | Apply the morning result to the day's second case |
-| 14:00–14:10 | 10 | Break | — |
-| 14:10–15:00 | 50 | Transfer | Reproduce, teach back, or hand to a fresh reader |
-| 15:00–15:10 | 10 | Break | — |
-| 15:10–15:40 | 30 | Handoff | Store artifact, evidence, owner, next action, and `OPEN` items |
+| 14:00–14:15 | 15 | Break | — |
+| 14:15–15:05 | 50 | Transfer | Reproduce, teach back, or hand to a fresh reader |
+| 15:05–15:40 | 35 | Handoff | Store artifact, evidence, owner, next action, and `OPEN` items |
 | 15:40–16:00 | 20 | Close | Rating, MOB recap, Kahoot/wordcloud delta, next practice need |
 
 ## Shared acceptance rules
@@ -90,14 +89,14 @@ policy.
 
 | Day | Workbook | Public guide URL | Site presentation |
 | --- | --- | --- | --- |
-| 1 | [day 1](day-1.md) | [GitHub guide](https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-1.md) | [Present day 1](https://aetherlink-training.ryanlisse.chatgpt.site/?crew=2&day=1#1) |
-| 2 | [day 2](day-2.md) | [GitHub guide](https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-2.md) | [Present day 2](https://aetherlink-training.ryanlisse.chatgpt.site/?crew=2&day=2#1) |
-| 3 | [day 3](day-3.md) | [GitHub guide](https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-3.md) | [Present day 3](https://aetherlink-training.ryanlisse.chatgpt.site/?crew=2&day=3#1) |
-| 4 | [day 4](day-4.md) | [GitHub guide](https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-4.md) | [Present day 4](https://aetherlink-training.ryanlisse.chatgpt.site/?crew=2&day=4#1) |
-| 5 | [day 5](day-5.md) | [GitHub guide](https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-5.md) | [Present day 5](https://aetherlink-training.ryanlisse.chatgpt.site/?crew=2&day=5#1) |
+| 1 | [day 1](day-1.md) | [GitHub guide](https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-1.md) | [Present day 1](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=2&day=1#1) |
+| 2 | [day 2](day-2.md) | [GitHub guide](https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-2.md) | [Present day 2](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=2&day=2#1) |
+| 3 | [day 3](day-3.md) | [GitHub guide](https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-3.md) | [Present day 3](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=2&day=3#1) |
+| 4 | [day 4](day-4.md) | [GitHub guide](https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-4.md) | [Present day 4](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=2&day=4#1) |
+| 5 | [day 5](day-5.md) | [GitHub guide](https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-5.md) | [Present day 5](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=2&day=5#1) |
 
 The presentation data lives in [presentations.json](presentations.json). The
-JSON is intentionally separate from the existing crew 1
+JSON is intentionally separate from the existing squad 1
 [day-decks.json](../../presentations/day-decks.json); the old deck is
 preserved as trainer material. Both decks point learners to the lab root and
 keep workbook links for trainers.

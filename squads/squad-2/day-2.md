@@ -1,4 +1,4 @@
-# Crew 2 Day 2 — build one bounded ticket agent in n8n, then Claude Code
+# Squad 2 Day 2 — build one bounded ticket agent in n8n, then Claude Code
 
 Mode: `FULLY GUIDED` · Time: `10:00–16:00` · Status: `FUTURE CURRICULUM`
 
@@ -64,18 +64,17 @@ flowchart LR
 | 10:10–10:20 | 10 | n8n demo | Show credentialed login and preview boundary |
 | 10:20–10:45 | 25 | Individual n8n run | Every learner runs alone on their own laptop |
 | 10:45–11:00 | 15 | n8n review | Check the shared input/output contract |
-| 11:00–11:10 | 10 | Break | — |
-| 11:10–11:45 | 35 | n8n practice | Finish baseline and capture settings/evidence |
+| 11:00–11:15 | 15 | Break | — |
+| 11:15–11:45 | 30 | n8n practice | Finish baseline and capture settings/evidence |
 | 11:45–12:00 | 15 | Human gate | Accept, correct, or mark the `101` baseline `OPEN` |
 | 12:00–13:00 | 60 | Lunch | — |
 | 13:00–13:10 | 10 | Claude Code demo | Rebuild the same agent and contract |
 | 13:10–13:35 | 25 | Individual Claude Code run | Run alone on the same `TICKET-OPS-101` |
 | 13:35–13:50 | 15 | Claude Code review | Apply the same checklist and gate |
-| 13:50–14:00 | 10 | Break | — |
-| 14:00–14:30 | 30 | Comparison | Fresh reader compares the same functional contract/input and recorded adapters |
-| 14:30–14:45 | 15 | Transfer gate | Only now run the unchanged method on `102` |
-| 14:45–15:00 | 15 | Break | — |
-| 15:00–15:40 | 40 | Handoff | Store runs, settings, decisions, and `OPEN` items |
+| 13:50–14:20 | 30 | Comparison | Fresh reader compares the same functional contract/input and recorded adapters |
+| 14:20–14:35 | 15 | Transfer gate | Only now run the unchanged method on `102` |
+| 14:35–14:50 | 15 | Break | — |
+| 14:50–15:40 | 50 | Handoff | Store runs, settings, decisions, and `OPEN` items |
 | 15:40–16:00 | 20 | Close | Rating, MOB recap, and next practice |
 
 Total: **360 minutes**. The 25-minute n8n and 25-minute Claude Code blocks
@@ -126,7 +125,7 @@ sections, citations, assumptions, and `OPEN` labels. A human reviewer records
 
 From the lab root run `mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md`, then start Claude Code. Rebuild the same functional contract from the lab instructions. Keep `TICKET-OPS-101`, the output contract, and evidence fields unchanged from n8n. Record the Claude Code read-only tool adapter, model/mode, and access, preview the result, and save the accepted output to `participant-output/ticket-101-preview.md`. Run `python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md`, then apply the same checklist and human gate. If the lab or account is unavailable, record `OPEN`; do not manufacture a comparison.
 
-### 4. Compare the same input — 14:00–14:30
+### 4. Compare the same input — 13:50–14:20
 
 Give a fresh reviewer both `101` previews, the exact prompt, settings, and
 contract. They identify one output difference or `OPEN — no observed
@@ -134,18 +133,18 @@ difference`, one unchanged boundary, and missing evidence. Describe n8n and
 Claude Code differences as observations of these runs. Do not claim either
 platform caused a difference; this exercise does not establish causality.
 
-### 5. Transfer after the comparison — 14:30–14:45
+### 5. Transfer after the comparison — 14:20–14:35
 
 After the human accepts the `TICKET-OPS-101` comparison, use the same agent
 instructions and output contract with `TICKET-OPS-102` as the only input
 change. Record it as a transfer, not another comparison. Do not open `102`
 before the comparison is recorded.
 
-### 6. Handoff and close — 15:00–16:00
+### 6. Handoff and close — 14:50–16:00
 
 Store the lab root URL, prompt, contract, n8n and Claude Code settings, both
 `101` previews, comparison, human decisions, later `102` transfer, access
-gaps, and next action in `lab-notes/crew-2/day-2-handoff.md` or the lab’s
+gaps, and next action in `lab-notes/squad-2/day-2-handoff.md` or the lab’s
 equivalent. A fresh receiver must find both `101` runs and explain what is
 `OPEN` in two minutes. Close with `independent`, `with help`, or `needs
 practice`, plus one agreed navigator/driver lesson; keep personal feedback

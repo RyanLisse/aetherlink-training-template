@@ -52,15 +52,14 @@ the outcome and boundaries, while a task is one bounded piece of work.
 | 10:00–10:15 | 15 | Opening, working agreement, fixture boundary |
 | 10:15–10:40 | 25 | Concept recap and trainer demo: agent context, intent, SDLC, MOB |
 | 10:40–11:15 | 35 | Exercise 1: interview and draft intent |
-| 11:15–11:25 | 10 | Break |
-| 11:25–12:00 | 35 | Exercise 2: shape the reconciliation specification |
+| 11:15–11:30 | 15 | Break |
+| 11:30–12:00 | 30 | Exercise 2: shape the reconciliation specification |
 | 12:00–13:00 | 60 | Lunch |
 | 13:00–13:20 | 20 | Trainer demo and coaching: source IDs and evidence |
 | 13:20–14:05 | 45 | Exercise 3: plan the smallest slice |
-| 14:05–14:15 | 10 | Break |
-| 14:15–15:05 | 50 | Exercise 4: read-only reconciliation and evidence |
-| 15:05–15:15 | 10 | Break |
-| 15:15–15:45 | 30 | Exercise 5: handoff and feedback loop |
+| 14:05–14:20 | 15 | Break |
+| 14:20–15:10 | 50 | Exercise 4: read-only reconciliation and evidence |
+| 15:10–15:45 | 35 | Exercise 5: handoff and feedback loop |
 | 15:45–16:00 | 15 | Individual check-in and MOB reflection |
 
 Total: **360 minutes**.

@@ -4,12 +4,12 @@ This small repository helps a cohort run a repeatable human-agent learning loop.
 
 ## Choose the training track
 
-Wave 2 crew 1 has completed Days 1–2 and continues with the remaining three
+Wave 2 squad 1 has completed Days 1–2 and continues with the remaining three
 sessions, Days 3–5. Start with the [Day 3 continuation guide](days/day-3.md);
-the prior handoff is context, not a new cohort result. A later crew 2 starts a
-fresh five-session run using the [crew 2 plan](crews/crew-2/README.md). Keep
-the tracks separate; no crew 2 outcome, access, or participant result is
-implied by crew 1 material.
+the prior handoff is context, not a new cohort result. A later squad 2 starts a
+fresh five-session run using the [squad 2 plan](squads/squad-2/README.md). Keep
+the tracks separate; no squad 2 outcome, access, or participant result is
+implied by squad 1 material.
 
 For a fresh run that explicitly selects the earlier guided reset, use the
 [guided ticket exercise](scenarios/payment-reconciliation/guided-ticket-exercise.md)
@@ -17,12 +17,13 @@ with the [Day 2 guide](days/day-2.md). Keep the literal task card visible; if
 the group is blocked or drifting for five minutes, the facilitator intervenes
 by restating the task, pointing to the source, or stopping at the gate.
 
-## Wave 2 crew 1 session map · 10:00–16:00
+## Wave 2 squad 1 session map · 10:00–16:00
 
-The five-session map below records crew 1's completed context and its remaining
-Days 3–5. Each session is six hours (360 minutes) and includes a timed agenda,
+The five-session map below records squad 1's completed context and its remaining
+Days 3–5. Each session is six hours (360 minutes) with lunch 12:00–13:00 and two
+15-minute breaks, and includes a timed agenda,
 literal participant instructions, copy-ready prompts, expected outputs, human
-gates, and reflection. For crew 2, use its separate plan linked above.
+gates, and reflection. For squad 2, use its separate plan linked above.
 
 | Day | Focus | Participant workbook | Interactive presentation |
 | --- | --- | --- | --- |

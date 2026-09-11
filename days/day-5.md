@@ -1,6 +1,6 @@
 # Day 5 — Verify results, then close the loop: evaluator and handoff
 
-Final session for **Wave 2 crew 1**. Two concepts:
+Final session for **Wave 2 squad 1**. Two concepts:
 
 1. **Verify results with an evaluator.** The evaluator-optimizer pattern: a
    second agent judges your output against the written contract and returns
@@ -52,16 +52,15 @@ flowchart LR
 | 10:15–10:35 | 20 | Concept 1: verify results — the evaluator-optimizer pattern |
 | 10:35–10:45 | 10 | Demo: evaluator on a weak output → `REVISE` with instructions |
 | 10:45–11:10 | 25 | **Individual** Card 1: evaluator round 1 on your Day 4 output |
-| 11:10–11:20 | 10 | Break |
-| 11:20–11:45 | 25 | **Individual** Card 2: optimizer step, trace 2 |
+| 11:10–11:25 | 15 | Break |
+| 11:25–11:45 | 20 | **Individual** Card 2: optimizer step, trace 2 |
 | 11:45–12:00 | 15 | Human gate: verdicts and round count recorded |
 | 12:00–13:00 | 60 | Lunch |
 | 13:00–13:15 | 15 | Concept 2: close the loop — handoff and Maintain; two traces side by side |
 | 13:15–13:35 | 20 | Groups of 3–4, Card 3: trace swap |
-| 13:35–13:45 | 10 | Break |
-| 13:45–14:25 | 40 | **Individual** Card 4: write the handoff |
-| 14:25–14:40 | 15 | Break |
-| 14:40–15:20 | 40 | Groups of 3–4, Card 5: fresh-reader reproduction |
+| 13:35–14:15 | 40 | **Individual** Card 4: write the handoff |
+| 14:15–14:30 | 15 | Break |
+| 14:30–15:20 | 50 | Groups of 3–4, Card 5: fresh-reader reproduction |
 | 15:20–15:40 | 20 | Recap: five days, evidence wall, what transfers to Jira/GitLab/Confluence |
 | 15:40–16:00 | 20 | Check-out, MOB reflection, Kahoot close against the Day 1 baseline |
 
@@ -105,7 +104,7 @@ group work that uses them.
 - **Result:** evaluation saved, checker line, run log updated.
 - **Time limit:** 25 min.
 
-### Card 2 — optimizer step (individual, 11:20–11:45, 25 min)
+### Card 2 — optimizer step (individual, 11:25–11:45, 20 min)
 
 - **Goal:** the revise instructions applied, nothing else changed.
 - **Steps:** if `REVISE`, re-run your agent's first prompt plus "Apply these instructions:" and the numbered list verbatim; new trace; save as `participant-output/<option>-v2.md`; run the option checker; run the evaluator once more (round 2 is the last). If `PASS` in round 1, run the agent once more with the same prompt and compare traces anyway — repeatability is evidence too.
@@ -119,14 +118,14 @@ group work that uses them.
 - **Result:** one observed trace difference per person on the board, or "none observed".
 - **Time limit:** 20 min.
 
-### Card 4 — handoff (individual, 13:45–14:25, 40 min)
+### Card 4 — handoff (individual, 13:35–14:15, 40 min)
 
 - **Goal:** a handoff a stranger can execute.
 - **Steps:** complete `templates/handoff.md`: option, exact prompts, Claude Code version and model shown, files read (from the trace), checker and evaluator lines, both trace file names, what remains `OPEN`, and the one command to reproduce; save as `lab-notes/handoff-day-5.md`.
 - **Result:** the handoff file.
 - **Time limit:** 40 min.
 
-### Card 5 — fresh-reader reproduction (groups of 3–4, 14:40–15:20, 40 min)
+### Card 5 — fresh-reader reproduction (groups of 3–4, 14:30–15:20, 50 min)
 
 - **Goal:** a neighbour reproduces your run from the handoff alone in ten minutes.
 - **Steps:** rotate handoffs one seat; the reader follows the text on their own laptop, silently noting each hesitation; at ten minutes they report reproduced / partially / blocked and their hesitations; the author fixes wording only, not scope.
@@ -140,7 +139,7 @@ relay (Day 2), one agent twice (Day 3), chosen agent with a trace (Day 4),
 evaluator and handoff (Day 5). Ask each group: which of A, B, C would you run
 first on a real Jira ticket, GitLab MR, or Confluence page — and which
 approval, access, or data decision is `OPEN` before you may? Record the
-answers as the crew's next-step list, not as commitments.
+answers as the squad's next-step list, not as commitments.
 
 ## Close — 15:40–16:00
 

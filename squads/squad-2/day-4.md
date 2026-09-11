@@ -1,4 +1,4 @@
-# Crew 2 Day 4 — peer runbook and shared-skill handoff
+# Squad 2 Day 4 — peer runbook and shared-skill handoff
 
 Mode: `PEER-LED` · Time: `10:00–16:00` · Status: `FUTURE CURRICULUM`
 
@@ -15,7 +15,7 @@ request, access grant, or approval is claimed.
 Read [the team workflow](../../scenarios/payment-reconciliation/workflow.md),
 [FIN-003](../../scenarios/payment-reconciliation/tickets/FIN-003.md), the
 [scenario README](../../scenarios/payment-reconciliation/README.md), and
-[crew 2 Day 3](day-3.md).
+[squad 2 Day 3](day-3.md).
 
 ## Fixed agenda
 
@@ -25,15 +25,14 @@ Read [the team workflow](../../scenarios/payment-reconciliation/workflow.md),
 | 10:15–10:35 | 20 | Demo | Runbook-to-handoff path |
 | 10:35–11:00 | 25 | Individual attempt | Personal runbook outline |
 | 11:00–11:20 | 20 | Review | Peer usability readback |
-| 11:20–11:30 | 10 | Break | — |
-| 11:30–12:00 | 30 | Practice | Groups of 3–4, one navigator |
+| 11:20–11:35 | 15 | Break | — |
+| 11:35–12:00 | 25 | Practice | Groups of 3–4, one navigator |
 | 12:00–13:00 | 60 | Lunch | — |
 | 13:00–13:15 | 15 | Check | Human scope gate |
 | 13:15–14:00 | 45 | Practice | Shared-skill and mock workflow fields |
-| 14:00–14:10 | 10 | Break | — |
-| 14:10–15:00 | 50 | Transfer | Fresh reader runs the runbook |
-| 15:00–15:10 | 10 | Break | — |
-| 15:10–15:40 | 30 | Handoff | Receiver-ready packet |
+| 14:00–14:15 | 15 | Break | — |
+| 14:15–15:05 | 50 | Transfer | Fresh reader runs the runbook |
+| 15:05–15:40 | 35 | Handoff | Receiver-ready packet |
 | 15:40–16:00 | 20 | Close | Rating and MOB recap |
 
 Total: **360 minutes**. The 25-minute personal attempt comes before peer work.
@@ -68,7 +67,7 @@ from published workflow records.
 
 ### 2. Individual attempt — 10:35–11:00
 
-**Task card:** Draft `lab-notes/crew-2/day-4-runbook.md` alone. Include inputs,
+**Task card:** Draft `lab-notes/squad-2/day-4-runbook.md` alone. Include inputs,
 cutoff, source IDs, sequence, evidence columns, stop rules, and rollback.
 
 **Example prompt:**
@@ -98,7 +97,7 @@ marks missing information. Do not rewrite it for the author.
 
 **Human acceptance:** Peer finds a next action without oral explanation.
 
-### 4. Group practice — 11:30–12:00
+### 4. Group practice — 11:35–12:00
 
 **Task card:** Combine the best runbook details in groups of 3–4. Navigator
 directs the driver; scribe maintains an evidence table; skeptic tests scope.
@@ -134,7 +133,7 @@ remaining open workflow dependencies.
 
 ### 6. Shared skill and mock workflow — 13:15–14:00
 
-**Task card:** Extract `lab-notes/crew-2/day-4-shared-skill.md` with trigger,
+**Task card:** Extract `lab-notes/squad-2/day-4-shared-skill.md` with trigger,
 inputs, steps, evidence contract, stop rule, and receiver test. Fill draft
 fields for a GitLab MR, Jira task, and Confluence page without publishing.
 
@@ -150,7 +149,7 @@ fields for a GitLab MR, Jira task, and Confluence page without publishing.
 **Human acceptance:** Peer confirms the skill is runnable from the note and
 does not imply any remote side effect.
 
-### 7. Transfer — 14:10–15:00
+### 7. Transfer — 14:15–15:05
 
 **Task card:** Give the runbook and skill to a fresh reader. They follow the
 sequence, reproduce one source check, and report the first missing access.
@@ -166,7 +165,7 @@ sequence, reproduce one source check, and report the first missing access.
 **Human acceptance:** Receiver can state the next owner role, check, and stop
 rule without oral coaching.
 
-### 8. Handoff and close — 15:10–16:00
+### 8. Handoff and close — 15:05–16:00
 
 **Task card:** Store the runbook, shared skill, receiver test, reviewer role,
 mock links, next owner, and `OPEN` items. Close with rating and MOB recap.
@@ -178,7 +177,7 @@ mock links, next owner, and `OPEN` items. Close with rating and MOB recap.
 > next owner, and `OPEN` access. Rate yourself independent, with help, or
 > needs practice, and add one agreed peer lesson.
 
-**Output:** `lab-notes/crew-2/day-4-handoff.md`.
+**Output:** `lab-notes/squad-2/day-4-handoff.md`.
 
 **Human acceptance:** Facilitator verifies the fresh-reader test happened and
 that no draft is described as a live GitLab, Jira, or Confluence record.

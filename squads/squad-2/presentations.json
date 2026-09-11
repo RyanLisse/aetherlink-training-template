@@ -1,7 +1,7 @@
 {
   "day1": {
-    "title": "Crew 2 Day 1 — one visible result",
-    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-1.md",
+    "title": "Squad 2 Day 1 — one visible result",
+    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-1.md",
     "slides": [
       {
         "title": "Start small",
@@ -43,14 +43,14 @@
           },
           {
             "title": "Midday",
-            "body": "11:30 practice · 12:00–13:00 lunch · 13:00 check · 13:15 practice · 14:00 break"
+            "body": "11:35 practice · 12:00–13:00 lunch · 13:00 check · 13:15 practice · 14:00 break"
           },
           {
             "title": "Afternoon",
-            "body": "14:10 transfer · 15:00 break · 15:10 handoff · 15:40 close"
+            "body": "14:15 transfer · 15:05 handoff · 15:40 close"
           }
         ],
-        "prompt": "Read every timebox aloud: 10:00–10:15 open; 10:15–10:35 demo; 10:35–11 individual; 11–11:20 review; 11:20–11:30 break; 11:30–12 practice; 12–13 lunch; 13–13:15 check; 13:15–14 practice; 14–14:10 break; 14:10–15 transfer; 15–15:10 break; 15:10–15:40 handoff; 15:40–16 close.",
+        "prompt": "Read every timebox aloud: 10:00–10:15 open; 10:15–10:35 demo; 10:35–11 individual; 11–11:20 review; 11:20–11:35 break; 11:35–12 practice; 12–13 lunch; 13–13:15 check; 13:15–14 practice; 14–14:15 break; 14:15–15:05 transfer; 15:05–15:40 handoff; 15:40–16 close.",
         "notes": "Keep this agenda visible. Every learner gets the 25-minute individual attempt before group work.",
         "dark": false,
         "steps": [
@@ -59,7 +59,7 @@
           "Keep breaks and lunch fixed."
         ],
         "expected": "Everyone can navigate the 360-minute day.",
-        "check": "The agenda includes all four breaks or meal boundaries and every required block."
+        "check": "The agenda includes all three breaks or meal boundaries and every required block."
       },
       {
         "title": "Read-only evidence loop",
@@ -97,7 +97,7 @@
         "cards": [
           {
             "title": "File",
-            "body": "lab-notes/crew-2/day-1-one-row.md"
+            "body": "lab-notes/squad-2/day-1-one-row.md"
           },
           {
             "title": "Case",
@@ -209,7 +209,7 @@
       },
       {
         "title": "Fresh-reader transfer",
-        "kicker": "TRANSFER · 14:10",
+        "kicker": "TRANSFER · 14:15",
         "subtitle": "The receiver should reproduce one check",
         "cards": [
           {
@@ -238,7 +238,7 @@
       },
       {
         "title": "Close the loop",
-        "kicker": "HANDOFF + CLOSE · 15:10",
+        "kicker": "HANDOFF + CLOSE · 15:05",
         "subtitle": "Store evidence, rating, and MOB learning",
         "cards": [
           {
@@ -268,8 +268,8 @@
     ]
   },
   "day2": {
-    "title": "Crew 2 Day 2 — same agent in n8n, then Claude Code",
-    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-2.md",
+    "title": "Squad 2 Day 2 — same agent in n8n, then Claude Code",
+    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-2.md",
     "participantRepo": "https://github.com/RyanLisse/aetherlink-agent-lab",
     "slides": [
       {
@@ -401,15 +401,15 @@
         "cards": [
           {
             "title": "Theory + build",
-            "body": "10:00–10:10 theory · 10:10–10:20 n8n demo · 10:20–10:45 individual n8n 25 · 10:45–11:00 review · 11:00–11:10 break"
+            "body": "10:00–10:10 theory · 10:10–10:20 n8n demo · 10:20–10:45 individual n8n 25 · 10:45–11:00 review · 11:00–11:15 break"
           },
           {
             "title": "Midday",
-            "body": "11:10–11:45 n8n evidence · 11:45–12:00 gate · 12:00–13:00 lunch · 13:00–13:10 Claude Code demo · 13:10–13:35 individual Claude Code 25 · 13:35–13:50 review"
+            "body": "11:15–11:45 n8n evidence · 11:45–12:00 gate · 12:00–13:00 lunch · 13:00–13:10 Claude Code demo · 13:10–13:35 individual Claude Code 25 · 13:35–13:50 review"
           },
           {
             "title": "Afternoon",
-            "body": "13:50–14:00 break · 14:00–14:30 same-input comparison · 14:30–14:45 gated 102 transfer · 14:45–15:00 break · 15:00–15:40 handoff · 15:40–16:00 close"
+            "body": "13:50–14:20 same-input comparison · 14:20–14:35 gated 102 transfer · 14:35–14:50 break · 14:50–15:40 handoff · 15:40–16:00 close"
           }
         ],
         "prompt": "Read every timebox aloud: theory before either build; n8n demo and 25-minute individual run in the morning; lunch 12:00–13:00; Claude Code rebuild and 25-minute individual run in the afternoon; same-input comparison before any TICKET-OPS-102 transfer.",
@@ -421,7 +421,7 @@
           "Keep breaks and lunch fixed."
         ],
         "expected": "Everyone can navigate the 360-minute day.",
-        "check": "The agenda includes all four breaks or meal boundaries and every required block."
+        "check": "The agenda includes all three breaks or meal boundaries and every required block."
       },
       {
         "title": "n8n demo · bounded preview",
@@ -512,7 +512,7 @@
       },
       {
         "title": "Evidence capture",
-        "kicker": "EVIDENCE · 11:10–12:00",
+        "kicker": "EVIDENCE · 11:15–12:00",
         "subtitle": "Freeze the n8n baseline before lunch",
         "cards": [
           {
@@ -631,7 +631,7 @@
       },
       {
         "title": "Compare the same input",
-        "kicker": "COMPARISON · 14:00–14:30",
+        "kicker": "COMPARISON · 13:50–14:20",
         "subtitle": "Describe platform observations without causal conclusions",
         "cards": [
           {
@@ -661,7 +661,7 @@
       },
       {
         "title": "Transfer · ticket 102",
-        "kicker": "TRANSFER · 14:30–14:45",
+        "kicker": "TRANSFER · 14:20–14:35",
         "subtitle": "Use the accepted method only after the 101 comparison",
         "cards": [
           {
@@ -690,7 +690,7 @@
       },
       {
         "title": "Handoff the coach",
-        "kicker": "HANDOFF · 15:00–15:40",
+        "kicker": "HANDOFF · 14:50–15:40",
         "subtitle": "Make both platform runs and the gated transfer reproducible",
         "cards": [
           {
@@ -750,8 +750,8 @@
     ]
   },
   "day3": {
-    "title": "Crew 2 Day 3 — one-ticket relay",
-    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-3.md",
+    "title": "Squad 2 Day 3 — one-ticket relay",
+    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-3.md",
     "slides": [
       {
         "title": "Keep one ticket intact",
@@ -793,14 +793,14 @@
           },
           {
             "title": "Midday",
-            "body": "11:30 practice · 12:00–13:00 lunch · 13:00 check · 13:15 practice · 14:00 break"
+            "body": "11:35 practice · 12:00–13:00 lunch · 13:00 check · 13:15 practice · 14:00 break"
           },
           {
             "title": "Afternoon",
-            "body": "14:10 transfer · 15:00 break · 15:10 handoff · 15:40 close"
+            "body": "14:15 transfer · 15:05 handoff · 15:40 close"
           }
         ],
-        "prompt": "Read every timebox aloud: 10:00–10:15 open; 10:15–10:35 demo; 10:35–11 individual; 11–11:20 review; 11:20–11:30 break; 11:30–12 practice; 12–13 lunch; 13–13:15 check; 13:15–14 practice; 14–14:10 break; 14:10–15 transfer; 15–15:10 break; 15:10–15:40 handoff; 15:40–16 close.",
+        "prompt": "Read every timebox aloud: 10:00–10:15 open; 10:15–10:35 demo; 10:35–11 individual; 11–11:20 review; 11:20–11:35 break; 11:35–12 practice; 12–13 lunch; 13–13:15 check; 13:15–14 practice; 14–14:15 break; 14:15–15:05 transfer; 15:05–15:40 handoff; 15:40–16 close.",
         "notes": "Keep this agenda visible. Every learner gets the 25-minute individual attempt before group work.",
         "dark": false,
         "steps": [
@@ -809,7 +809,7 @@
           "Keep breaks and lunch fixed."
         ],
         "expected": "Everyone can navigate the 360-minute day.",
-        "check": "The agenda includes all four breaks or meal boundaries and every required block."
+        "check": "The agenda includes all three breaks or meal boundaries and every required block."
       },
       {
         "title": "Three-pass demo",
@@ -848,7 +848,7 @@
         "cards": [
           {
             "title": "File",
-            "body": "lab-notes/crew-2/day-3-analyst.md"
+            "body": "lab-notes/squad-2/day-3-analyst.md"
           },
           {
             "title": "Rows",
@@ -960,7 +960,7 @@
       },
       {
         "title": "Fresh tester",
-        "kicker": "TRANSFER · 14:10",
+        "kicker": "TRANSFER · 14:15",
         "subtitle": "Reproduce one positive and one negative check",
         "cards": [
           {
@@ -989,7 +989,7 @@
       },
       {
         "title": "Relay handoff",
-        "kicker": "HANDOFF + CLOSE · 15:10",
+        "kicker": "HANDOFF + CLOSE · 15:05",
         "subtitle": "One packet, three roles, clear next action",
         "cards": [
           {
@@ -1019,8 +1019,8 @@
     ]
   },
   "day4": {
-    "title": "Crew 2 Day 4 — peer runbook and shared skill",
-    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-4.md",
+    "title": "Squad 2 Day 4 — peer runbook and shared skill",
+    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-4.md",
     "slides": [
       {
         "title": "Shared timing pattern",
@@ -1033,14 +1033,14 @@
           },
           {
             "title": "Midday",
-            "body": "11:30 practice · 12:00–13:00 lunch · 13:00 check · 13:15 practice · 14:00 break"
+            "body": "11:35 practice · 12:00–13:00 lunch · 13:00 check · 13:15 practice · 14:00 break"
           },
           {
             "title": "Afternoon",
-            "body": "14:10 transfer · 15:00 break · 15:10 handoff · 15:40 close"
+            "body": "14:15 transfer · 15:05 handoff · 15:40 close"
           }
         ],
-        "prompt": "Read every timebox aloud: 10:00–10:15 open; 10:15–10:35 demo; 10:35–11 individual; 11–11:20 review; 11:20–11:30 break; 11:30–12 practice; 12–13 lunch; 13–13:15 check; 13:15–14 practice; 14–14:10 break; 14:10–15 transfer; 15–15:10 break; 15:10–15:40 handoff; 15:40–16 close.",
+        "prompt": "Read every timebox aloud: 10:00–10:15 open; 10:15–10:35 demo; 10:35–11 individual; 11–11:20 review; 11:20–11:35 break; 11:35–12 practice; 12–13 lunch; 13–13:15 check; 13:15–14 practice; 14–14:15 break; 14:15–15:05 transfer; 15:05–15:40 handoff; 15:40–16 close.",
         "notes": "Keep this agenda visible. Every learner gets the 25-minute individual attempt before peer work.",
         "dark": false,
         "steps": [
@@ -1116,7 +1116,7 @@
         "cards": [
           {
             "title": "File",
-            "body": "lab-notes/crew-2/day-4-runbook.md"
+            "body": "lab-notes/squad-2/day-4-runbook.md"
           },
           {
             "title": "Inputs",
@@ -1228,7 +1228,7 @@
       },
       {
         "title": "Receiver test",
-        "kicker": "TRANSFER · 14:10",
+        "kicker": "TRANSFER · 14:15",
         "subtitle": "Fresh reader reproduces one check",
         "cards": [
           {
@@ -1257,7 +1257,7 @@
       },
       {
         "title": "Peer handoff",
-        "kicker": "HANDOFF + CLOSE · 15:10",
+        "kicker": "HANDOFF + CLOSE · 15:05",
         "subtitle": "Store evidence and the learning",
         "cards": [
           {
@@ -1287,8 +1287,8 @@
     ]
   },
   "day5": {
-    "title": "Crew 2 Day 5 — cutoff-only transfer",
-    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/crews/crew-2/day-5.md",
+    "title": "Squad 2 Day 5 — cutoff-only transfer",
+    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-5.md",
     "slides": [
       {
         "title": "Transfer one variable",
@@ -1330,14 +1330,14 @@
           },
           {
             "title": "Midday",
-            "body": "11:30 practice · 12:00–13:00 lunch · 13:00 check · 13:15 practice · 14:00 break"
+            "body": "11:35 practice · 12:00–13:00 lunch · 13:00 check · 13:15 practice · 14:00 break"
           },
           {
             "title": "Afternoon",
-            "body": "14:10 transfer · 15:00 break · 15:10 handoff · 15:40 close"
+            "body": "14:15 transfer · 15:05 handoff · 15:40 close"
           }
         ],
-        "prompt": "Read every timebox aloud: 10:00–10:15 open; 10:15–10:35 demo; 10:35–11 individual; 11–11:20 review; 11:20–11:30 break; 11:30–12 practice; 12–13 lunch; 13–13:15 check; 13:15–14 practice; 14–14:10 break; 14:10–15 transfer; 15–15:10 break; 15:10–15:40 handoff; 15:40–16 close.",
+        "prompt": "Read every timebox aloud: 10:00–10:15 open; 10:15–10:35 demo; 10:35–11 individual; 11–11:20 review; 11:20–11:35 break; 11:35–12 practice; 12–13 lunch; 13–13:15 check; 13:15–14 practice; 14–14:15 break; 14:15–15:05 transfer; 15:05–15:40 handoff; 15:40–16 close.",
         "notes": "Keep this agenda visible. Every learner gets the 25-minute individual attempt before group work.",
         "dark": false,
         "steps": [
@@ -1346,7 +1346,7 @@
           "Keep breaks and lunch fixed."
         ],
         "expected": "Everyone can navigate the 360-minute day.",
-        "check": "The agenda includes all four breaks or meal boundaries and every required block."
+        "check": "The agenda includes all three breaks or meal boundaries and every required block."
       },
       {
         "title": "Hash and cutoff demo",
@@ -1384,7 +1384,7 @@
         "cards": [
           {
             "title": "File",
-            "body": "lab-notes/crew-2/day-5-scope.md"
+            "body": "lab-notes/squad-2/day-5-scope.md"
           },
           {
             "title": "Copy",
@@ -1496,7 +1496,7 @@
       },
       {
         "title": "Independent receiver test",
-        "kicker": "TRANSFER · 14:10",
+        "kicker": "TRANSFER · 14:15",
         "subtitle": "Reproduce copy and cutoff evidence",
         "cards": [
           {
@@ -1525,7 +1525,7 @@
       },
       {
         "title": "Finish independently",
-        "kicker": "HANDOFF + CLOSE · 15:10",
+        "kicker": "HANDOFF + CLOSE · 15:05",
         "subtitle": "Store evidence and next practice",
         "cards": [
           {

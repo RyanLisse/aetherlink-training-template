@@ -1,10 +1,10 @@
 # Learner guide — payment reconciliation track
 
 This is the scenario adaptation for the five-session programme. It is
-fictional, local, and read-only. Wave 2 crew 1 uses this guide for its
-remaining Days 3–5 after completing Days 1–2; crew 2 has a separate fresh
-curriculum in the [crew 2 plan](../../crews/crew-2/README.md). Do not use crew
-1 results as crew 2 evidence. Use only the three CSVs in [`data/`](data/)
+fictional, local, and read-only. Wave 2 squad 1 uses this guide for its
+remaining Days 3–5 after completing Days 1–2; squad 2 has a separate fresh
+curriculum in the [squad 2 plan](../../squads/squad-2/README.md). Do not use squad
+1 results as squad 2 evidence. Use only the three CSVs in [`data/`](data/)
 and the baseline cutoff `2026-09-10 12:00 Europe/Amsterdam`. Day 5 explicitly
 uses a working-copy variation with cutoff `2026-09-13`; the baseline validator
 does not verify that variation. Amounts are integer
@@ -33,12 +33,12 @@ The shared six-hour schedule and guided exercises live in:
 
 For a fresh run's first visible result after Day 1, use the [guided ticket
 exercise](guided-ticket-exercise.md) with the [Day 2 guide](../../days/day-2.md).
-For Wave 2 crew 1, the next visible result is the guided Day 3 opening. Its
+For Wave 2 squad 1, the next visible result is the guided Day 3 opening. Its
 bounded-agent starter, two inputs, target artifacts, handout, and checker are
 defined in the [ticket-agent pack](../ticket-agent/README.md). Keep the literal
 task card visible and let the facilitator intervene after five minutes of
 blockage or drift by restating the task, pointing to the source, or stopping at
-the gate. Day 1 is future reusable framing curriculum for a fresh run; crew 1
+the gate. Day 1 is future reusable framing curriculum for a fresh run; squad 1
 continues from its completed handoff.
 
 Each guide has its own 10:00–16:00 agenda; check the current guide for the
@@ -108,7 +108,7 @@ blocker as `COVERED`, `OPEN`, or `BLOCKED` from the actual evidence. Copy the
 `progress.md` with observed artifacts and access results only. Add a reviewed
 knowledge note or record `NONE — no reusable learning yet`.
 
-For Wave 2 crew 1, Day 3 covers bounded-agent inputs and target, one controlled
+For Wave 2 squad 1, Day 3 covers bounded-agent inputs and target, one controlled
 before/after rerun, second-ticket transfer, missing settlement, duplicate
 quarantine, peer evidence, and handoff. Day 4 covers repeatable runbook and
 knowledge handoff with lighter coaching. Day 5 covers independent transfer to
