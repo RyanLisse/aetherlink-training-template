@@ -5,6 +5,15 @@ Squad 1 · 10:00–16:00. Today follows the [AI-native SDLC playbook](https://cl
 ## Outcome
 Each participant produces a small, reviewable change plan for the existing payment-reconciliation case (`TICKET-OPS-101`): intent, acceptance criteria, test evidence, human gates and a handoff. The existing ticket contract remains unchanged.
 
+## Concept definition — AI-native SDLC
+
+**AI-native SDLC = the familiar SDLC as a loop, with AI embedded at every stage and human control preserved.**
+
+**Intent.md = what we want · why it matters · within which boundaries.**
+
+Use the definition slide, show the loop image, then ask participants to place
+their own ticket on one phase before they write the Day 3 plan.
+
 ## Theory → instruction → individual → review
 Explain the six stages: **Plan → Design → Build → Test → Deploy → Maintain**. In the AI-native model the loop is shorter, while humans retain intent, review and release authority. Show how `intent.md`, `CLAUDE.md`, a ticket contract and `progress.md` connect the stages. Demonstrate one complete route on `TICKET-OPS-101`, then let each person do the same with a bounded prompt.
 

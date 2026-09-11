@@ -5,6 +5,11 @@ CSV files in [`../scenarios/payment-reconciliation/data/`](../scenarios/payment-
 and the fixed cutoff `2026-09-10 12:00 Europe/Amsterdam`. No credentials,
 network calls, production data, or remote publication are used.
 
+## Concept definition — intent.md
+
+**Intent.md = wat we willen · waarom het telt · binnen welke grenzen.**
+It is the short human starting brief before design or build.
+
 ## Outcome and setup
 
 By 16:00, the mob has a reviewed intent, specification, and plan for one

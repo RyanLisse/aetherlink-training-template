@@ -34,6 +34,52 @@
         "check": "Everyone can state what evidence ends today."
       },
       {
+        "title": "Wat is intent.md?",
+        "kicker": "CONCEPTDEFINITIE · DAY 1",
+        "subtitle": "De korte startbrief: wat willen we, waarom, en binnen welke grenzen?",
+        "cards": [
+          {
+            "title": "WAT",
+            "body": "Het gewenste resultaat in gewone woorden."
+          },
+          {
+            "title": "WAAROM",
+            "body": "De reden en wie er last van heeft."
+          },
+          {
+            "title": "GRENZEN",
+            "body": "Constraints, non-goals en OPEN vragen."
+          }
+        ],
+        "prompt": "Leg uit: intent.md is de menselijke startbrief voor het werk. Vraag: welke drie woorden moeten altijd zichtbaar zijn?",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Define wat, waarom en grenzen."
+        ],
+        "expected": "Iedereen kan het begrip in eigen woorden uitleggen en de oefening starten.",
+        "check": "Definitie, beeld en volgende actie zijn expliciet.",
+        "layout": "cards"
+      },
+      {
+        "title": "Intent.md in één beeld",
+        "kicker": "BEELD · CONCEPT",
+        "subtitle": "Van idee naar een gedeeld startpunt",
+        "cards": [],
+        "prompt": "Toon het beeld. Vraag deelnemers één zin te koppelen aan wat, waarom of grenzen.",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Koppel één zin aan het beeld."
+        ],
+        "expected": "Iedereen kan het begrip in eigen woorden uitleggen en de oefening starten.",
+        "check": "Definitie, beeld en volgende actie zijn expliciet.",
+        "layout": "image",
+        "image": "robot.png",
+        "imageAlt": "De robot houdt het doel vast terwijl het team de grenzen bewaakt.",
+        "imageCaption": "De robot houdt het doel vast terwijl het team de grenzen bewaakt."
+      },
+      {
         "title": "The same rhythm every day",
         "kicker": "FIXED SCHEDULE",
         "subtitle": "Timeboxes are shared; the exercise changes",
@@ -879,6 +925,52 @@
         ],
         "expected": "A shared outcome, blockers list, and safe boundary.",
         "check": "Everyone can state what evidence ends today."
+      },
+      {
+        "title": "What is an AI-native SDLC?",
+        "kicker": "CONCEPTDEFINITIE · DAY 3",
+        "subtitle": "Een softwareproces dat controle behoudt terwijl AI in elke fase meewerkt.",
+        "cards": [
+          {
+            "title": "VAN LIJN NAAR LOOP",
+            "body": "Plan → Design → Build → Test → Deploy → Maintain → opnieuw leren."
+          },
+          {
+            "title": "AI INGEBED",
+            "body": "AI helpt bij elke stap; mensen bepalen intent, review en release."
+          },
+          {
+            "title": "CONTROLE BLIJFT",
+            "body": "Gates, bewijs en grenzen maken snelheid veilig."
+          }
+        ],
+        "prompt": "Lees de definitie letterlijk voor. Vraag: waar blijft menselijke controle zichtbaar in deze loop?",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Noem de zes fases. Markeer één human gate."
+        ],
+        "expected": "Iedereen kan het begrip in eigen woorden uitleggen en de oefening starten.",
+        "check": "Definitie, beeld en volgende actie zijn expliciet.",
+        "layout": "cards"
+      },
+      {
+        "title": "AI-native SDLC · zie de loop",
+        "kicker": "BEELD · CONCEPT",
+        "subtitle": "De lijn wordt een herhaalbare lus met AI op elk punt.",
+        "cards": [],
+        "prompt": "Gebruik het beeld om de loop aan te wijzen. Laat deelnemers daarna hun eigen ticket op één fase plaatsen.",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Wijs de loop aan. Plaats je ticket."
+        ],
+        "expected": "Iedereen kan het begrip in eigen woorden uitleggen en de oefening starten.",
+        "check": "Definitie, beeld en volgende actie zijn expliciet.",
+        "layout": "image",
+        "image": "adoption.png",
+        "imageAlt": "AI-native SDLC: een loop met menselijke controle boven de uitvoering.",
+        "imageCaption": "AI-native SDLC: een loop met menselijke controle boven de uitvoering."
       },
       {
         "title": "Glossary · what do we mean?",
