@@ -68,7 +68,7 @@ flowchart LR
 | 11:45–12:00 | 15 | Human gate | Accept, correct, or mark the `101` baseline `OPEN` |
 | 12:00–13:00 | 60 | Lunch | — |
 | 13:00–13:10 | 10 | Claude Code demo | Rebuild the same agent and contract |
-| 13:10–13:35 | 25 | Individual Claude Code run | Run alone on the same `TICKET-OPS-101` |
+| 13:10–13:35 | 25 | Individual Claude Code run | Run alone on the same `GL-REVIEW-001` |
 | 13:35–13:50 | 15 | Claude Code review | Apply the same checklist and gate |
 | 13:50–14:20 | 30 | Comparison | Fresh reader compares the same functional contract/input and recorded adapters |
 | 14:20–14:35 | 15 | Transfer gate | Only now run the unchanged method on `102` |
@@ -89,11 +89,11 @@ before building. Explain model, chat, agent, and subagent briefly. Show the
 n8n workflow only with the preflighted credential and login. If access is not
 confirmed, show the intended steps as `OPEN` and do not imply execution.
 
-Use this functional contract for the n8n demo and the two `TICKET-OPS-101`
+Use this functional contract for the n8n demo and the two `GL-REVIEW-001`
 runs. Platform adapter instructions and settings are recorded separately:
 
 ```text
-Read the supplied TICKET-OPS-101 input and return a preview that follows the shared ticket output contract. Cite the exact source sections for every factual field, preserve Current and Desired as protected sections, separate facts from assumptions, and label unsupported details OPEN. Do not write files, create or change business-system records, or approve financial status.
+Read the supplied GL-REVIEW-001 input and return a preview that follows the shared ticket output contract. Cite the exact source sections for every factual field, preserve Current and Desired as protected sections, separate facts from assumptions, and label unsupported details OPEN. Do not write files, create or change business-system records, or approve financial status.
 ```
 
 How the instruction is layered on the two platforms (record this, it is part
@@ -102,7 +102,7 @@ of the settings evidence): the shared functional instruction is
 the AI Agent **system message** and the ticket text is the user message, so
 nothing is typed at run time. In Claude Code it is the body of the
 `ticket-coach` subagent, and the learner types the invocation from the lab's
-ticket-agent README (`Use the ticket-coach subagent. Read … TICKET-OPS-101 …`).
+ticket-agent README (`Use the ticket-coach subagent. Read … GL-REVIEW-001 …`).
 The n8n Calculator connection is a required tool adapter. The Claude Code
 starter uses read-only `Read`, `Glob`, and `Grep` tools. Record the model, mode,
 access, and tool adapter for each run. The board prompt above is the
@@ -122,7 +122,7 @@ sections, citations, assumptions, and `OPEN` labels. A human reviewer records
 
 ### 3. Claude Code rebuild and run — 13:00–13:50
 
-From the lab root run `mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md`, then start Claude Code. Rebuild the same functional contract from the lab instructions. Keep `TICKET-OPS-101`, the output contract, and evidence fields unchanged from n8n. Record the Claude Code read-only tool adapter, model/mode, and access, preview the result, and save the accepted output to `participant-output/ticket-101-preview.md`. Run `python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md`, then apply the same checklist and human gate. If the lab or account is unavailable, record `OPEN`; do not manufacture a comparison.
+From the lab root run `mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md`, then start Claude Code. Rebuild the same functional contract from the lab instructions. Keep `GL-REVIEW-001`, the output contract, and evidence fields unchanged from n8n. Record the Claude Code read-only tool adapter, model/mode, and access, preview the result, and save the accepted output to `participant-output/ticket-101-preview.md`. Run `python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket GL-REVIEW-001 --output participant-output/ticket-101-preview.md`, then apply the same checklist and human gate. If the lab or account is unavailable, record `OPEN`; do not manufacture a comparison.
 
 ### 4. Compare the same input — 13:50–14:20
 
@@ -134,8 +134,8 @@ platform caused a difference; this exercise does not establish causality.
 
 ### 5. Transfer after the comparison — 14:20–14:35
 
-After the human accepts the `TICKET-OPS-101` comparison, use the same agent
-instructions and output contract with `TICKET-OPS-102` as the only input
+After the human accepts the `GL-REVIEW-001` comparison, use the same agent
+instructions and output contract with `second review scope` as the only input
 change. Record it as a transfer, not another comparison. Do not open `102`
 before the comparison is recorded.
 

@@ -372,7 +372,7 @@
         "cards": [
           {
             "title": "Outcome",
-            "body": "Same TICKET-OPS-101 agent built in n8n and Claude Code"
+            "body": "Same GL-REVIEW-001 agent built in n8n and Claude Code"
           },
           {
             "title": "Mode",
@@ -412,7 +412,7 @@
             "body": "13:50–14:20 same-input comparison · 14:20–14:35 gated 102 transfer · 14:35–14:50 break · 14:50–15:40 handoff · 15:40–16:00 close"
           }
         ],
-        "prompt": "Read every timebox aloud: theory before either build; n8n demo and 25-minute individual run in the morning; lunch 12:00–13:00; Claude Code rebuild and 25-minute individual run in the afternoon; same-input comparison before any TICKET-OPS-102 transfer.",
+        "prompt": "Read every timebox aloud: theory before either build; n8n demo and 25-minute individual run in the morning; lunch 12:00–13:00; Claude Code rebuild and 25-minute individual run in the afternoon; same-input comparison before any second review scope transfer.",
         "notes": "Keep this agenda visible. Both platform runs get individual own-laptop time and use the same functional contract/input; record each adapter, model, mode, access, and tools.",
         "dark": false,
         "steps": [
@@ -430,7 +430,7 @@
         "cards": [
           {
             "title": "Input",
-            "body": "Supplied TICKET-OPS-101 input from the participant lab"
+            "body": "Supplied GL-REVIEW-001 input from the participant lab"
           },
           {
             "title": "Return",
@@ -441,7 +441,7 @@
             "body": "Approved login; no business-system writes or financial approval"
           }
         ],
-        "prompt": "In n8n, use the approved login and supplied TICKET-OPS-101 input. Return a preview under the shared ticket output contract, cite sources, preserve Current and Desired, and mark unsupported details OPEN. Make no business-system write or financial approval.",
+        "prompt": "In n8n, use the approved login and supplied GL-REVIEW-001 input. Return a preview under the shared ticket output contract, cite sources, preserve Current and Desired, and mark unsupported details OPEN. Make no business-system write or financial approval.",
         "notes": "Introduce the n8n boundary and separate credential preflight before the first run.",
         "dark": false,
         "steps": [
@@ -463,14 +463,14 @@
           },
           {
             "title": "Ticket",
-            "body": "Supplied TICKET-OPS-101 input"
+            "body": "Supplied GL-REVIEW-001 input"
           },
           {
             "title": "Evidence",
             "body": "Workflow version, access, prompt, output, decision"
           }
         ],
-        "prompt": "On your own laptop, open the participant lab root README and use supplied TICKET-OPS-101 input. Run the bounded n8n workflow with the approved login and exact shared prompt; capture settings, output, citations, protected sections, and OPEN checks.",
+        "prompt": "On your own laptop, open the participant lab root README and use supplied GL-REVIEW-001 input. Run the bounded n8n workflow with the approved login and exact shared prompt; capture settings, output, citations, protected sections, and OPEN checks.",
         "notes": "Protect 25 minutes of individual n8n work. Credential or login gaps are OPEN, not evidence of a run.",
         "dark": true,
         "steps": [
@@ -499,7 +499,7 @@
             "body": "Keep credential or evidence gaps OPEN"
           }
         ],
-        "prompt": "Review the n8n TICKET-OPS-101 preview against the shared input/output contract. Check protected sections, source citations, assumptions, and OPEN labels. Return PASS, FAIL, or OPEN with one observed line; do not rerun before the baseline gate.",
+        "prompt": "Review the n8n GL-REVIEW-001 preview against the shared input/output contract. Check protected sections, source citations, assumptions, and OPEN labels. Return PASS, FAIL, or OPEN with one observed line; do not rerun before the baseline gate.",
         "notes": "De reviewer controleert eerst zelfstandig. Credentialproblemen worden OPEN vastgelegd.",
         "dark": false,
         "steps": [
@@ -517,7 +517,7 @@
         "cards": [
           {
             "title": "Read",
-            "body": "Save the n8n TICKET-OPS-101 preview and settings"
+            "body": "Save the n8n GL-REVIEW-001 preview and settings"
           },
           {
             "title": "Reason",
@@ -528,7 +528,7 @@
             "body": "Gate the baseline as PASS, FAIL, or OPEN"
           }
         ],
-        "prompt": "Finish the n8n TICKET-OPS-101 baseline. Save the preview, workflow/access settings, source citations, protected Current/Desired sections, and OPEN items. A human reviewer records PASS, FAIL, or OPEN before lunch; do not infer a run from missing access.",
+        "prompt": "Finish the n8n GL-REVIEW-001 baseline. Save the preview, workflow/access settings, source citations, protected Current/Desired sections, and OPEN items. A human reviewer records PASS, FAIL, or OPEN before lunch; do not infer a run from missing access.",
         "notes": "Bevries de n8n-baseline voor lunch. Credential- of loginproblemen blijven OPEN.",
         "dark": false,
         "steps": [
@@ -547,28 +547,28 @@
         "cards": [
           {
             "title": "Functional contract",
-            "body": "Reuse the same contract and TICKET-OPS-101 input"
+            "body": "Reuse the same contract and GL-REVIEW-001 input"
           },
           {
             "title": "Same input",
-            "body": "Use TICKET-OPS-101 and the shared output contract"
+            "body": "Use GL-REVIEW-001 and the shared output contract"
           },
           {
             "title": "Adapter + capture",
             "body": "Read-only Read/Glob/Grep; record model, mode, access, tools, output, and gate"
           }
         ],
-        "prompt": "From the lab root run mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md, then start Claude Code. Use the same TICKET-OPS-101 input and shared functional output contract from n8n, while recording the read-only Read/Glob/Grep adapter, model/mode, access, and tools. Preview the output, save the accepted output to participant-output/ticket-101-preview.md, and run python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md. Apply the same checklist and human gate; mark missing access or evidence OPEN. One pair of runs does not establish causal superiority.",
+        "prompt": "From the lab root run mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md, then start Claude Code. Use the same GL-REVIEW-001 input and shared functional output contract from n8n, while recording the read-only Read/Glob/Grep adapter, model/mode, access, and tools. Preview the output, save the accepted output to participant-output/ticket-101-preview.md, and run python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket GL-REVIEW-001 --output participant-output/ticket-101-preview.md. Apply the same checklist and human gate; mark missing access or evidence OPEN. One pair of runs does not establish causal superiority.",
         "notes": "Herbouw met dezelfde functionele contract/input. Leg read-only adapter, model, mode, toegang en tools vast; verschillen zijn waarnemingen, geen causaliteit.",
         "dark": false,
         "steps": [
           "Open the participant lab README.",
           "Copy the ticket-coach starter.",
           "Show the shared functional prompt and platform adapter.",
-          "Preview TICKET-OPS-101."
+          "Preview GL-REVIEW-001."
         ],
         "expected": "A Claude Code preview that uses the same input/output contract as n8n.",
-        "check": "The prompt, TICKET-OPS-101 input, and contract match the n8n baseline."
+        "check": "The prompt, GL-REVIEW-001 input, and contract match the n8n baseline."
       },
       {
         "title": "Individual · Claude Code ticket 101",
@@ -577,28 +577,28 @@
         "cards": [
           {
             "title": "Functional contract",
-            "body": "Reuse the same contract and TICKET-OPS-101 input"
+            "body": "Reuse the same contract and GL-REVIEW-001 input"
           },
           {
             "title": "Same input",
-            "body": "Use TICKET-OPS-101 and the shared output contract"
+            "body": "Use GL-REVIEW-001 and the shared output contract"
           },
           {
             "title": "Adapter + capture",
             "body": "Read-only Read/Glob/Grep; record model, mode, access, tools, output, and gate"
           }
         ],
-        "prompt": "On your own laptop, from the lab root run mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md, then start Claude Code. Use the same TICKET-OPS-101 input and shared functional output contract from n8n, while recording the read-only Read/Glob/Grep adapter, model/mode, access, and tools. Preview the output, save the accepted output to participant-output/ticket-101-preview.md, and run python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md. Apply the same checklist and human gate; mark missing access or evidence OPEN. One pair of runs does not establish causal superiority.",
+        "prompt": "On your own laptop, from the lab root run mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md, then start Claude Code. Use the same GL-REVIEW-001 input and shared functional output contract from n8n, while recording the read-only Read/Glob/Grep adapter, model/mode, access, and tools. Preview the output, save the accepted output to participant-output/ticket-101-preview.md, and run python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket GL-REVIEW-001 --output participant-output/ticket-101-preview.md. Apply the same checklist and human gate; mark missing access or evidence OPEN. One pair of runs does not establish causal superiority.",
         "notes": "Herbouw met dezelfde functionele contract/input. Leg read-only adapter, model, mode, toegang en tools vast; verschillen zijn waarnemingen, geen causaliteit.",
         "dark": false,
         "steps": [
           "Follow the lab Claude Code setup.",
-          "Invoke ticket-coach on TICKET-OPS-101.",
+          "Invoke ticket-coach on GL-REVIEW-001.",
           "Preserve the shared functional instruction; record the tool adapter.",
           "Capture your output and settings."
         ],
         "expected": "A Claude Code preview that uses the same input/output contract as n8n.",
-        "check": "The prompt, TICKET-OPS-101 input, and contract match the n8n baseline."
+        "check": "The prompt, GL-REVIEW-001 input, and contract match the n8n baseline."
       },
       {
         "title": "Claude Code review",
@@ -607,7 +607,7 @@
         "cards": [
           {
             "title": "Receiver",
-            "body": "Fresh reader starts from the same TICKET-OPS-101 input"
+            "body": "Fresh reader starts from the same GL-REVIEW-001 input"
           },
           {
             "title": "Reproduce",
@@ -618,7 +618,7 @@
             "body": "PASS only when contract and evidence are findable"
           }
         ],
-        "prompt": "Give the Claude Code TICKET-OPS-101 preview to a fresh reader with the n8n baseline, exact prompt, settings, and shared contract. Ask them to return PASS, FAIL, or OPEN with one observed difference and one unchanged boundary. Keep missing evidence OPEN.",
+        "prompt": "Give the Claude Code GL-REVIEW-001 preview to a fresh reader with the n8n baseline, exact prompt, settings, and shared contract. Ask them to return PASS, FAIL, or OPEN with one observed difference and one unchanged boundary. Keep missing evidence OPEN.",
         "notes": "De ontvanger leest beide previews zelfstandig. Platformverschillen worden waarnemingen; causaliteit blijft OPEN.",
         "dark": false,
         "steps": [
@@ -647,7 +647,7 @@
             "body": "Platform differences are observations, not causes"
           }
         ],
-        "prompt": "Give a fresh reviewer the n8n and Claude Code TICKET-OPS-101 previews, same functional contract/input, and each platform's adapter instructions, model, mode, access, and tools. Identify one output difference or OPEN — no observed difference, one unchanged boundary, and missing evidence. Describe platform differences as observations; do not claim causal superiority.",
+        "prompt": "Give a fresh reviewer the n8n and Claude Code GL-REVIEW-001 previews, same functional contract/input, and each platform's adapter instructions, model, mode, access, and tools. Identify one output difference or OPEN — no observed difference, one unchanged boundary, and missing evidence. Describe platform differences as observations; do not claim causal superiority.",
         "notes": "Vergelijk dezelfde functionele contract/input. Leg adapters en instellingen vast; deze vergelijking bewijst geen causale platformconclusie.",
         "dark": false,
         "steps": [
@@ -677,7 +677,7 @@
             "body": "Record 102 as transfer evidence, not comparison evidence"
           }
         ],
-        "prompt": "After the human accepts the TICKET-OPS-101 comparison, reuse the same agent instructions and output contract with TICKET-OPS-102 as the only input change. Record the preview as a transfer and leave missing evidence OPEN.",
+        "prompt": "After the human accepts the GL-REVIEW-001 comparison, reuse the same agent instructions and output contract with second review scope as the only input change. Record the preview as a transfer and leave missing evidence OPEN.",
         "notes": "Open 102 pas na de vergelijkingsgate. De transfer is een aparte toepassing.",
         "dark": true,
         "steps": [
@@ -706,7 +706,7 @@
             "body": "Rating, Kahoot/wordcloud delta, and next practice"
           }
         ],
-        "prompt": "Draft the Day 2 handoff with the lab root, exact functional prompt, shared contract, n8n and Claude Code settings, two TICKET-OPS-101 previews, comparison, later TICKET-OPS-102 transfer, human decisions, and OPEN items. Repeat Kahoot and wordcloud.",
+        "prompt": "Draft the Day 2 handoff with the lab root, exact functional prompt, shared contract, n8n and Claude Code settings, two GL-REVIEW-001 previews, comparison, later second review scope transfer, human decisions, and OPEN items. Repeat Kahoot and wordcloud.",
         "notes": "Keep individual ratings private; record only agreed group learning.",
         "dark": false,
         "steps": [
