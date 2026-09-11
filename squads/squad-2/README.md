@@ -21,10 +21,10 @@ treated as live. Until then, all team links and access fields are `OPEN`.
 ## Track outcome
 
 By the end of this future track, each learner can produce a small
-source-backed reconciliation result, constrain and inspect a ticket-coach
+source-backed review result, constrain and inspect a ticket-coach
 agent, pass one ticket through analyst/developer/tester roles, let peers run a
 local handoff workflow, and independently repeat the result with only the
-cutoff changed. A human accepts every artifact; an agent suggestion is never
+date scope changed. A human accepts every artifact; an agent suggestion is never
 acceptance evidence.
 
 ## Five sessions

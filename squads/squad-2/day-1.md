@@ -54,7 +54,7 @@ owner, and the stop rule. Introduce `source`, `claim`, `evidence`, and
 
 **Example prompt:**
 
-> Read only the scenario README and the headers plus the row for `TX-NS-1004`.
+> Read only the scenario README and the headers plus the row for `repository snapshot`.
 > Explain which file is the ledger, which is the PSP, and which values need a
 > human check. Draft a one-row evidence card; do not edit source files or call
 > a remote service.
@@ -85,7 +85,7 @@ expected example from a value actually read.
 ### 3. Review — 11:00–11:20
 
 **Task card:** Pair-read the card aloud. The reviewer checks identifiers,
-arithmetic, cutoff context, and whether the card says what was actually read.
+arithmetic, date scope context, and whether the card says what was actually read.
 
 **Example prompt:**
 
@@ -106,7 +106,7 @@ One navigator directs the human driver; rotate driver and navigator every
 
 **Example prompt:**
 
-> As navigator, ask the driver to open the ledger row first, then the PSP row.
+> As navigator, ask the driver to open the target file first, then the source line.
 > Ask the scribe to record source IDs and the skeptic to challenge any value
 > without a path. Produce one agreed card without changing the fixtures.
 
@@ -118,11 +118,11 @@ calculation and that no one silently overwrote a learner's attempt.
 ### 5. Check — 13:00–13:15
 
 **Task card:** Submit the group card for a human gate. Check that a fee
-mismatch remains a fee mismatch even if net values appear close.
+mismatch remains a review finding even if net values appear close.
 
 **Example prompt:**
 
-> Act as the reviewer. Reopen the exact CSV rows, recompute expected fee and
+> Act as the reviewer. Reopen the exact source lines, recompute expected fee and
 > net, and mark each acceptance item `PASS`, `FAIL`, or `OPEN`. Do not approve a
 > payout or infer a policy beyond the scenario README.
 
@@ -133,18 +133,18 @@ clear unresolved decision owner.
 
 ### 6. Second practice — 13:15–14:00
 
-**Task card:** Apply the same card format to `TX-NS-1003`, preserving both
-duplicate PSP rows and labeling the batch `UNRESOLVED`.
+**Task card:** Apply the same card format to `second repository snapshot`, preserving both
+finding source lines and labeling the batch `UNRESOLVED`.
 
 **Example prompt:**
 
-> Read `TX-NS-1003`, `SET-1003-A`, and `SET-1003-B`. Keep both source rows
-> visible. Record raw and provisional unique totals, the duplicate rule, and
+> Read `second repository snapshot`, `SET-1003-A`, and `SET-1003-B`. Keep both source rows
+> visible. Record raw and provisional unique totals, the finding rule, and
 > the human confirmation needed. Do not delete, count twice, or approve.
 
 **Output:** A second card or a documented `OPEN` if a source check failed.
 
-**Human acceptance:** Reviewer confirms both duplicate IDs remain visible and
+**Human acceptance:** Reviewer confirms both finding IDs remain visible and
 the status is `UNRESOLVED`.
 
 ### 7. Transfer — 14:15–15:05

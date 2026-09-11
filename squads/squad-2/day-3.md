@@ -10,7 +10,7 @@ Groups pass the same fictional `GL-REVIEW-001` ticket through analyst, developer
 and tester roles. The analyst states visible behavior, the developer adds a
 small technical proposal without changing that behavior, and the tester
 derives positive and negative checks. The group produces one role-preserving
-packet with source IDs and `UNRESOLVED` duplicate handling.
+packet with source IDs and `UNRESOLVED` finding handling.
 
 Read [GL-REVIEW-001](../../scenarios/gitlab-repository-review/tickets/GL-REVIEW-001.md),
 the [guided ticket exercise](../../scenarios/gitlab-repository-review/README.md),
@@ -54,7 +54,7 @@ functional requirements and technical additions in separate sections.
 
 **Example prompt:**
 
-> Read GL-REVIEW-001 and only its cited source rows. As analyst, state the duplicate
+> Read GL-REVIEW-001 and only its cited source rows. As analyst, state the finding
 > behavior and evidence. As developer, propose a smallest local change under a
 > labelled technical section. As tester, derive one passing and one failing
 > check. Do not approve a payout or invent team links.
@@ -67,19 +67,19 @@ behavior unchanged.
 ### 2. Individual attempt — 10:35–11:00
 
 **Task card:** Draft `lab-notes/squad-2/day-3-analyst.md` alone. State visible
-duplicate behavior, source IDs, cutoff, status, and two acceptance examples.
+finding behavior, source IDs, date scope, status, and two acceptance examples.
 
 **Example prompt:**
 
-> Act as a GL-REVIEW-001 analyst. Read the ticket, scenario README, and cited CSV
-> rows. Write functional acceptance wording for both duplicate rows, the
+> Act as a GL-REVIEW-001 analyst. Read the ticket, scenario README, and cited repository fixture
+> rows. Write functional acceptance wording for both finding rows, the
 > provisional unique net, raw net, and `UNRESOLVED` state. Keep unknown policy
 > questions `OPEN`; do not propose storage or APIs yet.
 
 **Output:** One personal analyst statement, even if incomplete.
 
 **Human acceptance:** Learner cites `SET-1003-A` and `SET-1003-B` and does not
-silently collapse the duplicate.
+silently collapse the finding.
 
 ### 3. Review — 11:00–11:20
 
@@ -137,7 +137,7 @@ visible behavior.
 **Example prompt:**
 
 > Preserve every analyst requirement. Add a local worksheet or function sketch
-> only as a proposal. Then write checks for both duplicate IDs visible,
+> only as a proposal. Then write checks for both finding IDs visible,
 > provisional unique net 24,010, raw net 43,610, `UNRESOLVED`, and rejection of
 > silent deletion, double counting, or payout approval.
 

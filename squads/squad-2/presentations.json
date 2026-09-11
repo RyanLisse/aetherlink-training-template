@@ -10,7 +10,7 @@
         "cards": [
           {
             "title": "Outcome",
-            "body": "One source-backed card for TX-NS-1004"
+            "body": "One source-backed card for repository snapshot"
           },
           {
             "title": "Mode",
@@ -18,7 +18,7 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional CSVs; no code, network, or remote ticket"
+            "body": "Fictional repository fixtures; no code, network, or remote ticket"
           }
         ],
         "prompt": "Open the Day 1 guide. Run the opening Kahoot and wordcloud, name the result and human reviewer, then capture blockers.",
@@ -68,7 +68,7 @@
         "cards": [
           {
             "title": "Read",
-            "body": "Ledger and PSP rows for TX-NS-1004"
+            "body": "Ledger and source lines for repository snapshot"
           },
           {
             "title": "Record",
@@ -79,7 +79,7 @@
             "body": "Human marks PASS, FAIL, or OPEN"
           }
         ],
-        "prompt": "Read the scenario README and the cited rows. Draft a one-row card without editing CSVs or calling a remote service.",
+        "prompt": "Read the scenario README and the cited rows. Draft a one-row card without editing repository fixtures or calling a remote service.",
         "notes": "Introduce source, claim, evidence, and OPEN only as the demo uses them.",
         "dark": false,
         "steps": [
@@ -101,7 +101,7 @@
           },
           {
             "title": "Case",
-            "body": "TX-NS-1004 and its ledger/PSP rows"
+            "body": "repository snapshot and its ledger/source lines"
           },
           {
             "title": "Rule",
@@ -152,11 +152,11 @@
       {
         "title": "Human gate",
         "kicker": "CHECK · 13:00",
-        "subtitle": "A fee mismatch stays visible",
+        "subtitle": "A review finding stays visible",
         "cards": [
           {
             "title": "Reopen",
-            "body": "Read the exact CSV rows again"
+            "body": "Read the exact source lines again"
           },
           {
             "title": "Decide",
@@ -179,9 +179,9 @@
         "check": "Classification and open decision are explicit."
       },
       {
-        "title": "Keep duplicates visible",
+        "title": "Keep findings visible",
         "kicker": "PRACTICE · 13:15",
-        "subtitle": "Apply the same card to TX-NS-1003",
+        "subtitle": "Apply the same card to second repository snapshot",
         "cards": [
           {
             "title": "Sources",
@@ -196,7 +196,7 @@
             "body": "UNRESOLVED pending confirmation"
           }
         ],
-        "prompt": "Read TX-NS-1003 and both PSP rows. Keep both IDs visible, record raw and provisional unique totals, and state the human confirmation needed.",
+        "prompt": "Read second repository snapshot and both source lines. Keep both IDs visible, record raw and provisional unique totals, and state the human confirmation needed.",
         "notes": "Do not delete, count twice, or approve. This is a local readback exercise.",
         "dark": false,
         "steps": [
@@ -205,7 +205,7 @@
           "Record UNRESOLVED."
         ],
         "expected": "A second evidence card.",
-        "check": "Both duplicate source IDs remain visible."
+        "check": "Both finding source IDs remain visible."
       },
       {
         "title": "Fresh-reader transfer",
@@ -818,7 +818,7 @@
         "cards": [
           {
             "title": "Analyst",
-            "body": "Visible duplicate behavior and evidence"
+            "body": "Visible finding behavior and evidence"
           },
           {
             "title": "Developer",
@@ -859,7 +859,7 @@
             "body": "Raw, unique, and UNRESOLVED"
           }
         ],
-        "prompt": "Draft visible acceptance wording for GL-REVIEW-001, citing rows, cutoff, totals, duplicate treatment, and human confirmation. Do not propose APIs yet.",
+        "prompt": "Draft visible acceptance wording for GL-REVIEW-001, citing rows, date scope, totals, finding treatment, and human confirmation. Do not propose APIs yet.",
         "notes": "Do not coach during the individual attempt. Incomplete work is a legitimate attempt artifact.",
         "dark": true,
         "steps": [
@@ -869,7 +869,7 @@
           "Park policy OPEN."
         ],
         "expected": "One personal analyst statement.",
-        "check": "The duplicate is not silently collapsed."
+        "check": "The finding is not silently collapsed."
       },
       {
         "title": "Review and consolidate",
@@ -1120,14 +1120,14 @@
           },
           {
             "title": "Inputs",
-            "body": "Paths, cutoff, source IDs"
+            "body": "Paths, date scope, source IDs"
           },
           {
             "title": "Stop",
             "body": "Human gate, rollback, OPEN links"
           }
         ],
-        "prompt": "Draft an offline GL-REVIEW-001 runbook with exact local paths, duplicate rule, commands or OPEN, reviewer, next owner, and mock team links.",
+        "prompt": "Draft an offline GL-REVIEW-001 runbook with exact local paths, finding rule, commands or OPEN, reviewer, next owner, and mock team links.",
         "notes": "Protect the 25-minute individual attempt before peer consolidation.",
         "dark": true,
         "steps": [
@@ -1175,7 +1175,7 @@
         "cards": [
           {
             "title": "Check",
-            "body": "Cutoff, IDs, arithmetic, duplicate"
+            "body": "date scope, IDs, arithmetic, finding"
           },
           {
             "title": "Gate",
@@ -1287,13 +1287,13 @@
     ]
   },
   "day5": {
-    "title": "Squad 2 Day 5 — cutoff-only transfer",
+    "title": "Squad 2 Day 5 — date scope-only transfer",
     "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/squads/squad-2/day-5.md",
     "slides": [
       {
         "title": "Transfer one variable",
         "kicker": "DAY 5 · 10:00–16:00",
-        "subtitle": "Unchanged copied data; cutoff 2026-09-13",
+        "subtitle": "Unchanged copied data; date scope scheduled review",
         "cards": [
           {
             "title": "Outcome",
@@ -1317,7 +1317,7 @@
           "State rollback."
         ],
         "expected": "An independence contract.",
-        "check": "Baseline CSVs are explicitly read-only."
+        "check": "Baseline repository fixtures are explicitly read-only."
       },
       {
         "title": "Shared timing pattern",
@@ -1349,7 +1349,7 @@
         "check": "The agenda includes all three breaks or meal boundaries and every required block."
       },
       {
-        "title": "Hash and cutoff demo",
+        "title": "Hash and date scope demo",
         "kicker": "DEMO · 10:15",
         "subtitle": "Prove copy, then compare dates",
         "cards": [
@@ -1362,17 +1362,17 @@
             "body": "Hash or bytes against baseline"
           },
           {
-            "title": "Cutoff",
-            "body": "2026-09-13 12:00 Europe/Amsterdam"
+            "title": "date scope",
+            "body": "scheduled review time"
           }
         ],
-        "prompt": "Show source and destination metadata and a cutoff comparison. Label expected values as examples; do not claim learner evidence.",
-        "notes": "The only changed input is cutoff. CSV bytes, fee rule, duplicate rule, and IDs stay fixed.",
+        "prompt": "Show source and destination metadata and a date scope comparison. Label expected values as examples; do not claim learner evidence.",
+        "notes": "The only changed input is date scope. repository fixture bytes, review rule, finding rule, and IDs stay fixed.",
         "dark": false,
         "steps": [
           "Show paths.",
           "Compare contents.",
-          "Show cutoff input."
+          "Show date scope input."
         ],
         "expected": "A trainer integrity demonstration.",
         "check": "The destination is separate from baseline data."
@@ -1388,20 +1388,20 @@
           },
           {
             "title": "Copy",
-            "body": "Three CSVs unchanged"
+            "body": "repository fixture unchanged"
           },
           {
             "title": "Rollback",
             "body": "Remove only local variation"
           }
         ],
-        "prompt": "Copy the three CSVs to the variation path. Record exact commands and a hash or byte comparison, cutoff, and rollback; do not edit baseline files.",
+        "prompt": "Copy the repository fixture to the variation path. Record exact commands and a hash or byte comparison, date scope, and rollback; do not edit baseline files.",
         "notes": "Protect independent work. Do not answer questions that the handoff should answer.",
         "dark": true,
         "steps": [
           "Copy files.",
           "Compare contents.",
-          "Record cutoff.",
+          "Record date scope.",
           "Write rollback."
         ],
         "expected": "A personal scope note.",
@@ -1425,7 +1425,7 @@
             "body": "Local due-date recalculation"
           }
         ],
-        "prompt": "Peer marks PASS, FAIL, or OPEN for unchanged contents, separate path, cutoff, rollback, and evidence plan. Then recalculate locally.",
+        "prompt": "Peer marks PASS, FAIL, or OPEN for unchanged contents, separate path, date scope, rollback, and evidence plan. Then recalculate locally.",
         "notes": "Navigator and driver rotate only after each learner has attempted the scope task.",
         "dark": false,
         "steps": [
@@ -1447,14 +1447,14 @@
           },
           {
             "title": "Compare",
-            "body": "Due date versus new cutoff"
+            "body": "Due date versus new date scope"
           },
           {
             "title": "Accept",
-            "body": "TX-NS-1008 overdue"
+            "body": "actionable finding actionable"
           }
         ],
-        "prompt": "Reopen both paths and verify contents, cutoff, and TX-NS-1008 due-date comparison. Mark every item PASS, FAIL, or OPEN.",
+        "prompt": "Reopen both paths and verify contents, date scope, and actionable finding due-date comparison. Mark every item PASS, FAIL, or OPEN.",
         "notes": "A human accepts the local variation. This is not a production control.",
         "dark": true,
         "steps": [
@@ -1463,7 +1463,7 @@
           "Record decision."
         ],
         "expected": "An accepted or parked variation worksheet.",
-        "check": "Only cutoff changed and TX-NS-1008 is overdue."
+        "check": "Only date scope changed and actionable finding is actionable."
       },
       {
         "title": "Compare baseline and variation",
@@ -1472,19 +1472,19 @@
         "cards": [
           {
             "title": "Changed",
-            "body": "TX-NS-1008 due-date classification"
+            "body": "actionable finding due-date classification"
           },
           {
             "title": "Unchanged",
-            "body": "Fee, duplicate, bank cases"
+            "body": "Fee, finding, review cases"
           },
           {
             "title": "Label",
             "body": "TRANSFER VARIATION"
           }
         ],
-        "prompt": "Build a difference table from both local worksheets. Cite source IDs and explain why only the cutoff-caused classification changes.",
-        "notes": "Do not infer a new policy. Tie overdue status explicitly to 2026-09-13.",
+        "prompt": "Build a difference table from both local worksheets. Cite source IDs and explain why only the date scope-caused classification changes.",
+        "notes": "Do not infer a new policy. Tie actionable status explicitly to scheduled review.",
         "dark": false,
         "steps": [
           "Compare worksheets.",
@@ -1497,7 +1497,7 @@
       {
         "title": "Independent receiver test",
         "kicker": "TRANSFER · 14:15",
-        "subtitle": "Reproduce copy and cutoff evidence",
+        "subtitle": "Reproduce copy and date scope evidence",
         "cards": [
           {
             "title": "Receiver",
@@ -1509,7 +1509,7 @@
           },
           {
             "title": "Result",
-            "body": "Reproduces TX-NS-1008 overdue"
+            "body": "Reproduces actionable finding actionable"
           }
         ],
         "prompt": "Give the variation to a fresh reader. Ask them to verify contents and rerun the local due-date check without changing copied data.",
@@ -1518,10 +1518,10 @@
         "steps": [
           "Hand over.",
           "Verify contents.",
-          "Rerun cutoff check."
+          "Rerun date scope check."
         ],
         "expected": "Fresh-reader reproduction and discrepancy list.",
-        "check": "Receiver explains why the new cutoff changes status."
+        "check": "Receiver explains why the new date scope changes status."
       },
       {
         "title": "Finish independently",
@@ -1541,7 +1541,7 @@
             "body": "Kahoot/wordcloud delta + MOB lesson"
           }
         ],
-        "prompt": "Draft the Day 5 handoff with paths, hashes, cutoff, exact output, changed classification, unchanged rules, reviewer, rollback, and OPEN items. Repeat Kahoot and wordcloud.",
+        "prompt": "Draft the Day 5 handoff with paths, hashes, date scope, exact output, changed classification, unchanged rules, reviewer, rollback, and OPEN items. Repeat Kahoot and wordcloud.",
         "notes": "Close with the evidence boundary: baseline files unchanged and no production result claimed.",
         "dark": false,
         "steps": [

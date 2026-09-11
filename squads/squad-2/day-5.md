@@ -1,4 +1,4 @@
-# Squad 2 Day 5 — independent cutoff-only transfer
+# Squad 2 Day 5 — independent date scope-only transfer
 
 Mode: `INDEPENDENT` · Time: `10:00–16:00` · Status: `FUTURE CURRICULUM`
 
@@ -22,14 +22,14 @@ Read the [GitLab repository-review scenario](../../scenarios/gitlab-repository-r
 | Time | Minutes | Block | Artifact |
 | --- | ---: | --- | --- |
 | 10:00–10:15 | 15 | Open | Kahoot + wordcloud, independence contract |
-| 10:15–10:35 | 20 | Demo | Hash and cutoff comparison |
+| 10:15–10:35 | 20 | Demo | Hash and date scope comparison |
 | 10:35–11:00 | 25 | Individual attempt | Personal scope and copy check |
 | 11:00–11:20 | 20 | Review | Peer readback of boundary |
 | 11:20–11:35 | 15 | Break | — |
 | 11:35–12:00 | 25 | Practice | Independent local recalculation |
 | 12:00–13:00 | 60 | Lunch | — |
 | 13:00–13:15 | 15 | Check | Human data-integrity gate |
-| 13:15–14:00 | 45 | Practice | Exception and cutoff comparison |
+| 13:15–14:00 | 45 | Practice | Exception and date scope comparison |
 | 14:00–14:15 | 15 | Break | — |
 | 14:15–15:05 | 50 | Transfer | Fresh reader reproduces variation |
 | 15:05–15:40 | 35 | Handoff | Independent result and rollback |
@@ -50,17 +50,17 @@ locally and never published or deployed`.
 ### 1. Open and demo — 10:00–10:35
 
 **Task card:** Explain the independent contract: copy bytes unchanged, change
-one cutoff, prove the changed classification, and preserve a rollback path.
+one date scope, prove the changed classification, and preserve a rollback path.
 Introduce “transfer variation” before using it.
 
 **Example prompt:**
 
-> Show the source directory, destination directory, and cutoff comparison.
-> State what may change (the cutoff input) and what must not change (CSV
-> contents, fee rule, duplicate rule, and source IDs). Do not run a production
+> Show the source directory, destination directory, and date scope comparison.
+> State what may change (the date scope input) and what must not change (repository fixture
+> contents, review rule, finding rule, and source IDs). Do not run a production
 > command or claim learner evidence.
 
-**Output:** Trainer's hash and cutoff demonstration with expected values clearly
+**Output:** Trainer's hash and date scope demonstration with expected values clearly
 labelled as examples.
 
 **Human acceptance:** Facilitator confirms the destination is separate and the
@@ -69,13 +69,13 @@ baseline sources remain read-only.
 ### 2. Individual attempt — 10:35–11:00
 
 **Task card:** Create the variation directory and record source/destination
-paths, copy method, hashes or byte comparison, cutoff, and rollback.
+paths, copy method, hashes or byte comparison, date scope, and rollback.
 
 **Example prompt:**
 
-> Copy all three CSVs from `scenarios/gitlab-repository-review/data/` into
+> Copy all repository fixture from `scenarios/gitlab-repository-review/data/` into
 > `lab-notes/squad-2/day-5-variation/data/` without editing them. Record exact
-> commands and a hash or byte comparison. Set cutoff to `2026-09-13` in a
+> commands and a hash or byte comparison. Set date scope to `scheduled review` in a
 > separate worksheet; do not modify the baseline files.
 
 **Output:** `lab-notes/squad-2/day-5-scope.md`.
@@ -91,8 +91,8 @@ that exactly one input changed and every expected sample is labelled.
 **Example prompt:**
 
 > Read the scope note and inspect source and destination metadata. Mark
-> `PASS`, `FAIL`, or `OPEN` for unchanged CSV contents, separate output path,
-> cutoff, rollback, and evidence plan. Do not solve the reconciliation.
+> `PASS`, `FAIL`, or `OPEN` for unchanged repository fixture contents, separate output path,
+> date scope, rollback, and evidence plan. Do not solve the review.
 
 **Output:** Boundary readback.
 
@@ -101,19 +101,19 @@ change without oral coaching.
 
 ### 4. Independent practice — 11:35–12:00
 
-**Task card:** Recalculate due-date status at cutoff `2026-09-13` using the
+**Task card:** Recalculate due-date status at date scope `scheduled review` using the
 copied data and record actual output in a local worksheet.
 
 **Example prompt:**
 
-> Using only the copied CSVs, recalculate missing-settlement due status at
-> `2026-09-13 12:00 Europe/Amsterdam`. Cite the ledger row and cutoff
-> comparison for `TX-NS-1008`. Record the command/output actually observed;
+> Using only the copied repository fixtures, recalculate missing-settlement due status at
+> `scheduled review time`. Cite the target file and date scope
+> comparison for `actionable finding`. Record the command/output actually observed;
 > do not alter source rows.
 
 **Output:** Variation worksheet with observed status.
 
-**Human acceptance:** Learner shows the new cutoff in the calculation and
+**Human acceptance:** Learner shows the new date scope in the calculation and
 marks any unavailable check `OPEN`.
 
 ### 5. Check — 13:00–13:15
@@ -124,41 +124,41 @@ Compare against the baseline only as a labelled reference.
 **Example prompt:**
 
 > Reopen the baseline and copied files. Verify unchanged contents, the new
-> cutoff, and the due-date comparison for `TX-NS-1008`. Mark each item
+> date scope, and the due-date comparison for `actionable finding`. Mark each item
 > `PASS`, `FAIL`, or `OPEN`. Do not call the result a production control.
 
 **Output:** Accepted or parked variation worksheet.
 
-**Human acceptance:** Reviewer confirms only the cutoff changed and
-`TX-NS-1008` is overdue at the new cutoff.
+**Human acceptance:** Reviewer confirms only the date scope changed and
+`actionable finding` is actionable at the new date scope.
 
 ### 6. Exception comparison — 13:15–14:00
 
 **Task card:** Compare baseline and variation classifications and show that
-fee, duplicate, and bank cases retain their original rules.
+fee, finding, and review cases retain their original rules.
 
 **Example prompt:**
 
 > Compare the two local worksheets. Explain which classification changes with
-> cutoff and which cases do not. Cite source IDs and calculations. Keep
-> `TX-NS-1008` overdue tied to `2026-09-13`; do not edit CSVs or infer a new
+> date scope and which cases do not. Cite source IDs and calculations. Keep
+> `actionable finding` actionable tied to `scheduled review`; do not edit repository fixtures or infer a new
 > policy.
 
 **Output:** Difference table labelled `TRANSFER VARIATION`.
 
-**Human acceptance:** Facilitator finds one cutoff-caused difference and no
+**Human acceptance:** Facilitator finds one date scope-caused difference and no
 unexplained data difference.
 
 ### 7. Transfer — 14:15–15:05
 
 **Task card:** Give the variation to a fresh reader. They reproduce the copy
-check and the `TX-NS-1008` cutoff calculation from the artifact alone.
+check and the `actionable finding` date scope calculation from the artifact alone.
 
 **Example prompt:**
 
 > You are the receiving reviewer. Verify the source and destination contents,
-> rerun the local due-date check, and state why `TX-NS-1008` is overdue at
-> `2026-09-13`. If a command or hash is missing, mark it `OPEN`.
+> rerun the local due-date check, and state why `actionable finding` is actionable at
+> `scheduled review`. If a command or hash is missing, mark it `OPEN`.
 
 **Output:** Fresh-reader reproduction and discrepancy list.
 
@@ -174,7 +174,7 @@ recap.
 **Example prompt:**
 
 > Draft the independent transfer handoff: baseline path, copied path, hashes
-> or byte check, cutoff, exact commands/output, changed classification,
+> or byte check, date scope, exact commands/output, changed classification,
 > unchanged rules, reviewer, rollback, and `OPEN` items. Rate yourself
 > independent, with help, or needs practice. Add one agreed group lesson.
 

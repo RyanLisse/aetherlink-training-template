@@ -7,7 +7,7 @@ Run all prompts and commands from the repository root.
 ## Outcome and boundary
 
 Peers turn the reviewed GL-REVIEW-001 packet into a concise local runbook and a
-reusable shared-skill handoff. A fresh reader can find inputs, cutoff, source
+reusable shared-skill handoff. A fresh reader can find inputs, date scope, source
 IDs, checks, stop rules, and the next owner. GitLab, Jira, and Confluence are
 mock workflow destinations only: no real workspace, ticket, page, merge
 request, access grant, or approval is claimed.
@@ -56,7 +56,7 @@ procedure with inputs, checks, stop rule, and owner.
 **Example prompt:**
 
 > Read the GL-REVIEW-001 packet and team workflow. Draft a local runbook outline
-> with source paths, cutoff, checks, `UNRESOLVED` handling, and a human gate.
+> with source paths, date scope, checks, `UNRESOLVED` handling, and a human gate.
 > Add mock GitLab, Jira, and Confluence fields marked `OPEN`; do not contact
 > any team system.
 
@@ -68,12 +68,12 @@ from published workflow records.
 ### 2. Individual attempt — 10:35–11:00
 
 **Task card:** Draft `lab-notes/squad-2/day-4-runbook.md` alone. Include inputs,
-cutoff, source IDs, sequence, evidence columns, stop rules, and rollback.
+date scope, source IDs, sequence, evidence columns, stop rules, and rollback.
 
 **Example prompt:**
 
 > Using GL-REVIEW-001 and the workflow guide, write a runbook another learner can
-> follow offline. Include exact local paths, the duplicate quarantine rule,
+> follow offline. Include exact local paths, the finding quarantine rule,
 > commands actually run or `OPEN`, reviewer role, next owner, and mock team
 > links labelled `OPEN`.
 
@@ -123,7 +123,7 @@ and a live release.
 **Example prompt:**
 
 > Review this runbook against the scenario and workflow guides. Mark `PASS`,
-> `FAIL`, or `OPEN` for sources, arithmetic, duplicate treatment, cutoff,
+> `FAIL`, or `OPEN` for sources, arithmetic, finding treatment, date scope,
 > reviewer gate, rollback, and external links. Record one required correction.
 
 **Output:** Accepted or parked runbook.
