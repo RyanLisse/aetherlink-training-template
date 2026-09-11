@@ -75,9 +75,9 @@
         "expected": "Everyone can explain the concept in their own words and start the exercise.",
         "check": "Definition, visual and next action are explicit.",
         "layout": "image",
-        "image": "robot.png",
-        "imageAlt": "The robot holds the goal while the team guards the boundaries.",
-        "imageCaption": "The robot holds the goal while the team guards the boundaries."
+        "image": "intent-md.svg",
+        "imageAlt": "intent.md brief with what, why and boundaries feeding design, build and review, with a revisit loop.",
+        "imageCaption": "What, why and boundaries feed design, build and review. Change the brief before you change the plan."
       },
       {
         "title": "The same rhythm every day",
@@ -138,6 +138,24 @@
         "check": "Fictional and local boundaries are explicit."
       },
       {
+        "title": "Evidence rule · see the ladder",
+        "kicker": "VISUAL · CONCEPT",
+        "subtitle": "A claim only counts with a source, a reproduced check and a reviewer.",
+        "cards": [],
+        "prompt": "Walk the four steps left to right. Ask: which step is usually skipped?",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Place one claim from today on the ladder."
+        ],
+        "expected": "Everyone can explain the concept in their own words and start the exercise.",
+        "check": "Definition, visual and next action are explicit.",
+        "layout": "image",
+        "image": "evidence-rule.svg",
+        "imageAlt": "Four steps: claim, source, reproduced check, reviewer; a dashed hypothesis box below; a cutoff stamp.",
+        "imageCaption": "Claim → source → reproduced check → reviewer. Anything short of that stays a hypothesis and is marked OPEN."
+      },
+      {
         "title": "MOB programming, made concrete",
         "kicker": "CONCEPT · 10:15",
         "subtitle": "One task, one screen, rotating human driver",
@@ -166,6 +184,24 @@
         ],
         "expected": "The group experiences shared navigation and a pause rule.",
         "check": "Participants can name driver, navigator, skeptic, and scribe."
+      },
+      {
+        "title": "MOB programming · see the roles",
+        "kicker": "VISUAL · CONCEPT",
+        "subtitle": "One laptop, one screen, everyone in a role; rotate every five to seven minutes.",
+        "cards": [],
+        "prompt": "Point at each role. Ask: who is driver first, and who calls the rotation?",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Name your first driver and navigator."
+        ],
+        "expected": "Everyone can explain the concept in their own words and start the exercise.",
+        "check": "Definition, visual and next action are explicit.",
+        "layout": "image",
+        "image": "mob-programming.svg",
+        "imageAlt": "Ring of four roles around one laptop: driver, navigator, researcher, tester, with a rotate-every-5-to-7-minutes arrow.",
+        "imageCaption": "Driver types what the navigator says. Researcher and tester keep the evidence honest. A human decides at every gate."
       },
       {
         "title": "AI-native SDLC loop",
@@ -1097,6 +1133,24 @@
         "check": "Fictional and local boundaries are explicit."
       },
       {
+        "title": "Evidence rule · see the ladder",
+        "kicker": "VISUAL · CONCEPT",
+        "subtitle": "A claim only counts with a source, a reproduced check and a reviewer.",
+        "cards": [],
+        "prompt": "Walk the four steps left to right. Ask: which step is usually skipped?",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Place one claim from today on the ladder."
+        ],
+        "expected": "Everyone can explain the concept in their own words and start the exercise.",
+        "check": "Definition, visual and next action are explicit.",
+        "layout": "image",
+        "image": "evidence-rule.svg",
+        "imageAlt": "Four steps: claim, source, reproduced check, reviewer; a dashed hypothesis box below; a cutoff stamp.",
+        "imageCaption": "Claim → source → reproduced check → reviewer. Anything short of that stays a hypothesis and is marked OPEN."
+      },
+      {
         "title": "MOB programming, made concrete",
         "kicker": "CONCEPT · 10:15",
         "subtitle": "One task, one screen, rotating human driver",
@@ -1125,6 +1179,24 @@
         ],
         "expected": "The group experiences shared navigation and a pause rule.",
         "check": "Participants can name driver, navigator, skeptic, and scribe."
+      },
+      {
+        "title": "MOB programming · see the roles",
+        "kicker": "VISUAL · CONCEPT",
+        "subtitle": "One laptop, one screen, everyone in a role; rotate every five to seven minutes.",
+        "cards": [],
+        "prompt": "Point at each role. Ask: who is driver first, and who calls the rotation?",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Name your first driver and navigator."
+        ],
+        "expected": "Everyone can explain the concept in their own words and start the exercise.",
+        "check": "Definition, visual and next action are explicit.",
+        "layout": "image",
+        "image": "mob-programming.svg",
+        "imageAlt": "Ring of four roles around one laptop: driver, navigator, researcher, tester, with a rotate-every-5-to-7-minutes arrow.",
+        "imageCaption": "Driver types what the navigator says. Researcher and tester keep the evidence honest. A human decides at every gate."
       },
       {
         "title": "AI-native SDLC loop",
@@ -1552,6 +1624,24 @@
         "tagline": "ONE CONTRACT · TWO HARNESSES · NO CAUSAL CLAIM FROM ONE PAIR"
       },
       {
+        "title": "One contract, two platforms · see the split",
+        "kicker": "VISUAL · CONCEPT",
+        "subtitle": "Same contract and input; only the harness and its adapter differ.",
+        "cards": [],
+        "prompt": "Point at the contract, then at both adapters. Ask: what is recorded per platform?",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Name the adapter settings you will record."
+        ],
+        "expected": "Everyone can explain the concept in their own words and start the exercise.",
+        "check": "Definition, visual and next action are explicit.",
+        "layout": "image",
+        "image": "one-contract-two-platforms.svg",
+        "imageAlt": "One contract box feeding n8n and Claude Code boxes, both feeding the same checker.",
+        "imageCaption": "One contract feeds two harnesses; both outputs go through the same checker. One pair of runs proves no cause."
+      },
+      {
         "title": "Trainer demo · n8n bounded preview",
         "kicker": "DEMO · 10:35–10:45",
         "subtitle": "Import, select the credential in the UI, execute once, show the Calculator call",
@@ -1649,6 +1739,24 @@
         "check": "Baseline frozen at the gate.",
         "layout": "cards",
         "tagline": "GROUPS OF 3–4 · ONE NAVIGATOR · AFTER THE INDIVIDUAL BLOCK"
+      },
+      {
+        "title": "Human gate · see the decision",
+        "kicker": "VISUAL · CONCEPT",
+        "subtitle": "The agent proposes; a human accepts or returns with a named reason.",
+        "cards": [],
+        "prompt": "Trace the arrows. Ask: what must the reviewer see before accepting?",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Say what your gate needs: source, check, reviewer."
+        ],
+        "expected": "Everyone can explain the concept in their own words and start the exercise.",
+        "check": "Definition, visual and next action are explicit.",
+        "layout": "image",
+        "image": "human-gate.svg",
+        "imageAlt": "Agent output enters a gate where a human reviews the evidence, then accept or return; a dashed arrow returns to the agent.",
+        "imageCaption": "Nothing is written to a business system without this decision. Return always names the gap."
       },
       {
         "title": "Human gate · n8n baseline",
@@ -2126,6 +2234,24 @@
           }
         ],
         "tagline": "ONE CONTRACT · TWO HARNESSES · NO CAUSAL CLAIM FROM ONE PAIR"
+      },
+      {
+        "title": "One contract, two platforms · see the split",
+        "kicker": "VISUAL · CONCEPT",
+        "subtitle": "Same contract and input; only the harness and its adapter differ.",
+        "cards": [],
+        "prompt": "Point at the contract, then at both adapters. Ask: what is recorded per platform?",
+        "notes": "Gebruik de vaste cadans: definitie → beeld → wat wij ermee doen.",
+        "dark": false,
+        "steps": [
+          "Name the adapter settings you will record."
+        ],
+        "expected": "Everyone can explain the concept in their own words and start the exercise.",
+        "check": "Definition, visual and next action are explicit.",
+        "layout": "image",
+        "image": "one-contract-two-platforms.svg",
+        "imageAlt": "One contract box feeding n8n and Claude Code boxes, both feeding the same checker.",
+        "imageCaption": "One contract feeds two harnesses; both outputs go through the same checker. One pair of runs proves no cause."
       },
       {
         "title": "Claude Code demo · rebuild the same agent",
