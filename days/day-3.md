@@ -15,10 +15,10 @@ workbook, not the participant starting path.
 
 ## Session outcome and boundary
 
-By 16:00 each participant has run the same bounded agent on both platforms
-with identical instruction, input and contract, recorded settings and output
-for each, compared the two observations with a fresh reader, and transferred
-the unchanged method to `TICKET-OPS-102` only after that comparison.
+By 16:00 each participant has run the same functional contract and input on
+both platforms, recorded each platform's adapter instructions, model, tools,
+settings, and output, compared the two observations with a fresh reader, and
+transferred the unchanged method to `TICKET-OPS-102` only after that comparison.
 
 n8n credentials and access are preflighted separately; an unavailable login
 is `OPEN`, not a run. Agents preview in chat and write nothing. No
@@ -59,13 +59,15 @@ flowchart LR
 
 ## Concept 2 — one contract, two platforms (10:35–10:45, then all day)
 
-The functional instruction is `scenarios/ticket-agent/shared-prompt.md` in
-the lab. In n8n it is the AI Agent **system message** and the ticket text is
-the user message — nothing is typed at run time. In Claude Code it is the body
-of the `ticket-coach` subagent and the learner types the invocation from the
-lab's ticket-agent README. Same instruction, same input, same contract; only
-the harness differs. That is what makes the afternoon comparison meaningful —
-and why one pair of runs still proves no causal superiority.
+The shared functional contract is `scenarios/ticket-agent/shared-prompt.md` in
+the lab. Both runs use the same `TICKET-OPS-101` input and output contract. In
+n8n the contract is the AI Agent **system message**, the ticket text is the
+user message, and the Calculator connection is a required tool adapter. In
+Claude Code it is the body of the `ticket-coach` subagent, with the lab's
+read-only `Read`, `Glob`, and `Grep` tools and the typed invocation as its
+adapter. Record those adapter instructions, model, mode, access, and tools for
+each run. The comparison therefore describes observations under the same
+functional contract and input; one pair of runs proves no causal superiority.
 
 Board prompt (human-readable summary of the contract, not a third instruction):
 
@@ -130,7 +132,7 @@ before any group work.
 ### Card 3 — individual Claude Code run (13:10–13:35, 25 min)
 
 - **Goal:** the same contract, same input, in Claude Code.
-- **Steps:** from the lab root `cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/`; start Claude Code; type the README invocation unchanged; preview; run `check_ticket.py`; record model/mode, output, checker line.
+- **Steps:** from the lab root run `mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md`; start Claude Code; type the README invocation unchanged; preview and save the accepted output to `participant-output/ticket-101-preview.md`; run `python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md`; record model/mode, read-only tools, output, and the checker line.
 - **Result:** Claude Code baseline in the run log.
 - **Time limit:** 25 min.
 

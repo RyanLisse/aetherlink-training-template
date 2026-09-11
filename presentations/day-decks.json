@@ -1024,10 +1024,10 @@
       {
         "title": "One contract, two platforms",
         "kicker": "CONCEPT 2 · 10:35–10:45",
-        "subtitle": "Same instruction, same input, same output contract — only the harness differs",
+        "subtitle": "Same functional contract and input; platform adapters and settings are recorded",
         "cards": [],
-        "prompt": "Show the shared instruction (shared-prompt.md). In n8n it is the AI Agent system message and the ticket is the user message. In Claude Code it is the ticket-coach subagent body plus the typed invocation. The board prompt is a summary, not a third instruction.",
-        "notes": "shared-prompt.md is de functionele instructie. n8n: systeembericht. Claude Code: subagent. Bordprompt is samenvatting.",
+        "prompt": "Show the shared functional contract (shared-prompt.md) and TICKET-OPS-101 input. In n8n it is the AI Agent system message and the ticket is the user message, with Calculator as the required tool adapter. In Claude Code it is the ticket-coach subagent body with read-only Read, Glob, and Grep tools plus the typed invocation. Record each platform's adapter instructions, model, mode, access, and tools; the board prompt is a summary, not a third instruction. One pair of runs does not establish causal superiority.",
+        "notes": "shared-prompt.md en dezelfde 101-input vormen de functionele basis. Leg per platform adapter, model, mode, toegang en tools vast; verschillen zijn waarnemingen, geen causaliteit.",
         "dark": false,
         "steps": [
           "Show shared-prompt.md.",
@@ -1043,7 +1043,7 @@
             "title": "n8n · morning",
             "items": [
               "Manual trigger → Set node with the ticket",
-              "AI Agent: system message = shared instruction",
+              "AI Agent: system message = shared functional contract",
               "Anthropic Chat Model (Claude Sonnet 5)",
               "Calculator via ai_tool",
               "Execution view shows intermediate steps"
@@ -1053,11 +1053,11 @@
           {
             "title": "Claude Code · afternoon",
             "items": [
-              "ticket-coach subagent = shared instruction",
-              "Read / Glob / Grep on the same files",
+              "ticket-coach subagent = shared functional contract",
+              "Read / Glob / Grep read-only tools on the same files",
               "Typed invocation from the lab README",
               "Preview in chat, checker after",
-              "Transcript shows every tool call"
+              "Transcript shows logged successful tool calls"
             ],
             "foot": "Terminal harness"
           }
@@ -1197,23 +1197,23 @@
       {
         "title": "Claude Code demo · rebuild the same agent",
         "kicker": "DEMO · 13:00–13:10",
-        "subtitle": "Same instruction, same input, same contract — now as a subagent",
+        "subtitle": "Same functional contract and input — now with a read-only subagent adapter",
         "cards": [
           {
             "title": "Install",
-            "body": "cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/"
+            "body": "mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md"
           },
           {
             "title": "Invoke",
-            "body": "The README invocation, typed unchanged"
+            "body": "The lab README invocation, typed unchanged"
           },
           {
             "title": "Verify",
-            "body": "check_ticket.py on the saved preview"
+            "body": "python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md"
           }
         ],
-        "prompt": "Copy the starter subagent, start Claude Code in the lab root, type the README invocation unchanged, preview, save yourself, run check_ticket.py. Point at each tool call as a phase of the loop.",
-        "notes": "Zelfde contract. Wijs elke toolcall aan als fase van de loop.",
+        "prompt": "From the lab root run mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md. Start Claude Code, type the lab README invocation unchanged, preview, save the accepted output to participant-output/ticket-101-preview.md, and run python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md. Point at the read-only tool adapter and record model, mode, access, and tools.",
+        "notes": "Zelfde functionele contract en input; Claude Code gebruikt de read-only adapter. Leg model, mode, toegang en tools vast.",
         "dark": false,
         "steps": [
           "Install the starter.",
@@ -1221,38 +1221,38 @@
           "Preview.",
           "Run the checker."
         ],
-        "expected": "The room has seen the same contract run in Claude Code.",
-        "check": "No file was written by the agent.",
+        "expected": "The room has seen the same functional contract and input run in Claude Code with adapter settings recorded.",
+        "check": "The accepted preview was saved by the human; any agent write requires separate evidence.",
         "layout": "cards",
         "tagline": "SAME CONTRACT · DIFFERENT HARNESS"
       },
       {
         "title": "Individual · Claude Code ticket 101",
         "kicker": "PRACTICE · 13:10–13:35 · 25 MIN",
-        "subtitle": "Run alone on the same TICKET-OPS-101",
+        "subtitle": "Run alone on the same functional input and contract",
         "cards": [
           {
             "title": "Goal",
-            "body": "The same contract in Claude Code, with settings recorded"
+            "body": "Same functional contract/input; adapter settings recorded"
           },
           {
             "title": "Input",
-            "body": "lab scenarios/ticket-agent/README.md · starter subagent"
+            "body": "Lab README · read-only starter subagent"
           },
           {
             "title": "Result",
-            "body": "Claude Code baseline in the run log"
+            "body": "Claude Code baseline and checker line in the run log"
           }
         ],
-        "prompt": "On your own laptop, copy the ticket-coach starter, start Claude Code in the lab root, type the README invocation unchanged, preview the draft, save it yourself if you accept it, run check_ticket.py, and record model/mode, output and checker line.",
-        "notes": "25 minuten alleen. De agent schrijft niets; de mens slaat op.",
+        "prompt": "On your own laptop, run mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md, start Claude Code in the lab root, type the lab README invocation unchanged, preview the draft, save it yourself if you accept it to participant-output/ticket-101-preview.md, run python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md, and record model/mode, read-only tools, output, and checker line.",
+        "notes": "25 minuten alleen. De functionele contract/input blijven gelijk; leg de read-only adapter, model en mode vast. De agent schrijft niets; de mens slaat op.",
         "dark": false,
         "steps": [
-          "Copy the starter into .claude/agents/.",
+          "Create .claude/agents/ and copy the starter.",
           "Start Claude Code in the lab root.",
-          "Type the README invocation unchanged.",
-          "Preview; save yourself; run check_ticket.py.",
-          "Record model/mode, output, checker line."
+          "Type the lab README invocation unchanged.",
+          "Preview; save yourself; run the full checker command.",
+          "Record model/mode, read-only tools, output, checker line."
         ],
         "expected": "Claude Code baseline in the run log",
         "check": "Preview happened before any save.",
@@ -1264,11 +1264,11 @@
       {
         "title": "Groups · same-input comparison",
         "kicker": "COMPARISON · 13:45–14:15 · 30 MIN",
-        "subtitle": "A fresh reader compares two runs of identical instructions",
+        "subtitle": "A fresh reader compares two runs under the same functional contract/input",
         "cards": [
           {
             "title": "Hand over",
-            "body": "Both records, exact prompts, settings, contract"
+            "body": "Both records, functional contract/input, adapter settings"
           },
           {
             "title": "Report",
@@ -1276,11 +1276,11 @@
           },
           {
             "title": "Never",
-            "body": "'n8n caused…' or 'Claude Code caused…' from one pair"
+            "body": "Do not infer platform causality from one pair"
           }
         ],
-        "prompt": "In groups of 3–4, give a fresh reader both TICKET-OPS-101 records. They report one observed difference or OPEN, one unchanged boundary, and missing evidence. Describe differences as observations of these two runs; this exercise does not establish causality.",
-        "notes": "Observaties, geen causaliteit. Daarna gate en 102-transfer met ongewijzigde methode.",
+        "prompt": "In groups of 3–4, give a fresh reader both TICKET-OPS-101 records, the shared functional contract/input, and each platform's adapter instructions, model, mode, access, and tools. They report one observed difference or OPEN, one unchanged boundary, and missing evidence. Describe differences as observations of these two runs; this exercise does not establish causal superiority.",
+        "notes": "Functionele contract/input gelijk; adapter, model, mode, toegang en tools vastgelegd. Observaties, geen causaliteit. Daarna gate en 102-transfer met ongewijzigde methode.",
         "dark": false,
         "steps": [
           "Hand over both records.",
@@ -1304,7 +1304,7 @@
           },
           {
             "title": "Transfer",
-            "body": "Same instruction and contract; only the input becomes TICKET-OPS-102"
+            "body": "Same functional contract; only the input becomes TICKET-OPS-102"
           },
           {
             "title": "Record",
@@ -1502,14 +1502,14 @@
       {
         "title": "The line becomes a loop",
         "kicker": "CONCEPT 1 · 10:15–10:35",
-        "subtitle": "Plan → Design → Build → Test → Deploy → Maintain — in hours, with humans above the loop",
+        "subtitle": "Illustrative source model: Plan → Design → Build → Test → Deploy → Maintain — in hours, with humans above the loop",
         "cards": [],
-        "prompt": "Use the interactive slide: click stages to show where each exercise sits; toggle Before/After agents to show that build runs at agent speed while requirements, review and release stay human.",
-        "notes": "Bron: AI-native SDLC playbook. Lijn versus loop; before/after agents; klik op een fase.",
+        "prompt": "Use the interactive slide: click stages to show where each exercise sits; toggle Before/After agents to show the source's illustrative model of build running at agent speed while requirements, review and release stay human. Say explicitly that this is not a Worldline-observed timing metric.",
+        "notes": "Bron: AI-native SDLC playbook. Illustratief model, geen Worldline-observeerde metriek. Lijn versus loop; before/after agents; klik op een fase.",
         "dark": false,
         "steps": [
           "Line versus loop.",
-          "Build at agent speed.",
+          "Illustrative model: build at agent speed.",
           "Requirements, review, release stay human.",
           "Click the stage your agent serves."
         ],
@@ -1573,19 +1573,19 @@
       {
         "title": "The menu — choose by stage",
         "kicker": "CHOOSE · 10:35–10:50",
-        "subtitle": "Pick the work you want to be faster at next week",
+        "subtitle": "Pick the work you want to improve next week",
         "cards": [],
-        "prompt": "Present A, B, C and the stretch. Each participant chooses aloud. Then install the starter: cp -Rn scenarios/agent-menu/starter/.claude .claude and restart Claude Code in the checkout root.",
-        "notes": "Stretch alleen na A/B/C met checker PASS. Installatie: één commando, herstart Claude Code.",
+        "prompt": "Present A, B, C and the stretch. Each participant chooses aloud. From the checkout root run mkdir -p .claude && cp -Rn scenarios/agent-menu/starter/.claude/. .claude/. If .claude/settings.json already exists, manually merge the starter hook entries while preserving unrelated settings. Restart Claude Code in the checkout root.",
+        "notes": "Stretch alleen na A/B/C met checker PASS. Installatie: inhoud naar bestaande .claude samenvoegen; settings handmatig mergen en ongerelateerde instellingen behouden.",
         "dark": false,
         "steps": [
           "Present A, B, C, stretch.",
           "Everyone chooses aloud.",
           "Install the starter.",
-          "ls .claude/agents shows five files."
+          "Five menu agents are present in .claude/agents (the Day 3 ticket coach is separate)."
         ],
         "expected": "Everyone has a chosen option and the starter installed.",
-        "check": "ls .claude/agents shows five files on every laptop.",
+        "check": "Five menu agents are present in .claude/agents; the Day 3 ticket coach remains separate.",
         "layout": "pillars",
         "items": [
           {
@@ -1636,7 +1636,7 @@
           "check_menu_output.py --agent <name>"
         ],
         "expected": "Preview, trace summary, checker line, run log",
-        "check": "Every write was a human save.",
+        "check": "The accepted preview was saved by the human; trace evidence covers logged events only.",
         "layout": "exercise",
         "timer": 25,
         "mascot": true,
@@ -1706,12 +1706,12 @@
         "tagline": "TRACE + CHECKER + HUMAN REVIEW = EVIDENCE"
       },
       {
-        "title": "Every tool call is a step you can see",
+        "title": "Hooks mark points in the loop",
         "kicker": "CONCEPT 2 · 13:00–13:20",
         "subtitle": "Hooks run at fixed points of the loop — deterministic, whatever the model decides",
         "cards": [],
-        "prompt": "Walk the six moments. A hook can observe (PostToolUse, Stop) or decide (PreToolUse). Highlight step 3: that is where your first hook will say no.",
-        "notes": "Bron: Claude Code hooks guide. PreToolUse beslist vóór de actie; PostToolUse observeert erna.",
+        "prompt": "Walk the six moments. A hook can observe (PostToolUse, Stop) or decide (PreToolUse). Highlight step 3: that is where your first hook will say no. Explain that the trace records logged lifecycle and successful PostToolUse events; blocked or failed attempts need their hook message or other evidence.",
+        "notes": "Bron: Claude Code hooks guide. PreToolUse beslist vóór de actie; PostToolUse observeert geslaagde toolacties erna. Een trace is geen log van elke poging.",
         "dark": false,
         "steps": [
           "UserPromptSubmit.",
@@ -1728,7 +1728,7 @@
           {
             "label": "Prompt",
             "caption": "UserPromptSubmit",
-            "detail": "The human asks. The trace records the prompt."
+            "detail": "The human asks. The trace records the submitted prompt event."
           },
           {
             "label": "Gather",
@@ -1748,7 +1748,7 @@
           {
             "label": "Observe",
             "caption": "PostToolUse",
-            "detail": "After the tool: the trace hook appends one line. Cannot undo."
+            "detail": "After a successful tool: the trace hook appends one line. It cannot undo or prove blocked/failed attempts."
           },
           {
             "label": "Stop",
@@ -1766,7 +1766,7 @@
       {
         "title": "Demo · see, then set a rule",
         "kicker": "DEMO · 13:00–13:20",
-        "subtitle": "The trace hook read aloud, then protect_output.py blocks a write",
+        "subtitle": "Read logged events, then protect_output.py blocks a write",
         "cards": [
           {
             "title": "See",
@@ -1781,8 +1781,8 @@
             "body": "claude-agent-sdk-demos/hello-world does the same in TypeScript — needs an API key, not today"
           }
         ],
-        "prompt": "Open settings.json and read the four events. Run one agent, show /hooks and the trace summary. Then add the PreToolUse hook from the lab's first-hook README, run its test prompt, and show: root write blocked with the message, participant-output write allowed, trace shows one Write.",
-        "notes": "Eerst zien, dan een regel. Test-prompt uit first-hook/README.md letterlijk gebruiken.",
+        "prompt": "Open settings.json and read the four events. Run one agent, show /hooks and the trace summary as logged-event evidence. Then add the PreToolUse hook from the lab's first-hook README, run its test prompt, and record the root-write blocked message and participant-output successful write separately; do not infer an attempted write from a missing trace line.",
+        "notes": "Eerst zien, dan een regel. Trace toont gelogde lifecycle- en geslaagde tool-events; de blokkeerboodschap is apart bewijs. Test-prompt uit first-hook/README.md letterlijk gebruiken.",
         "dark": false,
         "steps": [
           "Read settings.json.",
@@ -1802,7 +1802,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "A PreToolUse hook you edited, verified with /hooks and one blocked attempt"
+            "body": "A PreToolUse hook you edited, verified with /hooks and a blocked message"
           },
           {
             "title": "Input",
@@ -1810,20 +1810,20 @@
           },
           {
             "title": "Result",
-            "body": "/hooks entry, one blocked + one allowed attempt in the run log, your edited rule"
+            "body": "/hooks entry, blocked message + successful allowed result in the run log, your edited rule"
           }
         ],
-        "prompt": "Follow the first-hook README card exactly: copy protect_output.py (or the .sh / .ps1 variant) into .claude/hooks/, add PreToolUse for Write|Edit as a sibling event in .claude/settings.json, restart Claude Code, verify with /hooks, run the test prompt, read the trace, then change the folder, add a pattern or rewrite the message.",
+        "prompt": "Follow the first-hook README card exactly: copy protect_output.py (or the .sh / .ps1 variant) into .claude/hooks/, add PreToolUse for Write|Edit as a sibling event in .claude/settings.json, restart Claude Code, verify with /hooks, run the test prompt, record the blocked message and successful allowed result, read only the logged trace events, then change the folder, add a pattern or rewrite the message.",
         "notes": "Windows: python in plaats van python3, of de .ps1-variant. Trace hook nooit uitzetten om iets te 'fixen'.",
         "dark": false,
         "steps": [
           "Copy the script for your OS into .claude/hooks/.",
           "Add PreToolUse as a sibling event.",
           "Restart Claude Code; /hooks shows 1.",
-          "Run the test prompt: blocked, then allowed.",
+          "Run the test prompt: record blocked message, then allowed result.",
           "Make the rule yours; re-test."
         ],
-        "expected": "/hooks entry, one blocked + one allowed attempt in the run log, your edited rule",
+        "expected": "/hooks entry, blocked message + successful allowed result in the run log, your edited rule",
         "check": "Nobody disabled the trace hook.",
         "layout": "exercise",
         "timer": 25,
@@ -1950,7 +1950,7 @@
         "items": [
           {
             "label": "In the AI-native loop my agent sits at…",
-            "caption": "Plan, Deploy or Maintain — build at agent speed, humans above the loop"
+            "caption": "Plan, Deploy or Maintain — illustrative source model: build at agent speed, humans above the loop; no Worldline timing metric"
           },
           {
             "label": "A hook is…",
@@ -1958,7 +1958,7 @@
           },
           {
             "label": "Evidence today",
-            "caption": "two traces, one checker line, one hook that blocked and one that allowed"
+            "caption": "two traces, one checker line, one hook blocked message and one successful allowed result"
           }
         ],
         "tagline": "RECAP · TWO CONCEPTS · EVIDENCE, NOT FEELINGS"
@@ -2263,7 +2263,7 @@
         "kicker": "CONCEPT 2 · 13:00–13:15",
         "subtitle": "What a trace proves, what it cannot, and why a handoff is the Maintain stage",
         "cards": [],
-        "prompt": "Two columns: what the trace proves versus what it cannot. Then show one participant's two traces side by side: added files, dropped files, writes. Finish with the handoff test: not 'I explained it' but 'someone reproduced it in ten minutes'.",
+        "prompt": "Two columns: what the trace proves versus what it cannot. Then show one participant's two traces side by side: logged files, successful tool events, and writes; a missing event is not proof that no attempt occurred. Finish with the handoff test: not 'I explained it' but 'someone reproduced it in ten minutes'.",
         "notes": "Trace bewijst wat draaide, niet of het klopt. Overdracht = Maintain: de volgende start vanuit bewijs, niet geheugen.",
         "dark": false,
         "steps": [
@@ -2281,7 +2281,7 @@
             "items": [
               "Which files were read, in which order",
               "Whether a subagent ran and stopped",
-              "Whether anything was written or executed",
+              "Which writes or executions were logged (absence is not proof none were attempted)",
               "What the human asked"
             ],
             "foot": "Observed events"
@@ -2399,7 +2399,7 @@
       },
       {
         "title": "Five days, one loop",
-        "kicker": "COURSE RECAP · 15:20–15:40",
+        "kicker": "COURSE RECAP · 15:20–15:30",
         "subtitle": "Intent → relay → one agent twice → chosen agent + trace + hook → evaluator + handoff",
         "cards": [],
         "prompt": "Walk the evidence wall day by day and click each step. Ask each group which option they would run first on a real Jira ticket, GitLab MR or Confluence page — and which approval, access or data decision is OPEN before they may. Record as a next-step list, not commitments.",
@@ -2453,11 +2453,11 @@
           "text": "OPEN DECISIONS FIRST"
         },
         "detail": "Click a day to recall its evidence.",
-        "tagline": "BUILD FASTER · STAY ACCOUNTABLE"
+        "tagline": "ILLUSTRATIVE MODEL · STAY ACCOUNTABLE"
       },
       {
         "title": "Recap",
-        "kicker": "RECAP · 15:20–15:40",
+        "kicker": "RECAP · 15:30–15:40",
         "subtitle": "One sentence per concept, from the room",
         "cards": [],
         "prompt": "Finish the sentences with the room; point at the evidence wall.",
@@ -2467,7 +2467,7 @@
           "Ask the room for concept 1.",
           "Ask for concept 2.",
           "Point at the evidence.",
-          "Preview tomorrow."
+          "Name the next real-work application."
         ],
         "expected": "Two sentences on the board that point at evidence.",
         "check": "No sentence claims an unobserved result.",

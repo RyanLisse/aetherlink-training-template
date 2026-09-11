@@ -37,10 +37,12 @@ agenda. The primary scenario is [payment reconciliation](../scenarios/payment-re
 Day 3's participant workspace is the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab).
 The trainer workbook's starter, `ticket-inputs.md`, `ticket-template.md` handout,
 `target-examples.md`, and `check_ticket.py` are defined in the [ticket-agent
-pack](../scenarios/ticket-agent/README.md). Its two input/target pairs are
-`TICKET-OPS-101`/Worked target A and `TICKET-OPS-102`/Worked target B. Treat
-the pack README as authoritative for preflight steps; both pairs remain `OPEN`
-until team signoff.
+pack](../scenarios/ticket-agent/README.md). The participant lab README is the
+canonical executable contract and starting path; use it for participant setup,
+commands, and preflight. This pack is facilitator reference material and does
+not override the lab instructions. Its two input/target pairs are
+`TICKET-OPS-101`/Worked target A and `TICKET-OPS-102`/Worked target B; both
+remain `OPEN` until team signoff.
 
 ## Shared MOB and evidence rule
 

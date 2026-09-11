@@ -413,7 +413,7 @@
           }
         ],
         "prompt": "Read every timebox aloud: theory before either build; n8n demo and 25-minute individual run in the morning; lunch 12:00–13:00; Claude Code rebuild and 25-minute individual run in the afternoon; same-input comparison before any TICKET-OPS-102 transfer.",
-        "notes": "Keep this agenda visible. Both platform runs get individual own-laptop time and use the same functional prompt and contract.",
+        "notes": "Keep this agenda visible. Both platform runs get individual own-laptop time and use the same functional contract/input; record each adapter, model, mode, access, and tools.",
         "dark": false,
         "steps": [
           "Read the blocks.",
@@ -543,23 +543,23 @@
       {
         "title": "Claude Code demo · rebuild the same agent",
         "kicker": "DEMO · 13:00–13:10",
-        "subtitle": "Rebuild the n8n agent with the same instructions and contract",
+        "subtitle": "Rebuild the n8n agent with the same functional contract/input and a read-only adapter",
         "cards": [
           {
-            "title": "Same instruction",
-            "body": "Reuse the exact prompt used in n8n"
+            "title": "Functional contract",
+            "body": "Reuse the same contract and TICKET-OPS-101 input"
           },
           {
             "title": "Same input",
             "body": "Use TICKET-OPS-101 and the shared output contract"
           },
           {
-            "title": "Capture",
-            "body": "Record Claude Code settings, output, and human gate"
+            "title": "Adapter + capture",
+            "body": "Read-only Read/Glob/Grep; record model, mode, access, tools, output, and gate"
           }
         ],
-        "prompt": "Rebuild the bounded agent in Claude Code. Use the identical TICKET-OPS-101 prompt, input, and shared output contract from n8n. Capture model/mode and access, preview the output, and apply the same checklist and human gate. Mark missing access or evidence OPEN.",
-        "notes": "Herbouw in Claude Code met dezelfde functionele instructies en contract. Leg platforminstellingen vast; maak geen business-systeem-write.",
+        "prompt": "From the lab root run mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md, then start Claude Code. Use the same TICKET-OPS-101 input and shared functional output contract from n8n, while recording the read-only Read/Glob/Grep adapter, model/mode, access, and tools. Preview the output, save the accepted output to participant-output/ticket-101-preview.md, and run python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md. Apply the same checklist and human gate; mark missing access or evidence OPEN. One pair of runs does not establish causal superiority.",
+        "notes": "Herbouw met dezelfde functionele contract/input. Leg read-only adapter, model, mode, toegang en tools vast; verschillen zijn waarnemingen, geen causaliteit.",
         "dark": false,
         "steps": [
           "Open the participant lab README.",
@@ -576,20 +576,20 @@
         "subtitle": "On your own laptop, rebuild and run the same ticket-coach",
         "cards": [
           {
-            "title": "Same instruction",
-            "body": "Reuse the exact prompt used in n8n"
+            "title": "Functional contract",
+            "body": "Reuse the same contract and TICKET-OPS-101 input"
           },
           {
             "title": "Same input",
             "body": "Use TICKET-OPS-101 and the shared output contract"
           },
           {
-            "title": "Capture",
-            "body": "Record Claude Code settings, output, and human gate"
+            "title": "Adapter + capture",
+            "body": "Read-only Read/Glob/Grep; record model, mode, access, tools, output, and gate"
           }
         ],
-        "prompt": "Rebuild the bounded agent in Claude Code. Use the identical TICKET-OPS-101 prompt, input, and shared output contract from n8n. Capture model/mode and access, preview the output, and apply the same checklist and human gate. Mark missing access or evidence OPEN.",
-        "notes": "Herbouw in Claude Code met dezelfde functionele instructies en contract. Leg platforminstellingen vast; maak geen business-systeem-write.",
+        "prompt": "On your own laptop, from the lab root run mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md, then start Claude Code. Use the same TICKET-OPS-101 input and shared functional output contract from n8n, while recording the read-only Read/Glob/Grep adapter, model/mode, access, and tools. Preview the output, save the accepted output to participant-output/ticket-101-preview.md, and run python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md. Apply the same checklist and human gate; mark missing access or evidence OPEN. One pair of runs does not establish causal superiority.",
+        "notes": "Herbouw met dezelfde functionele contract/input. Leg read-only adapter, model, mode, toegang en tools vast; verschillen zijn waarnemingen, geen causaliteit.",
         "dark": false,
         "steps": [
           "Follow the lab Claude Code setup.",
@@ -635,8 +635,8 @@
         "subtitle": "Describe platform observations without causal conclusions",
         "cards": [
           {
-            "title": "Same prompt",
-            "body": "Identical functional instructions in both runs"
+            "title": "Functional input",
+            "body": "Same functional contract/input; adapters recorded separately"
           },
           {
             "title": "Compare",
@@ -647,8 +647,8 @@
             "body": "Platform differences are observations, not causes"
           }
         ],
-        "prompt": "Give a fresh reviewer the n8n and Claude Code TICKET-OPS-101 previews, exact functional prompt, settings, and shared contract. Identify one output difference or OPEN — no observed difference, one unchanged boundary, and missing evidence. Describe platform differences as observations; do not claim causality.",
-        "notes": "Vergelijk dezelfde input en functionele instructies. Deze vergelijking bewijst geen causale platformconclusie.",
+        "prompt": "Give a fresh reviewer the n8n and Claude Code TICKET-OPS-101 previews, same functional contract/input, and each platform's adapter instructions, model, mode, access, and tools. Identify one output difference or OPEN — no observed difference, one unchanged boundary, and missing evidence. Describe platform differences as observations; do not claim causal superiority.",
+        "notes": "Vergelijk dezelfde functionele contract/input. Leg adapters en instellingen vast; deze vergelijking bewijst geen causale platformconclusie.",
         "dark": false,
         "steps": [
           "Give both 101 previews.",
@@ -657,7 +657,7 @@
           "Keep causality OPEN."
         ],
         "expected": "A same-input comparison with one platform observation.",
-        "check": "Both 101 runs use identical functional instructions and no causal claim."
+        "check": "Both 101 runs use the same functional contract/input, adapters are recorded, and no causal claim is made."
       },
       {
         "title": "Transfer · ticket 102",
@@ -724,7 +724,7 @@
         "cards": [
           {
             "title": "Before / after",
-            "body": "What did n8n and Claude Code show under identical instructions?"
+            "body": "What did n8n and Claude Code show under the same functional contract/input?"
           },
           {
             "title": "Independence",

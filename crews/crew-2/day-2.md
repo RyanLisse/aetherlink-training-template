@@ -9,13 +9,16 @@ they are kept separate from the participant path.
 
 ## Outcome and boundary
 
-Each learner builds the same bounded ticket agent first in n8n and then in
-Claude Code. Both runs use the identical instructions, `TICKET-OPS-101` input,
-and output contract: a preview following `ticket-template.md`, exact source
-citations, protected Current/Desired sections, and `OPEN` for unsupported
-details. The learner captures settings, output, and a human decision for both
-platforms, compares the two observations, and transfers to `TICKET-OPS-102`
-only after that comparison is accepted.
+Each learner applies the same functional ticket contract first in n8n and then
+in Claude Code. Both runs use the same `TICKET-OPS-101` input and output
+contract: a preview following `ticket-template.md`, exact source citations,
+protected Current/Desired sections, and `OPEN` for unsupported details. The n8n
+Calculator tool adapter and the Claude Code read-only `Read`, `Glob`, and
+`Grep` adapter are platform-specific settings; record each adapter's
+instructions, model, mode, access, and tools. The learner captures settings,
+output, and a human decision for both platforms, compares the two observations,
+and transfers to `TICKET-OPS-102` only after that comparison is accepted. One
+pair of runs does not establish causal superiority.
 
 n8n workflow credentials are chosen and checked separately in preflight. A
 learner must be logged in with approved access; missing login or credentials is
@@ -49,7 +52,9 @@ flowchart LR
    result. Never store credentials here.
 4. Confirm Claude Code access and record model/mode, zoom, revision, and
    timestamp where visible. Mark every unrun check `OPEN`.
-5. Put the prompt below on the board and use it unchanged in both `101` runs.
+5. Put the functional contract below on the board. Apply it through each
+   platform's adapter and record the adapter instructions, model, mode, access,
+   and tools for both `101` runs.
 
 ## Fixed agenda — 10:00–16:00 (360 minutes)
 
@@ -67,7 +72,7 @@ flowchart LR
 | 13:10–13:35 | 25 | Individual Claude Code run | Run alone on the same `TICKET-OPS-101` |
 | 13:35–13:50 | 15 | Claude Code review | Apply the same checklist and gate |
 | 13:50–14:00 | 10 | Break | — |
-| 14:00–14:30 | 30 | Comparison | Fresh reader compares identical instructions |
+| 14:00–14:30 | 30 | Comparison | Fresh reader compares the same functional contract/input and recorded adapters |
 | 14:30–14:45 | 15 | Transfer gate | Only now run the unchanged method on `102` |
 | 14:45–15:00 | 15 | Break | — |
 | 15:00–15:40 | 40 | Handoff | Store runs, settings, decisions, and `OPEN` items |
@@ -86,7 +91,8 @@ before building. Explain model, chat, agent, and subagent briefly. Show the
 n8n workflow only with the preflighted credential and login. If access is not
 confirmed, show the intended steps as `OPEN` and do not imply execution.
 
-Use this exact prompt for the n8n demo and the two `TICKET-OPS-101` runs:
+Use this functional contract for the n8n demo and the two `TICKET-OPS-101`
+runs. Platform adapter instructions and settings are recorded separately:
 
 ```text
 Read the supplied TICKET-OPS-101 input and return a preview that follows the shared ticket output contract. Cite the exact source sections for every factual field, preserve Current and Desired as protected sections, separate facts from assumptions, and label unsupported details OPEN. Do not write files, create or change business-system records, or approve financial status.
@@ -99,8 +105,13 @@ the AI Agent **system message** and the ticket text is the user message, so
 nothing is typed at run time. In Claude Code it is the body of the
 `ticket-coach` subagent, and the learner types the invocation from the lab's
 ticket-agent README (`Use the ticket-coach subagent. Read … TICKET-OPS-101 …`).
-The board prompt above is the human-readable summary of that contract, not a
-third instruction; do not paste it into n8n or add it as hidden context.
+The n8n Calculator connection is a required tool adapter. The Claude Code
+starter uses read-only `Read`, `Glob`, and `Grep` tools. Record the model, mode,
+access, and tool adapter for each run. The board prompt above is the
+human-readable summary of that functional contract, not a third instruction;
+do not paste it into n8n or add it as hidden context. Compare observations
+under the same functional contract/input; do not infer causal superiority from
+one pair.
 
 ### 2. Individual n8n baseline — 10:20–12:00
 
@@ -113,11 +124,7 @@ sections, citations, assumptions, and `OPEN` labels. A human reviewer records
 
 ### 3. Claude Code rebuild and run — 13:00–13:50
 
-Rebuild the same agent from the lab instructions. Keep the exact prompt,
-`TICKET-OPS-101`, output contract, and evidence fields unchanged from n8n.
-Record Claude Code model/mode and access, preview the result, and apply the
-same checklist and human gate. If the lab or account is unavailable, record
-`OPEN`; do not manufacture a comparison.
+From the lab root run `mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md`, then start Claude Code. Rebuild the same functional contract from the lab instructions. Keep `TICKET-OPS-101`, the output contract, and evidence fields unchanged from n8n. Record the Claude Code read-only tool adapter, model/mode, and access, preview the result, and save the accepted output to `participant-output/ticket-101-preview.md`. Run `python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md`, then apply the same checklist and human gate. If the lab or account is unavailable, record `OPEN`; do not manufacture a comparison.
 
 ### 4. Compare the same input — 14:00–14:30
 

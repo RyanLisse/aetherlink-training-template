@@ -2,11 +2,14 @@
 
 Fourth session for **Wave 2 crew 1**. Two concepts today:
 
-1. **Agents in the AI-native SDLC.** The line becomes a loop; build runs at
-   agent speed while requirements, review and release stay human. You choose
-   **one agent** from the lab menu and build it where it sits in that loop.
-2. **Hooks: see the loop, then set a rule on it.** A trace hook shows what the
-   agent did; your own `PreToolUse` hook decides what it may not do.
+1. **Agents in the AI-native SDLC.** The source's illustrative model shows the
+   line becoming a loop, with build at agent speed while requirements, review
+   and release stay human. It is a source model, not a Worldline-observed
+   metric. You choose **one agent** from the lab menu and build it where it sits
+   in that loop.
+2. **Hooks: see the loop, then set a rule on it.** A trace hook shows logged
+   lifecycle and successful tool events; your own `PreToolUse` hook decides
+   what the agent may not do.
 
 | Option | Agent | SDLC stage it serves | Closest real task |
 |---|---|---|---|
@@ -22,8 +25,8 @@ Lab: [agent menu](https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/sc
 ## Session outcome and boundary
 
 By 16:00 every participant has: one chosen agent installed and run twice on
-their own laptop, a trace summary answering *what did it ask, read, delegate,
-write*, a working `PreToolUse` hook they edited themselves, a checker result,
+their own laptop, a trace summary of logged events answering *what did it ask,
+read, delegate, write*, a working `PreToolUse` hook they edited themselves, a checker result,
 a completed run log, and one accepted output saved under `participant-output/`.
 
 Fictional local inputs; agents use `Read`, `Glob`, `Grep` and preview in
@@ -41,16 +44,16 @@ click a stage).
    Deploy → Maintain; one loop back is a new release cycle. AI-native: the
    same six stages as a loop that turns in hours, with humans *above* the
    loop instigating, directing and governing.
-2. **What actually speeds up.** Build runs at agent speed. Requirements
-   (Plan/Design), review (Test) and release (Deploy) stay human — that is
-   where the reclaimed cycle time goes.
+2. **What the source model depicts as faster.** Build runs at agent speed in
+   that illustrative model. Requirements (Plan/Design), review (Test) and
+   release (Deploy) stay human. This course records no Worldline timing metric.
 3. **Start anywhere, adopt in order.** From the playbook's adoption map:
    capture intent, `CLAUDE.md`, skills, a feedback loop, hooks and plan mode
    have no prerequisites; subagents and evals build on them; PR review, CI/CD
    and closing the loop come last. This course walked that map: intent (Day 1),
    contract (Day 2), subagent (Day 3), hooks (today), evaluator (Day 5).
 4. **Choose your agent by stage.** Point at the table above; each option is
-   a bounded agent at one stage. Pick the work you want faster next week.
+   a bounded agent at one stage. Pick the work you want to improve next week.
 
 ## Concept 2 — hooks: see the loop, then set a rule (13:00–13:20)
 
@@ -61,12 +64,15 @@ decides.
 
 1. **See.** The starter's trace hook listens on `UserPromptSubmit`,
    `PostToolUse`, `SubagentStop`, `Stop` and writes one line per event to
-   `trace/<session>.jsonl`. Read one participant's trace aloud in the
-   four-question order; show `/hooks`.
+   `trace/<session>.jsonl` for logged lifecycle and successful tool events.
+   Read one participant's trace aloud in the four-question order; show
+   `/hooks`. A trace does not establish that a blocked or failed attempt was
+   made.
 2. **Set a rule.** A `PreToolUse` hook on `Write|Edit` can block a write
    before it happens: exit code 2, message on stderr goes back to Claude as
    feedback. Demo the lab's `protect_output.py`: root write blocked, write
-   under `participant-output/` allowed, trace shows one `Write`.
+   under `participant-output/` allowed, and the successful write may appear in
+   the trace. Keep the blocked message as separate evidence.
 3. **What hooks cannot do.** They do not make the model understand the rule;
    they hold the boundary. `PostToolUse` cannot undo. Put the rule in
    `intent.md`/`CLAUDE.md` too, so agent and hook agree.
@@ -121,7 +127,7 @@ between short group blocks.
 
 - **Goal:** a complete preview from your chosen agent plus its trace summary and checker line.
 - **Input:** your option README (contract + exact first prompt); the files it names.
-- **Steps:** `cp -Rn scenarios/agent-menu/starter/.claude .claude` and start Claude Code in the checkout root; fill the `templates/run-log.md` header; type the option's first prompt unchanged; `python3 scenarios/agent-menu/tools/trace_summary.py` → four answers into the run log; save the accepted preview to `participant-output/<option>.md`; `python3 scenarios/agent-menu/tools/check_menu_output.py --agent <name> --output participant-output/<option>.md`.
+- **Steps:** from the checkout root run `mkdir -p .claude && cp -Rn scenarios/agent-menu/starter/.claude/. .claude/`; if `.claude/settings.json` already exists, manually merge the starter hook entries while preserving unrelated settings; start Claude Code; fill the `templates/run-log.md` header; type the option's first prompt unchanged; run `python3 scenarios/agent-menu/tools/trace_summary.py` and record only the logged events it reports; save the accepted preview to `participant-output/<option>.md`; run `python3 scenarios/agent-menu/tools/check_menu_output.py --agent <name> --output participant-output/<option>.md`.
 - **Result:** preview, trace summary, checker line, run log with PASS/FAIL/OPEN.
 - **Time limit:** 25 min.
 

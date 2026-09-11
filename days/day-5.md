@@ -81,8 +81,9 @@ group work that uses them.
 
 ## Concept 2 — close the loop: handoff and Maintain (13:00–13:15)
 
-1. **What a trace proves.** Which files were read, in which order, whether a
-   subagent ran, whether anything was written. **What it cannot prove:**
+1. **What a trace proves.** Which files and successful tool events were logged,
+   in which order, and whether a subagent ran. A missing write event is not
+   proof that no write was attempted. **What it cannot prove:**
    correctness, arithmetic, understanding. Say `OPEN` for those. Show two
    traces of one participant side by side: added files, dropped files, writes.
 2. **Handoff test.** Not "I explained it" but "someone reproduced it from the
