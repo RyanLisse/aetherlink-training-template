@@ -12,14 +12,14 @@ This file is a current-state board, not a diary. Keep one short entry per fact a
 - Site registries: `days.js` and `squad2.js` are `JSON.stringify`-equal to the canonical decks; evidence: apply_concepts.py regenerates both and the site gate (`work/bundle-update/check_site_dom.cjs`) passes 174 renders.
 - Diagrams: seven concept diagrams in `assets/` follow the training-site design system (see the site repo's `design.md`).
 - Training outcome: `OPEN — no live outcome recorded yet`.
-- Current phase: `Design` and `Build` complete for the route update; public Site `Test` and `Deploy` verified on 2026-09-11.
+- Current phase: `Design` and `Build` complete for the route update; public Site `Test` and `Deploy` verified on 2026-09-11 for version 20.
 - Last independently rechecked artifact: site diff reviewed twice by an independent reviewer lane on 2026-09-11; all findings fixed.
 
 ## Blockers
 
 | Blocker | Mechanism or impact | Owner | Evidence | Status |
 | --- | --- | --- | --- | --- |
-| Public Site publication | Version 19 now serves commit `a0724df`; live assets match the site checkout | Ryan | Sites deployment `appgdep_6aa4485c906c8191b30171c676eee6b5`, public URL | `DONE` |
+| Public Site publication | Version 20 now serves commit `d46daac`; live assets match the site checkout | Ryan | Sites deployment `appgdep_6aa44b48ebc481919ee4544d49158518`, public URL | `DONE` |
 | Live n8n / Claude Code model runs never executed in this repo | Synthetic examples do not prove a model run | Ryan | none | `OPEN` |
 
 ## Next actions
