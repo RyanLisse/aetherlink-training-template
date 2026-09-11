@@ -231,9 +231,9 @@
       "visual": {
         "title": "AI-native SDLC · see the loop",
         "subtitle": "The line becomes a repeatable loop with AI at every point.",
-        "image": "ai-native-sdlc-loop.svg",
-        "imageAlt": "Six phase pills on one orange loop: plan, design, build, test, deploy, maintain, with Claude in the centre helping at every point.",
-        "imageCaption": "Six phases on one repeating loop with Claude at every point. Intent, review and release remain human decisions.",
+        "image": "ai-native-sdlc-line-and-loop.png",
+        "imageAlt": "Traditional SDLC line on the left and AI-native loop on the right around Claude, with plan, design, build, test, deploy and maintain.",
+        "imageCaption": "Traditional: the line. AI-native: the loop, with Claude helping at every point and humans directing and governing.",
         "prompt": "Use the picture to point at the loop. Then let participants place their own ticket on one phase and point at one human gate.",
         "steps": [
           "Point at the loop. Place your ticket."

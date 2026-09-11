@@ -36,10 +36,10 @@ times aligned with the workbooks when updating. Squad 1 Day 3 and Squad 2 Days 1
 agent building. Squad 1 Day 4 and Squad 2 Day 3 build in n8n; Squad 1 Day 5
 and Squad 2 Day 4 rebuild in Claude Code. Protect at least 25 minutes of
 individual practice in every build block.
-The AI-native SDLC concept uses a standalone loop illustration at
-[`assets/ai-native-sdlc-loop.svg`](../assets/ai-native-sdlc-loop.svg). It shows
-the six phases around Claude without the traditional SDLC comparison panel, so
-the facilitator can use the loop as a reusable phase reference.
+The AI-native SDLC concept uses a line-and-loop illustration at
+[`assets/ai-native-sdlc-line-and-loop.png`](../assets/ai-native-sdlc-line-and-loop.png). It shows
+the traditional line beside the AI-native loop with Claude in the centre, so
+the facilitator can use the comparison as a reusable phase reference.
 
 ## Concept slides
 
