@@ -877,6 +877,24 @@
         "imageCaption": "Loop and state, tools, skills, sandbox, production layer. n8n and Claude Code are two harnesses around the same kind of model."
       },
       {
+        "title": "Harness · look inside",
+        "kicker": "VISUAL · HARNESS",
+        "subtitle": "The loop, the boolean that makes it an agent, and the five tools every coding harness starts with.",
+        "cards": [],
+        "prompt": "Point at reason (model) and act and observe (harness). Say the boolean out loud. Then the five tools in order and ask which one the ticket-coach subagent is allowed to use. (Read, list, search; no bash, no edit.)",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name which of the five tools the ticket-coach may use."
+        ],
+        "expected": "Everyone can say what the loop does without the user.",
+        "check": "Everyone can name the two tools the read-only ticket-coach must never get.",
+        "layout": "image",
+        "image": "harness-inside.svg",
+        "imageAlt": "Reason, act, observe loop with the model on reason and the harness on act and observe; readUserInput equals false; five primitive tools; six production additions.",
+        "imageCaption": "An LLM, a loop and enough tokens. Three hundred lines and five tools talk to the model; sandbox, memory, verification, approvals, observability and lifecycle make it reliable."
+      },
+      {
         "title": "Harness · how we use it",
         "kicker": "HOW WE USE IT · HARNESS",
         "subtitle": "When something goes wrong, debug the layer, not the model.",
@@ -909,7 +927,7 @@
       {
         "title": "What is an agent?",
         "kicker": "CONCEPT DEFINITION · AGENTIC LOOP",
-        "subtitle": "A model in a loop with a goal, tools, feedback, authority and memory. The model matters; the loop turns language into work.",
+        "subtitle": "\"Agents run tools in a loop to achieve a goal.\" A model in a loop with a goal, tools, feedback, authority and memory.",
         "cards": [],
         "prompt": "Say one sentence per pillar. A model predicts text. Give it a goal, tools, feedback and a boundary and it becomes an agent. A subagent is an agent another agent delegates to, with its own context.",
         "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
@@ -965,6 +983,24 @@
         "image": "agentic-loop.svg",
         "imageAlt": "Your prompt enters a loop of gather, act and verify that repeats until done; a human box can interrupt, steer or add context at any point.",
         "imageCaption": "Models reason, tools act, the harness holds the loop. The loop ends at a human gate, never at \"done\" by itself."
+      },
+      {
+        "title": "Agent = model + harness",
+        "kicker": "VISUAL · AGENTIC LOOP",
+        "subtitle": "The model reasons. The harness is everything else. Together they are the agent.",
+        "cards": [],
+        "prompt": "Read the equation. Walk one analogy row (brain, body, person). Ask: when a colleague says 'we use ChatGPT', which box are they pointing at? (The harness.)",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Say which box 'we use ChatGPT' points at."
+        ],
+        "expected": "Everyone can separate model, harness and agent.",
+        "check": "Nobody calls the model the agent, and everyone can name one thing only the harness does.",
+        "layout": "image",
+        "image": "agent-equation.svg",
+        "imageAlt": "Equation: model plus harness equals agent, with three analogy rows: brain and body, CPU and operating system, engine and car.",
+        "imageCaption": "Saying 'I use Claude' names the harness, not the model. You swap the model inside the harness; the harness is the layer you actually work with."
       },
       {
         "title": "The agentic loop · how we use it",

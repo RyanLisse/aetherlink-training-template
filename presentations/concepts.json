@@ -285,7 +285,7 @@
       "name": "Agentic loop",
       "definition": {
         "title": "What is an agent?",
-        "subtitle": "A model in a loop with a goal, tools, feedback, authority and memory. The model matters; the loop turns language into work.",
+        "subtitle": "\"Agents run tools in a loop to achieve a goal.\" A model in a loop with a goal, tools, feedback, authority and memory.",
         "layout": "pillars",
         "items": [
           {
@@ -359,7 +359,22 @@
         ],
         "expected": "Everyone can find one tool call in a trace.",
         "check": "No one claims a result the trace does not show."
-      }
+      },
+      "extra_visuals": [
+        {
+          "title": "Agent = model + harness",
+          "subtitle": "The model reasons. The harness is everything else. Together they are the agent.",
+          "image": "agent-equation.svg",
+          "imageAlt": "Equation: model plus harness equals agent, with three analogy rows: brain and body, CPU and operating system, engine and car.",
+          "imageCaption": "Saying 'I use Claude' names the harness, not the model. You swap the model inside the harness; the harness is the layer you actually work with.",
+          "prompt": "Read the equation. Walk one analogy row (brain, body, person). Ask: when a colleague says 'we use ChatGPT', which box are they pointing at? (The harness.)",
+          "steps": [
+            "Say which box 'we use ChatGPT' points at."
+          ],
+          "expected": "Everyone can separate model, harness and agent.",
+          "check": "Nobody calls the model the agent, and everyone can name one thing only the harness does."
+        }
+      ]
     },
     "one-contract": {
       "name": "One contract, two platforms",
@@ -702,7 +717,22 @@
         ],
         "expected": "Every failure named today has a layer, not a mood.",
         "check": "Nobody blames the model without naming a layer first."
-      }
+      },
+      "extra_visuals": [
+        {
+          "title": "Harness · look inside",
+          "subtitle": "The loop, the boolean that makes it an agent, and the five tools every coding harness starts with.",
+          "image": "harness-inside.svg",
+          "imageAlt": "Reason, act, observe loop with the model on reason and the harness on act and observe; readUserInput equals false; five primitive tools; six production additions.",
+          "imageCaption": "An LLM, a loop and enough tokens. Three hundred lines and five tools talk to the model; sandbox, memory, verification, approvals, observability and lifecycle make it reliable.",
+          "prompt": "Point at reason (model) and act and observe (harness). Say the boolean out loud. Then the five tools in order and ask which one the ticket-coach subagent is allowed to use. (Read, list, search; no bash, no edit.)",
+          "steps": [
+            "Name which of the five tools the ticket-coach may use."
+          ],
+          "expected": "Everyone can say what the loop does without the user.",
+          "check": "Everyone can name the two tools the read-only ticket-coach must never get."
+        }
+      ]
     },
     "holdout": {
       "name": "Holdout scenarios",

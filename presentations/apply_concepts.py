@@ -20,9 +20,9 @@ SITE_FILE = {"day-decks.json": "days.js", "../squads/squad-2/presentations.json"
 KICKER = {"definition": "CONCEPT DEFINITION · {name}", "visual": "VISUAL · {name}", "usage": "HOW WE USE IT · {name}"}
 
 
-def slide(concept, kind):
+def slide(concept, kind, spec_override=None):
     spec = REG["concepts"][concept]
-    s = dict(spec[kind])
+    s = dict(spec_override if spec_override is not None else spec[kind])
     layout = s.get("layout") or ("image" if kind == "visual" else "cards")
     out = {
         "title": s["title"],
@@ -44,7 +44,9 @@ def slide(concept, kind):
 
 
 def concept_titles():
-    return {spec[k]["title"] for spec in REG["concepts"].values() for k in ("definition", "visual", "usage")}
+    titles = {spec[k]["title"] for spec in REG["concepts"].values() for k in ("definition", "visual", "usage")}
+    titles |= {v["title"] for spec in REG["concepts"].values() for v in spec.get("extra_visuals", [])}
+    return titles
 
 
 def apply(deck_path, placements, removals, patches):
@@ -55,7 +57,10 @@ def apply(deck_path, placements, removals, patches):
         deck["slides"] = [s for s in deck["slides"] if s["title"] not in drop]
         for p in placements.get(day, []):
             idx = next(i for i, s in enumerate(deck["slides"]) if s["title"] == p["after"])
-            triplet = [slide(p["concept"], k) for k in ("definition", "visual", "usage")]
+            spec = REG["concepts"][p["concept"]]
+            triplet = [slide(p["concept"], "definition"), slide(p["concept"], "visual")]
+            triplet += [slide(p["concept"], "visual", v) for v in spec.get("extra_visuals", [])]
+            triplet.append(slide(p["concept"], "usage"))
             deck["slides"][idx + 1:idx + 1] = triplet
         for patch in patches:
             if patch["day"] in ("*", day):
