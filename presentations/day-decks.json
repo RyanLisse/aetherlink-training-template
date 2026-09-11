@@ -968,9 +968,9 @@
         "expected": "Iedereen kan het begrip in eigen woorden uitleggen en de oefening starten.",
         "check": "Definitie, beeld en volgende actie zijn expliciet.",
         "layout": "image",
-        "image": "adoption.png",
-        "imageAlt": "AI-native SDLC: een loop met menselijke controle boven de uitvoering.",
-        "imageCaption": "AI-native SDLC: een loop met menselijke controle boven de uitvoering."
+        "image": "ai-native-sdlc-loop.svg",
+        "imageAlt": "Zelfstandige AI-native SDLC-loop met Plan, Design, Build, Test, Deploy en Maintain rond Claude.",
+        "imageCaption": "Zelfstandig beeld van de rechterhelft: zes fases rond Claude. Intent, review en release blijven menselijke beslissingen."
       },
       {
         "title": "Glossary · what do we mean?",

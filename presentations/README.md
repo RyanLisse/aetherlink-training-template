@@ -38,3 +38,7 @@ times aligned with the workbooks when updating. Squad 1 Day 3 and squad 2 Day 2
 place agent theory before either build, run n8n first, rebuild in Claude Code
 after lunch, and protect at least 25 minutes of individual practice on each
 platform.
+The AI-native SDLC concept uses a standalone loop illustration at
+[`assets/ai-native-sdlc-loop.svg`](../assets/ai-native-sdlc-loop.svg). It shows
+the six phases around Claude without the traditional SDLC comparison panel, so
+the facilitator can use the loop as a reusable phase reference.
