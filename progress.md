@@ -7,6 +7,7 @@ This file is a current-state board, not a diary. Keep one short entry per fact a
 ## Current verified state
 
 - Repository structure and route alignment: verified 2026-09-11; evidence: commit `b62e104` on `main` and `rename-crew-to-squad-breaks`.
+- Participant lab route contracts and daily branches: verified 2026-09-11; evidence: `RyanLisse/aetherlink-agent-lab` main commit `e77a809` and pushed `squad-1/day-3` through `squad-1/day-5` plus `squad-2/day-1` through `squad-2/day-5`.
 - Concept cadence: every concept ships as definition → visual → how we use it in both squads, generated from [presentations/concepts.json](presentations/concepts.json) by [presentations/apply_concepts.py](presentations/apply_concepts.py); evidence: `python3 presentations/apply_concepts.py --check` exits 0.
 - Slide language: all participant-visible slide text is English; facilitator `notes` stay Dutch; evidence: heuristic Dutch scan over `days.js` and `squad2.js` reports only false positives on "loop", "we", "use".
 - Site registries: `days.js` and `squad2.js` are `JSON.stringify`-equal to the canonical decks; evidence: apply_concepts.py regenerates both and the site gate (`work/bundle-update/check_site_dom.cjs`) passes 174 renders.
