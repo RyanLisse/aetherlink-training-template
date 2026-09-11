@@ -55,6 +55,11 @@ def apply(deck_path, placements, removals, patches):
     for day, deck in decks.items():
         drop = set(removals.get(day, [])) | titles
         deck["slides"] = [s for s in deck["slides"] if s["title"] not in drop]
+        for patch in patches:
+            if patch["day"] in ("*", day):
+                for s in deck["slides"]:
+                    if s["title"] == patch.get("title") or s["kicker"] == patch.get("kicker"):
+                        s.update(patch["set"])
         for p in placements.get(day, []):
             idx = next(i for i, s in enumerate(deck["slides"]) if s["title"] == p["after"])
             spec = REG["concepts"][p["concept"]]
@@ -62,11 +67,6 @@ def apply(deck_path, placements, removals, patches):
             triplet += [slide(p["concept"], "visual", v) for v in spec.get("extra_visuals", [])]
             triplet.append(slide(p["concept"], "usage"))
             deck["slides"][idx + 1:idx + 1] = triplet
-        for patch in patches:
-            if patch["day"] in ("*", day):
-                for s in deck["slides"]:
-                    if s["title"] == patch.get("title") or s["kicker"] == patch.get("kicker"):
-                        s.update(patch["set"])
     return decks
 
 

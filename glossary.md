@@ -9,8 +9,7 @@ the top bar; it is available from every slide.
 | Chat | A model with a conversation and context, waiting for your next message. |
 | Agent | A model in a loop with a goal, tools, feedback and a boundary. |
 | Agentic loop | Gather context → take action → verify results → repeat or stop at a human gate. |
-| Tool | A capability exposed by the harness, such as reading, calculating or checking. |
-| Harness | The system around a model that supplies context, tools, permissions and feedback. |
+| Tool | A capability the platform exposes, such as reading, calculating or checking. |
 | Human gate | A deliberate pause where a person accepts, revises, parks or redirects the work. |
 | Trace | A record of observed lifecycle and successful tool events; it does not prove correctness. |
 | Hook | A deterministic rule at a lifecycle point, such as blocking a Write before it happens. |
@@ -24,6 +23,4 @@ the top bar; it is available from every slide.
 | Subagent | An agent another agent delegates to, with its own context and a narrower task. |
 | Checkpoint | The observable condition on a slide that must be true before the group moves on. Marked passed by a human, never assumed. |
 | Holdout scenario | An end-to-end user story kept outside the codebase agents work in, never shown to them, scored as the fraction of runs that satisfied the user. |
-| Constant | What stays fixed between two runs (prompt, sequence, harness) so that one change can be measured; without it no run is comparable. |
-| Framework | A library of abstractions for building agent logic (LangChain, Agents SDK): the blueprint. It fails on logic errors. |
-| Runtime | The infrastructure layer that runs agents durably: state that survives a crash, streaming, human-in-the-loop interrupts (LangGraph, Temporal). |
+| Constant | What stays fixed between two runs (prompt, sequence, platform) so that one change can be measured; without it no run is comparable. |

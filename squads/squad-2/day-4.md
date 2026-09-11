@@ -18,7 +18,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 
 | Time | Minutes | Block | Result |
 |---|---|---|
-| 10:00–10:15 | 15 | Recap + theory | Agent loop and harness |
+| 10:00–10:15 | 15 | Recap + theory | Agent loop and platform |
 | 10:15–10:35 | 20 | Instruction + demo | Subagent, `CLAUDE.md`, Read/Glob/Grep |
 | 10:35–11:00 | 25 | Individual | Run the starter agent |
 | 11:00–11:20 | 20 | Review | Read trace and checker |

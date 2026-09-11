@@ -831,100 +831,6 @@
         "check": "A fresh reader can reproduce the stated result."
       },
       {
-        "title": "What is a harness?",
-        "kicker": "CONCEPT DEFINITION · HARNESS",
-        "subtitle": "The model is 20 percent. The harness, everything around it, is 80 percent.",
-        "cards": [
-          {
-            "title": "MODEL",
-            "body": "Reasons and predicts. On its own it answers a question and stops."
-          },
-          {
-            "title": "HARNESS",
-            "body": "The loop and its state, the tools (MCP), the skills, the sandbox and the production layer: subagents, approvals, observability, evals."
-          },
-          {
-            "title": "WHY IT MATTERS",
-            "body": "Swap the model and little changes. Swap the harness and everything does. 'We use ChatGPT' and 'we run agents' are not the same thing."
-          }
-        ],
-        "prompt": "Say the 20/80 sentence and let it land. Ask: which of the five layers did you touch yesterday without naming it? (Skills on days 1–2, the loop today.)",
-        "notes": "Open de agent-dag met deze slide. Bron: Ryan's Obsidian-notities 'Agentic Engineering Stack' en 'StrongDM Software Factory'.",
-        "dark": false,
-        "steps": [
-          "Name the five layers of the harness."
-        ],
-        "expected": "The room can say why the harness matters more than the model.",
-        "check": "Everyone can name at least three of the five layers.",
-        "layout": "cards"
-      },
-      {
-        "title": "Harness · see the layers",
-        "kicker": "VISUAL · HARNESS",
-        "subtitle": "One bar: 20 percent model, 80 percent harness in five layers.",
-        "cards": [],
-        "prompt": "Point at each layer and map it to something they have seen: the ticket-refinement skill (skills), the Calculator tool (MCP/tools), the read-only subagent (sandbox), the human gate (production layer).",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Map one thing you built to one layer."
-        ],
-        "expected": "Everyone can place their own work on a layer.",
-        "check": "Everyone can point at the layer their ticket-refinement skill lives in.",
-        "layout": "image",
-        "image": "harness-layers.svg",
-        "imageAlt": "A bar split into model 20 percent and harness 80 percent; the harness lists loop and state, MCP tools, skills, sandbox and production layer.",
-        "imageCaption": "Loop and state, tools, skills, sandbox, production layer. n8n and Claude Code are two harnesses around the same kind of model."
-      },
-      {
-        "title": "Harness · look inside",
-        "kicker": "VISUAL · HARNESS",
-        "subtitle": "The loop, the boolean that makes it an agent, and the five tools every coding harness starts with.",
-        "cards": [],
-        "prompt": "Point at reason (model) and act and observe (harness). Say the boolean out loud. Then the five tools in order and ask which one the ticket-coach subagent is allowed to use. (Read, list, search; no bash, no edit.)",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Name which of the five tools the ticket-coach may use."
-        ],
-        "expected": "Everyone can say what the loop does without the user.",
-        "check": "Everyone can name the two tools the read-only ticket-coach must never get.",
-        "layout": "image",
-        "image": "harness-inside.svg",
-        "imageAlt": "Reason, act, observe loop with the model on reason and the harness on act and observe; readUserInput equals false; five primitive tools; six production additions.",
-        "imageCaption": "An LLM, a loop and enough tokens. Three hundred lines and five tools talk to the model; sandbox, memory, verification, approvals, observability and lifecycle make it reliable."
-      },
-      {
-        "title": "Harness · how we use it",
-        "kicker": "HOW WE USE IT · HARNESS",
-        "subtitle": "When something goes wrong, debug the layer, not the model.",
-        "cards": [
-          {
-            "title": "BEFORE BLAMING THE MODEL",
-            "body": "Ask which layer failed: missing context, a tool that lied, a skill not loaded, a sandbox too wide, no gate."
-          },
-          {
-            "title": "IN THIS TRAINING",
-            "body": "n8n and Claude Code are two harnesses around the same contract. The comparison on day 4 and 5 is a harness comparison."
-          },
-          {
-            "title": "IN YOUR REPO",
-            "body": "Prompts, skills and hook configs are source code: diff them, review them, roll them back like any other change."
-          }
-        ],
-        "prompt": "Take one failure from yesterday and walk the five layers with the room until one of them owns it. Do not accept 'the model was dumb' as the answer.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Take one failure from yesterday.",
-          "Name the layer that owns it.",
-          "Say what you would change in that layer."
-        ],
-        "expected": "Every failure named today has a layer, not a mood.",
-        "check": "Nobody blames the model without naming a layer first.",
-        "layout": "cards"
-      },
-      {
         "title": "What is an agent?",
         "kicker": "CONCEPT DEFINITION · AGENTIC LOOP",
         "subtitle": "\"Agents run tools in a loop to achieve a goal.\" A model in a loop with a goal, tools, feedback, authority and memory.",
@@ -982,25 +888,7 @@
         "layout": "image",
         "image": "agentic-loop.svg",
         "imageAlt": "Your prompt enters a loop of gather, act and verify that repeats until done; a human box can interrupt, steer or add context at any point.",
-        "imageCaption": "Models reason, tools act, the harness holds the loop. The loop ends at a human gate, never at \"done\" by itself."
-      },
-      {
-        "title": "Agent = model + harness",
-        "kicker": "VISUAL · AGENTIC LOOP",
-        "subtitle": "The model reasons. The harness is everything else. Together they are the agent.",
-        "cards": [],
-        "prompt": "Read the equation. Walk one analogy row (brain, body, person). Ask: when a colleague says 'we use ChatGPT', which box are they pointing at? (The harness.)",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
-        "dark": false,
-        "steps": [
-          "Say which box 'we use ChatGPT' points at."
-        ],
-        "expected": "Everyone can separate model, harness and agent.",
-        "check": "Nobody calls the model the agent, and everyone can name one thing only the harness does.",
-        "layout": "image",
-        "image": "agent-equation.svg",
-        "imageAlt": "Equation: model plus harness equals agent, with three analogy rows: brain and body, CPU and operating system, engine and car.",
-        "imageCaption": "Saying 'I use Claude' names the harness, not the model. You swap the model inside the harness; the harness is the layer you actually work with."
+        "imageCaption": "Models reason, tools act, the platform holds the loop. The loop ends at a human gate, never at \"done\" by itself."
       },
       {
         "title": "The agentic loop · how we use it",
@@ -1280,7 +1168,7 @@
         "check": "A fresh reader can reproduce the stated result."
       },
       {
-        "title": "Claude Code harness",
+        "title": "Claude Code platform",
         "kicker": "THEORY + DEMO",
         "subtitle": "First agent in Claude Code",
         "cards": [
@@ -1312,7 +1200,7 @@
       {
         "title": "What is \"one contract, two platforms\"?",
         "kicker": "CONCEPT DEFINITION · ONE CONTRACT, TWO PLATFORMS",
-        "subtitle": "Same functional contract and input on n8n and Claude Code; only the harness and its adapter differ.",
+        "subtitle": "Same functional contract and input on n8n and Claude Code; only the platform and its adapter differ.",
         "cards": [
           {
             "title": "THE CONTRACT",
@@ -1340,7 +1228,7 @@
       {
         "title": "One contract · see the split",
         "kicker": "VISUAL · ONE CONTRACT, TWO PLATFORMS",
-        "subtitle": "Same contract and input; only the harness and its adapter differ.",
+        "subtitle": "Same contract and input; only the platform and its adapter differ.",
         "cards": [],
         "prompt": "Point at the contract, then at both adapters, then at the checker. Ask: what is shared, what is recorded separately?",
         "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
@@ -1353,7 +1241,7 @@
         "layout": "image",
         "image": "one-contract-two-platforms.svg",
         "imageAlt": "One contract box feeding n8n and Claude Code boxes, both feeding the same checker.",
-        "imageCaption": "One contract feeds two harnesses; both outputs go through the same checker. One pair of runs proves no cause."
+        "imageCaption": "One contract feeds two platforms; both outputs go through the same checker. One pair of runs proves no cause."
       },
       {
         "title": "One contract · how we use it",
@@ -1381,7 +1269,7 @@
               "Calculator via ai_tool",
               "Execution view shows intermediate steps"
             ],
-            "foot": "Visual harness"
+            "foot": "Visual builder"
           },
           {
             "title": "Claude Code · afternoon",
@@ -1392,7 +1280,7 @@
               "Preview in chat, checker after",
               "Transcript shows logged successful tool calls"
             ],
-            "foot": "Terminal harness"
+            "foot": "Terminal platform"
           }
         ]
       },
@@ -2062,7 +1950,7 @@
         "cards": [
           {
             "title": "THE CONSTANT",
-            "body": "Change the model, the prompt, the harness or a skill and you changed the experiment. Keep everything else fixed, then compare."
+            "body": "Change the model, the prompt, the platform or a skill and you changed the experiment. Keep everything else fixed, then compare."
           },
           {
             "title": "THREE NUMBERS",
@@ -2099,7 +1987,7 @@
         "layout": "image",
         "image": "measure-loop.svg",
         "imageAlt": "Left: six bars of random height labelled different prompts. Right: six aligned bars trending down labelled same prompt, one change per run. Below: three constants.",
-        "imageCaption": "One harness needed 32 tool calls, another 19, for the same answer. The harness often decides more than the model, and only a constant makes that visible."
+        "imageCaption": "One platform needed 32 tool calls, another 19, for the same answer. The platform often decides more than the model, and only a constant makes that visible."
       },
       {
         "title": "Measure the loop · how we use it",

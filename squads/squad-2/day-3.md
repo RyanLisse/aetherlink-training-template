@@ -9,8 +9,7 @@ Use the Day 2 plan and build one bounded read-only agent in n8n. The issue is a 
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **Harness** · What is a harness? [2] → Harness · see the layers [3] → Harness · how we use it [5]
-- **Agentic loop** · What is an agent? [6] → The agentic loop · see the loop [7] → The agentic loop · how we use it [9]
+- **Agentic loop** · What is an agent? [2] → The agentic loop · see the loop [3] → The agentic loop · how we use it [4]
 <!-- concepts:end -->
 
 ## Schedule

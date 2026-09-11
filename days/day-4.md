@@ -6,17 +6,16 @@ Squad 1 · 10:00–16:00. We use the frozen Day 3 plan and the existing payment-
 Each participant imports and runs the n8n `ticket-coach` once, records model/tools/settings, checks the output against the contract, and writes a reproducible handoff. No Jira, GitLab, Confluence or payment-system writes.
 
 ## Cadence
-Theory (agent loop and n8n harness) → facilitator demo → individual build → group review → human gate → individual improvement → MOB transfer.
+Theory (agent loop and n8n platform) → facilitator demo → individual build → group review → human gate → individual improvement → MOB transfer.
 
 <!-- concepts:start -->
 ## Concept slides
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **Harness** · What is a harness? [4] → Harness · see the layers [5] → Harness · how we use it [7]
-- **Agentic loop** · What is an agent? [8] → The agentic loop · see the loop [9] → The agentic loop · how we use it [11]
-- **One contract, two platforms** · What is "one contract, two platforms"? [12] → One contract · see the split [13] → One contract · how we use it [14]
-- **Human gate** · What is a human gate? [20] → Human gate · see the decision [21] → Human gate · how we use it [22]
+- **Agentic loop** · What is an agent? [4] → The agentic loop · see the loop [5] → The agentic loop · how we use it [6]
+- **One contract, two platforms** · What is "one contract, two platforms"? [7] → One contract · see the split [8] → One contract · how we use it [9]
+- **Human gate** · What is a human gate? [15] → Human gate · see the decision [16] → Human gate · how we use it [17]
 <!-- concepts:end -->
 
 ## Schedule

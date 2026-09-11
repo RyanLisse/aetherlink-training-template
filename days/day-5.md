@@ -21,7 +21,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 | Time | Minutes | Activity |
 |---|---:|---|
 | 10:00–10:15 | 15 | Recap, Kahoot and blocker wordcloud |
-| 10:15–10:40 | 25 | Theory: Claude Code harness, CLAUDE.md, tools and trace |
+| 10:15–10:40 | 25 | Theory: Claude Code platform, CLAUDE.md, tools and trace |
 | 10:40–11:00 | 20 | Demo: create subagent and run read-only ticket coach |
 | 11:00–11:20 | 20 | Individual Card 1: setup |
 | 11:20–11:35 | 15 | Break |
