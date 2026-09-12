@@ -4,6 +4,8 @@ This five-day route starts with the [AI-native SDLC playbook](https://claude.com
 
 All data is fictional and local. GitLab, Jira, and Confluence are represented by draft fields only. A human owns scope, review, merge, and publication.
 
+One worked example should run from Day 1 to Day 5; the candidates and the recommended thread are in [worked-example.md](worked-example.md).
+
 ## Five-day route
 
 | Day | Mode | Focus | Visible result |
