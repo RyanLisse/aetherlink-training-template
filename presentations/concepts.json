@@ -110,29 +110,31 @@
       },
       "usage": {
         "title": "intent.md · how we use it",
-        "subtitle": "Written first, read at every gate, changed before the plan changes.",
+        "subtitle": "Draft together in Proof. Approve as a squad. Commit the agreed intent to GitLab.",
         "cards": [
           {
-            "title": "BEFORE BUILD",
-            "body": "Write it in ten minutes: what, why, boundaries. Mark unknowns OPEN. Do not guess."
+            "title": "WRITE TOGETHER",
+            "body": "Use a squad-owned Proof document for what, why, success criteria and boundaries. Mark unknowns OPEN."
           },
           {
-            "title": "DURING THE WORK",
-            "body": "The agent reads it first. Every prompt points back to it: \"stay inside intent.md\"."
+            "title": "REVIEW WITH AN AGENT",
+            "body": "Ask for comments and suggestions. A named human accepts or rejects each proposal."
           },
           {
-            "title": "AT REVIEW",
-            "body": "Review against the brief, not against memory. If the brief was wrong, change the brief, then the plan."
+            "title": "AGREE AND COMMIT",
+            "body": "Copy approved Markdown to intent.md in GitLab. Record the Proof link, revision and reviewer. CLAUDE.md explicitly points to intent.md."
           }
         ],
-        "prompt": "Walk the three moments. Ask each participant to open their own intent.md and underline one OPEN question before the exercise starts.",
+        "prompt": "Read our Proof draft. Suggest clearer scope, missing success criteria and one positive and one negative scenario. Keep unknowns OPEN. Explain each suggestion. Do not accept your own suggestions or change the approved repository files.",
         "steps": [
-          "Open your intent.md.",
-          "Underline one OPEN question.",
-          "Say which exercise today uses it."
+          "5 min individually: draft what, why, success and boundaries.",
+          "5 min together: combine in one squad-owned Proof document.",
+          "5 min agent review: request comments and suggestions; review manually if agent access is unavailable.",
+          "5 min human decision: accept or reject proposals, copy approved Markdown to intent.md and prepare a GitLab merge request."
         ],
-        "expected": "Every participant has an intent.md with at least one OPEN question.",
-        "check": "Nobody starts the exercise without an intent.md on screen."
+        "expected": "One reviewed intent.md, a Proof document link and revision, and a named reviewer on the GitLab merge request.",
+        "check": "Every participant can explain the intent. The repository copy matches the approved Proof text; unresolved proposals stay OPEN.",
+        "notes": "Run this 20-minute sequence within the existing intent exercise, not as added agenda time. Guide: https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/docs/proof-workflow.md . Use hosted Proof; create a separate document per squad. Agent writes require scoped access configured outside the repository. Use suggestions, with human approval. Sync is manual. At recap use Proof to discuss results, blockers and next owner; copy approved outcomes to progress.md. Never publish credential-bearing share links. Use synthetic training content."
       }
     },
     "evidence-rule": {

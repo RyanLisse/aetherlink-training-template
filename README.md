@@ -110,6 +110,7 @@ Reserve five minutes for a teach-back or demo of the lesson. Name the audience a
 | [examples/fictional-knowledge-note.md](examples/fictional-knowledge-note.md) | Fictional reusable learning linked from the recap |
 | [docs/README.md](docs/README.md) | Documentation map |
 | [docs/example-prompts.md](docs/example-prompts.md) | Example prompts for each workflow |
+| [docs/proof-workflow.md](docs/proof-workflow.md) | Bounded Proof review exercise and manual GitLab handoff |
 
 ## Evidence rules
 
