@@ -1,0 +1,124 @@
+{
+  "name": "Reconciliation agent · training",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "n1",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "fileSelector": "scenarios/payment-reconciliation/data/*.csv",
+        "options": {}
+      },
+      "id": "n2",
+      "name": "Read reconciliation files",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const files = {};\nconst items = $input.all();\nfor (let i = 0; i < items.length; i++) {\n  const name = items[i].binary.data.fileName.replace(/\\.csv$/, '').replace(/-/g, '_');\n  const text = (await this.helpers.getBinaryDataBuffer(i, 'data')).toString('utf8').trim();\n  const [head, ...rows] = text.split(/\\r?\\n/);\n  const cols = head.split(',');\n  files[name] = rows.map(r => Object.fromEntries(r.split(',').map((v, k) => [cols[k], v])));\n}\nreturn [{ json: {\n  cutoff: '2026-09-10 12:00 Europe/Amsterdam',\n  fee_rule: 'expected_fee_minor = round_half_up(gross_minor * 0.02); expected_net_minor = gross_minor - expected_fee_minor',\n  ...files,\n}}];\n"
+      },
+      "id": "n3",
+      "name": "Bundle rows",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Reconcile the batches in {{ JSON.stringify($json) }}",
+        "options": {
+          "systemMessage": "# Reconciliation reviewer · the one contract\n\nThe same contract runs in n8n (Day 3) and in Claude Code (Day 4). Platform,\nmodel, adapter and settings are recorded as observations; the contract does\nnot change.\n\n## Input\n\n- `data/internal-ledger.csv`, `data/psp-settlements.csv`, `data/bank-credits.csv`\n- Cutoff `2026-09-10 12:00 Europe/Amsterdam`; due dates are local calendar dates.\n- Fee rule `expected_fee_minor = round_half_up(gross_minor × 2%)`; `expected_net_minor = gross_minor − expected_fee_minor`.\n- All amounts are EUR minor units. No decimals, no FX.\n\n## Output\n\nOne row per batch, in a Markdown table:\n\n| batch_id | ledger expected net | PSP unique net | bank credit | classification | evidence | next human action |\n\n`classification` is exactly one of: `matched`, `overdue missing settlement`,\n`duplicate quarantine · UNRESOLVED`, `fee mismatch`, `bank payout mismatch`,\n`not yet due · timing`. `evidence` lists the row ids read\n(`TX-…`, `SET-…`, `BANK-…`). Anything not checked is written as `OPEN`.\n\n## Rules\n\n1. A duplicate settlement row is quarantined: keep both rows visible, count one, and leave the batch `UNRESOLVED`. Never approve it.\n2. A due date after the cutoff is a timing item, not an error.\n3. A fee mismatch stays a fee mismatch even when the PSP net reaches the bank.\n4. A bank payout mismatch is a batch-level difference after the source rows were checked.\n5. Read-only. No writes, no remote calls, no ticket creation, no approval. Severity and approval are human fields.\n6. Do not invent a cause. Write `OPEN` and name who should confirm.\n\n## Stop rule\n\nSay \"reconciled\" for a batch only when its ledger net, PSP unique net and bank credit match and no rule above applies. Everything else is a finding with a next human action.\n"
+        }
+      },
+      "id": "n4",
+      "name": "Reconciliation agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        660,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "temperature": 0
+        }
+      },
+      "id": "n5",
+      "name": "Anthropic Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [
+        660,
+        220
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read reconciliation files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read reconciliation files": {
+      "main": [
+        [
+          {
+            "node": "Bundle rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bundle rows": {
+      "main": [
+        [
+          {
+            "node": "Reconciliation agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Reconciliation agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

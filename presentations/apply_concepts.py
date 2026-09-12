@@ -69,10 +69,17 @@ def concept_titles():
     titles = {spec[k]["title"] for spec in REG["concepts"].values() for k in ("definition", "visual", "usage")}
     titles |= {v["title"] for spec in REG["concepts"].values() for v in spec.get("extra_visuals", [])}
     titles |= {f"{spec['name']} · recap" for spec in REG["concepts"].values()}
+    titles |= {d["slide"]["title"] for ex in REG.get("examples", {}).values() for d in ex["days"].values()}
     return titles
 
 
-def apply(deck_path, placements, removals, patches):
+def example_slides(rel, day):
+    """Worked-example slides for one deck day, keyed 'day4' or 'day4-value'."""
+    days = REG.get("examples", {}).get(rel, {}).get("days", {})
+    return [(d["after"], d["slide"]) for key, d in days.items() if key.split("-")[0] == day]
+
+
+def apply(rel, deck_path, placements, removals, patches):
     decks = json.loads(deck_path.read_text(encoding="utf-8"))
     titles = concept_titles()
     for day, deck in decks.items():
@@ -93,10 +100,28 @@ def apply(deck_path, placements, removals, patches):
                 triplet += [slide(p["concept"], "visual", v) for v in spec.get("extra_visuals", [])]
                 triplet.append(slide(p["concept"], "usage"))
             deck["slides"][idx + 1:idx + 1] = triplet
+        for after, s in example_slides(rel, day):
+            idx = next(i for i, x in enumerate(deck["slides"]) if x["title"] == after)
+            deck["slides"].insert(idx + 1, s)
     return decks
 
 
 START, END = "<!-- concepts:start -->", "<!-- concepts:end -->"
+EX_START, EX_END = "<!-- example:start -->", "<!-- example:end -->"
+
+
+def example_section(rel, deck, day):
+    slides = example_slides(rel, day)
+    if not slides:
+        return ""
+    name = REG["examples"][rel]["name"]
+    titles = [s["title"] for s in deck["slides"]]
+    lines = [EX_START, f"## Worked example · {name}", "", "One example runs from Day 1 to Day 5; see [worked-example.md](worked-example.md). Today's step, with the site slide number in brackets:", ""]
+    for _, s in slides:
+        lines.append(f"- **{s['title']}** [{titles.index(s['title']) + 1}] · {s['subtitle']}")
+        lines.append(f"  - Expected: {s['expected']}")
+        lines.append(f"  - Checkpoint: {s['check']}")
+    return "\n".join([*lines, EX_END])
 
 
 def workbook_section(deck, placements):
@@ -124,6 +149,11 @@ def write_workbooks(rel, decks, placements, check):
             new = re.sub(re.escape(START) + ".*?" + re.escape(END), lambda _: block, text, flags=re.S)
         else:
             new = re.sub(r"^## Schedule", block + "\n\n## Schedule", text, count=1, flags=re.M)
+        ex_block = example_section(rel, deck, day)
+        if EX_START in new:
+            new = re.sub(re.escape(EX_START) + ".*?" + re.escape(EX_END), lambda _: ex_block, new, flags=re.S)
+        elif ex_block:
+            new = new.replace(END, END + "\n\n" + ex_block, 1)
         if new != text:
             changed = True
             if not check:
@@ -136,7 +166,7 @@ def main():
     changed = False
     for rel, placements in REG["placements"].items():
         path = (HERE / rel).resolve()
-        decks = apply(path, placements, REG.get("remove", {}).get(rel, {}), REG.get("patches", {}).get(rel, []))
+        decks = apply(rel, path, placements, REG.get("remove", {}).get(rel, {}), REG.get("patches", {}).get(rel, []))
         text = json.dumps(decks, ensure_ascii=False, indent=2) + "\n"
         if path.read_text(encoding="utf-8") != text:
             changed = True

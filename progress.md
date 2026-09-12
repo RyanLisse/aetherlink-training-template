@@ -12,6 +12,7 @@ This file is a current-state board, not a diary. Keep one short entry per fact a
 - Slide language: all participant-visible slide text is English; facilitator `notes` stay Dutch; evidence: heuristic Dutch scan over `days.js` and `squad2.js` reports only false positives on "loop", "we", "use".
 - Site registries: `days.js` and `squad2.js` are `JSON.stringify`-equal to the canonical decks; evidence: apply_concepts.py regenerates both and the site gate (`work/bundle-update/check_site_dom.cjs`) passes 174 renders.
 - Diagrams: seven concept diagrams in `assets/` follow the training-site design system (see the site repo's `design.md`).
+- Squad 2 worked example: daily payment reconciliation runs from Day 1 to Day 5 (six example slides, 37 patched practice slides, workbook blocks, `contract.md`, n8n export, Claude Code starter with Stop hook); evidence: `python3 presentations/apply_concepts.py --check` exits 0 and `python3 scenarios/payment-reconciliation/check_fixture.py` prints PASS.
 - Training outcome: `OPEN — no live outcome recorded yet`.
 - Current phase: `Design` and `Build` complete for the route update; public Site `Test` and `Deploy` verified on 2026-09-11 for version 20.
 - Last independently rechecked artifact: site diff reviewed twice by an independent reviewer lane on 2026-09-11; all findings fixed.
@@ -27,7 +28,7 @@ This file is a current-state board, not a diary. Keep one short entry per fact a
 
 | Action | Owner | Due | Acceptance check | Evidence |
 | --- | --- | --- | --- | --- |
-| Run the live n8n / Claude Code smoke test | Ryan | before the next live day | Real run log or exact `OPEN` evidence per platform | `OPEN` |
+| Run the live n8n / Claude Code smoke test on the reconciliation example (`n8n/reconciliation-agent.json`, `starter/.claude`) | Ryan | before the next live day | Real run log or exact `OPEN` evidence per platform | `OPEN` |
 | Add dated recap, knowledge and handoff links after each live day | Facilitator | after each session | Fresh reader can find the evidence and next owner | `OPEN` |
 
 ## Evidence links

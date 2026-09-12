@@ -1,6 +1,6 @@
 # Squad 2 · one worked example we walk through together
 
-Status: `PROPOSAL — 2026-09-12 · decide the primary example before building slides`
+Status: `ACCEPTED — 2026-09-12 · squad 2 is mixed: A is the primary thread, D is the reserve; slides, prompts, n8n export and Claude Code starter built`
 
 ## Why one example
 
@@ -72,17 +72,16 @@ Several examples prepared, one example run. Preparing more than two threads dilu
 
 The "value" slide at the end of Day 4 puts Day 2 and Day 4 side by side: minutes spent, traps caught, evidence a fresh reader can rerun. That slide is the demonstration the request asks for.
 
-## What we build if A is chosen
+## What was built for A
 
-1. One example slide per day (five slides) with the story, the files, and the step above, generated from a register like the concept triplets so both decks and workbooks stay in sync.
-2. Rewrite the five generic practice prompts per day to name the example step instead of "the task card".
-3. An n8n workflow export for the reconciliation agent. None exists in the repository today; the "prepared workflow" the Day 3 workbook mentions has never been built.
-4. A Claude Code starter for the same contract, shaped like `ticket-coach.md`, plus the hook command from the scenario README.
-5. A before and after slide with the Day 2 baseline and the Day 4 run, filled in live.
-6. Retire `GL-REVIEW-001` from the Squad 2 route table and workbooks.
+1. Six example slides (one per day plus the before-and-after slide on Day 4), generated from the `examples` block in `presentations/concepts.json` by `apply_concepts.py`, with a `Worked example` block in each workbook.
+2. All 37 generic squad 2 slides (theory, individual, review, practice, gate, transfer, route, break, close) patched from the register to name the example step.
+3. `scenarios/payment-reconciliation/n8n/reconciliation-agent.json` plus a rebuild recipe and `bundle-rows.js`. Status `OPEN` until run on a live n8n.
+4. `scenarios/payment-reconciliation/starter/.claude/` with the `reconciliation-reviewer` subagent and a Stop hook that runs `check_fixture.py`; the contract both platforms share is `contract.md`.
+5. The before-and-after slide on Day 4, filled in live.
+6. `GL-REVIEW-001` removed from the Squad 2 workbooks; the scenario folder stays for other uses.
 
 ## What is still open
 
-- Squad 2 profile: operations, engineering, or mixed. This decides A alone or A plus D.
 - Live n8n and Claude Code runs have never been executed in this repository (see `progress.md`). The n8n export and the starter need one real run before the training day.
 - Whether the facilitator wants the hand-classification baseline on Day 2 to be timed per person or as a group.

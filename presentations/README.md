@@ -51,3 +51,7 @@ the old triplets by title, inserts them after their anchors in both
 site registries when the site checkout sits next to this repository.
 `--check` exits non-zero when the decks are out of date. Diagrams live in
 [`../assets/`](../assets/) and follow the site's design system.
+
+## Worked example (squad 2)
+
+The `examples` block in `concepts.json` places one worked-example slide per day (plus the before-and-after slide on Day 4) in the squad 2 deck and writes a `Worked example` block into each squad 2 workbook. The `_example` patches in the same file rewrite the generic practice slides to name the example step. Design and candidates: [squads/squad-2/worked-example.md](../squads/squad-2/worked-example.md).

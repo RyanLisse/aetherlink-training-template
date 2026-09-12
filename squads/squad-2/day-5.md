@@ -13,6 +13,16 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 - **Human gate** · What is a human gate? [6] → Human gate · see the decision [7] → Human gate · how we use it [8]
 <!-- concepts:end -->
 
+<!-- example:start -->
+## Worked example · daily payment reconciliation
+
+One example runs from Day 1 to Day 5; see [worked-example.md](worked-example.md). Today's step, with the site slide number in brackets:
+
+- **The example · gate and handoff** [9] · FIN-003 end to end as a MOB, a gate decision per ticket, and three handoff drafts with OPEN links.
+  - Expected: Gate decisions, three drafts, and one own-issue brief in the same shape.
+  - Checkpoint: The receiver can state current state and next owner without asking the sender.
+<!-- example:end -->
+
 ## Schedule
 
 | Time | Minutes | Block | Result |
@@ -31,7 +41,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 | 15:05–15:40 | 35 | Handoff | GitLab/Jira/Confluence draft fields |
 | 15:40–16:00 | 20 | Close | Check-in, Kahoot, wordcloud, MOB reflection |
 
-**Prompt.** Take the approved local issue brief. Ask the agent to inspect only named files, propose the smallest change, run named local checks, and return evidence. Keep functional intent, technical proposal, tests, reviewer, and `OPEN` items separate. Do not publish or merge.
+**Prompt.** Run `FIN-003` (duplicate quarantine) end to end as a MOB: the agent inspects only the named CSVs, runs `check_fixture.py`, and returns evidence. Gate every FIN ticket; `UNRESOLVED` is a valid outcome. Produce the GitLab MR, Jira task, and Confluence recap drafts from `scenarios/payment-reconciliation/workflow.md` with links `OPEN`. Then repeat the shape on the team's own sanitised issue; the status desk scenario (`SCN-001` to `SCN-007`) is the reserve when the team wants a code change. Do not publish or merge.
 
 **Checkpoint.** The team has one issue brief, implementation or explicit `OPEN`, review evidence, human decision, rollback, and receiver-ready handoff.
 

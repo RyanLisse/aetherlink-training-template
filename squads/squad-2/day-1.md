@@ -14,6 +14,16 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 - **intent.md** · What is intent.md? [9] → Intent.md in one picture [10] → intent.md · how we use it [11]
 <!-- concepts:end -->
 
+<!-- example:start -->
+## Worked example · daily payment reconciliation
+
+One example runs from Day 1 to Day 5; see [worked-example.md](worked-example.md). Today's step, with the site slide number in brackets:
+
+- **The example · daily payment reconciliation** [12] · One fictional merchant, three CSV files, five documented cases. We carry it from intent to handoff.
+  - Expected: Everyone can name the files, the cutoff and one trap.
+  - Checkpoint: Nobody thinks the data is real.
+<!-- example:end -->
+
 ## Schedule
 
 | Time | Minutes | Block | Result |
@@ -23,7 +33,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 | 10:35–11:00 | 25 | Individual | Draft `intent.md` success criteria |
 | 11:00–11:20 | 20 | Review | Readback against the playbook |
 | 11:20–11:35 | 15 | Break | — |
-| 11:35–12:00 | 25 | Group practice | Map one local work item |
+| 11:35–12:00 | 25 | Group practice | Map FIN-001 to the six stages |
 | 12:00–13:00 | 60 | Lunch | — |
 | 13:00–13:15 | 15 | Theory | Plan, Design, Build, Test, Deploy, Maintain |
 | 13:15–14:00 | 45 | Individual + group | Turn intent into a small plan |
@@ -32,6 +42,6 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 | 15:05–15:40 | 35 | Handoff | Store plan and open questions |
 | 15:40–16:00 | 20 | Close | Check-in, Kahoot, wordcloud, MOB reflection |
 
-**Prompt.** Read the playbook summary. Draft one observable outcome, one human acceptance gate, one stop rule, and one `OPEN` question in `intent.md`. Do not build or contact a team system.
+**Prompt.** Read `scenarios/payment-reconciliation/README.md`. Write `intent.md` for `FIN-001`: one observable outcome (an evidence-backed action list for the 2026-09-10 cutoff), one human acceptance gate (the reviewer accepts per batch), one stop rule (no approval on an `UNRESOLVED` batch), and one `OPEN` question (who confirms the duplicate). Do not build or contact a team system.
 
 **Checkpoint.** A fresh reader can state the goal, lifecycle stage, evidence, owner, and next step.

@@ -12,6 +12,16 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 - **Evidence rule** · What is the evidence rule? [3] → Evidence rule · see the ladder [4] → Evidence rule · how we use it [5]
 <!-- concepts:end -->
 
+<!-- example:start -->
+## Worked example · daily payment reconciliation
+
+One example runs from Day 1 to Day 5; see [worked-example.md](worked-example.md). Today's step, with the site slide number in brackets:
+
+- **The example · plan and hand baseline** [6] · The smallest plan for the batch review, then the six batches by hand. Today's minutes are tomorrow's baseline.
+  - Expected: A plan card and a hand worksheet with a time per person.
+  - Checkpoint: The worksheet leaves B-20260909-01 UNRESOLVED and calls TX-NS-1008 timing.
+<!-- example:end -->
+
 ## Schedule
 
 | Time | Minutes | Block | Result |
@@ -30,7 +40,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 | 15:05–15:40 | 35 | Handoff | Evidence card and next owner |
 | 15:40–16:00 | 20 | Close | Check-in, Kahoot, wordcloud, MOB reflection |
 
-**Prompt.** Given the local example issue, write the smallest plan with inputs, expected result, two positive checks, two negative checks, human gate, and rollback. Do not invoke an agent yet.
+**Prompt.** For the reconciliation example, write the smallest plan with inputs (three CSVs, cutoff, fee rule), expected result (five cases), two positive checks (`TX-NS-1001` fee is 250; batch `B-20260908-01` sums to bank 20,972), two negative checks (`TX-NS-1008` is not overdue; `SET-1003-B` is not counted), human gate, and rollback. Then classify the six batches by hand and write down your minutes. Do not invoke an agent yet.
 
-**Checkpoint.** The plan is small enough to hand to an agent on Day 3 and clear enough for a human to reject.
+**Checkpoint.** The plan is small enough to hand to an agent on Day 3 and clear enough for a human to reject; the hand worksheet leaves `B-20260909-01` `UNRESOLVED` and calls `TX-NS-1008` timing.
 

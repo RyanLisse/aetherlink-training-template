@@ -940,6 +940,974 @@
         "set": {
           "title": "Claude Code platform"
         }
+      },
+      {
+        "_example": true,
+        "day": "day1",
+        "title": "Playbook map",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "A shared map from intent to maintain, on the FIN-001 example"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Walk the playbook map with the example: where does FIN-001 sit today, and which stage does each day of this week reach?",
+          "steps": [
+            "Read the example slide.",
+            "Place FIN-001 on the six stages.",
+            "Name the human gate of each stage."
+          ],
+          "expected": "The squad has placed the example on the lifecycle map.",
+          "check": "Everyone can say which stage Day 3 and Day 4 cover."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day1",
+        "title": "Intent becomes a plan",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "One intent.md per person for FIN-001"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Write intent.md for FIN-001: outcome, human gate, stop rule, one OPEN question. Fictional CSVs only; no team system.",
+          "steps": [
+            "Outcome: an evidence-backed action list for the 2026-09-10 cutoff.",
+            "Human gate: the reviewer accepts per batch.",
+            "Stop rule: no approval on an UNRESOLVED batch.",
+            "OPEN: who confirms the duplicate?"
+          ],
+          "expected": "One intent.md per person with the four fields filled.",
+          "check": "A fresh reader states goal, gate and stop rule without asking you."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day1",
+        "title": "Your individual intent",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "Every intent.md read by a fresh reader"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Swap intent.md with a neighbour. Read it as a fresh reader and mark every claim you cannot check from the CSVs.",
+          "steps": [
+            "Read your neighbour's intent.md.",
+            "Mark what you cannot check from the CSVs.",
+            "Return it with one question."
+          ],
+          "expected": "Every intent.md carries one reviewer question.",
+          "check": "No intent.md approves a batch."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day1",
+        "title": "Map one work item",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "FIN-001 on Plan, Design, Build, Test, Deploy, Maintain"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "As a group, map FIN-001 to the six stages and write which day of this week covers each stage.",
+          "steps": [
+            "Place FIN-001 on the six stages.",
+            "Write the day per stage.",
+            "Point Maintain at FIN-006."
+          ],
+          "expected": "One lifecycle map for the example with a day per stage.",
+          "check": "Maintain points at FIN-006, the timing monitor."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day1",
+        "title": "Human gate",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "A gate decision on every intent.md"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Gate the intent.md drafts: accept, revise or reject each one against the four fields. Record the decision and the OPEN items.",
+          "steps": [
+            "Read each intent.md aloud.",
+            "Decide: accept, revise, reject.",
+            "Record decision and OPEN items."
+          ],
+          "expected": "Every intent.md has a gate decision.",
+          "check": "Rejected drafts name the missing field."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day1",
+        "title": "Fresh-reader transfer",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "Someone who did not write it can run it"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Hand your intent.md to someone who did not write it. They state goal, stage, evidence, owner and next step without asking you.",
+          "steps": [
+            "Hand over intent.md.",
+            "The reader states the five fields.",
+            "Note every question they had to ask."
+          ],
+          "expected": "A transfer log per intent.md.",
+          "check": "Zero questions, or each question became an OPEN item."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day2",
+        "title": "Small change loop",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "The FIN-001 intent becomes the smallest plan"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Demo: turn the FIN-001 intent into the smallest plan. Inputs, expected five cases, two positive and two negative checks, gate, rollback. No agent yet.",
+          "steps": [
+            "Show the plan card.",
+            "Show the four checks on real row ids.",
+            "Show the rollback: discard the worksheet."
+          ],
+          "expected": "The squad has seen one complete plan card.",
+          "check": "Everyone can name the two negative checks."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day2",
+        "title": "Your individual plan",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "Your own plan card plus a timed hand worksheet"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Write your own plan for the batch review, then classify the six batches by hand and write down the minutes.",
+          "steps": [
+            "Plan: inputs, expected, four checks, gate, rollback.",
+            "Worksheet: one row per batch with your classification.",
+            "Write down your minutes."
+          ],
+          "expected": "Plan card plus a hand worksheet with a time.",
+          "check": "The worksheet leaves B-20260909-01 UNRESOLVED."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day2",
+        "title": "Review evidence",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "Every classification cites a row id"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Compare worksheets in pairs against the scenario rules. Every classification needs a row id as evidence.",
+          "steps": [
+            "Compare the six rows.",
+            "Add a row id to every classification.",
+            "Agree on TX-NS-1008."
+          ],
+          "expected": "Every classification cites a row id.",
+          "check": "The pair agrees on TX-NS-1008: timing, not an error."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day2",
+        "title": "Compare plans",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "One group plan the agent gets on Day 3"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "As a group, merge the plans into one plan the agent gets on Day 3. Keep the four checks.",
+          "steps": [
+            "Merge inputs and expected.",
+            "Keep the four checks.",
+            "Write gate and rollback once."
+          ],
+          "expected": "One group plan with inputs, expected, four checks, gate, rollback.",
+          "check": "The plan is small enough to paste into an agent prompt."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day2",
+        "title": "Human gate",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "Gate decision on the group plan"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Gate the group plan: small enough to hand to an agent, clear enough to reject a wrong answer?",
+          "steps": [
+            "Read the group plan aloud.",
+            "Decide: accept, revise, reject.",
+            "Confirm the rollback."
+          ],
+          "expected": "Gate decision on the group plan.",
+          "check": "Rollback is stated: discard the worksheet; the CSVs are never written."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day2",
+        "title": "Transfer checklist",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "A fresh reader reaches the same six classifications"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "A fresh reader follows the group plan on the CSVs without the author. Note every step they had to ask about.",
+          "steps": [
+            "Hand over the plan and the CSVs.",
+            "The reader classifies the six batches.",
+            "Log every question asked."
+          ],
+          "expected": "Transfer log with the questions asked.",
+          "check": "The fresh reader reaches the same six classifications."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day3",
+        "title": "n8n agent loop",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "The reconciliation agent running in n8n"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Demo: the reconciliation agent in n8n. Trigger, read files, bundle rows, agent node with the contract. Show settings and the output table.",
+          "steps": [
+            "Show the four nodes.",
+            "Run once; show the table.",
+            "Show where the agent wrote OPEN."
+          ],
+          "expected": "The squad has seen one observed run.",
+          "check": "Everyone can name the four nodes and the contract."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day3",
+        "title": "Your individual n8n run",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "One observed run per person"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Import or rebuild the workflow, run it once on the three CSVs, save output and settings. Make no writes.",
+          "steps": [
+            "Import n8n/reconciliation-agent.json or rebuild from n8n/README.md.",
+            "Run once; save output table and model settings.",
+            "Mark every batch where agent and Day 2 worksheet disagree."
+          ],
+          "expected": "One observed run with output, settings and a disagreement list.",
+          "check": "The output has one row per batch with a row id as evidence."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day3",
+        "title": "Review the output",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "The three traps checked against the table"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Review the agent's table against the three traps. Which one did it miss?",
+          "steps": [
+            "SET-1003-B: quarantined, batch UNRESOLVED?",
+            "TX-NS-1008: timing, not overdue?",
+            "TX-NS-1004: fee mismatch kept?"
+          ],
+          "expected": "Trap check with three yes or no answers.",
+          "check": "A missed trap is recorded as a finding, not fixed silently."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day3",
+        "title": "Bound the workflow",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "One tighter contract line and a rerun"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "As a group, tighten one line in the contract so the missed trap cannot happen again. Rerun and keep both outputs.",
+          "steps": [
+            "Pick the missed trap.",
+            "Change one contract line.",
+            "Rerun; save before and after."
+          ],
+          "expected": "One changed contract line and a rerun.",
+          "check": "Before and after output are both saved."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day3",
+        "title": "Human gate",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "A gate decision per batch"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Gate the n8n run: is the table evidence a reviewer can accept per batch? Which batches stay OPEN?",
+          "steps": [
+            "Decide per batch.",
+            "Write OPEN where evidence is missing.",
+            "Record who confirms the duplicate."
+          ],
+          "expected": "Per-batch gate decision.",
+          "check": "B-20260909-01 is not approved."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day3",
+        "title": "Fresh-reader transfer",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "The run reproduced from saved settings"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "A fresh reader reruns the workflow from your saved settings and gets the same table.",
+          "steps": [
+            "Hand over export and settings.",
+            "The reader reruns.",
+            "List the differences, or write none."
+          ],
+          "expected": "Reproduced run.",
+          "check": "Differences between the two runs are listed, or 'none'."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day4",
+        "title": "Claude Code platform",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "The same contract in Claude Code"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Demo: the same contract in Claude Code. Starter subagent, contract.md, Stop hook that runs check_fixture.py, one reviewer per batch.",
+          "steps": [
+            "Copy the starter.",
+            "Run the reviewer; show the hook line.",
+            "Show one reviewer per batch."
+          ],
+          "expected": "The squad has seen the hook block a stop once.",
+          "check": "Everyone can say what the hook checks."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day4",
+        "title": "Your individual run",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "One Claude Code run per person"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Copy the starter into your project, run the reconciliation reviewer on the three CSVs, record tool calls, findings and the hook result.",
+          "steps": [
+            "cp -R scenarios/payment-reconciliation/starter/.claude .claude",
+            "Run the reviewer; no writes.",
+            "Save trace, table and hook output."
+          ],
+          "expected": "One Claude Code run with trace, table and hook result.",
+          "check": "The hook ran before the agent claimed anything reconciled."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day4",
+        "title": "Read the trace",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "Trace notes and a platform difference list"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Read the trace: what did the agent read, what did it compute, where did it say OPEN? Compare with the n8n table.",
+          "steps": [
+            "List the files read.",
+            "List the OPEN items.",
+            "Compare the six rows with n8n."
+          ],
+          "expected": "Trace notes and a platform difference list.",
+          "check": "Same classifications on both platforms, or the difference is explained."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day4",
+        "title": "Add one guardrail",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "One guardrail, observable in the trace"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Add the rule 'never approve a batch with a duplicate settlement row' as a hook or contract line. Rerun. Compare before and after.",
+          "steps": [
+            "Add the rule.",
+            "Rerun.",
+            "Save before and after; point at the guardrail in the trace."
+          ],
+          "expected": "Before and after output with the guardrail named.",
+          "check": "The guardrail is observable in the trace, not just in the prompt."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day4",
+        "title": "Human gate",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "Per-batch decisions and the value slide filled in"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Gate the Claude Code run per batch. Then fill the before-and-after slide with the squad's own numbers.",
+          "steps": [
+            "Decide per batch.",
+            "Fill both columns.",
+            "Name the trap the gate caught."
+          ],
+          "expected": "Per-batch decisions and the value slide filled in.",
+          "check": "Nobody claims speed without naming a trap the gate caught."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day4",
+        "title": "Fresh-reader transfer",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "The run reproduced on a second laptop"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "A fresh reader reruns the starter from your handoff: trace, checker, prompt, OPEN items.",
+          "steps": [
+            "Hand over the handoff.",
+            "The reader reruns on their laptop.",
+            "Compare the hook result."
+          ],
+          "expected": "Reproduced run on a second laptop.",
+          "check": "The hook result matches."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day5",
+        "title": "End-to-end demo",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "FIN-003 end to end in ten minutes"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Demo: FIN-003 end to end. Intent, plan, agent run, hook, gate decision UNRESOLVED, and the three handoff drafts from workflow.md.",
+          "steps": [
+            "Show the thread on one screen.",
+            "Show the gate decision UNRESOLVED.",
+            "Show the three drafts with OPEN links."
+          ],
+          "expected": "The squad has seen the whole loop once.",
+          "check": "Everyone can say why FIN-003 ends UNRESOLVED."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day5",
+        "title": "Your individual issue brief",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "One issue brief per person"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional or sanitised data only; nothing published"
+            }
+          ],
+          "prompt": "Write the issue brief for FIN-003 or for your own sanitised team issue in the same shape.",
+          "steps": [
+            "Outcome, scope, named files, checks, gate, rollback.",
+            "Fictional or sanitised data only.",
+            "Mark every unknown OPEN."
+          ],
+          "expected": "One issue brief per person.",
+          "check": "A reviewer can reject the brief on a stated check."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day5",
+        "title": "Review scope",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "A scope decision per brief"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional or sanitised data only; nothing published"
+            }
+          ],
+          "prompt": "Team checks each brief: is the scope one batch or one issue, are the files named, is the gate a person?",
+          "steps": [
+            "Check scope.",
+            "Check named files.",
+            "Check the gate is a person."
+          ],
+          "expected": "Every brief has a scope decision.",
+          "check": "No brief names a real system as a dependency."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day5",
+        "title": "Run the team roles",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "One MOB run on FIN-003"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "MOB on FIN-003 with driver, navigator, skeptic and scribe. The agent inspects only named files, runs the checker, returns evidence.",
+          "steps": [
+            "Assign the four roles.",
+            "Run FIN-003; rotate once.",
+            "The scribe records one challenged claim."
+          ],
+          "expected": "One MOB run with roles rotated at least once.",
+          "check": "The skeptic recorded one challenged claim."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day5",
+        "title": "Human gate",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "Gate decision per ticket with evidence"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Fictional CSVs only; nothing is written or published"
+            }
+          ],
+          "prompt": "Gate FIN-003 and the own-issue briefs. UNRESOLVED is a valid outcome; approval without evidence is not.",
+          "steps": [
+            "Decide per ticket.",
+            "Attach the evidence.",
+            "Write the OPEN confirmation request."
+          ],
+          "expected": "Gate decision per ticket with evidence.",
+          "check": "B-20260909-01 stays UNRESOLVED with an OPEN confirmation request."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day5",
+        "title": "Receiver handoff",
+        "set": {
+          "cards": [
+            {
+              "title": "Goal",
+              "body": "Three drafts a receiver can act on"
+            },
+            {
+              "title": "Mode",
+              "body": "Theory → demo → individual → review → group → human gate"
+            },
+            {
+              "title": "Boundary",
+              "body": "Drafts only; links OPEN; nothing published"
+            }
+          ],
+          "prompt": "Produce the GitLab MR, Jira task and Confluence recap drafts from workflow.md for FIN-003. Links OPEN. Nothing published.",
+          "steps": [
+            "Draft the MR title and body.",
+            "Draft the Jira fields.",
+            "Draft the Confluence recap; mark links OPEN."
+          ],
+          "expected": "Three drafts a receiver can act on.",
+          "check": "The receiver states current state and next owner without asking the sender."
+        }
+      },
+      {
+        "_example": true,
+        "day": "*",
+        "title": "Break and reset",
+        "set": {
+          "steps": [
+            "Step away from the screen.",
+            "Back at the stated time."
+          ],
+          "expected": "Everyone is back on time.",
+          "check": "One question for the review is on the board.",
+          "prompt": "Fifteen minutes. Leave the example on the screen so the next block starts from it."
+        }
+      },
+      {
+        "_example": true,
+        "day": "*",
+        "title": "Close and reflect",
+        "set": {
+          "steps": [
+            "Say what you made today on the example.",
+            "Say what you learned.",
+            "Say what you can do tomorrow."
+          ],
+          "expected": "Three sentences per person.",
+          "check": "Today's evidence is committed on the day branch.",
+          "prompt": "Close on the example: what did the squad make on it today, what did it learn, what can it do tomorrow? Then check-in, Kahoot, wordcloud, MOB reflection."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day1",
+        "title": "Start with the SDLC map",
+        "set": {
+          "steps": [
+            "Read today's example step.",
+            "Work in the timebox.",
+            "Record evidence with row ids.",
+            "Ask for the human gate."
+          ]
+        }
+      },
+      {
+        "_example": true,
+        "day": "day2",
+        "title": "Rebuild the lifecycle",
+        "set": {
+          "steps": [
+            "Read today's example step.",
+            "Work in the timebox.",
+            "Record evidence with row ids.",
+            "Ask for the human gate."
+          ]
+        }
+      },
+      {
+        "_example": true,
+        "day": "day4",
+        "title": "Agent recap",
+        "set": {
+          "steps": [
+            "Read today's example step.",
+            "Work in the timebox.",
+            "Record evidence with row ids.",
+            "Ask for the human gate."
+          ],
+          "prompt": "Recap yesterday's n8n run on the example, then today: the same contract in Claude Code, a hook that runs the check before the claim, and one reviewer per batch."
+        }
+      },
+      {
+        "_example": true,
+        "day": "day5",
+        "title": "Choose the team issue",
+        "set": {
+          "steps": [
+            "Read today's example step.",
+            "Work in the timebox.",
+            "Record evidence with row ids.",
+            "Ask for the human gate."
+          ]
+        }
+      },
+      {
+        "_example": true,
+        "day": "day1",
+        "title": "Review the boundary",
+        "set": {
+          "prompt": "Review the boundary of the example: fictional CSVs, no team system, no approval. Name what is out of scope today.",
+          "steps": [
+            "Name one thing that is out of scope.",
+            "Name the human gate.",
+            "Name the stop rule."
+          ],
+          "expected": "The boundary said aloud by the squad.",
+          "check": "Nobody plans to touch a real system."
+        }
       }
     ],
     "day-decks.json": [
@@ -989,5 +1957,220 @@
   "workbooks": {
     "day-decks.json": "../days/day-{n}.md",
     "../squads/squad-2/presentations.json": "../squads/squad-2/day-{n}.md"
+  },
+  "examples": {
+    "../squads/squad-2/presentations.json": {
+      "name": "daily payment reconciliation",
+      "days": {
+        "day1": {
+          "after": "intent.md · how we use it",
+          "slide": {
+            "title": "The example · daily payment reconciliation",
+            "kicker": "EXAMPLE · DAY 1 OF 5",
+            "subtitle": "One fictional merchant, three CSV files, five documented cases. We carry it from intent to handoff.",
+            "layout": "image",
+            "keepCards": true,
+            "image": "worked-example-thread.svg",
+            "imageAlt": "Five steps on a chain: Day 1 intent.md, Day 2 plan and hand baseline, Day 3 agent in n8n, Day 4 Claude Code with hook, Day 5 gate and handoff. Below: three traps the human gate must catch.",
+            "imageCaption": "The same thread every day. Nothing here touches a real system; everything can be rerun at home.",
+            "cards": [
+              {
+                "title": "The files",
+                "body": "internal-ledger.csv · psp-settlements.csv · bank-credits.csv · cutoff 2026-09-10 12:00 Europe/Amsterdam"
+              },
+              {
+                "title": "The traps",
+                "body": "SET-1003-B stays UNRESOLVED · TX-NS-1008 is timing, not an error · TX-NS-1004 fee mismatch stays a mismatch"
+              },
+              {
+                "title": "Today",
+                "body": "Write intent.md for FIN-001, the daily reconciliation epic"
+              }
+            ],
+            "prompt": "Introduce the example: the merchant, the three files, the cutoff, the five cases. Point at the five steps and say which day does which. Name the three traps out loud; the squad will meet them on Day 3.",
+            "steps": [
+              "Open scenarios/payment-reconciliation/README.md.",
+              "Find the three CSVs and the cutoff.",
+              "Say which trap you expect an agent to miss."
+            ],
+            "expected": "Everyone can name the files, the cutoff and one trap.",
+            "check": "Nobody thinks the data is real.",
+            "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+            "dark": false
+          }
+        },
+        "day2": {
+          "after": "Evidence rule · how we use it",
+          "slide": {
+            "title": "The example · plan and hand baseline",
+            "kicker": "EXAMPLE · DAY 2 OF 5",
+            "subtitle": "The smallest plan for the batch review, then the six batches by hand. Today's minutes are tomorrow's baseline.",
+            "cards": [
+              {
+                "title": "Inputs",
+                "body": "Three CSVs · cutoff 2026-09-10 · fee rule round_half_up(gross × 2%)"
+              },
+              {
+                "title": "Two positive checks",
+                "body": "TX-NS-1001 fee is 250 · batch B-20260908-01 sums to bank 20,972"
+              },
+              {
+                "title": "Two negative checks",
+                "body": "TX-NS-1008 must not be called overdue · SET-1003-B must not be counted"
+              }
+            ],
+            "prompt": "Show the plan card: inputs, expected five cases, the four checks, human gate, rollback. Then everyone classifies the six batches by hand and writes down the minutes. No agent today.",
+            "steps": [
+              "Write the plan: inputs, expected, four checks, gate, rollback.",
+              "Classify the six batches on a worksheet.",
+              "Write down your minutes and where you hesitated."
+            ],
+            "expected": "A plan card and a hand worksheet with a time per person.",
+            "check": "The worksheet leaves B-20260909-01 UNRESOLVED and calls TX-NS-1008 timing.",
+            "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+            "dark": false
+          }
+        },
+        "day3": {
+          "after": "The agentic loop · how we use it",
+          "slide": {
+            "title": "The example · first run in n8n",
+            "kicker": "EXAMPLE · DAY 3 OF 5",
+            "subtitle": "The Day 2 plan becomes the contract. The agent reads the same files and returns one row per batch.",
+            "cards": [
+              {
+                "title": "Workflow",
+                "body": "Manual trigger → Read files → Bundle rows → Reconciliation agent"
+              },
+              {
+                "title": "Contract",
+                "body": "One row per batch: nets, classification, row ids as evidence, next human action, OPEN"
+              },
+              {
+                "title": "Compare",
+                "body": "Your Day 2 worksheet next to the agent's table. Mark every disagreement."
+              }
+            ],
+            "prompt": "Demo the workflow once. Show the settings, the output table and where the agent wrote OPEN. Then ask: which of the three traps did it catch?",
+            "steps": [
+              "Import scenarios/payment-reconciliation/n8n/reconciliation-agent.json or rebuild it from n8n/README.md.",
+              "Run once; save output and settings.",
+              "Mark every batch where agent and worksheet disagree."
+            ],
+            "expected": "One observed n8n run with settings, output and a disagreement list.",
+            "check": "The reviewer can name the trap the agent missed, or show it caught all three.",
+            "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+            "dark": false
+          }
+        },
+        "day4": {
+          "after": "Subagents · how we use it",
+          "slide": {
+            "title": "The example · same contract in Claude Code",
+            "kicker": "EXAMPLE · DAY 4 OF 5",
+            "subtitle": "Same files, same contract, different platform. Today the check runs before the claim.",
+            "cards": [
+              {
+                "title": "Starter",
+                "body": "scenarios/payment-reconciliation/starter · reconciliation-reviewer subagent · contract.md"
+              },
+              {
+                "title": "Hook",
+                "body": "Stop hook runs check_fixture.py · no \"reconciled\" claim before it prints PASS"
+              },
+              {
+                "title": "Subagents",
+                "body": "One reviewer per batch, six rows merged by you"
+              }
+            ],
+            "prompt": "Demo the starter: copy .claude, run the reviewer, show the hook line in the trace. Then rerun with one reviewer per batch and compare with the n8n table from yesterday.",
+            "steps": [
+              "cp -R scenarios/payment-reconciliation/starter/.claude .claude",
+              "Run the reviewer; save trace, table and hook output.",
+              "Rerun with one reviewer per batch and merge."
+            ],
+            "expected": "One Claude Code run with trace, table and hook result, plus the per-batch rerun.",
+            "check": "Same six classifications as n8n, or the difference is explained.",
+            "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+            "dark": false
+          }
+        },
+        "day4-value": {
+          "after": "Add one guardrail",
+          "slide": {
+            "title": "The example · before and after",
+            "kicker": "EXAMPLE · VALUE",
+            "subtitle": "Day 2 by hand next to Day 4 with an agent and a gate. Fill it with the squad's own numbers.",
+            "layout": "compare",
+            "cards": [],
+            "columns": [
+              {
+                "title": "Day 2 · by hand",
+                "items": [
+                  "Minutes · your worksheet time",
+                  "Traps caught · count them",
+                  "Evidence · a worksheet only you can read",
+                  "Rerun · start over"
+                ],
+                "foot": "Human does the work"
+              },
+              {
+                "title": "Day 4 · agent + gate",
+                "items": [
+                  "Minutes · run time plus your review",
+                  "Traps caught · the gate decides",
+                  "Evidence · trace, table, hook result",
+                  "Rerun · same files, same contract, same check"
+                ],
+                "foot": "Human verifies the work"
+              }
+            ],
+            "tagline": "THE BOTTLENECK MOVED TO VERIFICATION",
+            "prompt": "Fill both columns live. Ask where the minutes went today: summing rows or checking findings? Then ask what the gate caught that the agent did not.",
+            "steps": [
+              "Fill the two columns with your own numbers.",
+              "Say where your minutes went today.",
+              "Name the one thing the gate caught."
+            ],
+            "expected": "Both columns filled in with the squad's own numbers.",
+            "check": "Nobody claims speed without naming a trap the gate caught.",
+            "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+            "dark": false
+          }
+        },
+        "day5": {
+          "after": "Human gate · how we use it",
+          "slide": {
+            "title": "The example · gate and handoff",
+            "kicker": "EXAMPLE · DAY 5 OF 5",
+            "subtitle": "FIN-003 end to end as a MOB, a gate decision per ticket, and three handoff drafts with OPEN links.",
+            "cards": [
+              {
+                "title": "MOB on FIN-003",
+                "body": "Driver, navigator, skeptic, scribe run the duplicate quarantine end to end"
+              },
+              {
+                "title": "Human gate",
+                "body": "Accept or reject per FIN ticket · UNRESOLVED is a valid outcome · approval without evidence is not"
+              },
+              {
+                "title": "Handoff",
+                "body": "GitLab MR, Jira task, Confluence recap as drafts from workflow.md · links OPEN · nothing published"
+              }
+            ],
+            "prompt": "Demo FIN-003 end to end in ten minutes: intent, plan, run, hook, gate decision UNRESOLVED, three drafts. Then the squad repeats the shape on its own sanitised issue. Status desk (SCN-001 to 007) is the reserve if the team wants a code change.",
+            "steps": [
+              "Run FIN-003 as a MOB; rotate roles once.",
+              "Gate every FIN ticket with evidence.",
+              "Write the three drafts; mark links OPEN."
+            ],
+            "expected": "Gate decisions, three drafts, and one own-issue brief in the same shape.",
+            "check": "The receiver can state current state and next owner without asking the sender.",
+            "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+            "dark": false
+          }
+        }
+      }
+    }
   }
 }

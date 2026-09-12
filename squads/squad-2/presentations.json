@@ -26,10 +26,10 @@
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Read today's example step.",
+          "Work in the timebox.",
+          "Record evidence with row ids.",
+          "Ask for the human gate."
         ],
         "expected": "Shared intent and lifecycle map.",
         "check": "A fresh reader can reproduce the stated result."
@@ -41,7 +41,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC foundations"
+            "body": "A shared map from intent to maintain, on the FIN-001 example"
           },
           {
             "title": "Mode",
@@ -49,20 +49,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Walk through the AI-native SDLC playbook. State intent, lifecycle stage, evidence, owner, and human gate.",
+        "prompt": "Walk the playbook map with the example: where does FIN-001 sit today, and which stage does each day of this week reach?",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Read the example slide.",
+          "Place FIN-001 on the six stages.",
+          "Name the human gate of each stage."
         ],
-        "expected": "Shared intent and lifecycle map.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "The squad has placed the example on the lifecycle map.",
+        "check": "Everyone can say which stage Day 3 and Day 4 cover."
       },
       {
         "title": "Code is no longer the bottleneck",
@@ -307,13 +306,47 @@
         "layout": "cards"
       },
       {
+        "title": "The example · daily payment reconciliation",
+        "kicker": "EXAMPLE · DAY 1 OF 5",
+        "subtitle": "One fictional merchant, three CSV files, five documented cases. We carry it from intent to handoff.",
+        "layout": "image",
+        "keepCards": true,
+        "image": "worked-example-thread.svg",
+        "imageAlt": "Five steps on a chain: Day 1 intent.md, Day 2 plan and hand baseline, Day 3 agent in n8n, Day 4 Claude Code with hook, Day 5 gate and handoff. Below: three traps the human gate must catch.",
+        "imageCaption": "The same thread every day. Nothing here touches a real system; everything can be rerun at home.",
+        "cards": [
+          {
+            "title": "The files",
+            "body": "internal-ledger.csv · psp-settlements.csv · bank-credits.csv · cutoff 2026-09-10 12:00 Europe/Amsterdam"
+          },
+          {
+            "title": "The traps",
+            "body": "SET-1003-B stays UNRESOLVED · TX-NS-1008 is timing, not an error · TX-NS-1004 fee mismatch stays a mismatch"
+          },
+          {
+            "title": "Today",
+            "body": "Write intent.md for FIN-001, the daily reconciliation epic"
+          }
+        ],
+        "prompt": "Introduce the example: the merchant, the three files, the cutoff, the five cases. Point at the five steps and say which day does which. Name the three traps out loud; the squad will meet them on Day 3.",
+        "steps": [
+          "Open scenarios/payment-reconciliation/README.md.",
+          "Find the three CSVs and the cutoff.",
+          "Say which trap you expect an agent to miss."
+        ],
+        "expected": "Everyone can name the files, the cutoff and one trap.",
+        "check": "Nobody thinks the data is real.",
+        "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+        "dark": false
+      },
+      {
         "title": "Intent becomes a plan",
         "kicker": "INDIVIDUAL · 10:35–11:00 · 25 MIN",
         "subtitle": "AI-native SDLC foundations",
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC foundations"
+            "body": "One intent.md per person for FIN-001"
           },
           {
             "title": "Mode",
@@ -321,20 +354,20 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Walk through the AI-native SDLC playbook. State intent, lifecycle stage, evidence, owner, and human gate.",
+        "prompt": "Write intent.md for FIN-001: outcome, human gate, stop rule, one OPEN question. Fictional CSVs only; no team system.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Outcome: an evidence-backed action list for the 2026-09-10 cutoff.",
+          "Human gate: the reviewer accepts per batch.",
+          "Stop rule: no approval on an UNRESOLVED batch.",
+          "OPEN: who confirms the duplicate?"
         ],
-        "expected": "Shared intent and lifecycle map.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "One intent.md per person with the four fields filled.",
+        "check": "A fresh reader states goal, gate and stop rule without asking you."
       },
       {
         "title": "Your individual intent",
@@ -343,7 +376,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC foundations"
+            "body": "Every intent.md read by a fresh reader"
           },
           {
             "title": "Mode",
@@ -351,20 +384,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Swap intent.md with a neighbour. Read it as a fresh reader and mark every claim you cannot check from the CSVs.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Read your neighbour's intent.md.",
+          "Mark what you cannot check from the CSVs.",
+          "Return it with one question."
         ],
-        "expected": "Shared intent and lifecycle map.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Every intent.md carries one reviewer question.",
+        "check": "No intent.md approves a batch."
       },
       {
         "title": "Review the boundary",
@@ -384,17 +416,16 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Review the boundary of the example: fictional CSVs, no team system, no approval. Name what is out of scope today.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Name one thing that is out of scope.",
+          "Name the human gate.",
+          "Name the stop rule."
         ],
-        "expected": "Shared intent and lifecycle map.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "The boundary said aloud by the squad.",
+        "check": "Nobody plans to touch a real system."
       },
       {
         "title": "Map one work item",
@@ -403,7 +434,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC foundations"
+            "body": "FIN-001 on Plan, Design, Build, Test, Deploy, Maintain"
           },
           {
             "title": "Mode",
@@ -411,20 +442,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Walk through the AI-native SDLC playbook. State intent, lifecycle stage, evidence, owner, and human gate.",
+        "prompt": "As a group, map FIN-001 to the six stages and write which day of this week covers each stage.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Place FIN-001 on the six stages.",
+          "Write the day per stage.",
+          "Point Maintain at FIN-006."
         ],
-        "expected": "Shared intent and lifecycle map.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "One lifecycle map for the example with a day per stage.",
+        "check": "Maintain points at FIN-006, the timing monitor."
       },
       {
         "title": "Human gate",
@@ -433,7 +463,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC foundations"
+            "body": "A gate decision on every intent.md"
           },
           {
             "title": "Mode",
@@ -441,20 +471,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Gate the intent.md drafts: accept, revise or reject each one against the four fields. Record the decision and the OPEN items.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Read each intent.md aloud.",
+          "Decide: accept, revise, reject.",
+          "Record decision and OPEN items."
         ],
-        "expected": "Shared intent and lifecycle map.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Every intent.md has a gate decision.",
+        "check": "Rejected drafts name the missing field."
       },
       {
         "title": "Fresh-reader transfer",
@@ -463,7 +492,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC foundations"
+            "body": "Someone who did not write it can run it"
           },
           {
             "title": "Mode",
@@ -471,20 +500,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Walk through the AI-native SDLC playbook. State intent, lifecycle stage, evidence, owner, and human gate.",
+        "prompt": "Hand your intent.md to someone who did not write it. They state goal, stage, evidence, owner and next step without asking you.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Hand over intent.md.",
+          "The reader states the five fields.",
+          "Note every question they had to ask."
         ],
-        "expected": "Shared intent and lifecycle map.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "A transfer log per intent.md.",
+        "check": "Zero questions, or each question became an OPEN item."
       },
       {
         "title": "Close and reflect",
@@ -504,17 +532,16 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Walk through the AI-native SDLC playbook. State intent, lifecycle stage, evidence, owner, and human gate.",
+        "prompt": "Close on the example: what did the squad make on it today, what did it learn, what can it do tomorrow? Then check-in, Kahoot, wordcloud, MOB reflection.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Say what you made today on the example.",
+          "Say what you learned.",
+          "Say what you can do tomorrow."
         ],
-        "expected": "Shared intent and lifecycle map.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Three sentences per person.",
+        "check": "Today's evidence is committed on the day branch."
       }
     ]
   },
@@ -545,10 +572,10 @@
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Read today's example step.",
+          "Work in the timebox.",
+          "Record evidence with row ids.",
+          "Ask for the human gate."
         ],
         "expected": "Reviewed local change plan and evidence card.",
         "check": "A fresh reader can reproduce the stated result."
@@ -560,7 +587,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC feedback loop"
+            "body": "The FIN-001 intent becomes the smallest plan"
           },
           {
             "title": "Mode",
@@ -568,20 +595,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Turn one local issue into a small plan with positive and negative checks. Do not invoke an agent yet.",
+        "prompt": "Demo: turn the FIN-001 intent into the smallest plan. Inputs, expected five cases, two positive and two negative checks, gate, rollback. No agent yet.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Show the plan card.",
+          "Show the four checks on real row ids.",
+          "Show the rollback: discard the worksheet."
         ],
-        "expected": "Reviewed local change plan and evidence card.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "The squad has seen one complete plan card.",
+        "check": "Everyone can name the two negative checks."
       },
       {
         "title": "What is the evidence rule?",
@@ -660,13 +686,42 @@
         "layout": "cards"
       },
       {
+        "title": "The example · plan and hand baseline",
+        "kicker": "EXAMPLE · DAY 2 OF 5",
+        "subtitle": "The smallest plan for the batch review, then the six batches by hand. Today's minutes are tomorrow's baseline.",
+        "cards": [
+          {
+            "title": "Inputs",
+            "body": "Three CSVs · cutoff 2026-09-10 · fee rule round_half_up(gross × 2%)"
+          },
+          {
+            "title": "Two positive checks",
+            "body": "TX-NS-1001 fee is 250 · batch B-20260908-01 sums to bank 20,972"
+          },
+          {
+            "title": "Two negative checks",
+            "body": "TX-NS-1008 must not be called overdue · SET-1003-B must not be counted"
+          }
+        ],
+        "prompt": "Show the plan card: inputs, expected five cases, the four checks, human gate, rollback. Then everyone classifies the six batches by hand and writes down the minutes. No agent today.",
+        "steps": [
+          "Write the plan: inputs, expected, four checks, gate, rollback.",
+          "Classify the six batches on a worksheet.",
+          "Write down your minutes and where you hesitated."
+        ],
+        "expected": "A plan card and a hand worksheet with a time per person.",
+        "check": "The worksheet leaves B-20260909-01 UNRESOLVED and calls TX-NS-1008 timing.",
+        "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+        "dark": false
+      },
+      {
         "title": "Your individual plan",
         "kicker": "INDIVIDUAL · 10:35–11:00 · 25 MIN",
         "subtitle": "AI-native SDLC feedback loop",
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC feedback loop"
+            "body": "Your own plan card plus a timed hand worksheet"
           },
           {
             "title": "Mode",
@@ -674,20 +729,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Turn one local issue into a small plan with positive and negative checks. Do not invoke an agent yet.",
+        "prompt": "Write your own plan for the batch review, then classify the six batches by hand and write down the minutes.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Plan: inputs, expected, four checks, gate, rollback.",
+          "Worksheet: one row per batch with your classification.",
+          "Write down your minutes."
         ],
-        "expected": "Reviewed local change plan and evidence card.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Plan card plus a hand worksheet with a time.",
+        "check": "The worksheet leaves B-20260909-01 UNRESOLVED."
       },
       {
         "title": "Review evidence",
@@ -696,7 +750,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC feedback loop"
+            "body": "Every classification cites a row id"
           },
           {
             "title": "Mode",
@@ -704,20 +758,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Compare worksheets in pairs against the scenario rules. Every classification needs a row id as evidence.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Compare the six rows.",
+          "Add a row id to every classification.",
+          "Agree on TX-NS-1008."
         ],
-        "expected": "Reviewed local change plan and evidence card.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Every classification cites a row id.",
+        "check": "The pair agrees on TX-NS-1008: timing, not an error."
       },
       {
         "title": "Break and reset",
@@ -737,17 +790,15 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Fifteen minutes. Leave the example on the screen so the next block starts from it.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Step away from the screen.",
+          "Back at the stated time."
         ],
-        "expected": "Reviewed local change plan and evidence card.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Everyone is back on time.",
+        "check": "One question for the review is on the board."
       },
       {
         "title": "Compare plans",
@@ -756,7 +807,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC feedback loop"
+            "body": "One group plan the agent gets on Day 3"
           },
           {
             "title": "Mode",
@@ -764,20 +815,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Turn one local issue into a small plan with positive and negative checks. Do not invoke an agent yet.",
+        "prompt": "As a group, merge the plans into one plan the agent gets on Day 3. Keep the four checks.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Merge inputs and expected.",
+          "Keep the four checks.",
+          "Write gate and rollback once."
         ],
-        "expected": "Reviewed local change plan and evidence card.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "One group plan with inputs, expected, four checks, gate, rollback.",
+        "check": "The plan is small enough to paste into an agent prompt."
       },
       {
         "title": "Human gate",
@@ -786,7 +836,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC feedback loop"
+            "body": "Gate decision on the group plan"
           },
           {
             "title": "Mode",
@@ -794,20 +844,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Gate the group plan: small enough to hand to an agent, clear enough to reject a wrong answer?",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Read the group plan aloud.",
+          "Decide: accept, revise, reject.",
+          "Confirm the rollback."
         ],
-        "expected": "Reviewed local change plan and evidence card.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Gate decision on the group plan.",
+        "check": "Rollback is stated: discard the worksheet; the CSVs are never written."
       },
       {
         "title": "Transfer checklist",
@@ -816,7 +865,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "AI-native SDLC feedback loop"
+            "body": "A fresh reader reaches the same six classifications"
           },
           {
             "title": "Mode",
@@ -824,20 +873,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Turn one local issue into a small plan with positive and negative checks. Do not invoke an agent yet.",
+        "prompt": "A fresh reader follows the group plan on the CSVs without the author. Note every step they had to ask about.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Hand over the plan and the CSVs.",
+          "The reader classifies the six batches.",
+          "Log every question asked."
         ],
-        "expected": "Reviewed local change plan and evidence card.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Transfer log with the questions asked.",
+        "check": "The fresh reader reaches the same six classifications."
       },
       {
         "title": "Close and reflect",
@@ -857,17 +905,16 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Turn one local issue into a small plan with positive and negative checks. Do not invoke an agent yet.",
+        "prompt": "Close on the example: what did the squad make on it today, what did it learn, what can it do tomorrow? Then check-in, Kahoot, wordcloud, MOB reflection.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Say what you made today on the example.",
+          "Say what you learned.",
+          "Say what you can do tomorrow."
         ],
-        "expected": "Reviewed local change plan and evidence card.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Three sentences per person.",
+        "check": "Today's evidence is committed on the day branch."
       }
     ]
   },
@@ -883,7 +930,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in n8n"
+            "body": "The reconciliation agent running in n8n"
           },
           {
             "title": "Mode",
@@ -891,20 +938,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Run the prepared n8n agent on the local repository snapshot. Return cited findings and OPEN for unrun GitLab or CI checks.",
+        "prompt": "Demo: the reconciliation agent in n8n. Trigger, read files, bundle rows, agent node with the contract. Show settings and the output table.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Show the four nodes.",
+          "Run once; show the table.",
+          "Show where the agent wrote OPEN."
         ],
-        "expected": "Observed n8n run with settings and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "The squad has seen one observed run.",
+        "check": "Everyone can name the four nodes and the contract."
       },
       {
         "title": "What is an agent?",
@@ -997,13 +1043,42 @@
         "layout": "cards"
       },
       {
+        "title": "The example · first run in n8n",
+        "kicker": "EXAMPLE · DAY 3 OF 5",
+        "subtitle": "The Day 2 plan becomes the contract. The agent reads the same files and returns one row per batch.",
+        "cards": [
+          {
+            "title": "Workflow",
+            "body": "Manual trigger → Read files → Bundle rows → Reconciliation agent"
+          },
+          {
+            "title": "Contract",
+            "body": "One row per batch: nets, classification, row ids as evidence, next human action, OPEN"
+          },
+          {
+            "title": "Compare",
+            "body": "Your Day 2 worksheet next to the agent's table. Mark every disagreement."
+          }
+        ],
+        "prompt": "Demo the workflow once. Show the settings, the output table and where the agent wrote OPEN. Then ask: which of the three traps did it catch?",
+        "steps": [
+          "Import scenarios/payment-reconciliation/n8n/reconciliation-agent.json or rebuild it from n8n/README.md.",
+          "Run once; save output and settings.",
+          "Mark every batch where agent and worksheet disagree."
+        ],
+        "expected": "One observed n8n run with settings, output and a disagreement list.",
+        "check": "The reviewer can name the trap the agent missed, or show it caught all three.",
+        "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+        "dark": false
+      },
+      {
         "title": "Your individual n8n run",
         "kicker": "INDIVIDUAL · 10:35–11:00 · 25 MIN",
         "subtitle": "First agent in n8n",
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in n8n"
+            "body": "One observed run per person"
           },
           {
             "title": "Mode",
@@ -1011,20 +1086,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Run the prepared n8n agent on the local repository snapshot. Return cited findings and OPEN for unrun GitLab or CI checks.",
+        "prompt": "Import or rebuild the workflow, run it once on the three CSVs, save output and settings. Make no writes.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Import n8n/reconciliation-agent.json or rebuild from n8n/README.md.",
+          "Run once; save output table and model settings.",
+          "Mark every batch where agent and Day 2 worksheet disagree."
         ],
-        "expected": "Observed n8n run with settings and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "One observed run with output, settings and a disagreement list.",
+        "check": "The output has one row per batch with a row id as evidence."
       },
       {
         "title": "Review the output",
@@ -1033,7 +1107,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in n8n"
+            "body": "The three traps checked against the table"
           },
           {
             "title": "Mode",
@@ -1041,20 +1115,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Review the agent's table against the three traps. Which one did it miss?",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "SET-1003-B: quarantined, batch UNRESOLVED?",
+          "TX-NS-1008: timing, not overdue?",
+          "TX-NS-1004: fee mismatch kept?"
         ],
-        "expected": "Observed n8n run with settings and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Trap check with three yes or no answers.",
+        "check": "A missed trap is recorded as a finding, not fixed silently."
       },
       {
         "title": "Break and reset",
@@ -1074,17 +1147,15 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Fifteen minutes. Leave the example on the screen so the next block starts from it.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Step away from the screen.",
+          "Back at the stated time."
         ],
-        "expected": "Observed n8n run with settings and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Everyone is back on time.",
+        "check": "One question for the review is on the board."
       },
       {
         "title": "Bound the workflow",
@@ -1093,7 +1164,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in n8n"
+            "body": "One tighter contract line and a rerun"
           },
           {
             "title": "Mode",
@@ -1101,20 +1172,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Run the prepared n8n agent on the local repository snapshot. Return cited findings and OPEN for unrun GitLab or CI checks.",
+        "prompt": "As a group, tighten one line in the contract so the missed trap cannot happen again. Rerun and keep both outputs.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Pick the missed trap.",
+          "Change one contract line.",
+          "Rerun; save before and after."
         ],
-        "expected": "Observed n8n run with settings and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "One changed contract line and a rerun.",
+        "check": "Before and after output are both saved."
       },
       {
         "title": "Human gate",
@@ -1123,7 +1193,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in n8n"
+            "body": "A gate decision per batch"
           },
           {
             "title": "Mode",
@@ -1131,20 +1201,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Gate the n8n run: is the table evidence a reviewer can accept per batch? Which batches stay OPEN?",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Decide per batch.",
+          "Write OPEN where evidence is missing.",
+          "Record who confirms the duplicate."
         ],
-        "expected": "Observed n8n run with settings and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Per-batch gate decision.",
+        "check": "B-20260909-01 is not approved."
       },
       {
         "title": "Fresh-reader transfer",
@@ -1153,7 +1222,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in n8n"
+            "body": "The run reproduced from saved settings"
           },
           {
             "title": "Mode",
@@ -1161,20 +1230,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Run the prepared n8n agent on the local repository snapshot. Return cited findings and OPEN for unrun GitLab or CI checks.",
+        "prompt": "A fresh reader reruns the workflow from your saved settings and gets the same table.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Hand over export and settings.",
+          "The reader reruns.",
+          "List the differences, or write none."
         ],
-        "expected": "Observed n8n run with settings and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Reproduced run.",
+        "check": "Differences between the two runs are listed, or 'none'."
       },
       {
         "title": "Close and reflect",
@@ -1194,17 +1262,16 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Run the prepared n8n agent on the local repository snapshot. Return cited findings and OPEN for unrun GitLab or CI checks.",
+        "prompt": "Close on the example: what did the squad make on it today, what did it learn, what can it do tomorrow? Then check-in, Kahoot, wordcloud, MOB reflection.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Say what you made today on the example.",
+          "Say what you learned.",
+          "Say what you can do tomorrow."
         ],
-        "expected": "Observed n8n run with settings and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Three sentences per person.",
+        "check": "Today's evidence is committed on the day branch."
       }
     ]
   },
@@ -1231,14 +1298,14 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Run the Claude Code agent on the same local snapshot. Record successful tool calls, findings, trace, and OPEN checks.",
+        "prompt": "Recap yesterday's n8n run on the example, then today: the same contract in Claude Code, a hook that runs the check before the claim, and one reviewer per batch.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Read today's example step.",
+          "Work in the timebox.",
+          "Record evidence with row ids.",
+          "Ask for the human gate."
         ],
         "expected": "Observed Claude Code run with trace and human review.",
         "check": "A fresh reader can reproduce the stated result."
@@ -1250,7 +1317,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in Claude Code"
+            "body": "The same contract in Claude Code"
           },
           {
             "title": "Mode",
@@ -1258,20 +1325,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Run the Claude Code agent on the same local snapshot. Record successful tool calls, findings, trace, and OPEN checks.",
+        "prompt": "Demo: the same contract in Claude Code. Starter subagent, contract.md, Stop hook that runs check_fixture.py, one reviewer per batch.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Copy the starter.",
+          "Run the reviewer; show the hook line.",
+          "Show one reviewer per batch."
         ],
-        "expected": "Observed Claude Code run with trace and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "The squad has seen the hook block a stop once.",
+        "check": "Everyone can say what the hook checks."
       },
       {
         "title": "What is \"one contract, two platforms\"?",
@@ -1514,13 +1580,42 @@
         "tagline": "SHORT PROMPTS → EIGHT AGENTS → SHORT PROMPTS AGAIN · THE ELITE RETURN TO SIMPLE"
       },
       {
+        "title": "The example · same contract in Claude Code",
+        "kicker": "EXAMPLE · DAY 4 OF 5",
+        "subtitle": "Same files, same contract, different platform. Today the check runs before the claim.",
+        "cards": [
+          {
+            "title": "Starter",
+            "body": "scenarios/payment-reconciliation/starter · reconciliation-reviewer subagent · contract.md"
+          },
+          {
+            "title": "Hook",
+            "body": "Stop hook runs check_fixture.py · no \"reconciled\" claim before it prints PASS"
+          },
+          {
+            "title": "Subagents",
+            "body": "One reviewer per batch, six rows merged by you"
+          }
+        ],
+        "prompt": "Demo the starter: copy .claude, run the reviewer, show the hook line in the trace. Then rerun with one reviewer per batch and compare with the n8n table from yesterday.",
+        "steps": [
+          "cp -R scenarios/payment-reconciliation/starter/.claude .claude",
+          "Run the reviewer; save trace, table and hook output.",
+          "Rerun with one reviewer per batch and merge."
+        ],
+        "expected": "One Claude Code run with trace, table and hook result, plus the per-batch rerun.",
+        "check": "Same six classifications as n8n, or the difference is explained.",
+        "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+        "dark": false
+      },
+      {
         "title": "Your individual run",
         "kicker": "INDIVIDUAL · 10:35–11:00 · 25 MIN",
         "subtitle": "First agent in Claude Code",
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in Claude Code"
+            "body": "One Claude Code run per person"
           },
           {
             "title": "Mode",
@@ -1528,20 +1623,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Run the Claude Code agent on the same local snapshot. Record successful tool calls, findings, trace, and OPEN checks.",
+        "prompt": "Copy the starter into your project, run the reconciliation reviewer on the three CSVs, record tool calls, findings and the hook result.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "cp -R scenarios/payment-reconciliation/starter/.claude .claude",
+          "Run the reviewer; no writes.",
+          "Save trace, table and hook output."
         ],
-        "expected": "Observed Claude Code run with trace and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "One Claude Code run with trace, table and hook result.",
+        "check": "The hook ran before the agent claimed anything reconciled."
       },
       {
         "title": "Read the trace",
@@ -1550,7 +1644,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in Claude Code"
+            "body": "Trace notes and a platform difference list"
           },
           {
             "title": "Mode",
@@ -1558,20 +1652,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Read the trace: what did the agent read, what did it compute, where did it say OPEN? Compare with the n8n table.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "List the files read.",
+          "List the OPEN items.",
+          "Compare the six rows with n8n."
         ],
-        "expected": "Observed Claude Code run with trace and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Trace notes and a platform difference list.",
+        "check": "Same classifications on both platforms, or the difference is explained."
       },
       {
         "title": "Break and reset",
@@ -1591,17 +1684,15 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Fifteen minutes. Leave the example on the screen so the next block starts from it.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Step away from the screen.",
+          "Back at the stated time."
         ],
-        "expected": "Observed Claude Code run with trace and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Everyone is back on time.",
+        "check": "One question for the review is on the board."
       },
       {
         "title": "Add one guardrail",
@@ -1610,7 +1701,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in Claude Code"
+            "body": "One guardrail, observable in the trace"
           },
           {
             "title": "Mode",
@@ -1618,20 +1709,59 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Run the Claude Code agent on the same local snapshot. Record successful tool calls, findings, trace, and OPEN checks.",
+        "prompt": "Add the rule 'never approve a batch with a duplicate settlement row' as a hook or contract line. Rerun. Compare before and after.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Add the rule.",
+          "Rerun.",
+          "Save before and after; point at the guardrail in the trace."
         ],
-        "expected": "Observed Claude Code run with trace and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Before and after output with the guardrail named.",
+        "check": "The guardrail is observable in the trace, not just in the prompt."
+      },
+      {
+        "title": "The example · before and after",
+        "kicker": "EXAMPLE · VALUE",
+        "subtitle": "Day 2 by hand next to Day 4 with an agent and a gate. Fill it with the squad's own numbers.",
+        "layout": "compare",
+        "cards": [],
+        "columns": [
+          {
+            "title": "Day 2 · by hand",
+            "items": [
+              "Minutes · your worksheet time",
+              "Traps caught · count them",
+              "Evidence · a worksheet only you can read",
+              "Rerun · start over"
+            ],
+            "foot": "Human does the work"
+          },
+          {
+            "title": "Day 4 · agent + gate",
+            "items": [
+              "Minutes · run time plus your review",
+              "Traps caught · the gate decides",
+              "Evidence · trace, table, hook result",
+              "Rerun · same files, same contract, same check"
+            ],
+            "foot": "Human verifies the work"
+          }
+        ],
+        "tagline": "THE BOTTLENECK MOVED TO VERIFICATION",
+        "prompt": "Fill both columns live. Ask where the minutes went today: summing rows or checking findings? Then ask what the gate caught that the agent did not.",
+        "steps": [
+          "Fill the two columns with your own numbers.",
+          "Say where your minutes went today.",
+          "Name the one thing the gate caught."
+        ],
+        "expected": "Both columns filled in with the squad's own numbers.",
+        "check": "Nobody claims speed without naming a trap the gate caught.",
+        "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+        "dark": false
       },
       {
         "title": "Human gate",
@@ -1640,7 +1770,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in Claude Code"
+            "body": "Per-batch decisions and the value slide filled in"
           },
           {
             "title": "Mode",
@@ -1648,20 +1778,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Gate the Claude Code run per batch. Then fill the before-and-after slide with the squad's own numbers.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Decide per batch.",
+          "Fill both columns.",
+          "Name the trap the gate caught."
         ],
-        "expected": "Observed Claude Code run with trace and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Per-batch decisions and the value slide filled in.",
+        "check": "Nobody claims speed without naming a trap the gate caught."
       },
       {
         "title": "Fresh-reader transfer",
@@ -1670,7 +1799,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "First agent in Claude Code"
+            "body": "The run reproduced on a second laptop"
           },
           {
             "title": "Mode",
@@ -1678,20 +1807,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Run the Claude Code agent on the same local snapshot. Record successful tool calls, findings, trace, and OPEN checks.",
+        "prompt": "A fresh reader reruns the starter from your handoff: trace, checker, prompt, OPEN items.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Hand over the handoff.",
+          "The reader reruns on their laptop.",
+          "Compare the hook result."
         ],
-        "expected": "Observed Claude Code run with trace and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Reproduced run on a second laptop.",
+        "check": "The hook result matches."
       },
       {
         "title": "Close and reflect",
@@ -1711,17 +1839,16 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Run the Claude Code agent on the same local snapshot. Record successful tool calls, findings, trace, and OPEN checks.",
+        "prompt": "Close on the example: what did the squad make on it today, what did it learn, what can it do tomorrow? Then check-in, Kahoot, wordcloud, MOB reflection.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Say what you made today on the example.",
+          "Say what you learned.",
+          "Say what you can do tomorrow."
         ],
-        "expected": "Observed Claude Code run with trace and human review.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Three sentences per person.",
+        "check": "Today's evidence is committed on the day branch."
       }
     ]
   },
@@ -1752,10 +1879,10 @@
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Read today's example step.",
+          "Work in the timebox.",
+          "Record evidence with row ids.",
+          "Ask for the human gate."
         ],
         "expected": "Receiver-ready end-to-end issue package.",
         "check": "A fresh reader can reproduce the stated result."
@@ -1767,7 +1894,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "Own team issue end to end"
+            "body": "FIN-003 end to end in ten minutes"
           },
           {
             "title": "Mode",
@@ -1775,20 +1902,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Take one fictional or sanitised team issue. Produce an issue brief, smallest change, local checks, review decision, rollback, and handoff without publishing.",
+        "prompt": "Demo: FIN-003 end to end. Intent, plan, agent run, hook, gate decision UNRESOLVED, and the three handoff drafts from workflow.md.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Show the thread on one screen.",
+          "Show the gate decision UNRESOLVED.",
+          "Show the three drafts with OPEN links."
         ],
-        "expected": "Receiver-ready end-to-end issue package.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "The squad has seen the whole loop once.",
+        "check": "Everyone can say why FIN-003 ends UNRESOLVED."
       },
       {
         "title": "What is MOB programming?",
@@ -1944,13 +2070,42 @@
         "layout": "cards"
       },
       {
+        "title": "The example · gate and handoff",
+        "kicker": "EXAMPLE · DAY 5 OF 5",
+        "subtitle": "FIN-003 end to end as a MOB, a gate decision per ticket, and three handoff drafts with OPEN links.",
+        "cards": [
+          {
+            "title": "MOB on FIN-003",
+            "body": "Driver, navigator, skeptic, scribe run the duplicate quarantine end to end"
+          },
+          {
+            "title": "Human gate",
+            "body": "Accept or reject per FIN ticket · UNRESOLVED is a valid outcome · approval without evidence is not"
+          },
+          {
+            "title": "Handoff",
+            "body": "GitLab MR, Jira task, Confluence recap as drafts from workflow.md · links OPEN · nothing published"
+          }
+        ],
+        "prompt": "Demo FIN-003 end to end in ten minutes: intent, plan, run, hook, gate decision UNRESOLVED, three drafts. Then the squad repeats the shape on its own sanitised issue. Status desk (SCN-001 to 007) is the reserve if the team wants a code change.",
+        "steps": [
+          "Run FIN-003 as a MOB; rotate roles once.",
+          "Gate every FIN ticket with evidence.",
+          "Write the three drafts; mark links OPEN."
+        ],
+        "expected": "Gate decisions, three drafts, and one own-issue brief in the same shape.",
+        "check": "The receiver can state current state and next owner without asking the sender.",
+        "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
+        "dark": false
+      },
+      {
         "title": "Your individual issue brief",
         "kicker": "INDIVIDUAL · 10:35–11:00 · 25 MIN",
         "subtitle": "Own team issue end to end",
         "cards": [
           {
             "title": "Goal",
-            "body": "Own team issue end to end"
+            "body": "One issue brief per person"
           },
           {
             "title": "Mode",
@@ -1958,20 +2113,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional or sanitised data only; nothing published"
           }
         ],
-        "prompt": "Take one fictional or sanitised team issue. Produce an issue brief, smallest change, local checks, review decision, rollback, and handoff without publishing.",
+        "prompt": "Write the issue brief for FIN-003 or for your own sanitised team issue in the same shape.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Outcome, scope, named files, checks, gate, rollback.",
+          "Fictional or sanitised data only.",
+          "Mark every unknown OPEN."
         ],
-        "expected": "Receiver-ready end-to-end issue package.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "One issue brief per person.",
+        "check": "A reviewer can reject the brief on a stated check."
       },
       {
         "title": "Review scope",
@@ -1980,7 +2134,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "Own team issue end to end"
+            "body": "A scope decision per brief"
           },
           {
             "title": "Mode",
@@ -1988,20 +2142,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional or sanitised data only; nothing published"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Team checks each brief: is the scope one batch or one issue, are the files named, is the gate a person?",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Check scope.",
+          "Check named files.",
+          "Check the gate is a person."
         ],
-        "expected": "Receiver-ready end-to-end issue package.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Every brief has a scope decision.",
+        "check": "No brief names a real system as a dependency."
       },
       {
         "title": "Break and reset",
@@ -2021,17 +2174,15 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Fifteen minutes. Leave the example on the screen so the next block starts from it.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Step away from the screen.",
+          "Back at the stated time."
         ],
-        "expected": "Receiver-ready end-to-end issue package.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Everyone is back on time.",
+        "check": "One question for the review is on the board."
       },
       {
         "title": "Run the team roles",
@@ -2040,7 +2191,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "Own team issue end to end"
+            "body": "One MOB run on FIN-003"
           },
           {
             "title": "Mode",
@@ -2048,20 +2199,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Take one fictional or sanitised team issue. Produce an issue brief, smallest change, local checks, review decision, rollback, and handoff without publishing.",
+        "prompt": "MOB on FIN-003 with driver, navigator, skeptic and scribe. The agent inspects only named files, runs the checker, returns evidence.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Assign the four roles.",
+          "Run FIN-003; rotate once.",
+          "The scribe records one challenged claim."
         ],
-        "expected": "Receiver-ready end-to-end issue package.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "One MOB run with roles rotated at least once.",
+        "check": "The skeptic recorded one challenged claim."
       },
       {
         "title": "Human gate",
@@ -2070,7 +2220,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "Own team issue end to end"
+            "body": "Gate decision per ticket with evidence"
           },
           {
             "title": "Mode",
@@ -2078,20 +2228,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Fictional CSVs only; nothing is written or published"
           }
         ],
-        "prompt": "Use the task card, record evidence, and keep unsupported claims OPEN.",
+        "prompt": "Gate FIN-003 and the own-issue briefs. UNRESOLVED is a valid outcome; approval without evidence is not.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Decide per ticket.",
+          "Attach the evidence.",
+          "Write the OPEN confirmation request."
         ],
-        "expected": "Receiver-ready end-to-end issue package.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Gate decision per ticket with evidence.",
+        "check": "B-20260909-01 stays UNRESOLVED with an OPEN confirmation request."
       },
       {
         "title": "Receiver handoff",
@@ -2100,7 +2249,7 @@
         "cards": [
           {
             "title": "Goal",
-            "body": "Own team issue end to end"
+            "body": "Three drafts a receiver can act on"
           },
           {
             "title": "Mode",
@@ -2108,20 +2257,19 @@
           },
           {
             "title": "Boundary",
-            "body": "Fictional local data; human owns acceptance"
+            "body": "Drafts only; links OPEN; nothing published"
           }
         ],
-        "prompt": "Take one fictional or sanitised team issue. Produce an issue brief, smallest change, local checks, review decision, rollback, and handoff without publishing.",
+        "prompt": "Produce the GitLab MR, Jira task and Confluence recap drafts from workflow.md for FIN-003. Links OPEN. Nothing published.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Draft the MR title and body.",
+          "Draft the Jira fields.",
+          "Draft the Confluence recap; mark links OPEN."
         ],
-        "expected": "Receiver-ready end-to-end issue package.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Three drafts a receiver can act on.",
+        "check": "The receiver states current state and next owner without asking the sender."
       },
       {
         "title": "Close and reflect",
@@ -2141,17 +2289,16 @@
             "body": "Fictional local data; human owns acceptance"
           }
         ],
-        "prompt": "Take one fictional or sanitised team issue. Produce an issue brief, smallest change, local checks, review decision, rollback, and handoff without publishing.",
+        "prompt": "Close on the example: what did the squad make on it today, what did it learn, what can it do tomorrow? Then check-in, Kahoot, wordcloud, MOB reflection.",
         "notes": "Keep the timebox visible and record OPEN for unrun checks.",
         "dark": false,
         "steps": [
-          "Read the task card",
-          "Work in the timebox",
-          "Record evidence",
-          "Ask for human gate"
+          "Say what you made today on the example.",
+          "Say what you learned.",
+          "Say what you can do tomorrow."
         ],
-        "expected": "Receiver-ready end-to-end issue package.",
-        "check": "A fresh reader can reproduce the stated result."
+        "expected": "Three sentences per person.",
+        "check": "Today's evidence is committed on the day branch."
       }
     ]
   }
