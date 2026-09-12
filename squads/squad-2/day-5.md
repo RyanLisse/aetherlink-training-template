@@ -11,8 +11,6 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 
 - **MOB programming** · What is MOB programming? [3] → MOB programming · see the roles [4] → MOB programming · how we use it [5]
 - **Human gate** · What is a human gate? [6] → Human gate · see the decision [7] → Human gate · how we use it [8]
-- **Holdout scenarios** · What are holdout scenarios? [9] → Holdout scenarios · see the seal [10] → Holdout scenarios · how we use it [11]
-- **Measure the loop** · What does 'it got better' mean? [12] → Measure the loop · see the constant [13] → Measure the loop · how we use it [14]
 <!-- concepts:end -->
 
 ## Schedule

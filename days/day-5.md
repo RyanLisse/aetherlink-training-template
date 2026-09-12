@@ -12,9 +12,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 
 - **One contract, two platforms** · recap in one slide [3]
 - **Hooks** · What is a hook? [4] → Hooks · see the guardrail [5] → Hooks · how we use it [6]
-- **Holdout scenarios** · What are holdout scenarios? [13] → Holdout scenarios · see the seal [14] → Holdout scenarios · how we use it [15]
-- **Subagents** · What are parallel sessions and subagents? [19] → Subagents · see the streams [20] → Subagents · how we use it [21]
-- **Measure the loop** · What does 'it got better' mean? [23] → Measure the loop · see the constant [24] → Measure the loop · how we use it [25]
+- **Subagents** · What are parallel sessions and subagents? [16] → Subagents · see the streams [17] → Subagents · how we use it [18]
 <!-- concepts:end -->
 
 ## Schedule
