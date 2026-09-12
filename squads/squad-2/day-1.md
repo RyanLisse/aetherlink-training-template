@@ -9,8 +9,9 @@ Study the [Claude Academy course](https://academy.claude.com/courses/ai-native-s
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **AI-native SDLC** · What is an AI-native SDLC? [3] → AI-native SDLC · see the loop [4] → AI-native SDLC · how we use it [5]
-- **intent.md** · What is intent.md? [6] → Intent.md in one picture [7] → intent.md · how we use it [8]
+- **The bottleneck moved** · Code is no longer the bottleneck [3] → The bottleneck moved · see the bars [4] → The bottleneck moved · how we use it [5]
+- **AI-native SDLC** · What is an AI-native SDLC? [6] → AI-native SDLC · see the loop [7] → AI-native SDLC · how we use it [8]
+- **intent.md** · What is intent.md? [9] → Intent.md in one picture [10] → intent.md · how we use it [11]
 <!-- concepts:end -->
 
 ## Schedule

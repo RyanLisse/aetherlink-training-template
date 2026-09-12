@@ -65,6 +65,82 @@
         "check": "A fresh reader can reproduce the stated result."
       },
       {
+        "title": "Code is no longer the bottleneck",
+        "kicker": "CONCEPT DEFINITION · THE BOTTLENECK MOVED",
+        "subtitle": "AI writes code at a speed unthinkable a year ago. The process around the code did not change at the same pace.",
+        "cards": [
+          {
+            "title": "WHAT CHANGED",
+            "body": "Build collapsed from weeks to hours. The same approval gates, reviews, handoffs and policies still stand, and they stall the gain."
+          },
+          {
+            "title": "WHY THE OLD SDLC LOOKS LIKE THIS",
+            "body": "Six stages, each owned by a role, moved along by documents, tickets and sign-offs. PRDs, estimation rituals and security reviews forced alignment when build took months."
+          },
+          {
+            "title": "THE ASSUMPTION THAT BROKE",
+            "body": "Every control assumed a human did every step. Line-by-line review made sense when a person wrote the line."
+          }
+        ],
+        "prompt": "Read the first card and pause. Ask: which of our gates, reviews or sign-offs was designed for a build phase of weeks? Collect three on the board.",
+        "notes": "Open dag 3 hiermee, vóór de SDLC-definitie. Bron: Anthropic, The AI-native SDLC playbook (Louis Claxton, 2026-08-21), inleiding.",
+        "dark": false,
+        "steps": [
+          "Name one gate in your team that assumes build takes weeks."
+        ],
+        "expected": "The room can say why the old process was shaped by slow build.",
+        "check": "Everyone can name one control in their own team that assumes a human wrote every line.",
+        "layout": "cards"
+      },
+      {
+        "title": "The bottleneck moved · see the bars",
+        "kicker": "VISUAL · THE BOTTLENECK MOVED",
+        "subtitle": "Before agents every stage runs at human speed. After agents, build is a sliver and the rest keeps its length.",
+        "cards": [],
+        "prompt": "Point at the wide Build block, then at the sliver. Ask: where does the queue build up now? Then read the three consequences and let the room pick the one they recognise.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Point at the stage where your team's queue builds up now."
+        ],
+        "expected": "Everyone can point at their own bottleneck after build.",
+        "check": "Everyone can name the stage where their team's queue builds when build gets ten times faster.",
+        "layout": "image",
+        "image": "bottleneck-bars.svg",
+        "imageAlt": "Two rows of stage bars. Before agents: build is the widest block. After agents: build is a sliver, a dashed block reads cycle time reclaimed, and plan, test and deploy keep their length. Three consequences below.",
+        "imageCaption": "Build is no longer the constraint; the human-speed steps around it are. Three things become true: the bottleneck moves, the controls stop matching reality, governance gets more expensive."
+      },
+      {
+        "title": "The bottleneck moved · how we use it",
+        "kicker": "HOW WE USE IT · THE BOTTLENECK MOVED",
+        "subtitle": "Same control objectives, different enforcement. That is the whole week in one sentence.",
+        "cards": [
+          {
+            "title": "THE SECURITY EXAMPLE",
+            "body": "Security teams are sized for human output. When agents multiply code, the review queue builds or code ships under-reviewed. A regulated organisation accepts neither, so the checks must keep pace with the agents."
+          },
+          {
+            "title": "WHAT WE CHANGE",
+            "body": "Not less control. Plan, review and deploy get artefacts and pipeline checks instead of meetings; humans sit at the gates, not inside the build loop."
+          },
+          {
+            "title": "WHAT WE DO THIS WEEK",
+            "body": "Refine a ticket, build a bounded agent, run it through a checker and a human gate. That is the new shape of the SDLC in miniature."
+          }
+        ],
+        "prompt": "Walk the security example. Then ask each participant which control in their team would not keep up at ten times the code output, and where the human should sit instead.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Name one control that would not keep up at ten times the output.",
+          "Say where the human sits instead: gate, not loop.",
+          "Say which exercise this week shows it."
+        ],
+        "expected": "Every participant has one control to move and a gate to move it to.",
+        "check": "Nobody proposes less control; everybody proposes a different place for it.",
+        "layout": "cards"
+      },
+      {
         "title": "What is an AI-native SDLC?",
         "kicker": "CONCEPT DEFINITION · AI-NATIVE SDLC",
         "subtitle": "The same control objectives, new enforcement: the line becomes a loop and AI is embedded at every point.",

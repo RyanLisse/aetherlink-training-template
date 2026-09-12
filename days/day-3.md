@@ -22,7 +22,8 @@ Explain the six stages: **Plan → Design → Build → Test → Deploy → Main
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **AI-native SDLC** · What is an AI-native SDLC? [2] → AI-native SDLC · see the loop [3] → AI-native SDLC · how we use it [4]
+- **The bottleneck moved** · Code is no longer the bottleneck [2] → The bottleneck moved · see the bars [3] → The bottleneck moved · how we use it [4]
+- **AI-native SDLC** · What is an AI-native SDLC? [5] → AI-native SDLC · see the loop [6] → AI-native SDLC · how we use it [7]
 <!-- concepts:end -->
 
 ## Schedule
