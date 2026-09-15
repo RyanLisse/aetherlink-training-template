@@ -9,7 +9,8 @@ Use the Day 2 plan and run one bounded read-only agent in n8n on the reconciliat
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **Agentic loop** · What is an agent? [2] → The agentic loop · see the loop [3] → The agentic loop · how we use it [4]
+- **Evidence rule** · recap in one slide [3]
+- **Agentic loop** · What is an agent? [4] → The agentic loop · see the loop [5] → The agentic loop · how we use it [6]
 <!-- concepts:end -->
 
 <!-- example:start -->
@@ -17,7 +18,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 
 One example runs from Day 1 to Day 5; see [worked-example.md](worked-example.md). Today's step, with the site slide number in brackets:
 
-- **The example · first run in n8n** [5] · The Day 2 plan becomes the contract. The agent reads the same files and returns one row per batch.
+- **The example · first run in n8n** [7] · The Day 2 plan becomes the contract. The agent reads the same files and returns one row per batch.
   - Expected: One observed n8n run with settings, output and a disagreement list.
   - Checkpoint: The reviewer can name the trap the agent missed, or show it caught all three.
 <!-- example:end -->

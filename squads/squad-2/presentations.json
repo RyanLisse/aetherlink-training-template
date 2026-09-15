@@ -35,6 +35,35 @@
         "check": "A fresh reader can reproduce the stated result."
       },
       {
+        "title": "Day 1 route",
+        "kicker": "FIXED SCHEDULE · 10:00–16:00",
+        "subtitle": "The same rhythm every day: the timeboxes are shared, the exercise changes.",
+        "cards": [
+          {
+            "title": "Morning",
+            "body": "10:00–10:35 theory and demo · 10:35–11:00 individual · 11:00–11:20 review · 11:20–11:35 review"
+          },
+          {
+            "title": "Midday",
+            "body": "11:35–12:00 practice · 12:00–13:00 lunch · 13:00–14:00 human gate"
+          },
+          {
+            "title": "Afternoon",
+            "body": "14:15–15:05 transfer · 15:40–16:00 close"
+          }
+        ],
+        "prompt": "Read the route aloud before anything else. Name the artifact and the human acceptance check for the first block. Keep the lunch and the breaks fixed.",
+        "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
+        "dark": false,
+        "steps": [
+          "Read the timebox.",
+          "Name its artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Participants can navigate the whole day before it starts.",
+        "check": "The opening, lunch, the breaks and the close match the day guide."
+      },
+      {
         "title": "Playbook map",
         "kicker": "THEORY + DEMO",
         "subtitle": "AI-native SDLC foundations",
@@ -70,11 +99,11 @@
         "cards": [
           {
             "title": "WHAT CHANGED",
-            "body": "Build collapsed from weeks to hours. The same approval gates, reviews, handoffs and policies still stand, and they stall the gain."
+            "body": "Build collapsed from weeks to hours. The approval gates, reviews and handoffs around it did not."
           },
           {
             "title": "WHY THE OLD SDLC LOOKS LIKE THIS",
-            "body": "Six stages, each owned by a role, moved along by documents, tickets and sign-offs. PRDs, estimation rituals and security reviews forced alignment when build took months."
+            "body": "Six stages, one role each, moved along by documents and sign-offs: alignment for a build of months."
           },
           {
             "title": "THE ASSUMPTION THAT BROKE",
@@ -82,7 +111,7 @@
           }
         ],
         "prompt": "Read the first card and pause. Ask: which of our gates, reviews or sign-offs was designed for a build phase of weeks? Collect three on the board.",
-        "notes": "Open dag 3 hiermee, vóór de SDLC-definitie. Bron: Anthropic, The AI-native SDLC playbook (Louis Claxton, 2026-08-21), inleiding.",
+        "notes": "Open dag 3 hiermee, vóór de SDLC-definitie. Bron: Anthropic, The AI-native SDLC playbook (Louis Claxton, 2026-08-21), inleiding.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• WHAT CHANGED: Build collapsed from weeks to hours. The same approval gates, reviews, handoffs and policies still stand, and they stall the gain.\n• WHY THE OLD SDLC LOOKS LIKE THIS: Six stages, each owned by a role, moved along by documents, tickets and sign-offs. PRDs, estimation rituals and security reviews forced alignment when build took months.",
         "dark": false,
         "steps": [
           "Name one gate in your team that assumes build takes weeks."
@@ -92,11 +121,57 @@
         "layout": "cards"
       },
       {
-        "title": "The bottleneck moved · see the bars",
+        "title": "Before agents · build is the widest block",
         "kicker": "VISUAL · THE BOTTLENECK MOVED",
-        "subtitle": "Before agents every stage runs at human speed. After agents, build is a sliver and the rest keeps its length.",
+        "subtitle": "Every stage runs at human speed, and build takes the most of it.",
         "cards": [],
-        "prompt": "Point at the wide Build block, then at the sliver. Ask: where does the queue build up now? Then read the three consequences and let the room pick the one they recognise.",
+        "prompt": "Point at the Build block. Ask: how long does a change wait here today?",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Point at the widest block."
+        ],
+        "expected": "The room agrees build was the long pole.",
+        "check": "Everyone can say which stage took the most calendar time before agents.",
+        "layout": "bars",
+        "bars": {
+          "stages": [
+            {
+              "name": "Plan",
+              "w": 10
+            },
+            {
+              "name": "Design",
+              "w": 10
+            },
+            {
+              "name": "Build",
+              "w": 44,
+              "accent": true
+            },
+            {
+              "name": "Test",
+              "w": 12
+            },
+            {
+              "name": "Deploy",
+              "w": 12
+            },
+            {
+              "name": "Maintain",
+              "w": 12
+            }
+          ],
+          "scale": "Before agents · every stage at human speed",
+          "caption": "Build is the long pole. The controls around it were designed for exactly that."
+        }
+      },
+      {
+        "title": "After agents · build is a sliver",
+        "kicker": "VISUAL · THE BOTTLENECK MOVED",
+        "subtitle": "Build collapses. Plan, test and deploy keep the length they always had.",
+        "cards": [],
+        "prompt": "Point at the sliver, then at the reclaimed block. Ask: where does the queue build up now?",
         "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
@@ -104,10 +179,72 @@
         ],
         "expected": "Everyone can point at their own bottleneck after build.",
         "check": "Everyone can name the stage where their team's queue builds when build gets ten times faster.",
-        "layout": "image",
-        "image": "bottleneck-bars.svg",
-        "imageAlt": "Two rows of stage bars. Before agents: build is the widest block. After agents: build is a sliver, a dashed block reads cycle time reclaimed, and plan, test and deploy keep their length. Three consequences below.",
-        "imageCaption": "Build is no longer the constraint; the human-speed steps around it are. Three things become true: the bottleneck moves, the controls stop matching reality, governance gets more expensive."
+        "layout": "bars",
+        "bars": {
+          "stages": [
+            {
+              "name": "Plan",
+              "w": 10
+            },
+            {
+              "name": "Design",
+              "w": 10
+            },
+            {
+              "name": "Build",
+              "w": 4,
+              "accent": true
+            },
+            {
+              "name": "Test",
+              "w": 12
+            },
+            {
+              "name": "Deploy",
+              "w": 12
+            },
+            {
+              "name": "Maintain",
+              "w": 12
+            },
+            {
+              "name": "cycle time reclaimed",
+              "w": 40,
+              "ghost": true
+            }
+          ],
+          "scale": "After agents · build runs at agent speed",
+          "caption": "The constraint moved to the human-speed steps around build."
+        }
+      },
+      {
+        "title": "Three things become true",
+        "kicker": "VISUAL · THE BOTTLENECK MOVED",
+        "subtitle": "Once build stops being the constraint, three things follow.",
+        "cards": [
+          {
+            "title": "THE BOTTLENECK MOVES",
+            "body": "To plan, review, test and deploy, which still run at human speed."
+          },
+          {
+            "title": "CONTROLS STOP MATCHING REALITY",
+            "body": "Line-by-line review made sense when a person wrote the line. Agents write most of the diff."
+          },
+          {
+            "title": "GOVERNANCE GETS MORE EXPENSIVE",
+            "body": "Exceptions still route through committees that meet weekly or monthly. The queue grows where the people are."
+          }
+        ],
+        "prompt": "Read the three consequences and let the room pick the one they recognise in their own team.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Pick the consequence you recognise."
+        ],
+        "expected": "Each participant names the consequence they see in their own team.",
+        "check": "Everyone can name one control in their own team that no longer matches how the work is done.",
+        "layout": "cards",
+        "tagline": "SAME CONTROL OBJECTIVES · THE CONTROLS AROUND BUILD MUST CHANGE AS MUCH AS BUILD DID"
       },
       {
         "title": "The bottleneck moved · how we use it",
@@ -116,19 +253,19 @@
         "cards": [
           {
             "title": "THE SECURITY EXAMPLE",
-            "body": "Security teams are sized for human output. When agents multiply code, the review queue builds or code ships under-reviewed. A regulated organisation accepts neither, so the checks must keep pace with the agents."
+            "body": "Security is sized for human output. Ten times the code: the queue grows or code ships under-reviewed."
           },
           {
             "title": "WHAT WE CHANGE",
-            "body": "Not less control. Plan, review and deploy get artefacts and pipeline checks instead of meetings; humans sit at the gates, not inside the build loop."
+            "body": "Not less control. Artefacts and pipeline checks instead of meetings; humans at the gates, not in the loop."
           },
           {
             "title": "WHAT WE DO THIS WEEK",
-            "body": "Refine a ticket, build a bounded agent, run it through a checker and a human gate. That is the new shape of the SDLC in miniature."
+            "body": "Refine a ticket, build a bounded agent, pass a checker and a human gate. The SDLC in miniature."
           }
         ],
         "prompt": "Walk the security example. Then ask each participant which control in their team would not keep up at ten times the code output, and where the human should sit instead.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• THE SECURITY EXAMPLE: Security teams are sized for human output. When agents multiply code, the review queue builds or code ships under-reviewed. A regulated organisation accepts neither, so the checks must keep pace with the agents.\n• WHAT WE CHANGE: Not less control. Plan, review and deploy get artefacts and pipeline checks instead of meetings; humans sit at the gates, not inside the build loop.\n• WHAT WE DO THIS WEEK: Refine a ticket, build a bounded agent, run it through a checker and a human gate. That is the new shape of the SDLC in miniature.",
         "dark": false,
         "steps": [
           "Name one control that would not keep up at ten times the output.",
@@ -154,11 +291,11 @@
           },
           {
             "title": "SAME CONTROLS, NEW ENFORCEMENT",
-            "body": "Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline, with automated handover between plays."
+            "body": "Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline."
           }
         ],
         "prompt": "Read the definition out loud, word for word. Ask: which control objective changed? (None.) Ask: what changed? (The shape, the handover, the enforcement.)",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• SAME CONTROLS, NEW ENFORCEMENT: Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline, with automated handover between plays.",
         "dark": false,
         "steps": [
           "Name the six phases.",
@@ -290,11 +427,11 @@
           },
           {
             "title": "AGREE AND COMMIT",
-            "body": "Copy approved Markdown to intent.md in GitLab. Record the Proof link, revision and reviewer. CLAUDE.md explicitly points to intent.md."
+            "body": "Approved Markdown goes to intent.md in GitLab, with Proof link, revision and reviewer. CLAUDE.md points to it."
           }
         ],
         "prompt": "Read our Proof draft. Suggest clearer scope, missing success criteria and one positive and one negative scenario. Keep unknowns OPEN. Explain each suggestion. Do not accept your own suggestions or change the approved repository files.",
-        "notes": "Run this 20-minute sequence within the existing intent exercise, not as added agenda time. Guide: https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/docs/proof-workflow.md . Use hosted Proof; create a separate document per squad. Agent writes require scoped access configured outside the repository. Use suggestions, with human approval. Sync is manual. At recap use Proof to discuss results, blockers and next owner; copy approved outcomes to progress.md. Never publish credential-bearing share links. Use synthetic training content.",
+        "notes": "Run this 20-minute sequence within the existing intent exercise, not as added agenda time. Guide: https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/docs/proof-workflow.md . Use hosted Proof; create a separate document per squad. Agent writes require scoped access configured outside the repository. Use suggestions, with human approval. Sync is manual. At recap use Proof to discuss results, blockers and next owner; copy approved outcomes to progress.md. Never publish credential-bearing share links. Use synthetic training content.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• AGREE AND COMMIT: Copy approved Markdown to intent.md in GitLab. Record the Proof link, revision and reviewer. CLAUDE.md explicitly points to intent.md.",
         "dark": false,
         "steps": [
           "5 min individually: draft what, why, success and boundaries.",
@@ -458,6 +595,35 @@
         "check": "Maintain points at FIN-006, the timing monitor."
       },
       {
+        "title": "Day 1 route · after lunch",
+        "kicker": "FIXED SCHEDULE · 13:00–16:00",
+        "subtitle": "The same route, halfway. Everything before lunch is behind us.",
+        "cards": [
+          {
+            "title": "Morning",
+            "body": "10:00–10:35 theory and demo · 10:35–11:00 individual · 11:00–11:20 review · 11:20–11:35 review"
+          },
+          {
+            "title": "Midday",
+            "body": "11:35–12:00 practice · 12:00–13:00 lunch · 13:00–14:00 human gate"
+          },
+          {
+            "title": "Afternoon",
+            "body": "14:15–15:05 transfer · 15:40–16:00 close"
+          }
+        ],
+        "prompt": "Show the same route again. Point at where the room is now, then name the artifact and the acceptance check for the afternoon blocks.",
+        "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
+        "dark": false,
+        "steps": [
+          "Point at where we are.",
+          "Name the next artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Everyone knows which blocks remain and what each one has to produce.",
+        "check": "Everyone can name the next artifact and who accepts it."
+      },
+      {
         "title": "Human gate",
         "kicker": "HUMAN GATE · 13:00–14:00",
         "subtitle": "AI-native SDLC foundations",
@@ -582,6 +748,120 @@
         "check": "A fresh reader can reproduce the stated result."
       },
       {
+        "title": "Day 2 route",
+        "kicker": "FIXED SCHEDULE · 10:00–16:00",
+        "subtitle": "The same rhythm every day: the timeboxes are shared, the exercise changes.",
+        "cards": [
+          {
+            "title": "Morning",
+            "body": "10:00–10:35 theory and demo · 10:35–11:00 individual · 11:00–11:20 review · 11:20–11:35 break"
+          },
+          {
+            "title": "Midday",
+            "body": "11:35–12:00 practice · 12:00–13:00 lunch · 13:00–14:00 human gate"
+          },
+          {
+            "title": "Afternoon",
+            "body": "14:15–15:05 transfer · 15:40–16:00 close"
+          }
+        ],
+        "prompt": "Read the route aloud before anything else. Name the artifact and the human acceptance check for the first block. Keep the lunch and the breaks fixed.",
+        "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
+        "dark": false,
+        "steps": [
+          "Read the timebox.",
+          "Name its artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Participants can navigate the whole day before it starts.",
+        "check": "The opening, lunch, the breaks and the close match the day guide."
+      },
+      {
+        "title": "The bottleneck moved · recap",
+        "kicker": "RECAP · THE BOTTLENECK MOVED",
+        "subtitle": "AI writes code at a speed unthinkable a year ago. The process around the code did not change at the same pace.",
+        "cards": [],
+        "prompt": "One-minute recap: point at the picture and ask the room to say the concept in one sentence. The definition cards are in the notes if it does not come.",
+        "notes": "Herhaling in beeld, zonder tekst op de slide. Definitiekaarten voor als het niet komt:\n• WHAT CHANGED: Build collapsed from weeks to hours. The approval gates, reviews and handoffs around it did not.\n• WHY THE OLD SDLC LOOKS LIKE THIS: Six stages, one role each, moved along by documents and sign-offs: alignment for a build of months.\n• THE ASSUMPTION THAT BROKE: Every control assumed a human did every step. Line-by-line review made sense when a person wrote the line.",
+        "dark": false,
+        "steps": [
+          "Say the definition in one sentence.",
+          "Name one control that would not keep up at ten times the output."
+        ],
+        "expected": "The room can say why the old process was shaped by slow build.",
+        "check": "Everyone can name one control in their own team that assumes a human wrote every line.",
+        "layout": "bars",
+        "bars": {
+          "stages": [
+            {
+              "name": "Plan",
+              "w": 10
+            },
+            {
+              "name": "Design",
+              "w": 10
+            },
+            {
+              "name": "Build",
+              "w": 44,
+              "accent": true
+            },
+            {
+              "name": "Test",
+              "w": 12
+            },
+            {
+              "name": "Deploy",
+              "w": 12
+            },
+            {
+              "name": "Maintain",
+              "w": 12
+            }
+          ],
+          "scale": "Before agents · every stage at human speed",
+          "caption": "Build is the long pole. The controls around it were designed for exactly that."
+        }
+      },
+      {
+        "title": "AI-native SDLC · recap",
+        "kicker": "RECAP · AI-NATIVE SDLC",
+        "subtitle": "The same control objectives, new enforcement: the line becomes a loop and AI is embedded at every point.",
+        "cards": [],
+        "prompt": "One-minute recap: point at the picture and ask the room to say the concept in one sentence. The definition cards are in the notes if it does not come.",
+        "notes": "Herhaling in beeld, zonder tekst op de slide. Definitiekaarten voor als het niet komt:\n• FROM LINE TO LOOP: Plan → Design → Build → Test → Deploy → Maintain, and what production teaches re-enters the plan.\n• AI AT EVERY POINT: AI drafts, generates, reviews first, tests and watches. Humans set intent, judge risk and own the release.\n• SAME CONTROLS, NEW ENFORCEMENT: Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline.",
+        "dark": false,
+        "steps": [
+          "Say the definition in one sentence.",
+          "Pick your ticket's phase."
+        ],
+        "expected": "The room can say \"same objectives, new enforcement\" and explain it.",
+        "check": "Everyone can name the six phases and one unchanged control objective.",
+        "layout": "image",
+        "image": "ai-native-sdlc-line-and-loop.png",
+        "imageAlt": "Traditional SDLC line on the left and AI-native loop on the right around Claude, with plan, design, build, test, deploy and maintain.",
+        "imageCaption": "Traditional: the line. AI-native: the loop, with Claude helping at every point and humans directing and governing."
+      },
+      {
+        "title": "intent.md · recap",
+        "kicker": "RECAP · INTENT.MD",
+        "subtitle": "The human starting brief: what we want, why it matters, within which boundaries.",
+        "cards": [],
+        "prompt": "One-minute recap: point at the picture and ask the room to say the concept in one sentence. The definition cards are in the notes if it does not come.",
+        "notes": "Herhaling in beeld, zonder tekst op de slide. Definitiekaarten voor als het niet komt:\n• WHAT: The desired result in plain words.\n• WHY: The reason, and who is affected.\n• BOUNDARIES: Constraints, non-goals and OPEN questions. Unknowns are written down, not guessed.",
+        "dark": false,
+        "steps": [
+          "Say the definition in one sentence.",
+          "5 min individually: draft what, why, success and boundaries."
+        ],
+        "expected": "Everyone can say what intent.md is in one sentence.",
+        "check": "Everyone names the three parts without looking at the slide.",
+        "layout": "image",
+        "image": "intent-md.svg",
+        "imageAlt": "intent.md brief with what, why and boundaries feeding design, build and review, with a revisit loop.",
+        "imageCaption": "What, why and boundaries feed design, build and review. Change the brief before you change the plan."
+      },
+      {
         "title": "Small change loop",
         "kicker": "THEORY + DEMO",
         "subtitle": "AI-native SDLC feedback loop",
@@ -663,7 +943,7 @@
         "cards": [
           {
             "title": "IN THE EVIDENCE LOG",
-            "body": "One line per result: claim · source id · command or sheet · reviewer · PASS / FAIL / OPEN."
+            "body": "One line per result: claim · source · command · reviewer · PASS / FAIL / OPEN."
           },
           {
             "title": "IN THE AGENT'S OUTPUT",
@@ -675,7 +955,7 @@
           }
         ],
         "prompt": "Open the evidence log template. Write one evidence line for the demo result together, then let everyone mark one thing OPEN on purpose.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• IN THE EVIDENCE LOG: One line per result: claim · source id · command or sheet · reviewer · PASS / FAIL / OPEN.",
         "dark": false,
         "steps": [
           "Open the evidence log template.",
@@ -831,6 +1111,35 @@
         "check": "The plan is small enough to paste into an agent prompt."
       },
       {
+        "title": "Day 2 route · after lunch",
+        "kicker": "FIXED SCHEDULE · 13:00–16:00",
+        "subtitle": "The same route, halfway. Everything before lunch is behind us.",
+        "cards": [
+          {
+            "title": "Morning",
+            "body": "10:00–10:35 theory and demo · 10:35–11:00 individual · 11:00–11:20 review · 11:20–11:35 break"
+          },
+          {
+            "title": "Midday",
+            "body": "11:35–12:00 practice · 12:00–13:00 lunch · 13:00–14:00 human gate"
+          },
+          {
+            "title": "Afternoon",
+            "body": "14:15–15:05 transfer · 15:40–16:00 close"
+          }
+        ],
+        "prompt": "Show the same route again. Point at where the room is now, then name the artifact and the acceptance check for the afternoon blocks.",
+        "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
+        "dark": false,
+        "steps": [
+          "Point at where we are.",
+          "Name the next artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Everyone knows which blocks remain and what each one has to produce.",
+        "check": "Everyone can name the next artifact and who accepts it."
+      },
+      {
         "title": "Human gate",
         "kicker": "HUMAN GATE · 13:00–14:00",
         "subtitle": "AI-native SDLC feedback loop",
@@ -926,7 +1235,7 @@
     "slides": [
       {
         "title": "n8n agent loop",
-        "kicker": "THEORY + DEMO",
+        "kicker": "DAY 3 · 10:00–16:00",
         "subtitle": "First agent in n8n",
         "cards": [
           {
@@ -952,6 +1261,54 @@
         ],
         "expected": "The squad has seen one observed run.",
         "check": "Everyone can name the four nodes and the contract."
+      },
+      {
+        "title": "Day 3 route",
+        "kicker": "FIXED SCHEDULE · 10:00–16:00",
+        "subtitle": "The same rhythm every day: the timeboxes are shared, the exercise changes.",
+        "cards": [
+          {
+            "title": "Morning",
+            "body": "10:00–10:35 theory and demo · 10:35–11:00 individual · 11:00–11:20 review · 11:20–11:35 break"
+          },
+          {
+            "title": "Midday",
+            "body": "11:35–12:00 practice · 12:00–13:00 lunch · 13:00–14:00 human gate"
+          },
+          {
+            "title": "Afternoon",
+            "body": "14:15–15:05 transfer · 15:40–16:00 close"
+          }
+        ],
+        "prompt": "Read the route aloud before anything else. Name the artifact and the human acceptance check for the first block. Keep the lunch and the breaks fixed.",
+        "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
+        "dark": false,
+        "steps": [
+          "Read the timebox.",
+          "Name its artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Participants can navigate the whole day before it starts.",
+        "check": "The opening, lunch, the breaks and the close match the day guide."
+      },
+      {
+        "title": "Evidence rule · recap",
+        "kicker": "RECAP · EVIDENCE RULE",
+        "subtitle": "A claim counts only with a source, a reproduced check and a reviewer.",
+        "cards": [],
+        "prompt": "One-minute recap: point at the picture and ask the room to say the concept in one sentence. The definition cards are in the notes if it does not come.",
+        "notes": "Herhaling in beeld, zonder tekst op de slide. Definitiekaarten voor als het niet komt:\n• CLAIM: What you say happened, in one sentence.\n• SOURCE + CHECK: A row id or file at the cutoff, and the command, calculation or sheet that reproduces it.\n• REVIEWER: Someone else reran it. Without all three it is a hypothesis and stays OPEN.",
+        "dark": false,
+        "steps": [
+          "Say the definition in one sentence.",
+          "Open the evidence log template."
+        ],
+        "expected": "The room can separate a claim from evidence.",
+        "check": "Everyone can say why \"it looked right\" is not evidence.",
+        "layout": "image",
+        "image": "evidence-rule.svg",
+        "imageAlt": "Four steps: claim, source, reproduced check, reviewer; a dashed hypothesis box below; a cutoff stamp.",
+        "imageCaption": "Claim → source → reproduced check → reviewer. Anything short of that stays a hypothesis and is marked OPEN."
       },
       {
         "title": "What is an agent?",
@@ -1024,7 +1381,7 @@
           },
           {
             "title": "WATCH THE LOOP",
-            "body": "n8n shows execution steps; Claude Code shows tool calls. A Calculator or Read call is an action. Reasoning alone is not."
+            "body": "n8n shows execution steps, Claude Code shows tool calls. A Read call is an action; reasoning is not."
           },
           {
             "title": "INTERRUPT ON PURPOSE",
@@ -1032,7 +1389,7 @@
           }
         ],
         "prompt": "Open the demo trace. Let everyone point at one real tool call, name the boundary in the prompt, and say where they would interrupt.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• WATCH THE LOOP: n8n shows execution steps; Claude Code shows tool calls. A Calculator or Read call is an action. Reasoning alone is not.",
         "dark": false,
         "steps": [
           "Point at one real tool call in the demo trace.",
@@ -1188,6 +1545,35 @@
         "check": "Before and after output are both saved."
       },
       {
+        "title": "Day 3 route · after lunch",
+        "kicker": "FIXED SCHEDULE · 13:00–16:00",
+        "subtitle": "The same route, halfway. Everything before lunch is behind us.",
+        "cards": [
+          {
+            "title": "Morning",
+            "body": "10:00–10:35 theory and demo · 10:35–11:00 individual · 11:00–11:20 review · 11:20–11:35 break"
+          },
+          {
+            "title": "Midday",
+            "body": "11:35–12:00 practice · 12:00–13:00 lunch · 13:00–14:00 human gate"
+          },
+          {
+            "title": "Afternoon",
+            "body": "14:15–15:05 transfer · 15:40–16:00 close"
+          }
+        ],
+        "prompt": "Show the same route again. Point at where the room is now, then name the artifact and the acceptance check for the afternoon blocks.",
+        "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
+        "dark": false,
+        "steps": [
+          "Point at where we are.",
+          "Name the next artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Everyone knows which blocks remain and what each one has to produce.",
+        "check": "Everyone can name the next artifact and who accepts it."
+      },
+      {
         "title": "Human gate",
         "kicker": "HUMAN GATE · 13:00–14:00",
         "subtitle": "First agent in n8n",
@@ -1312,6 +1698,54 @@
         "check": "A fresh reader can reproduce the stated result."
       },
       {
+        "title": "Day 4 route",
+        "kicker": "FIXED SCHEDULE · 10:00–16:00",
+        "subtitle": "The same rhythm every day: the timeboxes are shared, the exercise changes.",
+        "cards": [
+          {
+            "title": "Morning",
+            "body": "10:00–10:35 theory and demo · 10:35–11:00 individual · 11:00–11:20 review · 11:20–11:35 break"
+          },
+          {
+            "title": "Midday",
+            "body": "11:35–12:00 practice · 12:00–13:00 lunch · 13:00–14:00 human gate"
+          },
+          {
+            "title": "Afternoon",
+            "body": "14:15–15:05 transfer · 15:40–16:00 close"
+          }
+        ],
+        "prompt": "Read the route aloud before anything else. Name the artifact and the human acceptance check for the first block. Keep the lunch and the breaks fixed.",
+        "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
+        "dark": false,
+        "steps": [
+          "Read the timebox.",
+          "Name its artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Participants can navigate the whole day before it starts.",
+        "check": "The opening, lunch, the breaks and the close match the day guide."
+      },
+      {
+        "title": "Agentic loop · recap",
+        "kicker": "RECAP · AGENTIC LOOP",
+        "subtitle": "\"Agents run tools in a loop to achieve a goal.\" A model in a loop with a goal, tools, feedback, authority and memory.",
+        "cards": [],
+        "prompt": "One-minute recap: point at the picture and ask the room to say the concept in one sentence. The definition cards are in the notes if it does not come.",
+        "notes": "Herhaling in beeld, zonder tekst op de slide. Definitiekaarten voor als het niet komt:\n",
+        "dark": false,
+        "steps": [
+          "Say the definition in one sentence.",
+          "Point at one real tool call in the demo trace."
+        ],
+        "expected": "The room can say model, chat, agent, subagent in one sentence each.",
+        "check": "Nobody calls the model itself the agent.",
+        "layout": "image",
+        "image": "agentic-loop.svg",
+        "imageAlt": "Your prompt enters a loop of gather, act and verify that repeats until done; a human box can interrupt, steer or add context at any point.",
+        "imageCaption": "Models reason, tools act, the platform holds the loop. The loop ends at a human gate, never at \"done\" by itself."
+      },
+      {
         "title": "Claude Code platform",
         "kicker": "THEORY + DEMO",
         "subtitle": "First agent in Claude Code",
@@ -1434,19 +1868,19 @@
         "cards": [
           {
             "title": "SKILL VS HOOK",
-            "body": "The ticket-refinement skill you built on days 1–2 advises. A hook runs on every matching action and holds without exception."
+            "body": "A skill advises. A hook runs on every matching action and holds without exception."
           },
           {
             "title": "WHERE IT FIRES",
-            "body": "Most of Claude's actions are file edits and shell commands during the build, so build-phase hooks fire most often. Keep them fast and scoped to the file that changed."
+            "body": "Mostly during build: file edits and shell commands. Keep hooks fast and scoped to the changed file."
           },
           {
             "title": "WHAT IT DOES",
-            "body": "Block edits to protected paths, run the formatter and linter after an edit, keep credentials out of the diff."
+            "body": "Blocks edits to protected paths, runs formatter and linter after an edit, keeps credentials out of the diff."
           }
         ],
         "prompt": "Read the definition. Ask: which rule in our ticket-refinement skill must hold without exception? That rule is a hook, the rest stays advisory.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• SKILL VS HOOK: The ticket-refinement skill you built on days 1–2 advises. A hook runs on every matching action and holds without exception.\n• WHERE IT FIRES: Most of Claude's actions are file edits and shell commands during the build, so build-phase hooks fire most often. Keep them fast and scoped to the file that changed.\n• WHAT IT DOES: Block edits to protected paths, run the formatter and linter after an edit, keep credentials out of the diff.",
         "dark": false,
         "steps": [
           "Name one rule from your skill that must never be skipped."
@@ -1484,15 +1918,15 @@
           },
           {
             "title": "IN YOUR REPO",
-            "body": "Every invariant a human enforces in review is a smell: promote it to a lint, a CI failure or a hook. Formatter after each edit, protected paths, a secret scan on the diff."
+            "body": "What a human enforces in review is a smell: make it a lint, CI failure or hook."
           },
           {
             "title": "NOT A HOOK",
-            "body": "The full test suite runs at the commit or PR. A human approval prompt belongs at the deploy gate."
+            "body": "The full test suite runs at commit or PR. Human approval belongs at the deploy gate."
           }
         ],
         "prompt": "Let everyone pick one rule from the skill they built, decide hook or skill, and name the stage where it runs. Collect the hooks on the board.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• IN YOUR REPO: Every invariant a human enforces in review is a smell: promote it to a lint, a CI failure or a hook. Formatter after each edit, protected paths, a secret scan on the diff.\n• NOT A HOOK: The full test suite runs at the commit or PR. A human approval prompt belongs at the deploy gate.",
         "dark": false,
         "steps": [
           "Pick one rule from your skill.",
@@ -1510,11 +1944,11 @@
         "cards": [
           {
             "title": "PARALLEL SESSION",
-            "body": "Another full Claude Code instance on a separate task in its own git worktree. Sessions know nothing about each other; the engineer is the only thing they share."
+            "body": "Another full Claude Code instance on its own task in its own worktree. They share only the engineer."
           },
           {
             "title": "SUBAGENT",
-            "body": "A scoped helper inside one session with its own context window and tool limits. Suits jobs that recur across tasks, such as verifying the app runs."
+            "body": "A scoped helper inside one session, with its own context and tool limits, for jobs that recur."
           },
           {
             "title": "THE ENGINEER'S JOB",
@@ -1522,7 +1956,7 @@
           }
         ],
         "prompt": "Say one sentence per card. Ask: where does the ticket-coach subagent from the lab fit, and what would a second session work on?",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• PARALLEL SESSION: Another full Claude Code instance on a separate task in its own git worktree. Sessions know nothing about each other; the engineer is the only thing they share.\n• SUBAGENT: A scoped helper inside one session with its own context window and tool limits. Suits jobs that recur across tasks, such as verifying the app runs.",
         "dark": false,
         "steps": [
           "Say session versus subagent in one sentence each."
@@ -1556,19 +1990,19 @@
         "cards": [
           {
             "title": "SPLIT THE WORK",
-            "body": "Tasks that touch different files get their own worktree: claude --worktree feature-auth. Tasks that share files run in one session, one after another. Start with two or three."
+            "body": "Different files: own worktree (claude --worktree feature-auth). Shared files: one session, in turn. Start with two."
           },
           {
             "title": "TURN REPEATS INTO SUBAGENTS",
-            "body": "A markdown file in .claude/agents/ with a name, when to use it, and the tools it may touch: verifier, researcher, simplifier. Check them into git."
+            "body": "A markdown file in .claude/agents/: name, when to use it, allowed tools. Verifier, researcher, simplifier. In git."
           },
           {
             "title": "GOVERN FROM THE REPO",
-            "body": "CLAUDE.md, hooks and permission settings apply to every session; output is logged and attributed. Measure sessions per engineer while review quality holds, and merged changes against rework."
+            "body": "CLAUDE.md, hooks and permissions apply to every session; output is logged and attributed. Measure while review quality holds."
           }
         ],
         "prompt": "Open .claude/agents/ticket-coach.md in the lab: name, description, tools. Show the verifier example: 'Start the app, exercise the changed behaviour and the two nearest flows, report what you ran and saw, do not fix anything.' Ask each participant which repeated job they would make a subagent and which task they would run in a second worktree.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• SPLIT THE WORK: Tasks that touch different files get their own worktree: claude --worktree feature-auth. Tasks that share files run in one session, one after another. Start with two or three.\n• TURN REPEATS INTO SUBAGENTS: A markdown file in .claude/agents/ with a name, when to use it, and the tools it may touch: verifier, researcher, simplifier. Check them into git.\n• GOVERN FROM THE REPO: CLAUDE.md, hooks and permission settings apply to every session; output is logged and attributed. Measure sessions per engineer while review quality holds, and merged changes against rework.",
         "dark": false,
         "steps": [
           "Open the ticket-coach subagent definition.",
@@ -1765,6 +2199,35 @@
         "dark": false
       },
       {
+        "title": "Day 4 route · after lunch",
+        "kicker": "FIXED SCHEDULE · 13:00–16:00",
+        "subtitle": "The same route, halfway. Everything before lunch is behind us.",
+        "cards": [
+          {
+            "title": "Morning",
+            "body": "10:00–10:35 theory and demo · 10:35–11:00 individual · 11:00–11:20 review · 11:20–11:35 break"
+          },
+          {
+            "title": "Midday",
+            "body": "11:35–12:00 practice · 12:00–13:00 lunch · 13:00–14:00 human gate"
+          },
+          {
+            "title": "Afternoon",
+            "body": "14:15–15:05 transfer · 15:40–16:00 close"
+          }
+        ],
+        "prompt": "Show the same route again. Point at where the room is now, then name the artifact and the acceptance check for the afternoon blocks.",
+        "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
+        "dark": false,
+        "steps": [
+          "Point at where we are.",
+          "Name the next artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Everyone knows which blocks remain and what each one has to produce.",
+        "check": "Everyone can name the next artifact and who accepts it."
+      },
+      {
         "title": "Human gate",
         "kicker": "HUMAN GATE · 13:00–14:00",
         "subtitle": "First agent in Claude Code",
@@ -1887,6 +2350,92 @@
         ],
         "expected": "Receiver-ready end-to-end issue package.",
         "check": "A fresh reader can reproduce the stated result."
+      },
+      {
+        "title": "Day 5 route",
+        "kicker": "FIXED SCHEDULE · 10:00–16:00",
+        "subtitle": "The same rhythm every day: the timeboxes are shared, the exercise changes.",
+        "cards": [
+          {
+            "title": "Morning",
+            "body": "10:00–10:35 theory and demo · 10:35–11:00 individual · 11:00–11:20 review · 11:20–11:35 break"
+          },
+          {
+            "title": "Midday",
+            "body": "11:35–12:00 practice · 12:00–13:00 lunch · 13:00–14:00 human gate"
+          },
+          {
+            "title": "Afternoon",
+            "body": "14:15–15:05 transfer · 15:40–16:00 close"
+          }
+        ],
+        "prompt": "Read the route aloud before anything else. Name the artifact and the human acceptance check for the first block. Keep the lunch and the breaks fixed.",
+        "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
+        "dark": false,
+        "steps": [
+          "Read the timebox.",
+          "Name its artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Participants can navigate the whole day before it starts.",
+        "check": "The opening, lunch, the breaks and the close match the day guide."
+      },
+      {
+        "title": "One contract, two platforms · recap",
+        "kicker": "RECAP · ONE CONTRACT, TWO PLATFORMS",
+        "subtitle": "Same functional contract and input on n8n and Claude Code; only the platform and its adapter differ.",
+        "cards": [],
+        "prompt": "One-minute recap: point at the picture and ask the room to say the concept in one sentence. The definition cards are in the notes if it does not come.",
+        "notes": "Herhaling in beeld, zonder tekst op de slide. Definitiekaarten voor als het niet komt:\n• THE CONTRACT: shared-prompt.md and the ticket input: what the agent must produce and must not do.\n• THE ADAPTERS: n8n: system message, model, Calculator tool. Claude Code: subagent body, read-only tools, typed invocation. Recorded per platform.\n• THE CHECKER: Both outputs go through the same checker. Differences are observations; one pair of runs proves no cause.",
+        "dark": false,
+        "steps": [
+          "Say the definition in one sentence.",
+          "Copy the adapter settings table."
+        ],
+        "expected": "Everyone knows where the instruction lives on each platform.",
+        "check": "Everyone can name the contract and one adapter setting per platform.",
+        "layout": "image",
+        "image": "one-contract-two-platforms.svg",
+        "imageAlt": "One contract box feeding n8n and Claude Code boxes, both feeding the same checker.",
+        "imageCaption": "One contract feeds two platforms; both outputs go through the same checker. One pair of runs proves no cause."
+      },
+      {
+        "title": "Hooks · recap",
+        "kicker": "RECAP · HOOKS",
+        "subtitle": "A skill is an advisory control; a hook is the deterministic layer behind it.",
+        "cards": [],
+        "prompt": "One-minute recap: point at the picture and ask the room to say the concept in one sentence. The definition cards are in the notes if it does not come.",
+        "notes": "Herhaling in beeld, zonder tekst op de slide. Definitiekaarten voor als het niet komt:\n• SKILL VS HOOK: A skill advises. A hook runs on every matching action and holds without exception.\n• WHERE IT FIRES: Mostly during build: file edits and shell commands. Keep hooks fast and scoped to the changed file.\n• WHAT IT DOES: Blocks edits to protected paths, runs formatter and linter after an edit, keeps credentials out of the diff.",
+        "dark": false,
+        "steps": [
+          "Say the definition in one sentence.",
+          "Pick one rule from your skill."
+        ],
+        "expected": "The room can separate advisory from deterministic.",
+        "check": "Everyone can say why that rule is a hook and not a skill.",
+        "layout": "image",
+        "image": "hooks-guardrails.svg",
+        "imageAlt": "A skill feeds a hook box; each action leaves as block, fix or allow. Below, build, commit/PR and deploy show where hooks, the test suite and human approval live.",
+        "imageCaption": "Hooks live in the build. The full test suite belongs at the commit or PR. Human approval belongs at the deploy gate, because a prompt during the build stalls every parallel session."
+      },
+      {
+        "title": "Subagents · recap",
+        "kicker": "RECAP · SUBAGENTS",
+        "subtitle": "One engineer drives several streams of work at once.",
+        "cards": [],
+        "prompt": "One-minute recap: point at the picture and ask the room to say the concept in one sentence. The definition cards are in the notes if it does not come.",
+        "notes": "Herhaling in beeld, zonder tekst op de slide. Definitiekaarten voor als het niet komt:\n• PARALLEL SESSION: Another full Claude Code instance on its own task in its own worktree. They share only the engineer.\n• SUBAGENT: A scoped helper inside one session, with its own context and tool limits, for jobs that recur.\n• THE ENGINEER'S JOB: Steering and reviewing all of them. The ceiling is how many streams one person can review properly.",
+        "dark": false,
+        "steps": [
+          "Say the definition in one sentence.",
+          "Open the ticket-coach subagent definition."
+        ],
+        "expected": "The room can tell a session from a subagent.",
+        "check": "Everyone can say the difference between a parallel session and a subagent in one sentence.",
+        "layout": "image",
+        "image": "parallel-sessions-subagents.svg",
+        "imageAlt": "An engineer steers three sessions, each in its own worktree; one session delegates to verifier, researcher and simplifier subagents; a governance bar names CLAUDE.md, hooks and permissions.",
+        "imageCaption": "Traditional: one engineer, one task, waiting on builds. AI-native: several sessions in flight, repeated jobs as subagents, the engineer orchestrating."
       },
       {
         "title": "End-to-end demo",
@@ -2213,6 +2762,35 @@
         ],
         "expected": "One MOB run with roles rotated at least once.",
         "check": "The skeptic recorded one challenged claim."
+      },
+      {
+        "title": "Day 5 route · after lunch",
+        "kicker": "FIXED SCHEDULE · 13:00–16:00",
+        "subtitle": "The same route, halfway. Everything before lunch is behind us.",
+        "cards": [
+          {
+            "title": "Morning",
+            "body": "10:00–10:35 theory and demo · 10:35–11:00 individual · 11:00–11:20 review · 11:20–11:35 break"
+          },
+          {
+            "title": "Midday",
+            "body": "11:35–12:00 practice · 12:00–13:00 lunch · 13:00–14:00 human gate"
+          },
+          {
+            "title": "Afternoon",
+            "body": "14:15–15:05 transfer · 15:40–16:00 close"
+          }
+        ],
+        "prompt": "Show the same route again. Point at where the room is now, then name the artifact and the acceptance check for the afternoon blocks.",
+        "notes": "Houd dit schema identiek op alle vijf dagen; verplaats geen pauzes.",
+        "dark": false,
+        "steps": [
+          "Point at where we are.",
+          "Name the next artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Everyone knows which blocks remain and what each one has to produce.",
+        "check": "Everyone can name the next artifact and who accepts it."
       },
       {
         "title": "Human gate",

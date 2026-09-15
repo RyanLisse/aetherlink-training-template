@@ -22,9 +22,20 @@ Explain the six stages: **Plan → Design → Build → Test → Deploy → Main
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **The bottleneck moved** · Code is no longer the bottleneck [2] → The bottleneck moved · see the bars [3] → The bottleneck moved · how we use it [4]
-- **AI-native SDLC** · What is an AI-native SDLC? [5] → AI-native SDLC · see the loop [6] → AI-native SDLC · how we use it [7]
+- **Evidence rule** · recap in one slide [3]
+- **The bottleneck moved** · Code is no longer the bottleneck [4] → Before agents · build is the widest block [5] → The bottleneck moved · how we use it [8]
+- **AI-native SDLC** · What is an AI-native SDLC? [10] → AI-native SDLC · see the loop [9] → AI-native SDLC · how we use it [11]
 <!-- concepts:end -->
+
+<!-- example:start -->
+## Worked example · daily payment reconciliation
+
+One example runs from Day 1 to Day 5; see [worked-example.md](../squads/squad-2/worked-example.md). Today's step, with the site slide number in brackets:
+
+- **The example · plan and hand baseline** [12] · The smallest plan for the batch review, then the six batches by hand. Today's minutes are tomorrow's baseline.
+  - Expected: A plan card and a hand worksheet with a time per person.
+  - Checkpoint: The worksheet leaves B-20260909-01 UNRESOLVED and calls TX-NS-1008 timing.
+<!-- example:end -->
 
 ## Schedule
 | Time | Minutes | Activity |
