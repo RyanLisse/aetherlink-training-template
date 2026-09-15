@@ -10,10 +10,25 @@ Each participant has a read-only Claude Code agent, a checked output for `TICKET
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **One contract, two platforms** · recap in one slide [3]
-- **Hooks** · What is a hook? [4] → Hooks · see the guardrail [5] → Hooks · how we use it [6]
-- **Subagents** · What are parallel sessions and subagents? [16] → Subagents · see the streams [17] → Subagents · how we use it [18]
+- **Agentic loop** · recap in one slide [3]
+- **Human gate** · recap in one slide [4]
+- **One contract, two platforms** · recap in one slide [5]
+- **Hooks** · What is a hook? [6] → Hooks · see the guardrail [7] → Hooks · how we use it [8]
+- **Subagents** · What are parallel sessions and subagents? [21] → Subagents · see the streams [22] → Subagents · how we use it [23]
 <!-- concepts:end -->
+
+<!-- example:start -->
+## Worked example · daily payment reconciliation
+
+One example runs from Day 1 to Day 5; see [worked-example.md](../squads/squad-2/worked-example.md). Today's step, with the site slide number in brackets:
+
+- **The example · same contract in Claude Code** [9] · Same files, same contract, different platform. Today the check runs before the claim.
+  - Expected: One Claude Code run with trace, table and hook result, plus the per-batch rerun.
+  - Checkpoint: Same six classifications as n8n, or the difference is explained.
+- **The example · before and after** [18] · Day 2 by hand next to Day 4 with an agent and a gate. Fill it with the squad's own numbers.
+  - Expected: Both columns filled in with the squad's own numbers.
+  - Checkpoint: Nobody claims speed without naming a trap the gate caught.
+<!-- example:end -->
 
 ## Schedule
 | Time | Minutes | Activity |

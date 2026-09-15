@@ -39,7 +39,9 @@ only after the visible ticket result exists.
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
+- **intent.md** · recap in one slide [3]
 - **Evidence rule** · recap in one slide [4]
+- **MOB programming** · recap in one slide [5]
 <!-- concepts:end -->
 
 ## Schedule — 10:00–16:00 (360 minutes)

@@ -13,10 +13,22 @@ Theory (agent loop and n8n platform) → facilitator demo → individual build �
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **Agentic loop** · What is an agent? [3] → The agentic loop · see the loop [4] → The agentic loop · how we use it [5]
-- **One contract, two platforms** · What is "one contract, two platforms"? [6] → One contract · see the split [7] → One contract · how we use it [8]
-- **Human gate** · What is a human gate? [14] → Human gate · see the decision [15] → Human gate · how we use it [16]
+- **The bottleneck moved** · recap in one slide [3]
+- **AI-native SDLC** · recap in one slide [4]
+- **Agentic loop** · What is an agent? [5] → The agentic loop · see the loop [6] → The agentic loop · how we use it [7]
+- **One contract, two platforms** · What is "one contract, two platforms"? [9] → One contract · see the split [10] → One contract · how we use it [11]
+- **Human gate** · What is a human gate? [18] → Human gate · see the decision [19] → Human gate · how we use it [20]
 <!-- concepts:end -->
+
+<!-- example:start -->
+## Worked example · daily payment reconciliation
+
+One example runs from Day 1 to Day 5; see [worked-example.md](../squads/squad-2/worked-example.md). Today's step, with the site slide number in brackets:
+
+- **The example · first run in n8n** [8] · The Day 2 plan becomes the contract. The agent reads the same files and returns one row per batch.
+  - Expected: One observed n8n run with settings, output and a disagreement list.
+  - Checkpoint: The reviewer can name the trap the agent missed, or show it caught all three.
+<!-- example:end -->
 
 ## Schedule
 | Time | Minutes | Activity |

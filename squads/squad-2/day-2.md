@@ -9,7 +9,10 @@ Continue the [Academy course](https://academy.claude.com/courses/ai-native-sdlc-
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **Evidence rule** · What is the evidence rule? [3] → Evidence rule · see the ladder [4] → Evidence rule · how we use it [5]
+- **The bottleneck moved** · recap in one slide [3]
+- **AI-native SDLC** · recap in one slide [4]
+- **intent.md** · recap in one slide [5]
+- **Evidence rule** · What is the evidence rule? [7] → Evidence rule · see the ladder [8] → Evidence rule · how we use it [9]
 <!-- concepts:end -->
 
 <!-- example:start -->
@@ -17,7 +20,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 
 One example runs from Day 1 to Day 5; see [worked-example.md](worked-example.md). Today's step, with the site slide number in brackets:
 
-- **The example · plan and hand baseline** [6] · The smallest plan for the batch review, then the six batches by hand. Today's minutes are tomorrow's baseline.
+- **The example · plan and hand baseline** [10] · The smallest plan for the batch review, then the six batches by hand. Today's minutes are tomorrow's baseline.
   - Expected: A plan card and a hand worksheet with a time per person.
   - Checkpoint: The worksheet leaves B-20260909-01 UNRESOLVED and calls TX-NS-1008 timing.
 <!-- example:end -->

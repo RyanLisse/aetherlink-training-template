@@ -7,14 +7,18 @@ their anchor. Run from the repository root or from presentations/.
   python3 presentations/apply_concepts.py            # apply
   python3 presentations/apply_concepts.py --check    # exit 1 if decks would change
 """
+import copy
 import json
+import os
 import re
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REG = json.loads((HERE / "concepts.json").read_text(encoding="utf-8"))
-SITE = HERE.parent.parent.parent / "work" / "aether-site" / "dist"
+# The site checkout normally sits next to this repository; AETHER_SITE points
+# anywhere else (a CI job, a sandbox) without editing this file.
+SITE = Path(os.environ.get("AETHER_SITE") or HERE.parent.parent.parent / "work" / "aether-site" / "dist")
 REGISTRY_VAR = {"day-decks.json": "DAYS", "../squads/squad-2/presentations.json": "SQUAD2"}
 SITE_FILE = {"day-decks.json": "days.js", "../squads/squad-2/presentations.json": "squad2.js"}
 KICKER = {"definition": "CONCEPT DEFINITION · {name}", "visual": "VISUAL · {name}", "usage": "HOW WE USE IT · {name}"}
@@ -37,7 +41,9 @@ def slide(concept, kind, spec_override=None):
         "check": s["check"],
         "layout": layout,
     }
-    for k in ("image", "imageAlt", "imageCaption", "columns", "items", "tagline"):
+    # Every field the site's templates read. A key missing here is dropped
+    # silently on regeneration, so the list is the contract with templates.js.
+    for k in ("image", "imageAlt", "imageCaption", "columns", "items", "tagline", "bars", "lanes", "detail", "callout"):
         if k in s:
             out[k] = s[k]
     return out
@@ -46,37 +52,53 @@ def slide(concept, kind, spec_override=None):
 def recap_slide(concept):
     spec = REG["concepts"][concept]
     d, v, u = spec["definition"], spec["visual"], spec["usage"]
-    return {
+    out = {
         "title": f"{spec['name']} · recap",
         "kicker": f"RECAP · {spec['name'].upper()}",
         "subtitle": d["subtitle"],
-        "cards": d.get("cards", []),
-        "prompt": "One-minute recap: read the definition cards, point at the picture, then ask the room to say it in one sentence before the exercise.",
-        "notes": REG["notes_default"],
+        "cards": [],
+        "prompt": "One-minute recap: point at the picture and ask the room to say the concept in one sentence. The definition cards are in the notes if it does not come.",
+        "notes": "Herhaling in beeld, zonder tekst op de slide. Definitiekaarten voor als het niet komt:\n" + "\n".join(f"• {c['title']}: {c['body']}" for c in d.get("cards", [])),
         "dark": False,
         "steps": ["Say the definition in one sentence."] + u["steps"][:1],
         "expected": d["expected"],
         "check": d["check"],
-        "layout": "image",
-        "keepCards": True,
-        "image": v["image"],
-        "imageAlt": v["imageAlt"],
-        "imageCaption": v["imageCaption"],
     }
+    # The recap shows the concept's own picture again: a diagram, or the bar
+    # chart when that is what the visual slide draws.
+    if "image" in v:
+        out.update(layout="image", image=v["image"], imageAlt=v["imageAlt"], imageCaption=v["imageCaption"])
+    else:
+        out["layout"] = v.get("layout", "cards")
+        for k in ("bars", "lanes", "items", "columns", "detail"):
+            if k in v:
+                out[k] = v[k]
+    return out
 
 
 def concept_titles():
     titles = {spec[k]["title"] for spec in REG["concepts"].values() for k in ("definition", "visual", "usage")}
     titles |= {v["title"] for spec in REG["concepts"].values() for v in spec.get("extra_visuals", [])}
     titles |= {f"{spec['name']} · recap" for spec in REG["concepts"].values()}
-    titles |= {d["slide"]["title"] for ex in REG.get("examples", {}).values() for d in ex["days"].values()}
+    titles |= {example_slide(rel, d)["title"] for rel, ex in REG.get("examples", {}).items() for d in ex["days"].values()}
     return titles
+
+
+def example_slide(rel, d):
+    """One example slide. `from` reuses the slide of another register entry so the
+    worked example is written once and both squads tell the same story."""
+    if "from" in d:
+        src_rel, src_key = d["from"]
+        base = copy.deepcopy(REG["examples"][src_rel]["days"][src_key]["slide"])
+        base.update(d.get("set", {}))
+        return base
+    return d["slide"]
 
 
 def example_slides(rel, day):
     """Worked-example slides for one deck day, keyed 'day4' or 'day4-value'."""
     days = REG.get("examples", {}).get(rel, {}).get("days", {})
-    return [(d["after"], d["slide"]) for key, d in days.items() if key.split("-")[0] == day]
+    return [(d["after"], example_slide(rel, d)) for key, d in days.items() if key.split("-")[0] == day]
 
 
 def apply(rel, deck_path, placements, removals, patches):
@@ -89,16 +111,21 @@ def apply(rel, deck_path, placements, removals, patches):
             if patch["day"] in ("*", day):
                 for s in deck["slides"]:
                     if s["title"] == patch.get("title") or s["kicker"] == patch.get("kicker"):
-                        s.update(patch["set"])
+                        s.update(patch.get("set", {}))
+                        for k in patch.get("unset", []):
+                            s.pop(k, None)
         for p in placements.get(day, []):
             idx = next(i for i, s in enumerate(deck["slides"]) if s["title"] == p["after"])
             spec = REG["concepts"][p["concept"]]
             if p.get("mode") == "recap":
                 triplet = [recap_slide(p["concept"])]
             else:
-                triplet = [slide(p["concept"], "definition"), slide(p["concept"], "visual")]
-                triplet += [slide(p["concept"], "visual", v) for v in spec.get("extra_visuals", [])]
-                triplet.append(slide(p["concept"], "usage"))
+                parts = {
+                    "definition": [slide(p["concept"], "definition")],
+                    "visual": [slide(p["concept"], "visual")] + [slide(p["concept"], "visual", v) for v in spec.get("extra_visuals", [])],
+                    "usage": [slide(p["concept"], "usage")],
+                }
+                triplet = [s for kind in p.get("order", ("definition", "visual", "usage")) for s in parts[kind]]
             deck["slides"][idx + 1:idx + 1] = triplet
         for after, s in example_slides(rel, day):
             idx = next(i for i, x in enumerate(deck["slides"]) if x["title"] == after)
@@ -116,7 +143,8 @@ def example_section(rel, deck, day):
         return ""
     name = REG["examples"][rel]["name"]
     titles = [s["title"] for s in deck["slides"]]
-    lines = [EX_START, f"## Worked example · {name}", "", "One example runs from Day 1 to Day 5; see [worked-example.md](worked-example.md). Today's step, with the site slide number in brackets:", ""]
+    doc = REG["examples"][rel].get("doc", "worked-example.md")
+    lines = [EX_START, f"## Worked example · {name}", "", f"One example runs from Day 1 to Day 5; see [worked-example.md]({doc}). Today's step, with the site slide number in brackets:", ""]
     for _, s in slides:
         lines.append(f"- **{s['title']}** [{titles.index(s['title']) + 1}] · {s['subtitle']}")
         lines.append(f"  - Expected: {s['expected']}")

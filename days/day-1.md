@@ -55,10 +55,20 @@ the outcome and boundaries, while a task is one bounded piece of work.
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **intent.md** · What is intent.md? [2] → Intent.md in one picture [3] → intent.md · how we use it [4]
-- **Evidence rule** · What is the evidence rule? [7] → Evidence rule · see the ladder [8] → Evidence rule · how we use it [9]
-- **MOB programming** · What is MOB programming? [10] → MOB programming · see the roles [11] → MOB programming · how we use it [12]
+- **intent.md** · What is intent.md? [3] → Intent.md in one picture [4] → intent.md · how we use it [5]
+- **Evidence rule** · What is the evidence rule? [8] → Evidence rule · see the ladder [9] → Evidence rule · how we use it [10]
+- **MOB programming** · What is MOB programming? [11] → MOB programming · see the roles [12] → MOB programming · how we use it [13]
 <!-- concepts:end -->
+
+<!-- example:start -->
+## Worked example · daily payment reconciliation
+
+One example runs from Day 1 to Day 5; see [worked-example.md](../squads/squad-2/worked-example.md). Today's step, with the site slide number in brackets:
+
+- **The example · daily payment reconciliation** [7] · One fictional merchant, three CSV files, five documented cases. We carry it from intent to handoff.
+  - Expected: Everyone can name the files, the cutoff and one trap.
+  - Checkpoint: Nobody thinks the data is real.
+<!-- example:end -->
 
 ## Schedule — 10:00–16:00 (360 minutes)
 

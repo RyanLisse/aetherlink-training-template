@@ -9,8 +9,11 @@ Bring one small issue from the team's real work pattern into the local training 
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **MOB programming** · What is MOB programming? [3] → MOB programming · see the roles [4] → MOB programming · how we use it [5]
-- **Human gate** · What is a human gate? [6] → Human gate · see the decision [7] → Human gate · how we use it [8]
+- **One contract, two platforms** · recap in one slide [3]
+- **Hooks** · recap in one slide [4]
+- **Subagents** · recap in one slide [5]
+- **MOB programming** · What is MOB programming? [7] → MOB programming · see the roles [8] → MOB programming · how we use it [9]
+- **Human gate** · What is a human gate? [10] → Human gate · see the decision [11] → Human gate · how we use it [12]
 <!-- concepts:end -->
 
 <!-- example:start -->
@@ -18,7 +21,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 
 One example runs from Day 1 to Day 5; see [worked-example.md](worked-example.md). Today's step, with the site slide number in brackets:
 
-- **The example · gate and handoff** [9] · FIN-003 end to end as a MOB, a gate decision per ticket, and three handoff drafts with OPEN links.
+- **The example · gate and handoff** [13] · FIN-003 end to end as a MOB, a gate decision per ticket, and three handoff drafts with OPEN links.
   - Expected: Gate decisions, three drafts, and one own-issue brief in the same shape.
   - Checkpoint: The receiver can state current state and next owner without asking the sender.
 <!-- example:end -->

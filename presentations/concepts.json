@@ -10,11 +10,11 @@
         "cards": [
           {
             "title": "WHAT CHANGED",
-            "body": "Build collapsed from weeks to hours. The same approval gates, reviews, handoffs and policies still stand, and they stall the gain."
+            "body": "Build collapsed from weeks to hours. The approval gates, reviews and handoffs around it did not."
           },
           {
             "title": "WHY THE OLD SDLC LOOKS LIKE THIS",
-            "body": "Six stages, each owned by a role, moved along by documents, tickets and sign-offs. PRDs, estimation rituals and security reviews forced alignment when build took months."
+            "body": "Six stages, one role each, moved along by documents and sign-offs: alignment for a build of months."
           },
           {
             "title": "THE ASSUMPTION THAT BROKE",
@@ -27,20 +27,49 @@
         ],
         "expected": "The room can say why the old process was shaped by slow build.",
         "check": "Everyone can name one control in their own team that assumes a human wrote every line.",
-        "notes": "Open dag 3 hiermee, vóór de SDLC-definitie. Bron: Anthropic, The AI-native SDLC playbook (Louis Claxton, 2026-08-21), inleiding."
+        "notes": "Open dag 3 hiermee, vóór de SDLC-definitie. Bron: Anthropic, The AI-native SDLC playbook (Louis Claxton, 2026-08-21), inleiding.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• WHAT CHANGED: Build collapsed from weeks to hours. The same approval gates, reviews, handoffs and policies still stand, and they stall the gain.\n• WHY THE OLD SDLC LOOKS LIKE THIS: Six stages, each owned by a role, moved along by documents, tickets and sign-offs. PRDs, estimation rituals and security reviews forced alignment when build took months."
       },
       "visual": {
-        "title": "The bottleneck moved · see the bars",
-        "subtitle": "Before agents every stage runs at human speed. After agents, build is a sliver and the rest keeps its length.",
-        "image": "bottleneck-bars.svg",
-        "imageAlt": "Two rows of stage bars. Before agents: build is the widest block. After agents: build is a sliver, a dashed block reads cycle time reclaimed, and plan, test and deploy keep their length. Three consequences below.",
-        "imageCaption": "Build is no longer the constraint; the human-speed steps around it are. Three things become true: the bottleneck moves, the controls stop matching reality, governance gets more expensive.",
-        "prompt": "Point at the wide Build block, then at the sliver. Ask: where does the queue build up now? Then read the three consequences and let the room pick the one they recognise.",
+        "title": "Before agents · build is the widest block",
+        "layout": "bars",
+        "subtitle": "Every stage runs at human speed, and build takes the most of it.",
+        "bars": {
+          "stages": [
+            {
+              "name": "Plan",
+              "w": 10
+            },
+            {
+              "name": "Design",
+              "w": 10
+            },
+            {
+              "name": "Build",
+              "w": 44,
+              "accent": true
+            },
+            {
+              "name": "Test",
+              "w": 12
+            },
+            {
+              "name": "Deploy",
+              "w": 12
+            },
+            {
+              "name": "Maintain",
+              "w": 12
+            }
+          ],
+          "scale": "Before agents · every stage at human speed",
+          "caption": "Build is the long pole. The controls around it were designed for exactly that."
+        },
+        "prompt": "Point at the Build block. Ask: how long does a change wait here today?",
         "steps": [
-          "Point at the stage where your team's queue builds up now."
+          "Point at the widest block."
         ],
-        "expected": "Everyone can point at their own bottleneck after build.",
-        "check": "Everyone can name the stage where their team's queue builds when build gets ten times faster."
+        "expected": "The room agrees build was the long pole.",
+        "check": "Everyone can say which stage took the most calendar time before agents."
       },
       "usage": {
         "title": "The bottleneck moved · how we use it",
@@ -48,15 +77,15 @@
         "cards": [
           {
             "title": "THE SECURITY EXAMPLE",
-            "body": "Security teams are sized for human output. When agents multiply code, the review queue builds or code ships under-reviewed. A regulated organisation accepts neither, so the checks must keep pace with the agents."
+            "body": "Security is sized for human output. Ten times the code: the queue grows or code ships under-reviewed."
           },
           {
             "title": "WHAT WE CHANGE",
-            "body": "Not less control. Plan, review and deploy get artefacts and pipeline checks instead of meetings; humans sit at the gates, not inside the build loop."
+            "body": "Not less control. Artefacts and pipeline checks instead of meetings; humans at the gates, not in the loop."
           },
           {
             "title": "WHAT WE DO THIS WEEK",
-            "body": "Refine a ticket, build a bounded agent, run it through a checker and a human gate. That is the new shape of the SDLC in miniature."
+            "body": "Refine a ticket, build a bounded agent, pass a checker and a human gate. The SDLC in miniature."
           }
         ],
         "prompt": "Walk the security example. Then ask each participant which control in their team would not keep up at ten times the code output, and where the human should sit instead.",
@@ -66,8 +95,84 @@
           "Say which exercise this week shows it."
         ],
         "expected": "Every participant has one control to move and a gate to move it to.",
-        "check": "Nobody proposes less control; everybody proposes a different place for it."
-      }
+        "check": "Nobody proposes less control; everybody proposes a different place for it.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• THE SECURITY EXAMPLE: Security teams are sized for human output. When agents multiply code, the review queue builds or code ships under-reviewed. A regulated organisation accepts neither, so the checks must keep pace with the agents.\n• WHAT WE CHANGE: Not less control. Plan, review and deploy get artefacts and pipeline checks instead of meetings; humans sit at the gates, not inside the build loop.\n• WHAT WE DO THIS WEEK: Refine a ticket, build a bounded agent, run it through a checker and a human gate. That is the new shape of the SDLC in miniature."
+      },
+      "extra_visuals": [
+        {
+          "title": "After agents · build is a sliver",
+          "layout": "bars",
+          "subtitle": "Build collapses. Plan, test and deploy keep the length they always had.",
+          "bars": {
+            "stages": [
+              {
+                "name": "Plan",
+                "w": 10
+              },
+              {
+                "name": "Design",
+                "w": 10
+              },
+              {
+                "name": "Build",
+                "w": 4,
+                "accent": true
+              },
+              {
+                "name": "Test",
+                "w": 12
+              },
+              {
+                "name": "Deploy",
+                "w": 12
+              },
+              {
+                "name": "Maintain",
+                "w": 12
+              },
+              {
+                "name": "cycle time reclaimed",
+                "w": 40,
+                "ghost": true
+              }
+            ],
+            "scale": "After agents · build runs at agent speed",
+            "caption": "The constraint moved to the human-speed steps around build."
+          },
+          "prompt": "Point at the sliver, then at the reclaimed block. Ask: where does the queue build up now?",
+          "steps": [
+            "Point at the stage where your team's queue builds up now."
+          ],
+          "expected": "Everyone can point at their own bottleneck after build.",
+          "check": "Everyone can name the stage where their team's queue builds when build gets ten times faster."
+        },
+        {
+          "title": "Three things become true",
+          "layout": "cards",
+          "subtitle": "Once build stops being the constraint, three things follow.",
+          "cards": [
+            {
+              "title": "THE BOTTLENECK MOVES",
+              "body": "To plan, review, test and deploy, which still run at human speed."
+            },
+            {
+              "title": "CONTROLS STOP MATCHING REALITY",
+              "body": "Line-by-line review made sense when a person wrote the line. Agents write most of the diff."
+            },
+            {
+              "title": "GOVERNANCE GETS MORE EXPENSIVE",
+              "body": "Exceptions still route through committees that meet weekly or monthly. The queue grows where the people are."
+            }
+          ],
+          "tagline": "SAME CONTROL OBJECTIVES · THE CONTROLS AROUND BUILD MUST CHANGE AS MUCH AS BUILD DID",
+          "prompt": "Read the three consequences and let the room pick the one they recognise in their own team.",
+          "steps": [
+            "Pick the consequence you recognise."
+          ],
+          "expected": "Each participant names the consequence they see in their own team.",
+          "check": "Everyone can name one control in their own team that no longer matches how the work is done."
+        }
+      ]
     },
     "intent-md": {
       "name": "intent.md",
@@ -122,7 +227,7 @@
           },
           {
             "title": "AGREE AND COMMIT",
-            "body": "Copy approved Markdown to intent.md in GitLab. Record the Proof link, revision and reviewer. CLAUDE.md explicitly points to intent.md."
+            "body": "Approved Markdown goes to intent.md in GitLab, with Proof link, revision and reviewer. CLAUDE.md points to it."
           }
         ],
         "prompt": "Read our Proof draft. Suggest clearer scope, missing success criteria and one positive and one negative scenario. Keep unknowns OPEN. Explain each suggestion. Do not accept your own suggestions or change the approved repository files.",
@@ -134,7 +239,7 @@
         ],
         "expected": "One reviewed intent.md, a Proof document link and revision, and a named reviewer on the GitLab merge request.",
         "check": "Every participant can explain the intent. The repository copy matches the approved Proof text; unresolved proposals stay OPEN.",
-        "notes": "Run this 20-minute sequence within the existing intent exercise, not as added agenda time. Guide: https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/docs/proof-workflow.md . Use hosted Proof; create a separate document per squad. Agent writes require scoped access configured outside the repository. Use suggestions, with human approval. Sync is manual. At recap use Proof to discuss results, blockers and next owner; copy approved outcomes to progress.md. Never publish credential-bearing share links. Use synthetic training content."
+        "notes": "Run this 20-minute sequence within the existing intent exercise, not as added agenda time. Guide: https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/docs/proof-workflow.md . Use hosted Proof; create a separate document per squad. Agent writes require scoped access configured outside the repository. Use suggestions, with human approval. Sync is manual. At recap use Proof to discuss results, blockers and next owner; copy approved outcomes to progress.md. Never publish credential-bearing share links. Use synthetic training content.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• AGREE AND COMMIT: Copy approved Markdown to intent.md in GitLab. Record the Proof link, revision and reviewer. CLAUDE.md explicitly points to intent.md."
       }
     },
     "evidence-rule": {
@@ -182,7 +287,7 @@
         "cards": [
           {
             "title": "IN THE EVIDENCE LOG",
-            "body": "One line per result: claim · source id · command or sheet · reviewer · PASS / FAIL / OPEN."
+            "body": "One line per result: claim · source · command · reviewer · PASS / FAIL / OPEN."
           },
           {
             "title": "IN THE AGENT'S OUTPUT",
@@ -200,7 +305,8 @@
           "Mark one thing OPEN on purpose."
         ],
         "expected": "Everyone has written one complete evidence line.",
-        "check": "No evidence line is missing a source or a reviewer."
+        "check": "No evidence line is missing a source or a reviewer.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• IN THE EVIDENCE LOG: One line per result: claim · source id · command or sheet · reviewer · PASS / FAIL / OPEN."
       }
     },
     "mob": {
@@ -286,7 +392,7 @@
           },
           {
             "title": "SAME CONTROLS, NEW ENFORCEMENT",
-            "body": "Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline, with automated handover between plays."
+            "body": "Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline."
           }
         ],
         "prompt": "Read the definition out loud, word for word. Ask: which control objective changed? (None.) Ask: what changed? (The shape, the handover, the enforcement.)",
@@ -295,7 +401,8 @@
           "Name one control objective that did not change."
         ],
         "expected": "The room can say \"same objectives, new enforcement\" and explain it.",
-        "check": "Everyone can name the six phases and one unchanged control objective."
+        "check": "Everyone can name the six phases and one unchanged control objective.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• SAME CONTROLS, NEW ENFORCEMENT: Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline, with automated handover between plays."
       },
       "visual": {
         "title": "AI-native SDLC · see the loop",
@@ -413,7 +520,7 @@
           },
           {
             "title": "WATCH THE LOOP",
-            "body": "n8n shows execution steps; Claude Code shows tool calls. A Calculator or Read call is an action. Reasoning alone is not."
+            "body": "n8n shows execution steps, Claude Code shows tool calls. A Read call is an action; reasoning is not."
           },
           {
             "title": "INTERRUPT ON PURPOSE",
@@ -427,7 +534,8 @@
           "Say where you would interrupt."
         ],
         "expected": "Everyone can find one tool call in a trace.",
-        "check": "No one claims a result the trace does not show."
+        "check": "No one claims a result the trace does not show.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• WATCH THE LOOP: n8n shows execution steps; Claude Code shows tool calls. A Calculator or Read call is an action. Reasoning alone is not."
       }
     },
     "one-contract": {
@@ -581,15 +689,15 @@
         "cards": [
           {
             "title": "SKILL VS HOOK",
-            "body": "The ticket-refinement skill you built on days 1–2 advises. A hook runs on every matching action and holds without exception."
+            "body": "A skill advises. A hook runs on every matching action and holds without exception."
           },
           {
             "title": "WHERE IT FIRES",
-            "body": "Most of Claude's actions are file edits and shell commands during the build, so build-phase hooks fire most often. Keep them fast and scoped to the file that changed."
+            "body": "Mostly during build: file edits and shell commands. Keep hooks fast and scoped to the changed file."
           },
           {
             "title": "WHAT IT DOES",
-            "body": "Block edits to protected paths, run the formatter and linter after an edit, keep credentials out of the diff."
+            "body": "Blocks edits to protected paths, runs formatter and linter after an edit, keeps credentials out of the diff."
           }
         ],
         "prompt": "Read the definition. Ask: which rule in our ticket-refinement skill must hold without exception? That rule is a hook, the rest stays advisory.",
@@ -597,7 +705,8 @@
           "Name one rule from your skill that must never be skipped."
         ],
         "expected": "The room can separate advisory from deterministic.",
-        "check": "Everyone can say why that rule is a hook and not a skill."
+        "check": "Everyone can say why that rule is a hook and not a skill.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• SKILL VS HOOK: The ticket-refinement skill you built on days 1–2 advises. A hook runs on every matching action and holds without exception.\n• WHERE IT FIRES: Most of Claude's actions are file edits and shell commands during the build, so build-phase hooks fire most often. Keep them fast and scoped to the file that changed.\n• WHAT IT DOES: Block edits to protected paths, run the formatter and linter after an edit, keep credentials out of the diff."
       },
       "visual": {
         "title": "Hooks · see the guardrail",
@@ -622,11 +731,11 @@
           },
           {
             "title": "IN YOUR REPO",
-            "body": "Every invariant a human enforces in review is a smell: promote it to a lint, a CI failure or a hook. Formatter after each edit, protected paths, a secret scan on the diff."
+            "body": "What a human enforces in review is a smell: make it a lint, CI failure or hook."
           },
           {
             "title": "NOT A HOOK",
-            "body": "The full test suite runs at the commit or PR. A human approval prompt belongs at the deploy gate."
+            "body": "The full test suite runs at commit or PR. Human approval belongs at the deploy gate."
           }
         ],
         "prompt": "Let everyone pick one rule from the skill they built, decide hook or skill, and name the stage where it runs. Collect the hooks on the board.",
@@ -636,7 +745,8 @@
           "Name the stage where it runs."
         ],
         "expected": "Every participant has one rule classified as hook or skill, with a stage.",
-        "check": "No hook on the board runs the full test suite or asks a human for approval."
+        "check": "No hook on the board runs the full test suite or asks a human for approval.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• IN YOUR REPO: Every invariant a human enforces in review is a smell: promote it to a lint, a CI failure or a hook. Formatter after each edit, protected paths, a secret scan on the diff.\n• NOT A HOOK: The full test suite runs at the commit or PR. A human approval prompt belongs at the deploy gate."
       }
     },
     "subagents": {
@@ -647,11 +757,11 @@
         "cards": [
           {
             "title": "PARALLEL SESSION",
-            "body": "Another full Claude Code instance on a separate task in its own git worktree. Sessions know nothing about each other; the engineer is the only thing they share."
+            "body": "Another full Claude Code instance on its own task in its own worktree. They share only the engineer."
           },
           {
             "title": "SUBAGENT",
-            "body": "A scoped helper inside one session with its own context window and tool limits. Suits jobs that recur across tasks, such as verifying the app runs."
+            "body": "A scoped helper inside one session, with its own context and tool limits, for jobs that recur."
           },
           {
             "title": "THE ENGINEER'S JOB",
@@ -663,7 +773,8 @@
           "Say session versus subagent in one sentence each."
         ],
         "expected": "The room can tell a session from a subagent.",
-        "check": "Everyone can say the difference between a parallel session and a subagent in one sentence."
+        "check": "Everyone can say the difference between a parallel session and a subagent in one sentence.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• PARALLEL SESSION: Another full Claude Code instance on a separate task in its own git worktree. Sessions know nothing about each other; the engineer is the only thing they share.\n• SUBAGENT: A scoped helper inside one session with its own context window and tool limits. Suits jobs that recur across tasks, such as verifying the app runs."
       },
       "visual": {
         "title": "Subagents · see the streams",
@@ -684,15 +795,15 @@
         "cards": [
           {
             "title": "SPLIT THE WORK",
-            "body": "Tasks that touch different files get their own worktree: claude --worktree feature-auth. Tasks that share files run in one session, one after another. Start with two or three."
+            "body": "Different files: own worktree (claude --worktree feature-auth). Shared files: one session, in turn. Start with two."
           },
           {
             "title": "TURN REPEATS INTO SUBAGENTS",
-            "body": "A markdown file in .claude/agents/ with a name, when to use it, and the tools it may touch: verifier, researcher, simplifier. Check them into git."
+            "body": "A markdown file in .claude/agents/: name, when to use it, allowed tools. Verifier, researcher, simplifier. In git."
           },
           {
             "title": "GOVERN FROM THE REPO",
-            "body": "CLAUDE.md, hooks and permission settings apply to every session; output is logged and attributed. Measure sessions per engineer while review quality holds, and merged changes against rework."
+            "body": "CLAUDE.md, hooks and permissions apply to every session; output is logged and attributed. Measure while review quality holds."
           }
         ],
         "prompt": "Open .claude/agents/ticket-coach.md in the lab: name, description, tools. Show the verifier example: 'Start the app, exercise the changed behaviour and the two nearest flows, report what you ran and saw, do not fix anything.' Ask each participant which repeated job they would make a subagent and which task they would run in a second worktree.",
@@ -703,7 +814,8 @@
         ],
         "expected": "Every participant has one subagent idea with its tools and one parallel task.",
         "check": "No subagent on the board has more tools than its job needs.",
-        "tagline": "SHORT PROMPTS → EIGHT AGENTS → SHORT PROMPTS AGAIN · THE ELITE RETURN TO SIMPLE"
+        "tagline": "SHORT PROMPTS → EIGHT AGENTS → SHORT PROMPTS AGAIN · THE ELITE RETURN TO SIMPLE",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• SPLIT THE WORK: Tasks that touch different files get their own worktree: claude --worktree feature-auth. Tasks that share files run in one session, one after another. Start with two or three.\n• TURN REPEATS INTO SUBAGENTS: A markdown file in .claude/agents/ with a name, when to use it, and the tools it may touch: verifier, researcher, simplifier. Check them into git.\n• GOVERN FROM THE REPO: CLAUDE.md, hooks and permission settings apply to every session; output is logged and attributed. Measure sessions per engineer while review quality holds, and merged changes against rework."
       }
     }
   },
@@ -711,7 +823,7 @@
     "day-decks.json": {
       "day1": [
         {
-          "after": "Welcome back · AI-native SDLC",
+          "after": "Day 1 route",
           "concept": "intent-md"
         },
         {
@@ -725,24 +837,54 @@
       ],
       "day2": [
         {
-          "after": "Goal · narrow ticket behavior",
+          "after": "Day 2 route",
+          "concept": "intent-md",
+          "mode": "recap"
+        },
+        {
+          "after": "intent.md · recap",
           "concept": "evidence-rule",
+          "mode": "recap"
+        },
+        {
+          "after": "Evidence rule · recap",
+          "concept": "mob",
           "mode": "recap"
         }
       ],
       "day3": [
         {
-          "after": "Welcome back · AI-native SDLC",
+          "after": "Day 3 route",
+          "concept": "evidence-rule",
+          "mode": "recap"
+        },
+        {
+          "after": "Evidence rule · recap",
           "concept": "bottleneck"
         },
         {
           "after": "The bottleneck moved · how we use it",
-          "concept": "sdlc"
+          "concept": "sdlc",
+          "order": [
+            "visual",
+            "definition",
+            "usage"
+          ]
         }
       ],
       "day4": [
         {
           "after": "Day 4 route",
+          "concept": "bottleneck",
+          "mode": "recap"
+        },
+        {
+          "after": "The bottleneck moved · recap",
+          "concept": "sdlc",
+          "mode": "recap"
+        },
+        {
+          "after": "AI-native SDLC · recap",
           "concept": "agentic-loop"
         },
         {
@@ -757,6 +899,16 @@
       "day5": [
         {
           "after": "Day 5 route",
+          "concept": "agentic-loop",
+          "mode": "recap"
+        },
+        {
+          "after": "Agentic loop · recap",
+          "concept": "human-gate",
+          "mode": "recap"
+        },
+        {
+          "after": "Human gate · recap",
           "concept": "one-contract",
           "mode": "recap"
         },
@@ -787,17 +939,42 @@
       ],
       "day2": [
         {
+          "after": "Day 2 route",
+          "concept": "bottleneck",
+          "mode": "recap"
+        },
+        {
+          "after": "The bottleneck moved · recap",
+          "concept": "sdlc",
+          "mode": "recap"
+        },
+        {
+          "after": "AI-native SDLC · recap",
+          "concept": "intent-md",
+          "mode": "recap"
+        },
+        {
           "after": "Small change loop",
           "concept": "evidence-rule"
         }
       ],
       "day3": [
         {
-          "after": "n8n agent loop",
+          "after": "Day 3 route",
+          "concept": "evidence-rule",
+          "mode": "recap"
+        },
+        {
+          "after": "Evidence rule · recap",
           "concept": "agentic-loop"
         }
       ],
       "day4": [
+        {
+          "after": "Day 4 route",
+          "concept": "agentic-loop",
+          "mode": "recap"
+        },
         {
           "after": "Claude Code platform",
           "concept": "one-contract"
@@ -812,6 +989,21 @@
         }
       ],
       "day5": [
+        {
+          "after": "Day 5 route",
+          "concept": "one-contract",
+          "mode": "recap"
+        },
+        {
+          "after": "One contract, two platforms · recap",
+          "concept": "hooks",
+          "mode": "recap"
+        },
+        {
+          "after": "Hooks · recap",
+          "concept": "subagents",
+          "mode": "recap"
+        },
         {
           "after": "End-to-end demo",
           "concept": "mob"
@@ -830,7 +1022,8 @@
       ],
       "day3": [
         "Interactive · the agentic loop",
-        "MOB programming, made concrete"
+        "MOB programming, made concrete",
+        "The bottleneck moved · see the bars"
       ],
       "day4": [
         "Agent = model + harness",
@@ -875,6 +1068,9 @@
         "Measure the loop · see the constant",
         "Measure the loop · how we use it",
         "Measure the loop · recap"
+      ],
+      "day1": [
+        "The bottleneck moved · see the bars"
       ]
     }
   },
@@ -1953,6 +2149,71 @@
         "set": {
           "tagline": "SAME CONTRACT · DIFFERENT PLATFORM"
         }
+      },
+      {
+        "day": "day1",
+        "title": "Welcome back · AI-native SDLC",
+        "set": {
+          "title": "Welcome · frame a payment reconciliation change",
+          "kicker": "WAVE 2 · SQUAD 1 · DAY 1 · 10:00–10:15",
+          "subtitle": "One fictional merchant, three CSV files, one week. Today: intent, the evidence rule and working as a MOB.",
+          "prompt": "Introduce the case in one minute, run Kahoot and wordcloud, then name today's proof: a reviewed intent and a source-backed evidence log."
+        }
+      },
+      {
+        "day": "day5",
+        "title": "Evaluator-optimizer",
+        "unset": [
+          "layout",
+          "callout"
+        ],
+        "set": {
+          "lanes": true,
+          "subtitle": "Two roles on one contract: the producer writes, the evaluator only judges. Two rounds, then a person decides.",
+          "expected": "Participants can name the two roles and say which one is allowed to change the text.",
+          "check": "Nobody expects the evaluator to fix the output, and nobody runs a third round.",
+          "detail": "The evaluator never edits the output. It returns at most three numbered instructions, and your agent applies them.",
+          "tagline": "TWO ROLES · ONE CONTRACT · BOUNDED ROUNDS",
+          "items": [
+            {
+              "label": "Produce",
+              "caption": "your agent",
+              "detail": "Your Day 4 output, saved by you.",
+              "lane": "Your agent · produces"
+            },
+            {
+              "label": "Evaluate",
+              "caption": "evaluator subagent",
+              "detail": "Shape · grounding · no invented facts · OPEN discipline · boundary. It reports; it does not edit.",
+              "lane": "Evaluator · judges, never rewrites"
+            },
+            {
+              "label": "Verdict",
+              "caption": "PASS or REVISE",
+              "detail": "REVISE carries at most three numbered, testable instructions with quoted evidence.",
+              "lane": "Evaluator · judges, never rewrites"
+            },
+            {
+              "label": "Optimize",
+              "caption": "re-prompt with ONLY those",
+              "detail": "Your agent again: first prompt + 'Apply these instructions:' + the list verbatim.",
+              "lane": "Your agent · produces"
+            },
+            {
+              "label": "Re-evaluate",
+              "caption": "round 2 is the last",
+              "detail": "Round 2 is the last one. Then stop, whatever the verdict.",
+              "lane": "Evaluator · judges, never rewrites"
+            },
+            {
+              "label": "Human gate",
+              "caption": "accept · park · redirect",
+              "detail": "You decide. PASS is not permission.",
+              "lane": "You · decide",
+              "last": true
+            }
+          ]
+        }
       }
     ]
   },
@@ -2171,6 +2432,59 @@
             "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
             "dark": false
           }
+        }
+      }
+    },
+    "day-decks.json": {
+      "name": "daily payment reconciliation",
+      "doc": "../squads/squad-2/worked-example.md",
+      "days": {
+        "day1": {
+          "after": "Scenario and evidence rule",
+          "from": [
+            "../squads/squad-2/presentations.json",
+            "day1"
+          ],
+          "set": {
+            "kicker": "EXAMPLE · DAY 1 OF 5"
+          }
+        },
+        "day3": {
+          "after": "AI-native SDLC · how we use it",
+          "from": [
+            "../squads/squad-2/presentations.json",
+            "day2"
+          ],
+          "set": {
+            "kicker": "EXAMPLE · DAY 3 OF 5"
+          }
+        },
+        "day4": {
+          "after": "The agentic loop · how we use it",
+          "from": [
+            "../squads/squad-2/presentations.json",
+            "day3"
+          ],
+          "set": {
+            "kicker": "EXAMPLE · DAY 4 OF 5"
+          }
+        },
+        "day5": {
+          "after": "Hooks · how we use it",
+          "from": [
+            "../squads/squad-2/presentations.json",
+            "day4"
+          ],
+          "set": {
+            "kicker": "EXAMPLE · DAY 5 OF 5"
+          }
+        },
+        "day5-value": {
+          "after": "Individual · trace and improve",
+          "from": [
+            "../squads/squad-2/presentations.json",
+            "day4-value"
+          ]
         }
       }
     }

@@ -50,8 +50,26 @@ the old triplets by title, inserts them after their anchors in both
 `day-decks.json` and `../squads/squad-2/presentations.json`, and regenerates the
 site registries when the site checkout sits next to this repository.
 `--check` exits non-zero when the decks are out of date. Diagrams live in
-[`../assets/`](../assets/) and follow the site's design system.
+[`../assets/`](../assets/) and follow the site's design system. Set `AETHER_SITE`
+to the site's `dist/` when the checkout is not next to this repository.
 
-## Worked example (squad 2)
+A placement may carry `"mode": "recap"` (the concept's picture and one sentence,
+no cards — the definition cards go to the facilitator notes) or
+`"order": ["visual", "definition", "usage"]` when the room should see the
+picture before it reads the definition. A concept's `visual` may draw a bar
+chart (`"layout": "bars"`) instead of an image; `extra_visuals` adds more
+visual slides to the triplet. Every day after the first opens with yesterday's
+concepts as recap slides, chained after the route slide. A patch may `unset`
+keys. A card body is at most 18 words; what is cut goes to the notes verbatim.
 
-The `examples` block in `concepts.json` places one worked-example slide per day (plus the before-and-after slide on Day 4) in the squad 2 deck and writes a `Worked example` block into each squad 2 workbook. The `_example` patches in the same file rewrite the generic practice slides to name the example step. Design and candidates: [squads/squad-2/worked-example.md](../squads/squad-2/worked-example.md).
+## Route slides
+
+`python3 presentations/add_routes.py` gives every deck its route on slide 2 and
+the same route again in front of the afternoon. Squad 2's routes are derived
+from the deck's own kickers; the two lines no kicker states (lunch before the
+human gate, theory and demo until the first timed block) are named in the
+script. Run it before `apply_concepts.py`; it is idempotent.
+
+## Worked example (both squads)
+
+The `examples` block in `concepts.json` places one worked-example slide per day (plus the before-and-after slide on Day 4) in the squad 2 deck and writes a `Worked example` block into each workbook. The squad 1 entries use `"from"` to reuse the squad 2 slides with the day counter rewritten, so the example is written once and both squads tell the same story (squad 1 days 3, 4 and 5 map onto squad 2 days 1, 3 and 4). The `_example` patches in the same file rewrite the generic practice slides to name the example step. Design and candidates: [squads/squad-2/worked-example.md](../squads/squad-2/worked-example.md).

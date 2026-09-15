@@ -9,9 +9,9 @@ Study the [Claude Academy course](https://academy.claude.com/courses/ai-native-s
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **The bottleneck moved** · Code is no longer the bottleneck [3] → The bottleneck moved · see the bars [4] → The bottleneck moved · how we use it [5]
-- **AI-native SDLC** · What is an AI-native SDLC? [6] → AI-native SDLC · see the loop [7] → AI-native SDLC · how we use it [8]
-- **intent.md** · What is intent.md? [9] → Intent.md in one picture [10] → intent.md · how we use it [11]
+- **The bottleneck moved** · Code is no longer the bottleneck [4] → Before agents · build is the widest block [5] → The bottleneck moved · how we use it [8]
+- **AI-native SDLC** · What is an AI-native SDLC? [9] → AI-native SDLC · see the loop [10] → AI-native SDLC · how we use it [11]
+- **intent.md** · What is intent.md? [12] → Intent.md in one picture [13] → intent.md · how we use it [14]
 <!-- concepts:end -->
 
 <!-- example:start -->
@@ -19,7 +19,7 @@ Each concept is taught in three slides: definition, visual, how we use it. Site 
 
 One example runs from Day 1 to Day 5; see [worked-example.md](worked-example.md). Today's step, with the site slide number in brackets:
 
-- **The example · daily payment reconciliation** [12] · One fictional merchant, three CSV files, five documented cases. We carry it from intent to handoff.
+- **The example · daily payment reconciliation** [15] · One fictional merchant, three CSV files, five documented cases. We carry it from intent to handoff.
   - Expected: Everyone can name the files, the cutoff and one trap.
   - Checkpoint: Nobody thinks the data is real.
 <!-- example:end -->
