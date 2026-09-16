@@ -31,7 +31,7 @@ gates, and reflection. For squad 2, use its separate plan linked above.
 | 2 | Guided: one FIN-003 ticket, role relay, behavior checks, individual practice | [Day 2](days/day-2.md) | [Present day 2](https://aetherlink-training.ryanlisse.chatgpt.site/?day=2#1) |
 | 3 | AI-native SDLC: intent → plan → evidence, review and handoff | [Day 3](days/day-3.md) | [Present day 3](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=3#1) |
 | 4 | First bounded agent in n8n on the approved payment-operations case | [Day 4](days/day-4.md) | [Present day 4](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=4#1) |
-| 5 | Rebuild in Claude Code; optional end-to-end transfer after the human gate | [Day 5](days/day-5.md) | [Present day 5](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=5#1) |
+| 5 | Agent-native SDLC: translate n8n support triage to Claude Code on fictional WL-1026; optional E2E after the gate | [Day 5](days/day-5.md) | [Present day 5](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=5#1) |
 
 The interactive presentation site is public. The workbooks and [fictional Python training lab](training-lab/README.md) are available in this public repository. Releases and monitoring in the lab are local rehearsals with synthetic data, not production operations.
 
@@ -55,6 +55,14 @@ Run its preflight in the same environment and rights as participants before
 describing the exercise as available. Its two input/target pairs are
 `TICKET-OPS-101`/Worked target A and `TICKET-OPS-102`/Worked target B; they
 remain `OPEN` until the team signs off on their use.
+
+For the 17 September Squad 1 workshop, Day 5 uses the participant lab's
+[support-triage guide](https://github.com/RyanLisse/aetherlink-agent-lab/tree/main/scenarios/support-triage/README.md)
+and the attached n8n export as its source flow. The fictional `WL-1026` input
+is translated into a main-session Claude Code coordinator with Customer Reply
+and Risk specialists, strict JSON validation, and a human gate. The historical
+support calendar may use a different day label; this workbook calls it Squad 1
+Day 5 and does not change that calendar.
 
 ## Quickstart
 

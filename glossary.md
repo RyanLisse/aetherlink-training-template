@@ -9,6 +9,8 @@ the top bar; it is available from every slide.
 | Chat | A model with a conversation and context, waiting for your next message. |
 | Agent | A model in a loop with a goal, tools, feedback and a boundary. |
 | Agentic loop | Gather context → take action → verify results → repeat or stop at a human gate. |
+| AI-native SDLC | Plan → Design → Build → Test → Deploy → Maintain as a feedback loop, with AI at each phase and human control over decisions. |
+| Agent-native SDLC | Our application of the AI-native SDLC: agents help produce each phase’s artifact; people review the evidence and decide what happens next. |
 | Tool | A capability the platform exposes, such as reading, calculating or checking. |
 | Human gate | A deliberate pause where a person accepts, revises, parks or redirects the work. |
 | Trace | A record of observed lifecycle and successful tool events; it does not prove correctness. |

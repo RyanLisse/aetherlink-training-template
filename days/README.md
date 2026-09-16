@@ -27,7 +27,7 @@ is available. No squad 2 outcome or access is implied by squad 1 material.
    Context and skills are optional after the reviewed result.
 3. [Day 3](day-3.md) — AI-native SDLC route from intent to evidence (Squad 1 continuation).
 4. [Day 4](day-4.md) — first bounded agent in n8n (Squad 1 continuation).
-5. [Day 5](day-5.md) — rebuild in Claude Code, then optional E2E transfer (Squad 1 continuation).
+5. [Day 5](day-5.md) — agent-native SDLC translation from n8n support triage to Claude Code (Squad 1 continuation).
 
 For the first visible result in the next session after Day 1, use the [guided
 ticket exercise](../scenarios/payment-reconciliation/guided-ticket-exercise.md)
@@ -37,6 +37,7 @@ without asking the cohort to redo that session. Later sessions use the same
 vocabulary and rules with graduated support; follow each guide's current
 agenda. The primary scenario is [payment reconciliation](../scenarios/payment-reconciliation/README.md).
 Day 3's participant workspace is the [aetherlink-agent-lab](https://github.com/RyanLisse/aetherlink-agent-lab).
+For the 17 September Day 5 route, use its [support-triage participant guide](https://github.com/RyanLisse/aetherlink-agent-lab/tree/main/scenarios/support-triage/README.md).
 The trainer workbook's starter, `ticket-inputs.md`, `ticket-template.md` handout,
 `target-examples.md`, and `check_ticket.py` are defined in the [ticket-agent
 pack](../scenarios/ticket-agent/README.md). The participant lab README is the
