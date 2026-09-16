@@ -23,10 +23,10 @@
 - [Day 2 — FIN-003 guided ticket relay](https://aetherlink-training.ryanlisse.chatgpt.site/?day=2#1)
 - [Squad 1 Day 3 — AI-native SDLC](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=3#1)
 - [Squad 1 Day 4 — First agent in n8n](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=4#1)
-- [Squad 1 Day 5 — Claude Code + optional E2E](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=5#1)
+- [Squad 1 Day 5 — n8n support triage to Claude Code](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=5#1)
 - [Full workbooks and setup](../days/README.md)
 
-Days 1 and later MOB sessions use groups of three or four with one navigator directing the human driver; rotate every 5–7 minutes after individual blocks. If a group is blocked or drifting for five minutes, park the question as `OPEN`. Squad 1 Day 4 and Squad 2 Day 3 use the participant lab root above; n8n access and credentials are selected separately in preflight, and missing login remains `OPEN`. Both platforms use the same functional input/output contract while their adapter instructions, models, modes, access, and tools are recorded separately; no business-system write or financial approval is performed. Platform differences are observations of the controlled runs and do not establish causality. Day 5 uses a clearly labelled local transfer worksheet with cutoff `2026-09-13`; source CSVs remain unchanged. The team workflow is GitLab, Jira, and Confluence; GitHub distributes this public material.
+Days 1 and later MOB sessions use groups of three or four with one navigator directing the human driver; rotate every 5–7 minutes after individual blocks. If a group is blocked or drifting for five minutes, park the question as `OPEN`. Squad 1 Day 4 and Squad 2 Day 3 use the participant lab root above; n8n access and credentials are selected separately in preflight, and missing login remains `OPEN`. For the 17 September Squad 1 Day 5 route, the [support-triage participant guide](https://github.com/RyanLisse/aetherlink-agent-lab/tree/main/scenarios/support-triage/README.md) and attached n8n export define fictional WL-1026. The n8n source and Claude Code target are a functional translation: Claude preserves `ticket_id` and `risk_note`, validates `priority`, and keeps every action at a human gate. Platform settings and static memory keys are recorded as observations; no business-system write, send, refund or financial approval is performed. The team workflow is GitLab, Jira, and Confluence; GitHub distributes this public material.
 
 The repository imports [intent.md](../intent.md), [progress.md](../progress.md), and [AGENTS.md](../AGENTS.md) through its root `CLAUDE.md`; these are custom conventions for outcome, current-state, and evidence tracking. Read them before changing a deck. Skills are optional follow-up guidance after the visible exercise result exists and never replace a human gate or evidence check.
 
@@ -34,8 +34,9 @@ The interactive presentations use AetherLink styling. The site presentation is
 public; editing this JSON does not automatically publish it. Keep prompts and
 times aligned with the workbooks when updating. Squad 1 Day 3 and Squad 2 Days 1–2 place the AI-native SDLC theory before
 agent building. Squad 1 Day 4 and Squad 2 Day 3 build in n8n; Squad 1 Day 5
-and Squad 2 Day 4 rebuild in Claude Code. Protect at least 25 minutes of
-individual practice in every build block.
+translates the attached n8n support flow into Claude Code, while Squad 2 Day 4
+builds its own Claude Code workflow. Protect at least 25 minutes of individual
+practice in every build block.
 The AI-native SDLC concept uses a line-and-loop illustration at
 [`assets/ai-native-sdlc-line-and-loop.png`](../assets/ai-native-sdlc-line-and-loop.png). It shows
 the traditional line beside the AI-native loop with Claude in the centre, so

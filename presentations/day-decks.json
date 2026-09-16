@@ -2740,14 +2740,14 @@
     ]
   },
   "day5": {
-    "title": "Day 5 — Build the agent in Claude Code + optional E2E",
-    "guideUrl": "https://github.com/RyanLisse/aetherlink-training-template/blob/main/days/day-5.md",
+    "title": "Day 5 — Agent-native SDLC: n8n to Claude Code support triage",
+    "guideUrl": "https://github.com/RyanLisse/aetherlink-agent-lab/tree/main/scenarios/support-triage/README.md",
     "participantRepo": "https://github.com/RyanLisse/aetherlink-agent-lab",
     "slides": [
       {
         "title": "Welcome back · Claude Code agent",
         "kicker": "WAVE 2 · SQUAD 1 · DAY 5 · 10:00–10:15",
-        "subtitle": "Rebuild the bounded agent in Claude Code, evaluate it, and hand it off",
+        "subtitle": "Rebuild the WL-1026 support triage contract from n8n in Claude Code and leave every action at a human gate.",
         "cards": [
           {
             "title": "Yesterday",
@@ -2755,15 +2755,15 @@
           },
           {
             "title": "Today",
-            "body": "Claude Code build, hooks as guardrails, subagents, evaluator and reproducible handoff"
+            "body": "Claude Code build, exactly two required specialists, strict JSON and reproducible handoff"
           },
           {
             "title": "Boundary",
             "body": "Read-only tools; optional E2E only after the core gate"
           }
         ],
-        "prompt": "Recap the n8n baseline, run the Kahoot/wordcloud, and name today’s proof: a Claude Code run, an evaluator verdict and a handoff another person can reproduce.",
-        "notes": "Begin with recap and blockers; keep optional E2E after the core route.",
+        "prompt": "Read the support-triage participant guide, name the six SDLC phases, and state today's proof: valid WL-1026 JSON plus a reproducible handoff.",
+        "notes": "Start met de route en de blokkades. Noem WL-1026 fictief; echte sends en refunds blijven buiten scope.",
         "dark": true,
         "steps": [
           "Recap in one minute.",
@@ -2771,8 +2771,8 @@
           "Record the blocker.",
           "Name the two concepts."
         ],
-        "expected": "A shared start, one named blocker, two concepts on the board.",
-        "check": "Everyone can name today's two concepts.",
+        "expected": "A shared outcome, one named blocker and the six-phase route on the board.",
+        "check": "Everyone can state the human gate and the no-send boundary.",
         "layout": "cards",
         "tagline": "TWO CONCEPTS TODAY · BUILD CAPABILITY · KEEP HUMAN CONTROL",
         "concepts": [
@@ -2783,11 +2783,11 @@
       {
         "title": "Day 5 route",
         "kicker": "SCHEDULE · 10:00–16:00",
-        "subtitle": "Theory → demo → setup → first run → review → evaluator → gate → handoff → optional E2E",
+        "subtitle": "Plan → Design → Build → Test → Deploy → Maintain, with individual work before review.",
         "cards": [
           {
             "title": "Morning",
-            "body": "10:00 recap · 10:15 theory: one contract, hooks · 10:40 Claude Code demo · 11:00 setup · 11:20 break · 11:35 first run and checker"
+            "body": "10:00 recap · 10:15 phases · 10:35 n8n · 10:55 result · 11:20–11:35 break · 11:35–12:00 check"
           },
           {
             "title": "Lunch",
@@ -2795,19 +2795,19 @@
           },
           {
             "title": "Afternoon",
-            "body": "13:00 group review · 13:25 evaluator · 13:35 trace and improve · 14:00 break · 14:15 human gate · 14:35 handoff and reproduction · 15:15 subagents, optional E2E · 15:40 recap and close"
+            "body": "13:00 review · 13:25 build · 14:00 break · 14:15 gate · 14:35 handoff · 15:15 E2E · 15:40 close"
           }
         ],
-        "prompt": "Read the Day 5 route aloud. The optional own-team E2E issue starts only after the core human gate and only if time remains.",
-        "notes": "No optional work may displace the core Claude Code, evaluator or handoff evidence.",
+        "prompt": "Read the six-phase route aloud. Confirm exactly two required specialists — Customer Reply Agent and Risk Agent — before the first run, then show the first visible result; optional E2E starts only after the human gate.",
+        "notes": "Lees de vaste tijden letterlijk. Houd de volgorde Plan, Design, Build, Test, Deploy, Maintain zichtbaar; optioneel werk mag de gate niet verdringen.",
         "dark": false,
         "steps": [
           "Name the two individual blocks.",
           "Name the two gates.",
           "Confirm lunch."
         ],
-        "expected": "Everyone knows when they work alone.",
-        "check": "Board matches the guide.",
+        "expected": "Everyone knows the artifact and human evidence gate for each phase.",
+        "check": "The route shows 10:00–16:00, lunch 12:00–13:00 and both 15-minute breaks.",
         "layout": "cards",
         "tagline": "SAME RHYTHM · INDIVIDUAL FIRST · GROUPS AFTER"
       },
@@ -2869,502 +2869,146 @@
         "imageCaption": "One contract feeds two platforms; both outputs go through the same checker. One pair of runs proves no cause."
       },
       {
-        "title": "What is a hook?",
-        "kicker": "CONCEPT DEFINITION · HOOKS",
-        "subtitle": "A skill is an advisory control; a hook is the deterministic layer behind it.",
+        "title": "Day 5 · Agent-native SDLC definition",
+        "kicker": "SDLC · DEFINITION",
+        "subtitle": "The same control objectives, new enforcement: the line becomes a loop and AI is embedded at every point.",
         "cards": [
           {
-            "title": "SKILL VS HOOK",
-            "body": "A skill advises. A hook runs on every matching action and holds without exception."
+            "title": "FROM LINE TO LOOP",
+            "body": "Plan → Design → Build → Test → Deploy → Maintain, and what production teaches re-enters the plan."
           },
           {
-            "title": "WHERE IT FIRES",
-            "body": "Mostly during build: file edits and shell commands. Keep hooks fast and scoped to the changed file."
+            "title": "AI AT EVERY POINT",
+            "body": "AI drafts, generates, reviews first, tests and watches. Humans set intent, judge risk and own the release."
           },
           {
-            "title": "WHAT IT DOES",
-            "body": "Blocks edits to protected paths, runs formatter and linter after an edit, keeps credentials out of the diff."
+            "title": "SAME CONTROLS, NEW ENFORCEMENT",
+            "body": "Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline."
           }
         ],
-        "prompt": "Read the definition. Ask: which rule in our ticket-refinement skill must hold without exception? That rule is a hook, the rest stays advisory.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• SKILL VS HOOK: The ticket-refinement skill you built on days 1–2 advises. A hook runs on every matching action and holds without exception.\n• WHERE IT FIRES: Most of Claude's actions are file edits and shell commands during the build, so build-phase hooks fire most often. Keep them fast and scoped to the file that changed.\n• WHAT IT DOES: Block edits to protected paths, run the formatter and linter after an edit, keep credentials out of the diff.",
+        "prompt": "Read the definition out loud, word for word. Ask: which control objective changed? (None.) Ask: what changed? (The shape, the handover, the enforcement.)",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• SAME CONTROLS, NEW ENFORCEMENT: Quality, security and traceability stay. They move from checklists and sign-offs into the pipeline, with automated handover between plays.",
         "dark": false,
         "steps": [
-          "Name one rule from your skill that must never be skipped."
+          "Name the six phases.",
+          "Name one control objective that did not change."
         ],
-        "expected": "The room can separate advisory from deterministic.",
-        "check": "Everyone can say why that rule is a hook and not a skill.",
+        "expected": "The room can say \"same objectives, new enforcement\" and explain it.",
+        "check": "Everyone can name the six phases and one unchanged control objective.",
         "layout": "cards"
       },
       {
-        "title": "Hooks · see the guardrail",
-        "kicker": "VISUAL · HOOKS",
-        "subtitle": "Every matching action passes through the hook: block, fix or allow.",
+        "title": "Day 5 · Agent-native SDLC loop",
+        "kicker": "SDLC · LOOP IMAGE",
+        "subtitle": "The line becomes a repeatable loop with AI at every point.",
         "cards": [],
-        "prompt": "Trace one file edit through the hook. Then point at where the full test suite lives and where the human approval lives, and say why neither belongs in the build loop.",
+        "prompt": "Use the picture to point at the loop. Then let participants place their own ticket on one phase and point at one human gate.",
         "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
-          "Trace one file edit through the diagram."
+          "Point at the loop. Place your ticket."
         ],
-        "expected": "Everyone can place block, fix and allow.",
-        "check": "Nobody puts a human approval prompt inside the build loop.",
+        "expected": "Everyone has placed a real ticket on one phase.",
+        "check": "Everyone can point at the phase their ticket is in and at one human gate.",
         "layout": "image",
-        "image": "hooks-guardrails.svg",
-        "imageAlt": "A skill feeds a hook box; each action leaves as block, fix or allow. Below, build, commit/PR and deploy show where hooks, the test suite and human approval live.",
-        "imageCaption": "Hooks live in the build. The full test suite belongs at the commit or PR. Human approval belongs at the deploy gate, because a prompt during the build stalls every parallel session."
+        "image": "ai-native-sdlc-line-and-loop.png",
+        "imageAlt": "Traditional SDLC line on the left and AI-native loop on the right around Claude, with plan, design, build, test, deploy and maintain.",
+        "imageCaption": "Traditional: the line. AI-native: the loop, with Claude helping at every point and humans directing and governing."
       },
       {
-        "title": "Hooks · how we use it",
-        "kicker": "HOW WE USE IT · HOOKS",
-        "subtitle": "One policy from your skill becomes a hook; everything heavy moves to a later gate.",
-        "cards": [
-          {
-            "title": "IN THE LAB",
-            "body": "The read-only ticket-coach: a hook blocks any Write outside participant-output/. The run log shows the block."
-          },
-          {
-            "title": "IN YOUR REPO",
-            "body": "What a human enforces in review is a smell: make it a lint, CI failure or hook."
-          },
-          {
-            "title": "NOT A HOOK",
-            "body": "The full test suite runs at commit or PR. Human approval belongs at the deploy gate."
-          }
-        ],
-        "prompt": "Let everyone pick one rule from the skill they built, decide hook or skill, and name the stage where it runs. Collect the hooks on the board.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• IN YOUR REPO: Every invariant a human enforces in review is a smell: promote it to a lint, a CI failure or a hook. Formatter after each edit, protected paths, a secret scan on the diff.\n• NOT A HOOK: The full test suite runs at the commit or PR. A human approval prompt belongs at the deploy gate.",
+        "title": "Day 5 · Agent-native SDLC six-phase application",
+        "kicker": "SDLC · SIX PHASES",
+        "subtitle": "Per phase: what the AI does first, what the engineer decides.",
+        "cards": [],
+        "prompt": "Walk the six rows. For each phase, name the AI's first pass and the decision that stays human. Then let everyone map one real ticket to a phase and a human decision.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
         "dark": false,
         "steps": [
-          "Pick one rule from your skill.",
-          "Decide: hook or skill.",
-          "Name the stage where it runs."
+          "Pick your ticket's phase.",
+          "Say the AI's first pass for it.",
+          "Say the decision that stays yours."
         ],
-        "expected": "Every participant has one rule classified as hook or skill, with a stage.",
-        "check": "No hook on the board runs the full test suite or asks a human for approval.",
+        "expected": "Every participant has mapped one real ticket to a phase and a human decision.",
+        "check": "Nobody names a phase where the human has no decision.",
+        "layout": "compare",
+        "columns": [
+          {
+            "title": "AI's role",
+            "items": [
+              "Plan · drafts the spec, sizes the work, flags dependencies",
+              "Design · proposes options against the spec",
+              "Build · generates and refactors; first-pass review on every change",
+              "Test · writes, runs and maintains the suite",
+              "Deploy · checks the gates and triggers the release",
+              "Maintain · watches, triages and files the follow-up"
+            ],
+            "foot": "AI does the first pass"
+          },
+          {
+            "title": "The engineer's role",
+            "items": [
+              "Plan · sets intent and priorities",
+              "Design · decides design and risk",
+              "Build · directs, constrains, accepts",
+              "Test · defines what correct means",
+              "Deploy · owns the rollback decision",
+              "Maintain · handles what AI escalates"
+            ],
+            "foot": "Humans decide at every gate"
+          }
+        ]
+      },
+      {
+        "title": "Day 5 · Plan · intent.md",
+        "kicker": "PLAN · 10:15–10:20",
+        "subtitle": "Name the observable WL-1026 result, required JSON fields, owners and no-send boundary before setup.",
+        "cards": [
+          {
+            "title": "WHAT",
+            "body": "The desired result in plain words."
+          },
+          {
+            "title": "WHY",
+            "body": "The reason, and who is affected."
+          },
+          {
+            "title": "BOUNDARIES",
+            "body": "Constraints, non-goals and OPEN questions. Unknowns are written down, not guessed."
+          }
+        ],
+        "prompt": "Read the support-triage guide and WL-1026. State the observable result, required fields, owners, stop rule and OPEN questions. Do not run a business action.",
+        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.",
+        "dark": false,
+        "steps": [
+          "Say the three parts: what, why, boundaries."
+        ],
+        "expected": "A written outcome, JSON contract, owner and stop rule.",
+        "check": "The facilitator accepts the outcome and boundary before setup.",
         "layout": "cards"
       },
       {
-        "title": "The example · same contract in Claude Code",
-        "kicker": "EXAMPLE · DAY 5 OF 5",
-        "subtitle": "Same files, same contract, different platform. Today the check runs before the claim.",
-        "cards": [
-          {
-            "title": "Starter",
-            "body": "scenarios/payment-reconciliation/starter · reconciliation-reviewer subagent · contract.md"
-          },
-          {
-            "title": "Hook",
-            "body": "Stop hook runs check_fixture.py · no \"reconciled\" claim before it prints PASS"
-          },
-          {
-            "title": "Subagents",
-            "body": "One reviewer per batch, six rows merged by you"
-          }
-        ],
-        "prompt": "Demo the starter: copy .claude, run the reviewer, show the hook line in the trace. Then rerun with one reviewer per batch and compare with the n8n table from yesterday.",
-        "steps": [
-          "cp -R scenarios/payment-reconciliation/starter/.claude .claude",
-          "Run the reviewer; save trace, table and hook output.",
-          "Rerun with one reviewer per batch and merge."
-        ],
-        "expected": "One Claude Code run with trace, table and hook result, plus the per-batch rerun.",
-        "check": "Same six classifications as n8n, or the difference is explained.",
-        "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
-        "dark": false
-      },
-      {
-        "title": "Claude Code demo · rebuild the same agent",
-        "kicker": "DEMO · 10:40–11:00",
-        "subtitle": "Same functional contract and input — now with a read-only subagent adapter",
-        "cards": [
-          {
-            "title": "Install",
-            "body": "mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md"
-          },
-          {
-            "title": "Invoke",
-            "body": "The lab README invocation, typed unchanged"
-          },
-          {
-            "title": "Verify",
-            "body": "python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md"
-          }
-        ],
-        "prompt": "From the lab root run mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md. Start Claude Code, type the lab README invocation unchanged, preview, save the accepted output to participant-output/ticket-101-preview.md, and run python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md. Point at the read-only tool adapter and record model, mode, access, and tools.",
-        "notes": "Zelfde functionele contract en input; Claude Code gebruikt de read-only adapter. Leg model, mode, toegang en tools vast.",
-        "dark": false,
-        "steps": [
-          "Install the starter.",
-          "Type the invocation.",
-          "Preview.",
-          "Run the checker."
-        ],
-        "expected": "The room has seen the same functional contract and input run in Claude Code with adapter settings recorded.",
-        "check": "The accepted preview was saved by the human; any agent write requires separate evidence.",
-        "layout": "cards",
-        "tagline": "SAME CONTRACT · DIFFERENT PLATFORM"
-      },
-      {
-        "title": "Individual · Claude Code ticket 101",
-        "kicker": "PRACTICE · 11:00–11:20 · 20 MIN",
-        "subtitle": "Card 1 · setup: subagent file, read-only tools, typed invocation",
-        "cards": [
-          {
-            "title": "Goal",
-            "body": "Same functional contract/input; adapter settings recorded"
-          },
-          {
-            "title": "Input",
-            "body": "Lab README · read-only starter subagent"
-          },
-          {
-            "title": "Result",
-            "body": "Claude Code baseline and checker line in the run log"
-          }
-        ],
-        "prompt": "On your own laptop, run mkdir -p .claude/agents && cp -n scenarios/ticket-agent/starter/.claude/agents/ticket-coach.md .claude/agents/ticket-coach.md, start Claude Code in the lab root, type the lab README invocation unchanged, preview the draft, save it yourself if you accept it to participant-output/ticket-101-preview.md, run python3 scenarios/ticket-agent/check_ticket.py --input scenarios/ticket-agent/ticket-inputs.md --ticket TICKET-OPS-101 --output participant-output/ticket-101-preview.md, and record model/mode, read-only tools, output, and checker line.",
-        "notes": "25 minuten alleen. De functionele contract/input blijven gelijk; leg de read-only adapter, model en mode vast. De agent schrijft niets; de mens slaat op.",
-        "dark": false,
-        "steps": [
-          "Create .claude/agents/ and copy the starter.",
-          "Start Claude Code in the lab root.",
-          "Type the lab README invocation unchanged.",
-          "Preview; save yourself; run the full checker command.",
-          "Record model/mode, read-only tools, output, checker line."
-        ],
-        "expected": "Claude Code baseline in the run log",
-        "check": "Preview happened before any save.",
-        "layout": "exercise",
-        "timer": 25,
-        "mascot": true,
-        "tagline": "YOUR TURN · 25 MINUTES · OWN LAPTOP"
-      },
-      {
-        "title": "Individual · first run and checker",
-        "kicker": "PRACTICE · 11:35–12:00 · 25 MIN",
-        "subtitle": "Card 2 · one run of the ticket-coach and the checker line",
-        "cards": [
-          {
-            "title": "Goal",
-            "body": "Card 2 · one run of the ticket-coach and the checker line"
-          },
-          {
-            "title": "Input",
-            "body": "Your ticket-coach subagent · TICKET-OPS-101 · scenarios/ticket-agent/check_ticket.py"
-          },
-          {
-            "title": "Result",
-            "body": "participant-output/ticket-101-preview.md plus a checker line and the trace"
-          }
-        ],
-        "prompt": "Invoke the ticket-coach subagent with the shared prompt, save the preview under participant-output/, run check_ticket.py and record the checker line with model, mode, files read, trace and OPEN items.",
-        "notes": "Timebox zichtbaar houden; OPEN noteren voor checks die niet gedraaid zijn.",
-        "dark": false,
-        "steps": [
-          "Invoke the subagent with the shared prompt.",
-          "Save the preview to participant-output/.",
-          "Run the checker and record its line.",
-          "Record model, mode, files read and every OPEN item."
-        ],
-        "expected": "A saved preview, a checker line and a trace per participant.",
-        "check": "No preview is recorded without its checker line.",
-        "layout": "exercise"
-      },
-      {
-        "title": "Day 5 route · after lunch",
-        "kicker": "FIXED SCHEDULE · 13:00–16:00",
-        "subtitle": "The same route, halfway. Everything before lunch is behind us.",
-        "cards": [
-          {
-            "title": "Morning",
-            "body": "10:00 recap · 10:15 theory: one contract, hooks · 10:40 Claude Code demo · 11:00 setup · 11:20 break · 11:35 first run and checker"
-          },
-          {
-            "title": "Lunch",
-            "body": "12:00–13:00"
-          },
-          {
-            "title": "Afternoon",
-            "body": "13:00 group review · 13:25 evaluator · 13:35 trace and improve · 14:00 break · 14:15 human gate · 14:35 handoff and reproduction · 15:15 subagents, optional E2E · 15:40 recap and close"
-          }
-        ],
-        "prompt": "Show the same route again. Point at where the room is now, then name the artifact and the acceptance check for the afternoon blocks.",
-        "notes": "No optional work may displace the core Claude Code, evaluator or handoff evidence.",
-        "dark": false,
-        "steps": [
-          "Point at where we are.",
-          "Name the next artifact.",
-          "Name its acceptance check."
-        ],
-        "expected": "Everyone knows which blocks remain and what each one has to produce.",
-        "check": "Everyone can name the next artifact and who accepts it.",
-        "layout": "cards",
-        "tagline": "SAME RHYTHM · INDIVIDUAL FIRST · GROUPS AFTER"
-      },
-      {
-        "title": "Groups · Claude output review",
-        "kicker": "REVIEW · 13:00–13:25 · 25 MIN",
-        "subtitle": "A fresh reader checks the Claude Code result against the contract",
-        "cards": [
-          {
-            "title": "Read",
-            "body": "The Claude Code output, checker line and trace summary"
-          },
-          {
-            "title": "Tell",
-            "body": "One observed difference or OPEN; one boundary that held"
-          },
-          {
-            "title": "Check",
-            "body": "Quote the evidence; do not infer platform causality"
-          }
-        ],
-        "prompt": "In groups of 3–4, give a fresh reader the Claude Code output, contract, checker line and trace summary. They report one observed difference or OPEN, one unchanged boundary and missing evidence.",
-        "notes": "Eén geobserveerd verschil of OPEN per groep; geen causaliteitsclaim.",
-        "dark": false,
-        "steps": [
-          "Swap.",
-          "State the difference.",
-          "Compare.",
-          "Record."
-        ],
-        "expected": "One observed trace difference per person.",
-        "check": "Differences are named as files, not opinions.",
-        "layout": "cards",
-        "tagline": "GROUPS OF 3–4 · ONE NAVIGATOR · AFTER THE INDIVIDUAL BLOCK"
-      },
-      {
-        "title": "Evaluator-optimizer",
-        "kicker": "CONCEPT · 13:25–13:30",
-        "subtitle": "Two roles on one contract: the producer writes, the evaluator only judges. Two rounds, then a person decides.",
+        "title": "Day 5 · Design · original flow to target contract",
+        "kicker": "DESIGN · SOURCE → TARGET",
+        "subtitle": "Map the attached n8n flow to the read-only Claude Code contract; keep the human gate last.",
+        "layout": "image",
+        "image": "support-triage-flow.svg",
+        "imageAlt": "Claude Code target: WL-1026 enters a main session, which calls customer reply and risk specialists; a separate validator checks JSON before the priority route and human gate.",
+        "imageCaption": "The attached n8n flow is the source map. Its Code node only calls JSON.parse; the Claude Code target adds preserved fields, strict validation and a draft-only human gate.",
         "cards": [],
-        "prompt": "Walk the loop: produce → evaluate → PASS or REVISE with numbered instructions → optimize (apply only those) → evaluate again, at most two rounds, then the human gate. The evaluator sees what a colleague sees: output and sources, not reasoning.",
-        "notes": "Bron: platform.claude.com/cookbook/patterns-agents-evaluator-optimizer. Evaluator beoordeelt, herschrijft niet.",
-        "dark": false,
+        "prompt": "Walk the attached source left to right: ticket, coordinator, both specialists, parser, Switch and draft actions. Then mark the Claude Code target: main session, both scoped specialists, separate strict validator and human gate.",
         "steps": [
-          "Produce.",
-          "Evaluate: five criteria.",
-          "REVISE → numbered instructions.",
-          "Optimize: apply only those.",
-          "Re-evaluate, max two rounds.",
-          "Human gate."
+          "Show ticket_id, customer and message.",
+          "Show both specialist calls; they are always called.",
+          "Mark the source parser as parsing only; validate priority and preserved fields in the Claude target.",
+          "Stop at the draft and human gate."
         ],
-        "expected": "Participants can name the two roles and say which one is allowed to change the text.",
-        "check": "Nobody expects the evaluator to fix the output, and nobody runs a third round.",
-        "items": [
-          {
-            "label": "Produce",
-            "caption": "your agent",
-            "detail": "Your Day 4 output, saved by you.",
-            "lane": "Your agent · produces"
-          },
-          {
-            "label": "Evaluate",
-            "caption": "evaluator subagent",
-            "detail": "Shape · grounding · no invented facts · OPEN discipline · boundary. It reports; it does not edit.",
-            "lane": "Evaluator · judges, never rewrites"
-          },
-          {
-            "label": "Verdict",
-            "caption": "PASS or REVISE",
-            "detail": "REVISE carries at most three numbered, testable instructions with quoted evidence.",
-            "lane": "Evaluator · judges, never rewrites"
-          },
-          {
-            "label": "Optimize",
-            "caption": "re-prompt with ONLY those",
-            "detail": "Your agent again: first prompt + 'Apply these instructions:' + the list verbatim.",
-            "lane": "Your agent · produces"
-          },
-          {
-            "label": "Re-evaluate",
-            "caption": "round 2 is the last",
-            "detail": "Round 2 is the last one. Then stop, whatever the verdict.",
-            "lane": "Evaluator · judges, never rewrites"
-          },
-          {
-            "label": "Human gate",
-            "caption": "accept · park · redirect",
-            "detail": "You decide. PASS is not permission.",
-            "lane": "You · decide",
-            "last": true
-          }
-        ],
-        "detail": "The evaluator never edits the output. It returns at most three numbered instructions, and your agent applies them.",
-        "tagline": "TWO ROLES · ONE CONTRACT · BOUNDED ROUNDS",
-        "lanes": true
+        "expected": "The room can name the same contract at each n8n and Claude Code boundary.",
+        "check": "Both specialists run; sending and refunding remain outside the exercise.",
+        "notes": "Bron: de aangeleverde n8n-export. De Code-node doet alleen JSON.parse; bron-schema-validatie gebeurt daar niet. Markeer daarom de strikte JSON-check en de bewaarde ticket_id/risk_note als Claude Code-target, vóór Switch en menselijke gate."
       },
       {
-        "title": "Demo · evaluator on a weak output",
-        "kicker": "DEMO · 13:30–13:35",
-        "subtitle": "A REVISE verdict with instructions you could apply",
-        "cards": [
-          {
-            "title": "Input",
-            "body": "A prepared triage report with an invented owner"
-          },
-          {
-            "title": "Run",
-            "body": "The option's evaluator prompt, unchanged"
-          },
-          {
-            "title": "Read",
-            "body": "Failing criterion, quoted evidence, numbered instructions; then check_menu_output.py --agent evaluator"
-          }
-        ],
-        "prompt": "Run the evaluator on the prepared weak output. Read the verdict shape aloud and run the evaluator checker on the saved verdict.",
-        "notes": "Voorbereide zwakke output gebruiken.",
-        "dark": false,
-        "steps": [
-          "Run.",
-          "Read the FAIL.",
-          "Read the instructions.",
-          "Checker."
-        ],
-        "expected": "Everyone has seen a REVISE with testable instructions.",
-        "check": "The verdict passes the evaluator checker.",
-        "layout": "cards",
-        "tagline": "QUOTE THE EVIDENCE FOR EVERY FAIL"
-      },
-      {
-        "title": "Individual · trace and improve",
-        "kicker": "PRACTICE · 13:35–14:00 · 25 MIN",
-        "subtitle": "Card 3 · read the trace, improve one instruction, rerun the checker",
-        "cards": [
-          {
-            "title": "Goal",
-            "body": "lab-notes/handoff-day-5.md"
-          },
-          {
-            "title": "Input",
-            "body": "templates/handoff.md · both traces · checker and evaluator lines"
-          },
-          {
-            "title": "Result",
-            "body": "A handoff file"
-          }
-        ],
-        "prompt": "Work alone for 40 minutes. Complete templates/handoff.md with option, exact prompts, version and model, files read from the trace, checker and evaluator lines, both trace file names, OPEN items and the one command to reproduce. Save as lab-notes/handoff-day-5.md.",
-        "notes": "Overdracht is klaar als iemand anders het kan nadoen.",
-        "dark": false,
-        "steps": [
-          "Option, exact prompts, Claude Code version, model shown.",
-          "Files read (from the trace); checker + evaluator lines; both trace names.",
-          "What remains OPEN.",
-          "The one command to reproduce."
-        ],
-        "expected": "A handoff file",
-        "check": "The handoff names files and commands, not memories.",
-        "layout": "exercise",
-        "timer": 40,
-        "mascot": true,
-        "tagline": "YOUR TURN · 40 MINUTES · OWN LAPTOP"
-      },
-      {
-        "title": "The example · before and after",
-        "kicker": "EXAMPLE · VALUE",
-        "subtitle": "Day 2 by hand next to Day 4 with an agent and a gate. Fill it with the squad's own numbers.",
-        "layout": "compare",
-        "cards": [],
-        "columns": [
-          {
-            "title": "Day 2 · by hand",
-            "items": [
-              "Minutes · your worksheet time",
-              "Traps caught · count them",
-              "Evidence · a worksheet only you can read",
-              "Rerun · start over"
-            ],
-            "foot": "Human does the work"
-          },
-          {
-            "title": "Day 4 · agent + gate",
-            "items": [
-              "Minutes · run time plus your review",
-              "Traps caught · the gate decides",
-              "Evidence · trace, table, hook result",
-              "Rerun · same files, same contract, same check"
-            ],
-            "foot": "Human verifies the work"
-          }
-        ],
-        "tagline": "THE BOTTLENECK MOVED TO VERIFICATION",
-        "prompt": "Fill both columns live. Ask where the minutes went today: summing rows or checking findings? Then ask what the gate caught that the agent did not.",
-        "steps": [
-          "Fill the two columns with your own numbers.",
-          "Say where your minutes went today.",
-          "Name the one thing the gate caught."
-        ],
-        "expected": "Both columns filled in with the squad's own numbers.",
-        "check": "Nobody claims speed without naming a trap the gate caught.",
-        "notes": "Vaste draad: één voorbeeld, vijf dagen. Wijs de stap van vandaag aan op het beeld, noem de drie valkuilen, en laat de groep zeggen welke bewijsregel vandaag oplevert.",
-        "dark": false
-      },
-      {
-        "title": "Human gate · accept the core result",
-        "kicker": "GATE · 14:15–14:35 · 20 MIN",
-        "subtitle": "Accept, return or leave OPEN before the optional E2E issue",
-        "cards": [
-          {
-            "title": "Record",
-            "body": "Trace, checker line, handoff per person"
-          },
-          {
-            "title": "Decide",
-            "body": "PASS / FAIL / OPEN with one quoted line"
-          },
-          {
-            "title": "Then",
-            "body": "Card 4 · handoff and reproduction, 14:35"
-          }
-        ],
-        "prompt": "Each person records trace, checker line and handoff, then decides PASS / FAIL / OPEN with one quoted line. The optional end-to-end issue starts only after a PASS.",
-        "notes": "Timebox zichtbaar houden; OPEN noteren voor checks die niet gedraaid zijn.",
-        "dark": false,
-        "steps": [
-          "Record trace, checker line and handoff.",
-          "Decide with one quoted line.",
-          "Only after PASS: pick the optional E2E issue."
-        ],
-        "expected": "A decision per participant with a quoted reason.",
-        "check": "No accepted result lacks a trace and a checker line."
-      },
-      {
-        "title": "Individual · handoff and reproduction",
-        "kicker": "PRACTICE · 14:35–15:15 · 40 MIN",
-        "subtitle": "Card 4 · complete templates/handoff.md; a neighbour reproduces it in ten minutes",
-        "cards": [
-          {
-            "title": "Rotate",
-            "body": "Handoffs move one seat; the reader follows the text silently"
-          },
-          {
-            "title": "Report",
-            "body": "Reproduced / partially / blocked, plus every hesitation"
-          },
-          {
-            "title": "Fix",
-            "body": "Author fixes wording only, never scope"
-          }
-        ],
-        "prompt": "Rotate handoffs one seat. Readers follow the text on their own laptop for ten minutes, then report status and hesitations. Authors fix wording in the file.",
-        "notes": "Lezer volgt letterlijk.",
-        "dark": false,
-        "steps": [
-          "Rotate.",
-          "Reproduce 10 min.",
-          "Report.",
-          "Fix wording."
-        ],
-        "expected": "Reproduction status per handoff.",
-        "check": "Hesitations are fixed in the file, not explained aloud.",
-        "layout": "cards",
-        "tagline": "GROUPS OF 3–4 · ONE NAVIGATOR · AFTER THE INDIVIDUAL BLOCK"
-      },
-      {
-        "title": "What are parallel sessions and subagents?",
-        "kicker": "CONCEPT DEFINITION · SUBAGENTS",
+        "title": "Day 5 · Subagents definition",
+        "kicker": "SUBAGENTS · DEFINITION",
         "subtitle": "One engineer drives several streams of work at once.",
         "cards": [
           {
@@ -3380,7 +3024,7 @@
             "body": "Steering and reviewing all of them. The ceiling is how many streams one person can review properly."
           }
         ],
-        "prompt": "Say one sentence per card. Ask: where does the ticket-coach subagent from the lab fit, and what would a second session work on?",
+        "prompt": "Name the difference between a parallel session and a scoped helper. The main Claude Code coordinator owns this route; Customer Reply Agent and Risk Agent remain scoped specialists.",
         "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• PARALLEL SESSION: Another full Claude Code instance on a separate task in its own git worktree. Sessions know nothing about each other; the engineer is the only thing they share.\n• SUBAGENT: A scoped helper inside one session with its own context window and tool limits. Suits jobs that recur across tasks, such as verifying the app runs.",
         "dark": false,
         "steps": [
@@ -3391,8 +3035,8 @@
         "layout": "cards"
       },
       {
-        "title": "Subagents · see the streams",
-        "kicker": "VISUAL · SUBAGENTS",
+        "title": "Day 5 · Subagents visual",
+        "kicker": "SUBAGENTS · VISUAL",
         "subtitle": "Sessions in their own worktrees; subagents inside a session; governance from the repo.",
         "cards": [],
         "prompt": "Point at the engineer, one session, one subagent and the governance bar. Ask: what does every session read first? (CLAUDE.md.) What do sessions never share? (Each other's context.)",
@@ -3405,12 +3049,12 @@
         "check": "Everyone can name what every session reads first and what sessions never share.",
         "layout": "image",
         "image": "parallel-sessions-subagents.svg",
-        "imageAlt": "An engineer steers three sessions, each in its own worktree; one session delegates to verifier, researcher and simplifier subagents; a governance bar names CLAUDE.md, hooks and permissions.",
+        "imageAlt": "An engineer steers three sessions, each in its own worktree; one session delegates to verifier, researcher and simplifier subagents; a governance bar names CLAUDE.md and permissions.",
         "imageCaption": "Traditional: one engineer, one task, waiting on builds. AI-native: several sessions in flight, repeated jobs as subagents, the engineer orchestrating."
       },
       {
-        "title": "Subagents · how we use it",
-        "kicker": "HOW WE USE IT · SUBAGENTS",
+        "title": "Day 5 · Subagents usage",
+        "kicker": "SUBAGENTS · HOW WE USE IT",
         "subtitle": "Split by files, one worktree per task, repeated jobs as checked-in subagents.",
         "cards": [
           {
@@ -3418,76 +3062,433 @@
             "body": "Different files: own worktree (claude --worktree feature-auth). Shared files: one session, in turn. Start with two."
           },
           {
-            "title": "TURN REPEATS INTO SUBAGENTS",
-            "body": "A markdown file in .claude/agents/: name, when to use it, allowed tools. Verifier, researcher, simplifier. In git."
+            "title": "KEEP THE CORE ROUTE SCOPED",
+            "body": "This route has exactly two specialists: Customer Reply Agent and Risk Agent. Add neither another nor an optional specialist."
           },
           {
             "title": "GOVERN FROM THE REPO",
-            "body": "CLAUDE.md, hooks and permissions apply to every session; output is logged and attributed. Measure while review quality holds."
+            "body": "CLAUDE.md and permissions apply to every session; output is logged and attributed. Measure while review quality holds."
           }
         ],
-        "prompt": "Open .claude/agents/ticket-coach.md in the lab: name, description, tools. Show the verifier example: 'Start the app, exercise the changed behaviour and the two nearest flows, report what you ran and saw, do not fix anything.' Ask each participant which repeated job they would make a subagent and which task they would run in a second worktree.",
+        "prompt": "Open the participant lab definition. Name one repeated verification job for a scoped specialist and one task that belongs in a separate worktree. Keep the core route in the main session.",
         "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• SPLIT THE WORK: Tasks that touch different files get their own worktree: claude --worktree feature-auth. Tasks that share files run in one session, one after another. Start with two or three.\n• TURN REPEATS INTO SUBAGENTS: A markdown file in .claude/agents/ with a name, when to use it, and the tools it may touch: verifier, researcher, simplifier. Check them into git.\n• GOVERN FROM THE REPO: CLAUDE.md, hooks and permission settings apply to every session; output is logged and attributed. Measure sessions per engineer while review quality holds, and merged changes against rework.",
         "dark": false,
         "steps": [
-          "Open the ticket-coach subagent definition.",
-          "Name one repeated job for a subagent and its tools.",
-          "Name one task for a second worktree."
+          "Read CLAUDE.md and the participant guide.",
+          "Name Customer Reply Agent and Risk Agent.",
+          "Name one task for a separate worktree."
         ],
-        "expected": "Every participant has one subagent idea with its tools and one parallel task.",
-        "check": "No subagent on the board has more tools than its job needs.",
+        "expected": "Every participant can name the two required specialists and one separate task.",
+        "check": "The core route has exactly two specialists and no extra tool scope.",
         "layout": "cards",
-        "tagline": "SHORT PROMPTS → EIGHT AGENTS → SHORT PROMPTS AGAIN · THE ELITE RETURN TO SIMPLE"
+        "tagline": "TWO REQUIRED SPECIALISTS · ONE MAIN SESSION · REVIEW BEFORE ACTION"
       },
       {
-        "title": "Optional · own team E2E issue",
+        "title": "Day 5 · demo · n8n to Claude Code",
+        "kicker": "DEMO · 10:35–10:55 · 20 MIN",
+        "subtitle": "Carry the n8n contract into the participant lab and inspect one read-only Claude Code result.",
+        "cards": [
+          {
+            "title": "Input",
+            "body": "WL-1026 · Maarten · charged twice"
+          },
+          {
+            "title": "Contract",
+            "body": "Strict JSON; preserve ticket_id and risk_note"
+          },
+          {
+            "title": "Boundary",
+            "body": "Read-only preview; no send or refund"
+          }
+        ],
+        "prompt": "Open the support-triage README in the participant lab. Set up exactly two required specialists — Customer Reply Agent and Risk Agent — before the first run, invoke the main coordinator with WL-1026, preview the first JSON, and record the command and files read.",
+        "notes": "Gebruik de participant README als uitvoerbare bron. Configureer exact twee specialists vóór de eerste run; laat daarna de kleine zichtbare input en output zien.",
+        "dark": false,
+        "steps": [
+          "Open the participant guide.",
+          "Run the documented read-only command.",
+          "Preview the JSON before saving.",
+          "Record command, files and OPEN items."
+        ],
+        "expected": "The room has seen one main-session Claude Code result mapped to the n8n contract.",
+        "check": "The preview keeps WL-1026 and does not claim a business action.",
+        "layout": "cards",
+        "tagline": "SAME CONTRACT · DIFFERENT PLATFORM"
+      },
+      {
+        "title": "Day 5 · individual · coordinator setup",
+        "kicker": "PRACTICE · 10:55–11:20 · 25 MIN",
+        "subtitle": "Use the attached n8n workflow as the contract source; set up the main Claude Code coordinator in the participant lab.",
+        "cards": [
+          {
+            "title": "Goal",
+            "body": "Main-session Claude Code coordinator"
+          },
+          {
+            "title": "Source",
+            "body": "Attached n8n export and participant guide"
+          },
+          {
+            "title": "Boundary",
+            "body": "Read-only tools; specialists stay scoped"
+          }
+        ],
+        "prompt": "In the participant lab, follow the support-triage README to set up the main coordinator and exactly two required custom specialists — Customer Reply Agent and Risk Agent — before the first run. Use WL-1026 exactly; keep tools read-only, and record model, mode, files and any OPEN access issue.",
+        "notes": "25 minuten individueel. De attached n8n-flow is referentie; bouw de Claude coordinator in de hoofd sessie. Customer Reply en Risk zijn exact de twee verplichte custom specialists vóór de eerste run.",
+        "dark": false,
+        "steps": [
+          "Open the participant guide.",
+          "Read CLAUDE.md and create the main-session coordinator.",
+          "Add only the two scoped specialists.",
+          "Record model, mode, tools and OPEN items."
+        ],
+        "expected": "A Claude Code setup ready for the first visible result.",
+        "check": "The main session owns coordination; specialist nesting is unnecessary for this route.",
+        "layout": "exercise",
+        "timer": 25,
+        "mascot": true,
+        "tagline": "YOUR TURN · 25 MINUTES · WL-1026"
+      },
+      {
+        "title": "Day 5 · break · 11:20–11:35",
+        "kicker": "BREAK · 11:20–11:35 · 15 MIN",
+        "subtitle": "Step away from the screen; return ready to run the coordinator.",
+        "cards": [
+          {
+            "title": "RESET",
+            "body": "Leave the setup visible and return at 11:35."
+          }
+        ],
+        "prompt": "Take the 15-minute break. Leave the setup visible and return at 11:35 for the first run.",
+        "notes": "15 minuten pauze. Houd de vaste grens aan en laat de setup staan voor de eerste run.",
+        "dark": true,
+        "steps": [
+          "Step away.",
+          "Return at 11:35."
+        ],
+        "expected": "Everyone returns ready for the first run.",
+        "check": "The first run starts at 11:35, with exactly two specialists already configured.",
+        "layout": "cards",
+        "timer": 15
+      },
+      {
+        "title": "Day 5 · individual · first result and checker",
+        "kicker": "PRACTICE · 11:35–12:00 · 25 MIN",
+        "subtitle": "Run the main coordinator, show a first small result, then verify both specialists and the strict JSON contract.",
+        "cards": [
+          {
+            "title": "Shape",
+            "body": "Strict JSON with priority and mapped action"
+          },
+          {
+            "title": "Identity",
+            "body": "ticket_id stays WL-1026"
+          },
+          {
+            "title": "Safety",
+            "body": "risk_note stays; action remains a draft"
+          }
+        ],
+        "prompt": "Confirm exactly two required specialists — Customer Reply Agent and Risk Agent — then invoke the main coordinator with WL-1026. Preview the first result and confirm both were called. Normalize and validate strict JSON: priority low/medium/high, mapped action, ticket_id WL-1026, preserved non-empty risk_note, no send or refund.",
+        "notes": "Configureer en benoem exact twee specialists vóór de eerste run. Laat daarna één klein resultaat zien en controleer beide specialist-calls. Geen losse specialist-run en geen echte actie.",
+        "dark": false,
+        "steps": [
+          "Run the main coordinator.",
+          "Show the first JSON result.",
+          "Confirm both specialists were called.",
+          "Record checker output and OPEN items."
+        ],
+        "expected": "A saved Claude Code JSON result and a reproducible validation line.",
+        "check": "No result is accepted without strict shape and identity checks.",
+        "layout": "exercise",
+        "timer": 25,
+        "mascot": true,
+        "tagline": "YOUR TURN · 25 MINUTES · WL-1026"
+      },
+      {
+        "title": "Day 5 · lunch · 12:00–13:00",
+        "kicker": "LUNCH · 12:00–13:00 · 60 MIN",
+        "subtitle": "Take the full lunch break; the afternoon route starts at 13:00.",
+        "cards": [
+          {
+            "title": "RETURN",
+            "body": "Be back at 13:00 for review against the translated contract."
+          }
+        ],
+        "prompt": "Take the 60-minute lunch break. Return at 13:00 for the group review.",
+        "notes": "60 minuten lunch. Start de review exact om 13:00.",
+        "dark": true,
+        "steps": [
+          "Take lunch.",
+          "Return at 13:00."
+        ],
+        "expected": "Everyone returns ready for the afternoon review.",
+        "check": "The group review starts at 13:00.",
+        "layout": "cards",
+        "timer": 60
+      },
+      {
+        "title": "Day 5 route · after lunch",
+        "kicker": "FIXED SCHEDULE · 13:00–16:00",
+        "subtitle": "The same route, halfway. Everything before lunch is behind us.",
+        "cards": [
+          {
+            "title": "Review + Test",
+            "body": "13:00–13:25 review · 13:25–13:35 demo · 13:35–14:00 individual"
+          },
+          {
+            "title": "Gate + Deploy",
+            "body": "14:00–14:15 break · 14:15–14:35 Test gate · 14:35–15:15 local handoff"
+          },
+          {
+            "title": "Close",
+            "body": "15:15–15:40 optional E2E · 15:40–16:00 Maintain and close"
+          }
+        ],
+        "prompt": "Show the same route again. Point at where the room is now, then name the artifact and acceptance check for each afternoon block.",
+        "notes": "Toon de route opnieuw na de lunch. Houd review, demo, individuele test, gate, lokale overdracht en optionele E2E in deze volgorde.",
+        "dark": false,
+        "steps": [
+          "Point at where we are.",
+          "Name the next artifact.",
+          "Name its acceptance check."
+        ],
+        "expected": "Everyone knows which blocks remain and what each one has to produce.",
+        "check": "Everyone can name the next artifact and who accepts it.",
+        "layout": "cards"
+      },
+      {
+        "title": "Day 5 · review · n8n output",
+        "kicker": "REVIEW · 13:00–13:25 · 25 MIN",
+        "subtitle": "A fresh reader reviews WL-1026 against the contract and names evidence gaps.",
+        "cards": [
+          {
+            "title": "Read",
+            "body": "Raw output, normalized JSON and run log"
+          },
+          {
+            "title": "Check",
+            "body": "Fields, enum, route and specialist evidence"
+          },
+          {
+            "title": "Record",
+            "body": "One quoted gap or OPEN per result"
+          }
+        ],
+        "prompt": "Swap results in groups of 3–4. Check JSON shape, WL-1026 identity, both specialist calls, priority-to-action mapping, risk_note and the no-send boundary. Record one observed gap or OPEN.",
+        "notes": "Eén geobserveerd verschil per groep. Vraag naar node- of runlogbewijs; geen causaliteitsclaim over model of platform.",
+        "dark": false,
+        "steps": [
+          "Swap.",
+          "Check the contract.",
+          "Quote evidence.",
+          "Record PASS, FAIL or OPEN."
+        ],
+        "expected": "One evidence-backed review per participant.",
+        "check": "Reviewers distinguish an observed gap from a platform hypothesis.",
+        "layout": "cards",
+        "tagline": "GROUPS OF 3–4 · ONE NAVIGATOR · AFTER THE INDIVIDUAL BLOCK"
+      },
+      {
+        "title": "Day 5 · demo · strict JSON gate",
+        "kicker": "DEMO · 13:25–13:35 · 10 MIN",
+        "subtitle": "A deliberately weak JSON result makes the Test boundary visible before individual improvement.",
+        "cards": [
+          {
+            "title": "Input",
+            "body": "Same WL-1026 JSON"
+          },
+          {
+            "title": "Build",
+            "body": "Read-only Claude Code agent"
+          },
+          {
+            "title": "Evidence",
+            "body": "Prompt, files read and first result"
+          }
+        ],
+        "prompt": "Show a prepared result with a missing risk_note or invalid priority. Run the strict validator, quote the failure, and stop before any send or refund.",
+        "notes": "Hier controleert Test de JSON-boundary. Build en de eerste run gebeurden vóór de lunch; bespreek nu de volledige specialist- en routecontracten.",
+        "dark": false,
+        "steps": [
+          "Copy the guide prompt.",
+          "Run once in read-only mode.",
+          "Show the first JSON result.",
+          "List specialists and routing."
+        ],
+        "expected": "Participants can name the invalid field and the gate that stops it.",
+        "check": "The validator rejects the weak result before any draft action.",
+        "timer": 10
+      },
+      {
+        "title": "Day 5 · individual · trace and improve",
+        "kicker": "PRACTICE · 13:35–14:00 · 25 MIN",
+        "subtitle": "Test the Claude Code result, improve one instruction, and keep the before-and-after evidence.",
+        "cards": [
+          {
+            "title": "Test",
+            "body": "JSON shape, identity, route and boundary"
+          },
+          {
+            "title": "Improve",
+            "body": "One instruction only"
+          },
+          {
+            "title": "Evidence",
+            "body": "Before, after, trace and OPEN items"
+          }
+        ],
+        "prompt": "Run the strict JSON checks on your Claude Code result, compare with the n8n output, and improve exactly one instruction. Save both results, trace names, checker lines and OPEN items.",
+        "notes": "25 minuten. Eén instructie wijzigen; beide resultaten bewaren. Geen reparatie van code of workflow buiten deze scope.",
+        "dark": false,
+        "steps": [
+          "Run the checker.",
+          "Compare with n8n.",
+          "Change one instruction.",
+          "Rerun and save both traces."
+        ],
+        "expected": "A tested Claude Code result with a bounded improvement.",
+        "check": "The change and its observed effect are recorded separately from assumptions.",
+        "layout": "exercise",
+        "timer": 25,
+        "mascot": true,
+        "tagline": "YOUR TURN · 25 MINUTES · WL-1026"
+      },
+      {
+        "title": "Day 5 · break · 14:00–14:15",
+        "kicker": "BREAK · 14:00–14:15 · 15 MIN",
+        "subtitle": "Step away from the screen; return for the human Test gate.",
+        "cards": [
+          {
+            "title": "RESET",
+            "body": "Leave the before-and-after evidence ready for review."
+          }
+        ],
+        "prompt": "Take the 15-minute break. Return at 14:15 for the human Test gate.",
+        "notes": "15 minuten pauze. Houd de before-and-after evidence klaar voor de menselijke Test gate.",
+        "dark": true,
+        "steps": [
+          "Step away.",
+          "Return at 14:15."
+        ],
+        "expected": "Everyone returns ready for the human Test gate.",
+        "check": "The human Test gate starts at 14:15.",
+        "layout": "cards",
+        "timer": 15
+      },
+      {
+        "title": "Day 5 · Test gate · accept the draft",
+        "kicker": "TEST · 14:15–14:35 · 20 MIN",
+        "subtitle": "A person decides whether the evidence supports a draft, an OPEN item or a return.",
+        "cards": [
+          {
+            "title": "Evidence",
+            "body": "Trace, strict checker and preserved fields"
+          },
+          {
+            "title": "Decision",
+            "body": "PASS, FAIL or OPEN with a quote"
+          },
+          {
+            "title": "Boundary",
+            "body": "Draft only; no send or refund"
+          }
+        ],
+        "prompt": "For each participant, read the n8n and Claude traces, checker lines and JSON. Decide PASS / FAIL / OPEN with one quoted line. A pass permits a draft review only, never a real send or refund.",
+        "notes": "Maak de menselijke beslissing expliciet. Geldige JSON is geen actie-bewijs: verwerp ‘I've logged your report’ zonder quote of trace. PASS is toestemming om een draft te beoordelen, niet om te verzenden of terug te betalen.",
+        "dark": false,
+        "steps": [
+          "Read both traces.",
+          "Recheck the JSON.",
+          "Decide PASS, FAIL or OPEN.",
+          "Name the next human action."
+        ],
+        "expected": "A documented human gate per participant.",
+        "check": "No PASS lacks a checker line, trace and preserved risk_note."
+      },
+      {
+        "title": "Day 5 · Deploy · local colleague handoff",
+        "kicker": "DEPLOY · 14:35–15:15 · 40 MIN",
+        "subtitle": "A local colleague reproduces the draft from the written run record.",
+        "cards": [
+          {
+            "title": "Handoff",
+            "body": "Guide, input, prompts, settings and traces"
+          },
+          {
+            "title": "Reader",
+            "body": "Colleague reproduces the local draft"
+          },
+          {
+            "title": "Boundary",
+            "body": "No external send, refund or ticket write"
+          }
+        ],
+        "prompt": "Complete templates/handoff.md with guide URL, input JSON, exact n8n and Claude prompts, model and memory settings, files read, checker lines, gate decision, OPEN items and a local reproduction command. A colleague follows it; no real send or refund.",
+        "notes": "Deploy betekent hier overdracht aan een lokale collega. Laat de lezer letterlijk volgen; er is geen productie-release en geen business-systeemactie.",
+        "dark": false,
+        "steps": [
+          "Write the handoff.",
+          "Rotate it one seat.",
+          "Reader reproduces locally.",
+          "Record hesitation or OPEN."
+        ],
+        "expected": "A local colleague can reproduce the same draft or name the blocker.",
+        "check": "The handoff names commands and evidence, not a memory-based summary.",
+        "layout": "cards",
+        "timer": 40,
+        "tagline": "GROUPS OF 3–4 · ONE NAVIGATOR · AFTER THE INDIVIDUAL BLOCK"
+      },
+      {
+        "title": "Day 5 · optional E2E · own issue",
         "kicker": "OPTIONAL · 15:15–15:40 · 25 MIN",
-        "subtitle": "Only after a PASS at the gate: one fictional reconciliation issue, intent and gates first",
+        "subtitle": "Only after the WL-1026 gate: carry the contract to one fictional issue if time remains.",
         "cards": [
           {
             "title": "Pick",
-            "body": "One fictional reconciliation issue; write its intent and acceptance gates first"
+            "body": "One fictional support issue"
           },
           {
             "title": "Run",
-            "body": "The same read-only agent, same checker, evidence line"
+            "body": "Same contract and strict JSON check"
           },
           {
             "title": "Stop",
-            "body": "At the human gate; no real Jira, GitLab or Confluence records"
+            "body": "Human gate; no real action"
           }
         ],
-        "prompt": "Only if the core gate passed: choose one fictional issue, write intent and acceptance gates, run the same read-only agent, stop at the human gate.",
-        "notes": "Timebox zichtbaar houden; OPEN noteren voor checks die niet gedraaid zijn.",
+        "prompt": "Only after PASS or an explicit OPEN gate: choose one fictional support issue, write intent and acceptance checks, run the same read-only flow, and stop at the human gate.",
+        "notes": "Alleen doen als de core evidence compleet is. Geen echte supporttools, klantrecords, sends, refunds of escalaties.",
         "dark": false,
         "steps": [
-          "Write intent and acceptance gates first.",
-          "Run the same read-only agent.",
+          "Write intent and checks.",
+          "Run the read-only flow.",
+          "Validate JSON.",
           "Stop at the human gate."
         ],
-        "expected": "One own-team issue with intent, gates and a first run, or a written reason it was skipped.",
-        "check": "No real team system was written to."
+        "expected": "One fictional transfer draft or a recorded reason it was skipped.",
+        "check": "No external system is written and no real customer action is proposed."
       },
       {
-        "title": "Check-out and reflection",
+        "title": "Day 5 · Maintain · close and reflect",
         "kicker": "CLOSE · 15:40–16:00 · 20 MIN",
         "subtitle": "Made, learned, can do — then the MOB reflection",
         "cards": [
           {
-            "title": "Individual",
-            "body": "Made / Learned / Can do / one safe next application"
+            "title": "Made",
+            "body": "A validated JSON draft and local handoff"
           },
           {
-            "title": "MOB",
-            "body": "Day 5 blocker and the Day 1 baseline Kahoot"
+            "title": "Learned",
+            "body": "One evidence-backed adapter observation"
           },
           {
-            "title": "Recap",
-            "body": "Daily recap linked; progress.md observed results only"
+            "title": "Can do",
+            "body": "Run the contract again with a human gate"
           }
         ],
-        "prompt": "Each person writes Made, Learned, Can do, and one safe next application. Revisit the Day 5 blocker with the MOB, repeat the baseline Kahoot/wordcloud, and update the daily recap and progress.md with observed results only.",
-        "notes": "Sluit af met de delta ten opzichte van dag 1.",
+        "prompt": "Each person writes Made, Learned, Can do and one Maintain action: feed an observed run-log lesson or OPEN item back into intent. Record only what happened.",
+        "notes": "Sluit af met de zes fasen. Laat Maintain terugwijzen naar intent en de runlog; onverifieerde model- of productclaims blijven OPEN.",
         "dark": true,
         "steps": [
           "Made / Learned / Can do.",
@@ -3495,8 +3496,8 @@
           "Repeat Kahoot + wordcloud.",
           "Recap file + progress.md."
         ],
-        "expected": "A truthful close with recap and next step.",
-        "check": "Every uncertainty is sourced or OPEN.",
+        "expected": "A truthful close and one maintained next action per participant.",
+        "check": "Every uncertainty has a source, command or OPEN label.",
         "layout": "cards",
         "tagline": "PREPARE · APPROVE · EXECUTE · ESCALATE WHEN AUTHORITY OR EVIDENCE IS MISSING"
       }

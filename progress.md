@@ -17,6 +17,7 @@ This file is a current-state board, not a diary. Keep one short entry per fact a
 - Training outcome: `OPEN — no live outcome recorded yet`.
 - Current phase: `Design` and `Build` complete for the route update; public Site `Test` and `Deploy` verified on 2026-09-11 for version 20.
 - Last independently rechecked artifact: site diff reviewed twice by an independent reviewer lane on 2026-09-11; all findings fixed.
+- Squad 1 Day 5 preparation (2026-09-16): canonical deck/workbook now use the fictional `WL-1026` support-triage case, attached n8n source flow, main-session Claude Code coordinator, two always-called specialists, strict JSON preservation checks, and a human gate; evidence: [Day 5 guide](days/day-5.md), [canonical deck](presentations/day-decks.json), [participant guide](https://github.com/RyanLisse/aetherlink-agent-lab/tree/main/scenarios/support-triage/README.md).
 
 ## Blockers
 
@@ -24,12 +25,13 @@ This file is a current-state board, not a diary. Keep one short entry per fact a
 | --- | --- | --- | --- | --- |
 | Public Site publication | Version 20 now serves commit `d46daac`; live assets match the site checkout | Ryan | Sites deployment `appgdep_6aa44b48ebc481919ee4544d49158518`, public URL | `DONE` |
 | Live n8n / Claude Code model runs never executed in this repo | Synthetic examples do not prove a model run | Ryan | none | `OPEN` |
+| Participant support-triage guide was not available in local URL preflight | The supplied GitHub path returned HTTP 404 on 2026-09-16; restore or confirm the participant path before the live run | Lab agent owner | [support-triage guide](https://github.com/RyanLisse/aetherlink-agent-lab/tree/main/scenarios/support-triage/README.md) | `OPEN` |
 
 ## Next actions
 
 | Action | Owner | Due | Acceptance check | Evidence |
 | --- | --- | --- | --- | --- |
-| Run the live n8n / Claude Code smoke test on the reconciliation example (`n8n/reconciliation-agent.json`, `starter/.claude`) | Ryan | before the next live day | Real run log or exact `OPEN` evidence per platform | `OPEN` |
+| Run the WL-1026 n8n → Claude Code smoke test using the attached source and participant guide | Ryan / lab agent owner | before the next live day | Real run log or exact `OPEN` evidence per platform | `OPEN` |
 | Add dated recap, knowledge and handoff links after each live day | Facilitator | after each session | Fresh reader can find the evidence and next owner | `OPEN` |
 
 ## Evidence links

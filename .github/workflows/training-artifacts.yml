@@ -1,0 +1,15 @@
+name: Training artifacts
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  canonical-decks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON sources
+        run: python3 -m json.tool presentations/day-decks.json >/dev/null && python3 -m json.tool presentations/concepts.json >/dev/null
+      - name: Check generated concept placements
+        run: python3 presentations/apply_concepts.py --check
