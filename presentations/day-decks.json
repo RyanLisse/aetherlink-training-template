@@ -3055,31 +3055,31 @@
       {
         "title": "Day 5 · Subagents usage",
         "kicker": "SUBAGENTS · HOW WE USE IT",
-        "subtitle": "Split by files, one worktree per task, repeated jobs as checked-in subagents.",
+        "subtitle": "The main session calls two scoped specialists in a fixed order.",
         "cards": [
           {
-            "title": "SPLIT THE WORK",
-            "body": "Different files: own worktree (claude --worktree feature-auth). Shared files: one session, in turn. Start with two."
+            "title": "FIRST · CUSTOMER REPLY",
+            "body": "The main session sends WL-1026 to Customer Reply Agent for a customer-friendly draft."
           },
           {
-            "title": "KEEP THE CORE ROUTE SCOPED",
-            "body": "This route has exactly two specialists: Customer Reply Agent and Risk Agent. Add neither another nor an optional specialist."
+            "title": "SECOND · RISK",
+            "body": "The main session sends the same WL-1026 to Risk Agent for risk_note."
           },
           {
-            "title": "GOVERN FROM THE REPO",
-            "body": "CLAUDE.md and permissions apply to every session; output is logged and attributed. Measure while review quality holds."
+            "title": "PRESERVE + STOP",
+            "body": "Keep both outputs in the coordinator JSON. Use read-only tools; no send or refund."
           }
         ],
-        "prompt": "Open the participant lab definition. Name one repeated verification job for a scoped specialist and one task that belongs in a separate worktree. Keep the core route in the main session.",
-        "notes": "Vaste cadans: definitie → beeld → hoe wij ermee werken. Lees de definitie letterlijk voor, wijs het beeld aan, laat de groep de gebruiksstap zelf zeggen.\n\nVolledige kaarttekst (van de slide gehaald, hier voor de facilitator):\n• SPLIT THE WORK: Tasks that touch different files get their own worktree: claude --worktree feature-auth. Tasks that share files run in one session, one after another. Start with two or three.\n• TURN REPEATS INTO SUBAGENTS: A markdown file in .claude/agents/ with a name, when to use it, and the tools it may touch: verifier, researcher, simplifier. Check them into git.\n• GOVERN FROM THE REPO: CLAUDE.md, hooks and permission settings apply to every session; output is logged and attributed. Measure sessions per engineer while review quality holds, and merged changes against rework.",
+        "prompt": "In the main session, send WL-1026 first to Customer Reply Agent for the customer-friendly draft, then to Risk Agent for risk_note. Preserve both outputs in the coordinator JSON. Name the read-only boundary; do not send or refund.",
+        "notes": "Laat de hoofd sessie exact twee specialists aanroepen: eerst Customer Reply voor de draft, daarna Risk voor risk_note. Bewaar beide outputs in de coordinator JSON. Alleen read-only tools; geen send of refund.",
         "dark": false,
         "steps": [
           "Read CLAUDE.md and the participant guide.",
-          "Name Customer Reply Agent and Risk Agent.",
-          "Name one task for a separate worktree."
+          "Call Customer Reply Agent first for the draft.",
+          "Call Risk Agent second for risk_note and preserve both outputs."
         ],
-        "expected": "Every participant can name the two required specialists and one separate task.",
-        "check": "The core route has exactly two specialists and no extra tool scope.",
+        "expected": "Every participant can state the fixed specialist order and preserved outputs.",
+        "check": "Both specialist calls are recorded in order before the human gate.",
         "layout": "cards",
         "tagline": "TWO REQUIRED SPECIALISTS · ONE MAIN SESSION · REVIEW BEFORE ACTION"
       },
@@ -3295,26 +3295,26 @@
         "subtitle": "A deliberately weak JSON result makes the Test boundary visible before individual improvement.",
         "cards": [
           {
-            "title": "Input",
-            "body": "Same WL-1026 JSON"
+            "title": "WRONG FIELD",
+            "body": "Prepared JSON omits risk_note or uses an invalid priority."
           },
           {
-            "title": "Build",
-            "body": "Read-only Claude Code agent"
+            "title": "CHECKER REJECTS",
+            "body": "The strict validator quotes the failure before any route or draft."
           },
           {
-            "title": "Evidence",
-            "body": "Prompt, files read and first result"
+            "title": "HUMAN REVIEW",
+            "body": "A person decides PASS, FAIL or OPEN; no send or refund."
           }
         ],
         "prompt": "Show a prepared result with a missing risk_note or invalid priority. Run the strict validator, quote the failure, and stop before any send or refund.",
         "notes": "Hier controleert Test de JSON-boundary. Build en de eerste run gebeurden vóór de lunch; bespreek nu de volledige specialist- en routecontracten.",
         "dark": false,
         "steps": [
-          "Copy the guide prompt.",
-          "Run once in read-only mode.",
-          "Show the first JSON result.",
-          "List specialists and routing."
+          "Show the wrong field.",
+          "Run the strict checker.",
+          "Quote the rejection.",
+          "Record the human review decision."
         ],
         "expected": "Participants can name the invalid field and the gate that stops it.",
         "check": "The validator rejects the weak result before any draft action.",
