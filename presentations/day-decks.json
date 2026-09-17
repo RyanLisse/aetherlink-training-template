@@ -3007,6 +3007,171 @@
         "notes": "Bron: de aangeleverde n8n-export. De Code-node doet alleen JSON.parse; bron-schema-validatie gebeurt daar niet. Markeer daarom de strikte JSON-check en de bewaarde ticket_id/risk_note als Claude Code-target, vóór Switch en menselijke gate."
       },
       {
+        "title": "Day 5 · Transition · n8n to intent.md",
+        "kicker": "PLAN · TRANSLATE, DON'T COPY",
+        "subtitle": "Read the n8n export node by node. Write what each node promises, and what it forgets.",
+        "cards": [
+          {
+            "title": "Promises",
+            "body": "Two specialists, a priority, a reply and a risk note, routed by a Switch."
+          },
+          {
+            "title": "Forgets",
+            "body": "No ticket_id, UPPERCASE actions, static memory keys 1·2·1, parse without validation."
+          },
+          {
+            "title": "intent.md",
+            "body": "Every line tagged [n8n: node] or [gap]. The gaps become success checks."
+          }
+        ],
+        "prompt": "Read n8n/support-triage.json and lessons/0-source.md. Fill intent.md from starter/intent.md: for every n8n node, write what it promises as a success check and what it forgets as a [gap]. Do not write code.",
+        "notes": "Kernboodschap van de dag: we kopiëren geen boxen, we vertalen ze. Open de export, wijs de vier gaten aan en laat zien hoe ze in intent.md succeschecks worden. Laat daarna git diff main..step-1-plan -- intent.md zien.",
+        "dark": false,
+        "steps": [
+          "Open the n8n export.",
+          "Name the four gaps.",
+          "Tag each intent line with its node or [gap].",
+          "Diff main..step-1-plan."
+        ],
+        "expected": "An intent.md where every success check points to an n8n node or a named gap.",
+        "check": "At least four [gap] lines appear before any code is written.",
+        "layout": "cards",
+        "tagline": "n8n → intent.md → Claude Agent SDK"
+      },
+      {
+        "title": "Day 5 · Same fundamentals, three places",
+        "kicker": "BUILD · SYSTEM · PROMPT · TOOLS · MEMORY",
+        "subtitle": "The n8n AI Agent node and our Claude Agent SDK agent have the same four inputs.",
+        "layout": "image",
+        "image": "n8n-to-agent-fundamentals.svg",
+        "imageAlt": "Four rows — system message, prompt, tools, memory — each shown as an n8n node, the intent.md section that translates it, and the Claude Agent SDK query() option that implements it.",
+        "imageCaption": "One branch per fundamental: step-3a adds systemPrompt and prompt, step-3b the two subagents via the Agent tool, step-3c markdown memory.",
+        "cards": [],
+        "prompt": "Walk one row at a time: point at the n8n box, the intent.md line, then the query() option. Show git diff step-2-design..step-3a-build-prompt -- src, then 3a..3b and 3b..3c. Mention lesson 3a's live finding: without subagents the model writes the risk note itself and the contract still passes.",
+        "notes": "Laat per rij zien dat het fundament hetzelfde blijft; alleen de plek verandert. Claude Agent SDK: options.systemPrompt = vaste regels, prompt = dit ticket, options.agents + Agent-tool = de twee specialisten, memory = markdownbestand per ticket in de prompt.",
+        "dark": false,
+        "steps": [
+          "System message: options.systemPrompt.",
+          "Prompt: this ticket, as data.",
+          "Tools: Agent tool + two subagents, once each.",
+          "Memory: one markdown file per ticket."
+        ],
+        "expected": "The room can name the n8n node, intent line and code file for each fundamental.",
+        "check": "Nobody treats memory as hidden state; it is a file you can read and diff."
+      },
+      {
+        "title": "Day 5 · Control the loop · maxTurns",
+        "kicker": "BUILD · HOW MANY TURNS BEFORE AN ANSWER",
+        "subtitle": "Each turn is one model round-trip. You set the budget; the result tells you what was used.",
+        "cards": [],
+        "prompt": "Run the same ticket with --max-turns 1, 2 and 8 (offline first, then AGENT_MODEL=sonnet). Read Done: … and the loop: line. Find the smallest budget that works and explain why the default is 8.",
+        "notes": "n8n heeft 'Max Iterations' op de AI Agent-node; in de Claude Agent SDK is dat options.maxTurns (en per subagent maxTurns). Gemeten op 17 sep: zonder subagents was maxTurns 1 genoeg (num_turns 2); met twee subagents faalde 1 met error_max_turns, werkten 2 en 8 (num_turns 4). Budget op = geen concept, gewoon FAIL met een duidelijke melding. maxBudgetUsd is de kosten-rem.",
+        "dark": false,
+        "steps": [
+          "--max-turns 1: Done: error_max_turns, no draft.",
+          "--max-turns 2: Done: success.",
+          "Default 8: slack for a retry, no endless loop.",
+          "Record maxTurns and num_turns in progress.md."
+        ],
+        "expected": "Everyone knows the smallest working budget for their agent and why the default is higher.",
+        "check": "A run that hits the budget produces no draft and a plain-language reason.",
+        "layout": "compare",
+        "columns": [
+          {
+            "title": "n8n AI Agent",
+            "items": [
+              "Options → Max Iterations",
+              "Loop hidden inside the node",
+              "Sub-agent tools loop on their own",
+              "Stops quietly when exhausted"
+            ],
+            "foot": "A setting you rarely see"
+          },
+          {
+            "title": "Claude Agent SDK",
+            "items": [
+              "options.maxTurns · maxBudgetUsd",
+              "for await (… of query()) — visible turns",
+              "maxTurns per subagent definition",
+              "result.subtype + result.num_turns"
+            ],
+            "foot": "Measured: 2 turns needed, default 8"
+          }
+        ]
+      },
+      {
+        "title": "Day 5 · Memory as a markdown file",
+        "kicker": "BUILD 3c · MEMORY",
+        "subtitle": "Replace invisible, shared n8n memory with files a human can open, review and commit.",
+        "cards": [],
+        "prompt": "Run npm run triage -- fixtures/ticket.json twice and fixtures/ticket-followup.json once. Open memory/WL-1026.md and memory/WL-1027.md and show they are separate.",
+        "notes": "De n8n-export gebruikt drie Simple Memory-nodes met vaste keys 1, 2 en 1: context lekt tussen tickets en tussen agents. In de TypeScript-agent is de sleutel het ticket-id, en memory wordt alleen geschreven na een geslaagde contractcheck.",
+        "dark": false,
+        "steps": [
+          "Run WL-1026 twice.",
+          "Run WL-1027 once.",
+          "Open both memory files.",
+          "Add one lesson to memory/MEMORY.md in Maintain."
+        ],
+        "expected": "Two separate markdown files, with entries only for valid runs.",
+        "check": "memory/WL-1027.md contains nothing about WL-1026.",
+        "layout": "compare",
+        "columns": [
+          {
+            "title": "n8n Simple Memory",
+            "items": [
+              "Window buffer inside the node",
+              "Static keys 1 · 2 · 1 for every run",
+              "Coordinator and Risk Agent share key 1",
+              "Invisible; lost on restart"
+            ],
+            "foot": "Context can leak between tickets"
+          },
+          {
+            "title": "memory/*.md",
+            "items": [
+              "memory/WL-1026.md · one file per ticket",
+              "memory/MEMORY.md · team lessons",
+              "Read into the prompt as data, not instructions",
+              "Written only after the contract passed"
+            ],
+            "foot": "Readable, diffable, reviewable"
+          }
+        ]
+      },
+      {
+        "title": "Day 5 · Tutorial · one lesson, one branch",
+        "kicker": "TUTORIAL · aetherlink-day5-n8n-to-agent",
+        "subtitle": "A quickstart-style lesson per SDLC phase; each lesson has a starter file and a solution branch.",
+        "cards": [
+          {
+            "title": "Plan · Design",
+            "body": "Lesson 1: intent.md. Lesson 2: contract, JSON Schema, router — node:test first."
+          },
+          {
+            "title": "Build",
+            "body": "3a query() with systemPrompt · 3b Agent tool + two subagents · 3c markdown memory."
+          },
+          {
+            "title": "Test · Deploy · Maintain",
+            "body": "4 scripted query streams · 5 CI, .claude/agents, handoff · 6 run log."
+          }
+        ],
+        "prompt": "git switch -c work/<your-name> main, npm install (only @anthropic-ai/claude-agent-sdk), export ANTHROPIC_API_KEY, then follow lessons/0-source.md. Compare your work with the matching step branch using git diff.",
+        "notes": "Iedere deelnemer werkt op een eigen branch vanaf main. De agent draait op de Claude Agent SDK (dezelfde loop als Claude Code). De step-branches zijn referentie. Offline runtime is gescript en geen modelbewijs; een echte run: AGENT_MODEL=sonnet met sleutel of Claude-login, ca. 20 s en een paar cent.",
+        "dark": true,
+        "steps": [
+          "Clone the repo.",
+          "Create work/<your-name> from main.",
+          "Open lessons/0-source.md.",
+          "Diff against the step branch after each lesson."
+        ],
+        "expected": "Everyone has a work branch and can diff it against a step branch.",
+        "check": "npm run verify is green on step-6-maintain before the first build block.",
+        "layout": "cards",
+        "tagline": "git diff IS THE LESSON"
+      },
+      {
         "title": "Day 5 · Subagents definition",
         "kicker": "SUBAGENTS · DEFINITION",
         "subtitle": "One engineer drives several streams of work at once.",
@@ -3101,14 +3266,14 @@
             "body": "Read-only preview; no send or refund"
           }
         ],
-        "prompt": "Open the support-triage README in the participant lab. Set up exactly two required specialists — Customer Reply Agent and Risk Agent — before the first run, invoke the main coordinator with WL-1026, preview the first JSON, and record the command and files read.",
-        "notes": "Gebruik de participant README als uitvoerbare bron. Configureer exact twee specialists vóór de eerste run; laat daarna de kleine zichtbare input en output zien.",
+        "prompt": "Open the support-triage README in the participant lab. Set up exactly two required specialists — Customer Reply Agent and Risk Agent — before the first run, invoke the main coordinator with WL-1026, preview the first JSON, and record the command and files read. Then open the day 5 agent repo: git diff main..step-1-plan -- intent.md, the three build diffs, and npm run triage -- fixtures/ticket.json to show the same contract on the Claude Agent SDK (offline first, then AGENT_MODEL=sonnet) with memory/WL-1026.md.",
+        "notes": "Gebruik de participant README als uitvoerbare bron. Configureer exact twee specialists vóór de eerste run; laat daarna de kleine zichtbare input en output zien. Nieuwe TypeScript-repo: https://github.com/RyanLisse/aetherlink-day5-n8n-to-agent — elke SDLC-stap is een branch.",
         "dark": false,
         "steps": [
-          "Open the participant guide.",
-          "Run the documented read-only command.",
-          "Preview the JSON before saving.",
-          "Record command, files and OPEN items."
+          "Open the n8n export and name the gaps.",
+          "Run the Claude Code coordinator; preview the JSON before saving.",
+          "Diff n8n → intent.md → system+prompt → tools → memory.",
+          "Record command, files, trace and OPEN items."
         ],
         "expected": "The room has seen one main-session Claude Code result mapped to the n8n contract.",
         "check": "The preview keeps WL-1026 and does not claim a business action.",
@@ -3501,6 +3666,7 @@
         "layout": "cards",
         "tagline": "PREPARE · APPROVE · EXECUTE · ESCALATE WHEN AUTHORITY OR EVIDENCE IS MISSING"
       }
-    ]
+    ],
+    "agentRepo": "https://github.com/RyanLisse/aetherlink-day5-n8n-to-agent"
   }
 }
