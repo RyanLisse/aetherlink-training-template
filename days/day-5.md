@@ -3,6 +3,9 @@
 17 September workshop · Squad 1 Claude Code route (day5 deck) · 10:00–16:00.
 The attached n8n workflow is the source flow. The participant implementation
 lives in the [support-triage guide](https://github.com/RyanLisse/aetherlink-agent-lab/tree/main/scenarios/support-triage/README.md).
+The [attendee route card](https://github.com/RyanLisse/aetherlink-agent-lab/blob/main/ATTENDEE-ROUTE.md)
+is the literal page and download plan for the day; ask participants to keep it
+open beside the presentation.
 
 ## Outcome
 

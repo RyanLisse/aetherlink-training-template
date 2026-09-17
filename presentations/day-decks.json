@@ -2812,6 +2812,38 @@
         "tagline": "SAME RHYTHM · INDIVIDUAL FIRST · GROUPS AFTER"
       },
       {
+        "title": "Attendee route · open this next",
+        "kicker": "HOW TO FOLLOW · DAY 5",
+        "subtitle": "Keep the deck and route card open. Clone once; download nothing you do not need.",
+        "cards": [
+          {
+            "title": "1 · Start",
+            "body": "Open the public Day 5 deck and the attendee route card. At 10:00 stay on the presentation; the trainer points to the next page."
+          },
+          {
+            "title": "2 · Clone once",
+            "body": "Before Card 1, clone aetherlink-agent-lab and switch to squad-1/day-5. At Card 2, clone aetherlink-day5-n8n-to-agent once."
+          },
+          {
+            "title": "3 · Use locally",
+            "body": "Inspect the n8n workflow only when asked, then use the tutorial branches with git diff. Do not download ZIPs, bundles, credentials or customer data."
+          }
+        ],
+        "prompt": "Open the Day 5 deck at slide 1 and the attendee route card. Confirm who has the participant lab cloned, then tell the room: no new download is needed for each phase; use the same checkout and follow the page links.",
+        "notes": "Laat de routekaart live zien: presentatie → attendee route card → participant lab → tutorial repo. Download alleen de lokale workflow wanneer iemand de bron naast de vertaling moet inspecteren. Geen bundles of credentials.",
+        "dark": true,
+        "steps": [
+          "Open the Day 5 presentation.",
+          "Open ATTENDEE-ROUTE.md.",
+          "Clone each repo once.",
+          "Confirm the next page before moving on."
+        ],
+        "expected": "Every attendee knows the next URL, checkout and download boundary.",
+        "check": "The group can name what is opened at 10:00, 10:55 and 11:35.",
+        "layout": "cards",
+        "tagline": "ONE ROUTE CARD · TWO CLONES · ZERO SECRET DOWNLOADS"
+      },
+      {
         "title": "Agentic loop · recap",
         "kicker": "RECAP · AGENTIC LOOP",
         "subtitle": "\"Agents run tools in a loop to achieve a goal.\" A model in a loop with a goal, tools, feedback, authority and memory.",
