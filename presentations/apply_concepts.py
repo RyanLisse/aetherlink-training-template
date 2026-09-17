@@ -130,6 +130,18 @@ def apply(rel, deck_path, placements, removals, patches):
         for after, s in example_slides(rel, day):
             idx = next(i for i, x in enumerate(deck["slides"]) if x["title"] == after)
             deck["slides"].insert(idx + 1, s)
+        # Keep the attendee navigation card next to the day route. Recap and
+        # concept insertions are anchored on the route, so without this final
+        # placement they would push the card below the opening explanation.
+        attendee = next((i for i, s in enumerate(deck["slides"])
+                         if s.get("title") == "Attendee route · open this next"), -1)
+        day_route = next((i for i, s in enumerate(deck["slides"])
+                          if re.match(r"^Day \d+ route$", s.get("title", ""))), -1)
+        if attendee >= 0 and day_route >= 0 and attendee != day_route + 1:
+            card = deck["slides"].pop(attendee)
+            if attendee < day_route:
+                day_route -= 1
+            deck["slides"].insert(day_route + 1, card)
     return decks
 
 

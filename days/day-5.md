@@ -123,9 +123,9 @@ The opening recaps yesterday's concepts, then applies the agent-native SDLC and 
 
 Each concept is taught in three slides: definition, visual, how we use it. Site slide numbers in brackets.
 
-- **Agentic loop** · recap in one slide [3]
-- **Human gate** · recap in one slide [4]
-- **One contract, two platforms** · recap in one slide [5]
+- **Agentic loop** · recap in one slide [4]
+- **Human gate** · recap in one slide [5]
+- **One contract, two platforms** · recap in one slide [6]
 <!-- concepts:end -->
 
 ## Schedule
