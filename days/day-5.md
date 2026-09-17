@@ -54,6 +54,55 @@ next.
 | **Deploy** | `lab-notes/handoff-day-5.md` and local colleague reproduction | “Write the guide URL, exact prompt, model/mode, files read, traces, checker line, memory setting, gate decision, OPEN items and one local reproduction command. Draft only.” | Colleague reproduces locally; no remote or business-system write. |
 | **Maintain** | Run-log feedback and one intent follow-up | “Record what the trace or validator taught us, what remains OPEN and one change to the next intent or prompt. Do not turn one run into a platform claim.” | Facilitator accepts the lesson or records `NONE — no validated learning yet`. |
 
+## From n8n to intent.md to agent (Claude Agent SDK repo)
+
+The [day 5 agent repo](https://github.com/RyanLisse/aetherlink-day5-n8n-to-agent)
+makes the translation visible: the n8n export is read node by node into
+`intent.md` (every line tagged `[n8n: node]` or `[gap]`), turned into a zod
+contract and router, and then built as a TypeScript agent on the **Claude
+Agent SDK** (`query()`, the loop behind Claude Code) from the same four
+fundamentals as the n8n AI Agent node: **system message** (`systemPrompt`),
+**prompt**, **tools** (the `Agent` tool plus two subagents in `agents`) and
+**memory**. Memory is a markdown file per ticket
+(`memory/WL-1026.md`) plus team lessons in `memory/MEMORY.md`, replacing the
+static n8n memory keys.
+
+The repo is a **tutorial**: one quickstart-style lesson per phase in
+`lessons/`, a starter file per lesson in `starter/`, and a solution branch per
+lesson. The only runtime dependency is `@anthropic-ai/claude-agent-sdk`;
+tests use Node's built-in `node:test`.
+
+| Branch | Lesson | Adds |
+|---|---|---|
+| `main` | 0 · Setup | n8n export, transition story, starter files |
+| `step-1-plan` | 1 · Plan | `intent.md`, `progress.md`, `CLAUDE.md` |
+| `step-2-design` | 2 · Design | contract, JSON Schema, router, tests first |
+| `step-3a-build-prompt` | 3a · First agent | `query()` with systemPrompt + prompt |
+| `step-3b-build-tools` | 3b · Subagents | `customer-reply` and `risk` subagents via the Agent tool |
+| `step-3c-build-memory` | 3c · Memory | markdown memory per ticket |
+| `step-4-test` | 4 · Test | agent tests with scripted `query()` streams, checker CLI |
+| `step-5-deploy` | 5 · Deploy | CLI, CI, Claude Code subagents, handoff |
+| `step-6-maintain` | 6 · Maintain | run log and team lesson (solution) |
+
+Participants work on `work/<name>` from `main` and compare with
+`git diff <their branch> <step branch>`. The default `offline` model is
+scripted and is never model evidence; a real run needs `AGENT_MODEL` and the
+participant's own key or Claude login, recorded in `progress.md`. A facilitator
+smoke run on 17 September (`AGENT_MODEL=sonnet`) called both subagents once and
+passed the contract (~$0.04); its model output shortened the risk note, which
+is why the agent copies `risk_note` from the subagent trace. A live check of
+lesson 3a (no subagents) showed the model writing its own risk note while the
+contract still passed — the argument for the subagent trace check. New slides: *Transition ·
+n8n to intent.md*, *Same fundamentals, three places*, *Control the loop ·
+maxTurns*, *Memory as a markdown file* and *Tutorial · one lesson, one
+branch*, placed after the Design slide.
+
+**Loop budget.** Participants set how many turns the agent gets before it
+must answer with `options.maxTurns` (`--max-turns`), the SDK counterpart of
+n8n's *Max Iterations*. Measured on 17 September: without subagents
+`maxTurns: 1` was enough (reported `num_turns` 2); with two subagents `1`
+stopped with `error_max_turns` and `2` and `8` succeeded (reported 4).
+
 ## Concept slides
 
 The opening recaps yesterday's concepts, then applies the agent-native SDLC and subagents to today's route. Site slide numbers are in brackets.
@@ -63,7 +112,8 @@ The opening recaps yesterday's concepts, then applies the agent-native SDLC and 
 - **One contract, two platforms** · recap in one slide [5]
 - **AI-native SDLC** · definition [6] → existing loop image [7] → six-phase application [8]
 - **Plan + Design** · intent and source-to-target map [9–10]
-- **Subagents** · definition [11] → visual [12] → usage [13]
+- **n8n → intent.md → agent** · transition, fundamentals, loop budget, markdown memory, tutorial map [11–15]
+- **Subagents** · definition [16] → visual [17] → usage [18]
 
 <!-- concepts:start -->
 ## Concept slides

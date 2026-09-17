@@ -24,6 +24,7 @@
 - [Squad 1 Day 3 — AI-native SDLC](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=3#1)
 - [Squad 1 Day 4 — First agent in n8n](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=4#1)
 - [Squad 1 Day 5 — n8n support triage to Claude Code](https://aetherlink-training.ryanlisse.chatgpt.site/?squad=1&day=5#1)
+- [Squad 1 Day 5 — Claude Agent SDK repo, one branch per SDLC step](https://github.com/RyanLisse/aetherlink-day5-n8n-to-agent)
 - [Full workbooks and setup](../days/README.md)
 
 Days 1 and later MOB sessions use groups of three or four with one navigator directing the human driver; rotate every 5–7 minutes after individual blocks. If a group is blocked or drifting for five minutes, park the question as `OPEN`. Squad 1 Day 4 and Squad 2 Day 3 use the participant lab root above; n8n access and credentials are selected separately in preflight, and missing login remains `OPEN`. For the 17 September Squad 1 Day 5 route, the [support-triage participant guide](https://github.com/RyanLisse/aetherlink-agent-lab/tree/main/scenarios/support-triage/README.md) and attached n8n export define fictional WL-1026. The n8n source and Claude Code target are a functional translation: Claude preserves `ticket_id` and `risk_note`, validates `priority`, and keeps every action at a human gate. Platform settings and static memory keys are recorded as observations; no business-system write, send, refund or financial approval is performed. The team workflow is GitLab, Jira, and Confluence; GitHub distributes this public material.
